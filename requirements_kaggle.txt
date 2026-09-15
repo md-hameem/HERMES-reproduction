@@ -1,0 +1,4 @@
+# Minimal requirements for Kaggle environment
+# Kaggle already provides PyTorch, Transformers, Accelerate, etc.
+decord==0.6.0
+logzero==1.7.0

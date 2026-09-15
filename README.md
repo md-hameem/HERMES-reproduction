@@ -19,8 +19,28 @@
 - **[2025.01.23]** HERMES reached **#3 Paper of the day** on [Hugging Face Daily Papers](https://huggingface.co/papers/2601.14724)!
 - **[2025.01.21]** HERMES is available on [arXiv](https://arxiv.org/abs/2601.14724).
 
+## 🚀 Kaggle Reproduction Guide (StreamingBench Pilot)
+
+This repository is optimized for reproduction directly in a **Kaggle Notebook** environment using a T4 GPU. 
+
+We have prepared a pilot script that automatically:
+1. Installs minimal dependencies (leveraging Kaggle's pre-installed PyTorch/Transformers)
+2. Downloads the LLaVA-OV-0.5B model
+3. Downloads a **10-video subset** of the official StreamingBench dataset from HuggingFace to save time and bandwidth.
+4. Runs HERMES inference with a 4K KV-cache budget.
+5. Evaluates the multiple-choice accuracy.
+
+To run the full reproduction pipeline in Kaggle, simply open a terminal in your notebook and run:
+```bash
+git clone https://github.com/md-hameem/HERMES-reproduction.git
+cd HERMES-reproduction
+bash scripts/run_kaggle.sh
+```
+Read the full reproduction timeline and findings in the [`research_log.md`](./research_log.md).
+
 
 ## 🛠️ Installation
+
 
 For **LLaVA** model inference:
 ```bash
