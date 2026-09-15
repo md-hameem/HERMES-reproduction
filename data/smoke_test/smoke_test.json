@@ -1,0 +1,33 @@
+[
+  {
+    "video_id": "smoke_test_001",
+    "video_path": "data/smoke_test/dummy_video.npy",
+    "fps": 1.0,
+    "conversations": [
+      {
+        "question": "What is happening in the video right now?",
+        "answer": "",
+        "end_time": 10.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:00:10",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the person doing at this point in the video?",
+        "answer": "",
+        "end_time": 20.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:00:20",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Summarize the important events that have happened so far.",
+        "answer": "",
+        "end_time": 30.0,
+        "task": "Event Understanding",
+        "time_stamp": "00:00:30",
+        "required_ability": "long-term memory"
+      }
+    ]
+  }
+]
