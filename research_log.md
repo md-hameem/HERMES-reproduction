@@ -1,72 +1,428 @@
----
-Title: HERMES Reproduction Log
-Date: 2026-09-15
-Environment: Kaggle T4 GPU
-Model: LLaVA-OV-0.5B (llava-hf/llava-onevision-qwen2-0.5b-ov-hf)
----
+# HERMES Reproduction Project Log
 
-> **TOPIC**  
-> Functional Reproduction of HERMES (KV Cache as Hierarchical Memory)
-> 
-> **WHY READ**  
-> Documents the initial smoke test of HERMES on a custom video to verify that streaming frame processing, hierarchical KV compression, and fixed cache budgets work as intended before moving to full benchmark evaluation.
->
-> **TAKEAWAY**  
-> HERMES successfully compresses KV cache during streaming video QA. A KV budget of 4,000 tokens retains equivalent qualitative reasoning capabilities to a near-uncompressed 50,000 token budget, confirming the paper's claim that performance stabilizes around 4K tokens.
+## Streaming Video QA with KV-Cache Compression
 
-## 🚀 1. Custom-Video Smoke Test
+**Project Status:** Ongoing reproduction and extension study\
+**Environment:** Kaggle Tesla T4 GPU\
+**Model:** LLaVA-OneVision-Qwen2-0.5B\
+**Framework:** HERMES VideoQA inference pipeline
 
-**Date & Time**: 2026-09-15 15:00 UTC (Kaggle Session)
-**Setup**: Tesla T4 GPU, PyTorch 2.10.0+cu128, Transformers 4.45.0.dev0
+------------------------------------------------------------------------
 
-### ❓ Motivation & Problem
-Testing the official 50GB+ benchmark datasets is time-consuming and expensive. Before running massive evaluations, we needed a fast, lightweight "smoke test" to verify that the HERMES pipeline functions correctly end-to-end on a real video with actual KV compression enforced.
+# 1. Project Objective
 
-### 💡 Methodology
-Instead of downloading official benchmarks, a single 113-second `.mp4` video (`videoplayback.mp4`) from Kaggle was used. 
-A mock annotation file (`data/kaggle_smoke.json`) was generated with three open-ended questions targeting different temporal points (25%, 55%, 90% of duration).
-The model was evaluated with three different KV cache budgets to qualitatively assess information retention.
+The goal of this project is to reproduce and analyze the HERMES paper's
+streaming video question answering system.
 
-### 🛠️ Experimental Execution
+The main research questions are:
 
-| Component | Configuration |
-|-----------|---------------|
-| **Script** | `python -m video_qa.hermes_vqa` |
-| **Model** | `llava_ov_0.5b` |
-| **KV Budgets Tested** | `500`, `4000`, `50000` |
-| **Streaming** | `true` |
+1.  Can the HERMES KV-cache compression mechanism be reproduced on
+    publicly available infrastructure?
+2.  Does KV-cache compression preserve VideoQA accuracy while reducing
+    memory requirements?
+3.  What types of video understanding abilities are affected by
+    aggressive compression?
+4.  How does memory budget influence accuracy and latency?
 
-#### Functional Milestones Reached
-- ✅ LLaVA-OV-0.5B loads successfully
-- ✅ Streaming frame processing works
-- ✅ HERMES pseudo-query generation works
-- ✅ Hierarchical KV compression executes
-- ✅ Fixed cache budget is enforced
-- ✅ Compressed cache can answer questions
+The final goal is not only reproduction, but also an extended analysis
+containing:
 
-### 🏆 Results & Observations
+-   memory/accuracy trade-offs
+-   KV-cache ablation experiments
+-   task-level performance analysis
+-   qualitative failure analysis
 
-Because the `answer` (ground-truth) column was intentionally left blank (`NaN`), this test did not yield a quantitative Accuracy score. However, a qualitative comparison of the generated answers revealed clear trends in detail retention.
+------------------------------------------------------------------------
 
-**Qualitative Trend:**
-$$
-\text{KV500} < \text{KV4000} \approx \text{KV50000}
-$$
+# 2. Timeline and Development Log
 
-**Example (Question 2 - Middle of Video):**
-- **KV 500:** “The person is preparing a sandwich...” *(Semantic core retained, details lost)*
-- **KV 4000:** “The person is preparing a sandwich by adding ...” *(Detailed)*
-- **KV 50000:** *(Essentially the same as 4000)*
+## Day 1 --- Environment Setup and Initial Reproduction
 
-*Note: This aligns with the original paper's findings that memory performance stabilizes once the budget reaches approximately 4K tokens.*
+### Environment
 
----
+Platform:
 
-## ⏭️ 2. Next Steps
+-   Kaggle Notebook
+-   Tesla T4 GPU
+-   CUDA enabled
 
-🏷️ **Task**: Move to Official Benchmarks
-❓ **Problem**: We need quantitative accuracy to compare against the paper's reported baseline (62.04% for HERMES 4K on LLaVA-OV-0.5B).
-💡 **Action**: 
-1. **Verify Compression Log**: Confirm that the 4K run explicitly logged `Applying KV-Cache compression due to k_states > 4000`.
-2. **StreamingBench Pilot**: Run a small subset (10–20 videos) of the official **StreamingBench** dataset.
-3. **Evaluate**: Run the official multiple-choice evaluator to measure actual accuracy.
+Initial environment:
+
+    Python: 3.12
+    PyTorch: 2.10.0 + CUDA 12.8
+    Transformers: 4.45.0.dev0
+    GPU: Tesla T4
+
+The LLaVA-OneVision-Qwen2-0.5B model was successfully loaded.
+
+Initial verification:
+
+    Model loaded successfully
+    Main device: cuda:0
+
+------------------------------------------------------------------------
+
+# Day 2 --- Dependency and Compatibility Debugging
+
+Several compatibility issues were encountered:
+
+-   Transformers version differences
+-   Qwen2 rotary embedding API changes
+-   LLaVA-OneVision internal model structure differences
+
+## Problem 1 --- Missing language_model attribute
+
+Original HERMES code expected:
+
+``` python
+base_model.language_model.config
+```
+
+However, the installed Transformers version exposed:
+
+``` python
+LlavaOnevisionForConditionalGeneration
+```
+
+with a different internal structure.
+
+The loading code was modified to correctly access the language model
+components.
+
+------------------------------------------------------------------------
+
+## Problem 2 --- Rotary Embedding API mismatch
+
+Original HERMES implementation used:
+
+``` python
+rotary_emb(x, seq_len=...)
+```
+
+New Qwen2 implementation expected:
+
+``` python
+rotary_emb(hidden_states, position_ids)
+```
+
+The rotary embedding helper functions were updated.
+
+------------------------------------------------------------------------
+
+## Problem 3 --- CUDA device mismatch
+
+Error:
+
+    Expected all tensors to be on the same device
+
+Cause:
+
+RoPE tensors and KV-cache tensors were created on different CUDA
+devices.
+
+Solution:
+
+All rotary tensors were explicitly moved to the active model device.
+
+------------------------------------------------------------------------
+
+# Day 3 --- Successful HERMES Smoke Test
+
+A custom test video was created:
+
+    video_id:
+    kaggle_test_001
+
+The model successfully processed:
+
+-   scene understanding
+-   action recognition
+-   event summarization
+
+Example outputs:
+
+Question:
+
+    What is happening in the video right now?
+
+Prediction:
+
+    The video is set in a kitchen, where the sandwich is being prepared.
+
+Question:
+
+    What is the person doing at this point?
+
+Prediction:
+
+    The person is preparing a sandwich, specifically making the filling for it.
+
+The streaming pipeline successfully maintained history across video
+segments.
+
+------------------------------------------------------------------------
+
+# 3. KV-Cache Compression Validation
+
+Different KV budgets were tested.
+
+## KV=500
+
+Results:
+
+    Compression triggered: Yes
+    Compressed length: 513
+    GPU memory: ~4.43 GB
+
+Reason:
+
+    n_init = 13
+    KV budget = 500
+
+    Final cache:
+    500 + 13 = 513
+
+------------------------------------------------------------------------
+
+## KV=4000
+
+Results:
+
+    Compression triggered: Yes
+    Compressed length: 4013
+    GPU memory: ~4.52 GB
+
+------------------------------------------------------------------------
+
+## KV=50000
+
+Results:
+
+    Compression triggered: No
+    GPU memory: ~4.58 GB
+
+This configuration represents the non-compressed baseline.
+
+------------------------------------------------------------------------
+
+# 4. StreamingBench Preparation
+
+The official StreamingBench annotation file was identified:
+
+    data/streamingbench/streamingbench_realtime.json
+
+Dataset statistics:
+
+    Total videos: 498
+
+The video files were not included with the repository, therefore a
+StreamingBench shard was downloaded separately.
+
+A subset was created:
+
+    StreamingBench 10-video evaluation subset
+
+Each video contains:
+
+    5 questions/video
+
+Total evaluation size:
+
+    10 videos
+    50 questions
+
+------------------------------------------------------------------------
+
+# 5. HERMES KV=4000 Evaluation
+
+Configuration:
+
+    Model:
+    LLaVA-OneVision-Qwen2-0.5B
+
+    Dataset:
+    StreamingBench subset
+
+    Sampling:
+    0.5 FPS
+
+    Streaming:
+    Enabled
+
+    KV budget:
+    4000
+
+Evaluation completed successfully.
+
+Output schema:
+
+    video_id
+    question
+    choices
+    answer
+    correct_choice
+    pred_answer
+    pred_choice
+    qa_acc
+    task
+
+The automatic evaluator was successfully integrated.
+
+------------------------------------------------------------------------
+
+# 6. Error Analysis
+
+Incorrect predictions were extracted and analyzed.
+
+Observed failure patterns:
+
+## 6.1 Temporal / Event Memory
+
+Examples:
+
+-   action ordering
+-   sequence reconstruction
+-   remembering previous events
+
+Observed behavior:
+
+The model often recognized objects correctly but confused temporal
+order.
+
+------------------------------------------------------------------------
+
+## 6.2 Fine-Grained Attribute Recognition
+
+Examples:
+
+-   colors
+-   small object details
+-   visual attributes
+
+Observed behavior:
+
+Compression can remove fine visual details.
+
+------------------------------------------------------------------------
+
+## 6.3 Counting
+
+Examples:
+
+-   number of blocks
+-   number of colors
+-   repeated objects
+
+Observed behavior:
+
+Long-range object tracking is challenging after compression.
+
+------------------------------------------------------------------------
+
+## 6.4 Spatial Understanding
+
+Examples:
+
+-   front/back relations
+-   relative position
+-   object placement
+
+Observed behavior:
+
+Spatial relationships are more fragile under memory reduction.
+
+------------------------------------------------------------------------
+
+# 7. Current Research Results
+
+Completed:
+
+  Experiment                 Status
+  -------------------------- ----------
+  Model loading              Complete
+  HERMES inference           Complete
+  KV compression             Complete
+  RoPE compatibility fixes   Complete
+  StreamingBench subset      Complete
+  KV=4000 evaluation         Complete
+  Error taxonomy             Complete
+
+------------------------------------------------------------------------
+
+# 8. Remaining Experiments
+
+## Experiment 1 --- KV=50000 Baseline
+
+Purpose:
+
+Measure performance without compression.
+
+Comparison:
+
+    No compression
+    vs
+    HERMES compression
+
+------------------------------------------------------------------------
+
+## Experiment 2 --- KV Budget Ablation
+
+Planned table:
+
+  KV Budget   Accuracy   Memory
+  ----------- ---------- ----------
+  500         TBD        TBD
+  4000        Complete   Complete
+  6000        Complete   TBD
+  50000       Pending    Pending
+
+------------------------------------------------------------------------
+
+## Experiment 3 --- Larger Benchmark
+
+Current:
+
+    10 videos
+    50 questions
+
+Future:
+
+    50 videos
+    250 questions
+
+or:
+
+    498 videos
+    2490 questions
+
+------------------------------------------------------------------------
+
+# 9. Final Report Structure
+
+Planned final document:
+
+1.  Introduction
+2.  HERMES architecture overview
+3.  Reproduction environment
+4.  Implementation challenges
+5.  Engineering fixes
+6.  Experimental setup
+7.  KV-cache ablation study
+8.  Accuracy-memory trade-off
+9.  Error analysis
+10. Limitations
+11. Future improvements
+
+------------------------------------------------------------------------
+
+# 10. Notes
+
+This document is a living research log.
+
+Future updates should append:
+
+-   new experiments
+-   additional baselines
+-   plots
+-   tables
+-   conclusions
