@@ -676,22 +676,3 @@ class StreamingEDMIHook:
 * **Target Metrics:** Accuracy, Visual Attention Score ($VAS$), Time to First Token (TTFT, ms), and Peak GPU VRAM (GB) across extended streams ($\gt 10^4$ frames).
 
 ---
-
-# Instructions for Exporting to Microsoft Word (.docx)
-
-To export this report into a styled Microsoft Word document:
-
-## Method 1: Using Pandoc (Recommended for Clean Native Formatting)
-
-Run the following terminal command to convert this report into a `.docx` file complete with tables and formatted mathematical equations:
-
-```bash
-pandoc -s HERMES_Research_Report.md -o HERMES_Research_Report.docx --toc --highlight-style=tango
-
-```
-
-## Method 2: Direct Import via Microsoft Word
-
-1. Copy the full markdown text above.
-2. Open **Microsoft Word** and create a new document.
-3. Paste the contents using **Paste and Keep Source Formatting** (or use **Insert → Object → Text from File**). Word will render the headings, tables, code blocks, and formatting into standard document styles.
