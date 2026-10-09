@@ -9,7 +9,8 @@
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
 | **Framework** | HERMES VideoQA inference pipeline |
 | **Current Benchmark Scale** | StreamingBench subset: 50 videos / 250 questions |
-| **Last Updated** | 24 September 2026 |
+| **Last Updated** | 10 October 2026 |
+| **Supporting Documents** | [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---
 
@@ -32,6 +33,16 @@
 15. [Remaining Experiments and Future Work](#15-remaining-experiments-and-future-work)
 16. [Planned Final Report Structure](#16-planned-final-report-structure)
 17. [Research Notes and Interpretation Constraints](#17-research-notes-and-interpretation-constraints)
+18. [Literature Context and Related Work](#18-literature-context-and-related-work)
+19. [HERMES Deep Mechanistic Analysis](#19-hermes-deep-mechanistic-analysis)
+20. [Cross-Paper Technical Comparison](#20-cross-paper-technical-comparison)
+21. [Evolution of the Research Field](#21-evolution-of-the-research-field)
+22. [Reproduction Audit and Evidence Assessment](#22-reproduction-audit-and-evidence-assessment)
+23. [Risks, Inconsistencies, and Open Issues](#23-risks-inconsistencies-and-open-issues)
+24. [Phased Next-Stage Research Plan](#24-phased-next-stage-research-plan)
+25. [Experimental Design Specifications](#25-experimental-design-specifications)
+26. [Candidate Research Extensions](#26-candidate-research-extensions)
+27. [Deliverables and Completion Criteria](#27-deliverables-and-completion-criteria)
 
 ---
 
@@ -1143,3 +1154,458 @@ KV=50000: 55.2% accuracy, 11.872 GB max reported GPU memory
 The strongest current result is therefore not that compression improves accuracy, but that **substantial memory and latency reductions were achieved without an observed accuracy penalty on the evaluated subset**.
 
 The next stage is to determine whether this finding remains stable on the full benchmark and against the exact non-HERMES LLaVA-OneVision baseline.
+
+---
+
+# 18. Literature Context and Related Work
+
+> *Sourced from the [Comprehensive Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md). Full bibliographic details, including author lists and venue information, are available in that document.*
+
+## 18.1 Streaming Video Understanding and KV-Cache Management
+
+| Paper | Core Contribution |
+|---|---|
+| **HERMES** (Zhang et al., 2026) | 3-tier hierarchical KV-cache pruning with summary-token aggregation — the central reference for this reproduction |
+| **InfiniPot** (Qualcomm / Hanyang, 2024–2025) | Context-Aware Pruning (CaP-G + CaP-Q) for multi-hop reasoning; demonstrates layer hit-rate dynamics |
+| **StreamFlow** (2026) | Dynamics-aware GOP buffering with Visual Attention Score (VAS) injection to counteract attention drift |
+| **StreamKV** (Chen et al., 2025) | Segment-level in-context KV retrieval for streaming QA |
+| **Streaming Long Video** (Qian et al., NeurIPS 2024) | Long streaming video modeling via LLMs |
+| **DispidER** (Qian et al., CVPR 2025) | Disentangled real-time perception, decision, and reaction |
+| **ReKV** (Di et al., 2025) | Retrieval-augmented KV offloading — external CPU storage with query-time retrieval |
+| **StreamingTOM** (Chen et al., CVPR 2026) | Dynamic visual token merging and pruning |
+| **LM-Infinite** (Han et al., NAACL 2024) | Zero-shot extreme length generalization with static cache attention masks |
+
+## 18.2 Foundational Multimodal Models
+
+| Paper | Core Contribution |
+|---|---|
+| **Qwen2.5-VL** (Bai et al., 2025) | Dynamic-resolution ViT with 3D M-RoPE (temporal, height, width coordinates) |
+| **Qwen3-VL** (Bai et al., 2025) | 235B-A22B MoE; 39-language OCR; 57.0% on MMLongBench-Doc |
+| **LLaVA-NeXT / OneVision** (Li et al., 2024–2025) | Visual projection architecture, multi-image and video SFT — the backbone used in this reproduction |
+| **InternVL 1.5** (Chen et al., 2024) | Open-source multimodal alignment with high-resolution ViT scaling |
+| **Gemini 2.5** (Comanici et al., Google DeepMind, 2025) | Frontier agentic reasoning and safety evaluations |
+| **MiniCPM** (Hu et al., 2024) | Small language model scaling with high-density tokenizers |
+
+## 18.3 Datasets and Benchmarks
+
+| Benchmark | Focus |
+|---|---|
+| **StreamingBench** | Streaming video QA — used in this reproduction |
+| **EgoSchema** (Malik Group, UC Berkeley) | Long-horizon egocentric temporal QA with rigorous human verification |
+| **Ego4D** (Grauman et al., 2022–2024) | 3,000-hour egocentric perception dataset |
+| **OVO-Bench** (Li et al., 2025) | Online real-time streaming evaluation (SSR, CRR) |
+| **MovieNet** (Huang et al., ECCV 2020) | Narrative long-form video structure |
+| **Video-MME** (Fu et al., 2024–2025) | Multimodal video evaluation across short, medium, and long inputs |
+
+---
+
+# 19. HERMES Deep Mechanistic Analysis
+
+> *Synthesized from the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Report C.*
+
+## 19.1 Layer-Wise Attention Dynamics
+
+HERMES exploits the natural stratification of attention allocation across transformer layer depth:
+
+- **Shallow Layers (Sensory Memory, Layers 0–5):** Over 80% of attention mass concentrates on the most recent chunk. These layers function as a sensory buffer capturing high-frequency spatial features. Older tokens can be pruned with minimal impact on semantic reasoning.
+
+- **Middle Layers (Working Memory, Layers 6–20):** Recency bias moderates. Attention distributes across recent tokens and intermediate semantic representations, tracking ongoing state changes and multi-frame actions.
+
+- **Deep Layers (Long-Term Memory, Layers 21–31):** Recency bias disappears entirely. Attention becomes sparse and rhythmic, forming periodic peaks at frame patch boundaries (e.g., every 196 tokens). These peaks identify "anchor tokens" that capture the core semantic content of entire frames.
+
+## 19.2 Hierarchical KV-Cache Management Formulation
+
+HERMES calculates a layer-dependent token retention score for each token $i$ at layer $l$:
+
+$$S_i^{(l)} = \alpha_l \cdot \mathcal{R}_i + (1 - \alpha_l) \cdot \mathcal{A}_i^{(l)}$$
+
+where:
+
+- $\mathcal{R}_i = \exp(-\gamma \cdot (T - t_i))$ — exponential recency score
+- $\mathcal{A}_i^{(l)} = \frac{1}{|Q|} \sum_{q \in Q} A_{q, i}^{(l)}$ — accumulated attention score
+- $\alpha_l \to 1.0$ in shallow layers (recency priority), $\alpha_l \to 0.0$ in deep layers (attention-peak priority)
+
+Tokens are ranked by $S_i^{(l)}$ within each layer and the lowest-scoring tokens are evicted once the cache exceeds the assigned memory budget.
+
+## 19.3 Streaming Ingestion Pipeline
+
+```
+Streaming Video Ingestion Pipeline (HERMES)
+========================================================================================
+Input Video Stream: ... [Frame t-2] ---> [Frame t-1] ---> [Frame t] (Chunk Arrival)
+                               |
+                               v
+Visual Patch Projection:  X_v = ViT_Patch_Embed(Frame_t)  [e.g., 196 tokens/frame]
+                               |
+                               v
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ Layer 0-5  [Sensory Memory]:                                                         │
+│   - Attention profile: Extreme Recency Bias                                          │
+│   - Eviction: Low S_i^(l) (Old frames purged, latest chunk fully preserved)          │
+└──────────────────────────────────────────┬───────────────────────────────────────────┘
+                                           │
+                                           v
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ Layer 6-20 [Working Memory]:                                                         │
+│   - Attention profile: Hybrid Recency + Semantic Tracking                            │
+│   - Eviction: Balanced S_i^(l) (Recent window maintained + salient history)          │
+└──────────────────────────────────────────┬───────────────────────────────────────────┘
+                                           │
+                                           v
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│ Layer 21-31 [Long-Term Memory]:                                                      │
+│   - Attention profile: Sparse Rhythmic Peaks (Anchor Tokens)                         │
+│   - Eviction: Keep top-K periodic anchor tokens across all historical frames         │
+│   - Aggregation: Low-scoring tokens mean-pooled into Summary Token (k_sum, v_sum)    │
+└──────────────────────────────────────────┬───────────────────────────────────────────┘
+                                           │
+                                           v
+Cross-Layer Memory Smoothing → Positional Re-Indexing → Query Arrival (TTFT < 30 ms)
+========================================================================================
+```
+
+## 19.4 Cross-Layer Memory Smoothing
+
+Evicting tokens independently across layers can disrupt feature representations. If token $i$ is retained in Layer 26 as an anchor but pruned in Layer 8, the upper layer loses its lower-level feature pathway.
+
+HERMES propagates importance scores backward through the network:
+
+$$\tilde{S}_i^{(l)} = S_i^{(l)} + \sum_{k > l} \lambda_k \cdot \tilde{S}_i^{(k)}$$
+
+Smoothing coefficients: $\lambda_{shallow}=0.1$, $\lambda_{middle}=0.3$, $\lambda_{deep}=0.4$.
+
+## 19.5 M-RoPE Positional Re-Indexing
+
+Pruning intermediate tokens creates non-contiguous gaps in the position index sequence, which introduces phase shifts in the relative attention distances for newly arriving tokens.
+
+HERMES counteracts this with a bijective re-indexing map:
+
+$$\tilde{m}_i = \phi(m_i) = \text{rank}(m_i \in \mathcal{M}_{retained})$$
+
+This preserves contiguous index sequences, maintaining positional consistency during generation.
+
+## 19.6 Summary Token Aggregation
+
+Non-anchor tokens evicted in deep layers are not purged entirely. Their key and value representations are mean-pooled into a summary token:
+
+$$k_{sum}^{(l)} = \frac{1}{|\mathcal{E}_l|} \sum_{j \in \mathcal{E}_l} k_j^{(l)}, \quad v_{sum}^{(l)} = \frac{1}{|\mathcal{E}_l|} \sum_{j \in \mathcal{E}_l} v_j^{(l)}$$
+
+The summary token is appended to the layer's KV-cache, ensuring cumulative background context remains accessible.
+
+---
+
+# 20. Cross-Paper Technical Comparison
+
+> *Complete comparison profiles from the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Report D.*
+
+| Dimension | HERMES | InfiniPot | StreamFlow |
+|---|---|---|---|
+| **Objective** | Unbounded streaming video QA under fixed memory | Multi-hop reasoning context retention in long documents | Visual attention drift prevention and encoding redundancy reduction |
+| **Backbones** | LLaVA-OV-7B, Qwen2.5-VL-7B | LLaMA-3-8B, Mistral-7B | Qwen3.5-9B |
+| **Training** | Training-free (plug-and-play) | Training-free pruning | Hybrid (frozen MLLM + trained compressor) |
+| **Memory** | 3-tier internal KV hierarchy | Dual-scoring KV-cache (CaP-G + CaP-Q) | Mid-term GOP buffer + latent long-term store |
+| **Selection** | Recency (shallow) / attention spikes (deep) | Global query hit-rate scoring | Pixel temporal residuals / cosine similarity |
+| **Positional** | Contiguous M-RoPE re-indexing | Static RoPE preserved | Anchor I-frame chronological sorting |
+| **Memory Footprint** | Bounded & constant (< 20 GB across 10⁴ frames) | Bounded (4K–8K budgets) | 21.1% peak GPU reduction |
+| **TTFT** | < 30 ms (10× faster than retrieval) | Low prefill latency over 4K tokens | 50.4% end-to-end latency reduction |
+| **Key Results** | +11.4% accuracy on streaming benchmarks | 49.75% on HotpotQA | 67.73% on StreamingBench |
+
+---
+
+# 21. Evolution of the Research Field
+
+```
+Evolutionary Roadmap of Long-Context Multimodal Systems
+===================================================================================================
+Phase 1: Offline Video Modeling (Pre-2023)
+  - Uniform sampling (16-32 frames), full prefill
+  - Quadratic attention complexity O(T²), OOM failures on long inputs
+                                   │
+                                   ▼
+Phase 2: Context-Window Scaling (2024)
+  - Attention window expansion via 3D M-RoPE (Qwen2-VL, Qwen2.5-VL to 32k-256k tokens)
+  - High prefill latency and unbounded memory growth under continuous streaming
+                                   │
+                                   ▼
+Phase 3: Query-Guided KV-Cache Pruning (2024-2025)
+  - Selective pruning (SnapKV, InfiniPot CaP-Q) effective for static multi-hop QA
+  - Fails in streaming: cannot predict future queries during ingestion
+                                   │
+                                   ▼
+Phase 4: Retrieval-Augmented Video Offloading (2025)
+  - External storage architectures (ReKV): offloads KV-cache to CPU/disk
+  - Resolves GPU memory limits, but retrieval introduces high latency (TTFT > 0.60 s)
+                                   │
+                                   ▼
+Phase 5: Internal Hierarchical & Dynamics-Aware Architectures (2026 — Frontier)
+  - HERMES: Layer-wise attention dynamics (Sensory, Working, Long-Term anchors)
+  - StreamFlow: Dynamics-aware GOPs and online VAS injection
+  - Convergence: Sub-30ms latency with bounded memory and high semantic retention
+===================================================================================================
+```
+
+---
+
+# 22. Reproduction Audit and Evidence Assessment
+
+> *Sourced from the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), prepared 9 October 2026.*
+
+## 22.1 Executive Assessment
+
+**Main finding.** On the documented 50-video / 250-question subset, HERMES with 4,000 or 6,000 cache-budgeted tokens answered 143/250 questions correctly (57.2%), while a 50,000-token HERMES control answered 138/250 (55.2%). The 4K and 6K settings used much less reported GPU memory and had lower TTFT.
+
+**Measured trade-off against the 50K control:**
+
+- **60.2%** lower highest logged GPU memory
+- **48.2%** lower median TTFT
+- **92.0%** fewer cache positions at the logged maximum
+- **+2.0 pp** observed accuracy difference (point estimate, not a demonstrated causal improvement)
+
+**Verdict:** This is substantive engineering and empirical progress, but best described as a **successful subset reproduction and systems study**, not yet a fully audited reproduction of every component in the HERMES paper.
+
+## 22.2 Evidence Grading System
+
+| Grade | Meaning |
+|---|---|
+| **A** | Notebook directly corroborated — executable cell contents or explicit saved output |
+| **B** | Research-log reported — present in project log, consistent with notebook summaries |
+| **C** | Analytic interpretation — reasoned inference from A/B evidence |
+| **D** | Unverified — requires further artifacts or testing |
+
+## 22.3 Source Materials Inspected
+
+| Asset | Establishes | Cannot Establish |
+|---|---|---|
+| Research project log | Researcher-reported workflow, configurations, interpretation | Independent proof of saved CSV values |
+| Kaggle notebook (191 cells) | Actual procedures and reported outputs | Not a self-contained executable repo |
+| HERMES paper (previously uploaded) | Paper methodology and baselines | Does not validate the Kaggle implementation |
+
+## 22.4 Important Missing Artifacts
+
+The project log records two successful ZIP integrity checks, but neither ZIP has been uploaded for independent audit. The notebook references Kaggle paths (`/kaggle/working/HERMES/`) for CSVs, logs, and figures that are not locally available. Specific required artifacts:
+
+1. `source_changes.diff` and `video_qa/base.py` from the actual experiment commit
+2. All three 50-video `1_0.csv` files and corresponding `.log` files
+3. `streamingbench_50_kaggle.json`
+4. `environment.json`, `pip_freeze.txt`, `git_commit.txt`, `git_status.txt`
+5. SHA-256 manifest and research ZIP
+
+## 22.5 Code-Path Review
+
+### Correctly working subsystems (per saved outputs)
+
+- Model loads on CUDA and generates responses
+- Timestamped videos processed in chunks
+- KV compression appears in logs when budgets exceeded
+- Cache maxima conform to budget + 13-token prefix
+- 50-video batches produce all 250 expected result rows
+- The notebook extracts `qa_acc`, task classifications, runtime measurements, and figures
+
+### Not yet proven
+
+- Exact semantics of the modification to `video_qa/base.py`
+- Equivalence of the final repository tree to official HERMES
+- Unit tests of layer partitioning, pseudo-query attention scoring, cross-layer smoothing, summary pooling, and rotary delta correction in isolation
+- Exact definition of memory and TTFT instrumentation within inference code
+- Separation of conversation history from gold labels for all benchmark calls
+
+---
+
+# 23. Risks, Inconsistencies, and Open Issues
+
+> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 11.*
+
+| Priority | Issue | Consequence | Resolution Required |
+|---|---|---|---|
+| **Critical** | `video_qa/base.py` remains modified per `git status` | Unverified change may affect evaluation, prompting, or inference | Inspect full `source_changes.diff`; explain/diff-test every functional change |
+| **Critical** | No exact non-HERMES baseline | Cannot isolate benefit against base LLaVA | Run native baseline with same questions, times, and sampling |
+| **High** | Single nonrandom 50-video shard | Limited generalisability; extreme task imbalance | Add stratified/random independent shards, then full set |
+| **High** | Question-level uncertainty ignores video clustering | Intervals may be too optimistic | Paired video-cluster bootstrap or hierarchical analysis |
+| **High** | No completed 50-video paired table | Equal totals may hide significant answer swaps | Join 250 exact records across three budgets |
+| **High** | "50K = no compression" can be misleading | 79 logged compressions in 50-video control | Consistently label as "near-uncompressed HERMES control" |
+| **High** | Metric definitions not independently audited | "max GPU memory" and TTFT may omit important costs | Inspect source instrumentation; add CUDA peak + end-to-end timers |
+| **High** | Gold-answer history contamination not formally ruled out | Would compromise the meaning of accuracy if gold answers leak | Trace actual history-writing and prediction-input code path |
+| **Medium** | Some saved-output cells lack execution counts | Ambiguity in chronological rebuild | Fresh-kernel run and exported execution manifest |
+| **Medium** | Conditional skip checks file non-emptiness only | Partial/old CSV could be reused | Validate 250 unique keys, expected IDs, completion marker |
+| **Medium** | Individual HERMES mechanisms not ablated locally | Cannot determine which component drives benefits | Ablate smoothing, summaries, position policy, importance scoring |
+| **Medium** | Reported TTFT excludes unspecified components | Incomplete real-time claims | Measure ingestion cost, latency percentiles, total wall time |
+
+**Integrity note:** No contradiction was found between the main accuracy rows reported in the log and the corresponding notebook CSV-summary outputs.
+
+---
+
+# 24. Phased Next-Stage Research Plan
+
+> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 12. The plan is deliberately gated: do not spend substantial GPU resources on the full dataset until cheap code and analysis checks pass.*
+
+## Phase 0 — Recover and Freeze the Real Executable Experiment (No GPU)
+
+1. Import the full backed-up HERMES repository/source snapshot and `source_changes.diff`
+2. Diff the modified `video_qa/base.py` against recorded upstream HEAD
+3. Inspect all modified source for leakage from reference answers into model inputs
+4. Verify no temporary "disable key rotation" patch survived in cache code
+5. Record SHA-256 for effective configuration, model identity, source files, annotation file, and CSVs
+6. Convert the exploratory notebook into a canonical `setup → run → analyse → export` workflow
+7. Create an experiment manifest with all provenance fields
+
+**Gate 0 pass:** Every functional source deviation understood/documented; no gold-label leakage; exact executable environment recoverable.
+
+## Phase 1 — Statistical Re-Analysis of Existing 50-Video CSVs (CPU-Only)
+
+1. Load all three prediction CSVs; validate 250 rows, 50 videos, 5 QA/video, unique keys
+2. Recompute accuracy directly from saved gold and predictions
+3. Construct 4K ↔ 6K ↔ 50K paired correctness tables and discordance counts
+4. Apply exact paired test as sensitivity analysis; bootstrap video-level paired differences
+5. Report effect size and confidence intervals for each contrast
+6. Build a 30–50 example qualitative casebook from discordances
+7. Verify that the 10-video pilot is (or is not) nested in the 50-video set
+
+**Gate 1 pass:** No missing/duplicated/misaligned questions; difference estimates and CIs reproducible from CSVs.
+
+## Phase 2 — Establish Honest Controls and Component Fidelity (GPU)
+
+1. Run **native LLaVA-OneVision-0.5B without HERMES** at matched sampling/questions
+2. Retest HERMES 4K, 6K, 50K using the locked clean driver
+3. Add **FIFO/sliding-window** cache retention at the same GPU/token budgets
+4. Ablate **cross-layer smoothing**, **summary-token aggregation**, **attention-based retention**, and **position-re-indexing** separately
+5. Unit-test RoPE/M-RoPE correction against controlled reference recomputation
+6. Isolate streaming prefilling, compression overhead, query-time TTFT, and total QA response time
+
+**Gate 2 pass:** At least one matched native baseline, one simple budget-matched compression baseline, and a documented source-fidelity audit.
+
+## Phase 3 — Broader and More Representative Evaluation (GPU, Shard-Wise)
+
+1. Source additional official StreamingBench video shards beyond the 201–250 block
+2. Construct a reproducibly selected independent validation shard
+3. Re-run strongest configurations from Phases 1–2
+4. Evaluate full 498-video benchmark if access and compute allow
+5. Report both micro accuracy and task-specific effects across video durations and compression events
+
+**Gate 3 pass:** Results stable across non-overlapping evaluation shards; statistically grounded trade-off intervals.
+
+## Phase 4 — Research Extension (Only After Baseline Evidence Is Credible)
+
+Select an extension based on observed cases where the full model succeeds but compressed memory fails. Evaluate a minimal change first, use targeted ablation and independent holdout videos.
+
+---
+
+# 25. Experimental Design Specifications
+
+> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 13.*
+
+## 25.1 Mandatory Controls
+
+| ID | Configuration | Scientific Role |
+|---|---|---|
+| C0 | Native LLaVA-OV-0.5B on matched questions and frames | True backbone reference — **currently missing** |
+| C1 | HERMES 50K with measured compression count | Large-budget HERMES control |
+| C2 | HERMES 6K | Paper-style larger token budget |
+| C3 | HERMES 4K | Current likely efficient operating point |
+| C4 | Simple fixed 4K FIFO/sliding-window retention | Separates hierarchical selection from merely limiting budget |
+| A1 | HERMES 4K without cross-layer smoothing | Attribution to memory alignment |
+| A2 | HERMES 4K without summary-token aggregation | Attribution to long-term compressed memory |
+| A3 | HERMES 4K with alternative importance policy | Attribution to depth-specific token selection |
+| A4 | Lazy vs eager positional re-indexing | Position-fidelity/runtime trade-off |
+| X1 | 500/1K/2K at sufficient sample scale | Test whether surprisingly high pilot accuracy generalises |
+
+**Fairness requirements:** Same video set, annotation JSON, model checkpoint, seed, FPS, chunking, prompt, question-time cut-off, image preprocessing, and QA parser across all compared configurations.
+
+## 25.2 Per-Question Output Schema
+
+Save per-question results with at least:
+
+```text
+run_id, model_id, repo_sha, source_diff_sha, data_sha,
+video_id, question_id, question, task, query_time_s,
+gold_choice, prediction_text, parsed_choice, correct,
+kv_budget, sampled_frames_seen, compression_events_so_far,
+cache_length_at_query, ttft_s, end_to_end_query_s,
+gpu_peak_allocated_gb, gpu_peak_reserved_gb
+```
+
+## 25.3 Evaluation Metrics
+
+- **Accuracy:** micro overall, per task with $n$, macro only with caveats, per-duration band
+- **Paired robustness:** win/loss/tie by question, video-cluster bootstrap CI, exact paired p (exploratory), 4K↔6K agreement rate
+- **Efficiency:** peak allocated and reserved VRAM, per-question TTFT percentiles, total wall time/video, tokens/s, compression frequency
+- **Memory quality:** cache length, retained-frame ages, summary-token counts
+- **Reproducibility:** input hashes, package lock, source code diff, machine/GPU, run manifest
+
+## 25.4 Suggested Acceptance Criteria
+
+- **Completeness:** 100% expected video/QA keys, no duplicate rows, no silent dropped failures
+- **Validity:** Same run manifest across compared methods except intended treatment variables
+- **Control coverage:** True backbone and equal-budget FIFO available or honestly marked infeasible
+- **Statistics:** Paired cluster-aware interval; predeclared non-inferiority margin (e.g., 3 pp accuracy loss)
+- **Efficiency:** Lower memory and meaningful latency reduction with standardized instrumentation
+
+---
+
+# 26. Candidate Research Extensions
+
+> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 15 and the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Reports F–H. These are hypotheses to consider only after code-fidelity and matched-baseline stages are complete.*
+
+## 26.1 Critical Research Gaps Identified
+
+| Gap | Status | Opportunity |
+|---|---|---|
+| **Retention of fine-grained micro-events** | Partially addressed by summary tokens, but individual micro-events cannot be recovered from pooled state | Dual-path memory combining motion anomaly detectors with semantic anchor extraction |
+| **Autoregressive visual attention drift** | StreamFlow addresses via VAS + external GOP latents, but requires trained compressors | Training-free decoding hooks that dynamically adjust attention logits for cached visual anchors |
+| **Audio-visual temporal synchronization** | Unresolved — cache eviction is purely vision-centric | Multi-modal cross-attention gating with audio event detectors modulating visual token retention |
+
+## 26.2 Candidate Directions
+
+### Direction 1 — Event-Sensitive Preservation of Short-Lived Evidence
+
+Detect temporal change/novelty across sampled frames and reserve a small portion of the KV budget for rare event tokens. Compare against HERMES, StreamForest, TimeChat-Online, and StreamMem.
+
+### Direction 2 — Per-Layer Adaptive Budget Allocation
+
+Allocate KV slots across layers based on stable online signals (attention concentration, video novelty) rather than equal fixed budgets. Verify against closest methods before claiming novelty.
+
+### Direction 3 — Confidence-Controlled Memory Degradation
+
+Inexpensive online cues choose one of several predetermined compression levels without re-encoding historical video. Test quality-memory curve, switching overhead, and false trigger rates.
+
+### Direction 4 — Decoding-Time Visual Focus Calibration (EDMI)
+
+When Visual Attention Score drops below threshold $\tau$, apply dynamic logit adjustment to historical anchor tokens and summary tokens within the existing cache:
+
+$$\tilde{S}_{t, i}^{(l, h)} = \begin{cases} S_{t, i}^{(l, h)} + \alpha \cdot (\tau - VAS_t) \cdot \Omega_i, & \text{if } i \in \mathcal{V} \text{ and } VAS_t < \tau \\ S_{t, i}^{(l, h)}, & \text{otherwise} \end{cases}$$
+
+**Note:** This is a research idea (Entropy-Guided Dynamic Memory Injection), not a validated original contribution. Avoid adopting its novelty claims or performance assumptions without direct literature/code verification.
+
+### Decision Rule
+
+Choose the simplest candidate that (a) addresses reproducible compressed-only failures, (b) is not already implemented by close competitors, (c) has measurable outcomes on held-out videos, and (d) fits single-T4 or realistically accessible GPU resources. Document expected failure modes and falsifiable success criteria before coding.
+
+---
+
+# 27. Deliverables and Completion Criteria
+
+> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 16.*
+
+| Priority | Deliverable | Completion Test |
+|---|---|---|
+| **P0** | `REPRODUCTION_PROVENANCE.md` | Every source change categorised; no leakage; git/runtime fingerprints archived |
+| **P0** | Clean executable reproduction driver | One fresh restart reproduces a smoke test and verifies cache/key states |
+| **P1** | `streamingbench_50_paired_correctness.csv` | Exactly 250 correctly aligned unique QA rows |
+| **P1** | `streamingbench_50_pairwise_stats.md` | Exact discordances + clustered CIs + effect sizes |
+| **P1** | `error_casebook.md` | Each analysed difference annotated and independently reviewable |
+| **P2** | Non-HERMES LLaVA reference result | Identical matched protocol or clearly delimited feasibility constraints |
+| **P2** | Equal-budget FIFO and component ablations | Budget/accuracy/runtime tables on same test cases |
+| **P3** | New non-overlapping validation shard | Published sampling manifest + task distribution + results |
+| **P3** | Full benchmark (if feasible) | Transparent split, input count, hardware, and official-protocol comparison |
+| **P4** | Research novelty matrix and proposal | Closest-work analysis, falsifiable innovation, minimum viable experiment |
+| **P4** | Final paper-style reproducibility report | Figures, tables, assumptions, negative results, and archive links |
+
+### Suggested Session Order
+
+1. **Session 1 (CPU-only):** Open Kaggle backup; review `video_qa/base.py` diff; verify CSV schema/row IDs; compute all 250-question paired contrasts; identify compression-sensitive videos.
+2. **Session 2 (Minimal GPU):** Run short deterministic 4K/6K tests from clean environment; test RoPE correctness; run a small matched native-LLaVA baseline.
+3. **Session 3 (Confirmation):** Finalise matched baseline plus FIFO and 1–2 mechanism ablations; decide whether 4K, 6K, and small-budget variants warrant full-dataset compute.
+4. **Session 4+:** Broader shards, full evaluation, and research extension selection based on verified failure cases.
+
+---
+
+> *This document is a **living research log**. Future updates should append new experiments, additional baselines, analysis results, and conclusions with dates, experiment IDs, input hashes, and evidence status — without overwriting historical findings.*
