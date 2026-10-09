@@ -19,25 +19,86 @@
 - **[2025.01.23]** HERMES reached **#3 Paper of the day** on [Hugging Face Daily Papers](https://huggingface.co/papers/2601.14724)!
 - **[2025.01.21]** HERMES is available on [arXiv](https://arxiv.org/abs/2601.14724).
 
-## 🚀 Kaggle Reproduction Guide (StreamingBench Pilot)
+---
 
-This repository is optimized for reproduction directly in a **Kaggle Notebook** environment using a T4 GPU. 
+## 📋 Reproduction Study
 
-We have prepared a pilot script that automatically:
-1. Installs minimal dependencies (leveraging Kaggle's pre-installed PyTorch/Transformers)
-2. Downloads the LLaVA-OV-0.5B model
-3. Downloads a **10-video subset** of the official StreamingBench dataset from HuggingFace to save time and bandwidth.
-4. Runs HERMES inference with a 4K KV-cache budget.
-5. Evaluates the multiple-choice accuracy.
+This fork contains an independent **reproduction, validation, and extension study** of HERMES, conducted on resource-constrained Kaggle infrastructure.
 
-To run the full reproduction pipeline in Kaggle, simply open a terminal in your notebook and run:
+### Overview
+
+| | |
+|---|---|
+| **Environment** | Kaggle · Tesla T4 GPU (single) |
+| **Model** | LLaVA-OneVision-Qwen2-0.5B |
+| **Benchmark** | StreamingBench (50-video / 250-question subset) |
+| **KV Budgets Tested** | 500, 1K, 2K, 4K, 6K, 50K |
+| **Status** | Subset reproduction complete · Full benchmark pending |
+
+### Key Findings (50-Video Evaluation)
+
+| Configuration | Accuracy | 95% Wilson CI | Max GPU Memory | Median TTFT | Max Cache Length |
+|---|---:|---:|---:|---:|---:|
+| **HERMES KV=4000** | **57.2%** | 51.00–63.18% | **4.73 GB** | **0.058 s** | 4,013 |
+| **HERMES KV=6000** | **57.2%** | 51.00–63.18% | 4.80 GB | 0.060 s | 6,013 |
+| HERMES KV=50000 (control) | 55.2% | 49.00–61.24% | 11.87 GB | 0.112 s | 50,013 |
+
+**Main result:** HERMES at KV=4000 achieved comparable accuracy to the near-uncompressed 50K control while reducing peak GPU memory by **~60%** and median TTFT by **~48%**.
+
+### Completed Work
+
+- ✅ Full HERMES inference pipeline on Kaggle T4
+- ✅ Transformers/Qwen2 RoPE compatibility fixes
+- ✅ Custom-video smoke test with KV compression validation
+- ✅ 10-video six-budget ablation (KV=500 to KV=50K)
+- ✅ 50-video scaled benchmark (KV=4K, 6K, 50K)
+- ✅ Task-level accuracy analysis (9 task categories)
+- ✅ Error taxonomy (temporal, attribute, counting, spatial failures)
+- ✅ Statistical analysis with Wilson CIs and paired comparisons
+- ✅ Efficiency analysis (memory, TTFT, cache size)
+- ✅ Comprehensive literature review and cross-paper comparison
+- ✅ Reproduction audit with evidence grading
+- ✅ Reproducibility packaging (CSVs, logs, source snapshot, SHA-256 manifest)
+
+### Remaining
+
+- ⏳ Non-HERMES LLaVA-OneVision native baseline
+- ⏳ 50-video paired prediction analysis
+- ⏳ HERMES component ablations (smoothing, summary tokens, RoPE re-indexing)
+- ⏳ Full 498-video StreamingBench evaluation
+- ⏳ Research extension development and evaluation
+
+### Quick Start (Kaggle)
+
 ```bash
 git clone https://github.com/md-hameem/HERMES-reproduction.git
 cd HERMES-reproduction
 bash scripts/run_kaggle.sh
 ```
-Read the full reproduction timeline and findings in the [`research_log.md`](./research_log.md).
 
+This script automatically installs dependencies, downloads the model and a 10-video StreamingBench subset, runs HERMES inference with KV=4000, and evaluates accuracy.
+
+### Documentation
+
+| Document | Description |
+|---|---|
+| [`research_log.md`](./research_log.md) | Complete research log (27 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, and EDMI proposal |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading, risk assessment, phased research plan, experimental design specifications, and deliverables |
+
+### Interpretation Guidelines
+
+1. KV=50000 is a **near-uncompressed HERMES control**, not the original LLaVA baseline — it still executes through the HERMES pipeline and triggered 79 compression events on the 50-video run
+2. The 50-video subset is a **convenience shard** (samples 201–250), not a random or stratified sample of the full benchmark
+3. Task distribution is heavily imbalanced (Causal + Prospective Reasoning = 80.4% of questions)
+4. Accuracy differences should be interpreted alongside their confidence intervals and the clustered nature of 5 questions per video
+5. The current experiments run on a Tesla T4, while published HERMES results use an A800 — hardware differences affect memory and latency comparisons
+
+### Experimental Plots
+
+All experimental figures are stored in the [`img/`](./img/) directory and embedded in the research log. These include KV-cache compression validation, GPU memory curves, accuracy vs. budget plots, TTFT analysis, task-level breakdowns, and error distributions.
+
+---
 
 ## 🛠️ Installation
 
@@ -133,9 +194,13 @@ HERMES/
 │   └── videomme/
 │       ├── videos/
 │       └── videomme.json
+├── docs/                          # Reproduction study documents
+│   ├── HERMES_Comprehensive_Technical_Research_Report.md
+│   └── HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md
 ├── eval/
 │   ├── eval_multiple_choice.py
 │   └── eval_open_ended.py
+├── img/                           # Experimental plots and figures
 ├── inference/
 │   ├── abstract_hermes.py
 │   ├── llavaov_hermes.py
@@ -143,20 +208,20 @@ HERMES/
 │   ├── reindex_1d.py
 │   └── reindex_3d.py
 ├── models/
-│   ├── llava-onevision-qwen2-0.5b-ov-hf/
-│   ├── llava-onevision-qwen2-7b-ov-hf/
-│   ├── llava-onevision-qwen2-72b-ov-hf/
-│   ├── Qwen2.5-VL-3B-Instruct/
-│   ├── Qwen2.5-VL-7B-Instruct/
-│   └── Qwen2.5-VL-32B-Instruct/
+│   └── ...
 ├── scripts/
-│   └── run_infer.sh
+│   ├── download_subset.py
+│   ├── run_infer.sh
+│   └── run_kaggle.sh
 ├── video_qa/
 │   ├── base.py
 │   ├── hermes_vqa.py
 │   └── run_infer.py
 ├── LICENSE
 ├── README.md
+├── research_log.md                # Full reproduction research log
+├── requirements_cpu.txt
+├── requirements_kaggle.txt
 ├── requirements_llava.txt
 └── requirements_qwen.txt
 ```
