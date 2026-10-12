@@ -43,6 +43,7 @@
 25. [Experimental Design Specifications](#25-experimental-design-specifications)
 26. [Candidate Research Extensions](#26-candidate-research-extensions)
 27. [Deliverables and Completion Criteria](#27-deliverables-and-completion-criteria)
+28. [Artifact Intake and Verification Update — 13 October 2026](#28-artifact-intake-and-verification-update--13-october-2026)
 
 ---
 
@@ -1609,3 +1610,62 @@ Choose the simplest candidate that (a) addresses reproducible compressed-only fa
 ---
 
 > *This document is a **living research log**. Future updates should append new experiments, additional baselines, analysis results, and conclusions with dates, experiment IDs, input hashes, and evidence status — without overwriting historical findings.*
+
+---
+
+# 28. Artifact Intake and Verification Update — 13 October 2026
+
+## 28.1 Scope and provenance
+
+This update records an audit of the **43 newly added, currently untracked Git files** and treats `harmes-redep-chp1.ipynb` as the latest executed notebook record. The notebook contains 201 cells (175 code cells; 174 with recorded execution counts) and was last modified locally on 13 October 2026 after a Kaggle execution dated 12 October 2026.
+
+The added bundle contains:
+
+- **25 tabular/raw-result artifacts** under `results/`, including per-question prediction CSVs, aggregate summaries, task/duration analyses, and a 10-video paired-test table;
+- **8 PNG figures** derived from the saved tables;
+- **7 StreamingBench inference logs** (six 10-video budget runs and the 50-video 4K run); and
+- **3 custom-video smoke-test logs** for 500, 4K, and 50K budgets.
+
+The raw prediction CSVs are now the primary local evidence for the reported accuracy values. The aggregate CSVs and figures are reproducible summaries of those rows, subject to the limitations below.
+
+## 28.2 File-level verification findings
+
+| Artifact group | Verification result | Interpretation |
+|---|---|---|
+| 10-video raw prediction CSVs, budgets 500/1K/2K/4K/6K/50K | Each contains 50 rows from 10 videos; no duplicate `(video_id, question)` pairs | Complete for the intended pilot set |
+| 50-video raw prediction CSVs, budgets 4K/6K/50K | Each contains 250 rows from 50 videos; all three files have identical row-order metadata (`video_id`, question, answer, correct choice, task) | Valid for row-aligned paired analysis |
+| 50-video identity keys | 23 repeated `(video_id, question)` pairs occur within each CSV | Do **not** join these files on only video ID + question text; use an explicit question ID, validated within-video ordinal, or the preserved row order after identity checks |
+| Aggregate accuracy tables | Raw-row recomputation gives 143/250 (57.2%) for 4K, 143/250 (57.2%) for 6K, and 138/250 (55.2%) for 50K | Confirms the main reported counts |
+| 10-video paired table | Recomputed/raw-table values agree with the saved 15-comparison table | Correct as a question-level exploratory analysis |
+| Logs | No traceback, exception, CUDA OOM, or killed-process markers were found in the saved logs; each 10-video log contains 50 TTFT entries; the 50-video 4K log contains 250 TTFT entries | Supports successful completion of those saved runs |
+| 50-video 6K and 50K logs | Not included in the newly added files | Their raw prediction CSVs support accuracy analysis, but their reported memory/TTFT values cannot be independently re-parsed from a saved raw log in this local bundle |
+
+The legacy smoke folders are aliases rather than independent observations: `kaggle_4000` and `kaggle_4k` are byte-identical, as are `kaggle_50000`/`kaggle_50k` and `kaggle_500`/`kaggle_smoke`. They should be retained only once when packaging a final archive.
+
+The file `results/final_kv_ablation_table.csv` labels the 50K condition as `Baseline-50000`. This label is historically inconsistent with the project interpretation rule: it must be called the **near-uncompressed HERMES control**, not a native LLaVA baseline.
+
+## 28.3 Newly completed 50-video paired analysis
+
+The earlier open issue concerning a missing 50-video paired table is now partly resolved from the saved CSVs. Before comparison, all 250 rows were checked for alignment across the three budgets on video ID, question text, answer, correct choice, and task; there were zero row-order identity mismatches.
+
+| Comparison | First-only correct | Second-only correct | Discordant questions | Both correct | Both wrong | Same predicted choice |
+|---|---:|---:|---:|---:|---:|---:|
+| 4K vs 6K | 2 | 2 | 4 | 141 | 105 | 241 |
+| 4K vs 50K | 9 | 4 | 13 | 134 | 103 | 228 |
+| 6K vs 50K | 10 | 5 | 15 | 133 | 102 | 231 |
+
+The associated two-sided exact paired-test p-values are 1.0000 (4K vs 6K), 0.2668 (4K vs 50K), and 0.3018 (6K vs 50K). These are descriptive sensitivity analyses only: they do not account for the five correlated questions per video or for multiple comparisons.
+
+At the video level, 4K vs 50K and 6K vs 50K each have a mean advantage of **0.1 correct answers per video** (9 videos favour the compressed setting, 4 favour the 50K control, 37 tie). For 4K vs 6K, 2 videos favour each setting and 46 tie. This supports the constrained claim that the compressed configurations have similar observed performance on this shard; it does not establish equivalence or superiority.
+
+## 28.4 Updated evidence status and next action
+
+The 50-video paired-analysis task is **partially complete**: row-aligned discordance counts and question-level exact tests are now available, but a durable `question_id`/ordinal key, a saved paired-correctness artifact, and a video-cluster bootstrap confidence interval are still required for a publication-quality comparison.
+
+The priority order is therefore:
+
+1. Write a stable 250-row paired-correctness CSV using a validated within-video question ordinal or source annotation ID.
+2. Produce a paired, video-cluster bootstrap interval for 4K/6K minus 50K accuracy.
+3. Recover or export the missing 50-video 6K and 50K raw logs, then re-derive their memory and TTFT summaries.
+4. Rename the legacy `Baseline-50000` label in derived outputs and remove duplicate smoke-result aliases from the final release archive.
+5. Continue with the already planned native non-HERMES LLaVA baseline, simple equal-budget baseline, and component ablations.

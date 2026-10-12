@@ -1,0 +1,963 @@
+[I 261011 19:50:30 base:273] seed: 2024
+[I 261011 19:50:30 base:278] Loading VideoQA model: llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+[I 261011 19:50:35 llavaov_hermes:930] n_init: 13
+[I 261011 19:50:35 llavaov_hermes:931] kv_size: 4000
+  0%|          | 0/10 [00:00<?, ?it/s]
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:51:09 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:10 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:01<00:04,  1.24s/it][A[I 261011 19:51:11 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:11 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:11 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:12 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:13 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:13 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:13 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:04<00:06,  2.18s/it][A[I 261011 19:51:14 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:14 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:14 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:15 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:16 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:16 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:16 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:17 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:17 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:17 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:08<00:06,  3.10s/it][A[I 261011 19:51:17 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:17 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:17 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:18 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:09<00:02,  2.33s/it][A[I 261011 19:51:19 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:20 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:20 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:21 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:21 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:21 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:21 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  2.65s/it][A100%|██████████| 5/5 [00:12<00:00,  2.53s/it]
+ 10%|█         | 1/10 [00:46<06:59, 46.61s/it]Encoding frames 0 to 5
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 2.908499240875244 GB
+TTFT: 0.10994371700007832 seconds
+Answering Cache lengths: min=1189, max=1189
+Pred Answer:  B) Assembling the train.
+Encoding frames 6 to 21
+Local question: Find recent details related to: Question: What action is the hand performing on the train? Answer: Assembling the train.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action is the hand performing on the train? Answer: Assembling the train.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.642587184906006 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 22 to 31
+Local question: Find recent details related to: Question: What action is the hand performing on the train? Answer: Assembling the train.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action is the hand performing on the train? Answer: Assembling the train.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.642587184906006 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.07035798400011117 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) Yellow.
+Encoding frames 32 to 47
+Local question: Find recent details related to: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707452774047852 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 48 to 63
+Local question: Find recent details related to: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707452774047852 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 64 to 69
+Local question: Find recent details related to: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color Lego brick is placed first on the surface? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707452774047852 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05875586699994528 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) Two.
+Encoding frames 70 to 74
+Local question: Find recent details related to: Question: How many colors of bricks have been used so far? Answer: Two.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many colors of bricks have been used so far? Answer: Two.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707452774047852 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.061289121000072555 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Adding green bricks for the roof, extending the yellow base, expanding the
+Encoding frames 75 to 90
+Local question: Find recent details related to: Question: What was the sequence of actions performed by the hand just now? Answer: Adding green bricks for the roof, extending the yellow base, expanding the. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of actions performed by the hand just now? Answer: Adding green bricks for the roof, extending the yellow base, expanding the. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 91 to 102
+Local question: Find recent details related to: Question: What was the sequence of actions performed by the hand just now? Answer: Adding green bricks for the roof, extending the yellow base, expanding the. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of actions performed by the hand just now? Answer: Adding green bricks for the roof, extending the yellow base, expanding the. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05848690900006659 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) Circular pieces resembling wheels.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:51:44 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:45 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:03,  1.28it/s][A[I 261011 19:51:46 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:46 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:46 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:47 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:48 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:48 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:48 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:03<00:06,  2.21s/it][A[I 261011 19:51:49 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:49 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:49 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:50 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:51 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:51 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:51 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:07<00:05,  2.66s/it][A[I 261011 19:51:52 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:53 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:53 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:54 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:54 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:54 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:55 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:55 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:55 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:55 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:11<00:03,  3.37s/it][A[I 261011 19:51:56 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:51:57 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:51:57 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:51:57 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:13<00:00,  2.77s/it][A100%|██████████| 5/5 [00:13<00:00,  2.67s/it]
+ 20%|██        | 2/10 [01:22<05:22, 40.33s/it]Encoding frames 0 to 5
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.060548012000026574 seconds
+Answering Cache lengths: min=1189, max=1189
+Pred Answer:  A) Green and blue.
+Encoding frames 6 to 21
+Local question: Find recent details related to: Question: What colors are the wheels of the race car? Answer: Green and blue.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the wheels of the race car? Answer: Green and blue.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 22 to 35
+Local question: Find recent details related to: Question: What colors are the wheels of the race car? Answer: Green and blue.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the wheels of the race car? Answer: Green and blue.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06830663000005188 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) A happy face.
+Encoding frames 36 to 51
+Local question: Find recent details related to: Question: What feature is present on the front of the toy? Answer: A happy face.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What feature is present on the front of the toy? Answer: A happy face.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 52 to 63
+Local question: Find recent details related to: Question: What feature is present on the front of the toy? Answer: A happy face.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What feature is present on the front of the toy? Answer: A happy face.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0617735820001144 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) In a straight line.
+Encoding frames 64 to 79
+Local question: Find recent details related to: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 80 to 95
+Local question: Find recent details related to: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 96 to 100
+Local question: Find recent details related to: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How are the yellow building blocks arranged before the blue block is placed on top? Answer: In a straight line.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06374471100002665 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) A small structure made of yellow and red blocks with wheels.
+Encoding frames 101 to 113
+Local question: Find recent details related to: Question: What is the new item introduced in the video? Answer: A small structure made of yellow and red blocks with wheels.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the new item introduced in the video? Answer: A small structure made of yellow and red blocks with wheels.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05815471100004288 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) The toy vehicle is lifted off the surface.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:52:14 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:15 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:03,  1.07it/s][A[I 261011 19:52:15 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:15 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:01<00:01,  1.59it/s][A[I 261011 19:52:16 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:17 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:17 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:17 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:18 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:18 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:18 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:04<00:03,  1.74s/it][A[I 261011 19:52:19 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:20 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:20 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:21 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:21 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:21 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:21 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:07<00:02,  2.34s/it][A[I 261011 19:52:22 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:22 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:22 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:22 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:08<00:00,  1.77s/it][A100%|██████████| 5/5 [00:08<00:00,  1.69s/it]
+ 30%|███       | 3/10 [01:47<03:53, 33.31s/it]Encoding frames 0 to 7
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.06383816100014883 seconds
+Answering Cache lengths: min=1581, max=1581
+Pred Answer:  A) Eight.
+Encoding frames 8 to 9
+Local question: Find recent details related to: Question: How many studs does each yellow interlocking block placed by the hand have? Answer: Eight.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many studs does each yellow interlocking block placed by the hand have? Answer: Eight.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.06129927699998916 seconds
+Answering Cache lengths: min=1973, max=1973
+Pred Answer:  D) Four.
+Encoding frames 10 to 25
+Local question: Find recent details related to: Question: How many interlocking blocks are positioned in a straight line by the hand? Answer: Four.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many interlocking blocks are positioned in a straight line by the hand? Answer: Four.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 26 to 37
+Local question: Find recent details related to: Question: How many interlocking blocks are positioned in a straight line by the hand? Answer: Four.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many interlocking blocks are positioned in a straight line by the hand? Answer: Four.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06462029999988772 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) Yellow.
+Encoding frames 38 to 53
+Local question: Find recent details related to: Question: What is the color of the block that the hand is reaching for right now? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the color of the block that the hand is reaching for right now? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 54 to 66
+Local question: Find recent details related to: Question: What is the color of the block that the hand is reaching for right now? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the color of the block that the hand is reaching for right now? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06309490699982234 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) Green.
+Encoding frames 67 to 70
+Local question: Find recent details related to: Question: What color is the brick first added after the initial blue bricks form a two-layered structure? Answer: Green.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the brick first added after the initial blue bricks form a two-layered structure? Answer: Green.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0572637410000425 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Yellow, green, orange.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:52:49 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:50 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:03,  1.08it/s][A[I 261011 19:52:51 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:51 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:51 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:52 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:52 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:52 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:52 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:03<00:06,  2.01s/it][A[I 261011 19:52:53 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:54 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:54 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:54 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:05<00:03,  1.81s/it][A[I 261011 19:52:55 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:56 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:56 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:57 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:57 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:57 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:52:57 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:08<00:02,  2.47s/it][A[I 261011 19:52:59 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:52:59 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:52:59 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:00 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:01 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:01 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:01 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  2.85s/it][A100%|██████████| 5/5 [00:12<00:00,  2.46s/it]
+ 40%|████      | 4/10 [02:26<03:33, 35.50s/it]Encoding frames 0 to 7
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.0635936670000774 seconds
+Answering Cache lengths: min=1581, max=1581
+Pred Answer:  A) Red.
+Encoding frames 8 to 23
+Local question: Find recent details related to: Question: What color is the plastic block added on top of the green blocks? Answer: Red.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the plastic block added on top of the green blocks? Answer: Red.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 24 to 30
+Local question: Find recent details related to: Question: What color is the plastic block added on top of the green blocks? Answer: Red.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the plastic block added on top of the green blocks? Answer: Red.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.07263254600002256 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Red, green, and yellow.
+Encoding frames 31 to 42
+Local question: Find recent details related to: Question: What are the primary colors of the plastic building blocks shown right now? Answer: Red, green, and yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What are the primary colors of the plastic building blocks shown right now? Answer: Red, green, and yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06484068000008847 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) A green block.
+Encoding frames 43 to 58
+Local question: Find recent details related to: Question: Which block was picked up and attached to the top of red block first just now? Answer: A green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Which block was picked up and attached to the top of red block first just now? Answer: A green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 59 to 70
+Local question: Find recent details related to: Question: Which block was picked up and attached to the top of red block first just now? Answer: A green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Which block was picked up and attached to the top of red block first just now? Answer: A green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.061831229999825155 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) "Alphabet A transform to Box".
+Encoding frames 71 to 86
+Local question: Find recent details related to: Question: What was the white text on the purple animated overlay read just now? Answer: "Alphabet A transform to Box".. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the white text on the purple animated overlay read just now? Answer: "Alphabet A transform to Box".. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 87 to 98
+Local question: Find recent details related to: Question: What was the white text on the purple animated overlay read just now? Answer: "Alphabet A transform to Box".. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the white text on the purple animated overlay read just now? Answer: "Alphabet A transform to Box".. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05959587200004535 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) The blocks are scattered and then gathered into a pile.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:53:28 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:29 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:01,  2.05it/s][A[I 261011 19:53:30 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:31 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:32 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:32 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:32 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:32 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:32 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:32 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:04<00:07,  2.42s/it][A[I 261011 19:53:33 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:33 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:33 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:33 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:05<00:03,  1.69s/it][A[I 261011 19:53:34 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:35 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:35 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:35 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:36 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:36 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:36 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:07<00:02,  2.17s/it][A[I 261011 19:53:37 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:38 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:38 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:39 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:40 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:40 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:40 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:53:40 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:53:40 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:53:40 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  2.86s/it][A100%|██████████| 5/5 [00:12<00:00,  2.41s/it]
+ 50%|█████     | 5/10 [03:05<03:04, 36.81s/it]Encoding frames 0 to 1
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.059600452000040605 seconds
+Answering Cache lengths: min=405, max=405
+Pred Answer:  C) Red and Yellow.
+Encoding frames 2 to 17
+Local question: Find recent details related to: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Encoding frames 18 to 33
+Local question: Find recent details related to: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 34 to 34
+Local question: Find recent details related to: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the wheels of the toy car? Answer: Red and Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06816222899988134 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Adjusted the green block.
+Encoding frames 35 to 39
+Local question: Find recent details related to: Question: What action did the hand perform after placing the green block next to the blue block? Answer: Adjusted the green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action did the hand perform after placing the green block next to the blue block? Answer: Adjusted the green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05755191600019316 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Two hands.
+Encoding frames 40 to 55
+Local question: Find recent details related to: Question: How many hands are involved in arranging the blocks right now? Answer: Two hands.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many hands are involved in arranging the blocks right now? Answer: Two hands.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 56 to 62
+Local question: Find recent details related to: Question: How many hands are involved in arranging the blocks right now? Answer: Two hands.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many hands are involved in arranging the blocks right now? Answer: Two hands.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05922678700017059 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Places it on the left side.
+Encoding frames 63 to 78
+Local question: Find recent details related to: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 79 to 94
+Local question: Find recent details related to: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 95 to 95
+Local question: Find recent details related to: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What does the hand do after picking up the yellow building block? Answer: Places it on the left side.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0585766589999821 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Picks up an orange block.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:54:06 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:06 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:01,  2.38it/s][A[I 261011 19:54:07 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:08 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:01<00:03,  1.09s/it][A[I 261011 19:54:09 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:10 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:10 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:10 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:11 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:11 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:11 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:04<00:03,  1.94s/it][A[I 261011 19:54:12 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:13 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:13 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:14 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:14 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:14 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:15 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:09<00:02,  2.81s/it][A[I 261011 19:54:16 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:17 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:17 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:18 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:18 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:18 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:19 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  3.17s/it][A100%|██████████| 5/5 [00:12<00:00,  2.58s/it]
+ 60%|██████    | 6/10 [03:44<02:29, 37.43s/it]Encoding frames 0 to 0
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.060349201999997604 seconds
+Answering Cache lengths: min=209, max=209
+Pred Answer:  B) Yellow and Blue.
+Encoding frames 1 to 11
+Local question: Find recent details related to: Question: What colors are the blocks used to form the helicopter rotor blades? Answer: Yellow and Blue.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What colors are the blocks used to form the helicopter rotor blades? Answer: Yellow and Blue.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.06477652100011255 seconds
+Answering Cache lengths: min=2365, max=2365
+Pred Answer:  C) Placing a yellow block, then a blue block, and finally two
+Encoding frames 12 to 27
+Local question: Find recent details related to: Question: What is the sequence of actions performed with the blocks just now? Answer: Placing a yellow block, then a blue block, and finally two. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the sequence of actions performed with the blocks just now? Answer: Placing a yellow block, then a blue block, and finally two. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 28 to 35
+Local question: Find recent details related to: Question: What is the sequence of actions performed with the blocks just now? Answer: Placing a yellow block, then a blue block, and finally two. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the sequence of actions performed with the blocks just now? Answer: Placing a yellow block, then a blue block, and finally two. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0647082240002419 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) Adjusts the yellow block.
+Encoding frames 36 to 51
+Local question: Find recent details related to: Question: What is the hand doing after placing three yellow blocks onto the top of the structure? Answer: Adjusts the yellow block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the hand doing after placing three yellow blocks onto the top of the structure? Answer: Adjusts the yellow block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 52 to 67
+Local question: Find recent details related to: Question: What is the hand doing after placing three yellow blocks onto the top of the structure? Answer: Adjusts the yellow block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the hand doing after placing three yellow blocks onto the top of the structure? Answer: Adjusts the yellow block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06015479400002732 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  C) Picks up a red block, adjusts it, then picks up a yellow
+Encoding frames 68 to 83
+Local question: Find recent details related to: Question: What was the sequence of events the hand followed when building the structure just now? Answer: Picks up a red block, adjusts it, then picks up a yellow. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of events the hand followed when building the structure just now? Answer: Picks up a red block, adjusts it, then picks up a yellow. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 84 to 97
+Local question: Find recent details related to: Question: What was the sequence of events the hand followed when building the structure just now? Answer: Picks up a red block, adjusts it, then picks up a yellow. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of events the hand followed when building the structure just now? Answer: Picks up a red block, adjusts it, then picks up a yellow. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05921983400003228 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Adds blue blocks to the side of the structure.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:54:41 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:42 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:01,  2.07it/s][A[I 261011 19:54:42 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:43 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:01<00:02,  1.31it/s][A[I 261011 19:54:44 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:44 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:44 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:45 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:46 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:46 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:46 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:04<00:03,  1.82s/it][A[I 261011 19:54:47 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:48 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:48 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:49 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:50 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:50 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:51 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:51 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:51 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:53 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:53 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:53 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:53 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:12<00:04,  4.10s/it][A[I 261011 19:54:54 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:54:54 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:54:54 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:54:54 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  2.87s/it][A100%|██████████| 5/5 [00:12<00:00,  2.56s/it]
+ 70%|███████   | 7/10 [04:19<01:50, 36.74s/it]Encoding frames 0 to 1
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.06156698599988886 seconds
+Answering Cache lengths: min=405, max=405
+Pred Answer:  D) A toy car.
+Encoding frames 2 to 9
+Local question: Find recent details related to: Question: What is positioned underneath the archway made of colorful interlocking blocks? Answer: A toy car.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is positioned underneath the archway made of colorful interlocking blocks? Answer: A toy car.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.06301643899996634 seconds
+Answering Cache lengths: min=1973, max=1973
+Pred Answer:  B) Three.
+Encoding frames 10 to 25
+Local question: Find recent details related to: Question: How many yellow blocks are connected in a line? Answer: Three.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many yellow blocks are connected in a line? Answer: Three.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 26 to 34
+Local question: Find recent details related to: Question: How many yellow blocks are connected in a line? Answer: Three.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: How many yellow blocks are connected in a line? Answer: Three.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06874937299971862 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) On top of the yellow bricks.
+Encoding frames 35 to 50
+Local question: Find recent details related to: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 51 to 66
+Local question: Find recent details related to: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 67 to 82
+Local question: Find recent details related to: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 83 to 97
+Local question: Find recent details related to: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the green brick placed relative to the yellow bricks in the structure? Answer: On top of the yellow bricks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0584330200003933 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  C) Adjusts the yellow bricks.
+Encoding frames 98 to 99
+Local question: Find recent details related to: Question: What does the person do after adding more yellow bricks? Answer: Adjusts the yellow bricks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What does the person do after adding more yellow bricks? Answer: Adjusts the yellow bricks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05873007599984703 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Add more bricks to the arrangement.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:55:23 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:24 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:02,  1.40it/s][A[I 261011 19:55:24 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:25 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:01<00:02,  1.21it/s][A[I 261011 19:55:26 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:26 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:26 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:28 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:28 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:28 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:29 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:29 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:29 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:29 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:06<00:05,  2.68s/it][A[I 261011 19:55:31 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:31 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:31 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:33 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:33 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:33 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:34 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:34 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:34 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:34 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:11<00:03,  3.54s/it][A[I 261011 19:55:36 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:36 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:36 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:38 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:38 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:38 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:39 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:55:40 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:55:40 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:55:40 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:17<00:00,  4.35s/it][A100%|██████████| 5/5 [00:17<00:00,  3.43s/it]
+ 80%|████████  | 8/10 [05:05<01:19, 39.72s/it]Encoding frames 0 to 3
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.0570773320000626 seconds
+Answering Cache lengths: min=797, max=797
+Pred Answer:  D) Yellow, blue, green.
+Encoding frames 4 to 9
+Local question: Find recent details related to: Question: What are the colors of the crane arm? Answer: Yellow, blue, green.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What are the colors of the crane arm? Answer: Yellow, blue, green.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+TTFT: 0.058427119000043604 seconds
+Answering Cache lengths: min=1973, max=1973
+Pred Answer:  C) It lifts and swings gently.
+Encoding frames 10 to 25
+Local question: Find recent details related to: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.707464218139648 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 26 to 41
+Local question: Find recent details related to: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709069728851318 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 42 to 47
+Local question: Find recent details related to: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the orange block as the video progresses? Answer: It lifts and swings gently.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709069728851318 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.057312877000185836 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) The hand places a yellow block, moves it, then places a green
+Encoding frames 48 to 63
+Local question: Find recent details related to: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 64 to 79
+Local question: Find recent details related to: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 80 to 85
+Local question: Find recent details related to: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was the sequence of actions performed with the blocks just now? Answer: The hand places a yellow block, moves it, then places a green. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0662992700003997 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) It is disassembled.
+Encoding frames 86 to 101
+Local question: Find recent details related to: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 102 to 117
+Local question: Find recent details related to: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 118 to 132
+Local question: Find recent details related to: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens to the smaller structure after it is first moved out of view? Answer: It is disassembled.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06712393700036046 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  C) Nine.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:56:18 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:19 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:01<00:06,  1.60s/it][A[I 261011 19:56:20 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:21 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:21 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:22 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:23 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:23 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:24 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:24 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:24 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:25 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:07<00:12,  4.04s/it][A[I 261011 19:56:26 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:27 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:27 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:28 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:29 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:29 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:30 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:30 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:30 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:31 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:13<00:09,  4.97s/it][A[I 261011 19:56:31 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:31 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:31 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:31 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:13<00:03,  3.22s/it][A[I 261011 19:56:33 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:33 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:33 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:35 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:35 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:35 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:37 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:37 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:37 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:38 hermes_vqa:61] Triggering question prediction and KV compression
+Encoding frames 0 to 12
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+TTFT: 0.06432483299977321 seconds
+Answering Cache lengths: min=2561, max=2561
+Pred Answer:  D) The hand adds another green block.
+Encoding frames 13 to 28
+Local question: Find recent details related to: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 29 to 44
+Local question: Find recent details related to: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 45 to 58
+Local question: Find recent details related to: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What happens after the first green block is placed on the yellow block? Answer: The hand adds another green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.0660307240000293 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) Pressing down the green blocks.
+Encoding frames 59 to 74
+Local question: Find recent details related to: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 75 to 90
+Local question: Find recent details related to: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 91 to 104
+Local question: Find recent details related to: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What action do the hands perform just before moving away from the structure? Answer: Pressing down the green blocks.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05980979399964781 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) The yellow block is placed first, followed by the green block.
+Encoding frames 105 to 105
+Local question: Find recent details related to: Question: What sequence of actions occured with the green and yellow blocks just now? Answer: The yellow block is placed first, followed by the green block.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What sequence of actions occured with the green and yellow blocks just now? Answer: The yellow block is placed first, followed by the green block.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.058115861999795015 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Next to the original structure.
+Encoding frames 106 to 121
+Local question: Find recent details related to: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 122 to 137
+Local question: Find recent details related to: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 138 to 153
+Local question: Find recent details related to: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 154 to 157
+Local question: Find recent details related to: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: Where is the new yellow and green block placed relative to the original structure? Answer: Next to the original structure.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.[I 261011 19:56:38 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:56:38 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:56:38 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:20<00:00,  4.57s/it][A100%|██████████| 5/5 [00:20<00:00,  4.18s/it]
+ 90%|█████████ | 9/10 [06:03<00:45, 45.48s/it]
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05926138099994205 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) Arranged them on the blue block and adjusted for alignment.
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[I 261011 19:56:59 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:56:59 llavaov_hermes:852] Saved conversation to history. Total conversations: 1
+
+ 20%|██        | 1/5 [00:00<00:02,  1.54it/s][A[I 261011 19:57:00 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:01 llavaov_hermes:852] Saved conversation to history. Total conversations: 2
+
+ 40%|████      | 2/5 [00:01<00:02,  1.08it/s][A[I 261011 19:57:02 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:02 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:02 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:03 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:03 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:03 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:03 llavaov_hermes:852] Saved conversation to history. Total conversations: 3
+
+ 60%|██████    | 3/5 [00:04<00:03,  1.79s/it][A[I 261011 19:57:05 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:05 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:05 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:06 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:07 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:07 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:07 llavaov_hermes:852] Saved conversation to history. Total conversations: 4
+
+ 80%|████████  | 4/5 [00:08<00:02,  2.44s/it][A[I 261011 19:57:08 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:09 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:09 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:10 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:11 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:11 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:11 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:57:11 llavaov_hermes:288] Layer-wise shrink completed. Lengths: min=4013, max=4013, first=4013, last=4013
+[I 261011 19:57:11 llavaov_hermes:408] Strict-shrunk KV cache. New length: 4013
+[I 261011 19:57:12 llavaov_hermes:852] Saved conversation to history. Total conversations: 5
+
+100%|██████████| 5/5 [00:12<00:00,  3.28s/it][A100%|██████████| 5/5 [00:12<00:00,  2.56s/it]
+100%|██████████| 10/10 [06:36<00:00, 41.71s/it]100%|██████████| 10/10 [06:36<00:00, 39.70s/it]
+Encoding frames 0 to 3
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+TTFT: 0.05681559599997854 seconds
+Answering Cache lengths: min=797, max=797
+Pred Answer:  B) Auto Rickshaw.
+Encoding frames 4 to 9
+Local question: Find recent details related to: Question: What was written in the top right corner at the start of the video? Answer: Auto Rickshaw.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What was written in the top right corner at the start of the video? Answer: Auto Rickshaw.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+TTFT: 0.060827626999980566 seconds
+Answering Cache lengths: min=1973, max=1973
+Pred Answer:  A) The hand adds a yellow block, then an orange block, and adjusts
+Encoding frames 10 to 25
+Local question: Find recent details related to: Question: What sequence of actions happened after the blue rectangular block is placed on the surface? Answer: The hand adds a yellow block, then an orange block, and adjusts. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What sequence of actions happened after the blue rectangular block is placed on the surface? Answer: The hand adds a yellow block, then an orange block, and adjusts. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 26 to 32
+Local question: Find recent details related to: Question: What sequence of actions happened after the blue rectangular block is placed on the surface? Answer: The hand adds a yellow block, then an orange block, and adjusts. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What sequence of actions happened after the blue rectangular block is placed on the surface? Answer: The hand adds a yellow block, then an orange block, and adjusts. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.06466591200023686 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  A) Blue.
+Encoding frames 33 to 48
+Local question: Find recent details related to: Question: What is the predominant color of the blocks being placed by the hand right now? Answer: Blue.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the predominant color of the blocks being placed by the hand right now? Answer: Blue.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 49 to 60
+Local question: Find recent details related to: Question: What is the predominant color of the blocks being placed by the hand right now? Answer: Blue.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the predominant color of the blocks being placed by the hand right now? Answer: Blue.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.05938081799968131 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  D) Yellow.
+Encoding frames 61 to 76
+Local question: Find recent details related to: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 77 to 92
+Local question: Find recent details related to: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+Encoding frames 93 to 98
+Local question: Find recent details related to: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What color is the block being placed on the left side of the structure right now? Answer: Yellow.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.709092617034912 GB
+Applying KV-Cache compression due to k_states > 4000
+TTFT: 0.061858073999701446 seconds
+Answering Cache lengths: min=4013, max=4013
+Pred Answer:  B) A vehicle.

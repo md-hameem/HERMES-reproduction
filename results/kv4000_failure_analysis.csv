@@ -1,0 +1,23 @@
+video_id,task,question,answer,pred_answer
+231,Action Recognition,What action is the hand performing on the train?,Push the train to the right.,B) Assembling the train.
+231,Counting,How many colors of bricks have been used so far?,Four.,A) Two.
+459,Attribute Recognition,What colors are the wheels of the race car?,Yellow and Red.,A) Green and blue.
+459,Event Understanding,What happened to the toy vehicle just now?,The toy vehicle start circling around the table.,D) The toy vehicle is lifted off the surface.
+355,Attribute Recognition,What is the color of the block that the hand is reaching for right now?,Green.,A) Yellow.
+355,Event Understanding,What is the sequence of bricks added to the structure after the blue bricks?,"Green, yellow, orange.","B) Yellow, green, orange."
+335,Attribute Recognition,What color is the plastic block added on top of the green blocks?,Yellow.,A) Red.
+335,Event Understanding,Which block was picked up and attached to the top of red block first just now?,An yellow block.,B) A green block.
+335,Text-Rich Understanding,What was the white text on the purple animated overlay read just now?,"""Alphabet B transform to Box"".","A) ""Alphabet A transform to Box""."
+465,Action Recognition,What action did the hand perform after placing the green block next to the blue block?,Picked up an orange block.,B) Adjusted the green block.
+173,Attribute Recognition,What colors are the blocks used to form the helicopter rotor blades?,Blue and Green.,B) Yellow and Blue.
+173,Event Understanding,What is the sequence of actions performed with the blocks just now?,"Placing a yellow block, then two green blocks, and finally a blue block.","C) Placing a yellow block, then a blue block, and finally two"
+173,Event Understanding,What was the sequence of events the hand followed when building the structure just now?,"Picks up a green block, adjusts it, then picks up a yellow block.","C) Picks up a red block, adjusts it, then picks up a yellow"
+173,Action Recognition,What action is the person performing with the blue blocks?,Adds blue blocks to the top of the structure.,B) Adds blue blocks to the side of the structure.
+170,Event Understanding,How many yellow blocks are connected in a line?,Four.,B) Three.
+448,Attribute Recognition,What are the colors of the crane arm?,"Yellow, green.","D) Yellow, blue, green."
+448,Event Understanding,What happens to the smaller structure after it is first moved out of view?,It is placed back beside the larger structure.,A) It is disassembled.
+118,Event Understanding,What sequence of actions occured with the green and yellow blocks just now?,"The green block is placed first, followed by the yellow block.","B) The yellow block is placed first, followed by the green block."
+118,Spatial Understanding,Where is the new yellow and green block placed relative to the original structure?,In front of the original structure.,B) Next to the original structure.
+118,Action Recognition,What did the person do with the yellow block just now?,Placed them above the green block and another yellow block.,B) Arranged them on the blue block and adjusted for alignment.
+289,Attribute Recognition,What is the predominant color of the blocks being placed by the hand right now?,Yellow.,A) Blue.
+289,Object Recognition,What color is the block being placed on the left side of the structure right now?,Blue.,D) Yellow.

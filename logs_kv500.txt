@@ -1,0 +1,66 @@
+[I 261011 19:34:13 base:273] seed: 2024
+[I 261011 19:34:13 base:278] Loading VideoQA model: llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+[I 261011 19:34:17 llavaov_hermes:954] n_init: 13
+[I 261011 19:34:17 llavaov_hermes:955] kv_size: 500
+  0%|          | 0/1 [00:00<?, ?it/s][D 261011 19:34:17 base:232] video_id: kaggle_test_001
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[D 261011 19:34:19 hermes_vqa:44] sample: {'question': 'What is happening in the video right now?', 'answer': '', 'end_time': 28.294933333333333, 'task': 'Action Recognition', 'time_stamp': '00:00:00', 'required_ability': 'working memory'}
+[I 261011 19:34:20 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:34:20 llavaov_hermes:312] Layer-wise shrink completed. Lengths: min=513, max=513, first=513, last=513
+[I 261011 19:34:20 llavaov_hermes:432] Strict-shrunk KV cache. New length: 513
+[I 261011 19:34:21 llavaov_hermes:876] Saved conversation to history. Total conversations: 1
+
+ 33%|███▎      | 1/3 [00:01<00:03,  1.96s/it][A[D 261011 19:34:21 hermes_vqa:44] sample: {'question': 'What is the person doing at this point in the video?', 'answer': '', 'end_time': 62.24885333333334, 'task': 'Action Recognition', 'time_stamp': '00:00:00', 'required_ability': 'working memory'}
+[I 261011 19:34:22 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:34:22 llavaov_hermes:312] Layer-wise shrink completed. Lengths: min=513, max=513, first=513, last=513
+[I 261011 19:34:22 llavaov_hermes:432] Strict-shrunk KV cache. New length: 513
+[I 261011 19:34:22 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:34:22 llavaov_hermes:312] Layer-wise shrink completed. Lengths: min=513, max=513, first=513, last=513
+[I 261011 19:34:22 llavaov_hermes:432] Strict-shrunk KV cache. New length: 513
+[I 261011 19:34:23 llavaov_hermes:876] Saved conversation to history. Total conversations: 2
+
+ 67%|██████▋   | 2/3 [00:03<00:01,  1.93s/it][A[D 261011 19:34:23 hermes_vqa:44] sample: {'question': 'Summarize the important events that have happened so far.', 'answer': '', 'end_time': 101.86176, 'task': 'Event Understanding', 'time_stamp': '00:00:00', 'required_ability': 'long-term memory'}
+[I 261011 19:34:24 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:34:24 llavaov_hermes:312] Layer-wise shrink completed. Lengths: min=513, max=513, first=513, last=513
+[I 261011 19:34:24 llavaov_hermes:432] Strict-shrunk KV cache. New length: 513
+[I 261011 19:34:24 hermes_vqa:61] Triggering question prediction and KV compression
+[I 261011 19:34:24 llavaov_hermes:312] Layer-wise shrink completed. Lengths: min=513, max=513, first=513, last=513
+[I 261011 19:34:24 llavaov_hermes:432] Strict-shrunk KV cache. New length: 513
+[I 261011 19:34:26 llavaov_hermes:876] Saved conversation to history. Total conversations: 3
+
+100%|██████████| 3/3 [00:07<00:00,  2.69s/it][A100%|██████████| 3/3 [00:07<00:00,  2.49s/it]
+100%|██████████| 1/1 [00:09<00:00,  9.34s/it]100%|██████████| 1/1 [00:09<00:00,  9.34s/it]
+Encoding frames 0 to 14
+Local question: Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.440481662750244 GB
+Applying KV-Cache compression due to k_states > 500
+TTFT: 0.08305434799990508 seconds
+Answering Cache lengths: min=513, max=513
+Pred Answer:  The video is set in a kitchen, where the sandwich is being prepared.
+Encoding frames 15 to 30
+Local question: Find recent details related to: Question: What is happening in the video right now? Answer: The video is set in a kitchen, where the sandwich is being prepared.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is happening in the video right now? Answer: The video is set in a kitchen, where the sandwich is being prepared.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.622303485870361 GB
+Applying KV-Cache compression due to k_states > 500
+Encoding frames 31 to 31
+Local question: Find recent details related to: Question: What is happening in the video right now? Answer: The video is set in a kitchen, where the sandwich is being prepared.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is happening in the video right now? Answer: The video is set in a kitchen, where the sandwich is being prepared.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.622303485870361 GB
+Applying KV-Cache compression due to k_states > 500
+TTFT: 0.06469408799989651 seconds
+Answering Cache lengths: min=513, max=513
+Pred Answer:  The person is preparing a sandwich, specifically making the filling for it.
+Encoding frames 32 to 47
+Local question: Find recent details related to: Question: What is the person doing at this point in the video? Answer: The person is preparing a sandwich, specifically making the filling for it.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the person doing at this point in the video? Answer: The person is preparing a sandwich, specifically making the filling for it.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.622303485870361 GB
+Applying KV-Cache compression due to k_states > 500
+Encoding frames 48 to 50
+Local question: Find recent details related to: Question: What is the person doing at this point in the video? Answer: The person is preparing a sandwich, specifically making the filling for it.. Describe the current scene in detail, focusing on specific objects, fine-grained actions, and spatial relationships.
+Global question: Context summary: Question: What is the person doing at this point in the video? Answer: The person is preparing a sandwich, specifically making the filling for it.. Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.
+GPU memory usage: 4.622303485870361 GB
+Applying KV-Cache compression due to k_states > 500
+TTFT: 0.05689708799991422 seconds
+Answering Cache lengths: min=513, max=513
+Pred Answer:  The video begins with a close-up of a sandwich being prepared, followed by a shot of the sandwich on a wooden table. The scene transitions to a close-up of a yellow food item, possibly a burger patty or a similar dish, and then it shows a logo for 'Food Fusion' along with social media handles and website URLs.

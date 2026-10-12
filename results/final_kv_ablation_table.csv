@@ -1,0 +1,4 @@
+Experiment,KV Budget,GPU Memory (GB),Accuracy (%)
+HERMES-4000,4000,4.52,56.0
+HERMES-6000,6000,4.8,56.0
+Baseline-50000,50000,6.65,52.0

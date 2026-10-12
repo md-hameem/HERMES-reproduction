@@ -1,0 +1,7 @@
+{
+  "model": "LLaVA-OneVision-Qwen2-0.5B + HERMES",
+  "kv_size": 4000,
+  "videos": 10,
+  "questions": 50,
+  "accuracy": 56.0
+}

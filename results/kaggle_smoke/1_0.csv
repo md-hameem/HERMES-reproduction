@@ -1,0 +1,4 @@
+"video_id","question","answer","pred_answer","task"
+"kaggle_test_001","What is happening in the video right now?","","The video is set in a kitchen, where the sandwich is being prepared.","Action Recognition"
+"kaggle_test_001","What is the person doing at this point in the video?","","The person is preparing a sandwich, specifically making the filling for it.","Action Recognition"
+"kaggle_test_001","Summarize the important events that have happened so far.","","The video begins with a close-up of a sandwich being prepared, followed by a shot of the sandwich on a wooden table. The scene transitions to a close-up of a yellow food item, possibly a burger patty or a similar dish, and then it shows a logo for 'Food Fusion' along with social media handles and website URLs.","Event Understanding"

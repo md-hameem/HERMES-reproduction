@@ -1,0 +1,28 @@
+Task,Accuracy (%),Questions,KV Budget
+Action Recognition,55.55555555555556,9,4000
+Attribute Recognition,33.333333333333336,9,4000
+Causal Reasoning,57.42574257425743,101,4000
+Counting,80.0,5,4000
+Event Understanding,50.0,16,4000
+Object Recognition,80.0,5,4000
+Prospective Reasoning,58.0,100,4000
+Spatial Understanding,66.66666666666667,3,4000
+Text-Rich Understanding,50.0,2,4000
+Action Recognition,55.55555555555556,9,6000
+Attribute Recognition,33.333333333333336,9,6000
+Causal Reasoning,57.42574257425743,101,6000
+Counting,80.0,5,6000
+Event Understanding,50.0,16,6000
+Object Recognition,80.0,5,6000
+Prospective Reasoning,58.0,100,6000
+Spatial Understanding,66.66666666666667,3,6000
+Text-Rich Understanding,50.0,2,6000
+Action Recognition,44.44444444444444,9,50000
+Attribute Recognition,33.333333333333336,9,50000
+Causal Reasoning,55.445544554455445,101,50000
+Counting,80.0,5,50000
+Event Understanding,50.0,16,50000
+Object Recognition,60.0,5,50000
+Prospective Reasoning,57.0,100,50000
+Spatial Understanding,66.66666666666667,3,50000
+Text-Rich Understanding,50.0,2,50000
