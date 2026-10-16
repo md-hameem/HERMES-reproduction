@@ -1,5 +1,10 @@
 # Comprehensive Technical Research Report: Hierarchical KV-Cache Management, Multimodal Streaming Video Understanding, and Advanced Agent Architectures
 
+> **Document status:** Living reference document for the HERMES reproduction project  
+> **Last updated:** 16 October 2026  
+> **Companion documents:** [`research_log.md`](../research_log.md) (28 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (19 sections)  
+> **Reproduction status:** 50-video / 250-question StreamingBench subset completed; 43 artifact files locally verified; 50-video paired analysis partially complete; native baseline and component ablations pending
+
 # Report A: Complete Literature Catalogue and Taxonomic Categorization
 
 ## Category 1: Streaming Video Understanding & KV-Cache Management
@@ -258,6 +263,8 @@ $$v_{sum}^{(l)} = \frac{1}{\mid \mathcal{E}_l\mid} \sum_{i \in \mathcal{E}_l} v_
 * *M-RoPE Positional Re-Indexing:* When intermediate tokens are pruned, 3D rotary positional embeddings (temporal, height, width coordinates) are re-mapped into a contiguous index space to prevent rotational phase drift.
 
 * **Experimental Findings:** Evaluated on an NVIDIA A800 (80GB) GPU using LLaVA-OneVision-7B and Qwen2.5-VL-7B backbones. HERMES maintains a constant Time to First Token (TTFT < 30 ms) across $10^4$ continuous frames, delivering a 10× latency reduction compared to retrieval-based systems. It prunes up to 68% of visual tokens while yielding an absolute accuracy gain of up to 11.4% on streaming benchmarks over uncompressed baselines.
+
+* **Reproduction Status (This Project):** An independent reproduction using LLaVA-OneVision-Qwen2-0.5B on a Kaggle Tesla T4 GPU has been completed on a 50-video / 250-question StreamingBench subset. Key findings: HERMES at KV=4000 achieved 57.2% accuracy (143/250) with 4.73 GB peak GPU memory and 0.058 s median TTFT, while the 50K near-uncompressed control achieved 55.2% (138/250) with 11.87 GB peak memory and 0.112 s median TTFT. The 50-video paired analysis (completed 13 October 2026) shows only 13 discordant questions between 4K and 50K (9 favour compressed, 4 favour control; exact paired-test p = 0.2668). See [`research_log.md` Sections 8 and 28](../research_log.md#8-50-video-scaled-benchmark) for complete results, and the [Reproduction Audit Section 19](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#19-artifact-intake-and-verification-update--13-october-2026) for artifact verification details.
 
 ## Paper 2: InfiniPot: Context-Aware Pruning for Long-Context LLMs with Multi-Hop Reasoning
 
@@ -587,6 +594,8 @@ Phase 5: Internal Hierarchical & Dynamics-Aware Architectures (2026 - Frontier)
 
 * **Novelty Classification:** **Potentially Unexplored within Uploaded Literature.** EDMI provides a fully training-free, zero-retrieval mechanism to prevent visual attention drift using summary states already present in the KV-cache.
 
+> **Important caveat (added 16 October 2026):** This EDMI proposal is a research idea generated from literature analysis, **not a validated original contribution**. Before development, the following must be completed: (1) verify that visual attention drift is actually observed in the reproduction's saved inference logs, (2) confirm that no existing published method already implements the same mechanism, (3) establish that compression-only failures (not shared backbone failures) exist in the paired analysis, and (4) complete the native non-HERMES baseline and HERMES component ablations. See the [Reproduction Audit Section 15](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#15-candidate-research-extensions-and-novelty-boundaries) for the full decision framework.
+
 ---
 
 # Report H: Implementation and Experimental Roadmap
@@ -674,5 +683,15 @@ class StreamingEDMIHook:
 * *Video-MME / LongBench:* Tests general multi-hop reasoning over long offline contexts to verify retention fidelity.
 
 * **Target Metrics:** Accuracy, Visual Attention Score ($VAS$), Time to First Token (TTFT, ms), and Peak GPU VRAM (GB) across extended streams ($\gt 10^4$ frames).
+
+### Reproduction-Specific Protocol (This Project)
+
+* **Backbone Model:** LLaVA-OneVision-Qwen2-0.5B (chosen for single-T4 feasibility)
+* **Evaluation Benchmark:** StreamingBench 50-video subset (samples 201–250), 250 questions, 5 per video
+* **KV Budgets Tested:** 500, 1K, 2K, 4K, 6K, 50K (six-budget ablation on 10-video pilot; 4K, 6K, 50K on 50-video scaled benchmark)
+* **Hardware:** Single Kaggle Tesla T4 GPU via `CUDA_VISIBLE_DEVICES=0`
+* **Sampling:** 0.5 FPS streaming frame ingestion
+* **Metrics Collected:** Accuracy with Wilson CIs, per-question paired correctness, task-level accuracy (9 categories), max GPU memory, median/P95 TTFT, max cache length, compression event counts
+* **Artifacts Verified:** 43 files (25 CSVs, 8 PNGs, 7 inference logs, 3 smoke-test logs) — all locally verified as of 13 October 2026; see [`research_log.md` Section 28](../research_log.md#28-artifact-intake-and-verification-update--13-october-2026)
 
 ---

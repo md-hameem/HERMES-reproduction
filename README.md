@@ -63,7 +63,7 @@ This fork contains an independent **reproduction, validation, and extension stud
 ### Remaining
 
 - ⏳ Non-HERMES LLaVA-OneVision native baseline
-- ⏳ 50-video paired prediction analysis
+- ⏳ 50-video paired prediction analysis (discordance analysis complete; question-level export & cluster bootstrap pending)
 - ⏳ HERMES component ablations (smoothing, summary tokens, RoPE re-indexing)
 - ⏳ Full 498-video StreamingBench evaluation
 - ⏳ Research extension development and evaluation
@@ -82,9 +82,9 @@ This script automatically installs dependencies, downloads the model and a 10-vi
 
 | Document | Description |
 |---|---|
-| [`research_log.md`](./research_log.md) | Complete research log (27 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`research_log.md`](./research_log.md) | Complete research log (28 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
 | [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, and EDMI proposal |
-| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading, risk assessment, phased research plan, experimental design specifications, and deliverables |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (19 sections), risk assessment, phased research plan, experimental design specifications, and deliverables |
 
 ### Interpretation Guidelines
 

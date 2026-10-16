@@ -4,8 +4,8 @@
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
 **Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4  
-**Evidence cutoff:** The uploaded research log (last updated 24 September 2026), uploaded Kaggle notebook, and previously supplied HERMES paper  
-**Assessment status:** **Successful reported pilot and scaled subset; full reproduction fidelity and generalisation not yet established**
+**Evidence cutoff:** The uploaded research log (last updated 13 October 2026), uploaded Kaggle notebook, previously supplied HERMES paper, and 43 locally verified artifact files (CSVs, logs, figures)  
+**Assessment status:** **Successful reported pilot and scaled subset with locally verified artifacts; paired analysis partially complete; full reproduction fidelity and generalisation not yet established**
 
 > **Scope and evidence rule.** This audit examines the uploaded `HERMES_reproduction_project_log_updated.md` and `harmes-redep (4)(1).ipynb`, and uses the previously provided HERMES research paper for methodological context. It distinguishes (a) statements documented in the log, (b) notebook code and saved cell outputs, (c) independent interpretation, and (d) checks impossible without the original Kaggle CSV/log/source archive. No GPU inference was rerun in preparing this report. All accuracy, memory and latency values below are **reported experimental outputs**, not newly replicated measurements.
 
@@ -31,6 +31,7 @@
 16. [Deliverables, decision gates, and completion criteria](#16-deliverables-decision-gates-and-completion-criteria)
 17. [Source map and asset requirements](#17-source-map-and-asset-requirements)
 18. [Final assessment](#18-final-assessment)
+19. [Artifact intake and verification update — 13 October 2026](#19-artifact-intake-and-verification-update--13-october-2026)
 
 ---
 
@@ -51,7 +52,7 @@
 **The four most important next tasks are:**
 
 1. **Resolve source-code fidelity**, especially the tracked modification to `video_qa/base.py` revealed by saved `git status`.
-2. **Perform full 250-question paired analysis** rather than infer equivalence from equal aggregate accuracy or overlapping Wilson intervals.
+2. **Complete the 50-video paired analysis** with stable question IDs and video-cluster bootstrap CIs — question-level discordance counts are now available (see Section 19), but a durable paired-correctness artifact and cluster-aware intervals remain outstanding.
 3. **Run an actual non-HERMES LLaVA-OneVision-0.5B control** with a precisely matched frame/question protocol and honest hardware limitations.
 4. **Expand from a single non-random 50-video shard to broader, better-balanced evaluation**, then full StreamingBench if the earlier gates pass.
 
@@ -347,18 +348,21 @@ The notebook constructs matched pairs on `video_id` plus `question`, compares co
 
 The remaining ten pair comparisons are in the notebook output, and the logged research analysis notes that **no comparison passes Bonferroni correction 0.05/15 ≈ 0.0033**. Moreover, the small n and video clustering limit what the raw p-values establish.
 
-### 9.3 Still missing: 50-video discordance matrix
+### 9.3 50-video discordance matrix — partially resolved (13 October 2026)
 
-The notebook **does not contain a completed saved 50-video paired-contrast analysis** comparable to the pilot output. This is the most direct next low-cost analysis. Compute at least:
+**Update:** The 50-video paired analysis has been partially completed using the locally verified raw prediction CSVs. All 250 rows were confirmed aligned across the three budgets on video ID, question text, answer, correct choice, and task, with zero row-order identity mismatches. The results:
 
-- 4K-only-correct vs 50K-only-correct counts;
-- 6K-only-correct vs 50K-only-correct counts;
-- 4K-only-correct vs 6K-only-correct counts;
-- all-three-correct, all-three-wrong, and other agreement patterns;
-- video-level correct-count differences, paired bootstrap intervals, and prespecified tests;
-- failure/success examples with complete question, predicted choice, correct choice, timestamp, task and visual evidence.
+| Comparison | First-only correct | Second-only correct | Discordant questions | Both correct | Both wrong | Same predicted choice |
+|---|---:|---:|---:|---:|---:|---:|
+| 4K vs 6K | 2 | 2 | 4 | 141 | 105 | 241 |
+| 4K vs 50K | 9 | 4 | 13 | 134 | 103 | 228 |
+| 6K vs 50K | 10 | 5 | 15 | 133 | 102 | 231 |
 
-**Guard against many-to-many merges:** check uniqueness of `(video_id, question)` in **every** CSV. If repeated question text exists within one video, switch to a stable question ID or validated within-video annotation order rather than silently producing duplicated merged rows.
+Two-sided exact paired-test p-values: 1.0000 (4K vs 6K), 0.2668 (4K vs 50K), 0.3018 (6K vs 50K). At the video level, 4K vs 50K and 6K vs 50K each have a mean advantage of 0.1 correct answers per video (9 videos favour compressed, 4 favour 50K control, 37 tie).
+
+**Remaining gaps:** These are descriptive sensitivity analyses that do not account for the five correlated questions per video or for multiple comparisons. A durable `question_id`/ordinal key, a saved paired-correctness CSV artifact, and a video-cluster bootstrap confidence interval are still required for publication-quality comparison.
+
+**Guard against many-to-many merges:** 23 repeated `(video_id, question)` pairs were found within each CSV. Do **not** join these files on only video ID + question text; use an explicit question ID, validated within-video ordinal, or the preserved row order after identity checks.
 
 ### 9.4 Quantifying accuracy claims responsibly
 
@@ -407,14 +411,14 @@ Annotate each discordant example with **(a)** question time, **(b)** event time,
 | **Critical** | No exact non-HERMES baseline | Project log explicitly says pending | Cannot isolate benefit against base LLaVA | Run native baseline with same questions, times and sampling |
 | **High** | Single nonrandom 50-video shard | Source paths use `streamingbench_201_250` | Limited generalisability; extreme task imbalance | Add stratified/random independent shards, then full set |
 | **High** | Question-level uncertainty ignores video clustering | 250 questions from 50 videos; notebook Wilson CI | Intervals may be too optimistic | Paired video-cluster bootstrap or hierarchical analysis |
-| **High** | No completed 50-video paired table | Only pilot paired procedure saved | Equal totals may hide significant swaps of correct answers | Join 250 exact records across three budgets |
+| **High** | 50-video paired table partially complete | Discordance counts available (13 Oct); stable question IDs and cluster bootstrap pending | Raw discordances known, but no durable key or cluster-aware CI yet | Build stable ordinal key; produce video-cluster bootstrap interval |
 | **High** | “50K = no compression” can be misleading | 79 logged compressions in 50-video control | Invalid true-baseline claim | Consistently call it *near-uncompressed HERMES control* |
 | **High** | Metric definitions not independently audited | Regex-based parser in cell 140 | “max GPU memory” and TTFT may omit important costs | Inspect source instrumentation; add CUDA peak + end-to-end timers |
 | **High** | Gold-answer history contamination not formally ruled out | Guidance prompts include question/answer conversation summaries | Would compromise the meaning of accuracy if gold answers leak | Trace actual history-writing and prediction-input code path |
 | **Medium** | Some saved-output cells lack execution counts | Notebook provenance | Ambiguity in chronological rebuild | Fresh-kernel run and exported execution manifest |
 | **Medium** | Conditional skip checks file non-emptiness only | Cells 137, 156, 158, 160 | Partial/old CSV could be reused | Validate 250 unique keys, expected IDs, completion marker and hash |
-| **Medium** | Pilot result sometimes labelled “Baseline-50000” | Old notebook display/cell text | Overclaiming model baseline | Correct figures and prose to “HERMES 50K control” |
-| **Medium** | Figures are linked relative to Kaggle file tree | Research log references 14 images | Markdown alone cannot reproduce charts visually | Collect figures or regenerate from raw outputs |
+| **Medium** | Pilot result sometimes labelled “Baseline-50000” | Old notebook display/cell text; confirmed in `results/final_kv_ablation_table.csv` (13 Oct) | Overclaiming model baseline | Correct figures and prose to “HERMES 50K control” |
+| **Medium** | Figures are linked relative to Kaggle file tree | Research log references 15 images; 20 PNGs now present in local `img/` | Markdown alone cannot reproduce charts visually | **Partially resolved** — figures locally available; verify completeness |
 | **Medium** | Individual HERMES mechanisms not ablated locally | Budget tests only | Cannot determine which component drives benefits | Ablate smoothing, summaries, position policy, and importance scoring |
 | **Medium** | Reported TTFT excludes unspecified components | Logged `TTFT` only | Incomplete real-time claims | Measure ingestion cost, latency percentiles, total wall time, token throughput |
 
@@ -674,11 +678,13 @@ Choose the simplest candidate that (a) addresses **reproducible compressed-only 
 
 ### 17.2 Figures referenced in the project log
 
-The log references **14 figures**, including the initial smoke-test cache/memory/TTFT charts; 10-video video-duration/task distribution; 50-video duration/task distribution; 10-video accuracy/memory/TTFT/trade-off figures; 50-video accuracy and task results; and the pilot error task distribution. These figures are not embedded within the uploaded Markdown file, and most PNG paths refer to a missing `img/` or `results/figures/` tree. **Do not claim they were independently visually inspected during this audit.** They can be restored from the Kaggle archive or regenerated from raw result data.
+The log references **15 figures** (updated from 14 as of 10 October 2026), including the initial smoke-test cache/memory/TTFT charts; 10-video video-duration/task distribution; 50-video duration/task distribution; 10-video accuracy/memory/TTFT/trade-off figures; 50-video accuracy and task results; and the pilot error task distribution. As of 13 October 2026, **20 PNG files are present in the local `img/` directory** and 8 additional figures exist under `results/figures/`. The research log embeds figures from `img/` using relative paths. The figures can be regenerated from raw result data if needed.
 
 ### 17.3 How to hand over the project for the next analysis
 
 Prefer uploading **the 144-file research backup ZIP** (or extracted `results/`, `data/`, `logs/`, `HERMES_source/` with manifest) over the 445-file full Kaggle directory archive if transfer size is a concern. The **mandatory minimum** is the three 50-video result CSVs, the three logs, the benchmark JSON, `source_changes.diff`, and the effective `video_qa/base.py` file. With those files, question-level findings can be recomputed without additional inference cost.
+
+**Update (13 October 2026):** 43 artifact files have now been added to the local repository, including all raw prediction CSVs, aggregate summaries, inference logs, and figures. The raw prediction CSVs are now the primary local evidence for the reported accuracy values. However, the 50-video 6K and 50K logs are still missing from the local bundle — their raw prediction CSVs support accuracy analysis, but memory/TTFT values for those two runs cannot be independently re-parsed from a saved raw log. Legacy smoke-result aliases (`kaggle_4000`/`kaggle_4k`, `kaggle_50000`/`kaggle_50k`, `kaggle_500`/`kaggle_smoke`) are byte-identical and should be retained only once in the final release archive.
 
 ---
 
@@ -689,6 +695,68 @@ This reproduction effort has moved from setup/debugging to substantive experimen
 The boundary of what can responsibly be claimed is equally important. The exact unmodified backbone has not been benchmarked, a tracked evaluation/inference source file differs from upstream, question-level uncertainty requires video clustering, the 50-video sample is far from task-balanced, and critical raw CSV/log/source archives have not yet been shared for an independent audit. Consequently, the next scientifically valuable action is **fidelity and paired error auditing**, followed by **matched native-model/FIFO controls**, not immediately proposing a large new memory architecture.
 
 **Next practical action:** provide the **research backup ZIP or the minimum six artifacts listed in Section 17.3**. That will let the next round move from checking reported summaries to independently validating individual predictions, code behaviour, and a defensible experimental plan.
+
+---
+
+## 19. Artifact intake and verification update — 13 October 2026
+
+> *This section was appended following the verification of 43 newly added, previously untracked files in the local repository. See [`research_log.md` Section 28](../research_log.md#28-artifact-intake-and-verification-update--13-october-2026) for the primary record.*
+
+### 19.1 Scope
+
+The 43 files comprise:
+
+- **25 tabular/raw-result artifacts** under `results/`, including per-question prediction CSVs for all budget configurations, aggregate summaries, task/duration analyses, and the 10-video paired-test table
+- **8 PNG figures** derived from the saved tables
+- **7 StreamingBench inference logs** (six 10-video budget runs and the 50-video 4K run)
+- **3 custom-video smoke-test logs** for 500, 4K, and 50K budgets
+
+### 19.2 Verification results
+
+| Artifact group | Verification result |
+|---|---|
+| 10-video raw prediction CSVs (budgets 500/1K/2K/4K/6K/50K) | Each contains 50 rows from 10 videos; no duplicate `(video_id, question)` pairs |
+| 50-video raw prediction CSVs (budgets 4K/6K/50K) | Each contains 250 rows from 50 videos; all three files have identical row-order metadata |
+| 50-video identity keys | 23 repeated `(video_id, question)` pairs within each CSV — join on ordinal or row order, not on video ID + question text alone |
+| Aggregate accuracy tables | Raw-row recomputation confirms 143/250 (57.2%) for 4K, 143/250 (57.2%) for 6K, and 138/250 (55.2%) for 50K |
+| 10-video paired table | Recomputed values agree with the saved 15-comparison table |
+| Inference logs | No traceback, exception, CUDA OOM, or killed-process markers; TTFT entry counts match expectations |
+| 50-video 6K and 50K logs | **Not included** in the artifact bundle — accuracy analysis supported but memory/TTFT cannot be re-parsed |
+| Legacy smoke aliases | `kaggle_4000`/`kaggle_4k`, `kaggle_50000`/`kaggle_50k`, `kaggle_500`/`kaggle_smoke` are byte-identical duplicates |
+| `final_kv_ablation_table.csv` | Labels 50K condition as `Baseline-50000` — must be renamed to "near-uncompressed HERMES control" |
+
+### 19.3 50-video paired analysis (newly available)
+
+All 250 rows were checked for alignment across the three budgets on video ID, question text, answer, correct choice, and task; zero row-order identity mismatches were found.
+
+| Comparison | First-only correct | Second-only correct | Discordant Qs | Both correct | Both wrong | Same choice |
+|---|---:|---:|---:|---:|---:|---:|
+| 4K vs 6K | 2 | 2 | 4 | 141 | 105 | 241 |
+| 4K vs 50K | 9 | 4 | 13 | 134 | 103 | 228 |
+| 6K vs 50K | 10 | 5 | 15 | 133 | 102 | 231 |
+
+Two-sided exact paired-test p-values: 1.0000 (4K vs 6K), 0.2668 (4K vs 50K), 0.3018 (6K vs 50K). These are descriptive only and do not account for video clustering or multiple comparisons.
+
+At the video level, 4K vs 50K and 6K vs 50K each have a mean advantage of **0.1 correct answers per video** (9 videos favour compressed, 4 favour 50K control, 37 tie). For 4K vs 6K: 2 videos favour each setting, 46 tie.
+
+### 19.4 Updated evidence status
+
+The following items from Section 11 have been partially or fully addressed:
+
+| Original issue | Updated status (13 Oct) |
+|---|---|
+| No completed 50-video paired table | **Partially resolved** — discordance counts available; stable question IDs and cluster bootstrap still needed |
+| Figures linked to missing Kaggle paths | **Resolved** — 20 PNGs now present in local `img/` directory; 8 additional in `results/figures/` |
+| "Baseline-50000" labelling | **Confirmed** in `final_kv_ablation_table.csv`; correction still needed |
+| Conditional skip checks | **Partially addressed** — 250 unique rows verified per CSV; completion marker and hash validation not yet done |
+
+The priority order for the next session is:
+
+1. Write a stable 250-row paired-correctness CSV using a validated within-video question ordinal or source annotation ID
+2. Produce a paired, video-cluster bootstrap interval for 4K/6K minus 50K accuracy
+3. Recover or export the missing 50-video 6K and 50K raw logs
+4. Rename the legacy `Baseline-50000` label and remove duplicate smoke-result aliases
+5. Continue with the native non-HERMES LLaVA baseline, FIFO baseline, and component ablations
 
 ---
 
