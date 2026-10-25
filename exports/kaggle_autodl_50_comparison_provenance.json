@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-25T19:31:09.239574+00:00",
+  "scope": "Kaggle versus AutoDL StreamingBench samples 201-250; KV 4000/6000/50000",
+  "alignment_key": [
+    "video_id",
+    "qa_index"
+  ],
+  "qa_index_definition": "Zero-based within-video CSV row ordinal; metadata equality asserted for question, choices, answer, correct choice, and task.",
+  "source_csv_sha256": {
+    "results/streamingbench_50_kv4000/1_0.csv": "d3cdb688065d4dac5f527c98db15d3fb8badfbdf1d430c05d1013c35a5cd92e8",
+    "results/streamingbench_50_kv6000/1_0.csv": "81b206600a1044da4fdec63bb4f5750ac7e53cbd25d306ee970b5d6cd5cac185",
+    "results/streamingbench_50_kv50000/1_0.csv": "8e6a6272418fe01005e6b7d8747d04c7e896be59c66f22fa0c0aed1a292890f3",
+    "HERMES/results/streamingbench_50_kv4000/1_0.csv": "97efae93796645ae5f99e2aaf5cca8463e406a81bbdb7e0e6b9b3fef9bef6be0",
+    "HERMES/results/streamingbench_50_kv6000/1_0.csv": "37b360c4c9dbf3ec2af3e321802d38267acf511bfb86b8fd5a72efa82206ff8c",
+    "HERMES/results/streamingbench_50_kv50000/1_0.csv": "8e6a6272418fe01005e6b7d8747d04c7e896be59c66f22fa0c0aed1a292890f3"
+  },
+  "comparison_artifacts": {
+    "exports/kaggle_autodl_50_comparison_summary.csv": "3832b3dda26008f427466e8a61d401e74fd8087a53373cfe2646451a9a0d3d2c",
+    "exports/kaggle_autodl_50_discordant_predictions.csv": "bdfee3a999fa2ef7a3080ad6eed9c69026ffa157abafde092f4aca9d448ada21"
+  },
+  "nondeterminism_assessment": "Plausible but unproven. No same-hardware repeated run is available, and the Kaggle model snapshot identity was not preserved. Greedy decoding alone does not guarantee cross-GPU bitwise equality.",
+  "executed_notebook": {
+    "path": "hermes-v2-autodl.ipynb",
+    "sha256": "8a2bd96900d2ecc6ab55a1674f69d9b1fd29fe7d0bfb23a8dd1646ac2e64d739"
+  },
+  "evidence_archive": {
+    "path": "HERMES_AutoDL_50_evidence.zip",
+    "status": "Repacked locally from manifest-verified extracted artifacts; not the original AutoDL ZIP byte stream.",
+    "sha256": "23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183",
+    "original_autodl_notebook_recorded_sha256": "ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120",
+    "original_autodl_notebook_recorded_bytes": 331830
+  }
+}

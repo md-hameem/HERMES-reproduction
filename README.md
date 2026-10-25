@@ -23,19 +23,32 @@
 
 ## 📋 Reproduction Study
 
-This fork contains an independent **reproduction, validation, and extension study** of HERMES, conducted on resource-constrained Kaggle infrastructure.
+This fork contains an independent **reproduction, validation, and extension study** of HERMES on Kaggle Tesla T4 and AutoDL RTX 4080 SUPER infrastructure.
 
 ### Overview
 
 | | |
 |---|---|
-| **Environment** | Kaggle · Tesla T4 GPU (single) |
+| **Environments** | Kaggle · single Tesla T4; AutoDL · single RTX 4080 SUPER |
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
-| **Benchmark** | StreamingBench (50-video / 250-question subset) |
+| **Benchmark** | StreamingBench samples 201–250 (50 videos / 250 questions) |
 | **KV Budgets Tested** | 500, 1K, 2K, 4K, 6K, 50K |
-| **Status** | Subset reproduction complete · Full benchmark pending |
+| **Canonical 50-video workflow** | [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) |
+| **Status** | Two preserved 50-video result generations · Controls and full benchmark pending |
 
-### Key Findings (50-Video Evaluation)
+### Latest Validated AutoDL Run — 25 October 2026
+
+| Configuration | Correct | Accuracy | Total runtime |
+|---|---:|---:|---:|
+| **HERMES KV=4000** | **144/250** | **57.6%** | **28.17 min** |
+| **HERMES KV=6000** | **144/250** | **57.6%** | **28.26 min** |
+| HERMES KV=50000 (control) | 138/250 | 55.2% | 31.05 min |
+
+Each run completed all 50 videos and 250 questions. The executed notebook validated question order, choices, gold labels, source revision, and output structure. Runtime is total session time per configuration on an RTX 4080 SUPER; it is not directly comparable with Kaggle runtime.
+
+### Earlier Kaggle Accuracy and Efficiency Reference
+
+These are the previously reported Tesla T4 measurements. The separate AutoDL logs permit a fresh AutoDL efficiency reanalysis, but they do not independently revalidate these Kaggle metrics. Treat this table as historical logged results, not AutoDL measurements.
 
 | Configuration | Accuracy | 95% Wilson CI | Max GPU Memory | Median TTFT | Max Cache Length |
 |---|---:|---:|---:|---:|---:|
@@ -43,32 +56,62 @@ This fork contains an independent **reproduction, validation, and extension stud
 | **HERMES KV=6000** | **57.2%** | 51.00–63.18% | 4.80 GB | 0.060 s | 6,013 |
 | HERMES KV=50000 (control) | 55.2% | 49.00–61.24% | 11.87 GB | 0.112 s | 50,013 |
 
-**Main result:** HERMES at KV=4000 achieved comparable accuracy to the near-uncompressed 50K control while reducing peak GPU memory by **~60%** and median TTFT by **~48%**.
+**Historical Kaggle result:** HERMES at KV=4000 achieved comparable accuracy to the near-uncompressed 50K control while reducing reported peak GPU memory by **~60%** and median TTFT by **~48%**. These metrics exclude important end-to-end costs and are not hardware-independent claims.
+
+### Kaggle–AutoDL Prediction Comparison
+
+All 750 AutoDL rows were aligned to Kaggle rows by `(video_id, qa_index)`, with question, options, answer, correct choice, and task checked for equality.
+
+| KV budget | Kaggle → AutoDL accuracy | Choice changes | Correctness changes | AutoDL-only correct | Kaggle-only correct |
+|---|---:|---:|---:|---:|---:|
+| 4000 | 57.2% → 57.6% | 3 | 3 | 2 | 1 |
+| 6000 | 57.2% → 57.6% | 10 | 9 | 5 | 4 |
+| 50000 | 55.2% → 55.2% | 0 | 0 | 0 | 0 |
+
+The net one-question gain at 4K and 6K is **not a single changed question**. The detailed 13-row choice-discordance export is [`exports/kaggle_autodl_50_discordant_predictions.csv`](./exports/kaggle_autodl_50_discordant_predictions.csv), and aggregate counts are in [`exports/kaggle_autodl_50_comparison_summary.csv`](./exports/kaggle_autodl_50_comparison_summary.csv). Cross-GPU numerical nondeterminism is plausible, but it is not proven without a repeated identical-environment run and a fully matched Kaggle model snapshot.
+
+### AutoDL Provenance and Evidence
+
+| Component | Preserved identity |
+|---|---|
+| GPU | NVIDIA GeForce RTX 4080 SUPER, 32,760 MiB; driver 595.71.05 |
+| Inference runtime | Python 3.12 · PyTorch 2.10.0+cu128 · Transformers 4.45.0.dev0 |
+| HERMES revision | `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789` |
+| Transformers revision | `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
+| Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
+| Executed notebook SHA-256 | `8a2bd96900d2ecc6ab55a1674f69d9b1fd29fe7d0bfb23a8dd1646ac2e64d739` |
+| Original AutoDL archive SHA-256 | `ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120` |
+| Locally repacked archive SHA-256 | `23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183` |
+
+The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive was repacked locally from files that all passed the original [`exports/manifest_sha256.csv`](./exports/manifest_sha256.csv) checks. It has the same payload and byte size as the original archive but a different ZIP byte stream. [`exports/kaggle_autodl_50_comparison_provenance.json`](./exports/kaggle_autodl_50_comparison_provenance.json) records source-CSV hashes, comparison hashes, notebook identity, and both archive hashes.
 
 ### Completed Work
 
-- ✅ Full HERMES inference pipeline on Kaggle T4
-- ✅ Transformers/Qwen2 RoPE compatibility fixes
-- ✅ Custom-video smoke test with KV compression validation
-- ✅ 10-video six-budget ablation (KV=500 to KV=50K)
-- ✅ 50-video scaled benchmark (KV=4K, 6K, 50K)
-- ✅ Task-level accuracy analysis (9 task categories)
-- ✅ Error taxonomy (temporal, attribute, counting, spatial failures)
-- ✅ Statistical analysis with Wilson CIs and paired comparisons
-- ✅ Efficiency analysis (memory, TTFT, cache size)
-- ✅ Comprehensive literature review and cross-paper comparison
-- ✅ Reproduction audit with evidence grading
-- ✅ Reproducibility packaging (CSVs, logs, source snapshot, SHA-256 manifest)
+- Full HERMES inference pipeline on Kaggle T4 and AutoDL RTX 4080 SUPER
+- Transformers/Qwen2 RoPE compatibility fixes and pinned source checks
+- Custom-video smoke test with KV compression validation
+- 10-video six-budget ablation (KV=500 to KV=50K)
+- Two preserved 50-video result generations (KV=4K, 6K, 50K)
+- Task-level accuracy analysis and exploratory error taxonomy
+- Paired prediction exports, exact discordance sensitivity tests, and video-cluster bootstrap intervals
+- Kaggle–AutoDL positional prediction comparison and discordance case export
+- Reproducibility packaging with raw CSVs, logs, source/model revisions, and SHA-256 manifests
 
-### Remaining
+### Next Experiments
 
-- ⏳ Non-HERMES LLaVA-OneVision native baseline
-- ⏳ 50-video paired prediction analysis (discordance analysis complete; question-level export & cluster bootstrap pending)
-- ⏳ HERMES component ablations (smoothing, summary tokens, RoPE re-indexing)
-- ⏳ Full 498-video StreamingBench evaluation
-- ⏳ Research extension development and evaluation
+1. Re-extract TTFT, allocated/reserved memory, compression counts, cache sizes, and processing times from the recovered AutoDL logs.
+2. Repeat AutoDL 4K/6K specifically to measure run-to-run nondeterminism; validate the manual pseudo-query attention path against real transformer attentions.
+3. Run FIFO eviction at KV 4K/6K on the same 50 videos, then separately ablate smoothing, summary tokens, differentiated layer retention, and positional re-indexing.
+4. Evaluate a non-overlapping 50-video shard before resumable shard-wise evaluation of all 498 videos.
+5. Develop research extensions only after these controls are established.
 
-### Quick Start (Kaggle)
+The native full-prefix baseline remains incomplete and excluded where memory or context limits are exceeded. Inputs must not be silently truncated to force a comparison.
+
+### Quick Start
+
+For the validated 50-video workflow, use [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) and run its cells in order on AutoDL.
+
+The legacy Kaggle pilot is:
 
 ```bash
 git clone https://github.com/md-hameem/HERMES-reproduction.git
@@ -76,27 +119,28 @@ cd HERMES-reproduction
 bash scripts/run_kaggle.sh
 ```
 
-This script automatically installs dependencies, downloads the model and a 10-video StreamingBench subset, runs HERMES inference with KV=4000, and evaluates accuracy.
+The legacy script requires local video-path and annotation-subset setup; it is not the canonical 50-video reproduction path.
 
 ### Documentation
 
 | Document | Description |
 |---|---|
-| [`research_log.md`](./research_log.md) | Complete research log (28 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`research_log.md`](./research_log.md) | Complete research log (29 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
 | [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, and EDMI proposal |
-| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (19 sections), risk assessment, phased research plan, experimental design specifications, and deliverables |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (20 sections), risk assessment, AutoDL verification, and next experiments |
 
 ### Interpretation Guidelines
 
-1. KV=50000 is a **near-uncompressed HERMES control**, not the original LLaVA baseline — it still executes through the HERMES pipeline and triggered 79 compression events on the 50-video run
-2. The 50-video subset is a **convenience shard** (samples 201–250), not a random or stratified sample of the full benchmark
-3. Task distribution is heavily imbalanced (Causal + Prospective Reasoning = 80.4% of questions)
-4. Accuracy differences should be interpreted alongside their confidence intervals and the clustered nature of 5 questions per video
-5. The current experiments run on a Tesla T4, while published HERMES results use an A800 — hardware differences affect memory and latency comparisons
+1. KV=50000 is a **near-uncompressed HERMES control**, not the original LLaVA baseline — it still executes through the HERMES pipeline and triggered 79 compression events on the Kaggle 50-video run.
+2. The 50-video subset is a **convenience shard** (samples 201–250), not a random or stratified sample of the full benchmark.
+3. Task distribution is heavily imbalanced (Causal + Prospective Reasoning = 80.4% of questions).
+4. Accuracy differences should be interpreted alongside their confidence intervals and the clustered nature of 5 questions per video.
+5. Kaggle used a Tesla T4 and AutoDL used an RTX 4080 SUPER; do not directly compare their runtimes as hardware-independent results.
+6. Small cross-platform prediction differences should be treated as a reproducibility question, not as evidence of a semantic improvement.
 
 ### Experimental Plots
 
-All experimental figures are stored in the [`img/`](./img/) directory and embedded in the research log. These include KV-cache compression validation, GPU memory curves, accuracy vs. budget plots, TTFT analysis, task-level breakdowns, and error distributions.
+All experimental figures are stored in the [`img/`](./img/) directory and embedded in the research log. AutoDL accuracy and paired-difference figures are in [`exports/figures/`](./exports/figures/).
 
 ---
 

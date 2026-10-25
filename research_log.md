@@ -44,6 +44,7 @@
 26. [Candidate Research Extensions](#26-candidate-research-extensions)
 27. [Deliverables and Completion Criteria](#27-deliverables-and-completion-criteria)
 28. [Artifact Intake and Verification Update — 13 October 2026](#28-artifact-intake-and-verification-update--13-october-2026)
+29. [AutoDL Preservation and Kaggle Cross-Platform Comparison — 25 October 2026](#29-autodl-preservation-and-kaggle-cross-platform-comparison--25-october-2026)
 
 ---
 
@@ -1669,3 +1670,105 @@ The priority order is therefore:
 3. Recover or export the missing 50-video 6K and 50K raw logs, then re-derive their memory and TTFT summaries.
 4. Rename the legacy `Baseline-50000` label in derived outputs and remove duplicate smoke-result aliases from the final release archive.
 5. Continue with the already planned native non-HERMES LLaVA baseline, simple equal-budget baseline, and component ablations.
+
+---
+
+# 29. AutoDL Preservation and Kaggle Cross-Platform Comparison — 25 October 2026
+
+## 29.1 Scope and canonical run
+
+A fresh three-budget AutoDL run completed StreamingBench samples 201–250 on 25 October 2026. The canonical executed workflow is `hermes-v2-autodl.ipynb`; its raw outputs are preserved separately from the earlier Kaggle generation under `HERMES/results/`, `logs/`, and `exports/`.
+
+| Component | AutoDL value |
+|---|---|
+| GPU | NVIDIA GeForce RTX 4080 SUPER, 32,760 MiB |
+| Driver | 595.71.05 |
+| Inference environment | Python 3.12, PyTorch 2.10.0+cu128 |
+| Transformers | 4.45.0.dev0, commit `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
+| HERMES source | Commit `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789`; tracked-source fidelity check passed |
+| Model | `llava-hf/llava-onevision-qwen2-0.5b-ov-hf` |
+| Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
+| Sampling and decoding | 0.5 fps, streaming mode, deterministic/greedy request |
+| Scope | 50 videos, 250 questions per budget, five questions per video |
+
+The notebook checked every output row against its source `(video_id, qa_index)`, question, choices, gold answer, and correct choice. All three processes returned zero and all 250-row annotation audits passed.
+
+## 29.2 Fresh results
+
+| KV budget | Correct | Accuracy | AutoDL total runtime |
+|---|---:|---:|---:|
+| 4000 | 144/250 | 57.6% | 28.17 min |
+| 6000 | 144/250 | 57.6% | 28.26 min |
+| 50000 | 138/250 | 55.2% | 31.05 min |
+
+These runtimes describe an RTX 4080 SUPER and must not be compared directly with Kaggle Tesla T4 runtimes as a hardware-independent efficiency result. Accuracy and paired correctness are summarized in `exports/hermes_50_accuracy.csv`, `exports/paired_50_tests.csv`, and `exports/all_three_50_correctness.csv`.
+
+## 29.3 Evidence preservation and integrity
+
+The executed notebook SHA-256 is:
+
+```text
+8a2bd96900d2ecc6ab55a1674f69d9b1fd29fe7d0bfb23a8dd1646ac2e64d739
+```
+
+The notebook recorded the original AutoDL evidence archive as 331,830 bytes with SHA-256:
+
+```text
+ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120
+```
+
+The original ZIP byte stream was not present locally. `HERMES_AutoDL_50_evidence.zip` was therefore repacked from the extracted payload after every file passed `exports/manifest_sha256.csv`. CRC and per-member content-hash checks passed. The repacked archive also contains 331,830 bytes but has a distinct SHA-256:
+
+```text
+23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183
+```
+
+The two hashes are intentionally not treated as interchangeable. `exports/kaggle_autodl_50_comparison_provenance.json` records notebook identity, raw source-CSV hashes, comparison-artifact hashes, and both archive identities.
+
+## 29.4 Kaggle versus AutoDL alignment
+
+Each Kaggle and AutoDL CSV was assigned a zero-based `qa_index` using its preserved within-video row order. All 250 rows per budget joined one-to-one on `(video_id, qa_index)`. Question text, choices, reference answer, correct choice, and task were required to match before predictions were compared.
+
+| KV | Kaggle correct | AutoDL correct | Net change | Choice changes | Correctness changes | AutoDL gains | Kaggle gains |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 4000 | 143 | 144 | +1 | 3 | 3 | 2 | 1 |
+| 6000 | 143 | 144 | +1 | 10 | 9 | 5 | 4 |
+| 50000 | 138 | 138 | 0 | 0 | 0 | 0 | 0 |
+
+The accuracy change therefore cannot be explained by one universal prediction flip. KV=4000 has three correctness reversals; KV=6000 has nine plus one additional wrong-to-wrong choice change. KV=50000 is identical across all 250 questions.
+
+### Correctness-changing cases
+
+| KV | Video | QA index | Kaggle prediction | AutoDL prediction | Interpretation |
+|---|---:|---:|---|---|---|
+| 4000 | 183 | 2 | C, wrong | D, correct | AutoDL gain |
+| 4000 | 376 | 2 | A, wrong | B, correct | AutoDL gain |
+| 4000 | 266 | 4 | C, correct | `0`, wrong; raw answer `20)` | Kaggle gain / AutoDL parse failure |
+| 6000 | 183 | 2 | D, correct | C, wrong | Kaggle gain |
+| 6000 | 93 | 2 | D, wrong | B, correct | AutoDL gain |
+| 6000 | 93 | 3 | D, correct | B, wrong | Kaggle gain |
+| 6000 | 427 | 0 | A, correct | D, wrong | Kaggle gain |
+| 6000 | 3 | 2 | A, wrong | B, correct | AutoDL gain |
+| 6000 | 367 | 4 | D, correct | A, wrong | Kaggle gain |
+| 6000 | 376 | 2 | A, wrong | B, correct | AutoDL gain |
+| 6000 | 23 | 2 | D, wrong | C, correct | AutoDL gain |
+| 6000 | 306 | 4 | D, wrong | A, correct | AutoDL gain |
+
+All 13 choice-discordant rows, including the additional KV=6000 wrong-to-wrong change, are preserved in `exports/kaggle_autodl_50_discordant_predictions.csv`. Aggregate counts are in `exports/kaggle_autodl_50_comparison_summary.csv`.
+
+## 29.5 Interpretation: nondeterminism remains a hypothesis
+
+The small number of changes, their concentration in prospective-reasoning questions, and identical 50K predictions are compatible with cross-GPU numerical variation near decision boundaries. They do not prove nondeterminism as the sole cause. Greedy decoding does not guarantee bitwise-identical logits across different GPUs and software environments. In addition, the Kaggle model snapshot identity was not preserved, and no same-hardware repeated run is available.
+
+The defensible conclusion is that both result generations support the same coarse accuracy finding, while individual predictions are not perfectly reproducible across platforms. A repeated AutoDL 4K/6K run is now scientifically useful specifically to measure this instability; it is not merely a generic random-seed ablation.
+
+## 29.6 Prepared next-step sequence
+
+1. **Efficiency extraction:** parse all recovered AutoDL logs for TTFT, peak allocated/reserved memory where available, compression counts, retained cache lengths, and per-question/video timing. Keep GPU-specific latency claims separate.
+2. **Fidelity and repeatability:** repeat AutoDL 4K/6K to quantify prediction instability and differential-test the manual SDPA/Flash pseudo-query attention path against real transformer attentions.
+3. **Budget-matched controls:** implement FIFO eviction at KV=4000 and KV=6000 on the same validated 50-video shard.
+4. **Component ablations:** independently remove cross-layer smoothing, summary tokens, differentiated shallow/middle/deep retention, and positional re-indexing where valid.
+5. **Generalization:** run a non-overlapping 50-video shard, then resumable shard-wise evaluation of all 498 videos if controls are satisfactory.
+6. **Extension research:** consider EDMI or other extensions only after the controls establish a trustworthy baseline.
+
+The partial native full-prefix baseline remains excluded. Long inputs must not be silently truncated to make that comparison appear complete.

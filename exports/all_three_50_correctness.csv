@@ -1,0 +1,251 @@
+video_id,qa_index,question,ok4,ok6,ok50,pattern
+231,0,What action is the hand performing on the train?,0,0,0,000
+231,1,What color Lego brick is placed first on the surface?,1,1,1,111
+231,2,How many colors of bricks have been used so far?,0,0,0,000
+231,3,What was the sequence of actions performed by the hand just now?,1,1,1,111
+231,4,What type of pieces did the hand attach to the top surface of the structure just now?,1,1,1,111
+459,0,What colors are the wheels of the race car?,0,0,0,000
+459,1,What feature is present on the front of the toy?,1,1,1,111
+459,2,How are the yellow building blocks arranged before the blue block is placed on top?,1,1,1,111
+459,3,What is the new item introduced in the video?,1,1,1,111
+459,4,What happened to the toy vehicle just now?,0,0,0,000
+355,0,How many studs does each yellow interlocking block placed by the hand have?,1,1,1,111
+355,1,How many interlocking blocks are positioned in a straight line by the hand?,1,1,1,111
+355,2,What is the color of the block that the hand is reaching for right now?,0,0,0,000
+355,3,What color is the brick first added after the initial blue bricks form a two-layered structure?,1,1,1,111
+355,4,What is the sequence of bricks added to the structure after the blue bricks?,0,0,0,000
+335,0,What color is the plastic block added on top of the green blocks?,0,0,0,000
+335,1,What are the primary colors of the plastic building blocks shown right now?,1,1,1,111
+335,2,Which block was picked up and attached to the top of red block first just now?,0,0,0,000
+335,3,What was the white text on the purple animated overlay read just now?,0,0,0,000
+335,4,What happens to the blocks after they are disassembled and mixed?,1,1,1,111
+465,0,What colors are the wheels of the toy car?,1,1,1,111
+465,1,What action did the hand perform after placing the green block next to the blue block?,0,0,0,000
+465,2,How many hands are involved in arranging the blocks right now?,1,1,1,111
+465,3,What does the hand do after picking up the yellow building block?,1,1,1,111
+465,4,What does the hand do after positioning the three green blocks securely?,1,1,0,110
+173,0,What colors are the blocks used to form the helicopter rotor blades?,0,0,0,000
+173,1,What is the sequence of actions performed with the blocks just now?,0,0,0,000
+173,2,What is the hand doing after placing three yellow blocks onto the top of the structure?,1,1,1,111
+173,3,What was the sequence of events the hand followed when building the structure just now?,0,0,0,000
+173,4,What action is the person performing with the blue blocks?,0,0,0,000
+170,0,What is positioned underneath the archway made of colorful interlocking blocks?,1,1,1,111
+170,1,How many yellow blocks are connected in a line?,0,0,0,000
+170,2,Where is the green brick placed relative to the yellow bricks in the structure?,1,1,1,111
+170,3,What does the person do after adding more yellow bricks?,1,1,1,111
+170,4,What is the person likely to do next after moving their hand towards the new set of connected bricks?,1,1,1,111
+448,0,What are the colors of the crane arm?,0,0,0,000
+448,1,What happens to the orange block as the video progresses?,1,1,1,111
+448,2,What was the sequence of actions performed with the blocks just now?,1,1,1,111
+448,3,What happens to the smaller structure after it is first moved out of view?,0,0,0,000
+448,4,How many green blocks are stacked now?,1,1,1,111
+118,0,What happens after the first green block is placed on the yellow block?,1,1,1,111
+118,1,What action do the hands perform just before moving away from the structure?,1,1,1,111
+118,2,What sequence of actions occured with the green and yellow blocks just now?,0,0,0,000
+118,3,Where is the new yellow and green block placed relative to the original structure?,0,0,0,000
+118,4,What did the person do with the yellow block just now?,0,0,0,000
+289,0,What was written in the top right corner at the start of the video?,1,1,1,111
+289,1,What sequence of actions happened after the blue rectangular block is placed on the surface?,1,1,1,111
+289,2,What is the predominant color of the blocks being placed by the hand right now?,0,0,0,000
+289,3,What color is the block being placed on the left side of the structure right now?,0,0,0,000
+289,4,What is the block structure identified as?,1,1,0,110
+183,0,What might the speaker discuss next?,1,1,1,111
+183,1,What might the speaker explain next?,0,0,0,000
+183,2,What might the speaker discuss next?,1,0,0,100
+183,3,What might the speaker discuss next?,0,0,1,001
+183,4,What might the speaker discuss next?,0,0,0,000
+125,0,What might the speaker explain next?,1,1,1,111
+125,1,What might the speaker explain next?,0,0,0,000
+125,2,What might the speaker do next?,1,1,1,111
+125,3,What might the speaker explain next?,1,1,1,111
+125,4,What might the speaker explain next?,1,1,1,111
+447,0,What topics might the speaker explain next?,0,0,0,000
+447,1,What might the speaker explain next?,0,0,0,000
+447,2,What might the speaker suggest next?,0,0,0,000
+447,3,What might the speaker explain next?,0,0,0,000
+447,4,What might the speaker discuss next?,0,0,0,000
+91,0,What might the speaker discuss next?,1,1,1,111
+91,1,What formula might the speaker likely introduce next?,1,1,1,111
+91,2,What might the speaker explain next?,1,1,1,111
+91,3,What might the speaker explain next?,0,0,1,001
+91,4,What might the speaker discuss next?,1,1,1,111
+171,0,What might the speaker discuss next?,1,1,1,111
+171,1,What might the speaker discuss next?,1,1,1,111
+171,2,What concept might the speaker explain next?,1,1,1,111
+171,3,What might the speaker discuss next?,1,1,0,110
+171,4,What might the speaker explain next?,0,0,0,000
+93,0,What concept might the speaker explain next?,1,1,1,111
+93,1,What might the speaker explain next?,0,0,0,000
+93,2,What might the speaker explain next?,1,1,0,110
+93,3,What might the speaker explain next?,1,0,1,101
+93,4,What might the speaker explain next?,1,1,1,111
+427,0,What might the speaker explain next?,0,0,0,000
+427,1,What concept is likely to be explained next?,1,1,1,111
+427,2,What is the next logical step after the operation to the numbers?,1,1,1,111
+427,3,What might the instructor explain next?,1,1,1,111
+427,4,What might the speaker explain next?,1,1,1,111
+492,0,What topic might the teacher explain next?,1,1,1,111
+492,1,What might the teacher explain next?,1,1,1,111
+492,2,What might the speaker explain next?,0,0,0,000
+492,3,What concept will the speaker likely explain next?,1,1,0,110
+492,4,What might the speaker explain next?,1,1,1,111
+456,0,What mathematical topic might the speaker focus on next?,1,1,1,111
+456,1,What might the speaker do next?,1,1,1,111
+456,2,What might the speaker do next?,1,1,1,111
+456,3,What mathematical concept might the speaker move on to explain next?,0,0,0,000
+456,4,What might the speaker discuss next?,0,0,0,000
+302,0,What might the speaker discuss next?,1,1,1,111
+302,1,What might be the next topic the speaker will address?,0,0,0,000
+302,2,What might the speaker discuss next?,0,0,0,000
+302,3,What might the speaker discuss next?,1,1,1,111
+302,4,What might the speaker explain next?,1,1,1,111
+3,0,What might the speaker explain next?,0,0,0,000
+3,1,What will the speaker most likely explain next?,0,0,0,000
+3,2,What might the speaker explain next?,1,1,1,111
+3,3,What might the speaker discuss next?,0,0,0,000
+3,4,What might the speaker ask the students to do next?,0,0,0,000
+494,0,What might the speaker explain next?,1,1,1,111
+494,1,What might the speaker explain next?,1,1,1,111
+494,2,What might the speaker discuss next?,1,1,1,111
+494,3,What might the speaker explain next?,1,1,1,111
+494,4,What might the speaker discuss next?,1,1,1,111
+402,0,What concept might the speaker explain next?,0,0,0,000
+402,1,What might the speaker discuss next?,0,0,0,000
+402,2,What might the speaker discuss next?,1,1,1,111
+402,3,What might the speaker discuss next?,1,1,1,111
+402,4,What might the speaker discuss next?,1,1,1,111
+367,0,What might the speaker explain next?,1,1,1,111
+367,1,What might the speaker explain next?,0,0,0,000
+367,2,What might the speaker explain next?,1,1,1,111
+367,3,What might the speaker discuss next?,1,1,0,110
+367,4,What might the speaker do next?,1,0,1,101
+376,0,What might the speaker explain next?,0,0,0,000
+376,1,What might the speaker discuss next?,1,1,1,111
+376,2,What might the speaker discuss next?,1,1,1,111
+376,3,What might the speaker calculate next?,0,0,0,000
+376,4,What might the speaker discuss next?,0,0,0,000
+330,0,What might the speaker explain next?,0,0,0,000
+330,1,What might the speaker explain next?,0,0,0,000
+330,2,What might the speaker explain next?,0,0,0,000
+330,3,What might the speaker explain next?,0,0,0,000
+330,4,"Based on the current explanation, what might the speaker do next?",1,1,1,111
+139,0,What might the speaker discuss next?,0,0,0,000
+139,1,What is the teacher likely to explain next?,1,1,1,111
+139,2,What might the speaker explain next?,1,1,1,111
+139,3,What topic might the speaker explain next?,1,1,1,111
+139,4,What might the speaker discuss next?,0,0,0,000
+256,0,What is the speaker likely to explain next?,1,1,1,111
+256,1,What might the speaker discuss next?,0,0,0,000
+256,2,What might the speaker explain next?,1,1,1,111
+256,3,What might the speaker explain next?,1,1,1,111
+256,4,What might the teacher explain next?,0,0,0,000
+222,0,What mathematical concept will likely be demonstrated next?,1,1,1,111
+222,1,What is the presenter likely to do next?,0,0,0,000
+222,2,What might the speaker discuss next?,0,0,1,001
+222,3,What might the speaker do next?,0,0,0,000
+222,4,What might the speaker explain next?,0,0,0,000
+266,0,What might the speaker describe next?,1,1,1,111
+266,1,What might the speaker discuss next?,1,1,0,110
+266,2,What might the speaker explain next?,1,1,1,111
+266,3,What is the next step after dividing 24 by 3?,1,1,1,111
+266,4,What might the speaker explain next?,0,1,1,011
+334,0,Why is this rabbit dressed in red and white knocking on the door now?,0,0,0,000
+334,1,Why is this iron gate cartoon character angry now?,1,1,1,111
+334,2,"Why is this rabbit, dressed in green and white, surprised now?",1,1,1,111
+334,3,Why does this rabbit dressed in green and white want to hide in the toilet?,1,1,1,111
+334,4,Why did the rabbit dressed in red and white just have to use a pool cue to strike the iron gate lying on the ground?,0,0,0,000
+286,0,Why does the frog appear from the toilet?,1,1,1,111
+286,1,Why does the rabbit dressed in red and white start to become restless?,0,0,0,000
+286,2,Why is this cartoon chicken very shocked now?,1,1,1,111
+286,3,Why does the character encounter a heavy legacy robot in the room?,0,0,0,000
+286,4,Why is this red rabbit standing in front of the iron gate now?,0,0,0,000
+89,0,Why does the rabbit strike the door with its fist several times?,0,0,0,000
+89,1,Why would the rabbit inside the iron gate be very panicked now?,0,0,0,000
+89,2,What causes the bunny character to react with shock and sweat?,0,0,0,000
+89,3,Why do the rectangular characters arm themselves?,1,1,1,111
+89,4,Why does the rabbit break through the wall to escape?,1,1,1,111
+220,0,Why is Mr. Bean scolded by the older woman?,0,0,0,000
+220,1,Why does the character place the cheese on a plate?,1,1,1,111
+220,2,Why does the man successfully retrieve the bottle from the top shelf?,1,1,1,111
+220,3,Why Mr. Bean is very shocked.,0,0,0,000
+220,4,Why does the Mr. Bean look tired or exhausted?,0,0,0,000
+273,0,Why can thieves enter the room without being detected?,0,0,0,000
+273,1,Why does this cat glare viciously at the person in black?,0,0,0,000
+273,2,Why does the person start searching through his wardrobe?,1,1,1,111
+273,3,Why does the man offer his underwear to the woman as a replacement bag?,0,0,0,000
+273,4,Why does the character hide behind structures on the roof?,0,0,0,000
+161,0,Why did the old lady fall?,1,1,1,111
+161,1,Why is the old lady lying in the hospital bed now?,0,0,0,000
+161,2,Why is the floor of this room completely covered with water now?,0,0,0,000
+161,3,Why does Mr. Bean hit the table with a mop?,0,0,0,000
+161,4,Why did the character saw a piece of wood?,0,0,0,000
+67,0,Why is Mr. Bean constantly posing right now?,1,1,1,111
+67,1,Why does the bed get pulled out through the window?,1,1,1,111
+67,2,Why does the Mr. Bean peer through the door's mail slot or window?,0,0,0,000
+67,3,Why does Mr.Bean drop their coat and bag?,0,0,0,000
+67,4,Why does the police officer react and possibly make a call for backup or additional assistance?,1,1,0,110
+80,0,Why are they two people shaking hands now?,0,0,0,000
+80,1,Why is Mr. Bean very angry now?,1,1,1,111
+80,2,Why does the person in the smaller bed become annoyed and awake?,0,0,0,000
+80,3,Why is Mr. Bean very angry now?,1,1,1,111
+80,4,Why does Mr. Bean want to escape?,0,0,0,000
+146,0,Why did Mr. Bean turn off the TV?,1,1,1,111
+146,1,Why Mr. Bean is shocked now.,1,1,1,111
+146,2,Why is Mr. Bean unhappy now?,1,1,1,111
+146,3,Why does Mr. Bean decide to put up missing posters for his teddy bear?,0,0,0,000
+146,4,Why does the purple bunny character decide to chase Mr. Bean?,0,0,0,000
+23,0,Where does this letter on the ground come from?,0,0,0,000
+23,1,Why does Mr. Bean's sitting figure react with confusion or surprise?,1,1,1,111
+23,2,Why does the wall have green patterns painted on it?,0,1,0,010
+23,3,Why does the person with multiple cameras leave the room?,0,0,0,000
+23,4,Why is the queenly figure angry right now?,1,1,1,111
+248,0,Why Mr. Bean was previously flipping through boxes?,1,1,1,111
+248,1,Why did the character create a large number of sandwiches?,1,1,1,111
+248,2,Why does the other character pick up the green cap left on the chair?,1,1,1,111
+248,3,Why would Mr. Bean buy the things being towed behind his car?,0,0,0,000
+248,4,Why did Mr. Bean just feed this dog with a sandwich?,1,1,1,111
+129,0,Why is the teddy bear seen flying in the toy plane in the sky?,1,1,1,111
+129,1,Why does Mr.Bean climb the tree?,1,1,1,111
+129,2,Why are the books stacked on the floor?,0,0,0,000
+129,3,Why does the bird fly out of the window with an item?,1,1,1,111
+129,4,Where did Mr. Bean get all this gold from?,1,1,0,110
+326,0,Why are the two fries in the plate in front of the teddy bear gone?,1,1,1,111
+326,1,Why Mr. Bean was just flipping the sofa.,0,0,0,000
+326,2,Why Mr. Bean is watching a sofa advertisement.,1,1,1,111
+326,3,Why does the character take the teddy bear from the girl and give her money in exchange?,0,0,0,000
+326,4,Why did Mr. Bean drive back to the sofa shop again?,0,0,0,000
+292,0,Why is the character startled?,1,1,1,111
+292,1,Why is Mr. Bean holding two iron pots in his hands?,1,1,1,111
+292,2,Why does the person enter the building to inquire about rooms for rent?,0,0,0,000
+292,3,Why do landlords now take the money and run away?,0,0,0,000
+292,4,Who is the person in the video now?,1,1,1,111
+33,0,Why did the elderly woman step off the bus with a tray of tea?,1,1,1,111
+33,1,Why is Mr. Bean in the hospital ward?,0,0,0,000
+33,2,Why does the character try to manipulate the thermometer reading?,0,0,0,000
+33,3,Why is the patient prepped for surgery?,1,1,1,111
+33,4,Why do the babies start crying?,1,1,1,111
+360,0,Why does the character cuddle the teddy bear and smile in bed?,1,1,1,111
+360,1,Why does Mr. Bean become disturbed?,1,1,1,111
+360,2,Why does the person adjust a lever and press a red button on the machine?,0,0,0,000
+360,3,Why is there an abundance of egg cartons and eggs causing clutter in the house?,1,1,1,111
+360,4,Why do the workers outside notice an issue with the pipeline?,1,1,1,111
+141,0,Why does the older woman appear annoyed or angry?,1,1,1,111
+141,1,Why does the man in the dirty car wave a money?,0,0,0,000
+141,2,Why does the person start pedaling the bicycle?,1,1,1,111
+141,3,Why do the woman and the driver sit down to have tea together?,0,0,0,000
+141,4,Why is Mr. Bean looking for something now?,1,1,1,111
+306,0,Why does the older woman appear annoyed or angry?,1,1,1,111
+306,1,Why does the taxi drive off?,1,1,1,111
+306,2,Why Mr. Bean can receive money now?,1,1,1,111
+306,3,Why Mr. Bean can receive money now?,1,1,1,111
+306,4,Why Mr. Bean now only pays 0.85 pounds?,0,1,0,010
+216,0,Why does the older woman appear annoyed or angry?,1,1,1,111
+216,1,Why is Mr. Bean under the bed now?,1,1,1,111
+216,2,Why did the character exit the building and approach a green car?,1,1,1,111
+216,3,Why Mr. Bean would be very panicked now.,1,1,1,111
+216,4,Why did the character react with noticeable concern after stopping the car?,1,1,1,111
+495,0,Why does the older woman appear annoyed or angry?,1,1,1,111
+495,1,Why is the teddy bear covered in flour?,0,0,0,000
+495,2,Why does the character have a complete list of ingredients for the grocery list?,1,1,1,111
+495,3,How did Mr. Bean earn all the money on his desk?,1,1,1,111
+495,4,Why do the two guards fight each other?,1,1,1,111

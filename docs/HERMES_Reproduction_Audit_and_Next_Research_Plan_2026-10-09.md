@@ -3,11 +3,11 @@
 **Document type:** Research audit and forward plan  
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
-**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4  
-**Evidence cutoff:** The uploaded research log (last updated 13 October 2026), uploaded Kaggle notebook, previously supplied HERMES paper, and 43 locally verified artifact files (CSVs, logs, figures)  
-**Assessment status:** **Successful reported pilot and scaled subset with locally verified artifacts; paired analysis partially complete; full reproduction fidelity and generalisation not yet established**
+**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4 and AutoDL RTX 4080 SUPER<br>
+**Evidence cutoff:** 25 October 2026; two preserved 50-video result generations, executed notebooks, raw CSVs/logs, statistical exports, and integrity manifests<br>
+**Assessment status:** **Successful subset reproduction with locally verified Kaggle and AutoDL artifacts; native controls, component fidelity, and generalisation not yet established**
 
-> **Scope and evidence rule.** This audit examines the uploaded `HERMES_reproduction_project_log_updated.md` and `harmes-redep (4)(1).ipynb`, and uses the previously provided HERMES research paper for methodological context. It distinguishes (a) statements documented in the log, (b) notebook code and saved cell outputs, (c) independent interpretation, and (d) checks impossible without the original Kaggle CSV/log/source archive. No GPU inference was rerun in preparing this report. All accuracy, memory and latency values below are **reported experimental outputs**, not newly replicated measurements.
+> **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. No GPU inference was rerun while preparing this audit; reported measurements remain associated with their original hardware.
 
 ---
 
@@ -32,6 +32,7 @@
 17. [Source map and asset requirements](#17-source-map-and-asset-requirements)
 18. [Final assessment](#18-final-assessment)
 19. [Artifact intake and verification update — 13 October 2026](#19-artifact-intake-and-verification-update--13-october-2026)
+20. [AutoDL verification and cross-platform prediction audit — 25 October 2026](#20-autodl-verification-and-cross-platform-prediction-audit--25-october-2026)
 
 ---
 
@@ -757,6 +758,67 @@ The priority order for the next session is:
 3. Recover or export the missing 50-video 6K and 50K raw logs
 4. Rename the legacy `Baseline-50000` label and remove duplicate smoke-result aliases
 5. Continue with the native non-HERMES LLaVA baseline, FIFO baseline, and component ablations
+
+---
+
+## 20. AutoDL verification and cross-platform prediction audit — 25 October 2026
+
+### 20.1 New evidence and provenance
+
+A fresh AutoDL execution completed all three HERMES configurations on the same StreamingBench 201–250 shard. This update preserves it as a new result generation rather than overwriting the Kaggle record.
+
+| Evidence item | Verified value |
+|---|---|
+| GPU | NVIDIA GeForce RTX 4080 SUPER, 32,760 MiB; driver 595.71.05 |
+| Runtime | Python 3.12; PyTorch 2.10.0+cu128; Transformers 4.45.0.dev0 |
+| HERMES revision | `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789`; clean tracked-source check passed |
+| Transformers revision | `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
+| Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
+| Executed notebook | `hermes-v2-autodl.ipynb` |
+| Notebook SHA-256 | `8a2bd96900d2ecc6ab55a1674f69d9b1fd29fe7d0bfb23a8dd1646ac2e64d739` |
+| Validation | 250 source-aligned rows per budget; all three inference return codes zero |
+
+The AutoDL results are 144/250 (57.6%) at KV=4000, 144/250 (57.6%) at KV=6000, and 138/250 (55.2%) at KV=50000. Recorded total runtimes are 28.17, 28.26, and 31.05 minutes respectively. These are RTX 4080 SUPER measurements and are not directly comparable with Tesla T4 timings.
+
+The notebook recorded original archive SHA-256 `ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120`. A local `HERMES_AutoDL_50_evidence.zip` was repacked from the manifest-verified payload and passed CRC and per-member content-hash validation. Its distinct SHA-256 is `23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183`. The original and repacked ZIP identities are explicitly distinguished in `exports/kaggle_autodl_50_comparison_provenance.json`.
+
+### 20.2 Positional Kaggle–AutoDL comparison
+
+All comparisons used `(video_id, qa_index)`, not question text alone. Metadata identity was asserted for question, choices, reference answer, correct choice, and task.
+
+| KV | Accuracy change | Choice changes | Correctness changes | AutoDL-only correct | Kaggle-only correct |
+|---|---|---:|---:|---:|---:|
+| 4000 | 57.2% → 57.6% | 3 | 3 | 2 | 1 |
+| 6000 | 57.2% → 57.6% | 10 | 9 | 5 | 4 |
+| 50000 | 55.2% → 55.2% | 0 | 0 | 0 | 0 |
+
+The net one-question difference at 4K and 6K is not a single discordant question. At 4K, AutoDL gains on videos 183/QA2 and 376/QA2 but loses on video 266/QA4, where raw answer `20)` is parsed as invalid choice `0`. At 6K, five gains and four losses occur, plus one wrong-to-wrong choice change. Full rows are preserved in `exports/kaggle_autodl_50_discordant_predictions.csv`; counts are in `exports/kaggle_autodl_50_comparison_summary.csv`.
+
+Cross-GPU numerical nondeterminism is plausible, particularly for prospective-reasoning questions, but remains unproven. No identical-environment repeat exists, and the Kaggle model snapshot identity was not preserved. The identical 50K outputs are useful negative evidence against a blanket claim that every prediction changes across hardware.
+
+### 20.3 Audit status changes
+
+| Earlier issue | Status after this update |
+|---|---|
+| Missing 50-video 6K/50K raw logs | **Resolved for AutoDL** — all three logs are present and hashed |
+| Stable question identity | **Resolved for AutoDL and this comparison** — validated `(video_id, qa_index)` keys |
+| Video-cluster paired analysis | **Resolved for AutoDL** — `exports/paired_50_tests.csv` and casebook preserved |
+| Source and model provenance | **Strong for AutoDL** — source, Transformers, model snapshot, notebook, CSVs, and archive identities recorded |
+| Cross-platform prediction stability | **Newly quantified, cause unresolved** — repeat run required |
+| Native baseline | **Still incomplete** — partial full-prefix predictions are not a valid 250-question control |
+| Generalization | **Unchanged** — one nonrandom 50-video shard only |
+
+### 20.4 Prepared experimental gate
+
+The next work should proceed in this order:
+
+1. Re-derive efficiency measurements from all three AutoDL logs, separating TTFT, total processing time, compression overhead, allocated memory, reserved memory, and cache size.
+2. Repeat AutoDL 4K/6K specifically to quantify prediction instability. In parallel, differential-test the manual SDPA/Flash pseudo-query attention implementation: its layer loop does not propagate hidden states through residual/MLP blocks and omits a causal mask, so equivalence to real transformer attentions must not be assumed.
+3. Run FIFO KV=4000/6000 controls on the identical shard, then independent smoothing, summary-token, layer-retention, and positional-reindexing ablations.
+4. Run a non-overlapping 50-video shard before attempting all 498 videos with resumable checkpoints.
+5. Start extension work only after the baseline and ablation evidence passes these gates.
+
+No native-baseline input should be silently truncated to bypass memory or context limits.
 
 ---
 
