@@ -4,10 +4,10 @@
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
 **Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4 and AutoDL RTX 4080 SUPER<br>
-**Evidence cutoff:** 25 October 2026; two preserved 50-video result generations, executed notebooks, raw CSVs/logs, statistical exports, and integrity manifests<br>
+**Evidence cutoff:** 26 October 2026; two preserved 50-video result generations, executed notebooks, raw CSVs/logs, statistical and efficiency exports, and integrity manifests<br>
 **Assessment status:** **Successful subset reproduction with locally verified Kaggle and AutoDL artifacts; native controls, component fidelity, and generalisation not yet established**
 
-> **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. No GPU inference was rerun while preparing this audit; reported measurements remain associated with their original hardware.
+> **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. Section 21 adds reproducible efficiency extraction from the preserved AutoDL logs. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. No GPU inference was rerun while preparing this audit; reported measurements remain associated with their original hardware.
 
 ---
 
@@ -33,6 +33,7 @@
 18. [Final assessment](#18-final-assessment)
 19. [Artifact intake and verification update — 13 October 2026](#19-artifact-intake-and-verification-update--13-october-2026)
 20. [AutoDL verification and cross-platform prediction audit — 25 October 2026](#20-autodl-verification-and-cross-platform-prediction-audit--25-october-2026)
+21. [AutoDL efficiency evidence — 26 October 2026](#21-autodl-efficiency-evidence--26-october-2026)
 
 ---
 
@@ -819,6 +820,35 @@ The next work should proceed in this order:
 5. Start extension work only after the baseline and ablation evidence passes these gates.
 
 No native-baseline input should be silently truncated to bypass memory or context limits.
+
+---
+
+## 21. AutoDL efficiency evidence — 26 October 2026
+
+### 21.1 Extraction and integrity
+
+The recovered AutoDL logs have now been re-parsed locally using `scripts/extract_efficiency.py`; no new GPU inference was performed. The extractor validates 250 answer segments per run, aligns rows by `(video_id, qa_index)`, checks identical chunk/frame workloads across budgets, and writes question-level, video-level, and summary tables under `exports/efficiency/` with source/output SHA-256 provenance.
+
+All three runs contain 250 TTFT values, 829 encoding chunks, 11,434 encoded frames, and 50 completed videos. The three generated CSVs were byte-identical on regeneration, and every original entry in `exports/manifest_sha256.csv` still matches its recorded size and hash.
+
+### 21.2 Results and comparison with the 50K control
+
+| KV budget | Accuracy | Peak allocated GiB | Median TTFT (s) | P95 TTFT (s) | Max cache | Compression events | Outer elapsed | Notebook runtime |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 4000 | 57.6% | **4.689** | **0.0408** | 0.0489 | **4,013** | 770 | 28.00 min | 28.17 min |
+| 6000 | 57.6% | 4.735 | 0.0406 | 0.0459 | 6,013 | 732 | 28.17 min | 28.26 min |
+| 50000 | 55.2% | 11.836 | 0.0519 | 0.0882 | 50,013 | 79 | 30.95 min | 31.05 min |
+
+Against 50K, 4K has **60.4% lower peak allocated memory**, **21.4% lower median logged TTFT**, **9.5% lower outer elapsed time**, and **92.0% lower maximum answering-cache length**. These are RTX 4080 SUPER log-derived measurements, not cross-platform speed claims. Accuracy remains an observed convenience-shard result, and 50K remains a near-uncompressed HERMES control rather than a native LLaVA baseline.
+
+### 21.3 Evidence limitations and remaining gates
+
+- TTFT excludes ingestion and pseudo-query compression and includes another decoder forward after selecting the first token. It is not end-to-end latency.
+- `torch.cuda.max_memory_allocated` is process-lifetime and was not reset per video/question. Reserved memory was not logged.
+- Outer tqdm times are whole-second video-loop measurements excluding startup. Encoding and compression costs are not separately recoverable.
+- The near-identical 4K/6K TTFT values do not support a monotonic budget-latency relationship.
+
+Efficiency extraction is therefore complete, but the native baseline, FIFO controls, component ablations, and generalization remain unresolved. Next are same-environment 4K/6K repeatability and pseudo-query attention differential tests, then budget-matched FIFO and independent HERMES component controls on the same shard.
 
 ---
 

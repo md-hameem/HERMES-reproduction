@@ -9,7 +9,7 @@
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
 | **Framework** | HERMES VideoQA inference pipeline |
 | **Current Benchmark Scale** | StreamingBench subset: 50 videos / 250 questions |
-| **Last Updated** | 10 October 2026 |
+| **Last Updated** | 26 October 2026 |
 | **Supporting Documents** | [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---
@@ -45,6 +45,7 @@
 27. [Deliverables and Completion Criteria](#27-deliverables-and-completion-criteria)
 28. [Artifact Intake and Verification Update — 13 October 2026](#28-artifact-intake-and-verification-update--13-october-2026)
 29. [AutoDL Preservation and Kaggle Cross-Platform Comparison — 25 October 2026](#29-autodl-preservation-and-kaggle-cross-platform-comparison--25-october-2026)
+30. [AutoDL Efficiency Extraction — 26 October 2026](#30-autodl-efficiency-extraction--26-october-2026)
 
 ---
 
@@ -1772,3 +1773,43 @@ The defensible conclusion is that both result generations support the same coars
 6. **Extension research:** consider EDMI or other extensions only after the controls establish a trustworthy baseline.
 
 The partial native full-prefix baseline remains excluded. Long inputs must not be silently truncated to make that comparison appear complete.
+
+---
+
+# 30. AutoDL Efficiency Extraction — 26 October 2026
+
+## 30.1 Reproducible extraction
+
+`scripts/extract_efficiency.py` now derives efficiency evidence directly from the three preserved AutoDL logs and their source-aligned result CSVs. It requires exactly 250 answer segments and 50 videos per budget, checks that all budgets encode the same chunk/frame workload, and validates question identity using `(video_id, qa_index)`.
+
+Run:
+
+```bash
+python scripts/extract_efficiency.py
+```
+
+The command writes `exports/efficiency/autodl_50_efficiency_summary.csv`, `autodl_50_question_metrics.csv` (750 rows), `autodl_50_video_metrics.csv` (150 rows), and `autodl_50_efficiency_provenance.json`. Provenance records hashes of the logs, result CSVs, run summary, extractor, and generated tables. Validation confirmed all original `exports/manifest_sha256.csv` entries and byte-identical CSV regeneration.
+
+## 30.2 Extracted results
+
+| KV budget | Correct | Accuracy | Peak allocated GiB | Median TTFT (s) | Mean TTFT (s) | P95 TTFT (s) | Max cache | Compression events | Outer elapsed | Notebook runtime |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 4000 | 144/250 | 57.6% | **4.689** | **0.0408** | 0.0405 | 0.0489 | **4,013** | 770 | 28.00 min | 28.17 min |
+| 6000 | 144/250 | 57.6% | 4.735 | 0.0406 | 0.0392 | 0.0459 | 6,013 | 732 | 28.17 min | 28.26 min |
+| 50000 | 138/250 | 55.2% | 11.836 | 0.0519 | 0.0588 | 0.0882 | 50,013 | 79 | 30.95 min | 31.05 min |
+
+Every run has 250 non-missing TTFT values, 829 encoding chunks, and 11,434 encoded frames. Median answering-cache lengths are 4,013 / 6,013 / 19,613; the minimum is 209 for all three budgets. Compression occurred in 204 / 201 / 31 questions respectively.
+
+Versus the 50K control, the 4K configuration gives **60.4% lower peak allocated memory**, **21.4% lower median TTFT**, **9.5% lower outer elapsed time**, and **92.0% lower maximum cache length**. The observed accuracy difference remains +2.4 percentage points on this convenience shard, not a demonstrated general improvement.
+
+## 30.3 Metric boundaries
+
+- `TTFT` is the existing LLaVA question-answering timer. It excludes video ingestion and pseudo-query compression and ends after another decoder forward on the first selected token; it is not end-to-end latency.
+- Memory readings use `torch.cuda.max_memory_allocated()/1024**3`. The counter covers the process lifetime and is not reset per question or video. Reserved memory was not logged.
+- Outer elapsed time comes from whole-second tqdm updates and includes video processing but not process/model startup. Notebook runtime is subprocess wall time; neither supports a hardware-independent Kaggle comparison.
+- The logs do not isolate encoding or compression durations. Compression counts measure events, not their individual costs.
+- These tables are derived from existing AutoDL logs, not new GPU measurements. Similar 4K/6K TTFT values preclude a claim of monotonically decreasing latency with smaller budgets.
+
+## 30.4 Next experimental gate
+
+Efficiency extraction is complete. The next GPU work remains an identical-environment 4K/6K repeat to quantify prediction instability and a differential test of pseudo-query attention, followed by FIFO 4K/6K controls and independent component ablations on this shard. The 50K setting remains a near-uncompressed HERMES control, not a native baseline; the incomplete full-prefix baseline stays excluded.

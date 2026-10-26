@@ -46,6 +46,20 @@ This fork contains an independent **reproduction, validation, and extension stud
 
 Each run completed all 50 videos and 250 questions. The executed notebook validated question order, choices, gold labels, source revision, and output structure. Runtime is total session time per configuration on an RTX 4080 SUPER; it is not directly comparable with Kaggle runtime.
 
+### AutoDL Efficiency Evidence
+
+The preserved logs were re-parsed with [`scripts/extract_efficiency.py`](./scripts/extract_efficiency.py). All budgets processed the same 829 chunks / 11,434 frames and produced 250 TTFT measurements. Allocated memory is in GiB; outer elapsed time is coarse whole-second video-loop progress, while total runtime includes startup and other notebook subprocess overhead.
+
+| KV budget | Accuracy | Peak allocated GiB | Median TTFT (s) | P95 TTFT (s) | Max cache | Compression events | Outer elapsed | Total runtime |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 4000 | 57.6% | **4.689** | **0.0408** | 0.0489 | **4,013** | 770 | 28.00 min | 28.17 min |
+| 6000 | 57.6% | 4.735 | 0.0406 | 0.0459 | 6,013 | 732 | 28.17 min | 28.26 min |
+| 50000 (control) | 55.2% | 11.836 | 0.0519 | 0.0882 | 50,013 | 79 | 30.95 min | 31.05 min |
+
+Relative to the 50K control, 4K has **60.4% lower peak allocated memory**, **21.4% lower median logged TTFT**, **9.5% lower outer elapsed time**, and **92.0% lower maximum answering-cache length**. These are derived from existing AutoDL logs, not new GPU measurements. Reserved memory and isolated encoding/compression durations were not logged; TTFT excludes ingestion and pseudo-query compression and is not end-to-end latency. The process-lifetime allocated-memory counter was not reset per video. The nearly identical 4K/6K TTFT values do not support a monotonic latency claim.
+
+Reproduce the tables with `python scripts/extract_efficiency.py`. Outputs are in [`exports/efficiency/`](./exports/efficiency/): the [summary](./exports/efficiency/autodl_50_efficiency_summary.csv), [750 question rows](./exports/efficiency/autodl_50_question_metrics.csv), [150 video rows](./exports/efficiency/autodl_50_video_metrics.csv), and [hash-checked provenance](./exports/efficiency/autodl_50_efficiency_provenance.json).
+
 ### Earlier Kaggle Accuracy and Efficiency Reference
 
 These are the previously reported Tesla T4 measurements. The separate AutoDL logs permit a fresh AutoDL efficiency reanalysis, but they do not independently revalidate these Kaggle metrics. Treat this table as historical logged results, not AutoDL measurements.
@@ -96,14 +110,14 @@ The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive w
 - Paired prediction exports, exact discordance sensitivity tests, and video-cluster bootstrap intervals
 - Kaggle–AutoDL positional prediction comparison and discordance case export
 - Reproducibility packaging with raw CSVs, logs, source/model revisions, and SHA-256 manifests
+- Reproducible AutoDL efficiency extraction with question/video tables and provenance hashes
 
 ### Next Experiments
 
-1. Re-extract TTFT, allocated/reserved memory, compression counts, cache sizes, and processing times from the recovered AutoDL logs.
-2. Repeat AutoDL 4K/6K specifically to measure run-to-run nondeterminism; validate the manual pseudo-query attention path against real transformer attentions.
-3. Run FIFO eviction at KV 4K/6K on the same 50 videos, then separately ablate smoothing, summary tokens, differentiated layer retention, and positional re-indexing.
-4. Evaluate a non-overlapping 50-video shard before resumable shard-wise evaluation of all 498 videos.
-5. Develop research extensions only after these controls are established.
+1. Repeat AutoDL 4K/6K specifically to measure run-to-run nondeterminism; validate the manual pseudo-query attention path against real transformer attentions.
+2. Run FIFO eviction at KV 4K/6K on the same 50 videos, then separately ablate smoothing, summary tokens, differentiated layer retention, and positional re-indexing.
+3. Evaluate a non-overlapping 50-video shard before resumable shard-wise evaluation of all 498 videos.
+4. Develop research extensions only after these controls are established.
 
 The native full-prefix baseline remains incomplete and excluded where memory or context limits are exceeded. Inputs must not be silently truncated to force a comparison.
 
@@ -125,9 +139,9 @@ The legacy script requires local video-path and annotation-subset setup; it is n
 
 | Document | Description |
 |---|---|
-| [`research_log.md`](./research_log.md) | Complete research log (29 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`research_log.md`](./research_log.md) | Complete research log (30 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
 | [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, and EDMI proposal |
-| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (20 sections), risk assessment, AutoDL verification, and next experiments |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (21 sections), risk assessment, AutoDL verification, efficiency evidence, and next experiments |
 
 ### Interpretation Guidelines
 
