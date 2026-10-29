@@ -1,5 +1,8 @@
 HERMES/** -text
 exports/** -text
 logs/** -text
+HERMES_AutoDL_final_evidence/** -text
+data/streamingbench_50_autodl.json -text
 hermes-v2-autodl.ipynb -text
+hermes-final-autodl.ipynb -text
 *.zip binary

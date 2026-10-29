@@ -1,0 +1,11 @@
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+[I 261028 20:02:35 llavaov_hermes:930] n_init: 13
+[I 261028 20:02:35 llavaov_hermes:931] kv_size: 4000
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/internal/generation_utils#transformers.Cache)
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+Qwen2Model is using Qwen2SdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+              comparison  max_abs_max  mean_abs_mean  cosine_min  cosine_mean  past_top13_overlap
+ causal_frozen_vs_native     0.999992       0.024993    0.356427     0.724323                 1.0
+current_vs_causal_frozen     0.999512       0.014561    0.762802     0.883062                 1.0
+       current_vs_native     0.999992       0.031577    0.220430     0.636826                 1.0
+ATTENTION_DIFFERENTIAL_TEST_COMPLETE

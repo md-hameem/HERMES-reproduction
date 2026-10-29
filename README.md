@@ -23,20 +23,21 @@
 
 ## 📋 Reproduction Study
 
-This fork contains an independent **reproduction, validation, and extension study** of HERMES on Kaggle Tesla T4 and AutoDL RTX 4080 SUPER infrastructure.
+This fork contains an independent **reproduction, validation, and control study** of HERMES on Kaggle Tesla T4 and AutoDL RTX 4080-family infrastructure.
 
 ### Overview
 
 | | |
 |---|---|
-| **Environments** | Kaggle · single Tesla T4; AutoDL · single RTX 4080 SUPER |
+| **Environments** | Kaggle · single Tesla T4; AutoDL · single RTX 4080 SUPER or RTX 4080, depending on session |
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
 | **Benchmark** | StreamingBench samples 201–250 (50 videos / 250 questions) |
 | **KV Budgets Tested** | 500, 1K, 2K, 4K, 6K, 50K |
-| **Canonical 50-video workflow** | [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) |
-| **Status** | Two preserved 50-video result generations · Controls and full benchmark pending |
+| **Canonical original 50-video workflow** | [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) |
+| **Final control workflow** | [`hermes-final-autodl.ipynb`](./hermes-final-autodl.ipynb) |
+| **Status** | Two preserved HERMES generations plus same-hardware repeats, attention differential, and FIFO controls; component ablations and broader shards pending |
 
-### Latest Validated AutoDL Run — 25 October 2026
+### Original Validated AutoDL Run — 25 October 2026
 
 | Configuration | Correct | Accuracy | Total runtime |
 |---|---:|---:|---:|
@@ -59,6 +60,36 @@ The preserved logs were re-parsed with [`scripts/extract_efficiency.py`](./scrip
 Relative to the 50K control, 4K has **60.4% lower peak allocated memory**, **21.4% lower median logged TTFT**, **9.5% lower outer elapsed time**, and **92.0% lower maximum answering-cache length**. These are derived from existing AutoDL logs, not new GPU measurements. Reserved memory and isolated encoding/compression durations were not logged; TTFT excludes ingestion and pseudo-query compression and is not end-to-end latency. The process-lifetime allocated-memory counter was not reset per video. The nearly identical 4K/6K TTFT values do not support a monotonic latency claim.
 
 Reproduce the tables with `python scripts/extract_efficiency.py`. Outputs are in [`exports/efficiency/`](./exports/efficiency/): the [summary](./exports/efficiency/autodl_50_efficiency_summary.csv), [750 question rows](./exports/efficiency/autodl_50_question_metrics.csv), [150 video rows](./exports/efficiency/autodl_50_video_metrics.csv), and [hash-checked provenance](./exports/efficiency/autodl_50_efficiency_provenance.json).
+
+### Final AutoDL Controls — 28 October 2026
+
+`hermes-final-autodl.ipynb` reused the hash-verified original predictions and added same-hardware HERMES repeats, a differential test of pseudo-query attention, and budget-matched FIFO eviction controls. All seven raw prediction files independently validated for row count, question identity, gold alignment, and parsed-choice agreement.
+
+| Method | Correct | Accuracy | Peak allocated GiB | Median TTFT (s) | Max cache | Elapsed |
+|---|---:|---:|---:|---:|---:|---:|
+| HERMES 4K, original | 144/250 | 57.6% | 4.689 | 0.0408 | 4,013 | 28.17 min |
+| HERMES 6K, original | 144/250 | 57.6% | 4.735 | 0.0406 | 6,013 | 28.26 min |
+| HERMES 50K control | 138/250 | 55.2% | 11.836 | 0.0519 | 50,013 | 31.05 min |
+| HERMES 4K repeat | 143/250 | 57.2% | 4.689 | 0.0506 | 4,013 | 31.44 min |
+| HERMES 6K repeat | 143/250 | 57.2% | 4.735 | 0.0493 | 6,013 | 31.35 min |
+| FIFO 4K | 144/250 | 57.6% | 4.689 | 0.0505 | 4,013 | 29.39 min |
+| FIFO 6K | 144/250 | 57.6% | 4.734 | 0.0486 | 6,013 | 29.30 min |
+
+Key control findings:
+
+- **Repeatability:** 4K changed four choices and three correctness outcomes; 6K changed five choices and three correctness outcomes. Same-environment run-to-run nondeterminism is therefore demonstrated, with both repeats scoring 143/250.
+- **FIFO parity:** FIFO 4K versus HERMES 4K had six wins each (exact paired p = 1.000); FIFO 6K versus HERMES 6K had five wins each (p = 1.000). HERMES is not shown to outperform simple newest-token FIFO retention on this shard.
+- **Versus 50K:** the +2.4-point HERMES/FIFO advantage is not statistically conclusive (exact paired p ≈ 0.210; video-cluster intervals include negative differences).
+- **Attention differential:** the manual pseudo-query path remains an approximation. Mean cosine similarity is 0.637 against native attention and 0.724 for the causal-masked frozen-hidden variant. The reported top-13 ranking overlap is uninformative because the test had only 13 past tokens.
+- **Efficiency stability:** budget-related peak allocated memory and maximum cache reductions are consistent. Session-to-session TTFT varies, so latency should not be overinterpreted from one process run.
+
+The extracted evidence directory is [`HERMES_AutoDL_final_evidence/`](./HERMES_AutoDL_final_evidence/); its machine-readable summary is [`observed_research_summary.json`](./HERMES_AutoDL_final_evidence/exports/final/observed_research_summary.json). Run the independent audit with:
+
+```bash
+python scripts/validate_final_evidence.py
+```
+
+The validator verifies 53 payload files against the final SHA-256 manifest, recomputes all seven accuracy and efficiency tables, reproduces paired statistics, checks attention artifacts, and inspects the executed notebook. It reports three archival warnings: the final bundle omits `exports/figures/accuracy_50.png`, `exports/figures/paired_differences_50.png`, and `exports/hermes_50_by_task.csv` from the embedded historical manifest. These omissions do not affect the new predictions, but the archive should be supplemented before being treated as fully self-contained.
 
 ### Earlier Kaggle Accuracy and Efficiency Reference
 
@@ -101,11 +132,15 @@ The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive w
 
 ### Completed Work
 
-- Full HERMES inference pipeline on Kaggle T4 and AutoDL RTX 4080 SUPER
+- Full HERMES inference pipeline on Kaggle T4 and AutoDL RTX 4080-family GPUs
 - Transformers/Qwen2 RoPE compatibility fixes and pinned source checks
 - Custom-video smoke test with KV compression validation
 - 10-video six-budget ablation (KV=500 to KV=50K)
 - Two preserved 50-video result generations (KV=4K, 6K, 50K)
+- Same-hardware AutoDL 4K/6K repeat runs measuring prediction instability
+- Differential test of manual pseudo-query attention against native transformer attention
+- Budget-matched FIFO eviction controls at 4K and 6K
+- Independent final-evidence validator with hash, prediction, statistics, efficiency, control, and notebook checks
 - Task-level accuracy analysis and exploratory error taxonomy
 - Paired prediction exports, exact discordance sensitivity tests, and video-cluster bootstrap intervals
 - Kaggle–AutoDL positional prediction comparison and discordance case export
@@ -114,10 +149,10 @@ The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive w
 
 ### Next Experiments
 
-1. Repeat AutoDL 4K/6K specifically to measure run-to-run nondeterminism; validate the manual pseudo-query attention path against real transformer attentions.
-2. Run FIFO eviction at KV 4K/6K on the same 50 videos, then separately ablate smoothing, summary tokens, differentiated layer retention, and positional re-indexing.
+1. Run one-at-a-time HERMES component ablations for cross-layer smoothing, summary tokens, differentiated shallow/middle/deep retention, and positional re-indexing.
+2. Supplement or repackage the final evidence archive with the three historical files missing from its embedded preserved manifest.
 3. Evaluate a non-overlapping 50-video shard before resumable shard-wise evaluation of all 498 videos.
-4. Develop research extensions only after these controls are established.
+4. Develop research extensions only after the component-ablation and generalization evidence is established.
 
 The native full-prefix baseline remains incomplete and excluded where memory or context limits are exceeded. Inputs must not be silently truncated to force a comparison.
 
@@ -139,9 +174,10 @@ The legacy script requires local video-path and annotation-subset setup; it is n
 
 | Document | Description |
 |---|---|
-| [`research_log.md`](./research_log.md) | Complete research log (30 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
-| [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, and EDMI proposal |
-| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (21 sections), risk assessment, AutoDL verification, efficiency evidence, and next experiments |
+| [`research_log.md`](./research_log.md) | Complete research log (31 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`CHANGELOG.md`](./CHANGELOG.md) | Dated project changelog for major reproduction, evidence, control, and documentation milestones |
+| [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, EDMI proposal, and 28 October control update |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (22 sections), risk assessment, AutoDL verification, efficiency evidence, final controls, and next experiments |
 
 ### Interpretation Guidelines
 
@@ -149,8 +185,11 @@ The legacy script requires local video-path and annotation-subset setup; it is n
 2. The 50-video subset is a **convenience shard** (samples 201–250), not a random or stratified sample of the full benchmark.
 3. Task distribution is heavily imbalanced (Causal + Prospective Reasoning = 80.4% of questions).
 4. Accuracy differences should be interpreted alongside their confidence intervals and the clustered nature of 5 questions per video.
-5. Kaggle used a Tesla T4 and AutoDL used an RTX 4080 SUPER; do not directly compare their runtimes as hardware-independent results.
-6. Small cross-platform prediction differences should be treated as a reproducibility question, not as evidence of a semantic improvement.
+5. Kaggle used a Tesla T4; AutoDL used an RTX 4080 SUPER for the original run and an RTX 4080 for the final control run. Do not directly compare their runtimes as hardware-independent results.
+6. Small cross-platform and same-platform prediction differences are now a quantified reproducibility limitation, not evidence of a semantic improvement.
+7. The 28 October FIFO controls match HERMES aggregate accuracy on this shard; do not claim HERMES-specific selection benefits without component-ablation support.
+8. The pseudo-query attention differential quantifies approximation error; it does not establish numerical equivalence to native transformer attention.
+9. TTFT and elapsed time are session-specific. Peak allocated memory and maximum cache size are the more stable cross-run efficiency measurements.
 
 ### Experimental Plots
 

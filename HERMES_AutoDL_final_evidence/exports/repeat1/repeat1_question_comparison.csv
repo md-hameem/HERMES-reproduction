@@ -1,0 +1,501 @@
+video_id,qa_index,question,task,original_pred_answer,original_pred_choice,correct_choice,original_correct,repeat_pred_answer,repeat_pred_choice,repeat_correct,choice_changed,correctness_changed,accuracy_delta,kv_budget
+231,0,What action is the hand performing on the train?,Action Recognition,B) Assembling the train.,B,D,0,B) Assembling the train.,B,0,0,0,0,4000
+231,1,What color Lego brick is placed first on the surface?,Event Understanding,D) Yellow.,D,D,1,D) Yellow.,D,1,0,0,0,4000
+231,2,How many colors of bricks have been used so far?,Counting,A) Two.,A,C,0,A) Two.,A,0,0,0,0,4000
+231,3,What was the sequence of actions performed by the hand just now?,Event Understanding,"B) Adding green bricks for the roof, extending the yellow base, expanding the",B,B,1,"B) Adding green bricks for the roof, extending the yellow base, expanding the",B,1,0,0,0,4000
+231,4,What type of pieces did the hand attach to the top surface of the structure just now?,Object Recognition,D) Circular pieces resembling wheels.,D,D,1,D) Circular pieces resembling wheels.,D,1,0,0,0,4000
+459,0,What colors are the wheels of the race car?,Attribute Recognition,A) Green and blue.,A,C,0,A) Green and blue.,A,0,0,0,0,4000
+459,1,What feature is present on the front of the toy?,Attribute Recognition,B) A happy face.,B,B,1,B) A happy face.,B,1,0,0,0,4000
+459,2,How are the yellow building blocks arranged before the blue block is placed on top?,Spatial Understanding,B) In a straight line.,B,B,1,B) In a straight line.,B,1,0,0,0,4000
+459,3,What is the new item introduced in the video?,Object Recognition,B) A small structure made of yellow and red blocks with wheels.,B,B,1,B) A small structure made of yellow and red blocks with wheels.,B,1,0,0,0,4000
+459,4,What happened to the toy vehicle just now?,Event Understanding,D) The toy vehicle is lifted off the surface.,D,C,0,D) The toy vehicle is lifted off the surface.,D,0,0,0,0,4000
+355,0,How many studs does each yellow interlocking block placed by the hand have?,Counting,A) Eight.,A,A,1,A) Eight.,A,1,0,0,0,4000
+355,1,How many interlocking blocks are positioned in a straight line by the hand?,Counting,D) Four.,D,D,1,D) Four.,D,1,0,0,0,4000
+355,2,What is the color of the block that the hand is reaching for right now?,Attribute Recognition,A) Yellow.,A,C,0,A) Yellow.,A,0,0,0,0,4000
+355,3,What color is the brick first added after the initial blue bricks form a two-layered structure?,Event Understanding,A) Green.,A,A,1,A) Green.,A,1,0,0,0,4000
+355,4,What is the sequence of bricks added to the structure after the blue bricks?,Event Understanding,"B) Yellow, green, orange.",B,A,0,"B) Yellow, green, orange.",B,0,0,0,0,4000
+335,0,What color is the plastic block added on top of the green blocks?,Attribute Recognition,A) Red.,A,C,0,A) Red.,A,0,0,0,0,4000
+335,1,What are the primary colors of the plastic building blocks shown right now?,Attribute Recognition,"B) Red, green, and yellow.",B,B,1,"B) Red, green, and yellow.",B,1,0,0,0,4000
+335,2,Which block was picked up and attached to the top of red block first just now?,Event Understanding,B) A green block.,B,C,0,B) A green block.,B,0,0,0,0,4000
+335,3,What was the white text on the purple animated overlay read just now?,Text-Rich Understanding,"A) ""Alphabet A transform to Box"".",A,B,0,"A) ""Alphabet A transform to Box"".",A,0,0,0,0,4000
+335,4,What happens to the blocks after they are disassembled and mixed?,Event Understanding,B) The blocks are scattered and then gathered into a pile.,B,B,1,B) The blocks are scattered and then gathered into a pile.,B,1,0,0,0,4000
+465,0,What colors are the wheels of the toy car?,Attribute Recognition,C) Red and Yellow.,C,C,1,C) Red and Yellow.,C,1,0,0,0,4000
+465,1,What action did the hand perform after placing the green block next to the blue block?,Action Recognition,B) Adjusted the green block.,B,C,0,B) Adjusted the green block.,B,0,0,0,0,4000
+465,2,How many hands are involved in arranging the blocks right now?,Counting,B) Two hands.,B,B,1,B) Two hands.,B,1,0,0,0,4000
+465,3,What does the hand do after picking up the yellow building block?,Action Recognition,B) Places it on the left side.,B,B,1,B) Places it on the left side.,B,1,0,0,0,4000
+465,4,What does the hand do after positioning the three green blocks securely?,Action Recognition,B) Picks up an orange block.,B,B,1,B) Picks up an orange block.,B,1,0,0,0,4000
+173,0,What colors are the blocks used to form the helicopter rotor blades?,Attribute Recognition,B) Yellow and Blue.,B,A,0,B) Yellow and Blue.,B,0,0,0,0,4000
+173,1,What is the sequence of actions performed with the blocks just now?,Event Understanding,"C) Placing a yellow block, then a blue block, and finally two",C,A,0,"C) Placing a yellow block, then a blue block, and finally two",C,0,0,0,0,4000
+173,2,What is the hand doing after placing three yellow blocks onto the top of the structure?,Action Recognition,D) Adjusts the yellow block.,D,D,1,D) Adjusts the yellow block.,D,1,0,0,0,4000
+173,3,What was the sequence of events the hand followed when building the structure just now?,Event Understanding,"C) Picks up a red block, adjusts it, then picks up a yellow",C,B,0,"C) Picks up a red block, adjusts it, then picks up a yellow",C,0,0,0,0,4000
+173,4,What action is the person performing with the blue blocks?,Action Recognition,B) Adds blue blocks to the side of the structure.,B,D,0,B) Adds blue blocks to the side of the structure.,B,0,0,0,0,4000
+170,0,What is positioned underneath the archway made of colorful interlocking blocks?,Object Recognition,D) A toy car.,D,D,1,D) A toy car.,D,1,0,0,0,4000
+170,1,How many yellow blocks are connected in a line?,Event Understanding,B) Three.,B,C,0,B) Three.,B,0,0,0,0,4000
+170,2,Where is the green brick placed relative to the yellow bricks in the structure?,Spatial Understanding,D) On top of the yellow bricks.,D,D,1,D) On top of the yellow bricks.,D,1,0,0,0,4000
+170,3,What does the person do after adding more yellow bricks?,Action Recognition,C) Adjusts the yellow bricks.,C,C,1,C) Adjusts the yellow bricks.,C,1,0,0,0,4000
+170,4,What is the person likely to do next after moving their hand towards the new set of connected bricks?,Causal Reasoning,B) Add more bricks to the arrangement.,B,B,1,B) Add more bricks to the arrangement.,B,1,0,0,0,4000
+448,0,What are the colors of the crane arm?,Attribute Recognition,"D) Yellow, blue, green.",D,A,0,"D) Yellow, blue, green.",D,0,0,0,0,4000
+448,1,What happens to the orange block as the video progresses?,Event Understanding,C) It lifts and swings gently.,C,C,1,C) It lifts and swings gently.,C,1,0,0,0,4000
+448,2,What was the sequence of actions performed with the blocks just now?,Event Understanding,"D) The hand places a yellow block, moves it, then places a green",D,D,1,"D) The hand places a yellow block, moves it, then places a green",D,1,0,0,0,4000
+448,3,What happens to the smaller structure after it is first moved out of view?,Event Understanding,A) It is disassembled.,A,D,0,A) It is disassembled.,A,0,0,0,0,4000
+448,4,How many green blocks are stacked now?,Counting,C) Nine.,C,C,1,C) Nine.,C,1,0,0,0,4000
+118,0,What happens after the first green block is placed on the yellow block?,Event Understanding,D) The hand adds another green block.,D,D,1,D) The hand adds another green block.,D,1,0,0,0,4000
+118,1,What action do the hands perform just before moving away from the structure?,Action Recognition,D) Pressing down the green blocks.,D,D,1,D) Pressing down the green blocks.,D,1,0,0,0,4000
+118,2,What sequence of actions occured with the green and yellow blocks just now?,Event Understanding,"B) The yellow block is placed first, followed by the green block.",B,A,0,"B) The yellow block is placed first, followed by the green block.",B,0,0,0,0,4000
+118,3,Where is the new yellow and green block placed relative to the original structure?,Spatial Understanding,B) Next to the original structure.,B,D,0,B) Next to the original structure.,B,0,0,0,0,4000
+118,4,What did the person do with the yellow block just now?,Action Recognition,B) Arranged them on the blue block and adjusted for alignment.,B,D,0,B) Arranged them on the blue block and adjusted for alignment.,B,0,0,0,0,4000
+289,0,What was written in the top right corner at the start of the video?,Text-Rich Understanding,B) Auto Rickshaw.,B,B,1,B) Auto Rickshaw.,B,1,0,0,0,4000
+289,1,What sequence of actions happened after the blue rectangular block is placed on the surface?,Event Understanding,"A) The hand adds a yellow block, then an orange block, and adjusts",A,A,1,"A) The hand adds a yellow block, then an orange block, and adjusts",A,1,0,0,0,4000
+289,2,What is the predominant color of the blocks being placed by the hand right now?,Attribute Recognition,A) Blue.,A,D,0,A) Blue.,A,0,0,0,0,4000
+289,3,What color is the block being placed on the left side of the structure right now?,Object Recognition,D) Yellow.,D,B,0,D) Yellow.,D,0,0,0,0,4000
+289,4,What is the block structure identified as?,Object Recognition,B) A vehicle.,B,B,1,B) A vehicle.,B,1,0,0,0,4000
+183,0,What might the speaker discuss next?,Prospective Reasoning,A) Graphing on the Coordinate Plane.,A,A,1,A) Graphing on the Coordinate Plane.,A,1,0,0,0,4000
+183,1,What might the speaker explain next?,Prospective Reasoning,C) How to identify coordinates.,C,B,0,C) How to identify coordinates.,C,0,0,0,0,4000
+183,2,What might the speaker discuss next?,Prospective Reasoning,D) What ordered pairs represent.,D,D,1,D) What ordered pairs represent.,D,1,0,0,0,4000
+183,3,What might the speaker discuss next?,Prospective Reasoning,C) The importance of the y-intercept.,C,A,0,C) The importance of the y-intercept.,C,0,0,0,0,4000
+183,4,What might the speaker discuss next?,Prospective Reasoning,D) The concept of linear equations.,D,C,0,D) The concept of linear equations.,D,0,0,0,0,4000
+125,0,What might the speaker explain next?,Prospective Reasoning,A) How to add mixed numbers.,A,A,1,A) How to add mixed numbers.,A,1,0,0,0,4000
+125,1,What might the speaker explain next?,Prospective Reasoning,B) The process of converting mixed numbers to improper fractions.,B,A,0,B) The process of converting mixed numbers to improper fractions.,B,0,0,0,0,4000
+125,2,What might the speaker do next?,Prospective Reasoning,A) How to add those two mixed numbers.,A,A,1,A) How to add those two mixed numbers.,A,1,0,0,0,4000
+125,3,What might the speaker explain next?,Prospective Reasoning,D) How to add those two fractions numbers.,D,D,1,D) How to add those two fractions numbers.,D,1,0,0,0,4000
+125,4,What might the speaker explain next?,Prospective Reasoning,A) Adding the fractions together.,A,A,1,A) Adding the fractions together.,A,1,0,0,0,4000
+447,0,What topics might the speaker explain next?,Prospective Reasoning,A) Simplifying fractions.,A,B,0,A) Simplifying fractions.,A,0,0,0,0,4000
+447,1,What might the speaker explain next?,Prospective Reasoning,C) How to divide fractions.,C,B,0,C) How to divide fractions.,C,0,0,0,0,4000
+447,2,What might the speaker suggest next?,Prospective Reasoning,C) How to simplify fractions.,C,D,0,C) How to simplify fractions.,C,0,0,0,0,4000
+447,3,What might the speaker explain next?,Prospective Reasoning,D) How to simplify the resulting fraction.,D,C,0,D) How to simplify the resulting fraction.,D,0,0,0,0,4000
+447,4,What might the speaker discuss next?,Prospective Reasoning,C) Methods to simplify fractions.,C,D,0,C) Methods to simplify fractions.,C,0,0,0,0,4000
+91,0,What might the speaker discuss next?,Prospective Reasoning,C) The concept of Area.,C,C,1,C) The concept of Area.,C,1,0,0,0,4000
+91,1,What formula might the speaker likely introduce next?,Prospective Reasoning,D) Area of a triangle.,D,D,1,D) Area of a triangle.,D,1,0,0,0,4000
+91,2,What might the speaker explain next?,Prospective Reasoning,D) How to calculate the area of another shapes.,D,D,1,D) How to calculate the area of another shapes.,D,1,0,0,0,4000
+91,3,What might the speaker explain next?,Prospective Reasoning,B) The formula for area.,B,D,0,B) The formula for area.,B,0,0,0,0,4000
+91,4,What might the speaker discuss next?,Prospective Reasoning,D) Calculating the area of a different triangle.,D,D,1,D) Calculating the area of a different triangle.,D,1,0,0,0,4000
+171,0,What might the speaker discuss next?,Prospective Reasoning,B) The definition of basic probability.,B,B,1,B) The definition of basic probability.,B,1,0,0,0,4000
+171,1,What might the speaker discuss next?,Prospective Reasoning,C) Explanation of rolling a six-sided die.,C,C,1,C) Explanation of rolling a six-sided die.,C,1,0,0,0,4000
+171,2,What concept might the speaker explain next?,Prospective Reasoning,D) The probability of rolling a specific number with a die.,D,D,1,D) The probability of rolling a specific number with a die.,D,1,0,0,0,4000
+171,3,What might the speaker discuss next?,Prospective Reasoning,B) The probability of this disc rotating to the blue area.,B,B,1,B) The probability of this disc rotating to the blue area.,B,1,0,0,0,4000
+171,4,What might the speaker explain next?,Prospective Reasoning,D) Applying the formula to find expected value.,D,B,0,D) Applying the formula to find expected value.,D,0,0,0,0,4000
+93,0,What concept might the speaker explain next?,Prospective Reasoning,C) Differences between continuous and discrete data.,C,C,1,C) Differences between continuous and discrete data.,C,1,0,0,0,4000
+93,1,What might the speaker explain next?,Prospective Reasoning,C) How to interpret the data in the data table.,C,B,0,C) How to interpret the data in the data table.,C,0,0,0,0,4000
+93,2,What might the speaker explain next?,Prospective Reasoning,B) The meaning of the scale on the graph.,B,B,1,B) The meaning of the scale on the graph.,B,1,0,0,0,4000
+93,3,What might the speaker explain next?,Prospective Reasoning,D) The overall trend of investment income throughout the year.,D,D,1,D) The overall trend of investment income throughout the year.,D,1,0,0,0,4000
+93,4,What might the speaker explain next?,Prospective Reasoning,A) Interpret the trends shown in the graphs.,A,A,1,A) Interpret the trends shown in the graphs.,A,1,0,0,0,4000
+427,0,What might the speaker explain next?,Prospective Reasoning,C) The definition of a median.,C,A,0,C) The definition of a median.,C,0,0,0,0,4000
+427,1,What concept is likely to be explained next?,Prospective Reasoning,A) Median.,A,A,1,A) Median.,A,1,0,0,0,4000
+427,2,What is the next logical step after the operation to the numbers?,Prospective Reasoning,B) Find the median of the numbers.,B,B,1,B) Find the median of the numbers.,B,1,0,0,0,4000
+427,3,What might the instructor explain next?,Prospective Reasoning,B) How to interpret the result of the median calculation.,B,B,1,B) How to interpret the result of the median calculation.,B,1,0,0,0,4000
+427,4,What might the speaker explain next?,Prospective Reasoning,C) Divide the sum by the count of numbers.,C,C,1,C) Divide the sum by the count of numbers.,C,1,0,0,0,4000
+492,0,What topic might the teacher explain next?,Prospective Reasoning,A) mixed numbers and improper fractions.,A,A,1,A) mixed numbers and improper fractions.,A,1,0,0,0,4000
+492,1,What might the teacher explain next?,Prospective Reasoning,B) Explain how improper fractions is connected to proper fractions and whole fractions.,B,B,1,B) Explain how improper fractions is connected to proper fractions and whole fractions.,B,1,0,0,0,4000
+492,2,What might the speaker explain next?,Prospective Reasoning,B) The method for adding mixed numbers and improper fractions.,B,A,0,B) The method for adding mixed numbers and improper fractions.,B,0,0,0,0,4000
+492,3,What concept will the speaker likely explain next?,Prospective Reasoning,B) Converting improper fractions to mixed numbers.,B,B,1,B) Converting improper fractions to mixed numbers.,B,1,0,0,0,4000
+492,4,What might the speaker explain next?,Prospective Reasoning,D) How to use dividing to convert improper fractions to a mixed number form.,D,D,1,D) How to use dividing to convert improper fractions to a mixed number form.,D,1,0,0,0,4000
+456,0,What mathematical topic might the speaker focus on next?,Prospective Reasoning,D) Multiplying Fractions.,D,D,1,D) Multiplying Fractions.,D,1,0,0,0,4000
+456,1,What might the speaker do next?,Prospective Reasoning,C) Show the steps to multiply the fractions.,C,C,1,C) Show the steps to multiply the fractions.,C,1,0,0,0,4000
+456,2,What might the speaker do next?,Prospective Reasoning,C) Show the steps to multiply the fractions.,C,C,1,C) Show the steps to multiply the fractions.,C,1,0,0,0,4000
+456,3,What mathematical concept might the speaker move on to explain next?,Prospective Reasoning,C) Simplifying fractions.,C,D,0,C) Simplifying fractions.,C,0,0,0,0,4000
+456,4,What might the speaker discuss next?,Prospective Reasoning,B) How to divide fractions.,B,C,0,B) How to divide fractions.,B,0,0,0,0,4000
+302,0,What might the speaker discuss next?,Prospective Reasoning,D) The order of operations rules.,D,D,1,D) The order of operations rules.,D,1,0,0,0,4000
+302,1,What might be the next topic the speaker will address?,Prospective Reasoning,D) Practice problems involving exponents.,D,B,0,D) Practice problems involving exponents.,D,0,0,0,0,4000
+302,2,What might the speaker discuss next?,Prospective Reasoning,A) Simplify the expression.,A,C,0,A) Simplify the expression.,A,0,0,0,0,4000
+302,3,What might the speaker discuss next?,Prospective Reasoning,B) The operator symbols for 'Then' and 'last' precedence.,B,B,1,B) The operator symbols for 'Then' and 'last' precedence.,B,1,0,0,0,4000
+302,4,What might the speaker explain next?,Prospective Reasoning,D) The order of operations between the multiplication sign and the division sign.,D,D,1,D) The order of operations between the multiplication sign and the division sign.,D,1,0,0,0,4000
+3,0,What might the speaker explain next?,Prospective Reasoning,C) The concept of length in 2-dimensional shapes.,C,D,0,C) The concept of length in 2-dimensional shapes.,C,0,0,0,0,4000
+3,1,What will the speaker most likely explain next?,Prospective Reasoning,D) How to measure the perimeter accurately.,D,A,0,D) How to measure the perimeter accurately.,D,0,0,0,0,4000
+3,2,What might the speaker explain next?,Prospective Reasoning,B) How to find the perimeter of a rectangle.,B,B,1,B) How to find the perimeter of a rectangle.,B,1,0,0,0,4000
+3,3,What might the speaker discuss next?,Prospective Reasoning,C) The properties of regular polygons.,C,A,0,C) The properties of regular polygons.,C,0,0,0,0,4000
+3,4,What might the speaker ask the students to do next?,Prospective Reasoning,A) Calculate the area of the shape.,A,B,0,A) Calculate the area of the shape.,A,0,0,0,0,4000
+494,0,What might the speaker explain next?,Prospective Reasoning,C) How to simplify fractions.,C,C,1,C) How to simplify fractions.,C,1,0,0,0,4000
+494,1,What might the speaker explain next?,Prospective Reasoning,C) Equivalent fractions of 3/6.,C,C,1,C) Equivalent fractions of 3/6.,C,1,0,0,0,4000
+494,2,What might the speaker discuss next?,Prospective Reasoning,C) Simplifying fractions by finding common factors.,C,C,1,C) Simplifying fractions by finding common factors.,C,1,0,0,0,4000
+494,3,What might the speaker explain next?,Prospective Reasoning,C) How to factorize each number to prime factors.,C,C,1,C) How to factorize each number to prime factors.,C,1,0,0,0,4000
+494,4,What might the speaker discuss next?,Prospective Reasoning,C) Simplifying fractions using greatest common factor.,C,C,1,C) Simplifying fractions using greatest common factor.,C,1,0,0,0,4000
+402,0,What concept might the speaker explain next?,Prospective Reasoning,B) What is Pythagorean Theorem.,B,D,0,B) What is Pythagorean Theorem.,B,0,0,0,0,4000
+402,1,What might the speaker discuss next?,Prospective Reasoning,A) Applications of the Pythagorean Theorem.,A,B,0,A) Applications of the Pythagorean Theorem.,A,0,0,0,0,4000
+402,2,What might the speaker discuss next?,Prospective Reasoning,C) The concept of area and its proof in the Pythagorean theorem.,C,C,1,C) The concept of area and its proof in the Pythagorean theorem.,C,1,0,0,0,4000
+402,3,What might the speaker discuss next?,Prospective Reasoning,A) Explain how to use the Pythagorean theorem to find the right-angle,A,A,1,A) Explain how to use the Pythagorean theorem to find the right-angle,A,1,0,0,0,4000
+402,4,What might the speaker discuss next?,Prospective Reasoning,D) The method to verify if it is a right triangle.,D,D,1,D) The method to verify if it is a right triangle.,D,1,0,0,0,4000
+367,0,What might the speaker explain next?,Prospective Reasoning,B) The concept of triangle.,B,B,1,B) The concept of triangle.,B,1,0,0,0,4000
+367,1,What might the speaker explain next?,Prospective Reasoning,D) The relationship between different types of triangles.,D,B,0,D) The relationship between different types of triangles.,D,0,0,0,0,4000
+367,2,What might the speaker explain next?,Prospective Reasoning,D) The equal sides' number of Isosceles triangles.,D,D,1,D) The equal sides' number of Isosceles triangles.,D,1,0,0,0,4000
+367,3,What might the speaker discuss next?,Prospective Reasoning,B) Types of angles of equilateral triangles.,B,B,1,B) Types of angles of equilateral triangles.,B,1,0,0,0,4000
+367,4,What might the speaker do next?,Prospective Reasoning,D) Solve for the unknown angle.,D,D,1,D) Solve for the unknown angle.,D,1,0,0,0,4000
+376,0,What might the speaker explain next?,Prospective Reasoning,A) How the distributive property helps in simplifying equations.,A,C,0,A) How the distributive property helps in simplifying equations.,A,0,0,0,0,4000
+376,1,What might the speaker discuss next?,Prospective Reasoning,D) How to use distributive property to the example.,D,D,1,D) How to use distributive property to the example.,D,1,0,0,0,4000
+376,2,What might the speaker discuss next?,Prospective Reasoning,B) Why the two way get the same answer.,B,B,1,A) The formula for compound interest.,A,0,1,1,-1,4000
+376,3,What might the speaker calculate next?,Prospective Reasoning,C) 5 times 5.,C,A,0,C) 5 times 5.,C,0,0,0,0,4000
+376,4,What might the speaker discuss next?,Prospective Reasoning,D) The distributive property of subtraction.,D,A,0,D) The distributive property of subtraction.,D,0,0,0,0,4000
+330,0,What might the speaker explain next?,Prospective Reasoning,A) The concept of the division.,A,C,0,A) The concept of the division.,A,0,0,0,0,4000
+330,1,What might the speaker explain next?,Prospective Reasoning,D) How to solve an equation.,D,A,0,D) How to solve an equation.,D,0,0,0,0,4000
+330,2,What might the speaker explain next?,Prospective Reasoning,C) The concept of partial quotients.,C,A,0,C) The concept of partial quotients.,C,0,0,0,0,4000
+330,3,What might the speaker explain next?,Prospective Reasoning,C) Use real-life example to explain the concept of remainders.,C,D,0,C) Use real-life example to explain the concept of remainders.,C,0,0,0,0,4000
+330,4,"Based on the current explanation, what might the speaker do next?",Prospective Reasoning,A) Explain the next division step using the tabular.,A,A,1,A) Explain the next division step using the tabular.,A,1,0,0,0,4000
+139,0,What might the speaker discuss next?,Prospective Reasoning,D) The rules for multiplying decimals.,D,A,0,D) The rules for multiplying decimals.,D,0,0,0,0,4000
+139,1,What is the teacher likely to explain next?,Prospective Reasoning,A) How to correctly align the decimal points when adding.,A,A,1,A) How to correctly align the decimal points when adding.,A,1,0,0,0,4000
+139,2,What might the speaker explain next?,Prospective Reasoning,C) The process of correctly placing the decimal in the product.,C,C,1,C) The process of correctly placing the decimal in the product.,C,1,0,0,0,4000
+139,3,What topic might the speaker explain next?,Prospective Reasoning,C) The principles of decimal division.,C,C,1,C) The principles of decimal division.,C,1,0,0,0,4000
+139,4,What might the speaker discuss next?,Prospective Reasoning,A) Simplifying square roots.,A,C,0,A) Simplifying square roots.,A,0,0,0,0,4000
+256,0,What is the speaker likely to explain next?,Prospective Reasoning,C) The concept of division with partial quotients.,C,C,1,C) The concept of division with partial quotients.,C,1,0,0,0,4000
+256,1,What might the speaker discuss next?,Prospective Reasoning,B) Subtracting 6 from the dividend.,B,C,0,B) Subtracting 6 from the dividend.,B,0,0,0,0,4000
+256,2,What might the speaker explain next?,Prospective Reasoning,D) How to choose a number to subtract from 2928.,D,D,1,D) How to choose a number to subtract from 2928.,D,1,0,0,0,4000
+256,3,What might the speaker explain next?,Prospective Reasoning,D) The advantage of using small steps in division.,D,D,1,D) The advantage of using small steps in division.,D,1,0,0,0,4000
+256,4,What might the teacher explain next?,Prospective Reasoning,D) Explaining the significance of the answer 49r2.,D,C,0,D) Explaining the significance of the answer 49r2.,D,0,0,0,0,4000
+222,0,What mathematical concept will likely be demonstrated next?,Prospective Reasoning,D) Division.,D,D,1,D) Division.,D,1,0,0,0,4000
+222,1,What is the presenter likely to do next?,Prospective Reasoning,C) Divide 48 by 52.,C,D,0,C) Divide 48 by 52.,C,0,0,0,0,4000
+222,2,What might the speaker discuss next?,Prospective Reasoning,C) The relevance of the remainder.,C,A,0,C) The relevance of the remainder.,C,0,0,0,0,4000
+222,3,What might the speaker do next?,Prospective Reasoning,C) Subtract 88 from 528.,C,A,0,C) Subtract 88 from 528.,C,0,0,0,0,4000
+222,4,What might the speaker explain next?,Prospective Reasoning,C) How to proceed with the next division step.,C,A,0,C) How to proceed with the next division step.,C,0,0,0,0,4000
+266,0,What might the speaker describe next?,Prospective Reasoning,A) Step-by-step process of long division.,A,A,1,A) Step-by-step process of long division.,A,1,0,0,0,4000
+266,1,What might the speaker discuss next?,Prospective Reasoning,D) How to bring down the next digit in a long division.,D,D,1,C) How to perform subtraction in long division.,C,0,1,1,-1,4000
+266,2,What might the speaker explain next?,Prospective Reasoning,C) How to solve a similar problem with different numbers.,C,C,1,C) How to solve a similar problem with different numbers.,C,1,0,0,0,4000
+266,3,What is the next step after dividing 24 by 3?,Prospective Reasoning,C) Subtract 12 from 24.,C,C,1,C) Subtract 12 from 24.,C,1,0,0,0,4000
+266,4,What might the speaker explain next?,Prospective Reasoning,20),0,C,0,C) Subtract 20 from 20.,C,1,1,1,1,4000
+334,0,Why is this rabbit dressed in red and white knocking on the door now?,Causal Reasoning,D) Because it is lost and looking for its way back home.,D,A,0,D) Because it is lost and looking for its way back home.,D,0,0,0,0,4000
+334,1,Why is this iron gate cartoon character angry now?,Causal Reasoning,D) Because he was just forcibly stuffed a fish by the red rabbit in red,D,D,1,D) Because he was just forcibly stuffed a fish by the red rabbit in red,D,1,0,0,0,4000
+334,2,"Why is this rabbit, dressed in green and white, surprised now?",Causal Reasoning,C) Because he can't distinguish the gender of the chicken he is holding now,C,C,1,C) Because he can't distinguish the gender of the chicken he is holding now,C,1,0,0,0,4000
+334,3,Why does this rabbit dressed in green and white want to hide in the toilet?,Causal Reasoning,"D) Because after he opened the door, he found a noose and a",D,D,1,"D) Because after he opened the door, he found a noose and a",D,1,0,0,0,4000
+334,4,Why did the rabbit dressed in red and white just have to use a pool cue to strike the iron gate lying on the ground?,Causal Reasoning,"B) Because the iron gate blocked his path, and he needed to move it",B,A,0,"B) Because the iron gate blocked his path, and he needed to move it",B,0,0,0,0,4000
+286,0,Why does the frog appear from the toilet?,Causal Reasoning,D) Because the chicken that was just thrown into the toilet is wearing a frog,D,D,1,D) Because the chicken that was just thrown into the toilet is wearing a frog,D,1,0,0,0,4000
+286,1,Why does the rabbit dressed in red and white start to become restless?,Causal Reasoning,D) Because he can't find the key to the door and is getting frustrated,D,A,0,D) Because he can't find the key to the door and is getting frustrated,D,0,0,0,0,4000
+286,2,Why is this cartoon chicken very shocked now?,Causal Reasoning,A) Because just now another small cartoon chicken was eaten by a frog.,A,A,1,A) Because just now another small cartoon chicken was eaten by a frog.,A,1,0,0,0,4000
+286,3,Why does the character encounter a heavy legacy robot in the room?,Causal Reasoning,C) Because the character activates a hidden switch.,C,D,0,C) Because the character activates a hidden switch.,C,0,0,0,0,4000
+286,4,Why is this red rabbit standing in front of the iron gate now?,Causal Reasoning,"B) Because the iron gate suddenly started glowing, and the rabbit is curious.",B,D,0,A) Because the red rabbit is trying to figure out how to open the gate,A,0,1,0,0,4000
+89,0,Why does the rabbit strike the door with its fist several times?,Causal Reasoning,B) Because the rabbit is knocking to check if someone is inside.,B,D,0,B) Because the rabbit is knocking to check if someone is inside.,B,0,0,0,0,4000
+89,1,Why would the rabbit inside the iron gate be very panicked now?,Causal Reasoning,"C) Because the lights suddenly went out, and he is afraid of the dark",C,D,0,"C) Because the lights suddenly went out, and he is afraid of the dark",C,0,0,0,0,4000
+89,2,What causes the bunny character to react with shock and sweat?,Causal Reasoning,D) Because the bunny suddenly noticed a large shadow looming over it.,D,C,0,D) Because the bunny suddenly noticed a large shadow looming over it.,D,0,0,0,0,4000
+89,3,Why do the rectangular characters arm themselves?,Causal Reasoning,B) Because the rabbit-like figure has glowing eyes and a menacing demeanor.,B,B,1,B) Because the rabbit-like figure has glowing eyes and a menacing demeanor.,B,1,0,0,0,4000
+89,4,Why does the rabbit break through the wall to escape?,Causal Reasoning,D) Because the rabbit is inspired by the advertisement for new shoes.,D,D,1,D) Because the rabbit is inspired by the advertisement for new shoes.,D,1,0,0,0,4000
+220,0,Why is Mr. Bean scolded by the older woman?,Causal Reasoning,C) Because he was shining a flashlight at the teddy bear.,C,A,0,C) Because he was shining a flashlight at the teddy bear.,C,0,0,0,0,4000
+220,1,Why does the character place the cheese on a plate?,Causal Reasoning,B) Because his refrigerator is empty except for a piece of vegetable.,B,B,1,B) Because his refrigerator is empty except for a piece of vegetable.,B,1,0,0,0,4000
+220,2,Why does the man successfully retrieve the bottle from the top shelf?,Causal Reasoning,A) Because he uses his shopping cart for support.,A,A,1,A) Because he uses his shopping cart for support.,A,1,0,0,0,4000
+220,3,Why Mr. Bean is very shocked.,Causal Reasoning,C) Because the pie suddenly exploded when the opponent touched it.,C,D,0,C) Because the pie suddenly exploded when the opponent touched it.,C,0,0,0,0,4000
+220,4,Why does the Mr. Bean look tired or exhausted?,Causal Reasoning,D) Because he had to carry heavy bags out of the supermarket.,D,B,0,D) Because he had to carry heavy bags out of the supermarket.,D,0,0,0,0,4000
+273,0,Why can thieves enter the room without being detected?,Causal Reasoning,D) Because the thieves are using a special device to stay silent.,D,B,0,D) Because the thieves are using a special device to stay silent.,D,0,0,0,0,4000
+273,1,Why does this cat glare viciously at the person in black?,Causal Reasoning,D) Because the person in black made a loud noise that startled the cat.,D,C,0,D) Because the person in black made a loud noise that startled the cat.,D,0,0,0,0,4000
+273,2,Why does the person start searching through his wardrobe?,Causal Reasoning,B) Because he is checking if he has lost anything.,B,B,1,B) Because he is checking if he has lost anything.,B,1,0,0,0,4000
+273,3,Why does the man offer his underwear to the woman as a replacement bag?,Causal Reasoning,B) Because the man is trying to make the woman laugh with a joke.,B,C,0,B) Because the man is trying to make the woman laugh with a joke.,B,0,0,0,0,4000
+273,4,Why does the character hide behind structures on the roof?,Causal Reasoning,D) Because he saw the roof starting to collapse and needed to find safety.,D,C,0,D) Because he saw the roof starting to collapse and needed to find safety.,D,0,0,0,0,4000
+161,0,Why did the old lady fall?,Causal Reasoning,A) Because she stepped on a toy racing car on the ground.,A,A,1,A) Because she stepped on a toy racing car on the ground.,A,1,0,0,0,4000
+161,1,Why is the old lady lying in the hospital bed now?,Causal Reasoning,B) Because she had a sudden illness and needed immediate medical attention.,B,A,0,B) Because she had a sudden illness and needed immediate medical attention.,B,0,0,0,0,4000
+161,2,Why is the floor of this room completely covered with water now?,Causal Reasoning,C) Because someone accidentally spilled a large container of water.,C,B,0,C) Because someone accidentally spilled a large container of water.,C,0,0,0,0,4000
+161,3,Why does Mr. Bean hit the table with a mop?,Causal Reasoning,D) Because he is frustrated and taking out his anger on the table.,D,A,0,D) Because he is frustrated and taking out his anger on the table.,D,0,0,0,0,4000
+161,4,Why did the character saw a piece of wood?,Causal Reasoning,D) Because the character wanted to repair a broken chair.,D,B,0,D) Because the character wanted to repair a broken chair.,D,0,0,0,0,4000
+67,0,Why is Mr. Bean constantly posing right now?,Causal Reasoning,D) Because he is imitating the characters on the television.,D,D,1,D) Because he is imitating the characters on the television.,D,1,0,0,0,4000
+67,1,Why does the bed get pulled out through the window?,Causal Reasoning,A) Because the man ties the rope to the bed.,A,A,1,A) Because the man ties the rope to the bed.,A,1,0,0,0,4000
+67,2,Why does the Mr. Bean peer through the door's mail slot or window?,Causal Reasoning,D) Because he is waiting for an important package to be delivered.,D,C,0,D) Because he is waiting for an important package to be delivered.,D,0,0,0,0,4000
+67,3,Why does Mr.Bean drop their coat and bag?,Causal Reasoning,A) Because he realized he grabbed the wrong coat and bag.,A,C,0,A) Because he realized he grabbed the wrong coat and bag.,A,0,0,0,0,4000
+67,4,Why does the police officer react and possibly make a call for backup or additional assistance?,Causal Reasoning,C) Because the police officer believes the photographs show a potential crime.,C,C,1,C) Because the police officer believes the photographs show a potential crime.,C,1,0,0,0,4000
+80,0,Why are they two people shaking hands now?,Causal Reasoning,D) Because they are congratulating each other on a job well done.,D,B,0,D) Because they are congratulating each other on a job well done.,D,0,0,0,0,4000
+80,1,Why is Mr. Bean very angry now?,Causal Reasoning,A) Because another person ate all the food in the refrigerator.,A,A,1,A) Because another person ate all the food in the refrigerator.,A,1,0,0,0,4000
+80,2,Why does the person in the smaller bed become annoyed and awake?,Causal Reasoning,D) Because a noise from outside wakes them up.,D,B,0,D) Because a noise from outside wakes them up.,D,0,0,0,0,4000
+80,3,Why is Mr. Bean very angry now?,Causal Reasoning,B) Because another person also ate the ice cream that belonged to Mr. Bean,B,B,1,B) Because another person also ate the ice cream that belonged to Mr. Bean,B,1,0,0,0,4000
+80,4,Why does Mr. Bean want to escape?,Causal Reasoning,C) Because he saw someone he is trying to avoid.,C,B,0,C) Because he saw someone he is trying to avoid.,C,0,0,0,0,4000
+146,0,Why did Mr. Bean turn off the TV?,Causal Reasoning,C) Because he was afraid that the news about the theft of teddy bears,C,C,1,C) Because he was afraid that the news about the theft of teddy bears,C,1,0,0,0,4000
+146,1,Why Mr. Bean is shocked now.,Causal Reasoning,A) Because he found that his little bear doll was missing.,A,A,1,A) Because he found that his little bear doll was missing.,A,1,0,0,0,4000
+146,2,Why is Mr. Bean unhappy now?,Causal Reasoning,B) Because he found that his teddy bear doll had changed its appearance.,B,B,1,B) Because he found that his teddy bear doll had changed its appearance.,B,1,0,0,0,4000
+146,3,Why does Mr. Bean decide to put up missing posters for his teddy bear?,Causal Reasoning,D) Because he believed his teddy bear had run away and needed help finding,D,C,0,D) Because he believed his teddy bear had run away and needed help finding,D,0,0,0,0,4000
+146,4,Why does the purple bunny character decide to chase Mr. Bean?,Causal Reasoning,D) Because Mr. Bean broke the bunny's favorite toy.,D,A,0,D) Because Mr. Bean broke the bunny's favorite toy.,D,0,0,0,0,4000
+23,0,Where does this letter on the ground come from?,Causal Reasoning,A) It was delivered by the postman earlier.,A,D,0,A) It was delivered by the postman earlier.,A,0,0,0,0,4000
+23,1,Why does Mr. Bean's sitting figure react with confusion or surprise?,Causal Reasoning,A) Because Mr. Bean interacts with the TV remote.,A,A,1,A) Because Mr. Bean interacts with the TV remote.,A,1,0,0,0,4000
+23,2,Why does the wall have green patterns painted on it?,Causal Reasoning,"D) Because the wall was originally green, and someone tried to cover it up",D,C,0,"D) Because the wall was originally green, and someone tried to cover it up",D,0,0,0,0,4000
+23,3,Why does the person with multiple cameras leave the room?,Causal Reasoning,D) Because the person with cameras spotted something interesting in the other room.,D,C,0,D) Because the person with cameras spotted something interesting in the other room.,D,0,0,0,0,4000
+23,4,Why is the queenly figure angry right now?,Causal Reasoning,C) Because the Mr.Bean pushing the broom past her face.,C,C,1,C) Because the Mr.Bean pushing the broom past her face.,C,1,0,0,0,4000
+248,0,Why Mr. Bean was previously flipping through boxes?,Causal Reasoning,B) Because he is looking for his green little hat.,B,B,1,B) Because he is looking for his green little hat.,B,1,0,0,0,4000
+248,1,Why did the character create a large number of sandwiches?,Causal Reasoning,C) Because the character intends to go camping.,C,C,1,C) Because the character intends to go camping.,C,1,0,0,0,4000
+248,2,Why does the other character pick up the green cap left on the chair?,Causal Reasoning,B) Because Mr. Bean accidentally left this green hat on the chair just now,B,B,1,B) Because Mr. Bean accidentally left this green hat on the chair just now,B,1,0,0,0,4000
+248,3,Why would Mr. Bean buy the things being towed behind his car?,Causal Reasoning,D) Because he needed them for a project he was working on.,D,B,0,D) Because he needed them for a project he was working on.,D,0,0,0,0,4000
+248,4,Why did Mr. Bean just feed this dog with a sandwich?,Causal Reasoning,D) Because Mr. Bean wants to trick this dog into the house.,D,D,1,D) Because Mr. Bean wants to trick this dog into the house.,D,1,0,0,0,4000
+129,0,Why is the teddy bear seen flying in the toy plane in the sky?,Causal Reasoning,C) Because Mr. Bean uses a remote control to operate the toy plane.,C,C,1,C) Because Mr. Bean uses a remote control to operate the toy plane.,C,1,0,0,0,4000
+129,1,Why does Mr.Bean climb the tree?,Causal Reasoning,A) Because Mr Bean wants to retrieve the toy stuck in the tree.,A,A,1,A) Because Mr Bean wants to retrieve the toy stuck in the tree.,A,1,0,0,0,4000
+129,2,Why are the books stacked on the floor?,Causal Reasoning,D) Because they were recently used and not yet put away.,D,B,0,D) Because they were recently used and not yet put away.,D,0,0,0,0,4000
+129,3,Why does the bird fly out of the window with an item?,Causal Reasoning,"D) Because this item is very precious, the bird wants to steal it away",D,D,1,"D) Because this item is very precious, the bird wants to steal it away",D,1,0,0,0,4000
+129,4,Where did Mr. Bean get all this gold from?,Causal Reasoning,C) The bird kept by Mr. Bean stole from the old lady's house,C,C,1,C) The bird kept by Mr. Bean stole from the old lady's house,C,1,0,0,0,4000
+326,0,Why are the two fries in the plate in front of the teddy bear gone?,Causal Reasoning,A) Because Mr. Bean ate it.,A,A,1,A) Because Mr. Bean ate it.,A,1,0,0,0,4000
+326,1,Why Mr. Bean was just flipping the sofa.,Causal Reasoning,D) Because Mr. Bean thought something valuable was hidden inside.,D,C,0,D) Because Mr. Bean thought something valuable was hidden inside.,D,0,0,0,0,4000
+326,2,Why Mr. Bean is watching a sofa advertisement.,Causal Reasoning,"C) Because Mr. Bean's sofa is broken, he wants to buy a",C,C,1,"C) Because Mr. Bean's sofa is broken, he wants to buy a",C,1,0,0,0,4000
+326,3,Why does the character take the teddy bear from the girl and give her money in exchange?,Causal Reasoning,D) Because the girl insisted on having the money instead of the teddy bear,D,C,0,D) Because the girl insisted on having the money instead of the teddy bear,D,0,0,0,0,4000
+326,4,Why did Mr. Bean drive back to the sofa shop again?,Causal Reasoning,B) Because he realized he forgot to measure the space for the new sofa.,B,A,0,B) Because he realized he forgot to measure the space for the new sofa.,B,0,0,0,0,4000
+292,0,Why is the character startled?,Causal Reasoning,C) Because a person enters the scene unexpectedly.,C,C,1,C) Because a person enters the scene unexpectedly.,C,1,0,0,0,4000
+292,1,Why is Mr. Bean holding two iron pots in his hands?,Causal Reasoning,C) Because Mr. Bean wanted to wake up the old lady who was sleep,C,C,1,C) Because Mr. Bean wanted to wake up the old lady who was sleep,C,1,0,0,0,4000
+292,2,Why does the person enter the building to inquire about rooms for rent?,Causal Reasoning,B) Because he needs a temporary place to stay while his house is being renovated,B,D,0,B) Because he needs a temporary place to stay while his house is being renovated,B,0,0,0,0,4000
+292,3,Why do landlords now take the money and run away?,Causal Reasoning,D) Because they were threatened by someone and had to leave quickly.,D,B,0,D) Because they were threatened by someone and had to leave quickly.,D,0,0,0,0,4000
+292,4,Who is the person in the video now?,Causal Reasoning,D) It's Mr. Bean in disguise.,D,D,1,D) It's Mr. Bean in disguise.,D,1,0,0,0,4000
+33,0,Why did the elderly woman step off the bus with a tray of tea?,Causal Reasoning,C) To deliver food to the elderly lady in a pink dress who has a,C,C,1,C) To deliver food to the elderly lady in a pink dress who has a,C,1,0,0,0,4000
+33,1,Why is Mr. Bean in the hospital ward?,Causal Reasoning,C) Because he mistakenly walked into the wrong building.,C,B,0,C) Because he mistakenly walked into the wrong building.,C,0,0,0,0,4000
+33,2,Why does the character try to manipulate the thermometer reading?,Causal Reasoning,D) To test the accuracy of the thermometer.,D,A,0,D) To test the accuracy of the thermometer.,D,0,0,0,0,4000
+33,3,Why is the patient prepped for surgery?,Causal Reasoning,"A) Because Mr. Bean tampered with the check, making himself appear very",A,A,1,"A) Because Mr. Bean tampered with the check, making himself appear very",A,1,0,0,0,4000
+33,4,Why do the babies start crying?,Causal Reasoning,C) Because the person in the wheelchair enters the room.,C,C,1,C) Because the person in the wheelchair enters the room.,C,1,0,0,0,4000
+360,0,Why does the character cuddle the teddy bear and smile in bed?,Causal Reasoning,C) Because the character feels comforted by the teddy bear.,C,C,1,C) Because the character feels comforted by the teddy bear.,C,1,0,0,0,4000
+360,1,Why does Mr. Bean become disturbed?,Causal Reasoning,B) Because the worker is using a jackhammer.,B,B,1,B) Because the worker is using a jackhammer.,B,1,0,0,0,4000
+360,2,Why does the person adjust a lever and press a red button on the machine?,Causal Reasoning,D) Because the person is testing the lever's mechanism.,D,A,0,D) Because the person is testing the lever's mechanism.,D,0,0,0,0,4000
+360,3,Why is there an abundance of egg cartons and eggs causing clutter in the house?,Causal Reasoning,A) Because the man in the red hat operates heavy machinery.,A,A,1,A) Because the man in the red hat operates heavy machinery.,A,1,0,0,0,4000
+360,4,Why do the workers outside notice an issue with the pipeline?,Causal Reasoning,C) Because overheating cooking supplies produced smoke.,C,C,1,C) Because overheating cooking supplies produced smoke.,C,1,0,0,0,4000
+141,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,D) Because the character disturbed her.,D,D,1,D) Because the character disturbed her.,D,1,0,0,0,4000
+141,1,Why does the man in the dirty car wave a money?,Causal Reasoning,D) Because he was asking Mr. Bean for change.,D,A,0,D) Because he was asking Mr. Bean for change.,D,0,0,0,0,4000
+141,2,Why does the person start pedaling the bicycle?,Causal Reasoning,C) Because riding a bicycle can start the car wash machine.,C,C,1,C) Because riding a bicycle can start the car wash machine.,C,1,0,0,0,4000
+141,3,Why do the woman and the driver sit down to have tea together?,Causal Reasoning,C) Because the car broke down and they had nothing else to do.,C,D,0,C) Because the car broke down and they had nothing else to do.,C,0,0,0,0,4000
+141,4,Why is Mr. Bean looking for something now?,Causal Reasoning,A) Because he wanted to find something to clean the bird droppings that,A,A,1,A) Because he wanted to find something to clean the bird droppings that,A,1,0,0,0,4000
+306,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,4000
+306,1,Why does the taxi drive off?,Causal Reasoning,C) Because the person gets inside the taxi.,C,C,1,C) Because the person gets inside the taxi.,C,1,0,0,0,4000
+306,2,Why Mr. Bean can receive money now?,Causal Reasoning,A) Because he impersonated a taxi driver and took the lady to her destination,A,A,1,A) Because he impersonated a taxi driver and took the lady to her destination,A,1,0,0,0,4000
+306,3,Why Mr. Bean can receive money now?,Causal Reasoning,A) Because he impersonated a taxi driver and took the man to his destination,A,A,1,A) Because he impersonated a taxi driver and took the man to his destination,A,1,0,0,0,4000
+306,4,Why Mr. Bean now only pays 0.85 pounds?,Causal Reasoning,D) Because he found some extra change in his pocket to cover the cost.,D,A,0,D) Because he found some extra change in his pocket to cover the cost.,D,0,0,0,0,4000
+216,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,4000
+216,1,Why is Mr. Bean under the bed now?,Causal Reasoning,A) Because he wanted to snatch back the teddy bear doll that was taken,A,A,1,A) Because he wanted to snatch back the teddy bear doll that was taken,A,1,0,0,0,4000
+216,2,Why did the character exit the building and approach a green car?,Causal Reasoning,C) Because he wants to drive to the pet hospital to treat his teddy,C,C,1,C) Because he wants to drive to the pet hospital to treat his teddy,C,1,0,0,0,4000
+216,3,Why Mr. Bean would be very panicked now.,Causal Reasoning,C) Because he found that his teddy bear doll was not in the box,C,C,1,C) Because he found that his teddy bear doll was not in the box,C,1,0,0,0,4000
+216,4,Why did the character react with noticeable concern after stopping the car?,Causal Reasoning,C) Because he thought the one that was flattened was the old lady's cat,C,C,1,C) Because he thought the one that was flattened was the old lady's cat,C,1,0,0,0,4000
+495,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,4000
+495,1,Why is the teddy bear covered in flour?,Causal Reasoning,C) Because Mr. Bean was baking and accidentally spilled flour on it.,C,B,0,C) Because Mr. Bean was baking and accidentally spilled flour on it.,C,0,0,0,0,4000
+495,2,Why does the character have a complete list of ingredients for the grocery list?,Causal Reasoning,C) Because the character is talking on the phone and writing down ingredients for a,C,C,1,C) Because the character is talking on the phone and writing down ingredients for a,C,1,0,0,0,4000
+495,3,How did Mr. Bean earn all the money on his desk?,Causal Reasoning,A) Earnings from selling pizza.,A,A,1,A) Earnings from selling pizza.,A,1,0,0,0,4000
+495,4,Why do the two guards fight each other?,Causal Reasoning,"A) Because Mr. Bean dodged their attack downward, it caused them to",A,A,1,"A) Because Mr. Bean dodged their attack downward, it caused them to",A,1,0,0,0,4000
+231,0,What action is the hand performing on the train?,Action Recognition,B) Assembling the train.,B,D,0,B) Assembling the train.,B,0,0,0,0,6000
+231,1,What color Lego brick is placed first on the surface?,Event Understanding,D) Yellow.,D,D,1,D) Yellow.,D,1,0,0,0,6000
+231,2,How many colors of bricks have been used so far?,Counting,A) Two.,A,C,0,A) Two.,A,0,0,0,0,6000
+231,3,What was the sequence of actions performed by the hand just now?,Event Understanding,"B) Adding green bricks for the roof, extending the yellow base, expanding the",B,B,1,"B) Adding green bricks for the roof, extending the yellow base, expanding the",B,1,0,0,0,6000
+231,4,What type of pieces did the hand attach to the top surface of the structure just now?,Object Recognition,D) Circular pieces resembling wheels.,D,D,1,D) Circular pieces resembling wheels.,D,1,0,0,0,6000
+459,0,What colors are the wheels of the race car?,Attribute Recognition,A) Green and blue.,A,C,0,A) Green and blue.,A,0,0,0,0,6000
+459,1,What feature is present on the front of the toy?,Attribute Recognition,B) A happy face.,B,B,1,B) A happy face.,B,1,0,0,0,6000
+459,2,How are the yellow building blocks arranged before the blue block is placed on top?,Spatial Understanding,B) In a straight line.,B,B,1,B) In a straight line.,B,1,0,0,0,6000
+459,3,What is the new item introduced in the video?,Object Recognition,B) A small structure made of yellow and red blocks with wheels.,B,B,1,B) A small structure made of yellow and red blocks with wheels.,B,1,0,0,0,6000
+459,4,What happened to the toy vehicle just now?,Event Understanding,D) The toy vehicle is lifted off the surface.,D,C,0,A) The toy vehicle is disassembled.,A,0,1,0,0,6000
+355,0,How many studs does each yellow interlocking block placed by the hand have?,Counting,A) Eight.,A,A,1,A) Eight.,A,1,0,0,0,6000
+355,1,How many interlocking blocks are positioned in a straight line by the hand?,Counting,D) Four.,D,D,1,D) Four.,D,1,0,0,0,6000
+355,2,What is the color of the block that the hand is reaching for right now?,Attribute Recognition,A) Yellow.,A,C,0,A) Yellow.,A,0,0,0,0,6000
+355,3,What color is the brick first added after the initial blue bricks form a two-layered structure?,Event Understanding,A) Green.,A,A,1,A) Green.,A,1,0,0,0,6000
+355,4,What is the sequence of bricks added to the structure after the blue bricks?,Event Understanding,"B) Yellow, green, orange.",B,A,0,"B) Yellow, green, orange.",B,0,0,0,0,6000
+335,0,What color is the plastic block added on top of the green blocks?,Attribute Recognition,A) Red.,A,C,0,A) Red.,A,0,0,0,0,6000
+335,1,What are the primary colors of the plastic building blocks shown right now?,Attribute Recognition,"B) Red, green, and yellow.",B,B,1,"B) Red, green, and yellow.",B,1,0,0,0,6000
+335,2,Which block was picked up and attached to the top of red block first just now?,Event Understanding,B) A green block.,B,C,0,B) A green block.,B,0,0,0,0,6000
+335,3,What was the white text on the purple animated overlay read just now?,Text-Rich Understanding,"A) ""Alphabet A transform to Box"".",A,B,0,"A) ""Alphabet A transform to Box"".",A,0,0,0,0,6000
+335,4,What happens to the blocks after they are disassembled and mixed?,Event Understanding,B) The blocks are scattered and then gathered into a pile.,B,B,1,B) The blocks are scattered and then gathered into a pile.,B,1,0,0,0,6000
+465,0,What colors are the wheels of the toy car?,Attribute Recognition,C) Red and Yellow.,C,C,1,C) Red and Yellow.,C,1,0,0,0,6000
+465,1,What action did the hand perform after placing the green block next to the blue block?,Action Recognition,B) Adjusted the green block.,B,C,0,B) Adjusted the green block.,B,0,0,0,0,6000
+465,2,How many hands are involved in arranging the blocks right now?,Counting,B) Two hands.,B,B,1,B) Two hands.,B,1,0,0,0,6000
+465,3,What does the hand do after picking up the yellow building block?,Action Recognition,B) Places it on the left side.,B,B,1,B) Places it on the left side.,B,1,0,0,0,6000
+465,4,What does the hand do after positioning the three green blocks securely?,Action Recognition,B) Picks up an orange block.,B,B,1,B) Picks up an orange block.,B,1,0,0,0,6000
+173,0,What colors are the blocks used to form the helicopter rotor blades?,Attribute Recognition,B) Yellow and Blue.,B,A,0,B) Yellow and Blue.,B,0,0,0,0,6000
+173,1,What is the sequence of actions performed with the blocks just now?,Event Understanding,"C) Placing a yellow block, then a blue block, and finally two",C,A,0,"C) Placing a yellow block, then a blue block, and finally two",C,0,0,0,0,6000
+173,2,What is the hand doing after placing three yellow blocks onto the top of the structure?,Action Recognition,D) Adjusts the yellow block.,D,D,1,D) Adjusts the yellow block.,D,1,0,0,0,6000
+173,3,What was the sequence of events the hand followed when building the structure just now?,Event Understanding,"C) Picks up a red block, adjusts it, then picks up a yellow",C,B,0,"C) Picks up a red block, adjusts it, then picks up a yellow",C,0,0,0,0,6000
+173,4,What action is the person performing with the blue blocks?,Action Recognition,B) Adds blue blocks to the side of the structure.,B,D,0,B) Adds blue blocks to the side of the structure.,B,0,0,0,0,6000
+170,0,What is positioned underneath the archway made of colorful interlocking blocks?,Object Recognition,D) A toy car.,D,D,1,D) A toy car.,D,1,0,0,0,6000
+170,1,How many yellow blocks are connected in a line?,Event Understanding,B) Three.,B,C,0,B) Three.,B,0,0,0,0,6000
+170,2,Where is the green brick placed relative to the yellow bricks in the structure?,Spatial Understanding,D) On top of the yellow bricks.,D,D,1,D) On top of the yellow bricks.,D,1,0,0,0,6000
+170,3,What does the person do after adding more yellow bricks?,Action Recognition,C) Adjusts the yellow bricks.,C,C,1,C) Adjusts the yellow bricks.,C,1,0,0,0,6000
+170,4,What is the person likely to do next after moving their hand towards the new set of connected bricks?,Causal Reasoning,B) Add more bricks to the arrangement.,B,B,1,B) Add more bricks to the arrangement.,B,1,0,0,0,6000
+448,0,What are the colors of the crane arm?,Attribute Recognition,"D) Yellow, blue, green.",D,A,0,"D) Yellow, blue, green.",D,0,0,0,0,6000
+448,1,What happens to the orange block as the video progresses?,Event Understanding,C) It lifts and swings gently.,C,C,1,C) It lifts and swings gently.,C,1,0,0,0,6000
+448,2,What was the sequence of actions performed with the blocks just now?,Event Understanding,"D) The hand places a yellow block, moves it, then places a green",D,D,1,"D) The hand places a yellow block, moves it, then places a green",D,1,0,0,0,6000
+448,3,What happens to the smaller structure after it is first moved out of view?,Event Understanding,A) It is disassembled.,A,D,0,A) It is disassembled.,A,0,0,0,0,6000
+448,4,How many green blocks are stacked now?,Counting,C) Nine.,C,C,1,C) Nine.,C,1,0,0,0,6000
+118,0,What happens after the first green block is placed on the yellow block?,Event Understanding,D) The hand adds another green block.,D,D,1,D) The hand adds another green block.,D,1,0,0,0,6000
+118,1,What action do the hands perform just before moving away from the structure?,Action Recognition,D) Pressing down the green blocks.,D,D,1,D) Pressing down the green blocks.,D,1,0,0,0,6000
+118,2,What sequence of actions occured with the green and yellow blocks just now?,Event Understanding,"B) The yellow block is placed first, followed by the green block.",B,A,0,"B) The yellow block is placed first, followed by the green block.",B,0,0,0,0,6000
+118,3,Where is the new yellow and green block placed relative to the original structure?,Spatial Understanding,B) Next to the original structure.,B,D,0,B) Next to the original structure.,B,0,0,0,0,6000
+118,4,What did the person do with the yellow block just now?,Action Recognition,B) Arranged them on the blue block and adjusted for alignment.,B,D,0,B) Arranged them on the blue block and adjusted for alignment.,B,0,0,0,0,6000
+289,0,What was written in the top right corner at the start of the video?,Text-Rich Understanding,B) Auto Rickshaw.,B,B,1,B) Auto Rickshaw.,B,1,0,0,0,6000
+289,1,What sequence of actions happened after the blue rectangular block is placed on the surface?,Event Understanding,"A) The hand adds a yellow block, then an orange block, and adjusts",A,A,1,"A) The hand adds a yellow block, then an orange block, and adjusts",A,1,0,0,0,6000
+289,2,What is the predominant color of the blocks being placed by the hand right now?,Attribute Recognition,A) Blue.,A,D,0,A) Blue.,A,0,0,0,0,6000
+289,3,What color is the block being placed on the left side of the structure right now?,Object Recognition,D) Yellow.,D,B,0,D) Yellow.,D,0,0,0,0,6000
+289,4,What is the block structure identified as?,Object Recognition,B) A vehicle.,B,B,1,B) A vehicle.,B,1,0,0,0,6000
+183,0,What might the speaker discuss next?,Prospective Reasoning,A) Graphing on the Coordinate Plane.,A,A,1,A) Graphing on the Coordinate Plane.,A,1,0,0,0,6000
+183,1,What might the speaker explain next?,Prospective Reasoning,C) How to identify coordinates.,C,B,0,C) How to identify coordinates.,C,0,0,0,0,6000
+183,2,What might the speaker discuss next?,Prospective Reasoning,C) The significance of the y-axis.,C,D,0,D) What ordered pairs represent.,D,1,1,1,1,6000
+183,3,What might the speaker discuss next?,Prospective Reasoning,C) The importance of the y-intercept.,C,A,0,C) The importance of the y-intercept.,C,0,0,0,0,6000
+183,4,What might the speaker discuss next?,Prospective Reasoning,B) The significance of the axes,B,C,0,B) The significance of the axes intersections.,B,0,0,0,0,6000
+125,0,What might the speaker explain next?,Prospective Reasoning,A) How to add mixed numbers.,A,A,1,A) How to add mixed numbers.,A,1,0,0,0,6000
+125,1,What might the speaker explain next?,Prospective Reasoning,B) The process of converting mixed numbers to improper fractions.,B,A,0,B) The process of converting mixed numbers to improper fractions.,B,0,0,0,0,6000
+125,2,What might the speaker do next?,Prospective Reasoning,A) How to add those two mixed numbers.,A,A,1,A) How to add those two mixed numbers.,A,1,0,0,0,6000
+125,3,What might the speaker explain next?,Prospective Reasoning,D) How to add those two fractions numbers.,D,D,1,D) How to add those two fractions numbers.,D,1,0,0,0,6000
+125,4,What might the speaker explain next?,Prospective Reasoning,A) Adding the fractions together.,A,A,1,A) Adding the fractions together.,A,1,0,0,0,6000
+447,0,What topics might the speaker explain next?,Prospective Reasoning,A) Simplifying fractions.,A,B,0,A) Simplifying fractions.,A,0,0,0,0,6000
+447,1,What might the speaker explain next?,Prospective Reasoning,C) How to divide fractions.,C,B,0,C) How to divide fractions.,C,0,0,0,0,6000
+447,2,What might the speaker suggest next?,Prospective Reasoning,C) How to simplify fractions.,C,D,0,C) How to simplify fractions.,C,0,0,0,0,6000
+447,3,What might the speaker explain next?,Prospective Reasoning,D) How to simplify the resulting fraction.,D,C,0,D) How to simplify the resulting fraction.,D,0,0,0,0,6000
+447,4,What might the speaker discuss next?,Prospective Reasoning,C) Methods to simplify fractions.,C,D,0,C) Methods to simplify fractions.,C,0,0,0,0,6000
+91,0,What might the speaker discuss next?,Prospective Reasoning,C) The concept of Area.,C,C,1,C) The concept of Area.,C,1,0,0,0,6000
+91,1,What formula might the speaker likely introduce next?,Prospective Reasoning,D) Area of a triangle.,D,D,1,D) Area of a triangle.,D,1,0,0,0,6000
+91,2,What might the speaker explain next?,Prospective Reasoning,D) How to calculate the area of another shapes.,D,D,1,D) How to calculate the area of another shapes.,D,1,0,0,0,6000
+91,3,What might the speaker explain next?,Prospective Reasoning,B) The formula for area.,B,D,0,B) The formula for area.,B,0,0,0,0,6000
+91,4,What might the speaker discuss next?,Prospective Reasoning,D) Calculating the area of a different triangle.,D,D,1,D) Calculating the area of a different triangle.,D,1,0,0,0,6000
+171,0,What might the speaker discuss next?,Prospective Reasoning,B) The definition of basic probability.,B,B,1,B) The definition of basic probability.,B,1,0,0,0,6000
+171,1,What might the speaker discuss next?,Prospective Reasoning,C) Explanation of rolling a six-sided die.,C,C,1,C) Explanation of rolling a six-sided die.,C,1,0,0,0,6000
+171,2,What concept might the speaker explain next?,Prospective Reasoning,D) The probability of rolling a specific number with a die.,D,D,1,D) The probability of rolling a specific number with a die.,D,1,0,0,0,6000
+171,3,What might the speaker discuss next?,Prospective Reasoning,B) The probability of this disc rotating to the blue area.,B,B,1,B) The probability of this disc rotating to the blue area.,B,1,0,0,0,6000
+171,4,What might the speaker explain next?,Prospective Reasoning,D) Applying the formula to find expected value.,D,B,0,D) Applying the formula to find expected value.,D,0,0,0,0,6000
+93,0,What concept might the speaker explain next?,Prospective Reasoning,C) Differences between continuous and discrete data.,C,C,1,C) Differences between continuous and discrete data.,C,1,0,0,0,6000
+93,1,What might the speaker explain next?,Prospective Reasoning,C) How to interpret the data in the data table.,C,B,0,C) How to interpret the data in the data table.,C,0,0,0,0,6000
+93,2,What might the speaker explain next?,Prospective Reasoning,B) The meaning of the scale on the graph.,B,B,1,D) The method used to calculate the average precipitation.,D,0,1,1,-1,6000
+93,3,What might the speaker explain next?,Prospective Reasoning,B) How the fluctuation in investment income impacts yearly analysis.,B,D,0,B) How the fluctuation in investment income impacts yearly analysis.,B,0,0,0,0,6000
+93,4,What might the speaker explain next?,Prospective Reasoning,A) Interpret the trends shown in the graphs.,A,A,1,A) Interpret the trends shown in the graphs.,A,1,0,0,0,6000
+427,0,What might the speaker explain next?,Prospective Reasoning,D) Steps to calculate the mode.,D,A,0,D) Steps to calculate the mode.,D,0,0,0,0,6000
+427,1,What concept is likely to be explained next?,Prospective Reasoning,A) Median.,A,A,1,A) Median.,A,1,0,0,0,6000
+427,2,What is the next logical step after the operation to the numbers?,Prospective Reasoning,B) Find the median of the numbers.,B,B,1,B) Find the median of the numbers.,B,1,0,0,0,6000
+427,3,What might the instructor explain next?,Prospective Reasoning,B) How to interpret the result of the median calculation.,B,B,1,B) How to interpret the result of the median calculation.,B,1,0,0,0,6000
+427,4,What might the speaker explain next?,Prospective Reasoning,C) Divide the sum by the count of numbers.,C,C,1,C) Divide the sum by the count of numbers.,C,1,0,0,0,6000
+492,0,What topic might the teacher explain next?,Prospective Reasoning,A) mixed numbers and improper fractions.,A,A,1,A) mixed numbers and improper fractions.,A,1,0,0,0,6000
+492,1,What might the teacher explain next?,Prospective Reasoning,B) Explain how improper fractions is connected to proper fractions and whole fractions.,B,B,1,B) Explain how improper fractions is connected to proper fractions and whole fractions.,B,1,0,0,0,6000
+492,2,What might the speaker explain next?,Prospective Reasoning,B) The method for adding mixed numbers and improper fractions.,B,A,0,B) The method for adding mixed numbers and improper fractions.,B,0,0,0,0,6000
+492,3,What concept will the speaker likely explain next?,Prospective Reasoning,B) Converting improper fractions to mixed numbers.,B,B,1,B) Converting improper fractions to mixed numbers.,B,1,0,0,0,6000
+492,4,What might the speaker explain next?,Prospective Reasoning,D) How to use dividing to convert improper fractions to a mixed number form.,D,D,1,D) How to use dividing to convert improper fractions to a mixed number form.,D,1,0,0,0,6000
+456,0,What mathematical topic might the speaker focus on next?,Prospective Reasoning,D) Multiplying Fractions.,D,D,1,D) Multiplying Fractions.,D,1,0,0,0,6000
+456,1,What might the speaker do next?,Prospective Reasoning,C) Show the steps to multiply the fractions.,C,C,1,C) Show the steps to multiply the fractions.,C,1,0,0,0,6000
+456,2,What might the speaker do next?,Prospective Reasoning,C) Show the steps to multiply the fractions.,C,C,1,C) Show the steps to multiply the fractions.,C,1,0,0,0,6000
+456,3,What mathematical concept might the speaker move on to explain next?,Prospective Reasoning,C) Simplifying fractions.,C,D,0,C) Simplifying fractions.,C,0,0,0,0,6000
+456,4,What might the speaker discuss next?,Prospective Reasoning,B) How to divide fractions.,B,C,0,B) How to divide fractions.,B,0,0,0,0,6000
+302,0,What might the speaker discuss next?,Prospective Reasoning,D) The order of operations rules.,D,D,1,D) The order of operations rules.,D,1,0,0,0,6000
+302,1,What might be the next topic the speaker will address?,Prospective Reasoning,D) Practice problems involving exponents.,D,B,0,D) Practice problems involving exponents.,D,0,0,0,0,6000
+302,2,What might the speaker discuss next?,Prospective Reasoning,A) Simplify the expression.,A,C,0,A) Simplify the expression.,A,0,0,0,0,6000
+302,3,What might the speaker discuss next?,Prospective Reasoning,B) The operator symbols for 'Then' and 'last' precedence.,B,B,1,B) The operator symbols for 'Then' and 'last' precedence.,B,1,0,0,0,6000
+302,4,What might the speaker explain next?,Prospective Reasoning,D) The order of operations between the multiplication sign and the division sign.,D,D,1,D) The order of operations between the multiplication sign and the division sign.,D,1,0,0,0,6000
+3,0,What might the speaker explain next?,Prospective Reasoning,C) The concept of length in 2-dimensional shapes.,C,D,0,C) The concept of length in 2-dimensional shapes.,C,0,0,0,0,6000
+3,1,What will the speaker most likely explain next?,Prospective Reasoning,D) How to measure the perimeter accurately.,D,A,0,D) How to measure the perimeter accurately.,D,0,0,0,0,6000
+3,2,What might the speaker explain next?,Prospective Reasoning,B) How to find the perimeter of a rectangle.,B,B,1,B) How to find the perimeter of a rectangle.,B,1,0,0,0,6000
+3,3,What might the speaker discuss next?,Prospective Reasoning,C) The properties of regular polygons.,C,A,0,C) The properties of regular polygons.,C,0,0,0,0,6000
+3,4,What might the speaker ask the students to do next?,Prospective Reasoning,A) Calculate the area of the shape.,A,B,0,A) Calculate the area of the shape.,A,0,0,0,0,6000
+494,0,What might the speaker explain next?,Prospective Reasoning,C) How to simplify fractions.,C,C,1,C) How to simplify fractions.,C,1,0,0,0,6000
+494,1,What might the speaker explain next?,Prospective Reasoning,C) Equivalent fractions of 3/6.,C,C,1,C) Equivalent fractions of 3/6.,C,1,0,0,0,6000
+494,2,What might the speaker discuss next?,Prospective Reasoning,C) Simplifying fractions by finding common factors.,C,C,1,C) Simplifying fractions by finding common factors.,C,1,0,0,0,6000
+494,3,What might the speaker explain next?,Prospective Reasoning,C) How to factorize each number to prime factors.,C,C,1,C) How to factorize each number to prime factors.,C,1,0,0,0,6000
+494,4,What might the speaker discuss next?,Prospective Reasoning,C) Simplifying fractions using greatest common factor.,C,C,1,C) Simplifying fractions using greatest common factor.,C,1,0,0,0,6000
+402,0,What concept might the speaker explain next?,Prospective Reasoning,B) What is Pythagorean Theorem.,B,D,0,B) What is Pythagorean Theorem.,B,0,0,0,0,6000
+402,1,What might the speaker discuss next?,Prospective Reasoning,A) Applications of the Pythagorean Theorem.,A,B,0,A) Applications of the Pythagorean Theorem.,A,0,0,0,0,6000
+402,2,What might the speaker discuss next?,Prospective Reasoning,C) The concept of area and its proof in the Pythagorean theorem.,C,C,1,C) The concept of area and its proof in the Pythagorean theorem.,C,1,0,0,0,6000
+402,3,What might the speaker discuss next?,Prospective Reasoning,A) Explain how to use the Pythagorean theorem to find the right-angle,A,A,1,A) Explain how to use the Pythagorean theorem to find the right-angle,A,1,0,0,0,6000
+402,4,What might the speaker discuss next?,Prospective Reasoning,D) The method to verify if it is a right triangle.,D,D,1,D) The method to verify if it is a right triangle.,D,1,0,0,0,6000
+367,0,What might the speaker explain next?,Prospective Reasoning,B) The concept of triangle.,B,B,1,B) The concept of triangle.,B,1,0,0,0,6000
+367,1,What might the speaker explain next?,Prospective Reasoning,D) The relationship between different types of triangles.,D,B,0,D) The relationship between different types of triangles.,D,0,0,0,0,6000
+367,2,What might the speaker explain next?,Prospective Reasoning,D) The equal sides' number of Isosceles triangles.,D,D,1,D) The equal sides' number of Isosceles triangles.,D,1,0,0,0,6000
+367,3,What might the speaker discuss next?,Prospective Reasoning,B) Types of angles of equilateral triangles.,B,B,1,B) Types of angles of equilateral triangles.,B,1,0,0,0,6000
+367,4,What might the speaker do next?,Prospective Reasoning,A) Discuss the properties of isosceles triangles.,A,D,0,A) Discuss the properties of isosceles triangles.,A,0,0,0,0,6000
+376,0,What might the speaker explain next?,Prospective Reasoning,A) How the distributive property helps in simplifying equations.,A,C,0,A) How the distributive property helps in simplifying equations.,A,0,0,0,0,6000
+376,1,What might the speaker discuss next?,Prospective Reasoning,D) How to use distributive property to the example.,D,D,1,D) How to use distributive property to the example.,D,1,0,0,0,6000
+376,2,What might the speaker discuss next?,Prospective Reasoning,B) Why the two way get the same answer.,B,B,1,B) Why the two way get the same answer.,B,1,0,0,0,6000
+376,3,What might the speaker calculate next?,Prospective Reasoning,C) 5 times 5.,C,A,0,C) 5 times 5.,C,0,0,0,0,6000
+376,4,What might the speaker discuss next?,Prospective Reasoning,D) The distributive property of subtraction.,D,A,0,D) The distributive property of subtraction,D,0,0,0,0,6000
+330,0,What might the speaker explain next?,Prospective Reasoning,A) The concept of the division.,A,C,0,A) The concept of the division.,A,0,0,0,0,6000
+330,1,What might the speaker explain next?,Prospective Reasoning,D) How to solve an equation.,D,A,0,D) How to solve an equation.,D,0,0,0,0,6000
+330,2,What might the speaker explain next?,Prospective Reasoning,C) The concept of partial quotients.,C,A,0,C) The concept of partial quotients.,C,0,0,0,0,6000
+330,3,What might the speaker explain next?,Prospective Reasoning,C) Use real-life example to explain the concept of remainders.,C,D,0,C) Use real-life example to explain the concept of remainders.,C,0,0,0,0,6000
+330,4,"Based on the current explanation, what might the speaker do next?",Prospective Reasoning,A) Explain the next division step using the tabular.,A,A,1,A) Explain the next division step using the tabular.,A,1,0,0,0,6000
+139,0,What might the speaker discuss next?,Prospective Reasoning,D) The rules for multiplying decimals.,D,A,0,D) The rules for multiplying decimals.,D,0,0,0,0,6000
+139,1,What is the teacher likely to explain next?,Prospective Reasoning,A) How to correctly align the decimal points when adding.,A,A,1,A) How to correctly align the decimal points when adding.,A,1,0,0,0,6000
+139,2,What might the speaker explain next?,Prospective Reasoning,C) The process of correctly placing the decimal in the product.,C,C,1,C) The process of correctly placing the decimal in the product.,C,1,0,0,0,6000
+139,3,What topic might the speaker explain next?,Prospective Reasoning,C) The principles of decimal division.,C,C,1,C) The principles of decimal division.,C,1,0,0,0,6000
+139,4,What might the speaker discuss next?,Prospective Reasoning,A) Simplifying square roots.,A,C,0,A) Simplifying square roots.,A,0,0,0,0,6000
+256,0,What is the speaker likely to explain next?,Prospective Reasoning,C) The concept of division with partial quotients.,C,C,1,C) The concept of division with partial quotients.,C,1,0,0,0,6000
+256,1,What might the speaker discuss next?,Prospective Reasoning,B) Subtracting 6 from the dividend.,B,C,0,B) Subtracting 6 from the dividend.,B,0,0,0,0,6000
+256,2,What might the speaker explain next?,Prospective Reasoning,D) How to choose a number to subtract from 2928.,D,D,1,D) How to choose a number to subtract from 2928.,D,1,0,0,0,6000
+256,3,What might the speaker explain next?,Prospective Reasoning,D) The advantage of using small steps in division.,D,D,1,D) The advantage of using small steps in division.,D,1,0,0,0,6000
+256,4,What might the teacher explain next?,Prospective Reasoning,D) Explaining the significance of the answer 49r2.,D,C,0,D) Explaining the significance of the answer 49r2.,D,0,0,0,0,6000
+222,0,What mathematical concept will likely be demonstrated next?,Prospective Reasoning,D) Division.,D,D,1,D) Division.,D,1,0,0,0,6000
+222,1,What is the presenter likely to do next?,Prospective Reasoning,C) Divide 48 by 52.,C,D,0,C) Divide 48 by 52.,C,0,0,0,0,6000
+222,2,What might the speaker discuss next?,Prospective Reasoning,C) The relevance of the remainder.,C,A,0,C) The relevance of the remainder.,C,0,0,0,0,6000
+222,3,What might the speaker do next?,Prospective Reasoning,C) Subtract 88 from 528.,C,A,0,C) Subtract 88 from 528.,C,0,0,0,0,6000
+222,4,What might the speaker explain next?,Prospective Reasoning,C) How to proceed with the next division step.,C,A,0,C) How to proceed with the next division step.,C,0,0,0,0,6000
+266,0,What might the speaker describe next?,Prospective Reasoning,A) Step-by-step process of long division.,A,A,1,A) Step-by-step process of long division.,A,1,0,0,0,6000
+266,1,What might the speaker discuss next?,Prospective Reasoning,D) How to bring down the next digit in a long division.,D,D,1,D) How to bring down the next digit in a long division.,D,1,0,0,0,6000
+266,2,What might the speaker explain next?,Prospective Reasoning,C) How to solve a similar problem with different numbers,C,C,1,C) How to solve a similar problem with different numbers.,C,1,0,0,0,6000
+266,3,What is the next step after dividing 24 by 3?,Prospective Reasoning,C) Subtract 12 from 24.,C,C,1,C) Subtract 12 from 24.,C,1,0,0,0,6000
+266,4,What might the speaker explain next?,Prospective Reasoning,C) Subtract 20 from 20.,C,C,1,C) Subtract 20 from 20.,C,1,0,0,0,6000
+334,0,Why is this rabbit dressed in red and white knocking on the door now?,Causal Reasoning,D) Because it is lost and looking for its way back home.,D,A,0,D) Because it is lost and looking for its way back home.,D,0,0,0,0,6000
+334,1,Why is this iron gate cartoon character angry now?,Causal Reasoning,D) Because he was just forcibly stuffed a fish by the red rabbit in red,D,D,1,D) Because he was just forcibly stuffed a fish by the red rabbit in red,D,1,0,0,0,6000
+334,2,"Why is this rabbit, dressed in green and white, surprised now?",Causal Reasoning,C) Because he can't distinguish the gender of the chicken he is holding now,C,C,1,C) Because he can't distinguish the gender of the chicken he is holding now,C,1,0,0,0,6000
+334,3,Why does this rabbit dressed in green and white want to hide in the toilet?,Causal Reasoning,"D) Because after he opened the door, he found a noose and a",D,D,1,"D) Because after he opened the door, he found a noose and a",D,1,0,0,0,6000
+334,4,Why did the rabbit dressed in red and white just have to use a pool cue to strike the iron gate lying on the ground?,Causal Reasoning,"B) Because the iron gate blocked his path, and he needed to move it",B,A,0,"B) Because the iron gate blocked his path, and he needed to move it",B,0,0,0,0,6000
+286,0,Why does the frog appear from the toilet?,Causal Reasoning,D) Because the chicken that was just thrown into the toilet is wearing a frog,D,D,1,D) Because the chicken that was just thrown into the toilet is wearing a frog,D,1,0,0,0,6000
+286,1,Why does the rabbit dressed in red and white start to become restless?,Causal Reasoning,D) Because he can't find the key to the door and is getting frustrated,D,A,0,D) Because he can't find the key to the door and is getting frustrated,D,0,0,0,0,6000
+286,2,Why is this cartoon chicken very shocked now?,Causal Reasoning,A) Because just now another small cartoon chicken was eaten by a frog.,A,A,1,A) Because just now another small cartoon chicken was eaten by a frog.,A,1,0,0,0,6000
+286,3,Why does the character encounter a heavy legacy robot in the room?,Causal Reasoning,C) Because the character activates a hidden switch.,C,D,0,C) Because the character activates a hidden switch.,C,0,0,0,0,6000
+286,4,Why is this red rabbit standing in front of the iron gate now?,Causal Reasoning,"B) Because the iron gate suddenly started glowing, and the rabbit is curious.",B,D,0,"B) Because the iron gate suddenly started glowing, and the rabbit is curious.",B,0,0,0,0,6000
+89,0,Why does the rabbit strike the door with its fist several times?,Causal Reasoning,B) Because the rabbit is knocking to check if someone is inside.,B,D,0,B) Because the rabbit is knocking to check if someone is inside.,B,0,0,0,0,6000
+89,1,Why would the rabbit inside the iron gate be very panicked now?,Causal Reasoning,"A) Because he just realized the gate is locked, and he can't get",A,D,0,"A) Because he just realized the gate is locked, and he can't get",A,0,0,0,0,6000
+89,2,What causes the bunny character to react with shock and sweat?,Causal Reasoning,D) Because the bunny suddenly noticed a large shadow looming over it.,D,C,0,D) Because the bunny suddenly noticed a large shadow looming over it.,D,0,0,0,0,6000
+89,3,Why do the rectangular characters arm themselves?,Causal Reasoning,B) Because the rabbit-like figure has glowing eyes and a menacing demeanor.,B,B,1,B) Because the rabbit-like figure has glowing eyes and a menacing demeanor.,B,1,0,0,0,6000
+89,4,Why does the rabbit break through the wall to escape?,Causal Reasoning,D) Because the rabbit is inspired by the advertisement for new shoes.,D,D,1,D) Because the rabbit is inspired by the advertisement for new shoes.,D,1,0,0,0,6000
+220,0,Why is Mr. Bean scolded by the older woman?,Causal Reasoning,C) Because he was shining a flashlight at the teddy bear.,C,A,0,C) Because he was shining a flashlight at the teddy bear.,C,0,0,0,0,6000
+220,1,Why does the character place the cheese on a plate?,Causal Reasoning,B) Because his refrigerator is empty except for a piece of vegetable.,B,B,1,B) Because his refrigerator is empty except for a piece of vegetable.,B,1,0,0,0,6000
+220,2,Why does the man successfully retrieve the bottle from the top shelf?,Causal Reasoning,A) Because he uses his shopping cart for support.,A,A,1,A) Because he uses his shopping cart for support.,A,1,0,0,0,6000
+220,3,Why Mr. Bean is very shocked.,Causal Reasoning,C) Because the pie suddenly exploded when the opponent touched it.,C,D,0,C) Because the pie suddenly exploded when the opponent touched it.,C,0,0,0,0,6000
+220,4,Why does the Mr. Bean look tired or exhausted?,Causal Reasoning,D) Because he had to carry heavy bags out of the supermarket.,D,B,0,D) Because he had to carry heavy bags out of the supermarket.,D,0,0,0,0,6000
+273,0,Why can thieves enter the room without being detected?,Causal Reasoning,D) Because the thieves are using a special device to stay silent.,D,B,0,D) Because the thieves are using a special device to stay silent.,D,0,0,0,0,6000
+273,1,Why does this cat glare viciously at the person in black?,Causal Reasoning,D) Because the person in black made a loud noise that startled the cat.,D,C,0,D) Because the person in black made a loud noise that startled the cat.,D,0,0,0,0,6000
+273,2,Why does the person start searching through his wardrobe?,Causal Reasoning,B) Because he is checking if he has lost anything.,B,B,1,B) Because he is checking if he has lost anything.,B,1,0,0,0,6000
+273,3,Why does the man offer his underwear to the woman as a replacement bag?,Causal Reasoning,D) Because the woman mentioned she needed something to carry her things in.,D,C,0,B) Because the man is trying to make the woman laugh with a joke.,B,0,1,0,0,6000
+273,4,Why does the character hide behind structures on the roof?,Causal Reasoning,D) Because he saw the roof starting to collapse and needed to find safety.,D,C,0,D) Because he saw the roof starting to collapse and needed to find safety.,D,0,0,0,0,6000
+161,0,Why did the old lady fall?,Causal Reasoning,A) Because she stepped on a toy racing car on the ground.,A,A,1,A) Because she stepped on a toy racing car on the ground.,A,1,0,0,0,6000
+161,1,Why is the old lady lying in the hospital bed now?,Causal Reasoning,B) Because she had a sudden illness and needed immediate medical attention.,B,A,0,B) Because she had a sudden illness and needed immediate medical attention.,B,0,0,0,0,6000
+161,2,Why is the floor of this room completely covered with water now?,Causal Reasoning,C) Because someone accidentally spilled a large container of water.,C,B,0,C) Because someone accidentally spilled a large container of water.,C,0,0,0,0,6000
+161,3,Why does Mr. Bean hit the table with a mop?,Causal Reasoning,D) Because he is frustrated and taking out his anger on the table.,D,A,0,D) Because he is frustrated and taking out his anger on the table.,D,0,0,0,0,6000
+161,4,Why did the character saw a piece of wood?,Causal Reasoning,D) Because the character wanted to repair a broken chair.,D,B,0,D) Because the character wanted to repair a broken chair.,D,0,0,0,0,6000
+67,0,Why is Mr. Bean constantly posing right now?,Causal Reasoning,D) Because he is imitating the characters on the television.,D,D,1,D) Because he is imitating the characters on the television.,D,1,0,0,0,6000
+67,1,Why does the bed get pulled out through the window?,Causal Reasoning,A) Because the man ties the rope to the bed.,A,A,1,A) Because the man ties the rope to the bed.,A,1,0,0,0,6000
+67,2,Why does the Mr. Bean peer through the door's mail slot or window?,Causal Reasoning,D) Because he is waiting for an important package to be delivered.,D,C,0,D) Because he is waiting for an important package to be delivered.,D,0,0,0,0,6000
+67,3,Why does Mr.Bean drop their coat and bag?,Causal Reasoning,D) Because he spotted someone he knows and wanted to quickly greet them.,D,C,0,D) Because he spotted someone he knows and wanted to quickly greet them.,D,0,0,0,0,6000
+67,4,Why does the police officer react and possibly make a call for backup or additional assistance?,Causal Reasoning,C) Because the police officer believes the photographs show a potential crime.,C,C,1,C) Because the police officer believes the photographs show a potential crime.,C,1,0,0,0,6000
+80,0,Why are they two people shaking hands now?,Causal Reasoning,D) Because they are congratulating each other on a job well done.,D,B,0,D) Because they are congratulating each other on a job well done.,D,0,0,0,0,6000
+80,1,Why is Mr. Bean very angry now?,Causal Reasoning,A) Because another person ate all the food in the refrigerator.,A,A,1,A) Because another person ate all the food in the refrigerator.,A,1,0,0,0,6000
+80,2,Why does the person in the smaller bed become annoyed and awake?,Causal Reasoning,D) Because a noise from outside wakes them up.,D,B,0,D) Because a noise from outside wakes them up.,D,0,0,0,0,6000
+80,3,Why is Mr. Bean very angry now?,Causal Reasoning,B) Because another person also ate the ice cream that belonged to Mr. Bean,B,B,1,B) Because another person also ate the ice cream that belonged to Mr. Bean,B,1,0,0,0,6000
+80,4,Why does Mr. Bean want to escape?,Causal Reasoning,C) Because he saw someone he is trying to avoid.,C,B,0,C) Because he saw someone he is trying to avoid.,C,0,0,0,0,6000
+146,0,Why did Mr. Bean turn off the TV?,Causal Reasoning,C) Because he was afraid that the news about the theft of teddy bears,C,C,1,C) Because he was afraid that the news about the theft of teddy bears,C,1,0,0,0,6000
+146,1,Why Mr. Bean is shocked now.,Causal Reasoning,A) Because he found that his little bear doll was missing.,A,A,1,A) Because he found that his little bear doll was missing.,A,1,0,0,0,6000
+146,2,Why is Mr. Bean unhappy now?,Causal Reasoning,B) Because he found that his teddy bear doll had changed its appearance.,B,B,1,B) Because he found that his teddy bear doll had changed its appearance.,B,1,0,0,0,6000
+146,3,Why does Mr. Bean decide to put up missing posters for his teddy bear?,Causal Reasoning,D) Because he believed his teddy bear had run away and needed help finding,D,C,0,D) Because he believed his teddy bear had run away and needed help finding,D,0,0,0,0,6000
+146,4,Why does the purple bunny character decide to chase Mr. Bean?,Causal Reasoning,D) Because Mr. Bean broke the bunny's favorite toy.,D,A,0,D) Because Mr. Bean broke the bunny's favorite toy.,D,0,0,0,0,6000
+23,0,Where does this letter on the ground come from?,Causal Reasoning,A) It was delivered by the postman earlier.,A,D,0,A) It was delivered by the postman earlier.,A,0,0,0,0,6000
+23,1,Why does Mr. Bean's sitting figure react with confusion or surprise?,Causal Reasoning,A) Because Mr. Bean interacts with the TV remote.,A,A,1,A) Because Mr. Bean interacts with the TV remote.,A,1,0,0,0,6000
+23,2,Why does the wall have green patterns painted on it?,Causal Reasoning,C) Because the man applied green paint using a teddy bear attached to a,C,C,1,"D) Because the wall was originally green, and someone tried to cover it up",D,0,1,1,-1,6000
+23,3,Why does the person with multiple cameras leave the room?,Causal Reasoning,D) Because the person with cameras spotted something interesting in the other room.,D,C,0,D) Because the person with cameras spotted something interesting in the other room.,D,0,0,0,0,6000
+23,4,Why is the queenly figure angry right now?,Causal Reasoning,C) Because the Mr.Bean pushing the broom past her face.,C,C,1,C) Because the Mr.Bean pushing the broom past her face.,C,1,0,0,0,6000
+248,0,Why Mr. Bean was previously flipping through boxes?,Causal Reasoning,B) Because he is looking for his green little hat.,B,B,1,B) Because he is looking for his green little hat.,B,1,0,0,0,6000
+248,1,Why did the character create a large number of sandwiches?,Causal Reasoning,C) Because the character intends to go camping.,C,C,1,C) Because the character intends to go camping.,C,1,0,0,0,6000
+248,2,Why does the other character pick up the green cap left on the chair?,Causal Reasoning,B) Because Mr. Bean accidentally left this green hat on the chair just now,B,B,1,B) Because Mr. Bean accidentally left this green hat on the chair just now,B,1,0,0,0,6000
+248,3,Why would Mr. Bean buy the things being towed behind his car?,Causal Reasoning,D) Because he needed them for a project he was working on.,D,B,0,D) Because he needed them for a project he was working on.,D,0,0,0,0,6000
+248,4,Why did Mr. Bean just feed this dog with a sandwich?,Causal Reasoning,D) Because Mr. Bean wants to trick this dog into the house.,D,D,1,D) Because Mr. Bean wants to trick this dog into the house.,D,1,0,0,0,6000
+129,0,Why is the teddy bear seen flying in the toy plane in the sky?,Causal Reasoning,C) Because Mr. Bean uses a remote control to operate the toy plane.,C,C,1,C) Because Mr. Bean uses a remote control to operate the toy plane.,C,1,0,0,0,6000
+129,1,Why does Mr.Bean climb the tree?,Causal Reasoning,A) Because Mr.Bean wants to retrieve the toy stuck in the tree.,A,A,1,A) Because Mr.Bean wants to retrieve the toy stuck in the tree.,A,1,0,0,0,6000
+129,2,Why are the books stacked on the floor?,Causal Reasoning,D) Because they were recently used and not yet put away.,D,B,0,D) Because they were recently used and not yet put away.,D,0,0,0,0,6000
+129,3,Why does the bird fly out of the window with an item?,Causal Reasoning,"D) Because this item is very precious, the bird wants to steal it away",D,D,1,"D) Because this item is very precious, the bird wants to steal it away",D,1,0,0,0,6000
+129,4,Where did Mr. Bean get all this gold from?,Causal Reasoning,C) The bird kept by Mr. Bean stole from the old lady's house,C,C,1,C) The bird kept by Mr. Bean stole from the old lady's house,C,1,0,0,0,6000
+326,0,Why are the two fries in the plate in front of the teddy bear gone?,Causal Reasoning,A) Because Mr. Bean ate it.,A,A,1,A) Because Mr. Bean ate it.,A,1,0,0,0,6000
+326,1,Why Mr. Bean was just flipping the sofa.,Causal Reasoning,D) Because Mr. Bean thought something valuable was hidden inside.,D,C,0,D) Because Mr. Bean thought something valuable was hidden inside.,D,0,0,0,0,6000
+326,2,Why Mr. Bean is watching a sofa advertisement.,Causal Reasoning,"C) Because Mr. Bean's sofa is broken, he wants to buy a",C,C,1,"C) Because Mr. Bean's sofa is broken, he wants to buy a",C,1,0,0,0,6000
+326,3,Why does the character take the teddy bear from the girl and give her money in exchange?,Causal Reasoning,D) Because the girl insisted on having the money instead of the teddy bear,D,C,0,D) Because the girl insisted on having the money instead of the teddy bear,D,0,0,0,0,6000
+326,4,Why did Mr. Bean drive back to the sofa shop again?,Causal Reasoning,B) Because he realized he forgot to measure the space for the new sofa.,B,A,0,B) Because he realized he forgot to measure the space for the new sofa.,B,0,0,0,0,6000
+292,0,Why is the character startled?,Causal Reasoning,C) Because a person enters the scene unexpectedly.,C,C,1,C) Because a person enters the scene unexpectedly.,C,1,0,0,0,6000
+292,1,Why is Mr. Bean holding two iron pots in his hands?,Causal Reasoning,C) Because Mr. Bean wanted to wake up the old lady who was sleep,C,C,1,C) Because Mr. Bean wanted to wake up the old lady who was sleep,C,1,0,0,0,6000
+292,2,Why does the person enter the building to inquire about rooms for rent?,Causal Reasoning,B) Because he needs a temporary place to stay while his house is being renovated,B,D,0,B) Because he needs a temporary place to stay while his house is being renovated,B,0,0,0,0,6000
+292,3,Why do landlords now take the money and run away?,Causal Reasoning,D) Because they were threatened by someone and had to leave quickly.,D,B,0,D) Because they were threatened by someone and had to leave quickly.,D,0,0,0,0,6000
+292,4,Who is the person in the video now?,Causal Reasoning,D) It's Mr. Bean in disguise.,D,D,1,D) It's Mr. Bean in disguise.,D,1,0,0,0,6000
+33,0,Why did the elderly woman step off the bus with a tray of tea?,Causal Reasoning,C) To deliver food to the elderly lady in a pink dress who has a,C,C,1,C) To deliver food to the elderly lady in a pink dress who has a,C,1,0,0,0,6000
+33,1,Why is Mr. Bean in the hospital ward?,Causal Reasoning,C) Because he mistakenly walked into the wrong building.,C,B,0,C) Because he mistakenly walked into the wrong building.,C,0,0,0,0,6000
+33,2,Why does the character try to manipulate the thermometer reading?,Causal Reasoning,D) To test the accuracy of the thermometer.,D,A,0,D) To test the accuracy of the thermometer.,D,0,0,0,0,6000
+33,3,Why is the patient prepped for surgery?,Causal Reasoning,"A) Because Mr. Bean tampered with the check, making himself appear very",A,A,1,"A) Because Mr. Bean tampered with the check, making himself appear very",A,1,0,0,0,6000
+33,4,Why do the babies start crying?,Causal Reasoning,C) Because the person in the wheelchair enters the room.,C,C,1,C) Because the person in the wheelchair enters the room.,C,1,0,0,0,6000
+360,0,Why does the character cuddle the teddy bear and smile in bed?,Causal Reasoning,C) Because the character feels comforted by the teddy bear.,C,C,1,C) Because the character feels comforted by the teddy bear.,C,1,0,0,0,6000
+360,1,Why does Mr. Bean become disturbed?,Causal Reasoning,B) Because the worker is using a jackhammer.,B,B,1,B) Because the worker is using a jackhammer.,B,1,0,0,0,6000
+360,2,Why does the person adjust a lever and press a red button on the machine?,Causal Reasoning,D) Because the person is testing the lever's mechanism.,D,A,0,D) Because the person is testing the lever's mechanism.,D,0,0,0,0,6000
+360,3,Why is there an abundance of egg cartons and eggs causing clutter in the house?,Causal Reasoning,A) Because the man in the red hat operates heavy machinery.,A,A,1,A) Because the man in the red hat operates heavy machinery.,A,1,0,0,0,6000
+360,4,Why do the workers outside notice an issue with the pipeline?,Causal Reasoning,C) Because overheating cooking supplies produced smoke.,C,C,1,C) Because overheating cooking supplies produced smoke.,C,1,0,0,0,6000
+141,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,D) Because the character disturbed her.,D,D,1,D) Because the character disturbed her.,D,1,0,0,0,6000
+141,1,Why does the man in the dirty car wave a money?,Causal Reasoning,D) Because he was asking Mr. Bean for change.,D,A,0,D) Because he was asking Mr. Bean for change.,D,0,0,0,0,6000
+141,2,Why does the person start pedaling the bicycle?,Causal Reasoning,C) Because riding a bicycle can start the car wash machine.,C,C,1,C) Because riding a bicycle can start the car wash machine.,C,1,0,0,0,6000
+141,3,Why do the woman and the driver sit down to have tea together?,Causal Reasoning,C) Because the car broke down and they had nothing else to do.,C,D,0,C) Because the car broke down and they had nothing else to do.,C,0,0,0,0,6000
+141,4,Why is Mr. Bean looking for something now?,Causal Reasoning,A) Because he wanted to find something to clean the droppings that had,A,A,1,A) Because he wanted to find something to clean the bird droppings that,A,1,0,0,0,6000
+306,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,6000
+306,1,Why does the taxi drive off?,Causal Reasoning,C) Because the person gets inside the taxi.,C,C,1,C) Because the person gets inside the taxi.,C,1,0,0,0,6000
+306,2,Why Mr. Bean can receive money now?,Causal Reasoning,A) Because he impersonated a taxi driver and took the lady to her destination,A,A,1,A) Because he impersonated a taxi driver and took the lady to her destination,A,1,0,0,0,6000
+306,3,Why Mr. Bean can receive money now?,Causal Reasoning,A) Because he impersonated a taxi driver and took the man to his destination,A,A,1,A) Because he impersonated a taxi driver and took the man to his destination,A,1,0,0,0,6000
+306,4,Why Mr. Bean now only pays 0.85 pounds?,Causal Reasoning,A) Because Mr. Bean cleared his mileage before.,A,A,1,A) Because Mr. Bean cleared his mileage before.,A,1,0,0,0,6000
+216,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,6000
+216,1,Why is Mr. Bean under the bed now?,Causal Reasoning,A) Because he wanted to snatch back the teddy bear doll that was taken,A,A,1,A) Because he wanted to snatch back the teddy bear doll that was taken,A,1,0,0,0,6000
+216,2,Why did the character exit the building and approach a green car?,Causal Reasoning,C) Because he wants to drive to the pet hospital to treat his teddy,C,C,1,C) Because he wants to drive to the pet hospital to treat his teddy,C,1,0,0,0,6000
+216,3,Why Mr. Bean would be very panicked now.,Causal Reasoning,C) Because he found that his teddy bear doll was not in the box,C,C,1,C) Because he found that his teddy bear doll was not in the box,C,1,0,0,0,6000
+216,4,Why did the character react with noticeable concern after stopping the car?,Causal Reasoning,C) Because he thought the one that was flattened was the old lady's cat,C,C,1,C) Because he thought the one that was flattened was the old lady's cat,C,1,0,0,0,6000
+495,0,Why does the older woman appear annoyed or angry?,Causal Reasoning,B) Because the character disturbed her.,B,B,1,B) Because the character disturbed her.,B,1,0,0,0,6000
+495,1,Why is the teddy bear covered in flour?,Causal Reasoning,C) Because Mr. Bean was baking and accidentally spilled flour on it.,C,B,0,C) Because Mr. Bean was baking and accidentally spilled flour on it.,C,0,0,0,0,6000
+495,2,Why does the character have a complete list of ingredients for the grocery list?,Causal Reasoning,C) Because the character is talking on the phone and writing down ingredients for a,C,C,1,C) Because the character is talking on the phone and writing down ingredients for a,C,1,0,0,0,6000
+495,3,How did Mr. Bean earn all the money on his desk?,Causal Reasoning,A) Earnings from selling pizza.,A,A,1,A) Earnings from selling pizza.,A,1,0,0,0,6000
+495,4,Why do the two guards fight each other?,Causal Reasoning,"A) Because Mr. Bean dodged their attack downward, it caused them to",A,A,1,"A) Because Mr. Bean dodged their attack downward, it caused them to",A,1,0,0,0,6000

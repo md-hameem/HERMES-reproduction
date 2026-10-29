@@ -1,0 +1,12 @@
+{
+  "model_snapshot": "74dd0bf867a4cda7950c17663794267c60cf4b40",
+  "attention_implementation": "sdpa",
+  "query": "Summarize the video narrative, identifying main characters, key events, timeline changes, and the overall theme.",
+  "query_tokens": 22,
+  "past_tokens": 13,
+  "layers": 24,
+  "reference": "native language_model output_attentions=True",
+  "current_manual": "frozen input embeddings across layers; no causal mask",
+  "causal_frozen": "frozen input embeddings across layers; causal mask added",
+  "interpretation_limit": "Single synthetic text-cache/query differential test; not a full-video behavioral ablation."
+}

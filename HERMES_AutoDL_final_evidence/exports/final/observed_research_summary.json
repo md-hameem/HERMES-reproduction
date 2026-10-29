@@ -1,0 +1,217 @@
+{
+  "created_utc": "2026-10-28T13:02:26.064851+00:00",
+  "status": {
+    "preserved_and_reanalyzed": [
+      "HERMES_4000",
+      "HERMES_6000",
+      "HERMES_50000"
+    ],
+    "completed_or_reused_new": [
+      "HERMES_4000_REPEAT1",
+      "HERMES_6000_REPEAT1",
+      "FIFO_4000",
+      "FIFO_6000",
+      "ATTENTION_DIFFERENTIAL"
+    ],
+    "failed": [],
+    "skipped": {
+      "native_full_prefix": "known OOM/context limitations; no truncated substitute",
+      "component_ablations": "pending matched FIFO interpretation",
+      "full_498_video_benchmark": "not selected",
+      "other_benchmarks": "not selected"
+    }
+  },
+  "scope": "StreamingBench 201-250; 50 videos; 250 questions per run; 0.5 FPS",
+  "reproduction_repository": "/root/autodl-tmp/HERMES-reproduction",
+  "reproduction_head": "af79580aab9c2e58b48432cc91088d374a0e0b04",
+  "source_verification": "git diff against official commit 8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "hermes_revision": "8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "transformers_revision": "66bc4def9505fa7c7fe4aa7a248c34a026bb552b",
+  "model_snapshot": "74dd0bf867a4cda7950c17663794267c60cf4b40",
+  "original_inference_rerun": false,
+  "accuracy": [
+    {
+      "method": "HERMES_4000",
+      "generation": "preserved_original",
+      "kv_budget": 4000,
+      "n": 250,
+      "correct": 144,
+      "accuracy_pct": 57.599999999999994
+    },
+    {
+      "method": "HERMES_6000",
+      "generation": "preserved_original",
+      "kv_budget": 6000,
+      "n": 250,
+      "correct": 144,
+      "accuracy_pct": 57.599999999999994
+    },
+    {
+      "method": "HERMES_50000",
+      "generation": "preserved_original",
+      "kv_budget": 50000,
+      "n": 250,
+      "correct": 138,
+      "accuracy_pct": 55.2
+    },
+    {
+      "method": "HERMES_4000_REPEAT1",
+      "generation": "new_repeat1",
+      "kv_budget": 4000,
+      "n": 250,
+      "correct": 143,
+      "accuracy_pct": 57.199999999999996
+    },
+    {
+      "method": "HERMES_6000_REPEAT1",
+      "generation": "new_repeat1",
+      "kv_budget": 6000,
+      "n": 250,
+      "correct": 143,
+      "accuracy_pct": 57.199999999999996
+    },
+    {
+      "method": "FIFO_4000",
+      "generation": "new_control",
+      "kv_budget": 4000,
+      "n": 250,
+      "correct": 144,
+      "accuracy_pct": 57.599999999999994
+    },
+    {
+      "method": "FIFO_6000",
+      "generation": "new_control",
+      "kv_budget": 6000,
+      "n": 250,
+      "correct": 144,
+      "accuracy_pct": 57.599999999999994
+    }
+  ],
+  "repeatability": [
+    {
+      "kv_budget": 4000,
+      "n": 250,
+      "n_videos": 50,
+      "original_correct": 144,
+      "repeat_correct": 143,
+      "original_accuracy_pct": 57.599999999999994,
+      "repeat_accuracy_pct": 57.199999999999996,
+      "net_accuracy_change_pp": -0.3999999999999986,
+      "changed_choices": 4,
+      "changed_choice_pct": 1.6,
+      "changed_correctness": 3,
+      "changed_correctness_pct": 1.2,
+      "became_correct": 1,
+      "became_wrong": 2
+    },
+    {
+      "kv_budget": 6000,
+      "n": 250,
+      "n_videos": 50,
+      "original_correct": 144,
+      "repeat_correct": 143,
+      "original_accuracy_pct": 57.599999999999994,
+      "repeat_accuracy_pct": 57.199999999999996,
+      "net_accuracy_change_pp": -0.3999999999999986,
+      "changed_choices": 5,
+      "changed_choice_pct": 2.0,
+      "changed_correctness": 3,
+      "changed_correctness_pct": 1.2,
+      "became_correct": 1,
+      "became_wrong": 2
+    }
+  ],
+  "fifo_paired": [
+    {
+      "A": "FIFO_4000",
+      "B": "HERMES_4000",
+      "n": 250,
+      "n_videos": 50,
+      "accuracy_A_pct": 57.599999999999994,
+      "accuracy_B_pct": 57.599999999999994,
+      "difference_A_minus_B_pp": 0.0,
+      "A_only_correct": 6,
+      "B_only_correct": 6,
+      "video_cluster_CI95_low_pp": -2.4,
+      "video_cluster_CI95_high_pp": 2.4,
+      "exact_discordance_p_exploratory": 1.0
+    },
+    {
+      "A": "FIFO_6000",
+      "B": "HERMES_6000",
+      "n": 250,
+      "n_videos": 50,
+      "accuracy_A_pct": 57.599999999999994,
+      "accuracy_B_pct": 57.599999999999994,
+      "difference_A_minus_B_pp": 0.0,
+      "A_only_correct": 5,
+      "B_only_correct": 5,
+      "video_cluster_CI95_low_pp": -2.4,
+      "video_cluster_CI95_high_pp": 2.4,
+      "exact_discordance_p_exploratory": 1.0
+    },
+    {
+      "A": "FIFO_4000",
+      "B": "HERMES_50000",
+      "n": 250,
+      "n_videos": 50,
+      "accuracy_A_pct": 57.599999999999994,
+      "accuracy_B_pct": 55.2,
+      "difference_A_minus_B_pp": 2.4,
+      "A_only_correct": 11,
+      "B_only_correct": 5,
+      "video_cluster_CI95_low_pp": -0.4,
+      "video_cluster_CI95_high_pp": 5.2,
+      "exact_discordance_p_exploratory": 0.210113525390625
+    },
+    {
+      "A": "FIFO_6000",
+      "B": "HERMES_50000",
+      "n": 250,
+      "n_videos": 50,
+      "accuracy_A_pct": 57.599999999999994,
+      "accuracy_B_pct": 55.2,
+      "difference_A_minus_B_pp": 2.4,
+      "A_only_correct": 11,
+      "B_only_correct": 5,
+      "video_cluster_CI95_low_pp": -0.8,
+      "video_cluster_CI95_high_pp": 5.6,
+      "exact_discordance_p_exploratory": 0.210113525390625
+    }
+  ],
+  "attention": [
+    {
+      "comparison": "causal_frozen_vs_native",
+      "max_abs_max": 0.9999922513961792,
+      "mean_abs_mean": 0.024992843934645254,
+      "cosine_min": 0.3564265966415405,
+      "cosine_mean": 0.7243227486809095,
+      "past_top13_overlap": 1.0
+    },
+    {
+      "comparison": "current_vs_causal_frozen",
+      "max_abs_max": 0.99951171875,
+      "mean_abs_mean": 0.014560581437156847,
+      "cosine_min": 0.7628016471862793,
+      "cosine_mean": 0.8830619504054388,
+      "past_top13_overlap": 1.0
+    },
+    {
+      "comparison": "current_vs_native",
+      "max_abs_max": 0.9999922513961792,
+      "mean_abs_mean": 0.03157693198105941,
+      "cosine_min": 0.22042974829673767,
+      "cosine_mean": 0.6368261749545733,
+      "past_top13_overlap": 1.0
+    }
+  ],
+  "limitations": [
+    "Subset results do not establish full-benchmark reproduction.",
+    "50K is near-uncompressed HERMES, not native LLaVA.",
+    "TTFT is not end-to-end latency.",
+    "Reserved GPU memory was not logged.",
+    "Runtime is specific to the AutoDL GPU and preserved/new session.",
+    "Attention differential uses a text-cache/query test, not a full-video ablation.",
+    "Exact discordance tests are exploratory; confidence intervals use video-cluster bootstrap."
+  ]
+}

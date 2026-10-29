@@ -1,9 +1,9 @@
 # Comprehensive Technical Research Report: Hierarchical KV-Cache Management, Multimodal Streaming Video Understanding, and Advanced Agent Architectures
 
-> **Document status:** Living reference document for the HERMES reproduction project  
-> **Last updated:** 16 October 2026  
-> **Companion documents:** [`research_log.md`](../research_log.md) (28 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (19 sections)  
-> **Reproduction status:** 50-video / 250-question StreamingBench subset completed; 43 artifact files locally verified; 50-video paired analysis partially complete; native baseline and component ablations pending
+> **Document status:** Living reference document for the HERMES reproduction project<br>
+> **Last updated:** 28 October 2026<br>
+> **Companion documents:** [`research_log.md`](../research_log.md) (31 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (22 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Reproduction status:** 50-video / 250-question StreamingBench subset reproduced on Kaggle and AutoDL; same-hardware repeats, pseudo-query attention differential, and FIFO controls completed; component ablations, native baseline, broader shards, and full benchmark remain pending
 
 # Report A: Complete Literature Catalogue and Taxonomic Categorization
 
@@ -693,5 +693,39 @@ class StreamingEDMIHook:
 * **Sampling:** 0.5 FPS streaming frame ingestion
 * **Metrics Collected:** Accuracy with Wilson CIs, per-question paired correctness, task-level accuracy (9 categories), max GPU memory, median/P95 TTFT, max cache length, compression event counts
 * **Artifacts Verified:** 43 files (25 CSVs, 8 PNGs, 7 inference logs, 3 smoke-test logs) — all locally verified as of 13 October 2026; see [`research_log.md` Section 28](../research_log.md#28-artifact-intake-and-verification-update--13-october-2026)
+
+---
+
+# Report I: 28 October 2026 Reproduction Control Update
+
+This update incorporates the final AutoDL evidence into the technical report. The full primary record is [`research_log.md` Section 31](../research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026); the audit assessment is [Reproduction Audit Section 22](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026).
+
+## I.1 Control outcomes
+
+| Control | Result | Technical interpretation |
+|---|---|---|
+| Same-hardware HERMES 4K/6K repeats | 143/250 at both budgets; 4–5 changed choices and three correctness changes each | Greedy generation is not prediction-stable across fresh processes. Small prior Kaggle–AutoDL changes are compatible with numerical nondeterminism. |
+| FIFO 4K/6K | 144/250 at both budgets; exact paired p = 1.000 against HERMES | Simple prefix-plus-newest-token retention matches HERMES aggregate accuracy on this shard. HERMES-specific selection benefits are not established. |
+| HERMES/FIFO versus HERMES 50K | +2.4 observed points; exact paired p ≈ 0.210 | The compressed-budget advantage remains descriptive and statistically inconclusive. |
+| Pseudo-query attention differential | Mean cosine 0.637 current-versus-native; 0.724 causal-frozen-versus-native | The manual path is useful for budget scoring but is not numerically equivalent to transformer attention. Causal masking and missing residual/MLP propagation both matter. |
+| Efficiency | 4K/6K peak allocated memory remains about 60% below 50K; max cache falls by 92.0% / 88.0% | The memory/cache trade-off is robust. Session median TTFT varies and should be replicated before strong latency claims. |
+
+## I.2 Impact on the HERMES mechanism assessment
+
+The original mechanistic hypothesis remains plausible: shallow recency, hybrid middle-layer memory, and deep anchor retention may preserve semantically different information. The new controls sharpen the evidence boundary:
+
+1. **Budget restriction alone explains the observed aggregate accuracy on this shard.** FIFO parity means the current experiment cannot attribute the result to hierarchical selection, smoothing, summary aggregation, or position correction.
+2. **Summary-token and smoothing ablations are now the key attribution tests.** If removing them does not change accuracy, the 0.5B reproduction gains little from those components under this protocol.
+3. **The pseudo-query scorer is approximate.** It should be treated as an engineering heuristic unless a future differential test over a compressed video cache shows acceptable ranking fidelity.
+4. **Attention-based novelty proposals remain premature.** EDMI or another decoding-time intervention should not be pursued until component ablations identify a reproducible HERMES-specific effect or compressed-only failure mode.
+5. **The 50K condition is still not a native baseline.** It is a near-uncompressed HERMES control and should not be used to claim superiority over unmodified LLaVA.
+
+## I.3 Revised evidence boundary
+
+The project now has a substantially stronger control package: preserved Kaggle and AutoDL generations, AutoDL efficiency extraction, same-hardware repeats, an attention differential, and budget-matched FIFO controls. The strongest defensible conclusion is:
+
+> HERMES and matched FIFO both retain approximately 57.6% accuracy on StreamingBench samples 201–250 while using about 60% less reported peak allocated GPU memory and roughly 92% less maximum answering-cache length than the 50K HERMES control. This shard does not demonstrate a HERMES-specific accuracy advantage over FIFO, and prediction-level nondeterminism limits interpretation of individual differences.
+
+The next technically valuable work is component attribution, not immediate extension development: independently ablate smoothing, summary aggregation, depth-differentiated retention, and positional re-indexing; then validate on a non-overlapping shard.
 
 ---

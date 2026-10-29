@@ -1,0 +1,4 @@
+kv_budget,questions,videos,accuracy_pct,elapsed_min_this_session,runtime_origin,reused_validated_csv,csv,log
+4000,250,50,57.599999999999994,28.16540913184484,preserved original AutoDL session,True,/root/autodl-tmp/HERMES-reproduction/HERMES/results/streamingbench_50_kv4000/1_0.csv,/root/autodl-tmp/HERMES-reproduction/logs/streamingbench_50_kv4000.log
+6000,250,50,57.599999999999994,28.25526367823283,preserved original AutoDL session,True,/root/autodl-tmp/HERMES-reproduction/HERMES/results/streamingbench_50_kv6000/1_0.csv,/root/autodl-tmp/HERMES-reproduction/logs/streamingbench_50_kv6000.log
+50000,250,50,55.2,31.0461323261261,preserved original AutoDL session,True,/root/autodl-tmp/HERMES-reproduction/HERMES/results/streamingbench_50_kv50000/1_0.csv,/root/autodl-tmp/HERMES-reproduction/logs/streamingbench_50_kv50000.log

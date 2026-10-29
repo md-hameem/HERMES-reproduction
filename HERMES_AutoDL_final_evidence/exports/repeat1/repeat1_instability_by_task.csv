@@ -1,0 +1,19 @@
+kv_budget,task,questions,changed_choices,changed_correctness,net_correct_change,changed_choice_pct,changed_correctness_pct
+4000,Action Recognition,9,0,0,0,0.0,0.0
+4000,Attribute Recognition,9,0,0,0,0.0,0.0
+4000,Causal Reasoning,101,1,0,0,0.9900990099009901,0.0
+4000,Counting,5,0,0,0,0.0,0.0
+4000,Event Understanding,16,0,0,0,0.0,0.0
+4000,Object Recognition,5,0,0,0,0.0,0.0
+4000,Prospective Reasoning,100,3,3,-1,3.0,3.0
+4000,Spatial Understanding,3,0,0,0,0.0,0.0
+4000,Text-Rich Understanding,2,0,0,0,0.0,0.0
+6000,Action Recognition,9,0,0,0,0.0,0.0
+6000,Attribute Recognition,9,0,0,0,0.0,0.0
+6000,Causal Reasoning,101,2,1,-1,1.9801980198019802,0.9900990099009901
+6000,Counting,5,0,0,0,0.0,0.0
+6000,Event Understanding,16,1,0,0,6.25,0.0
+6000,Object Recognition,5,0,0,0,0.0,0.0
+6000,Prospective Reasoning,100,2,2,0,2.0,2.0
+6000,Spatial Understanding,3,0,0,0,0.0,0.0
+6000,Text-Rich Understanding,2,0,0,0,0.0,0.0

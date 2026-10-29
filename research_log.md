@@ -1813,3 +1813,141 @@ Versus the 50K control, the 4K configuration gives **60.4% lower peak allocated 
 ## 30.4 Next experimental gate
 
 Efficiency extraction is complete. The next GPU work remains an identical-environment 4K/6K repeat to quantify prediction instability and a differential test of pseudo-query attention, followed by FIFO 4K/6K controls and independent component ablations on this shard. The 50K setting remains a near-uncompressed HERMES control, not a native baseline; the incomplete full-prefix baseline stays excluded.
+
+---
+
+# 31. Final AutoDL Repeatability, Attention Differential, and FIFO Controls — 28 October 2026
+
+## 31.1 Scope and provenance
+
+The final AutoDL workflow completed the planned controls without rerunning the three preserved original HERMES configurations. It reused the hash-verified 4K/6K/50K predictions and added:
+
+1. Same-hardware HERMES repeats at KV=4000 and KV=6000.
+2. A differential test comparing the manual pseudo-query attention path with native transformer attention and a causal-masked frozen-hidden variant.
+3. Budget-matched FIFO eviction controls at KV=4000 and KV=6000.
+4. Consolidated accuracy, repeatability, paired-statistics, efficiency, attention, provenance, and archive artifacts.
+
+| Provenance item | Final-control value |
+|---|---|
+| GPU | NVIDIA GeForce RTX 4080, 32,760 MiB; driver 595.71.05 |
+| Notebook Python | 3.12.3 |
+| Inference environment | Python 3.12 · PyTorch 2.10.0+cu128 · Transformers 4.45.0.dev0 |
+| HERMES revision | `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789` |
+| Transformers revision | `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
+| Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
+| Reproduction HEAD recorded by notebook | `af79580aab9c2e58b48432cc91088d374a0e0b04` |
+| Executed final notebook SHA-256 | `ae14f54b94e41f859b4c47914e4c5e40acd7d400c013d4e1960000b48697abf2` |
+| Final manifest SHA-256 | `8cd1c1dddd3cde4c089f6db91d110eb80f016373be7a2e1610a6ffe72e00cd5d` |
+| Final summary JSON SHA-256 | `3c9027ec47e9497fe50c71cb7189f3c1b614a367976f3abb4c4f91b61fb92c30` |
+| Notebook-reported final archive SHA-256 | `6767e82c1c53d7fe5df399448ceb4a20c03cbb2188dc0d2fa57f02ba834005c3` |
+
+The final evidence payload is stored under `HERMES_AutoDL_final_evidence/`. The notebook-reported ZIP byte stream was not present in the local upload, so only the extracted payload and manifest could be verified.
+
+## 31.2 Consolidated accuracy and efficiency
+
+All seven raw CSVs passed independent validation: 250 rows, 50 videos, five questions per video, unique positional `(video_id, qa_index)` keys, exact source question/choice/gold alignment, and agreement between parsed predicted choices and `qa_acc`.
+
+| Method | Correct | Accuracy | Peak allocated GiB | Median TTFT (s) | Max cache | Compression events | Elapsed |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| HERMES 4K, original | 144/250 | 57.6% | 4.689 | 0.0408 | 4,013 | 770 | 28.17 min |
+| HERMES 6K, original | 144/250 | 57.6% | 4.735 | 0.0406 | 6,013 | 732 | 28.26 min |
+| HERMES 50K control | 138/250 | 55.2% | 11.836 | 0.0519 | 50,013 | 79 | 31.05 min |
+| HERMES 4K repeat | 143/250 | 57.2% | 4.689 | 0.0506 | 4,013 | 770 | 31.44 min |
+| HERMES 6K repeat | 143/250 | 57.2% | 4.735 | 0.0493 | 6,013 | 732 | 31.35 min |
+| FIFO 4K | 144/250 | 57.6% | 4.689 | 0.0505 | 4,013 | 770 | 29.39 min |
+| FIFO 6K | 144/250 | 57.6% | 4.734 | 0.0486 | 6,013 | 732 | 29.30 min |
+
+Every run processed the same 829 chunks / 11,434 frames and produced 250 TTFT entries. Memory is the process-lifetime `torch.cuda.max_memory_allocated()` value; reserved memory was not logged.
+
+## 31.3 Same-environment repeatability
+
+The identical-environment repeats directly tested the nondeterminism hypothesis left open by the Kaggle–AutoDL comparison.
+
+| KV budget | Original correct | Repeat correct | Changed choices | Changed correctness | Became correct | Became wrong |
+|---|---:|---:|---:|---:|---:|---:|
+| 4000 | 144 | 143 | 4 | 3 | 1 | 2 |
+| 6000 | 144 | 143 | 5 | 3 | 1 | 2 |
+
+The changed cases are preserved in `HERMES_AutoDL_final_evidence/exports/repeat1/repeat1_changed_cases.csv`. Most instability is concentrated in prospective- and causal-reasoning questions, consistent with numerically close decision boundaries rather than wholesale context loss.
+
+This establishes **same-platform prediction instability** for the HERMES generation path. It does not by itself quantify the separate contribution of GPU architecture because the Kaggle model snapshot remains unpreserved; however, it makes the earlier small Kaggle–AutoDL differences much less surprising.
+
+## 31.4 FIFO control results
+
+The FIFO control keeps the initial prefix and newest visual tokens, retains the same positional policy, and removes pseudo-query scoring, cross-layer importance smoothing, and summary-token aggregation.
+
+| Comparison | FIFO-only correct | HERMES-only correct | Accuracy difference | Exact paired p | Video-cluster 95% CI |
+|---|---:|---:|---:|---:|---:|
+| FIFO 4K vs HERMES 4K | 6 | 6 | 0.0 pp | 1.0000 | −2.4 to +2.4 pp |
+| FIFO 6K vs HERMES 6K | 5 | 5 | 0.0 pp | 1.0000 | −2.4 to +2.4 pp |
+| FIFO 4K vs HERMES 50K | 11 | 5 | +2.4 pp | 0.2101 | −0.4 to +5.2 pp |
+| FIFO 6K vs HERMES 50K | 11 | 5 | +2.4 pp | 0.2101 | −0.8 to +5.6 pp |
+
+The correct interpretation is therefore **budget-matched parity on this shard**. HERMES is not shown to outperform simple FIFO retention at 4K or 6K. The +2.4-point compressed-versus-50K difference remains descriptive and statistically inconclusive.
+
+## 31.5 Pseudo-query attention differential
+
+The attention test used a synthetic multi-token query over the 13-token initial prefix. It compared:
+
+- **Current manual:** frozen input embeddings at every layer, no causal mask.
+- **Causal frozen:** frozen input embeddings with a causal mask.
+- **Native:** causal transformer attention with normal residual/MLP propagation.
+
+| Comparison | Mean cosine | Minimum cosine | Mean absolute difference | Past top-13 overlap |
+|---|---:|---:|---:|---:|
+| Current manual vs native | 0.6368 | 0.2204 | 0.0316 | 1.000 |
+| Causal frozen vs native | 0.7243 | 0.3564 | 0.0250 | 1.000 |
+| Current manual vs causal frozen | 0.8831 | 0.7628 | 0.0146 | 1.000 |
+
+These results quantify the known approximation rather than validating numerical equivalence. The missing causal mask has a measurable effect, and normal residual/MLP propagation accounts for a substantial remaining difference. The perfect top-13 overlap is not informative because there are only 13 past tokens; it cannot discriminate ranking quality.
+
+## 31.6 Efficiency interpretation
+
+The stable efficiency result is the expected memory/cache relationship:
+
+- 4K retains at most 4,013 answering positions versus 50,013 for 50K.
+- 6K retains at most 6,013 positions.
+- 4K and 6K both report approximately 60% lower process-lifetime peak allocated memory than 50K.
+- FIFO reaches the same 4,013/6,013 maxima without HERMES importance selection or summary tokens.
+
+TTFT is less stable. For example, original HERMES 4K has median TTFT 0.0408 s, while the repeat has 0.0506 s under the same nominal environment and workload. Session load and process-level timing variation are plausible contributors. Future claims should prioritize replicated latency distributions and separate encoding, compression, and query-time timers.
+
+## 31.7 Independent evidence validation and archival warnings
+
+`scripts/validate_final_evidence.py` passed the following independent checks:
+
+- 53/53 final manifest payload files match their recorded sizes and hashes.
+- Seven prediction files pass row, key, annotation, gold, and parsed-choice validation.
+- Accuracy, repeatability, FIFO discordance statistics, and video-cluster bootstrap intervals reproduce from raw CSVs.
+- All seven efficiency rows reproduce from raw logs.
+- Attention tables contain finite 24-layer metrics and correct summaries.
+- FIFO source compiles and excludes HERMES selection/summary calls.
+- Final JSON summary exactly reflects its source tables and pinned revisions.
+- Executed notebook has no error outputs and records the expected environment/source/model checks.
+
+Three archival warnings remain:
+
+1. `exports/figures/accuracy_50.png` was not repackaged.
+2. `exports/figures/paired_differences_50.png` was not repackaged.
+3. `exports/hermes_50_by_task.csv` was not repackaged.
+
+The source copies remain in the repository, and the omissions do not affect the seven raw result files. A supplemental or corrected archive should be created before treating `HERMES_AutoDL_final_evidence` as fully self-contained.
+
+The executed notebook also differs from commit `af79580`: it contains AutoDL network activation, a direct pinned PyTorch wheel installation, and a `DynamicCache` compatibility patch for the native attention reference. Its outputs validate, but it is not an unmodified clean-room rerun of the committed notebook.
+
+## 31.8 Updated experimental gate
+
+Completed:
+
+- Same-environment HERMES repeatability.
+- Manual pseudo-query attention differential.
+- Budget-matched FIFO 4K/6K controls.
+- Independent evidence validation.
+
+Next:
+
+1. Run one-at-a-time HERMES component ablations: cross-layer smoothing, summary tokens, differentiated layer retention, and positional re-indexing.
+2. Supplement the final archive with the three omitted historical artifacts or create a versioned corrected archive.
+3. Evaluate a non-overlapping 50-video shard using the validated repeat/FIFO/ablation protocol.
+4. Proceed to resumable all-498-video evaluation only after component and shard-generalization evidence is available.
+5. Consider EDMI or another extension only after those controls establish which HERMES components, if any, produce measurable benefits beyond simple budget restriction.

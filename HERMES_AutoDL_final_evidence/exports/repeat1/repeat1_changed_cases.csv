@@ -1,0 +1,10 @@
+video_id,qa_index,question,task,original_pred_answer,original_pred_choice,correct_choice,original_correct,repeat_pred_answer,repeat_pred_choice,repeat_correct,choice_changed,correctness_changed,accuracy_delta,kv_budget
+376,2,What might the speaker discuss next?,Prospective Reasoning,B) Why the two way get the same answer.,B,B,1,A) The formula for compound interest.,A,0,1,1,-1,4000
+266,1,What might the speaker discuss next?,Prospective Reasoning,D) How to bring down the next digit in a long division.,D,D,1,C) How to perform subtraction in long division.,C,0,1,1,-1,4000
+266,4,What might the speaker explain next?,Prospective Reasoning,20),0,C,0,C) Subtract 20 from 20.,C,1,1,1,1,4000
+286,4,Why is this red rabbit standing in front of the iron gate now?,Causal Reasoning,"B) Because the iron gate suddenly started glowing, and the rabbit is curious.",B,D,0,A) Because the red rabbit is trying to figure out how to open the gate,A,0,1,0,0,4000
+459,4,What happened to the toy vehicle just now?,Event Understanding,D) The toy vehicle is lifted off the surface.,D,C,0,A) The toy vehicle is disassembled.,A,0,1,0,0,6000
+183,2,What might the speaker discuss next?,Prospective Reasoning,C) The significance of the y-axis.,C,D,0,D) What ordered pairs represent.,D,1,1,1,1,6000
+93,2,What might the speaker explain next?,Prospective Reasoning,B) The meaning of the scale on the graph.,B,B,1,D) The method used to calculate the average precipitation.,D,0,1,1,-1,6000
+273,3,Why does the man offer his underwear to the woman as a replacement bag?,Causal Reasoning,D) Because the woman mentioned she needed something to carry her things in.,D,C,0,B) Because the man is trying to make the woman laugh with a joke.,B,0,1,0,0,6000
+23,2,Why does the wall have green patterns painted on it?,Causal Reasoning,C) Because the man applied green paint using a teddy bear attached to a,C,C,1,"D) Because the wall was originally green, and someone tried to cover it up",D,0,1,1,-1,6000

@@ -3,11 +3,11 @@
 **Document type:** Research audit and forward plan  
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
-**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4 and AutoDL RTX 4080 SUPER<br>
-**Evidence cutoff:** 26 October 2026; two preserved 50-video result generations, executed notebooks, raw CSVs/logs, statistical and efficiency exports, and integrity manifests<br>
-**Assessment status:** **Successful subset reproduction with locally verified Kaggle and AutoDL artifacts; native controls, component fidelity, and generalisation not yet established**
+**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4 and AutoDL RTX 4080-family GPUs<br>
+**Evidence cutoff:** 28 October 2026; two preserved 50-video result generations, same-hardware repeats, attention differential, FIFO controls, raw CSVs/logs, statistical and efficiency exports, and integrity manifests<br>
+**Assessment status:** **Successful subset reproduction with verified repeatability and budget-matched FIFO parity; native baseline, component attribution, and generalisation not yet established**
 
-> **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. Section 21 adds reproducible efficiency extraction from the preserved AutoDL logs. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. No GPU inference was rerun while preparing this audit; reported measurements remain associated with their original hardware.
+> **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. Section 21 adds reproducible efficiency extraction from the preserved AutoDL logs. Section 22 adds the final same-hardware repeatability run, pseudo-query attention differential, FIFO controls, and independent evidence validator. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. Reported measurements remain associated with their original hardware and execution session.
 
 ---
 
@@ -34,12 +34,15 @@
 19. [Artifact intake and verification update — 13 October 2026](#19-artifact-intake-and-verification-update--13-october-2026)
 20. [AutoDL verification and cross-platform prediction audit — 25 October 2026](#20-autodl-verification-and-cross-platform-prediction-audit--25-october-2026)
 21. [AutoDL efficiency evidence — 26 October 2026](#21-autodl-efficiency-evidence--26-october-2026)
+22. [Final AutoDL controls, repeatability, attention fidelity, and FIFO baseline — 28 October 2026](#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026)
 
 ---
 
 ## 1. Executive assessment
 
-**Main finding.** On a documented **50-video / 250-question** subset, HERMES with 4,000 or 6,000 cache-budgeted tokens answered **143/250 questions correctly (57.2%)**, while a **50,000-token HERMES control** answered **138/250 (55.2%)**. The 4K and 6K settings used much less reported GPU memory and had lower query-time *time to first token* (TTFT). These observations support a **promising efficiency-versus-accuracy trade-off on this particular subset**. They do not yet establish that HERMES is more accurate than the original LLaVA model, or that 4K is universally optimal.
+**Main finding.** On the documented **50-video / 250-question** StreamingBench convenience shard, the preserved AutoDL HERMES runs answered **144/250 correctly (57.6%)** at both KV=4,000 and KV=6,000, while the near-uncompressed KV=50,000 HERMES control answered **138/250 (55.2%)**. Budget-matched FIFO controls also answered 144/250 at both budgets. Same-environment HERMES repeats answered 143/250 (57.2%) at both budgets, directly demonstrating prediction-level nondeterminism. These observations support a **robust memory/cache trade-off**, but not a demonstrated HERMES-specific accuracy advantage over FIFO on this shard.
+
+The initial Kaggle generation and descriptive Wilson intervals are retained below for historical comparability:
 
 | Configuration | Correct | Accuracy | 95% Wilson interval* | Highest logged GPU memory | Median logged TTFT | P95 TTFT | Maximum logged answering-cache length | Logged compression events |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -49,16 +52,16 @@
 
 *The saved Wilson calculations treat 250 questions as independent Bernoulli trials; because there are five questions per video, these intervals are descriptive and may understate uncertainty when question outcomes cluster within videos. See Section 9.*
 
-**Measured trade-off against the 50K control, as reported:** 4K has **60.2% lower highest logged GPU memory**, **48.2% lower median TTFT**, and **92.0% fewer cache positions at the logged maximum**, with a **+2.0 percentage-point observed accuracy difference**. The accuracy difference is a point estimate, **not** a demonstrated causal or statistically reliable improvement. KV=50K is not the original non-HERMES model and was itself compressed on the larger run.
+**Measured trade-off against the 50K control:** the 4K configuration has approximately **60% lower peak allocated memory** and **92.0% lower maximum answering-cache length**. The observed +2.4-point accuracy difference after the AutoDL generation is a point estimate, **not** a demonstrated causal or statistically reliable improvement; exact paired p ≈ 0.210. KV=50K is not the original non-HERMES model and still executes HERMES compression.
 
 **The four most important next tasks are:**
 
-1. **Resolve source-code fidelity**, especially the tracked modification to `video_qa/base.py` revealed by saved `git status`.
-2. **Complete the 50-video paired analysis** with stable question IDs and video-cluster bootstrap CIs — question-level discordance counts are now available (see Section 19), but a durable paired-correctness artifact and cluster-aware intervals remain outstanding.
+1. **Run component attribution ablations** for cross-layer smoothing, summary-token aggregation, depth-differentiated retention, and positional re-indexing.
+2. **Preserve a corrected final archive** containing the three historical analysis artifacts omitted from the 28 October bundle.
 3. **Run an actual non-HERMES LLaVA-OneVision-0.5B control** with a precisely matched frame/question protocol and honest hardware limitations.
-4. **Expand from a single non-random 50-video shard to broader, better-balanced evaluation**, then full StreamingBench if the earlier gates pass.
+4. **Expand from the single non-random 50-video shard to a non-overlapping validation shard**, then broader/full StreamingBench evaluation if the component gates pass.
 
-**Verdict:** This is substantive engineering and empirical progress, but best described as a **successful subset reproduction and systems study**, not yet a fully audited reproduction of every result or component in the HERMES paper.
+**Verdict:** This is substantive engineering and empirical progress, now including verified repeatability and a negative FIFO control. It is best described as a **successful subset reproduction and systems-control study**, not yet a fully audited component-level reproduction or generalization result for HERMES.
 
 ---
 
@@ -848,7 +851,106 @@ Against 50K, 4K has **60.4% lower peak allocated memory**, **21.4% lower median 
 - Outer tqdm times are whole-second video-loop measurements excluding startup. Encoding and compression costs are not separately recoverable.
 - The near-identical 4K/6K TTFT values do not support a monotonic budget-latency relationship.
 
-Efficiency extraction is therefore complete, but the native baseline, FIFO controls, component ablations, and generalization remain unresolved. Next are same-environment 4K/6K repeatability and pseudo-query attention differential tests, then budget-matched FIFO and independent HERMES component controls on the same shard.
+Efficiency extraction is therefore complete. Same-environment repeatability, pseudo-query attention differential tests, and budget-matched FIFO controls were subsequently executed on 28 October 2026 and are recorded in Section 22.
+
+---
+
+## 22. Final AutoDL Controls, Repeatability, Attention Fidelity, and FIFO Baseline — 28 October 2026
+
+### 22.1 Evidence and provenance
+
+The final control run reused the three hash-verified original AutoDL HERMES configurations and added four new full-shard generations plus an attention differential. The raw evidence is preserved in `HERMES_AutoDL_final_evidence/`; the primary narrative record is [`research_log.md` Section 31](../research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026).
+
+| Item | Value |
+|---|---|
+| GPU | NVIDIA GeForce RTX 4080, 32,760 MiB; driver 595.71.05 |
+| Notebook Python | 3.12.3 |
+| Inference runtime | Python 3.12 · PyTorch 2.10.0+cu128 · Transformers 4.45.0.dev0 |
+| HERMES revision | `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789` |
+| Transformers revision | `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
+| Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
+| Reproduction HEAD recorded | `af79580aab9c2e58b48432cc91088d374a0e0b04` |
+| Executed final notebook SHA-256 | `ae14f54b94e41f859b4c47914e4c5e40acd7d400c013d4e1960000b48697abf2` |
+| Final manifest SHA-256 | `8cd1c1dddd3cde4c089f6db91d110eb80f016373be7a2e1610a6ffe72e00cd5d` |
+| Notebook-reported archive SHA-256 | `6767e82c1c53d7fe5df399448ceb4a20c03cbb2188dc0d2fa57f02ba834005c3` |
+
+The final-control run was executed on an RTX 4080, while the earlier preserved run was on an RTX 4080 SUPER. Runtime and TTFT observations must remain session/hardware-specific.
+
+### 22.2 Validation result
+
+`python scripts/validate_final_evidence.py` independently verified:
+
+- 53/53 final manifest payload files against size and SHA-256.
+- Seven raw prediction files for row count, video/question keys, source annotation identity, gold labels, and parsed-choice agreement.
+- Accuracy, repeatability, FIFO paired tests, and seeded video-cluster bootstrap intervals from raw CSVs.
+- All seven efficiency rows from raw logs.
+- Finite 24-layer attention metrics and their summaries.
+- FIFO source isolation from pseudo-query selection and summary aggregation.
+- Final summary/provenance consistency and executed-notebook completion.
+
+The validator reports three archival warnings: `exports/figures/accuracy_50.png`, `exports/figures/paired_differences_50.png`, and `exports/hermes_50_by_task.csv` are referenced by the embedded historical manifest but omitted from the final evidence bundle. Local source copies remain available. The final ZIP byte stream itself was not uploaded, so the notebook-reported archive hash is preserved as provenance but could not be byte-verified locally.
+
+### 22.3 Accuracy, repeatability, and paired controls
+
+| Method | Correct | Accuracy | Peak allocated GiB | Median TTFT (s) | Max cache | Elapsed |
+|---|---:|---:|---:|---:|---:|---:|
+| HERMES 4K, original | 144/250 | 57.6% | 4.689 | 0.0408 | 4,013 | 28.17 min |
+| HERMES 6K, original | 144/250 | 57.6% | 4.735 | 0.0406 | 6,013 | 28.26 min |
+| HERMES 50K control | 138/250 | 55.2% | 11.836 | 0.0519 | 50,013 | 31.05 min |
+| HERMES 4K repeat | 143/250 | 57.2% | 4.689 | 0.0506 | 4,013 | 31.44 min |
+| HERMES 6K repeat | 143/250 | 57.2% | 4.735 | 0.0493 | 6,013 | 31.35 min |
+| FIFO 4K | 144/250 | 57.6% | 4.689 | 0.0505 | 4,013 | 29.39 min |
+| FIFO 6K | 144/250 | 57.6% | 4.734 | 0.0486 | 6,013 | 29.30 min |
+
+Same-environment repeatability is now measured rather than inferred:
+
+| KV | Original correct | Repeat correct | Changed choices | Changed correctness |
+|---|---:|---:|---:|---:|
+| 4000 | 144 | 143 | 4 | 3 |
+| 6000 | 144 | 143 | 5 | 3 |
+
+The FIFO baseline is the most important new attribution control:
+
+| Comparison | FIFO-only correct | HERMES-only correct | Difference | Exact paired p | Video-cluster 95% CI |
+|---|---:|---:|---:|---:|---:|
+| FIFO 4K vs HERMES 4K | 6 | 6 | 0.0 pp | 1.0000 | −2.4 to +2.4 pp |
+| FIFO 6K vs HERMES 6K | 5 | 5 | 0.0 pp | 1.0000 | −2.4 to +2.4 pp |
+| FIFO 4K vs HERMES 50K | 11 | 5 | +2.4 pp | 0.2101 | −0.4 to +5.2 pp |
+| FIFO 6K vs HERMES 50K | 11 | 5 | +2.4 pp | 0.2101 | −0.8 to +5.6 pp |
+
+**Assessment:** the result is budget-matched parity. HERMES is not shown to outperform FIFO on aggregate accuracy for this shard. The compressed-versus-50K difference remains statistically inconclusive.
+
+### 22.4 Attention fidelity
+
+| Comparison | Mean cosine | Minimum cosine | Interpretation |
+|---|---:|---:|---|
+| Current manual vs native | 0.6368 | 0.2204 | Large combined effect from no causal mask and no residual/MLP propagation |
+| Causal frozen vs native | 0.7243 | 0.3564 | Causal masking alone does not make frozen-hidden attention native-equivalent |
+| Current manual vs causal frozen | 0.8831 | 0.7628 | Masking omission has a measurable independent effect |
+
+The attention differential should therefore be treated as a **quantified approximation diagnostic**, not as validation that the manual pseudo-query scorer is numerically faithful. Its top-13 overlap is uninformative because the tested prefix had only 13 past tokens.
+
+### 22.5 Audit status changes
+
+| Earlier issue | Status after 28 October update |
+|---|---|
+| Same-environment nondeterminism | **Resolved** — repeats changed 3 correctness outcomes per budget and scored 143/250 |
+| Pseudo-query attention fidelity | **Quantified, not resolved as equivalent** — approximation differences are explicit |
+| FIFO control | **Resolved** — 4K/6K FIFO runs completed and matched HERMES aggregate accuracy |
+| HERMES-specific component benefit | **Unresolved / negatively constrained** — FIFO parity prevents attributing aggregate accuracy to HERMES selection |
+| Final evidence integrity | **Mostly resolved** — 53 payload files verify; three historical manifest files and original ZIP byte stream remain outstanding |
+| Native non-HERMES baseline | **Still unresolved** — no matched full-prefix LLaVA control |
+| Component ablations | **Still pending** — smoothing, summary aggregation, retention policy, and re-indexing remain untested individually |
+| Generalisation | **Still unresolved** — one nonrandom 50-video shard only |
+
+### 22.6 Revised next research plan
+
+1. **Component attribution:** run separate 4K HERMES ablations for cross-layer smoothing, summary-token aggregation, depth-differentiated retention, and positional re-indexing.
+2. **Archive correction:** add the three omitted historical artifacts to a supplemental or versioned final evidence archive; record the new archive hash.
+3. **Native control:** run a matched non-HERMES LLaVA-OneVision-0.5B baseline where context and memory permit, or document a rigorously matched feasible subset.
+4. **Generalisation:** evaluate the surviving configurations on a non-overlapping 50-video shard with the same row/key validation and cluster-aware statistics.
+5. **Full benchmark:** proceed to resumable all-498-video evaluation only after the component and shard gates pass.
+6. **Extension selection:** revisit EDMI or another proposal only after identifying a reproducible compressed-only failure mode that simple FIFO does not address.
 
 ---
 

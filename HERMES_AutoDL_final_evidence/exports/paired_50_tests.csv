@@ -1,0 +1,4 @@
+A,B,n,n_videos,both_correct,both_wrong,A_only_correct,B_only_correct,accuracy_A_pct,accuracy_B_pct,difference_A_minus_B_pp,video_cluster_CI95_low_pp,video_cluster_CI95_high_pp,exact_discordance_p_exploratory
+HERMES_4000,HERMES_6000,250,50,141,103,3,3,57.599999999999994,57.599999999999994,0.0,-2.0,2.0,1.0
+HERMES_4000,HERMES_50000,250,50,134,102,10,4,57.599999999999994,55.2,2.4,0.0,4.8,0.1795654296875
+HERMES_6000,HERMES_50000,250,50,133,101,11,5,57.599999999999994,55.2,2.4,0.0,5.2,0.210113525390625

@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-25T19:06:24.452597+00:00",
+  "scope": "StreamingBench samples 201-250; HERMES KV 4000/6000/50000",
+  "videos": 50,
+  "questions_per_budget": 250,
+  "sample_fps": 0.5,
+  "seed": 2024,
+  "model_id": "llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
+  "model_snapshot_identity": "74dd0bf867a4cda7950c17663794267c60cf4b40",
+  "hermes_url": "https://github.com/haowei-freesky/HERMES.git",
+  "hermes_revision": "8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "transformers_revision": "66bc4def9505fa7c7fe4aa7a248c34a026bb552b",
+  "native_baseline": "not run; incomplete historical baseline deliberately excluded",
+  "full_498_video_benchmark": "not run",
+  "statistical_note": "Exact discordance tests exploratory; CIs use video-cluster bootstrap."
+}

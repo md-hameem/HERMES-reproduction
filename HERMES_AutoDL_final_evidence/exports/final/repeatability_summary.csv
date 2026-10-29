@@ -1,0 +1,3 @@
+kv_budget,n,n_videos,original_correct,repeat_correct,original_accuracy_pct,repeat_accuracy_pct,net_accuracy_change_pp,changed_choices,changed_choice_pct,changed_correctness,changed_correctness_pct,became_correct,became_wrong
+4000,250,50,144,143,57.599999999999994,57.199999999999996,-0.3999999999999986,4,1.6,3,1.2,1,2
+6000,250,50,144,143,57.599999999999994,57.199999999999996,-0.3999999999999986,5,2.0,3,1.2,1,2

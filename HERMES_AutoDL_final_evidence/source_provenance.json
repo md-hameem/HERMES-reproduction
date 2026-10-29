@@ -1,0 +1,6 @@
+{
+  "reproduction_repository": "/root/autodl-tmp/HERMES-reproduction",
+  "reproduction_head": "af79580aab9c2e58b48432cc91088d374a0e0b04",
+  "official_hermes_revision": "8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "verification": "git diff against official commit 8d699b16a6bedb9086c1b39ec4253c6a1d1ce789"
+}
