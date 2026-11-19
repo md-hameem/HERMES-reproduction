@@ -153,10 +153,10 @@ def build_summary(kv, questions, videos, run_summary):
 
 def main():
     parser = argparse.ArgumentParser(description="Extract efficiency metrics from preserved HERMES AutoDL logs")
-    parser.add_argument("--logs-dir", type=Path, default=Path("logs"))
-    parser.add_argument("--results-root", type=Path, default=Path("HERMES/results"))
-    parser.add_argument("--run-summary", type=Path, default=Path("exports/run_summary.csv"))
-    parser.add_argument("--output-dir", type=Path, default=Path("exports/efficiency"))
+    parser.add_argument("--logs-dir", type=Path, default=Path("evidence/autodl_2026-10-25/logs"))
+    parser.add_argument("--results-root", type=Path, default=Path("evidence/autodl_2026-10-25/HERMES/results"))
+    parser.add_argument("--run-summary", type=Path, default=Path("evidence/autodl_2026-10-25/exports/run_summary.csv"))
+    parser.add_argument("--output-dir", type=Path, default=Path("evidence/autodl_2026-10-25/exports/efficiency"))
     parser.add_argument("--budgets", type=int, nargs="+", default=[4000, 6000, 50000])
     args = parser.parse_args()
 

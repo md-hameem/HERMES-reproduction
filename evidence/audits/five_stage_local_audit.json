@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "archive_sha256": "b8bc4cf8a3b28e6854b2e76b8c0239b12d3b5598ee1a07dafc03d0326a900518",
+  "executed_notebook_sha256": "90174597f4132f3b116f3ab1f0d9410b92f655d9017d39b579c741ca1c3e0745",
+  "manifest_payloads": 2921,
+  "preserved_payloads": 53,
+  "new_complete_runs": 25,
+  "validated_video_checkpoints": 1246,
+  "efficiency_video_runs": 60,
+  "shard_counts": [
+    {
+      "shard": "1-50",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "51-100",
+      "videos": 50,
+      "questions": 252
+    },
+    {
+      "shard": "101-150",
+      "videos": 50,
+      "questions": 253
+    },
+    {
+      "shard": "151-200",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "201-250",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "251-300",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "301-350",
+      "videos": 48,
+      "questions": 240
+    },
+    {
+      "shard": "351-400",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "401-450",
+      "videos": 50,
+      "questions": 250
+    },
+    {
+      "shard": "451-500",
+      "videos": 50,
+      "questions": 250
+    }
+  ],
+  "historical_supplement_sha256": "4be19b26c61237860c322c5431090dcafc900aae400b9c0ed8204a2c68aab66a",
+  "full_benchmark": {
+    "n": 2495,
+    "n_videos": 498,
+    "accuracy_A_pct": 62.32464929859719,
+    "accuracy_B_pct": 61.96392785571142,
+    "difference_A_minus_B_pp": 0.36072144288577157,
+    "A_only_correct": 58,
+    "B_only_correct": 49,
+    "video_cluster_CI95_low_pp": -0.48096192384769537,
+    "video_cluster_CI95_high_pp": 1.1627906976744187,
+    "exact_discordance_p_exploratory": 0.43944010177908255
+  },
+  "duplicate_gold_options": [
+    {
+      "sample_id": 463,
+      "video_id": "182",
+      "qa_index": 4,
+      "first_gold": "A"
+    }
+  ],
+  "runner_revisions": [
+    "0ce391ea3fc5faf74d4b47607c0fc9f60fea11125113d537c98a87ee0460cb28",
+    "16dd2f02445609c06b36e77ea3be49b0a9d4c5bfc95c7f9b8fc14e3972fba786",
+    "a4b0c4cfa0b1187983b5756cbe98ec15f48e3581a6e079750bdb4c6fc0712066"
+  ],
+  "warnings": [
+    "Three historical payloads are absent from the embedded October bundle; their original hashes verify in evidence/archives/historical_evidence_supplement.zip.",
+    "The executed notebook sources omit live patches; completion outputs and archived runner document recovery, so Run All reproducibility is not established for that snapshot.",
+    "Full-benchmark results reuse October 201-250 outputs and November generalization outputs across sessions/hardware.",
+    "One duplicate gold option in sample 463 uses first-match option A, matching the inference code.",
+    "Native full-prefix LLaVA and a corrected-attention QA treatment remain unmeasured.",
+    "Timing event scopes are nested; pseudo-query and pruning durations must not be added to compression-path time."
+  ]
+}

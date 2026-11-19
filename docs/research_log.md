@@ -4,15 +4,17 @@
 
 | | |
 |---|---|
-| **Project Status** | Ongoing reproduction, validation, and extension study |
-| **Primary Environment** | Kaggle · Tesla T4 GPU |
+| **Project Status** | Five-stage reproduction and control study completed and audited; thesis synthesis and extension decision pending |
+| **Primary Environment** | AutoDL RTX 4090 for November five-stage study; earlier Kaggle T4 and AutoDL RTX 4080-family runs retained |
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
 | **Framework** | HERMES VideoQA inference pipeline |
-| **Current Benchmark Scale** | StreamingBench subset: 50 videos / 250 questions |
-| **Last Updated** | 26 October 2026 |
-| **Supporting Documents** | [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
+| **Current Benchmark Scale** | Full StreamingBench real-time visual annotations, 498 videos / 2,495 questions per method |
+| **Last Updated** | 19 November 2026 |
+| **Supporting Documents** | [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---
+
+Current status and evidence locations are summarized in [PROJECT_STATUS.md](PROJECT_STATUS.md). Sections 1–31 retain their dated historical assessments. Section 32 records the completed five-stage study.
 
 ## Table of Contents
 
@@ -46,6 +48,8 @@
 28. [Artifact Intake and Verification Update — 13 October 2026](#28-artifact-intake-and-verification-update--13-october-2026)
 29. [AutoDL Preservation and Kaggle Cross-Platform Comparison — 25 October 2026](#29-autodl-preservation-and-kaggle-cross-platform-comparison--25-october-2026)
 30. [AutoDL Efficiency Extraction — 26 October 2026](#30-autodl-efficiency-extraction--26-october-2026)
+31. [Final AutoDL Controls — 28 October 2026](#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026)
+32. [Five-stage completion and local audit — 19 November 2026](#32-five-stage-completion-and-local-audit--19-november-2026)
 
 ---
 
@@ -925,7 +929,7 @@ A dedicated research backup was created.
 
 The reproducibility package includes:
 
-- `results/`
+- `results/kaggle/`
 - `data/`
 - raw experiment logs,
 - source-code snapshot,
@@ -1162,7 +1166,7 @@ The next stage is to determine whether this finding remains stable on the full b
 
 # 18. Literature Context and Related Work
 
-> *Sourced from the [Comprehensive Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md). Full bibliographic details, including author lists and venue information, are available in that document.*
+> *Sourced from the [Comprehensive Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md). Full bibliographic details, including author lists and venue information, are available in that document.*
 
 ## 18.1 Streaming Video Understanding and KV-Cache Management
 
@@ -1204,7 +1208,7 @@ The next stage is to determine whether this finding remains stable on the full b
 
 # 19. HERMES Deep Mechanistic Analysis
 
-> *Synthesized from the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Report C.*
+> *Synthesized from the [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md), Report C.*
 
 ## 19.1 Layer-Wise Attention Dynamics
 
@@ -1299,7 +1303,7 @@ The summary token is appended to the layer's KV-cache, ensuring cumulative backg
 
 # 20. Cross-Paper Technical Comparison
 
-> *Complete comparison profiles from the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Report D.*
+> *Complete comparison profiles from the [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md), Report D.*
 
 | Dimension | HERMES | InfiniPot | StreamFlow |
 |---|---|---|---|
@@ -1351,7 +1355,7 @@ Phase 5: Internal Hierarchical & Dynamics-Aware Architectures (2026 — Frontier
 
 # 22. Reproduction Audit and Evidence Assessment
 
-> *Sourced from the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), prepared 9 October 2026.*
+> *Sourced from the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), prepared 9 October 2026.*
 
 ## 22.1 Executive Assessment
 
@@ -1416,7 +1420,7 @@ The project log records two successful ZIP integrity checks, but neither ZIP has
 
 # 23. Risks, Inconsistencies, and Open Issues
 
-> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 11.*
+> *From the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 11.*
 
 | Priority | Issue | Consequence | Resolution Required |
 |---|---|---|---|
@@ -1439,7 +1443,7 @@ The project log records two successful ZIP integrity checks, but neither ZIP has
 
 # 24. Phased Next-Stage Research Plan
 
-> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 12. The plan is deliberately gated: do not spend substantial GPU resources on the full dataset until cheap code and analysis checks pass.*
+> *From the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 12. The plan is deliberately gated: do not spend substantial GPU resources on the full dataset until cheap code and analysis checks pass.*
 
 ## Phase 0 — Recover and Freeze the Real Executable Experiment (No GPU)
 
@@ -1494,7 +1498,7 @@ Select an extension based on observed cases where the full model succeeds but co
 
 # 25. Experimental Design Specifications
 
-> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 13.*
+> *From the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 13.*
 
 ## 25.1 Mandatory Controls
 
@@ -1546,7 +1550,7 @@ gpu_peak_allocated_gb, gpu_peak_reserved_gb
 
 # 26. Candidate Research Extensions
 
-> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 15 and the [Technical Research Report](docs/HERMES_Comprehensive_Technical_Research_Report.md), Reports F–H. These are hypotheses to consider only after code-fidelity and matched-baseline stages are complete.*
+> *From the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 15 and the [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md), Reports F–H. These are hypotheses to consider only after code-fidelity and matched-baseline stages are complete.*
 
 ## 26.1 Critical Research Gaps Identified
 
@@ -1586,7 +1590,7 @@ Choose the simplest candidate that (a) addresses reproducible compressed-only fa
 
 # 27. Deliverables and Completion Criteria
 
-> *From the [Reproduction Audit](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 16.*
+> *From the [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md), Section 16.*
 
 | Priority | Deliverable | Completion Test |
 |---|---|---|
@@ -1619,11 +1623,11 @@ Choose the simplest candidate that (a) addresses reproducible compressed-only fa
 
 ## 28.1 Scope and provenance
 
-This update records an audit of the **43 newly added, currently untracked Git files** and treats `harmes-redep-chp1.ipynb` as the latest executed notebook record. The notebook contains 201 cells (175 code cells; 174 with recorded execution counts) and was last modified locally on 13 October 2026 after a Kaggle execution dated 12 October 2026.
+This update records an audit of the **43 newly added, currently untracked Git files** and treats `notebooks/archive/kaggle/harmes-redep-chp1.ipynb` as the latest executed notebook record. The notebook contains 201 cells (175 code cells; 174 with recorded execution counts) and was last modified locally on 13 October 2026 after a Kaggle execution dated 12 October 2026.
 
 The added bundle contains:
 
-- **25 tabular/raw-result artifacts** under `results/`, including per-question prediction CSVs, aggregate summaries, task/duration analyses, and a 10-video paired-test table;
+- **25 tabular/raw-result artifacts** under `results/kaggle/`, including per-question prediction CSVs, aggregate summaries, task/duration analyses, and a 10-video paired-test table;
 - **8 PNG figures** derived from the saved tables;
 - **7 StreamingBench inference logs** (six 10-video budget runs and the 50-video 4K run); and
 - **3 custom-video smoke-test logs** for 500, 4K, and 50K budgets.
@@ -1644,7 +1648,7 @@ The raw prediction CSVs are now the primary local evidence for the reported accu
 
 The legacy smoke folders are aliases rather than independent observations: `kaggle_4000` and `kaggle_4k` are byte-identical, as are `kaggle_50000`/`kaggle_50k` and `kaggle_500`/`kaggle_smoke`. They should be retained only once when packaging a final archive.
 
-The file `results/final_kv_ablation_table.csv` labels the 50K condition as `Baseline-50000`. This label is historically inconsistent with the project interpretation rule: it must be called the **near-uncompressed HERMES control**, not a native LLaVA baseline.
+The file `results/kaggle/final_kv_ablation_table.csv` labels the 50K condition as `Baseline-50000`. This label is historically inconsistent with the project interpretation rule: it must be called the **near-uncompressed HERMES control**, not a native LLaVA baseline.
 
 ## 28.3 Newly completed 50-video paired analysis
 
@@ -1678,7 +1682,7 @@ The priority order is therefore:
 
 ## 29.1 Scope and canonical run
 
-A fresh three-budget AutoDL run completed StreamingBench samples 201–250 on 25 October 2026. The canonical executed workflow is `hermes-v2-autodl.ipynb`; its raw outputs are preserved separately from the earlier Kaggle generation under `HERMES/results/`, `logs/`, and `exports/`.
+A fresh three-budget AutoDL run completed StreamingBench samples 201–250 on 25 October 2026. The canonical executed workflow is `notebooks/autodl/hermes-v2-autodl.ipynb`; its raw outputs are preserved separately from the earlier Kaggle generation under `evidence/autodl_2026-10-25/HERMES/results/`, `evidence/autodl_2026-10-25/logs/`, and `evidence/audits/`.
 
 | Component | AutoDL value |
 |---|---|
@@ -1702,7 +1706,7 @@ The notebook checked every output row against its source `(video_id, qa_index)`,
 | 6000 | 144/250 | 57.6% | 28.26 min |
 | 50000 | 138/250 | 55.2% | 31.05 min |
 
-These runtimes describe an RTX 4080 SUPER and must not be compared directly with Kaggle Tesla T4 runtimes as a hardware-independent efficiency result. Accuracy and paired correctness are summarized in `exports/hermes_50_accuracy.csv`, `exports/paired_50_tests.csv`, and `exports/all_three_50_correctness.csv`.
+These runtimes describe an RTX 4080 SUPER and must not be compared directly with Kaggle Tesla T4 runtimes as a hardware-independent efficiency result. Accuracy and paired correctness are summarized in `evidence/autodl_2026-10-25/exports/hermes_50_accuracy.csv`, `evidence/autodl_2026-10-25/exports/paired_50_tests.csv`, and `evidence/autodl_2026-10-25/exports/all_three_50_correctness.csv`.
 
 ## 29.3 Evidence preservation and integrity
 
@@ -1718,13 +1722,13 @@ The notebook recorded the original AutoDL evidence archive as 331,830 bytes with
 ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120
 ```
 
-The original ZIP byte stream was not present locally. `HERMES_AutoDL_50_evidence.zip` was therefore repacked from the extracted payload after every file passed `exports/manifest_sha256.csv`. CRC and per-member content-hash checks passed. The repacked archive also contains 331,830 bytes but has a distinct SHA-256:
+The original ZIP byte stream was not present locally. `HERMES_AutoDL_50_evidence.zip` was therefore repacked from the extracted payload after every file passed `evidence/autodl_2026-10-25/exports/manifest_sha256.csv`. CRC and per-member content-hash checks passed. The repacked archive also contains 331,830 bytes but has a distinct SHA-256:
 
 ```text
 23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183
 ```
 
-The two hashes are intentionally not treated as interchangeable. `exports/kaggle_autodl_50_comparison_provenance.json` records notebook identity, raw source-CSV hashes, comparison-artifact hashes, and both archive identities.
+The two hashes are intentionally not treated as interchangeable. `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_provenance.json` records notebook identity, raw source-CSV hashes, comparison-artifact hashes, and both archive identities.
 
 ## 29.4 Kaggle versus AutoDL alignment
 
@@ -1755,7 +1759,7 @@ The accuracy change therefore cannot be explained by one universal prediction fl
 | 6000 | 23 | 2 | D, wrong | C, correct | AutoDL gain |
 | 6000 | 306 | 4 | D, wrong | A, correct | AutoDL gain |
 
-All 13 choice-discordant rows, including the additional KV=6000 wrong-to-wrong change, are preserved in `exports/kaggle_autodl_50_discordant_predictions.csv`. Aggregate counts are in `exports/kaggle_autodl_50_comparison_summary.csv`.
+All 13 choice-discordant rows, including the additional KV=6000 wrong-to-wrong change, are preserved in `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_discordant_predictions.csv`. Aggregate counts are in `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_summary.csv`.
 
 ## 29.5 Interpretation: nondeterminism remains a hypothesis
 
@@ -1788,7 +1792,7 @@ Run:
 python scripts/extract_efficiency.py
 ```
 
-The command writes `exports/efficiency/autodl_50_efficiency_summary.csv`, `autodl_50_question_metrics.csv` (750 rows), `autodl_50_video_metrics.csv` (150 rows), and `autodl_50_efficiency_provenance.json`. Provenance records hashes of the logs, result CSVs, run summary, extractor, and generated tables. Validation confirmed all original `exports/manifest_sha256.csv` entries and byte-identical CSV regeneration.
+The command writes `evidence/autodl_2026-10-25/exports/efficiency/autodl_50_efficiency_summary.csv`, `autodl_50_question_metrics.csv` (750 rows), `autodl_50_video_metrics.csv` (150 rows), and `autodl_50_efficiency_provenance.json`. Provenance records hashes of the logs, result CSVs, run summary, extractor, and generated tables. Validation confirmed all original `evidence/autodl_2026-10-25/exports/manifest_sha256.csv` entries and byte-identical CSV regeneration.
 
 ## 30.2 Extracted results
 
@@ -1841,7 +1845,7 @@ The final AutoDL workflow completed the planned controls without rerunning the t
 | Final summary JSON SHA-256 | `3c9027ec47e9497fe50c71cb7189f3c1b614a367976f3abb4c4f91b61fb92c30` |
 | Notebook-reported final archive SHA-256 | `6767e82c1c53d7fe5df399448ceb4a20c03cbb2188dc0d2fa57f02ba834005c3` |
 
-The final evidence payload is stored under `HERMES_AutoDL_final_evidence/`. The notebook-reported ZIP byte stream was not present in the local upload, so only the extracted payload and manifest could be verified.
+The final evidence payload is stored under `evidence/autodl_2026-10-28/`. The notebook-reported ZIP byte stream was not present in the local upload, so only the extracted payload and manifest could be verified.
 
 ## 31.2 Consolidated accuracy and efficiency
 
@@ -1868,7 +1872,7 @@ The identical-environment repeats directly tested the nondeterminism hypothesis 
 | 4000 | 144 | 143 | 4 | 3 | 1 | 2 |
 | 6000 | 144 | 143 | 5 | 3 | 1 | 2 |
 
-The changed cases are preserved in `HERMES_AutoDL_final_evidence/exports/repeat1/repeat1_changed_cases.csv`. Most instability is concentrated in prospective- and causal-reasoning questions, consistent with numerically close decision boundaries rather than wholesale context loss.
+The changed cases are preserved in `evidence/autodl_2026-10-28/exports/repeat1/repeat1_changed_cases.csv`. Most instability is concentrated in prospective- and causal-reasoning questions, consistent with numerically close decision boundaries rather than wholesale context loss.
 
 This establishes **same-platform prediction instability** for the HERMES generation path. It does not by itself quantify the separate contribution of GPU architecture because the Kaggle model snapshot remains unpreserved; however, it makes the earlier small Kaggle–AutoDL differences much less surprising.
 
@@ -1927,11 +1931,11 @@ TTFT is less stable. For example, original HERMES 4K has median TTFT 0.0408 s, w
 
 Three archival warnings remain:
 
-1. `exports/figures/accuracy_50.png` was not repackaged.
-2. `exports/figures/paired_differences_50.png` was not repackaged.
-3. `exports/hermes_50_by_task.csv` was not repackaged.
+1. `evidence/autodl_2026-10-25/exports/figures/accuracy_50.png` was not repackaged.
+2. `evidence/autodl_2026-10-25/exports/figures/paired_differences_50.png` was not repackaged.
+3. `evidence/autodl_2026-10-25/exports/hermes_50_by_task.csv` was not repackaged.
 
-The source copies remain in the repository, and the omissions do not affect the seven raw result files. A supplemental or corrected archive should be created before treating `HERMES_AutoDL_final_evidence` as fully self-contained.
+The source copies remain in the repository, and the omissions do not affect the seven raw result files. A supplemental or corrected archive should be created before treating `evidence/autodl_2026-10-28` as fully self-contained.
 
 The executed notebook also differs from commit `af79580`: it contains AutoDL network activation, a direct pinned PyTorch wheel installation, and a `DynamicCache` compatibility patch for the native attention reference. Its outputs validate, but it is not an unmodified clean-room rerun of the committed notebook.
 
@@ -1951,3 +1955,44 @@ Next:
 3. Evaluate a non-overlapping 50-video shard using the validated repeat/FIFO/ablation protocol.
 4. Proceed to resumable all-498-video evaluation only after component and shard-generalization evidence is available.
 5. Consider EDMI or another extension only after those controls establish which HERMES components, if any, produce measurable benefits beyond simple budget restriction.
+
+
+# 32. Five-stage completion and local audit — 19 November 2026
+
+The full benchmark completed on 18 November at 23:51 China Standard Time. The uploaded archive and executed work file were independently audited locally on 19 November. The recorded GPU is NVIDIA GeForce RTX 4090, 24,564 MiB. The pinned model, official HERMES revision and Transformers revision agree with the earlier reproduction.
+
+## 32.1 Completed stages and results
+
+| Experiment | HERMES | Comparison | Finding |
+|---|---:|---:|---|
+| Samples 251–300, 4K | 148/250, 59.2% | FIFO 145/250, 58.0% | +1.2 pp, clustered interval −1.2 to +3.6 |
+| Samples 251–300, 6K | 144/250, 57.6% | FIFO 143/250, 57.2% | +0.4 pp, clustered interval −2.4 to +3.2 |
+| Samples 251–300, 50K | 141/250, 56.4% | Large-budget HERMES control | Completed |
+| Full real-time visual benchmark, 4K | 1,555/2,495, 62.3246% | FIFO 1,546/2,495, 61.9639% | +0.3607 pp, clustered interval −0.4810 to +1.1628, exact paired p = 0.43944 |
+
+The full comparison includes 498 videos, with 58 HERMES-only correct and 49 FIFO-only correct questions. Samples 201–250 reuse October original results and 251–300 reuse the new generalization runs. The remaining eight shards were completed for both methods. The full accuracy aggregation spans multiple sessions and hardware.
+
+The four 4K ablations on samples 251–300 score 59.2% without smoothing, 59.2% without summaries, 58.4% with uniform layer retention and 57.6% without positional reindexing. Full HERMES scores 59.2%. Every paired ablation interval includes zero.
+
+Real-video attention uses 16 frames, 3,136 visual tokens, 24 layers and three queries. Current-versus-native mean cosine is 0.5593 and mean retained-token Jaccard is 0.6503 at budget 256. The 216 numerical metric rows and 72 selection rows are verified. Corrected-attention QA accuracy remains unmeasured.
+
+Interleaved timing completed 60 video runs on ten videos with three repetitions per method. Median video wall time is 165.883 s for HERMES and 164.079 s for FIFO. Compression-path totals over 30 runs per method are 54.872 s and 2.227 s. Peak allocated memory is approximately 4.689 GiB for both. Pruning and pseudo-forward timings are nested within the compression path. Repeated timing predictions use the same ten videos.
+
+## 32.2 Recovery and audit
+
+The shard partitions contain 250, 252, 253, 250, 250, 250, 240, 250, 250 and 250 questions. Samples 301–350 have 48 videos. Numeric-looking answers require CSV text preservation. Sample 463, question index 4, repeats the gold option in A and C, and the evaluator follows inference's first-match convention A. These fixes have been incorporated into the maintained notebook. The executed source snapshot retains earlier definitions, so fresh Run All reproducibility remains unverified.
+
+The independent audit verifies all 2,921 archive payloads, all 53 previous payloads against local October evidence, 25 new complete runs, 1,246 video checkpoints, completion logs, source/config hashes, 18 accuracy rows, task breakdowns, paired bootstrap statistics and all 60 timing runs. The three runner revisions differ only by the recorded CSV and duplicate-option validator fixes. The three omitted historical files have been recovered in `evidence/archives/historical_evidence_supplement.zip` and match their original manifest hashes.
+
+The executed notebook is organized under `notebooks/executed/2026-11-18_hermes-five-stage-autodl.ipynb`. The archive is stored under `evidence/archives/`, with its ignored local extraction under `evidence/local/five_stage/` and published summaries under `results/five_stage/`. The audit result is `evidence/audits/five_stage_local_audit.json` and can be reproduced with `python scripts/validate_five_stage_evidence.py`.
+
+## 32.3 Current research position
+
+All five execution stages are complete. The full-benchmark results leave a HERMES accuracy benefit and equivalence unestablished. They support a measured reproduction and control study under the tested model and budget. Thesis synthesis, a corrected-attention QA treatment, a feasible native baseline and clean replay verification remain open. Any original extension remains a separate research decision. [Current status and artifact index](PROJECT_STATUS.md)
+
+
+## 32.4 GitHub repository organization
+
+The repository was reorganized on 19 November 2026 for publication. AutoDL and Kaggle workflows, historical notebooks and the executed work file are under `notebooks/`. The October evidence packages are under `evidence/autodl_2026-10-25/` and `evidence/autodl_2026-10-28/`, preserving internal manifest paths. The original five-stage archive and historical supplement are under `evidence/archives/`. The local full extraction is under `evidence/local/five_stage/` and is excluded from Git. Compact new results are under `results/five_stage/`, historical Kaggle results under `results/kaggle/`, and historical Kaggle logs under `logs/kaggle/`.
+
+Research writing, figures and literature are collected under `docs/`. Command defaults and the maintained AutoDL workflow follow the new paths. The dated executed notebooks retain their original bytes. Generated Python bytecode has been removed from Git tracking. [Repository layout](../README.md) · [Evidence index](../evidence/README.md)

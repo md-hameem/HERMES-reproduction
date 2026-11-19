@@ -1,0 +1,2 @@
+A,B,n,n_videos,accuracy_A_pct,accuracy_B_pct,difference_A_minus_B_pp,A_only_correct,B_only_correct,video_cluster_CI95_low_pp,video_cluster_CI95_high_pp,exact_discordance_p_exploratory
+HERMES_4000,FIFO_4000,2495,498,62.32464929859719,61.96392785571142,0.36072144288577157,58,49,-0.48096192384769537,1.1627906976744187,0.43944010177908255

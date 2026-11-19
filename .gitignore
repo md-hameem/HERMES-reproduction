@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 models/
+.ipynb_checkpoints/
+evidence/local/
+data/**/videos/

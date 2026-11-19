@@ -23,19 +23,66 @@
 
 ## 📋 Reproduction Study
 
-This fork contains an independent **reproduction, validation, and control study** of HERMES on Kaggle Tesla T4 and AutoDL RTX 4080-family infrastructure.
+This fork contains an independent **reproduction, validation, and control study** of HERMES on Kaggle Tesla T4 and AutoDL RTX 4080-family and RTX 4090 infrastructure.
+
+### Repository layout
+
+```text
+HERMES/
+├── inference/             # HERMES model and KV-cache implementation
+├── video_qa/              # Video ingestion and question-answering entry points
+├── eval/                  # Benchmark evaluators
+├── scripts/               # Inference launchers and evidence validators
+├── data/                  # Annotations and smoke-test assets
+├── notebooks/             # AutoDL, Kaggle, executed and historical notebooks
+├── evidence/              # Dated evidence, original archives and local audits
+├── results/               # Published five-stage summaries and historical Kaggle results
+├── logs/                  # Historical Kaggle logs
+├── docs/                  # Research writing, figures and related papers
+├── asset/                 # Project logo
+├── models/                # Local model snapshots, excluded from Git
+├── requirements_*.txt
+├── CHANGELOG.md
+├── LICENSE
+└── README.md
+```
+
+The original five-stage ZIP is stored once under `evidence/archives/`. Its full local extraction lives under `evidence/local/` and is excluded from Git. Reader-facing summaries and figures are published under `results/five_stage/`. Notebook workflows and evidence commands are indexed in their directories. [Notebooks](notebooks/README.md) · [Evidence](evidence/README.md)
 
 ### Overview
 
 | | |
 |---|---|
-| **Environments** | Kaggle · single Tesla T4; AutoDL · single RTX 4080 SUPER or RTX 4080, depending on session |
+| **Environments** | Kaggle Tesla T4; AutoDL RTX 4080 SUPER / RTX 4080 for October and RTX 4090 for the five-stage study |
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
-| **Benchmark** | StreamingBench samples 201–250 (50 videos / 250 questions) |
+| **Benchmark** | Full StreamingBench real-time visual annotations, 498 videos / 2,495 questions per method |
 | **KV Budgets Tested** | 500, 1K, 2K, 4K, 6K, 50K |
-| **Canonical original 50-video workflow** | [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) |
-| **Final control workflow** | [`hermes-final-autodl.ipynb`](./hermes-final-autodl.ipynb) |
-| **Status** | Two preserved HERMES generations plus same-hardware repeats, attention differential, and FIFO controls; component ablations and broader shards pending |
+| **Canonical original 50-video workflow** | [`notebooks/autodl/hermes-v2-autodl.ipynb`](notebooks/autodl/hermes-v2-autodl.ipynb) |
+| **Final control workflow** | [`notebooks/autodl/hermes-final-autodl.ipynb`](notebooks/autodl/hermes-final-autodl.ipynb) |
+| **Five-stage workflow** | [`notebooks/autodl/hermes-five-stage-autodl-cache-fix.ipynb`](notebooks/autodl/hermes-five-stage-autodl-cache-fix.ipynb) |
+| **Executed work file** | [`2026-11-18_hermes-five-stage-autodl.ipynb`](notebooks/executed/2026-11-18_hermes-five-stage-autodl.ipynb) |
+| **Status** | All five stages completed and independently audited on 19 November 2026 |
+
+### Five-stage evidence verified on 19 November 2026
+
+The completed AutoDL study includes real-video attention validation, generalization on samples 251–300, four component ablations, 60 interleaved timing runs and the full 498-video real-time visual benchmark.
+
+| Primary full-benchmark comparison | Correct / questions | Accuracy |
+|---|---:|---:|
+| HERMES 4K | 1,555 / 2,495 | 62.3246% |
+| FIFO 4K | 1,546 / 2,495 | 61.9639% |
+
+The observed difference is +0.3607 percentage points with a 95% video-cluster interval of −0.4810 to +1.1628 points and an exploratory exact paired p = 0.43944. An accuracy advantage remains unestablished for this configuration. The generalization shard gives 59.2% for HERMES 4K and 58.0% for FIFO 4K. All four component-ablation intervals include zero.
+
+The real-video diagnostic changes retained-token sets, with mean current-versus-native Jaccard 0.6503 across 24 layers. A corrected-attention QA treatment remains outstanding. In the interleaved study, median video wall time is 165.883 s for HERMES and 164.079 s for FIFO, and peak allocated memory is approximately 4.689 GiB for both. Whole-video and compression-path timings use different scopes.
+
+The archive audit checked 2,921 payload files, 25 new runs, 1,246 video checkpoints, raw timing events, full aggregation, paired statistics and attention selection sets. Full-benchmark accuracy reuses the October 201–250 evidence across sessions and hardware. The executed notebook required live validator and shard fixes. A fresh Run All replay of the maintained workflow remains unverified. The three older archival omissions have been recovered in a separate supplement with their original hashes.
+
+```bash
+python scripts/validate_five_stage_evidence.py
+```
+
+The current status page describes completed work, remaining research and the evidence layout. The original uploaded ZIP, published summaries and executed notebook are indexed there. [Project status](docs/PROJECT_STATUS.md) · [Local audit](evidence/audits/five_stage_local_audit.json) · [Archive report](results/five_stage/final_research_report.md)
 
 ### Original Validated AutoDL Run — 25 October 2026
 
@@ -49,7 +96,7 @@ Each run completed all 50 videos and 250 questions. The executed notebook valida
 
 ### AutoDL Efficiency Evidence
 
-The preserved logs were re-parsed with [`scripts/extract_efficiency.py`](./scripts/extract_efficiency.py). All budgets processed the same 829 chunks / 11,434 frames and produced 250 TTFT measurements. Allocated memory is in GiB; outer elapsed time is coarse whole-second video-loop progress, while total runtime includes startup and other notebook subprocess overhead.
+The preserved logs were re-parsed with [`scripts/extract_efficiency.py`](scripts/extract_efficiency.py). All budgets processed the same 829 chunks / 11,434 frames and produced 250 TTFT measurements. Allocated memory is in GiB; outer elapsed time is coarse whole-second video-loop progress, while total runtime includes startup and other notebook subprocess overhead.
 
 | KV budget | Accuracy | Peak allocated GiB | Median TTFT (s) | P95 TTFT (s) | Max cache | Compression events | Outer elapsed | Total runtime |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -59,11 +106,11 @@ The preserved logs were re-parsed with [`scripts/extract_efficiency.py`](./scrip
 
 Relative to the 50K control, 4K has **60.4% lower peak allocated memory**, **21.4% lower median logged TTFT**, **9.5% lower outer elapsed time**, and **92.0% lower maximum answering-cache length**. These are derived from existing AutoDL logs, not new GPU measurements. Reserved memory and isolated encoding/compression durations were not logged; TTFT excludes ingestion and pseudo-query compression and is not end-to-end latency. The process-lifetime allocated-memory counter was not reset per video. The nearly identical 4K/6K TTFT values do not support a monotonic latency claim.
 
-Reproduce the tables with `python scripts/extract_efficiency.py`. Outputs are in [`exports/efficiency/`](./exports/efficiency/): the [summary](./exports/efficiency/autodl_50_efficiency_summary.csv), [750 question rows](./exports/efficiency/autodl_50_question_metrics.csv), [150 video rows](./exports/efficiency/autodl_50_video_metrics.csv), and [hash-checked provenance](./exports/efficiency/autodl_50_efficiency_provenance.json).
+Reproduce the tables with `python scripts/extract_efficiency.py`. Outputs are in [`evidence/autodl_2026-10-25/exports/efficiency/`](evidence/autodl_2026-10-25/exports/efficiency/): the [summary](evidence/autodl_2026-10-25/exports/efficiency/autodl_50_efficiency_summary.csv), [750 question rows](evidence/autodl_2026-10-25/exports/efficiency/autodl_50_question_metrics.csv), [150 video rows](evidence/autodl_2026-10-25/exports/efficiency/autodl_50_video_metrics.csv), and [hash-checked provenance](evidence/autodl_2026-10-25/exports/efficiency/autodl_50_efficiency_provenance.json).
 
 ### Final AutoDL Controls — 28 October 2026
 
-`hermes-final-autodl.ipynb` reused the hash-verified original predictions and added same-hardware HERMES repeats, a differential test of pseudo-query attention, and budget-matched FIFO eviction controls. All seven raw prediction files independently validated for row count, question identity, gold alignment, and parsed-choice agreement.
+`notebooks/autodl/hermes-final-autodl.ipynb` reused the hash-verified original predictions and added same-hardware HERMES repeats, a differential test of pseudo-query attention, and budget-matched FIFO eviction controls. All seven raw prediction files independently validated for row count, question identity, gold alignment, and parsed-choice agreement.
 
 | Method | Correct | Accuracy | Peak allocated GiB | Median TTFT (s) | Max cache | Elapsed |
 |---|---:|---:|---:|---:|---:|---:|
@@ -83,13 +130,13 @@ Key control findings:
 - **Attention differential:** the manual pseudo-query path remains an approximation. Mean cosine similarity is 0.637 against native attention and 0.724 for the causal-masked frozen-hidden variant. The reported top-13 ranking overlap is uninformative because the test had only 13 past tokens.
 - **Efficiency stability:** budget-related peak allocated memory and maximum cache reductions are consistent. Session-to-session TTFT varies, so latency should not be overinterpreted from one process run.
 
-The extracted evidence directory is [`HERMES_AutoDL_final_evidence/`](./HERMES_AutoDL_final_evidence/); its machine-readable summary is [`observed_research_summary.json`](./HERMES_AutoDL_final_evidence/exports/final/observed_research_summary.json). Run the independent audit with:
+The extracted evidence directory is [`evidence/autodl_2026-10-28/`](evidence/autodl_2026-10-28/); its machine-readable summary is [`observed_research_summary.json`](evidence/autodl_2026-10-28/exports/final/observed_research_summary.json). Run the independent audit with:
 
 ```bash
 python scripts/validate_final_evidence.py
 ```
 
-The validator verifies 53 payload files against the final SHA-256 manifest, recomputes all seven accuracy and efficiency tables, reproduces paired statistics, checks attention artifacts, and inspects the executed notebook. It reports three archival warnings: the final bundle omits `exports/figures/accuracy_50.png`, `exports/figures/paired_differences_50.png`, and `exports/hermes_50_by_task.csv` from the embedded historical manifest. These omissions do not affect the new predictions, but the archive should be supplemented before being treated as fully self-contained.
+The validator verifies 53 payload files against the final SHA-256 manifest, recomputes all seven accuracy and efficiency tables, reproduces paired statistics, checks attention artifacts, and inspects the executed notebook. It reports three archival warnings: the final bundle omits `evidence/autodl_2026-10-25/exports/figures/accuracy_50.png`, `evidence/autodl_2026-10-25/exports/figures/paired_differences_50.png`, and `evidence/autodl_2026-10-25/exports/hermes_50_by_task.csv` from the embedded historical manifest. The three omitted files are recovered with their original hashes in the supplemental archive. [Historical supplement](evidence/archives/historical_evidence_supplement.zip)
 
 ### Earlier Kaggle Accuracy and Efficiency Reference
 
@@ -113,7 +160,7 @@ All 750 AutoDL rows were aligned to Kaggle rows by `(video_id, qa_index)`, with 
 | 6000 | 57.2% → 57.6% | 10 | 9 | 5 | 4 |
 | 50000 | 55.2% → 55.2% | 0 | 0 | 0 | 0 |
 
-The net one-question gain at 4K and 6K is **not a single changed question**. The detailed 13-row choice-discordance export is [`exports/kaggle_autodl_50_discordant_predictions.csv`](./exports/kaggle_autodl_50_discordant_predictions.csv), and aggregate counts are in [`exports/kaggle_autodl_50_comparison_summary.csv`](./exports/kaggle_autodl_50_comparison_summary.csv). Cross-GPU numerical nondeterminism is plausible, but it is not proven without a repeated identical-environment run and a fully matched Kaggle model snapshot.
+The net one-question gain at 4K and 6K is **not a single changed question**. The detailed 13-row choice-discordance export is [`evidence/autodl_2026-10-25/exports/kaggle_autodl_50_discordant_predictions.csv`](evidence/autodl_2026-10-25/exports/kaggle_autodl_50_discordant_predictions.csv), and aggregate counts are in [`evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_summary.csv`](evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_summary.csv). Cross-GPU numerical nondeterminism is plausible, but it is not proven without a repeated identical-environment run and a fully matched Kaggle model snapshot.
 
 ### AutoDL Provenance and Evidence
 
@@ -128,10 +175,13 @@ The net one-question gain at 4K and 6K is **not a single changed question**. The
 | Original AutoDL archive SHA-256 | `ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120` |
 | Locally repacked archive SHA-256 | `23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183` |
 
-The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive was repacked locally from files that all passed the original [`exports/manifest_sha256.csv`](./exports/manifest_sha256.csv) checks. It has the same payload and byte size as the original archive but a different ZIP byte stream. [`exports/kaggle_autodl_50_comparison_provenance.json`](./exports/kaggle_autodl_50_comparison_provenance.json) records source-CSV hashes, comparison hashes, notebook identity, and both archive hashes.
+The historical `HERMES_AutoDL_50_evidence.zip` was repacked from files that passed the original manifest checks. That ZIP is absent from the current checkout. Its payload is preserved within the later evidence packages and the historical supplement. The recorded original and repacked hashes describe different ZIP byte streams. [Historical manifest](evidence/autodl_2026-10-25/exports/manifest_sha256.csv) [`evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_provenance.json`](evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_provenance.json) records source-CSV hashes, comparison hashes, notebook identity, and both archive hashes.
 
 ### Completed Work
 
+- Five-stage AutoDL study with full 498-video HERMES/FIFO 4K comparison
+- Real-video attention selection diagnostic, second-shard generalization, four component ablations and interleaved timing
+- Independent five-stage evidence audit and recovery of the three historical archival omissions
 - Full HERMES inference pipeline on Kaggle T4 and AutoDL RTX 4080-family GPUs
 - Transformers/Qwen2 RoPE compatibility fixes and pinned source checks
 - Custom-video smoke test with KV compression validation
@@ -147,18 +197,18 @@ The [`HERMES_AutoDL_50_evidence.zip`](./HERMES_AutoDL_50_evidence.zip) archive w
 - Reproducibility packaging with raw CSVs, logs, source/model revisions, and SHA-256 manifests
 - Reproducible AutoDL efficiency extraction with question/video tables and provenance hashes
 
-### Next Experiments
+### Remaining research and writing
 
-1. Run one-at-a-time HERMES component ablations for cross-layer smoothing, summary tokens, differentiated shallow/middle/deep retention, and positional re-indexing.
-2. Supplement or repackage the final evidence archive with the three historical files missing from its embedded preserved manifest.
-3. Evaluate a non-overlapping 50-video shard before resumable shard-wise evaluation of all 498 videos.
-4. Develop research extensions only after the component-ablation and generalization evidence is established.
+1. Complete the thesis analysis around the audited full-benchmark and component results.
+2. Evaluate a corrected-attention QA variant if attributing answer-quality effects to the pseudo-query scorer.
+3. Establish a matched feasible native LLaVA control if making claims against the base model.
+4. Verify clean replay of the maintained workflow and decide the scope of any original extension with the advisor.
 
-The native full-prefix baseline remains incomplete and excluded where memory or context limits are exceeded. Inputs must not be silently truncated to force a comparison.
+The detailed status page records the current evidence limits and completed stages. [Project status](docs/PROJECT_STATUS.md)
 
 ### Quick Start
 
-For the validated 50-video workflow, use [`hermes-v2-autodl.ipynb`](./hermes-v2-autodl.ipynb) and run its cells in order on AutoDL.
+For the current five-stage workflow and its audit, start with [Project status](docs/PROJECT_STATUS.md). For the historical 50-video workflow, use [`notebooks/autodl/hermes-v2-autodl.ipynb`](notebooks/autodl/hermes-v2-autodl.ipynb) and run its cells in order on AutoDL.
 
 The legacy Kaggle pilot is:
 
@@ -174,18 +224,19 @@ The legacy script requires local video-path and annotation-subset setup; it is n
 
 | Document | Description |
 |---|---|
-| [`research_log.md`](./research_log.md) | Complete research log (31 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
-| [`CHANGELOG.md`](./CHANGELOG.md) | Dated project changelog for major reproduction, evidence, control, and documentation milestones |
-| [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](./docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, EDMI proposal, and 28 October control update |
-| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](./docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (22 sections), risk assessment, AutoDL verification, efficiency evidence, final controls, and next experiments |
+| [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) | Current results, five completed stages, evidence index, limitations and remaining work |
+| [`docs/research_log.md`](docs/research_log.md) | Complete research log (32 sections) — development timeline, all experimental results, mechanistic analysis, audit findings, and phased research plan |
+| [`CHANGELOG.md`](CHANGELOG.md) | Dated project changelog for major reproduction, evidence, control, and documentation milestones |
+| [`docs/HERMES_Comprehensive_Technical_Research_Report.md`](docs/HERMES_Comprehensive_Technical_Research_Report.md) | Literature review, deep HERMES mechanistic analysis, cross-paper comparisons, field evolution roadmap, research gaps, EDMI proposal, and November five-stage update |
+| [`docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md`](docs/HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) | Independent reproduction audit with evidence grading (23 sections), risk assessment, AutoDL verification, efficiency evidence, final controls, and next experiments |
 
 ### Interpretation Guidelines
 
 1. KV=50000 is a **near-uncompressed HERMES control**, not the original LLaVA baseline — it still executes through the HERMES pipeline and triggered 79 compression events on the Kaggle 50-video run.
 2. The 50-video subset is a **convenience shard** (samples 201–250), not a random or stratified sample of the full benchmark.
 3. Task distribution is heavily imbalanced (Causal + Prospective Reasoning = 80.4% of questions).
-4. Accuracy differences should be interpreted alongside their confidence intervals and the clustered nature of 5 questions per video.
-5. Kaggle used a Tesla T4; AutoDL used an RTX 4080 SUPER for the original run and an RTX 4080 for the final control run. Do not directly compare their runtimes as hardware-independent results.
+4. Accuracy differences should be interpreted alongside their confidence intervals and clustering by video. Question counts vary across the full benchmark.
+5. Kaggle used a Tesla T4; AutoDL used an RTX 4080 SUPER for the original run, an RTX 4080 for October controls and an RTX 4090 for the new five-stage study. Do not directly compare their runtimes as hardware-independent results.
 6. Small cross-platform and same-platform prediction differences are now a quantified reproducibility limitation, not evidence of a semantic improvement.
 7. The 28 October FIFO controls match HERMES aggregate accuracy on this shard; do not claim HERMES-specific selection benefits without component-ablation support.
 8. The pseudo-query attention differential quantifies approximation error; it does not establish numerical equivalence to native transformer attention.
@@ -193,7 +244,7 @@ The legacy script requires local video-path and annotation-subset setup; it is n
 
 ### Experimental Plots
 
-All experimental figures are stored in the [`img/`](./img/) directory and embedded in the research log. AutoDL accuracy and paired-difference figures are in [`exports/figures/`](./exports/figures/).
+All experimental figures are stored in the [`docs/figures/`](docs/figures/) directory and embedded in the research log. AutoDL accuracy and paired-difference figures are in [`evidence/autodl_2026-10-25/exports/figures/`](evidence/autodl_2026-10-25/exports/figures/).
 
 ---
 
@@ -262,67 +313,7 @@ Download the benchmark videos from their official sources and place them accordi
 
 The annotation JSON files contain the same information as officially provided, with formatting adjustments to adapt to our codebase.
 
-After preparation, the project structure should look like this:
-
-```
-HERMES/
-├── asset/
-│   └── logo.png
-├── data/
-│   ├── egoschema/
-│   │   ├── videos/
-│   │   └── egoschema.json
-│   ├── mvbench/
-│   │   ├── videos/
-│   │   └── mvbench.json
-│   ├── ovobench/
-│   │   ├── videos/
-│   │   └── ovobench_realtime_backeward.json
-│   ├── rvs/
-│   │   ├── ego/
-│   │   │   ├── videos/
-│   │   │   └── ego4d_oe.json
-│   │   └── movie/
-│   │       ├── videos/
-│   │       └── movienet_oe.json
-│   ├── streamingbench/
-│   │   ├── videos/
-│   │   └── streamingbench_realtime.json
-│   └── videomme/
-│       ├── videos/
-│       └── videomme.json
-├── docs/                          # Reproduction study documents
-│   ├── HERMES_Comprehensive_Technical_Research_Report.md
-│   └── HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md
-├── eval/
-│   ├── eval_multiple_choice.py
-│   └── eval_open_ended.py
-├── img/                           # Experimental plots and figures
-├── inference/
-│   ├── abstract_hermes.py
-│   ├── llavaov_hermes.py
-│   ├── qwenvl_hermes.py
-│   ├── reindex_1d.py
-│   └── reindex_3d.py
-├── models/
-│   └── ...
-├── scripts/
-│   ├── download_subset.py
-│   ├── run_infer.sh
-│   └── run_kaggle.sh
-├── video_qa/
-│   ├── base.py
-│   ├── hermes_vqa.py
-│   └── run_infer.py
-├── LICENSE
-├── README.md
-├── research_log.md                # Full reproduction research log
-├── requirements_cpu.txt
-├── requirements_kaggle.txt
-├── requirements_llava.txt
-└── requirements_qwen.txt
-```
-
+The annotation paths describe the runtime video locations. Downloaded video directories and model snapshots are excluded from Git. The repository layout is listed above.
 
 ## 🚀 Inference
 

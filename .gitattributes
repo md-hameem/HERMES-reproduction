@@ -1,8 +1,7 @@
-HERMES/** -text
-exports/** -text
+# Preserve exact bytes for evidence manifests and executed notebooks.
+evidence/** -text whitespace=cr-at-eol
+results/** -text
 logs/** -text
-HERMES_AutoDL_final_evidence/** -text
+*.ipynb -text
 data/streamingbench_50_autodl.json -text
-hermes-v2-autodl.ipynb -text
-hermes-final-autodl.ipynb -text
 *.zip binary

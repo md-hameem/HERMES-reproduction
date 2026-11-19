@@ -3,13 +3,15 @@
 **Document type:** Research audit and forward plan  
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
-**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4 and AutoDL RTX 4080-family GPUs<br>
-**Evidence cutoff:** 28 October 2026; two preserved 50-video result generations, same-hardware repeats, attention differential, FIFO controls, raw CSVs/logs, statistical and efficiency exports, and integrity manifests<br>
-**Assessment status:** **Successful subset reproduction with verified repeatability and budget-matched FIFO parity; native baseline, component attribution, and generalisation not yet established**
+**Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4, AutoDL RTX 4080-family GPUs and AutoDL RTX 4090<br>
+**Evidence cutoff:** 19 November 2026, including the completed five-stage archive, executed notebook and independent local audit<br>
+**Assessment status:** **Full real-time visual benchmark and all five planned execution stages completed and audited. Primary HERMES/FIFO accuracy interval includes zero. Native baseline, corrected-attention QA and clean replay verification remain open.**
 
 > **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. Section 21 adds reproducible efficiency extraction from the preserved AutoDL logs. Section 22 adds the final same-hardware repeatability run, pseudo-query attention differential, FIFO controls, and independent evidence validator. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. Reported measurements remain associated with their original hardware and execution session.
 
 ---
+
+The current project index records evidence locations and pending work. Historical assessments retain their original dates. [Project status](PROJECT_STATUS.md)
 
 ## Contents
 
@@ -34,6 +36,8 @@
 19. [Artifact intake and verification update — 13 October 2026](#19-artifact-intake-and-verification-update--13-october-2026)
 20. [AutoDL verification and cross-platform prediction audit — 25 October 2026](#20-autodl-verification-and-cross-platform-prediction-audit--25-october-2026)
 21. [AutoDL efficiency evidence — 26 October 2026](#21-autodl-efficiency-evidence--26-october-2026)
+22. [Final AutoDL controls — 28 October 2026](#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026)
+23. [Five-stage intake and independent verification — 19 November 2026](#23-five-stage-intake-and-independent-verification--19-november-2026)
 22. [Final AutoDL controls, repeatability, attention fidelity, and FIFO baseline — 28 October 2026](#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026)
 
 ---
@@ -422,8 +426,8 @@ Annotate each discordant example with **(a)** question time, **(b)** event time,
 | **High** | Gold-answer history contamination not formally ruled out | Guidance prompts include question/answer conversation summaries | Would compromise the meaning of accuracy if gold answers leak | Trace actual history-writing and prediction-input code path |
 | **Medium** | Some saved-output cells lack execution counts | Notebook provenance | Ambiguity in chronological rebuild | Fresh-kernel run and exported execution manifest |
 | **Medium** | Conditional skip checks file non-emptiness only | Cells 137, 156, 158, 160 | Partial/old CSV could be reused | Validate 250 unique keys, expected IDs, completion marker and hash |
-| **Medium** | Pilot result sometimes labelled “Baseline-50000” | Old notebook display/cell text; confirmed in `results/final_kv_ablation_table.csv` (13 Oct) | Overclaiming model baseline | Correct figures and prose to “HERMES 50K control” |
-| **Medium** | Figures are linked relative to Kaggle file tree | Research log references 15 images; 20 PNGs now present in local `img/` | Markdown alone cannot reproduce charts visually | **Partially resolved** — figures locally available; verify completeness |
+| **Medium** | Pilot result sometimes labelled “Baseline-50000” | Old notebook display/cell text; confirmed in `results/kaggle/final_kv_ablation_table.csv` (13 Oct) | Overclaiming model baseline | Correct figures and prose to “HERMES 50K control” |
+| **Medium** | Figures are linked relative to Kaggle file tree | Research log references 15 images; 20 PNGs now present in local `docs/figures/` | Markdown alone cannot reproduce charts visually | **Partially resolved** — figures locally available; verify completeness |
 | **Medium** | Individual HERMES mechanisms not ablated locally | Budget tests only | Cannot determine which component drives benefits | Ablate smoothing, summaries, position policy, and importance scoring |
 | **Medium** | Reported TTFT excludes unspecified components | Logged `TTFT` only | Incomplete real-time claims | Measure ingestion cost, latency percentiles, total wall time, token throughput |
 
@@ -683,11 +687,11 @@ Choose the simplest candidate that (a) addresses **reproducible compressed-only 
 
 ### 17.2 Figures referenced in the project log
 
-The log references **15 figures** (updated from 14 as of 10 October 2026), including the initial smoke-test cache/memory/TTFT charts; 10-video video-duration/task distribution; 50-video duration/task distribution; 10-video accuracy/memory/TTFT/trade-off figures; 50-video accuracy and task results; and the pilot error task distribution. As of 13 October 2026, **20 PNG files are present in the local `img/` directory** and 8 additional figures exist under `results/figures/`. The research log embeds figures from `img/` using relative paths. The figures can be regenerated from raw result data if needed.
+The log references **15 figures** (updated from 14 as of 10 October 2026), including the initial smoke-test cache/memory/TTFT charts; 10-video video-duration/task distribution; 50-video duration/task distribution; 10-video accuracy/memory/TTFT/trade-off figures; 50-video accuracy and task results; and the pilot error task distribution. As of 13 October 2026, **20 PNG files are present in the local `docs/figures/` directory** and 8 additional figures exist under `results/kaggle/figures/`. The research log embeds figures from `docs/figures/` using relative paths. The figures can be regenerated from raw result data if needed.
 
 ### 17.3 How to hand over the project for the next analysis
 
-Prefer uploading **the 144-file research backup ZIP** (or extracted `results/`, `data/`, `logs/`, `HERMES_source/` with manifest) over the 445-file full Kaggle directory archive if transfer size is a concern. The **mandatory minimum** is the three 50-video result CSVs, the three logs, the benchmark JSON, `source_changes.diff`, and the effective `video_qa/base.py` file. With those files, question-level findings can be recomputed without additional inference cost.
+Prefer uploading **the 144-file research backup ZIP** (or extracted `results/kaggle/`, `data/`, `evidence/autodl_2026-10-25/logs/`, `HERMES_source/` with manifest) over the 445-file full Kaggle directory archive if transfer size is a concern. The **mandatory minimum** is the three 50-video result CSVs, the three logs, the benchmark JSON, `source_changes.diff`, and the effective `video_qa/base.py` file. With those files, question-level findings can be recomputed without additional inference cost.
 
 **Update (13 October 2026):** 43 artifact files have now been added to the local repository, including all raw prediction CSVs, aggregate summaries, inference logs, and figures. The raw prediction CSVs are now the primary local evidence for the reported accuracy values. However, the 50-video 6K and 50K logs are still missing from the local bundle — their raw prediction CSVs support accuracy analysis, but memory/TTFT values for those two runs cannot be independently re-parsed from a saved raw log. Legacy smoke-result aliases (`kaggle_4000`/`kaggle_4k`, `kaggle_50000`/`kaggle_50k`, `kaggle_500`/`kaggle_smoke`) are byte-identical and should be retained only once in the final release archive.
 
@@ -705,13 +709,13 @@ The boundary of what can responsibly be claimed is equally important. The exact 
 
 ## 19. Artifact intake and verification update — 13 October 2026
 
-> *This section was appended following the verification of 43 newly added, previously untracked files in the local repository. See [`research_log.md` Section 28](../research_log.md#28-artifact-intake-and-verification-update--13-october-2026) for the primary record.*
+> *This section was appended following the verification of 43 newly added, previously untracked files in the local repository. See [`docs/research_log.md` Section 28](research_log.md#28-artifact-intake-and-verification-update--13-october-2026) for the primary record.*
 
 ### 19.1 Scope
 
 The 43 files comprise:
 
-- **25 tabular/raw-result artifacts** under `results/`, including per-question prediction CSVs for all budget configurations, aggregate summaries, task/duration analyses, and the 10-video paired-test table
+- **25 tabular/raw-result artifacts** under `results/kaggle/`, including per-question prediction CSVs for all budget configurations, aggregate summaries, task/duration analyses, and the 10-video paired-test table
 - **8 PNG figures** derived from the saved tables
 - **7 StreamingBench inference logs** (six 10-video budget runs and the 50-video 4K run)
 - **3 custom-video smoke-test logs** for 500, 4K, and 50K budgets
@@ -751,7 +755,7 @@ The following items from Section 11 have been partially or fully addressed:
 | Original issue | Updated status (13 Oct) |
 |---|---|
 | No completed 50-video paired table | **Partially resolved** — discordance counts available; stable question IDs and cluster bootstrap still needed |
-| Figures linked to missing Kaggle paths | **Resolved** — 20 PNGs now present in local `img/` directory; 8 additional in `results/figures/` |
+| Figures linked to missing Kaggle paths | **Resolved** — 20 PNGs now present in local `docs/figures/` directory; 8 additional in `results/kaggle/figures/` |
 | "Baseline-50000" labelling | **Confirmed** in `final_kv_ablation_table.csv`; correction still needed |
 | Conditional skip checks | **Partially addressed** — 250 unique rows verified per CSV; completion marker and hash validation not yet done |
 
@@ -778,13 +782,13 @@ A fresh AutoDL execution completed all three HERMES configurations on the same S
 | HERMES revision | `8d699b16a6bedb9086c1b39ec4253c6a1d1ce789`; clean tracked-source check passed |
 | Transformers revision | `66bc4def9505fa7c7fe4aa7a248c34a026bb552b` |
 | Model snapshot | `74dd0bf867a4cda7950c17663794267c60cf4b40` |
-| Executed notebook | `hermes-v2-autodl.ipynb` |
+| Executed notebook | `notebooks/autodl/hermes-v2-autodl.ipynb` |
 | Notebook SHA-256 | `8a2bd96900d2ecc6ab55a1674f69d9b1fd29fe7d0bfb23a8dd1646ac2e64d739` |
 | Validation | 250 source-aligned rows per budget; all three inference return codes zero |
 
 The AutoDL results are 144/250 (57.6%) at KV=4000, 144/250 (57.6%) at KV=6000, and 138/250 (55.2%) at KV=50000. Recorded total runtimes are 28.17, 28.26, and 31.05 minutes respectively. These are RTX 4080 SUPER measurements and are not directly comparable with Tesla T4 timings.
 
-The notebook recorded original archive SHA-256 `ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120`. A local `HERMES_AutoDL_50_evidence.zip` was repacked from the manifest-verified payload and passed CRC and per-member content-hash validation. Its distinct SHA-256 is `23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183`. The original and repacked ZIP identities are explicitly distinguished in `exports/kaggle_autodl_50_comparison_provenance.json`.
+The notebook recorded original archive SHA-256 `ae13e9f66f2d9e8a7202d0ebb64bf761c173aa1d667cdce626dd2e72cfd01120`. A local `HERMES_AutoDL_50_evidence.zip` was repacked from the manifest-verified payload and passed CRC and per-member content-hash validation. Its distinct SHA-256 is `23ffbd2612c8424fcf2c295bbd3018f2a0b9560e102042235f9896c78f12e183`. The original and repacked ZIP identities are explicitly distinguished in `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_provenance.json`.
 
 ### 20.2 Positional Kaggle–AutoDL comparison
 
@@ -796,7 +800,7 @@ All comparisons used `(video_id, qa_index)`, not question text alone. Metadata i
 | 6000 | 57.2% → 57.6% | 10 | 9 | 5 | 4 |
 | 50000 | 55.2% → 55.2% | 0 | 0 | 0 | 0 |
 
-The net one-question difference at 4K and 6K is not a single discordant question. At 4K, AutoDL gains on videos 183/QA2 and 376/QA2 but loses on video 266/QA4, where raw answer `20)` is parsed as invalid choice `0`. At 6K, five gains and four losses occur, plus one wrong-to-wrong choice change. Full rows are preserved in `exports/kaggle_autodl_50_discordant_predictions.csv`; counts are in `exports/kaggle_autodl_50_comparison_summary.csv`.
+The net one-question difference at 4K and 6K is not a single discordant question. At 4K, AutoDL gains on videos 183/QA2 and 376/QA2 but loses on video 266/QA4, where raw answer `20)` is parsed as invalid choice `0`. At 6K, five gains and four losses occur, plus one wrong-to-wrong choice change. Full rows are preserved in `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_discordant_predictions.csv`; counts are in `evidence/autodl_2026-10-25/exports/kaggle_autodl_50_comparison_summary.csv`.
 
 Cross-GPU numerical nondeterminism is plausible, particularly for prospective-reasoning questions, but remains unproven. No identical-environment repeat exists, and the Kaggle model snapshot identity was not preserved. The identical 50K outputs are useful negative evidence against a blanket claim that every prediction changes across hardware.
 
@@ -806,7 +810,7 @@ Cross-GPU numerical nondeterminism is plausible, particularly for prospective-re
 |---|---|
 | Missing 50-video 6K/50K raw logs | **Resolved for AutoDL** — all three logs are present and hashed |
 | Stable question identity | **Resolved for AutoDL and this comparison** — validated `(video_id, qa_index)` keys |
-| Video-cluster paired analysis | **Resolved for AutoDL** — `exports/paired_50_tests.csv` and casebook preserved |
+| Video-cluster paired analysis | **Resolved for AutoDL** — `evidence/autodl_2026-10-25/exports/paired_50_tests.csv` and casebook preserved |
 | Source and model provenance | **Strong for AutoDL** — source, Transformers, model snapshot, notebook, CSVs, and archive identities recorded |
 | Cross-platform prediction stability | **Newly quantified, cause unresolved** — repeat run required |
 | Native baseline | **Still incomplete** — partial full-prefix predictions are not a valid 250-question control |
@@ -830,9 +834,9 @@ No native-baseline input should be silently truncated to bypass memory or contex
 
 ### 21.1 Extraction and integrity
 
-The recovered AutoDL logs have now been re-parsed locally using `scripts/extract_efficiency.py`; no new GPU inference was performed. The extractor validates 250 answer segments per run, aligns rows by `(video_id, qa_index)`, checks identical chunk/frame workloads across budgets, and writes question-level, video-level, and summary tables under `exports/efficiency/` with source/output SHA-256 provenance.
+The recovered AutoDL logs have now been re-parsed locally using `scripts/extract_efficiency.py`; no new GPU inference was performed. The extractor validates 250 answer segments per run, aligns rows by `(video_id, qa_index)`, checks identical chunk/frame workloads across budgets, and writes question-level, video-level, and summary tables under `evidence/autodl_2026-10-25/exports/efficiency/` with source/output SHA-256 provenance.
 
-All three runs contain 250 TTFT values, 829 encoding chunks, 11,434 encoded frames, and 50 completed videos. The three generated CSVs were byte-identical on regeneration, and every original entry in `exports/manifest_sha256.csv` still matches its recorded size and hash.
+All three runs contain 250 TTFT values, 829 encoding chunks, 11,434 encoded frames, and 50 completed videos. The three generated CSVs were byte-identical on regeneration, and every original entry in `evidence/autodl_2026-10-25/exports/manifest_sha256.csv` still matches its recorded size and hash.
 
 ### 21.2 Results and comparison with the 50K control
 
@@ -859,7 +863,7 @@ Efficiency extraction is therefore complete. Same-environment repeatability, pse
 
 ### 22.1 Evidence and provenance
 
-The final control run reused the three hash-verified original AutoDL HERMES configurations and added four new full-shard generations plus an attention differential. The raw evidence is preserved in `HERMES_AutoDL_final_evidence/`; the primary narrative record is [`research_log.md` Section 31](../research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026).
+The final control run reused the three hash-verified original AutoDL HERMES configurations and added four new full-shard generations plus an attention differential. The raw evidence is preserved in `evidence/autodl_2026-10-28/`; the primary narrative record is [`docs/research_log.md` Section 31](research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026).
 
 | Item | Value |
 |---|---|
@@ -888,7 +892,7 @@ The final-control run was executed on an RTX 4080, while the earlier preserved r
 - FIFO source isolation from pseudo-query selection and summary aggregation.
 - Final summary/provenance consistency and executed-notebook completion.
 
-The validator reports three archival warnings: `exports/figures/accuracy_50.png`, `exports/figures/paired_differences_50.png`, and `exports/hermes_50_by_task.csv` are referenced by the embedded historical manifest but omitted from the final evidence bundle. Local source copies remain available. The final ZIP byte stream itself was not uploaded, so the notebook-reported archive hash is preserved as provenance but could not be byte-verified locally.
+The validator reports three archival warnings: `evidence/autodl_2026-10-25/exports/figures/accuracy_50.png`, `evidence/autodl_2026-10-25/exports/figures/paired_differences_50.png`, and `evidence/autodl_2026-10-25/exports/hermes_50_by_task.csv` are referenced by the embedded historical manifest but omitted from the final evidence bundle. Local source copies remain available. The final ZIP byte stream itself was not uploaded, so the notebook-reported archive hash is preserved as provenance but could not be byte-verified locally.
 
 ### 22.3 Accuracy, repeatability, and paired controls
 
@@ -955,3 +959,39 @@ The attention differential should therefore be treated as a **quantified approxi
 ---
 
 *Prepared as a project-specific audit, not an assertion that the uploaded HERMES paper or notebook has been reproduced on this machine. Future updates should append results to this report with the date, experiment ID, input hashes, source revision, and evidence status rather than overwriting historical findings.*
+
+
+## 23. Five-stage intake and independent verification — 19 November 2026
+
+### 23.1 Evidence received and verified
+
+The five-stage ZIP contains 2,921 SHA-256 manifest payloads. Every entry verifies. All 53 embedded October payloads are byte-identical to the existing final evidence directory. All 25 new completion records, 1,246 video checkpoints, annotation identities, config/source hashes, completion logs, 18 accuracy rows, task tables, paired bootstrap statistics and 60 interleaved video runs validate independently. The executed work file reports the exact uploaded ZIP hash and final completion marker. The local audit script compiles archived scripts without executing them.
+
+The archive SHA-256 is `b8bc4cf8a3b28e6854b2e76b8c0239b12d3b5598ee1a07dafc03d0326a900518`. The executed notebook SHA-256 is `90174597f4132f3b116f3ab1f0d9410b92f655d9017d39b579c741ca1c3e0745`. The raw ZIP, extracted directory, work file, audit output and supplemental archive are indexed in the current status document. [Project status](PROJECT_STATUS.md)
+
+### 23.2 Research findings
+
+| Evidence | Observed result | Interpretation |
+|---|---|---|
+| Full real-time visual benchmark | HERMES 1,555/2,495, FIFO 1,546/2,495 | +0.3607 pp, video-cluster 95% interval −0.4810 to +1.1628, exploratory exact paired p = 0.43944 |
+| Non-overlapping samples 251–300 | 4K HERMES 59.2%, FIFO 58.0%; 6K HERMES 57.6%, FIFO 57.2% | Both matched paired intervals include zero |
+| Four component ablations | 59.2%, 59.2%, 58.4%, 57.6%, versus full HERMES 59.2% | Single-shard effects remain inconclusive in every paired comparison |
+| Real-video attention | Mean cosine 0.5593 and retained-token Jaccard 0.6503, current versus native | Numerical approximation changes selection in this one-chunk diagnostic |
+| Interleaved timing | Median video wall 165.883 s HERMES, 164.079 s FIFO | No observed HERMES wall-time benefit in this timing workload |
+
+### 23.3 Provenance and validation limitations
+
+Full accuracy combines reused October samples 201–250, new generalization samples 251–300 and eight newly evaluated shards. The aggregate spans sessions and hardware. Interleaved timing is assessed within its own matched session. Prune and pseudo-forward timers are nested inside the compression path.
+
+The three archived runner revisions reconstruct exactly from two validation-only fixes, CSV text preservation and duplicate-option acceptance consistent with first-match gold. Notebook kernel patches also replaced fixed shard-size assumptions. The executed notebook sources retain earlier definitions, and the ZIP's notebook is an earlier source snapshot. Fresh Run All execution of the maintained workflow still needs verification. Per-video config hashes agree with each run's final config, and their source hashes agree with the checked-out inference files after newline normalization.
+
+Sample 463 repeats the gold text in A and C. First-match A was used throughout inference and local validation. The real-time visual dataset has 498 videos and 2,495 questions, with 48 annotated videos in the 301–350 range and variable question counts. The three old archival omissions have been recovered with matching original hashes in a separate supplement. Full visual assets, model weights and raw attention tensors require retrieval to repeat GPU computation.
+
+### 23.4 Revised remaining work
+
+The execution and evidence-audit stages are complete. The current research work is to write the thesis with the observed effect sizes and uncertainty, evaluate a corrected-attention QA treatment if making scorer-quality claims, establish a matched feasible native-model baseline if making base-model claims, and verify clean replay. Generalization and component experiments are completed within their measured scopes. EDMI has no measured implementation in the submitted evidence. [Full findings and remaining work](PROJECT_STATUS.md)
+
+
+### 23.5 Publication layout
+
+The current source tree separates notebooks, evidence, published results and research writing. The original five-stage ZIP is canonical under `evidence/archives/`, and its full local extraction is ignored under `evidence/local/five_stage/`. The October evidence directories preserve their internal manifest paths under `evidence/`. The executed work file is under `notebooks/executed/`, with exact-byte Git attributes. The maintained workflow and validator defaults were updated to the reorganized layout. Summaries and figures are accessible under `results/five_stage/`. [Evidence index](../evidence/README.md)

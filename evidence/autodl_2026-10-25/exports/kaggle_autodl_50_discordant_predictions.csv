@@ -1,0 +1,14 @@
+kv_budget,video_id,qa_index,question,task,correct_choice,kaggle_pred_choice,autodl_pred_choice,kaggle_pred_answer,autodl_pred_answer,kaggle_qa_acc,autodl_qa_acc,change_type
+4000,183,2,What might the speaker discuss next?,Prospective Reasoning,D,C,D,C) The significance of the y-axis.,D) What ordered pairs represent.,0.0,100.0,autodl_gain
+4000,376,2,What might the speaker discuss next?,Prospective Reasoning,B,A,B,A) The formula for compound interest.,B) Why the two way get the same answer.,0.0,100.0,autodl_gain
+4000,266,4,What might the speaker explain next?,Prospective Reasoning,C,C,0,C) Subtract 20 from 20.,20),100.0,0.0,kaggle_gain
+6000,183,2,What might the speaker discuss next?,Prospective Reasoning,D,D,C,D) What ordered pairs represent.,C) The significance of the y-axis.,100.0,0.0,kaggle_gain
+6000,93,2,What might the speaker explain next?,Prospective Reasoning,B,D,B,D) The method used to calculate the average precipitation.,B) The meaning of the scale on the graph.,0.0,100.0,autodl_gain
+6000,93,3,What might the speaker explain next?,Prospective Reasoning,D,D,B,D) The overall trend of investment income throughout the year.,B) How the fluctuation in investment income impacts yearly analysis.,100.0,0.0,kaggle_gain
+6000,427,0,What might the speaker explain next?,Prospective Reasoning,A,A,D,A) How to find the Mean of a data set.,D) Steps to calculate the mode.,100.0,0.0,kaggle_gain
+6000,3,2,What might the speaker explain next?,Prospective Reasoning,B,A,B,A) How to calculate the area of the rectangle.,B) How to find the perimeter of a rectangle.,0.0,100.0,autodl_gain
+6000,367,4,What might the speaker do next?,Prospective Reasoning,D,D,A,D) Solve for the unknown angle.,A) Discuss the properties of isosceles triangles.,100.0,0.0,kaggle_gain
+6000,376,2,What might the speaker discuss next?,Prospective Reasoning,B,A,B,A) The formula for compound interest.,B) Why the two way get the same answer.,0.0,100.0,autodl_gain
+6000,146,4,Why does the purple bunny character decide to chase Mr. Bean?,Causal Reasoning,A,C,D,C) Because Mr. Bean accidentally stepped on the bunny's foot.,D) Because Mr. Bean broke the bunny's favorite toy.,0.0,0.0,wrong_answer_change
+6000,23,2,Why does the wall have green patterns painted on it?,Causal Reasoning,C,D,C,"D) Because the wall was originally green, and someone tried to cover it up",C) Because the man applied green paint using a teddy bear attached to a,0.0,100.0,autodl_gain
+6000,306,4,Why Mr. Bean now only pays 0.85 pounds?,Causal Reasoning,A,D,A,D) Because he found some extra change in his pocket to cover the cost.,A) Because Mr. Bean cleared his mileage before.,0.0,100.0,autodl_gain

@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-18T15:51:37.874651+00:00",
+  "reproduction_head": "b2357a0287e5968917ae60161a9d40d4baee8025",
+  "official_hermes_revision": "8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "transformers_revision": "66bc4def9505fa7c7fe4aa7a248c34a026bb552b",
+  "model_snapshot": "74dd0bf867a4cda7950c17663794267c60cf4b40",
+  "sample_fps": 0.5,
+  "seed": 2024,
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 580.105.08",
+  "python": "3.12.3",
+  "scope": {
+    "prior_videos": 50,
+    "generalization_videos": 50,
+    "ablation_videos": 50,
+    "efficiency_video_runs": 60,
+    "full_videos": 498,
+    "full_questions": 2495
+  },
+  "full_primary_comparison": "HERMES_4000 vs FIFO_4000",
+  "native_llava_baseline": false,
+  "near_uncompressed_50K_is_native_baseline": false,
+  "optional_50K_status": [
+    {
+      "name": "HERMES_50000",
+      "status": "completed"
+    }
+  ],
+  "source_verification": "byte comparison with official pinned archive 8d699b16a6bedb9086c1b39ec4253c6a1d1ce789",
+  "official_tracked_source_modified": false
+}

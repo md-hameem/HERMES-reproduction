@@ -204,8 +204,8 @@ def validate_notebook(notebook):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--evidence-dir", default="HERMES_AutoDL_final_evidence")
-    parser.add_argument("--notebook", default="hermes-final-autodl.ipynb")
+    parser.add_argument("--evidence-dir", default=str(Path(__file__).resolve().parents[1] / "evidence/autodl_2026-10-28"))
+    parser.add_argument("--notebook", default=str(Path(__file__).resolve().parents[1] / "notebooks/autodl/hermes-final-autodl.ipynb"))
     args = parser.parse_args()
     base = Path(args.evidence_dir)
 

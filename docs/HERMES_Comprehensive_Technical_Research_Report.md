@@ -1,9 +1,9 @@
 # Comprehensive Technical Research Report: Hierarchical KV-Cache Management, Multimodal Streaming Video Understanding, and Advanced Agent Architectures
 
 > **Document status:** Living reference document for the HERMES reproduction project<br>
-> **Last updated:** 28 October 2026<br>
-> **Companion documents:** [`research_log.md`](../research_log.md) (31 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (22 sections) · [Changelog](../CHANGELOG.md)<br>
-> **Reproduction status:** 50-video / 250-question StreamingBench subset reproduced on Kaggle and AutoDL; same-hardware repeats, pseudo-query attention differential, and FIFO controls completed; component ablations, native baseline, broader shards, and full benchmark remain pending
+> **Last updated:** 19 November 2026<br>
+> **Companion documents:** [`docs/research_log.md`](research_log.md) (32 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (23 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. Native-model baseline, corrected-attention QA and clean replay verification remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
 
 # Report A: Complete Literature Catalogue and Taxonomic Categorization
 
@@ -264,7 +264,7 @@ $$v_{sum}^{(l)} = \frac{1}{\mid \mathcal{E}_l\mid} \sum_{i \in \mathcal{E}_l} v_
 
 * **Experimental Findings:** Evaluated on an NVIDIA A800 (80GB) GPU using LLaVA-OneVision-7B and Qwen2.5-VL-7B backbones. HERMES maintains a constant Time to First Token (TTFT < 30 ms) across $10^4$ continuous frames, delivering a 10× latency reduction compared to retrieval-based systems. It prunes up to 68% of visual tokens while yielding an absolute accuracy gain of up to 11.4% on streaming benchmarks over uncompressed baselines.
 
-* **Reproduction Status (This Project):** An independent reproduction using LLaVA-OneVision-Qwen2-0.5B on a Kaggle Tesla T4 GPU has been completed on a 50-video / 250-question StreamingBench subset. Key findings: HERMES at KV=4000 achieved 57.2% accuracy (143/250) with 4.73 GB peak GPU memory and 0.058 s median TTFT, while the 50K near-uncompressed control achieved 55.2% (138/250) with 11.87 GB peak memory and 0.112 s median TTFT. The 50-video paired analysis (completed 13 October 2026) shows only 13 discordant questions between 4K and 50K (9 favour compressed, 4 favour control; exact paired-test p = 0.2668). See [`research_log.md` Sections 8 and 28](../research_log.md#8-50-video-scaled-benchmark) for complete results, and the [Reproduction Audit Section 19](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#19-artifact-intake-and-verification-update--13-october-2026) for artifact verification details.
+* **Reproduction Status (This Project):** An independent reproduction using LLaVA-OneVision-Qwen2-0.5B on a Kaggle Tesla T4 GPU has been completed on a 50-video / 250-question StreamingBench subset. Key findings: HERMES at KV=4000 achieved 57.2% accuracy (143/250) with 4.73 GB peak GPU memory and 0.058 s median TTFT, while the 50K near-uncompressed control achieved 55.2% (138/250) with 11.87 GB peak memory and 0.112 s median TTFT. The 50-video paired analysis (completed 13 October 2026) shows only 13 discordant questions between 4K and 50K (9 favour compressed, 4 favour control; exact paired-test p = 0.2668). See [`docs/research_log.md` Sections 8 and 28](research_log.md#8-50-video-scaled-benchmark) for complete results, and the [Reproduction Audit Section 19](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#19-artifact-intake-and-verification-update--13-october-2026) for artifact verification details.
 
 ## Paper 2: InfiniPot: Context-Aware Pruning for Long-Context LLMs with Multi-Hop Reasoning
 
@@ -692,13 +692,13 @@ class StreamingEDMIHook:
 * **Hardware:** Single Kaggle Tesla T4 GPU via `CUDA_VISIBLE_DEVICES=0`
 * **Sampling:** 0.5 FPS streaming frame ingestion
 * **Metrics Collected:** Accuracy with Wilson CIs, per-question paired correctness, task-level accuracy (9 categories), max GPU memory, median/P95 TTFT, max cache length, compression event counts
-* **Artifacts Verified:** 43 files (25 CSVs, 8 PNGs, 7 inference logs, 3 smoke-test logs) — all locally verified as of 13 October 2026; see [`research_log.md` Section 28](../research_log.md#28-artifact-intake-and-verification-update--13-october-2026)
+* **Artifacts Verified:** 43 files (25 CSVs, 8 PNGs, 7 inference logs, 3 smoke-test logs) — all locally verified as of 13 October 2026; see [`docs/research_log.md` Section 28](research_log.md#28-artifact-intake-and-verification-update--13-october-2026)
 
 ---
 
 # Report I: 28 October 2026 Reproduction Control Update
 
-This update incorporates the final AutoDL evidence into the technical report. The full primary record is [`research_log.md` Section 31](../research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026); the audit assessment is [Reproduction Audit Section 22](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026).
+This update incorporates the final AutoDL evidence into the technical report. The full primary record is [`docs/research_log.md` Section 31](research_log.md#31-final-autodl-repeatability-attention-differential-and-fifo-controls--28-october-2026); the audit assessment is [Reproduction Audit Section 22](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#22-final-autodl-controls-repeatability-attention-fidelity-and-fifo-baseline--28-october-2026).
 
 ## I.1 Control outcomes
 
@@ -729,3 +729,33 @@ The project now has a substantially stronger control package: preserved Kaggle a
 The next technically valuable work is component attribution, not immediate extension development: independently ablate smoothing, summary aggregation, depth-differentiated retention, and positional re-indexing; then validate on a non-overlapping shard.
 
 ---
+
+
+# Report J — Five-stage empirical update, 19 November 2026
+
+## J.1 Full real-time visual benchmark
+
+The completed HERMES/FIFO 4K comparison covers 498 videos and 2,495 questions per method with LLaVA-OneVision-Qwen2-0.5B. HERMES answers 1,555 questions correctly, 62.3246%, and FIFO answers 1,546 correctly, 61.9639%. The difference is +0.3607 percentage points. A 10,000-resample video-cluster bootstrap gives a 95% interval of −0.4810 to +1.1628 points. There are 58 HERMES-only and 49 FIFO-only correct questions, giving exploratory exact paired p = 0.43944. These measurements leave superiority and equivalence unestablished within this configuration.
+
+The aggregate reuses October samples 201–250 and November generalization samples 251–300. Eight remaining shards were evaluated for both methods. Its hardware/session mixture belongs in any thesis presentation of the result.
+
+## J.2 Generalization and component attribution
+
+On samples 251–300, HERMES 4K scores 59.2%, FIFO 4K 58.0%, HERMES 6K 57.6%, FIFO 6K 57.2%, and HERMES 50K 56.4%. The matched 4K difference has a clustered interval of −1.2 to +3.6 points. The four 4K ablations score 59.2% without smoothing, 59.2% without summaries, 58.4% under uniform layer retention and 57.6% without position reindexing. All four paired intervals include zero.
+
+## J.3 Attention fidelity and measured overhead
+
+A real 16-frame visual prefix contains 3,136 visual tokens and is tested at a constraining 256-token retention budget across 24 layers and three queries. Current-versus-native mean attention cosine is 0.5593. Mean selected-set Jaccard is 0.6503. The approximation therefore changes token selection on this prefix. A corrected-attention QA treatment remains unmeasured.
+
+The dedicated efficiency experiment evaluates ten videos for three repetitions per method, yielding 60 video runs. Median video wall time is 165.883 s for HERMES and 164.079 s for FIFO. Total compression-path time is 54.872 s versus 2.227 s over 30 runs each. Both peak at approximately 4.689 GiB allocated memory. Answer-event medians are 0.13885 s and 0.13693 s. Pruning and pseudo-forward timings are nested inside compression-path time. Repeated videos contribute timing replication within this workload.
+
+## J.4 Evidence audit and next work
+
+The local validator checks 2,921 manifest payloads, all 53 October payloads against the earlier package, 25 new complete runs, 1,246 video checkpoints, config/source hashes, completion logs, accuracy/task tables, paired statistics, raw timing events and retained-token sets. The three missing historical artifacts are recovered in a separate supplement with original hashes. The executed notebook sources omit live validation/shard patches, so clean replay remains open despite completed outputs. Sample 463's duplicated gold text is scored using inference's first matching option A.
+
+All five execution stages are complete. Thesis synthesis should foreground the small full-benchmark effect and its interval, the component results, and the observed attention approximation. A native-model comparison and a corrected-attention QA treatment are additional measurements needed for claims about those mechanisms. EDMI remains a research proposal. [Current status and evidence index](PROJECT_STATUS.md)
+
+
+## J.5 Repository publication layout
+
+Research writing and the chronological log are under `docs/`, with figures under `docs/figures/` and literature under `docs/related_papers/`. Workflows and execution records are indexed under `notebooks/`. Dated evidence and the original five-stage archive are indexed under `evidence/`. The local full extraction is excluded from Git and the compact published tables, figures and report are under `results/five_stage/`. [Notebook index](../notebooks/README.md) · [Evidence index](../evidence/README.md)
