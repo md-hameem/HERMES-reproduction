@@ -70,6 +70,8 @@ The [failure-analysis pilot](FAILURE_PILOT.md) has started with a reproducible C
 
 The [new AutoDL notebook](../notebooks/autodl/hermes-causal-scorer-pilot.ipynb) is prepared for a fresh container. A smaller eight-video screen from samples 201–250 defaults to 120 answers across three matched methods, selective downloads, shared features, a mandatory native-attention gate and resumable checkpoints. Nine CPU numerical/safety tests and notebook validation pass. Full CUDA execution and fresh-container installation remain pending; the notebook checks those on the rented GPU.
 
+The RTX 4090 rental planning estimate is 2–3 hours for a fresh default session, including estimated setup/downloads of 20–45 minutes and experiments of 45–120 minutes. These ranges are unmeasured for this notebook. A four-video screen is available with `PER_OUTCOME=1`; its experiment estimate is 30–60 minutes plus setup. The two-hour soft budget excludes setup/downloads and stops between complete video blocks. Preserve the work directory for resumption and download the evidence ZIP before ending the container. Actual elapsed timing will replace these estimates after the first AutoDL execution.
+
 1. Complete thesis synthesis around the audited reproduction, component diagnostics and full-benchmark result, including the null accuracy finding.
 2. Measure a corrected-attention QA treatment if pursuing a claim about the scorer's effect on answer quality. Current attention results establish numerical and selection differences on one video chunk.
 3. Establish a matched native LLaVA baseline on a feasible, explicitly defined context range if making claims against the base model. Current 50K results use the HERMES pipeline.

@@ -10,6 +10,16 @@ The default fast screen selects **eight distinct videos from samples 201–250**
 
 `PER_OUTCOME=1` selects four videos and 60 answers; `2` selects eight and 120; `3` selects twelve and 180. If changing screen size after a run, use a new `WORK` directory to preserve existing human annotations. `MAX_HOURS=2` is a soft inference budget checked between complete three-method video blocks after at least two videos. It excludes installation/downloads and can overrun by one block. A partial result is explicitly labeled and packaged. Increasing the time budget preserves matching checkpoints.
 
+For planning on an RTX 4090, reserve roughly **2–3 hours** for the default fresh-container run. These estimates have not been measured with this notebook on a GPU.
+
+| Phase | Planning estimate |
+|---|---|
+| Fresh environment, model and dataset downloads | 20–45 minutes |
+| Validation and eight-video, three-method experiments | 45–120 minutes |
+| Four-video alternative, `PER_OUTCOME=1` | 30–60 minutes of experiments, plus setup |
+
+Network throughput, source video lengths and GPU performance can move execution outside these ranges. The runner prints an elapsed-time-based estimate after the first complete video block. The two-hour soft budget is not a two-hour total rental guarantee. If the run stops at the budget, keep the same container/data directory and Run All again to reuse validated assets, features and matching checkpoints. Download `HERMES_causal_scorer_pilot_evidence.zip` before deleting the container, including when the run is labeled partial.
+
 The data loader first extracts selected members through validated HTTP byte ranges and ZIP member CRC checks. In this mode, the whole-archive SHA is explicitly unverified; observed video SHA256 values support later resumption. If range requests fail, it downloads only the 2.08 GiB 201–250 archive and verifies its known full SHA256. Both public endpoints accepted range requests during the local preparation check. Network performance and availability can change.
 
 Video chunks are decoded/preprocessed/vision-encoded once into CPU feature files and reused across methods. Native language-model ingestion still runs for each method with its own positions and cache. Mandatory GPU preflight verifies bitwise-equivalent K/V ingestion from cached features and native causal attention agreement before and after actual summary pruning. The fresh scorer propagates hidden states through real decoder layers with explicit causal masks and separate temporary cache lists. It changes only the manual scoring method on the experimental instance; original source files, answering and hierarchy policy stay intact.

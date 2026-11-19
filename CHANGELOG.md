@@ -11,6 +11,7 @@ All notable reproduction, evidence, control, and documentation changes for this 
 - Documented evidence-review, sampling, causal-scorer and separate history-feedback controls. Video inspection and GPU treatments remain pending; no new accuracy improvement is claimed.
 - Added a self-contained fresh-container AutoDL notebook for an eight-video, three-method causal-scorer screen, with pinned isolated setup, sparse source checkout, selective ZIP downloads and full-archive fallback.
 - Added shared-feature ingestion, a layerwise native causal scorer, mandatory GPU preflight, atomic checkpoints, contact sheets and hashed evidence packaging. Nine CPU tests and notebook flow validation pass; complete AutoDL execution remains pending.
+- Documented unmeasured RTX 4090 planning ranges, the optional four-video screen, soft-budget boundaries, resumption and evidence-download steps across the README, notebook index, project status and pilot protocol.
 
 ## 2026-11-19 — Five-stage intake, full-benchmark audit and organization
 
