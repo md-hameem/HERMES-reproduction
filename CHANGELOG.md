@@ -12,6 +12,7 @@ All notable reproduction, evidence, control, and documentation changes for this 
 - Added a self-contained fresh-container AutoDL notebook for an eight-video, three-method causal-scorer screen, with pinned isolated setup, sparse source checkout, selective ZIP downloads and full-archive fallback.
 - Added shared-feature ingestion, a layerwise native causal scorer, mandatory GPU preflight, atomic checkpoints, contact sheets and hashed evidence packaging. Nine CPU tests and notebook flow validation pass; complete AutoDL execution remains pending.
 - Documented unmeasured RTX 4090 planning ranges, the optional four-video screen, soft-budget boundaries, resumption and evidence-download steps across the README, notebook index, project status and pilot protocol.
+- Recorded the first AutoDL setup failure, a timeout downloading the NCCL dependency. Separated domestic package downloads from turbo proxies, added longer timeouts/retries and index fallback, and cached GitHub source separately. Added three mocked routing/fallback tests; GPU QA remains pending.
 
 ## 2026-11-19 — Five-stage intake, full-benchmark audit and organization
 

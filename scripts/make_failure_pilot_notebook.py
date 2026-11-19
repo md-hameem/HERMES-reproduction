@@ -85,6 +85,30 @@ def probe(command, env=None, cwd=None):
     return subprocess.run([str(x) for x in command], env=env, cwd=cwd,
                           text=True, capture_output=True)
 
+def package_environment(base, index='https://pypi.tuna.tsinghua.edu.cn/simple'):
+    # AutoDL turbo is for GitHub/Hugging Face. Domestic package mirrors should
+    # bypass those proxies, especially for large NVIDIA dependency wheels.
+    direct = dict(base)
+    for key in ('HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'NO_PROXY',
+                'http_proxy', 'https_proxy', 'all_proxy', 'no_proxy'):
+        direct.pop(key, None)
+    direct.update(UV_HTTP_TIMEOUT='600', UV_HTTP_RETRIES='5',
+                  UV_CONCURRENT_DOWNLOADS='2', UV_DEFAULT_INDEX=index,
+                  PIP_DEFAULT_TIMEOUT='600', PIP_RETRIES='5')
+    return direct
+
+def install_packages(uv, python, packages, env, extra=()):
+    errors = []
+    for index in ('https://pypi.tuna.tsinghua.edu.cn/simple', 'https://mirrors.aliyun.com/pypi/simple'):
+        try:
+            logged(uv + ['pip', 'install', '--python', python, '--index-url', index]
+                   + list(extra) + list(packages), 'setup.log', package_environment(env, index))
+            return
+        except RuntimeError as exc:
+            errors.append(type(exc).__name__)
+            print('Package download failed; trying alternate domestic index with cached files', flush=True)
+    raise RuntimeError('Package installation failed on both indexes; cached files are preserved. See setup.log.')
+
 if not VALIDATE_ONLY:
     assert sys.platform.startswith('linux'), 'Run this notebook in an AutoDL Linux container'
     WORK.mkdir(parents=True, exist_ok=True)
@@ -141,24 +165,51 @@ assert float((x @ x)[0, 0]) == 16
 print('PINNED_ENV_PASS', torch.__version__, transformers.__version__, torch.cuda.get_device_name(0))
 """
 if not VALIDATE_ONLY:
+    PIP_ENV = package_environment(ENV)
     if not PYTHON.is_file() or probe([PYTHON, '-c', ENV_PROBE], ENV).returncode:
         if probe([sys.executable, '-m', 'uv', '--version'], ENV).returncode:
             attempt = probe([sys.executable, '-m', 'pip', 'install', '-q', 'uv', '-i',
-                             'https://pypi.tuna.tsinghua.edu.cn/simple'], ENV)
+                             'https://pypi.tuna.tsinghua.edu.cn/simple'], PIP_ENV)
             if attempt.returncode:
-                logged([sys.executable, '-m', 'pip', 'install', '-q', 'uv'], 'setup.log', ENV)
+                logged([sys.executable, '-m', 'pip', 'install', '-q', 'uv', '-i',
+                        'https://mirrors.aliyun.com/pypi/simple'], 'setup.log', PIP_ENV)
         UV = [sys.executable, '-m', 'uv']
         if not PYTHON.is_file():
             logged(UV + ['venv', VENV, '--python', '3.12', '--seed'], 'setup.log', ENV)
         def install(packages, extra=()):
-            logged(UV + ['pip', 'install', '--python', PYTHON] + list(extra) + list(packages), 'setup.log', ENV)
+            install_packages(UV, PYTHON, packages, ENV, extra)
         install(['torch @ https://download-r2.pytorch.org/whl/cu128/torch-2.10.0%2Bcu128-cp312-cp312-manylinux_2_28_x86_64.whl'])
         install(['numpy==1.26.4', 'tokenizers==0.19.1', 'huggingface-hub==0.34.4',
                  'accelerate==0.34.2', 'decord==0.6.0', 'logzero', 'pillow',
                  'sentencepiece', 'safetensors', 'packaging', 'filelock', 'regex',
                  'requests', 'pyyaml', 'tqdm', 'fsspec', 'protobuf', 'einops', 'psutil', 'pandas'])
-        # Install the exact Transformers revision used by the audited reproduction.
-        install([f'https://codeload.github.com/huggingface/transformers/zip/{TF_SHA}'], ['--no-deps'])
+        # Download GitHub source with turbo, then install the local archive using
+        # direct package networking for any isolated build dependencies.
+        tf_archive = WORK/'downloads'/f'transformers-{TF_SHA}.zip'
+        tf_archive.parent.mkdir(parents=True, exist_ok=True)
+        if not tf_archive.is_file() or not zipfile.is_zipfile(tf_archive):
+            fetch_tf = r"""
+import sys, urllib.request, zipfile, os, time
+from pathlib import Path
+dest = Path(sys.argv[2]); temp = dest.with_suffix('.download')
+for attempt in range(4):
+    try:
+        with urllib.request.urlopen(sys.argv[1], timeout=180) as source, temp.open('wb') as target:
+            while True:
+                block = source.read(1024 * 1024)
+                if not block: break
+                target.write(block)
+        assert zipfile.is_zipfile(temp), 'Transformers source is not a ZIP'
+        os.replace(temp, dest)
+        break
+    except Exception:
+        if attempt == 3: raise
+        time.sleep(3 * (attempt + 1))
+"""
+            logged([sys.executable, '-c', fetch_tf,
+                    f'https://codeload.github.com/huggingface/transformers/zip/{TF_SHA}', tf_archive],
+                   'source_download.log', ENV)
+        install([str(tf_archive)], ['--no-deps'])
     logged([PYTHON, '-c', ENV_PROBE], 'environment.log', ENV)
     ENV['PYTHONPATH'] = str(REPO) + os.pathsep + str(REPO/'scripts')
     logged([PYTHON, '-m', 'pip', 'freeze'], 'environment_freeze.txt', ENV)
