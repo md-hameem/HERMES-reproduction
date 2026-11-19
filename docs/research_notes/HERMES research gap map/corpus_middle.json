@@ -1,0 +1,569 @@
+[
+  {
+    "filename": "2501.00663v1.pdf",
+    "title": "Titans: Learning to Memorize at Test Time",
+    "year": 2025,
+    "identifier": "arXiv:2501.00663v1",
+    "sha256": "a65e4a7d02784df1a040b487127e6dd09fff4474e5caf94d93263af3d50cfbc2",
+    "pages": 27,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Neural long-term memory",
+    "relevance": "supporting",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Neural memory trained to store historical context through test-time updates; three integration architectures.",
+    "retention_or_core_mechanism": "Surprise-driven nonlinear associative memory plus short-term attention and persistent memory; MAC/MAG/MAL (Sections 3–4).",
+    "evaluation_scope": "Language modeling, reasoning, needle retrieval, genomics and time series; not streaming VideoQA.",
+    "author_stated_limitations": [
+      "p6: more expressive memory architectures suggested as future work."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Training and test-time memory learning make this a different intervention from a frozen VLM cache selector."
+    ],
+    "candidate_gaps": [
+      "Speculative transfer: learned surprise versus cheap evidence-preserving retention; not a claim that surprise memory is original."
+    ],
+    "already_addressed_by": [
+      "Titans itself occupies neural surprise-based memory."
+    ],
+    "cheap_test": "Use a frozen surprise proxy on a small held-out video slice; count all extra forward-pass cost.",
+    "source_urls": [
+      "https://arxiv.org/abs/2501.00663v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2501.05510v2.pdf",
+    "title": "OVO-Bench: How Far is Your Video-LLMs from Real-World Online Video Understanding?",
+    "year": 2025,
+    "identifier": "arXiv:2501.05510v2",
+    "sha256": "dc5fc42ff20c077088a286b56727fb55e4760a25c6fc7f0189338fa56dafdfe8",
+    "pages": 29,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Online video benchmark",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Timestamped online evaluation across backward tracing, real-time understanding and forward active responding.",
+    "retention_or_core_mechanism": "Benchmark protocols rather than retention policy.",
+    "evaluation_scope": "Three scenarios / twelve tasks; latency analysis p8.",
+    "author_stated_limitations": [
+      "p13 Section 9: limited suitable annotations, automatic QA quality and annotation cost constrain diversity and may bias data.",
+      "p13: offline models can score through trivial guesses in forward active responding; benchmark fairness limitation."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Aggregate accuracy can conceal distant-memory failures and active-response timing costs."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: test retention methods separately on backward tracing, present perception and active response, with lag strata."
+    ],
+    "already_addressed_by": [
+      "OVO already supplies this benchmark; a new evaluation slice is not automatically a new method."
+    ],
+    "cheap_test": "Run a preregistered small OVO backward-tracing subset with paired predictions and timestamp assertions.",
+    "source_urls": [
+      "https://arxiv.org/abs/2501.05510v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2502.13923v1.pdf",
+    "title": "Qwen2.5-VL Technical Report",
+    "year": 2025,
+    "identifier": "arXiv:2502.13923v1",
+    "sha256": "399a28f6ed79f4ece29cca93993fceb56fc304b1d779e49392aec05aff45aba5",
+    "pages": 23,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Multimodal backbone",
+    "relevance": "supporting",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Dynamic-resolution multimodal models with absolute-time-aware video position encoding.",
+    "retention_or_core_mechanism": "Dynamic ViT and temporal alignment of MRoPE to absolute timestamps (p5).",
+    "evaluation_scope": "3B/7B/72B broad image, document, grounding and video tasks.",
+    "author_stated_limitations": [
+      "No dedicated author limitation passage identified in selected sections; do not interpret architectural discussion of older systems as this model's limitation."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Native long video context does not establish constant total memory for unbounded streams.",
+      "Analyst inference: Changing token selection without preserving time/position semantics can change model behavior."
+    ],
+    "candidate_gaps": [
+      "Measured-local-validation requirement: preserve timestamp and logical position identity during cache compaction; then evaluate cross-backbone transfer."
+    ],
+    "already_addressed_by": [
+      "Absolute temporal alignment is already part of Qwen2.5-VL."
+    ],
+    "cheap_test": "Compare uncompressed prefix output with identity-retention path, then selected retention under identical timestamps.",
+    "source_urls": [
+      "https://arxiv.org/abs/2502.13923v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2503.00540v1.pdf",
+    "title": "Streaming Video Question-Answering with In-context Video KV-Cache Retrieval",
+    "year": 2025,
+    "identifier": "arXiv:2503.00540v1",
+    "sha256": "7bc0690a8a16e463e5b0a840f84d94c67675139ddb7153fa6e3d330f07546774",
+    "pages": 16,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "ReKV / external cache retrieval",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free separation of video encoding from query-time KV retrieval.",
+    "retention_or_core_mechanism": "Sliding-window video encoding; persistent KV stored in RAM/disk; query-conditioned internal/external retrieval (Appendix A p14).",
+    "evaluation_scope": "Streaming and long VideoQA; efficiency/cache sizing; experiments with multiple video LLMs.",
+    "author_stated_limitations": [
+      "p16 future work: offloaded cache growth becomes unsustainable on very long streams.",
+      "p16: fixed frame block size can disrupt semantic continuity; fixed retrieval count needs dynamic alternatives.",
+      "p16: precise temporal benchmarks remain limited."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Bounded active GPU memory is different from bounded RAM/disk and transfer work."
+    ],
+    "candidate_gaps": [
+      "Published limitation: total-memory bounded retrieval with stable episodic accuracy.",
+      "Comparative unresolved: query-adaptive retrieval under equal auxiliary-memory and latency budgets."
+    ],
+    "already_addressed_by": [
+      "StreamKV partly addresses semantic segmentation/compression; SAVEMem adapts retrieval scope and bounded visual memory; these old gaps are not untouched."
+    ],
+    "cheap_test": "Plot GPU/RAM/disk bytes and query latency versus stream duration using the same retained evidence budget.",
+    "source_urls": [
+      "https://arxiv.org/abs/2503.00540v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2506.15745v2.pdf",
+    "title": "InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding",
+    "year": 2025,
+    "identifier": "arXiv:2506.15745v2",
+    "sha256": "50d94c1811fb2e1f4560bb56b2355e959b91124eba753e20dc802182fccee6cf",
+    "pages": 24,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Query-agnostic bounded KV compression",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free length-independent streaming cache compression.",
+    "retention_or_core_mechanism": "Temporal-axis redundancy (TaR), value-norm (VaN) importance and pooling.",
+    "evaluation_scope": "Four MLLMs / four benchmarks; Jetson AGX Orin real-time memory, speed and energy analysis p10.",
+    "author_stated_limitations": [
+      "p24 Appendix H: primarily vision tokens; unified speech/text/video compression left open.",
+      "p24: TaR/VaN allocation is fixed and could adapt to scene characteristics.",
+      "p24: learned continual-compression importance remains future work."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Information age and repeated-eviction damage need dedicated tests beyond aggregate benchmark averages."
+    ],
+    "candidate_gaps": [
+      "Published limitation: adaptive spatial/temporal allocation, but novelty requires stronger comparison than a new heuristic.",
+      "Comparative unresolved: retention stability and old rare-detail survival at fixed total memory."
+    ],
+    "already_addressed_by": [
+      "FluxMem, CurveStream, FreshMem and SAVEMem already pursue adaptive/hierarchical memory; energy evaluation is already present here."
+    ],
+    "cheap_test": "Compare FIFO, InfiniPot-V and corrected HERMES on identical long prefixes, budgets and evidence-lag bins.",
+    "source_urls": [
+      "https://arxiv.org/abs/2506.15745v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2507.06261v6.pdf",
+    "title": "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities",
+    "year": 2025,
+    "identifier": "arXiv:2507.06261v6",
+    "sha256": "b4cfe19f7eea7b0308cb0282127ef4821bb8f1d1e270e7a6f398b30fe57d41cb",
+    "pages": 73,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Proprietary foundation model report",
+    "relevance": "peripheral",
+    "review_depth": "Targeted skim: abstract, long-video evaluation and appendix sampling setup; not a full 73-page review.",
+    "contribution": "General multimodal reasoning and long-context Pro/Flash model family.",
+    "retention_or_core_mechanism": "Native long-context multimodal processing; cache policy not available as an open intervention.",
+    "evaluation_scope": "Broad reasoning, multimodality and agents; video frame caps differ by benchmark (Appendix pp65–66).",
+    "author_stated_limitations": [
+      "Specific cache-method limitation not established in targeted sections."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Closed model and API preprocessing limits prevent controlled token-level cache ablations on the available rented GPU."
+    ],
+    "candidate_gaps": [
+      "Transferable evaluation concept: disclose sampling and frame caps; no direct cache-method gap inferred from proprietary model scale."
+    ],
+    "already_addressed_by": [
+      "Long-context capability already demonstrated; not equivalent to bounded online memory."
+    ],
+    "cheap_test": "Use as optional external reference only; prioritize reproducible open-backbone comparisons.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.06261v6"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2510.18269v2.pdf",
+    "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+    "year": 2025,
+    "identifier": "arXiv:2510.18269v2",
+    "sha256": "20814aa638d0c185db079df04ea1b89f152d4e6346830f9c4e29d0fc58bf610d",
+    "pages": 14,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Causal token reduction and quantized memory",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free coordinated compression before LLM and quantized online KV memory.",
+    "retention_or_core_mechanism": "Causal Temporal Reduction; Online Quantized Memory with 4-bit storage and on-demand retrieval/dequantization.",
+    "evaluation_scope": "p6: VideoMME, MLVU, EgoSchema; RVS-Ego and RVS-Movie online QA; long-video sampling 0.5/0.2 fps.",
+    "author_stated_limitations": [
+      "p14: compression cannot solve backbone fine-grained perception or long-range reasoning limits.",
+      "p14: vision encoder remains dominant latency source; encoder reduction and lightweight tuning suggested."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Quantized historical store and active cache require separate memory accounting."
+    ],
+    "candidate_gaps": [
+      "Published limitation: improve front-end cost and task-aware allocation with true end-to-end measurement.",
+      "Comparative unresolved: same latency budget, old evidence fidelity and cumulative approximation damage."
+    ],
+    "already_addressed_by": [
+      "Joint pre-LLM reduction + cache compression + quantization is already addressed here."
+    ],
+    "cheap_test": "Profile decode, vision encoder, prefill, compression, retrieval and response separately, including live arrival lag.",
+    "source_urls": [
+      "https://arxiv.org/abs/2510.18269v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2511.07278v1.pdf",
+    "title": "StreamKV: Streaming Video Question-Answering with Segment-based KV Cache Retrieval and Compression",
+    "year": 2025,
+    "identifier": "arXiv:2511.07278v1",
+    "sha256": "013686d625d8de467e60063eacb8e76ab288cbd9c0778046c5d030e43fc73bbf",
+    "pages": 10,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Semantic segmentation / retrieval",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Dynamic semantic segments, summary representations and guidance-prompt compression.",
+    "retention_or_core_mechanism": "Summary-vector retrieval and layer-adaptive KV budgets.",
+    "evaluation_scope": "p6: LLaVA-OneVision-Qwen2-7B, H20 96GB FP16, 0.5fps, 15K local window, 4–64-frame segments, eight retrieved frames; StreamingBench and long-video tests.",
+    "author_stated_limitations": [
+      "p7 measured observation: increasing retrieved frames can lower accuracy by admitting irrelevant context.",
+      "No dedicated self-limitations section identified in selected sections."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Default retrieved-frame count remains fixed despite semantic segmentation; high-memory deployment needs constrained-hardware confirmation."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: selective evidence coverage with query-specific retrieval count and equal total storage."
+    ],
+    "already_addressed_by": [
+      "Semantic segments and layer allocation are already addressed; SAVEMem also adapts retrieval scope."
+    ],
+    "cheap_test": "Sweep 4/8/16 retrieved frames on paired episodic queries, measure precision and answer accuracy rather than assuming more context helps.",
+    "source_urls": [
+      "https://arxiv.org/abs/2511.07278v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2511.21631v2.pdf",
+    "title": "Qwen3-VL Technical Report",
+    "year": 2025,
+    "identifier": "arXiv:2511.21631v2",
+    "sha256": "ee075d08e67de1148d6437c6c1d481f7894183b8793905a2deb5f62664f49380",
+    "pages": 42,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Multimodal backbone / temporal position",
+    "relevance": "supporting",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Dense and MoE multimodal models with interleaved MRoPE, DeepStack and textual timestamp alignment.",
+    "retention_or_core_mechanism": "Native 256K interleaved multimodal context, extended context tests.",
+    "evaluation_scope": "Broad video, image, document, reasoning and grounding tasks; long-context needle evaluation p25.",
+    "author_stated_limitations": [
+      "p25 Section 6: interactive perception, tool reasoning, real-time control and unified understanding/generation proposed as future directions."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Backbone capability is distinct from original bounded-cache policy; timestamp mechanism differs from earlier Qwen."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: cross-backbone robustness of a proven retention intervention."
+    ],
+    "already_addressed_by": [
+      "Timestamp and architecture improvements are already backbone contributions."
+    ],
+    "cheap_test": "Only after a useful small-backbone effect, reproduce on one feasible larger open backbone with its native positions.",
+    "source_urls": [
+      "https://arxiv.org/abs/2511.21631v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2512.13564v2.pdf",
+    "title": "Memory in the Age of AI Agents: A Survey — Forms, Functions and Dynamics",
+    "year": 2025,
+    "identifier": "arXiv:2512.13564v2",
+    "sha256": "10de3c050903bfa1113c9a954380e2786f42d25a9ea24478bf6cc69fef2e2b42",
+    "pages": 107,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Agent-memory survey",
+    "relevance": "supporting",
+    "review_depth": "Targeted skim: taxonomy/abstract and Section 7 agenda pp69–76; not exhaustive 107-page review.",
+    "contribution": "Taxonomy of memory forms, functions and dynamics; broad research agenda.",
+    "retention_or_core_mechanism": "Token, parametric and latent memory; retrieval versus generation and automated management.",
+    "evaluation_scope": "Survey synthesis; no controlled streaming VideoQA compression experiment.",
+    "author_stated_limitations": [
+      "pp69–76 Section 7: open directions in automated management, multimodal memory, trustworthy memory and learned/shared memory."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Agent-memory desiderata cannot establish an unaddressed video KV-cache problem without direct comparisons."
+    ],
+    "candidate_gaps": [
+      "Transferable concept: memory provenance and evidence auditability; speculative relevance to temporal visual evidence."
+    ],
+    "already_addressed_by": [
+      "Adaptive memory and multimodal memory are established broad directions, not standalone originality claims."
+    ],
+    "cheap_test": "Tag retained evidence by original timestamp and test whether answers can identify supporting intervals.",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.13564v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2602.01683v2.pdf",
+    "title": "FreshMem: Brain-Inspired Frequency-Space Hybrid Memory for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "arXiv:2602.01683v2",
+    "sha256": "03cbae56c9f087587b1301eab7f8a9bf04f74fde0dfeed3d3761a5237f9d0e2a",
+    "pages": 28,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Frequency-space and episodic memory",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Reconciles historical gist with fine detail using frequency and spatial memory; also component-wise fine-tuning.",
+    "retention_or_core_mechanism": "Multi-scale Frequency Memory with residual details; Space Thumbnail Memory with adaptive episodic clustering.",
+    "evaluation_scope": "StreamingBench, OV-Bench, OVO-Bench; MLVU and MVBench offline; training-free and tuned variants separated.",
+    "author_stated_limitations": [
+      "p8 Figure 3 and p9 discussion explicitly show distant frequency reconstructions fading; residual details mitigate this.",
+      "Checklist p22 points to Section 5 for limitations, but selected Section 5 p10 is a conclusion without a concrete separate limitation list."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Do not compare tuned scores to a frozen training-free policy without disclosure.",
+      "Analyst inference: Reconstruction/thumbnail loss may harm rare text or object details; this is a hypothesis, not a measured failure shown here."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: gist/detail trade-off at large evidence lag with OCR and object identity queries."
+    ],
+    "already_addressed_by": [
+      "Hierarchical episodic memory, residual details and adaptive compression already addressed."
+    ],
+    "cheap_test": "Stratify old-detail OCR/identity questions and compare memory pictures or selected evidence plus paired QA.",
+    "source_urls": [
+      "https://arxiv.org/abs/2602.01683v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2602.18434v1.pdf",
+    "title": "Going Down Memory Lane: Scaling Tokens for Video Stream Understanding with Dynamic KV-Cache Memory",
+    "year": 2026,
+    "identifier": "arXiv:2602.18434v1",
+    "sha256": "8ff46850204d4b634fb53b833a9c7ef4fd2e8b73765fbc9800916f6f25db71f2",
+    "pages": 19,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "MemStream / retrieval bias",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Diagnoses later-frame bias with dense tokens and combines adaptive KV selection with retrieval experts.",
+    "retention_or_core_mechanism": "Adaptive compression/selection in sliding windows; mixture of internal KV and CLIP/PECore external retrieval.",
+    "evaluation_scope": "CG-Bench, LVBench, VideoMME-long; RVS-Ego/Movie; Qwen2.5-VL-7B; p7 17K window and 11.1GB/h stored cache.",
+    "author_stated_limitations": [
+      "p7: external retrieval slightly degrades VideoMME, plausibly from holistic task needs.",
+      "p7: RVS-Movie accuracy drops despite RVS-Ego gains; authors suggest aggressive compression."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: External experts add GPU/memory cost (Table3 29 to32GB); storage still grows with time."
+    ],
+    "candidate_gaps": [
+      "Published observation: retrieval/holistic reasoning trade-off.",
+      "Comparative unresolved: calibrate age/retrieval bias without extra encoder and with bounded total memory."
+    ],
+    "already_addressed_by": [
+      "Recency-bias diagnosis, token scaling and retrieval MoE are already addressed."
+    ],
+    "cheap_test": "Compute retrieval age distributions and hit rates under equal retained tokens; include holistic versus localized questions.",
+    "source_urls": [
+      "https://arxiv.org/abs/2602.18434v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2603.02096v1.pdf",
+    "title": "FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "arXiv:2603.02096v1",
+    "sha256": "2dd7ab2d382bcf9229236b573d071f55dd52effcb85281b120facab9938e0199",
+    "pages": 11,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Adaptive temporal-spatial visual compression",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free causal hierarchical scene-adaptive token compression.",
+    "retention_or_core_mechanism": "Temporal Adjacency Selection and Spatial Domain Consolidation; distribution-adaptive thresholds; short/mid/long memory.",
+    "evaluation_scope": "StreamingBench, OVO-Bench plus VideoMME/MLVU/LongVideoBench; memory and latency; p8 ablates hierarchy.",
+    "author_stated_limitations": [
+      "No dedicated author self-limitations passage identified in selected sections."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Similarity/variation is not proof of relevance to an unpredictable future query.",
+      "Analyst inference: Statistical adaptivity may change performance at scene transitions or low-motion semantically important events; untested here."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: rare static evidence and distribution-shift retention under constant token/auxiliary memory."
+    ],
+    "already_addressed_by": [
+      "Causal adaptive hierarchy and scene-statistics-driven compression are already addressed."
+    ],
+    "cheap_test": "Create held-out low-motion versus high-motion evidence bins and compare retention and QA at matched budgets.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.02096v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2603.19571v1.pdf",
+    "title": "CurveStream: Boosting Streaming Video Understanding in MLLMs via Curvature-Aware Hierarchical Visual Memory Management",
+    "year": 2026,
+    "identifier": "arXiv:2603.19571v1",
+    "sha256": "cec40a6766e3766164e1b552ab8c8e1cb4453db889164ebab74386d930c16154",
+    "pages": 18,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Curvature-aware frame retention",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Geometric semantic-transition scoring under a strict token budget.",
+    "retention_or_core_mechanism": "DINOv2 feature trajectory curvature + first-order change; online K-Sigma thresholds route clear/fuzzy/discard memory.",
+    "evaluation_scope": "StreamingBench and OVO perception tasks, multiple backbones including Qwen3-VL; offline FAVOR-Bench/MVBench appendix.",
+    "author_stated_limitations": [
+      "p9: future work extends to navigation and prolonged robotic manipulation."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Additional DINOv2 encoder and adaptive 10–20-frame queue make equal-FPS comparisons different from equal full cost.",
+      "Analyst inference: Transition intensity can miss static rare evidence; not demonstrated failure without experiment."
+    ],
+    "candidate_gaps": [
+      "Comparative unresolved: compute-normalized semantic transition versus evidence sufficiency across long delays."
+    ],
+    "already_addressed_by": [
+      "Curvature, adaptive thresholding and clear/fuzzy hierarchical retention already addressed."
+    ],
+    "cheap_test": "Include DINO cost in end-to-end budget; evaluate low-change OCR and distant episodic queries separately.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.19571v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2603.29252v1.pdf",
+    "title": "Scaling the Long Video Understanding of Multimodal Large Language Models via Visual Memory Mechanism",
+    "year": 2026,
+    "identifier": "arXiv:2603.29252v1",
+    "sha256": "b3d142258c7839e1b522262f7adf6be29827dbcbb16bedff3cec251b544adf4d",
+    "pages": 12,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "FlexMem / dual-path memory and reading",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free iterative KV writing and task-dependent reading, feasible on a single 3090.",
+    "retention_or_core_mechanism": "Dual-path compressed local memory bank and context propagation; attention-based question reading or fast MemIndex.",
+    "evaluation_scope": "Two video MLLMs; five long-video tasks and OVO backward tracing; p7 single-3090 comparisons.",
+    "author_stated_limitations": [
+      "p5 Section 3.3.2: attention/question-encoding memory reading repeats LLM inference for new questions; motivates MemIndex."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Constant processing footprint should not be confused with constant total memory-bank size; quantify bank scaling before using that claim.",
+      "Analyst inference: Question-conditioned offline encoding and query-agnostic online variants require separate treatment."
+    ],
+    "candidate_gaps": [
+      "Published limitation partly solved: repeated question encoding via MemIndex.",
+      "Comparative unresolved: reuse history-conditioned semantic states online while keeping scoring faithful after evictions."
+    ],
+    "already_addressed_by": [
+      "Memory recall, separate context/local memory, and fast question indexing already addressed."
+    ],
+    "cheap_test": "Compare repeated full question encoding against cached scorer with native causal reference and invalidation after eviction.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.29252v1"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2604.14228v2.pdf",
+    "title": "Dive into Claude Code: The Design Space of Today’s and Future AI Agent Systems",
+    "year": 2026,
+    "identifier": "arXiv:2604.14228v2",
+    "sha256": "7fe2e84a71dc76836a9dd015bcbc52a9cb46c23fa47106c731478e107fb0f255",
+    "pages": 53,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "Coding-agent architecture analysis",
+    "relevance": "peripheral",
+    "review_depth": "Targeted skim: abstract, architecture/context discussion and limitations pp36/50; not exhaustive 53-page review.",
+    "contribution": "Source-level architectural analysis and comparison with OpenClaw and Hermes Agent.",
+    "retention_or_core_mechanism": "Agent loops, permissions, context compaction, session storage; this Hermes Agent is not the HERMES video-cache method.",
+    "evaluation_scope": "Static source architecture comparisons; not video retention experiments.",
+    "author_stated_limitations": [
+      "p50: static snapshot, reverse engineering cannot determine production behavior/design intent; single-system and comparison-snapshot limitations.",
+      "p36: memoized context may not reflect dynamic changes immediately."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: Name collision must not be used as evidence about this repository's video method."
+    ],
+    "candidate_gaps": [
+      "Transferable engineering idea only: explicit cache invalidation and provenance after context changes."
+    ],
+    "already_addressed_by": [
+      "Generic memoization/staleness is known software engineering; no video novelty inferred."
+    ],
+    "cheap_test": "Use implementation invariant tests for scorer identity/history invalidation; do not add coding-agent baseline.",
+    "source_urls": [
+      "https://arxiv.org/abs/2604.14228v2"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2605.07897v1.pdf",
+    "title": "Semantic-Aware Adaptive Visual Memory for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "arXiv:2605.07897v1",
+    "sha256": "7686eefe60e1f579bee6054e3fca1db90bcf951e028a52e8d4ebac658224b5bf",
+    "pages": 15,
+    "source_type": "Primary research paper / technical report (local PDF version; venue acceptance not inferred)",
+    "topic": "SAVEMem / semantic pseudo-question retention",
+    "relevance": "direct",
+    "review_depth": "Targeted full-text review: abstract, method, evaluation tables/setup, conclusion and limitations search; not an exhaustive reproduction audit.",
+    "contribution": "Training-free semantic memory generation plus adaptive query-time retrieval.",
+    "retention_or_core_mechanism": "Fixed five-question bank, late-interaction MaxSim; short/mid/long memory and spatial coverage; recency gate, selective forgetting (pp4–5).",
+    "evaluation_scope": "Qwen2.5-VL 3B/7B, OVO-Bench, StreamingBench and ODV-Bench; bounded-memory scaling.",
+    "author_stated_limitations": [
+      "p15 Appendix A.3: evaluation is pseudo-streaming and does not penalize encoding latency; true streaming evaluation remains future work."
+    ],
+    "analyst_observed_limits": [
+      "Analyst inference: A fixed bank can lack future-query coverage; this is an inference requiring ablation.",
+      "Analyst inference: Its token-level semantic matching is distinct from deep causal probe-state refresh, but full method/code comparison is needed."
+    ],
+    "candidate_gaps": [
+      "Published limitation: live arrival-aware end-to-end evaluation.",
+      "Comparative unresolved: causal history-conditioned semantic utility versus fixed semantic embeddings at equal full compute.",
+      "Speculative original candidate: measured staleness-triggered cached native causal scoring, contingent on exact overlap audit."
+    ],
+    "already_addressed_by": [
+      "Generic semantic probes, multi-probe banks, bounded hierarchy and adaptive retrieval already addressed by SAVEMem; LORE-KV/KV² occupy future probes/selective reconstruction."
+    ],
+    "cheap_test": "First compare frozen/manual scorer, native causal reference, reusable native scorer and SAVEMem-like fixed bank; measure scorer disagreement, QA and all refresh costs.",
+    "source_urls": [
+      "https://arxiv.org/abs/2605.07897v1"
+    ],
+    "duplicate_of_if_identified": null
+  }
+]

@@ -596,6 +596,8 @@ Phase 5: Internal Hierarchical & Dynamics-Aware Architectures (2026 - Frontier)
 
 > **Important caveat (added 16 October 2026):** This EDMI proposal is a research idea generated from literature analysis, **not a validated original contribution**. Before development, the following must be completed: (1) verify that visual attention drift is actually observed in the reproduction's saved inference logs, (2) confirm that no existing published method already implements the same mechanism, (3) establish that compression-only failures (not shared backbone failures) exist in the paired analysis, and (4) complete the native non-HERMES baseline and HERMES component ablations. See the [Reproduction Audit Section 15](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md#15-candidate-research-extensions-and-novelty-boundaries) for the full decision framework.
 
+> **Prior-art update (19 November 2026):** StreamFlow already implements “Attention-Guided Memory Injection” in §3.4, local PDF pp5–6: it monitors visual attention mass (VAS, equation 8) and injects historical visual latents during generation when visual grounding weakens. This directly overlaps the broad EDMI reinjection idea, while precise variants still require mechanism-level comparison. The historical proposal wording below is preserved; its earlier novelty classification is not a current finding. See [StreamFlow primary version](https://arxiv.org/abs/2608.10949v1), [local PDF](related_papers/2608.10949v1.pdf) and the [research gap map](<reports/HERMES research gap map.md>).
+
 ---
 
 # Report H: Implementation and Experimental Roadmap

@@ -1,0 +1,561 @@
+[
+  {
+    "filename": "2007.10937v1.pdf",
+    "title": "MovieNet: A Holistic Dataset for Movie Understanding",
+    "year": 2020,
+    "identifier": "2007.10937v1",
+    "sha256": "1a20776fca5a192129014f0a98a0b33e1aba0cd63a3ac1232f235551587c1cb8",
+    "pages": 58,
+    "source_type": "primary research paper; local PDF",
+    "topic": "movie narrative dataset",
+    "relevance": "supporting",
+    "review_depth": "Selective text review: abstract, dataset/task descriptions, §5 p14 and split appendix p47; not all 58 pages read closely.",
+    "contribution": "Holistic multimodal movie dataset covering 1,100 movies, with character, scene, description and cinematic annotations (abstract).",
+    "retention_or_core_mechanism": "Dataset and task annotations; not a KV retention method.",
+    "evaluation_scope": "Movie understanding, scene/entity recognition and movie segment retrieval; paper includes extensive dataset/task appendix.",
+    "author_stated_limitations": [
+      "PDF p14 §5: extend movies and annotations; explore further approaches and movie-understanding topics."
+    ],
+    "analyst_observed_limits": [
+      "Inference: movie-level benchmarks alone do not identify whether a streaming failure arose from eviction, perception or narrative reasoning."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: test an independently sourced movie-domain subset with annotated supporting scene intervals before claiming cross-domain retention gains."
+    ],
+    "already_addressed_by": [
+      "MovieNet already supplies holistic movie annotations and retrieval tasks; movie evaluation itself is not novel."
+    ],
+    "cheap_test": "CPU: locate 20 accessible movie questions and annotate support scenes; check video access and dataset terms before planning GPU runs.",
+    "source_urls": [
+      "https://arxiv.org/abs/2007.10937"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2026.acl-long.381.pdf",
+    "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2026.acl-long.381",
+    "sha256": "e01a9cb2f5292ac3ce5bcc0f16e0f8421448fab0bce593f5bf2c942a3ce28e13",
+    "pages": 20,
+    "source_type": "primary research paper; local PDF",
+    "topic": "hierarchical streaming KV memory",
+    "relevance": "direct",
+    "review_depth": "Selective detailed review: motivation, layer policy, scoring and §4 setup, conclusion/limitations p9; local code audit is separate evidence.",
+    "contribution": "Training-free layer-specific sensory, semantic and anchor memory policies motivated by attention analysis.",
+    "retention_or_core_mechanism": "Shallow recency, middle generic-query semantic importance, deep frame-anchor retention; paper uses 10%/60%/30% layer partition.",
+    "evaluation_scope": "StreamingBench, OVO and RVS-Ego/movie; offline MVBench, Video-MME and EgoSchema; several LLaVA-OneVision and Qwen2.5-VL sizes (§4).",
+    "author_stated_limitations": [
+      "PDF p9 Limitations: no 72B experiments owing to resources; combinations with orthogonal training-free techniques not investigated."
+    ],
+    "analyst_observed_limits": [
+      "Inference: importance similarity and retained-token overlap are diagnostic proxies; downstream accuracy must establish whether changing a scorer helps.",
+      "Project implementation gap: current repository scorer behavior must be distinguished from the published policy; see root code audit, not an author claim."
+    ],
+    "candidate_gaps": [
+      "Implementation gap: causally propagated generic-query states and correctly aligned positions need downstream QA validation.",
+      "Hypothesis, novelty unproven: reuse scorer states until refresh improves quality per unit cost; include auxiliary state bytes and refresh overhead.",
+      "Evaluation gap: failures need support-age, evidence-survival and model-capability attribution."
+    ],
+    "already_addressed_by": [
+      "The base hierarchical-memory idea, generic query importance and budget-triggered compression are the original HERMES contribution.",
+      "InfiniPot already uses injected catalyst prompts for future-unknown importance; newer overlap must be checked in novelty_landscape.md."
+    ],
+    "cheap_test": "Pilot FIFO, current HERMES, corrected scorer and refresh variants on identical 20–30 videos; report paired QA, true peak memory and latency, then decide whether a full run is justified.",
+    "source_urls": [
+      "https://aclanthology.org/2026.acl-long.381/"
+    ],
+    "duplicate_of_if_identified": "HERMES_arxiv.pdf: same title/work, version-level overlap; byte identity not established"
+  },
+  {
+    "filename": "2110.07058v3.pdf",
+    "title": "Ego4D: Around the World in 3,000 Hours of Egocentric Video",
+    "year": 2021,
+    "identifier": "2110.07058v3",
+    "sha256": "d33d9e7a1d4a93ab8e9137e62966b3e2b7d631f4c5b98e481f6fc2220739c2fc",
+    "pages": 91,
+    "source_type": "primary research paper; local PDF",
+    "topic": "egocentric dataset and benchmarks",
+    "relevance": "supporting",
+    "review_depth": "Selective text review: abstract and dataset/task overview; 91-page supplement not exhaustively reviewed.",
+    "contribution": "Large-scale egocentric video collection with multiple first-person perception and memory-oriented tasks.",
+    "retention_or_core_mechanism": "Dataset, annotations and task definitions; no bounded-KV policy.",
+    "evaluation_scope": "Multiple egocentric benchmarks, including episodic-memory tasks; paper has a large task-specific supplement.",
+    "author_stated_limitations": [
+      "unknown: no sufficiently verified author limitation passage recorded in this bounded pass."
+    ],
+    "analyst_observed_limits": [
+      "Inference: common data origin can correlate evaluation outcomes across Ego4D-derived benchmarks; they are not automatically independent domain replications."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: audit source-video overlap across chosen egocentric benchmarks and separate memory retrieval from perception failures."
+    ],
+    "already_addressed_by": [
+      "Ego4D already supports episodic-memory evaluation; long-term first-person memory is not a new task."
+    ],
+    "cheap_test": "CPU: deduplicate video identifiers across existing manifests; choose a small non-overlapping evaluation subset.",
+    "source_urls": [
+      "https://arxiv.org/abs/2110.07058"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2308.09126v1.pdf",
+    "title": "EgoSchema: A Diagnostic Benchmark for Very Long-form Video Language Understanding",
+    "year": 2023,
+    "identifier": "2308.09126v1",
+    "sha256": "4ae865287c1d40b806c5f51e4b5101fe90f7d246a201668f14bbb9cab00b442f",
+    "pages": 32,
+    "source_type": "primary research paper; local PDF",
+    "topic": "long-form temporal reasoning benchmark",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, temporal-certificate motivation/method, evaluation overview and datasheet; primary arXiv identity verified online.",
+    "contribution": "More than 5,000 human-curated five-option QA pairs on three-minute Ego4D clips; introduces temporal certificate sets.",
+    "retention_or_core_mechanism": "Temporal certificates characterize the intrinsic video support required by a question rather than equating clip length with difficulty.",
+    "evaluation_scope": "Long-form multiple-choice video QA; benchmark creation, human/model evaluation and datasheet.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitation passage reliably isolated."
+    ],
+    "analyst_observed_limits": [
+      "Inference: clip length and question timestamp are insufficient proxies for the age or duration of evidence a retention policy must preserve."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: stratify failures by annotated oldest/latest necessary evidence and evidence duration, not elapsed query time alone.",
+      "Hypothesis: semantic retention gains should concentrate on questions whose support has aged beyond FIFO capacity."
+    ],
+    "already_addressed_by": [
+      "EgoSchema already explicitly argues video length alone does not measure temporal difficulty; support-based temporal evaluation is prior art."
+    ],
+    "cheap_test": "Manually annotate minimal support windows for 20–30 existing failures; compare FIFO/hierarchy outcomes by support age without new training.",
+    "source_urls": [
+      "https://arxiv.org/abs/2308.09126"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2311.17005v4.pdf",
+    "title": "MVBench: A Comprehensive Multi-modal Video Understanding Benchmark",
+    "year": 2023,
+    "identifier": "2311.17005v4",
+    "sha256": "399ff1cc391e2818ccc1c45a1b3e3ffb57159de70152f76f596a3eae77cc7b35",
+    "pages": 19,
+    "source_type": "primary research paper; local PDF",
+    "topic": "temporal reasoning benchmark",
+    "relevance": "supporting",
+    "review_depth": "Selective review: abstract, task design and evaluation overview; not an exhaustive appendix review.",
+    "contribution": "Twenty temporally challenging video tasks, using task definitions and conversion of public annotations.",
+    "retention_or_core_mechanism": "Evaluation tasks designed to require temporal reasoning beyond single-frame understanding.",
+    "evaluation_scope": "Multi-task video understanding and VideoChat2 evaluation.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitation passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: temporal-task accuracy is a useful control but does not itself isolate bounded streaming eviction."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: ensure a proposed memory improvement preserves short-term action/order ability as well as long-term retrieval."
+    ],
+    "already_addressed_by": [
+      "Temporal reasoning tests and single-frame insufficiency are already core MVBench design goals."
+    ],
+    "cheap_test": "Run a small task-stratified subset with matched sampled frames and token budgets; include frame-order perturbations only where labels remain interpretable.",
+    "source_urls": [
+      "https://arxiv.org/abs/2311.17005"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2312.07533v4.pdf",
+    "title": "VILA: On Pre-training for Visual Language Models",
+    "year": 2023,
+    "identifier": "2312.07533v4",
+    "sha256": "c6fbc0b14e531e79737887a40ffabf98c2d8ad11150d79cfbafdb15331e1f49b",
+    "pages": 16,
+    "source_type": "primary research paper; local PDF",
+    "topic": "VLM pretraining recipe",
+    "relevance": "supporting",
+    "review_depth": "Selective review: abstract, principal pretraining findings and evaluation overview.",
+    "contribution": "Studies interleaved pretraining, language-model updating and text instruction blending for visual language models.",
+    "retention_or_core_mechanism": "Pretraining and instruction tuning rather than inference-time retention.",
+    "evaluation_scope": "Image VLM generalization, in-context learning and related multimodal evaluations.",
+    "author_stated_limitations": [
+      "unknown: no explicit limitation passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: backbone training affects perception and in-context reasoning; a weak backbone can hide gains from memory retention."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: identify questions wrong even with uncompressed/recent support available before attributing errors to eviction."
+    ],
+    "already_addressed_by": [
+      "Better pretraining/interleaved data and retaining text ability are prior work; not a feasible original training project within a few rented GPU days."
+    ],
+    "cheap_test": "Compare full/relevant-window input against bounded input on the same small failure sample using an available backbone.",
+    "source_urls": [
+      "https://arxiv.org/abs/2312.07533"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2404.06395v3.pdf",
+    "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+    "year": 2024,
+    "identifier": "2404.06395v3",
+    "sha256": "4f3b8f22cb0a19a41d267d45beaa882306c5342ed5a09cedb405ea86d159e322",
+    "pages": 32,
+    "source_type": "primary research paper; local PDF",
+    "topic": "small language model training",
+    "relevance": "peripheral",
+    "review_depth": "Selective review: abstract, training/scaling overview and explicit limitations p18.",
+    "contribution": "Studies 1.2B/2.4B non-embedding-parameter language models and scalable training including warmup-stable-decay learning rates.",
+    "retention_or_core_mechanism": "Training scaling and scheduling; not a video-memory mechanism.",
+    "evaluation_scope": "Small language model evaluation and scaling studies.",
+    "author_stated_limitations": [
+      "PDF p18 Limitations: scaling study was not extended by training an LLM to validate the law; WSD application to LLMs not fully explored."
+    ],
+    "analyst_observed_limits": [
+      "Inference: language-only scaling findings do not establish video KV retention behavior for a particular multimodal 0.5B backbone."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: separate small-backbone reasoning limits from retention-policy limits using available larger-model pilot controls."
+    ],
+    "already_addressed_by": [
+      "Small-model training efficiency is established work; reproducing scaling training is not the intended low-budget original contribution."
+    ],
+    "cheap_test": "Use an existing stronger checkpoint for a tiny oracle-support comparison; do not train a new language model.",
+    "source_urls": [
+      "https://arxiv.org/abs/2404.06395"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2404.16821v2.pdf",
+    "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites",
+    "year": 2024,
+    "identifier": "2404.16821v2",
+    "sha256": "540e8c6cf387d88203573c97fa5e5c8028a17e2964eaa53d60894c8065c8a81d",
+    "pages": 18,
+    "source_type": "primary research paper; local PDF",
+    "topic": "InternVL1.5 architecture and training",
+    "relevance": "supporting",
+    "review_depth": "Selective review: abstract, architecture/training overview and evaluation scope.",
+    "contribution": "Open-source multimodal suite improves visual-language performance through architecture, data and training recipes.",
+    "retention_or_core_mechanism": "Model training and multimodal representation rather than a fixed-memory streaming policy.",
+    "evaluation_scope": "Broad visual-language capability evaluations.",
+    "author_stated_limitations": [
+      "unknown: no explicit limitation passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: stronger spatial perception and resolution can change apparent memory-policy headroom."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: use oracle evidence and matched-resolution controls before treating every wrong answer as lost memory."
+    ],
+    "already_addressed_by": [
+      "Open multimodal model scaling and data curation are already central to InternVL1.5."
+    ],
+    "cheap_test": "Tag OCR, fine spatial detail and answer reasoning errors in the existing both-wrong set; test a few with cropped/oracle evidence.",
+    "source_urls": [
+      "https://arxiv.org/abs/2404.16821"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2405.21075v3.pdf",
+    "title": "Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis",
+    "year": 2024,
+    "identifier": "2405.21075v3",
+    "sha256": "81272de466da51ca55471ef58522fa5911fb802fba843780d8253d27fc0aeaa2",
+    "pages": 13,
+    "source_type": "primary research paper; local PDF",
+    "topic": "multi-duration multimodal video benchmark",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, benchmark construction, modality/duration table and discussion pp1–3; local version v3 is dated 30 May 2025 although first arXiv submission is 2024.",
+    "contribution": "900 videos and 2,700 manually annotated MCQs across six domains; evaluates short, medium and long videos with subtitle/audio settings.",
+    "retention_or_core_mechanism": "Benchmark modality and duration stratification, not memory management.",
+    "evaluation_scope": "Videos from 11 seconds to one hour; three questions per video; short/medium/long groups of 300 videos (PDF pp2–3).",
+    "author_stated_limitations": [
+      "PDF p3 discussion reports performance declining with increasing video length and proposes better long-context architectures and temporal-reasoning training; this is an empirical observation/future direction, not a formal limitations section."
+    ],
+    "analyst_observed_limits": [
+      "Inference: duration trends conflate evidence density, sampling, modality availability and eviction unless these are controlled."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: report visual-only and subtitle/audio-enabled settings separately and align frame sampling when comparing memory policies."
+    ],
+    "already_addressed_by": [
+      "Duration and modality-stratified evaluation are already part of Video-MME; adding a long-video benchmark alone is not original."
+    ],
+    "cheap_test": "Select a small duration-stratified visual-only subset, retain identical sampling and record support age; add subtitle controls only if supported by the actual pipeline.",
+    "source_urls": [
+      "https://arxiv.org/abs/2405.21075"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2406.07476v3.pdf",
+    "title": "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs",
+    "year": 2024,
+    "identifier": "2406.07476v3",
+    "sha256": "83537911a92aa7da1c9277d5f26444cc73a2500cf0f2503338409d88f5967b21",
+    "pages": 29,
+    "source_type": "primary research paper; local PDF",
+    "topic": "audio-video model architecture",
+    "relevance": "supporting",
+    "review_depth": "Selective review: abstract, connector/audio method overview, evaluation descriptions and caption-evaluation passage; 29 pages not exhaustively reviewed.",
+    "contribution": "Spatial-temporal convolution connector and audio understanding branch address temporal and multimodal video understanding.",
+    "retention_or_core_mechanism": "Trained connector and audio-video modeling; not training-free visual KV eviction.",
+    "evaluation_scope": "Video QA/captioning and audio-related evaluations; long appendix.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitations passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: audio-dependent failures cannot be repaired by retaining more visual KV entries alone."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: classify missing modality versus evicted evidence before prioritizing memory interventions."
+    ],
+    "already_addressed_by": [
+      "Audio integration and spatial-temporal connectors already exist; adding audio is not an unoccupied novelty claim."
+    ],
+    "cheap_test": "On 20 both-wrong items, label whether answer requires audio/subtitles, tiny visual detail, temporal relation or distant visual support.",
+    "source_urls": [
+      "https://arxiv.org/abs/2406.07476"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2406.11816v1.pdf",
+    "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+    "year": 2024,
+    "identifier": "2406.11816v1",
+    "sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+    "pages": 19,
+    "source_type": "primary research paper; local PDF",
+    "topic": "live video interaction",
+    "relevance": "direct",
+    "review_depth": "Selective review: online setup, method/evaluation overview, domain discussion p8 and explicit Appendix D limitations p19.",
+    "contribution": "Online video-language formulation processes an ongoing stream and supports timely responses instead of only end-of-video questions.",
+    "retention_or_core_mechanism": "Streaming dialogue training and response scheduling; learned method rather than a drop-in KV policy.",
+    "evaluation_scope": "Streaming video dialogue, including activity-oriented first-person settings.",
+    "author_stated_limitations": [
+      "PDF p19 Appendix D: inadequate high-quality streaming dialogue data limits generalization; generated dialogues miss varied real-world requirements; small-data overfitting; spatial ability weak with fewer spatial tokens."
+    ],
+    "analyst_observed_limits": [
+      "Inference: replayed timestamped QA does not establish asynchronous real-time interaction, silent periods or deadline behavior."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: measure update throughput and query response latency under a simple arrival schedule, in addition to offline QA.",
+      "Evaluation gap: spatial detail versus temporal capacity needs matched-token controls."
+    ],
+    "already_addressed_by": [
+      "Online video dialogue and response scheduling are already established here; they cannot alone be claimed as a new contribution."
+    ],
+    "cheap_test": "Replay 2–3 existing videos with fixed wall-clock frame arrival and injected questions; log backlog, missed deadlines and peak memory.",
+    "source_urls": [
+      "https://arxiv.org/abs/2406.11816"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2408.03326v3.pdf",
+    "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+    "year": 2024,
+    "identifier": "2408.03326v3",
+    "sha256": "5322de2d2185bd6c215efe8a5e5e692dd2ed9df5de4f3e476ca45675e9ffd6d1",
+    "pages": 43,
+    "source_type": "primary research paper; local PDF",
+    "topic": "general visual backbone",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, model/task-transfer setup and video evaluation overview; 43-page supplement not exhaustive.",
+    "contribution": "Consolidated single-image, multi-image and video model with transfer between visual task settings.",
+    "retention_or_core_mechanism": "Shared trained visual-language model; not a streaming retention policy.",
+    "evaluation_scope": "Broad visual tasks across image/multi-image/video; extensive supplementary results.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitation passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: general video transfer does not guarantee stable attention-scoring semantics under repeated eviction and cache compaction."
+    ],
+    "candidate_gaps": [
+      "Implementation/evaluation gap: validate scorer changes on the actual backbone and positions used rather than extrapolating a mechanistic observation across families."
+    ],
+    "already_addressed_by": [
+      "Cross-task visual transfer and this backbone are prior work; HERMES already evaluates LLaVA-OneVision variants."
+    ],
+    "cheap_test": "Log a small prefix with actual backbone attention and compare selector decisions plus paired QA; count all auxiliary memory.",
+    "source_urls": [
+      "https://arxiv.org/abs/2408.03326"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2408.14023v1.pdf",
+    "title": "Video-CCAM: Enhancing Video-Language Understanding with Causal Cross-Attention Masks for Short and Long Videos",
+    "year": 2024,
+    "identifier": "2408.14023v1",
+    "sha256": "42f800da0d53d30e28cab6670a256d0f399bb2a1eea622082a02fd8a889a9570",
+    "pages": 14,
+    "source_type": "primary research paper; local PDF",
+    "topic": "causal temporal visual projector",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, projector/masking method, length-generalization description and conclusion p10.",
+    "contribution": "Causal cross-attention masking in a trained video projector improves temporal consistency and length generalization.",
+    "retention_or_core_mechanism": "Causally masked cross-attention projector, distinct from HERMES generic-query scorer masks.",
+    "evaluation_scope": "4B/9B/14B models; training with 16 frames and evaluation extending to 96 frames.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitation passage verified; PDF p10 conclusion summarizes causal temporal projector."
+    ],
+    "analyst_observed_limits": [
+      "Inference: causality must be specified at the exact layer and operation; a causal projector result is not proof that a custom KV scorer is correct."
+    ],
+    "candidate_gaps": [
+      "Implementation gap: test the repository scorer with allowed causal history and proper positions; evaluate QA rather than assuming a mask is sufficient."
+    ],
+    "already_addressed_by": [
+      "Causal cross-attention for temporal consistency already exists here; causality in itself is not new."
+    ],
+    "cheap_test": "Unit-level attention inspection on one short prefix plus downstream small QA pilot with causal versus current scorer under equal budget.",
+    "source_urls": [
+      "https://arxiv.org/abs/2408.14023"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2408.15542v1.pdf",
+    "title": "Kangaroo: A Powerful Video-Language Model Supporting Long-context Video Input",
+    "year": 2024,
+    "identifier": "2408.15542v1",
+    "sha256": "721ad10ad7067dca99ce77cfb0b7f3984f8e9aa734e068f1af577ed1df2493d3",
+    "pages": 13,
+    "source_type": "primary research paper; local PDF",
+    "topic": "long-context trained video model",
+    "relevance": "supporting",
+    "review_depth": "Selective review: abstract, curriculum/data overview and evaluation framing.",
+    "contribution": "Data curation and curriculum improve a video-language model supporting longer video input.",
+    "retention_or_core_mechanism": "Training curriculum increases input frames/resolution; not a bounded unknown-future-query KV policy.",
+    "evaluation_scope": "Long-context video-language evaluation for an 8B-scale model.",
+    "author_stated_limitations": [
+      "unknown: no explicit author limitation passage verified."
+    ],
+    "analyst_observed_limits": [
+      "Inference: more input capacity or better temporal training does not establish a fair fixed-memory retention comparison."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: equalize actual visual evidence, frame sampling and total memory when comparing a bounded policy with a long-context model."
+    ],
+    "already_addressed_by": [
+      "Long-video curricula and increased frame support are prior approaches, requiring training outside the immediate low-budget plan."
+    ],
+    "cheap_test": "Use available model checkpoints only as a small oracle/context control; report differing compute and do not call unmatched models retention-policy baselines.",
+    "source_urls": [
+      "https://arxiv.org/abs/2408.15542"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2409.01071v2.pdf",
+    "title": "VideoLLaMB: Long Streaming Video Understanding with Recurrent Memory Bridges",
+    "year": 2024,
+    "identifier": "2409.01071v2",
+    "sha256": "5efc108eb4510dcf0dea553e6ec28fee30f06d5d3307d4c02e16eb78e1c6ead8",
+    "pages": 15,
+    "source_type": "primary research paper; local PDF",
+    "topic": "recurrent visual memory",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, memory/SceneTiling method, §3.6 p6, conclusion p8 and training appendix p13; primary arXiv identity/version verified online (v2 revised 2025).",
+    "contribution": "Memory bridge layers and temporal memory tokens encode streaming video; SceneTiling segments semantic units.",
+    "retention_or_core_mechanism": "Learned recurrent memory bridge plus semantic segmentation; distinguish trained bridge from training-free use of SceneTiling.",
+    "evaluation_scope": "VideoQA, egocentric planning and Needle in a Video Haystack (NIAVH); synthetic one-second needles across depth/length at 1 fps (PDF p6 §3.6).",
+    "author_stated_limitations": [
+      "PDF p8 conclusion: further integration of LLM memory with memory bridges is a future direction, not a formal limitation claim."
+    ],
+    "analyst_observed_limits": [
+      "Inference: a synthetic one-second needle can test retention but does not by itself cover natural distributed evidence, causal relations or low-FPS missed events.",
+      "Feasibility observation: Appendix C p13 describes training using four A800 GPUs; full retraining is outside the stated short single-GPU budget."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: extend existing needle controls with natural support windows, multiple jointly necessary events and fixed memory accounting.",
+      "Hypothesis: semantic scene transitions predict when a cached importance state becomes stale; must compare against fixed refresh and random schedules."
+    ],
+    "already_addressed_by": [
+      "Controlled depth/length video needle tests already exist in NIAVH; recurrent memory and semantic scene segmentation are established."
+    ],
+    "cheap_test": "CPU annotate support first; small inference-only experiment moving the same visible evidence to different ages while guaranteeing it survives sampling.",
+    "source_urls": [
+      "https://arxiv.org/abs/2409.01071"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2410.01518v1.pdf",
+    "title": "InfiniPot: Infinite Context Processing on Memory-Constrained LLMs",
+    "year": 2024,
+    "identifier": "2410.01518v1",
+    "sha256": "74f48b936c958c1d4002ba01528c6d6d775afb229c1700c8d8d342b64db5cbd2",
+    "pages": 15,
+    "source_type": "primary research paper; local PDF",
+    "topic": "training-free prompt-guided KV distillation",
+    "relevance": "direct",
+    "review_depth": "Selective detailed review: abstract, §3 mechanism, evaluation setup/prompt ablation and §6 limitations; primary arXiv identity verified online.",
+    "contribution": "Continual Context Distillation retains context within fixed memory without further training.",
+    "retention_or_core_mechanism": "Catalyst Prompt (CaP) injected before cache limit estimates future importance; Novelty under Compression (NuC) emphasizes novel information (PDF p2).",
+    "evaluation_scope": "Text LongBench and needle-in-haystack; context length used as KV-memory proxy; prompt variants include general and question-aware prompts (§4).",
+    "author_stated_limitations": [
+      "PDF p9 §6: predefined compression ratio may be suboptimal; very long-term dependencies not exhaustively tested; actual on-device deployment not evaluated."
+    ],
+    "analyst_observed_limits": [
+      "Inference: prompt-guided unknown-future relevance predates HERMES; text evidence does not establish video-stream scorer freshness or compute gains.",
+      "Inference: actual bytes/latency may differ from token-count proxies when a method carries extra query states or compressed representations."
+    ],
+    "candidate_gaps": [
+      "Paper-stated gap: investigate adaptive compression, but novelty is now crowded and must be checked against recent work.",
+      "Hypothesis, novelty unproven: adaptive refresh of a propagated generic-query state may improve net QA per latency under video changes.",
+      "Evaluation gap: include auxiliary state, peak allocated/reserved memory and refresh work, not KV entries alone."
+    ],
+    "already_addressed_by": [
+      "CaP already uses temporary generic prompts for future-unknown KV importance; novelty also enters selection via NuC.",
+      "Adaptive compression is an explicitly proposed direction, not evidence it remains unsolved in 2026."
+    ],
+    "cheap_test": "Compare current prompt scoring, causal propagated scoring, fixed-interval reuse and adaptive reuse on identical videos; include refresh-only cost and a random schedule with matched refresh count.",
+    "source_urls": [
+      "https://arxiv.org/abs/2410.01518"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2411.03628v1.pdf",
+    "title": "StreamingBench: Assessing the Gap for MLLMs to Achieve Streaming Video Understanding",
+    "year": 2024,
+    "identifier": "2411.03628v1",
+    "sha256": "9e3c03abf845e3d41d5fccc48bc718f4f503bd03fdfba00f473cea39b3ced6ee",
+    "pages": 28,
+    "source_type": "primary research paper; local PDF",
+    "topic": "streaming multimodal/contextual benchmark",
+    "relevance": "direct",
+    "review_depth": "Selective review: abstract, taxonomy/construction pp1–5 and evaluation framing; primary arXiv identity verified online; appendix not exhaustively reviewed.",
+    "contribution": "18 tasks, 900 videos and 4,500 human-curated questions; five questions at different timestamps per video.",
+    "retention_or_core_mechanism": "Taxonomy of real-time visual, omni-source and contextual understanding; timestamped queries rather than a retention algorithm.",
+    "evaluation_scope": "13 proprietary/open models in original paper; real-time, audio/video and conversational-context tasks.",
+    "author_stated_limitations": [
+      "unknown: passages criticizing previous VStream-QA are not author-stated limitations of StreamingBench and must not be mislabeled."
+    ],
+    "analyst_observed_limits": [
+      "Inference: aggregate timestamped MCQ accuracy does not identify the location/age of necessary support or guarantee a live system keeps pace with input.",
+      "Project evidence boundary: local 498-video/2,495-question run is a subset and configuration, not the full 900-video benchmark."
+    ],
+    "candidate_gaps": [
+      "Evaluation gap: separate visual-only task coverage from omni-source/contextual coverage and state exclusions explicitly.",
+      "Evaluation gap: annotate support windows and dialogue dependency for failed questions; prevent future-frame and future-question leakage.",
+      "Evaluation gap: pair QA scores with processing throughput, response latency and true state memory."
+    ],
+    "already_addressed_by": [
+      "Streaming task taxonomy, audio/contextual questions and timestamped queries already exist; a new benchmark claim requires a distinct validated measurement."
+    ],
+    "cheap_test": "Audit dataset/task manifests and 20–30 failures; verify each question sees only its prefix and allowed dialogue, then bootstrap paired differences at video level.",
+    "source_urls": [
+      "https://arxiv.org/abs/2411.03628"
+    ],
+    "duplicate_of_if_identified": null
+  }
+]

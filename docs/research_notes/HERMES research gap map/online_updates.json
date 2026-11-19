@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Monte Carlo Estimation for KV Cache Eviction",
+    "method": "LORE-KV",
+    "identifier": "2610.07643v2",
+    "source_url": "https://arxiv.org/abs/2610.07643v2",
+    "checked_on": "2026-11-19",
+    "source_type": "primary arXiv abstract",
+    "review_depth": "current abstract and version metadata; full paper not audited in this pass",
+    "version": "v2, revised 2026-10-14",
+    "implemented_mechanism": "Samples short autoregressive continuations, uses response-side query states and projected leave-one-out attention-output deletion cost; optional trajectory weighting; samples discarded before final decoding.",
+    "evaluation_scope": "LongBench and RULER; dense and hybrid text-model backbones, rather than a streaming-video evaluation in the inspected abstract.",
+    "reported_caveats": "Benefits diminish at larger budgets, some tasks regress, and one-time compression overhead increases.",
+    "novelty_implication": "Future-response query states and reliability-weighted future ensembles are implemented overlap. Persistent online video probe-state reuse with staleness-controlled refresh is not established by this abstract; needs full-text comparison, not an absence claim.",
+    "feedback_candidate_status": "Reliability weighting concerns sampled future trajectories. Explicit intervention on wrong previous QA conditioning and downstream eviction is not established by inspected abstract; unknown full-text status."
+  },
+  {
+    "title": "KV²: A Self-Refining KV Cache",
+    "method": "KV²",
+    "identifier": "2610.03198v2",
+    "source_url": "https://arxiv.org/abs/2610.03198v2",
+    "checked_on": "2026-11-19",
+    "source_type": "primary arXiv abstract",
+    "review_depth": "current abstract and version metadata; full paper not audited in this pass",
+    "version": "v2, revised 2026-10-15",
+    "implemented_mechanism": "Lightweight proxy selects informative context tokens; only selected tokens are reprocessed for final eviction scoring.",
+    "evaluation_scope": "Reusable query-agnostic compressed contexts; RULER, needle-in-a-haystack and LongBench.",
+    "reported_caveats": "The inspected abstract motivates cost/quality tradeoffs but does not supply a dedicated limitations list.",
+    "novelty_implication": "Selective contextual reconstruction is implemented overlap for any causal probe scoring proposal. Merely proposing adaptive refinement in future-work text would not close persistent online probe-state staleness control.",
+    "feedback_candidate_status": "Past-QA-error feedback into later video retention is not established in the inspected abstract; unknown full-text status."
+  },
+  {
+    "title": "Video-MemComp: Taylor-Guided Sensitivity-Aware Memory Management for Streaming Video Understanding",
+    "method": "Video-MemComp",
+    "identifier": "2610.32784v1",
+    "source_url": "https://arxiv.org/abs/2610.32784v1",
+    "checked_on": "2026-11-19",
+    "source_type": "primary arXiv abstract; page states accepted ACM MM 2026",
+    "review_depth": "current abstract and publication comment; full paper not audited in this pass",
+    "version": "v1, submitted 2026-10-23",
+    "implemented_mechanism": "Taylor-based compression-error/sensitivity decomposition; pre-RoPE aggregation with attention-conserving logit bias; layer budgets combine offline gradient priors and online context entropy.",
+    "evaluation_scope": "Abstract names MLVU, VideoMME and EgoSchema; causal streaming benchmark protocol must be checked in full paper.",
+    "reported_caveats": "No dedicated author-limitations list in inspected abstract; offline gradient-prior cost must be included in method comparison.",
+    "novelty_implication": "Pre-RoPE-safe merging, sensitivity allocation and entropy-driven layer budgets are concrete implemented overlap. A new adaptive layer-budget proposal must differ beyond naming."
+  },
+  {
+    "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video",
+    "method": "DeltaS",
+    "identifier": "2609.27470v1",
+    "source_url": "https://arxiv.org/abs/2609.27470v1",
+    "checked_on": "2026-11-19",
+    "source_type": "primary arXiv abstract",
+    "review_depth": "current abstract and metadata; full paper not audited in this pass",
+    "version": "v1, submitted 2026-09-23",
+    "implemented_mechanism": "Retains chunks inducing large normalized gated-linear-attention state change, with no question needed at update time.",
+    "evaluation_scope": "Hybrid linear/full-attention backbones; controlled signal comparison holding retention policy and budget fixed; six long-video benchmarks.",
+    "reported_caveats": "Architecture requires gated linear-attention state; applicability to a conventional all-attention LLaVA backbone is not established.",
+    "novelty_implication": "Cheap novelty/state-drift signals and controlled score-only ablations are implemented precedent. Porting requires architectural feasibility; a renamed low-cost novelty signal is insufficient."
+  }
+]

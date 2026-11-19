@@ -64,6 +64,8 @@ The full benchmark combines October results on samples 201–250 with November m
 
 ## Remaining work
 
+The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
+
 1. Complete thesis synthesis around the audited reproduction, component diagnostics and full-benchmark result, including the null accuracy finding.
 2. Measure a corrected-attention QA treatment if pursuing a claim about the scorer's effect on answer quality. Current attention results establish numerical and selection differences on one video chunk.
 3. Establish a matched native LLaVA baseline on a feasible, explicitly defined context range if making claims against the base model. Current 50K results use the HERMES pipeline.

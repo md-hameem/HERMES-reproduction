@@ -1,0 +1,544 @@
+[
+  {
+    "filename": "2606.25658v1.pdf",
+    "title": "Towards a Dynamic and Fixed-budget Memory Bank for Efficient Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2606.25658",
+    "sha256": "4eec7657e5930aa4456671d535cad2e1f79faf5dc597f4dd3795426800f3bb3b",
+    "pages": 16,
+    "source_type": "preprint PDF",
+    "topic": "CausalMem: online redundancy reduction under a fixed token bank",
+    "relevance": "direct",
+    "review_depth": "abstract; method; setup; conclusion; Appendix A/B targeted full-text review; selective review, not all lines/appendices",
+    "contribution": "Training-free fixed-budget visual memory maintained with an evolving orthonormal semantic basis.",
+    "retention_or_core_mechanism": "Basis-relative novelty/redundancy drives online retention; no future query required.",
+    "evaluation_scope": "StreamingBench and OVO-Bench; offline VideoMME, LongVideoBench, MLVU, LVBench; LLaVA-OneVision and Qwen2.5-VL.",
+    "author_stated_limitations": [
+      "Appendix A, PDF p13: frozen-backbone visual perception, temporal reasoning and instruction-following constrain performance; stronger backbones proposed."
+    ],
+    "analyst_observed_limits": [
+      "Inference: semantic residual energy can be an imperfect proxy for a short, low-energy but task-critical cue. This failure is a hypothesis, not established by the paper."
+    ],
+    "candidate_gaps": [
+      "Compare semantic novelty against causal-query fidelity on brief evidence and scene changes at equal budget."
+    ],
+    "already_addressed_by": [
+      "Implemented online semantic-basis novelty already addresses generic semantic-diversity retention."
+    ],
+    "cheap_test": "Replay a short delayed-cue stream, log cue survival and maintenance cost; avoid a full benchmark until mechanism differs.",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.25658"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2607.28312v2.pdf",
+    "title": "ObjectStream: Latent Objects as Memory Anchors for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2607.28312",
+    "sha256": "30e854dc752492e84100af2ecc80c190ba4f08004d3f5471c60953a46b8356f1",
+    "pages": 10,
+    "source_type": "preprint PDF",
+    "topic": "Latent object anchors and bounded histories",
+    "relevance": "direct",
+    "review_depth": "abstract; object-anchor mechanism; experimental setup p5; conclusion targeted review; selective review, not all lines/appendices",
+    "contribution": "Training-free object-centric memory without external detectors or segmentation.",
+    "retention_or_core_mechanism": "Spatially coherent frozen representations form cross-frame object anchors; preserve persistent histories, transient residuals and a recent window.",
+    "evaluation_scope": "Qwen2.5-VL-3B/7B; StreamingBench and OVO-Bench; EgoSchema and VideoMME-Long. PDF p5: online 1 fps, at most 256 frames, 64 objects with 8 tokens/object; offline protocol uses larger budgets.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review; do not treat absence of a section as absence of limitations."
+    ],
+    "analyst_observed_limits": [
+      "Inference: cross-frame association errors and evaluation beyond the reported online frame cap need controlled measurement."
+    ],
+    "candidate_gaps": [
+      "Identity-switch and transient-state survival at fixed byte budget; distinguish persistent entities from absence-based scene states."
+    ],
+    "already_addressed_by": [
+      "Implemented object histories and transient-change memory close a generic claim that object-aware bounded memory is missing. MEMO offers a second, externally detected variant."
+    ],
+    "cheap_test": "Construct/reuse an identity-switch clip and measure retained event evidence and QA before expensive runs.",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.28312"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2608.10949v1.pdf",
+    "title": "StreamFlow: Dynamic Memory Flows for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2608.10949",
+    "sha256": "46a39ce48f3c9df64dc5ebaa838625605fc262ae34930c3b3e7b69d35a4b3c37",
+    "pages": 26,
+    "source_type": "preprint PDF",
+    "topic": "Dynamic memory access and attention-guided latent injection",
+    "relevance": "direct",
+    "review_depth": "abstract; sections 3.1-3.4 (attention-guided injection §3.4, PDF pp5-6, VAS eq8); evaluation setup and causal protocol; conclusion; selective full-text review",
+    "contribution": "Combines pre-encoder dynamics filtering, trained latent memory and generation-time retrieval.",
+    "retention_or_core_mechanism": "Pixel/GOP dynamics filters mid-term frames; latent compressor consolidates history; weak visual reliance during generation triggers injection of historical visual latents.",
+    "evaluation_scope": "Qwen3.5-9B backbone with trained/LoRA memory compressor and teacher-generated supervision; StreamingBench plus MVBench, MLVU and VideoMME; explicit causal frame/query protocol.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations statement identified in selected sections."
+    ],
+    "analyst_observed_limits": [
+      "Inference: training data and compressor training make full reproduction a poor default for one rented GPU for a few days; generation-time retrieval cost and false triggers must be budgeted."
+    ],
+    "candidate_gaps": [
+      "Compare calibrated retrieval decisions under matched overhead; any new trigger needs gains beyond existing attention-guided injection."
+    ],
+    "already_addressed_by": [
+      "Implemented generation-time attention-guided historical visual injection directly overlaps generic entropy/attention-triggered evidence reinjection."
+    ],
+    "cheap_test": "Use checkpoint if available; first measure existing trigger precision on a small set rather than train a compressor.",
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10949"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2608.13416v4.pdf",
+    "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+    "year": 2026,
+    "identifier": "2608.13416",
+    "sha256": "0e2c3cf0fbfa9205a3063c79549c82f71a2293c5c92357110c0d4ce00bb7d06e",
+    "pages": 18,
+    "source_type": "preprint PDF",
+    "topic": "Learned fast-weight long-term memory plus recent KV",
+    "relevance": "direct",
+    "review_depth": "abstract; introduction mechanism and training; benchmark table/protocol targeted review; selective review, not all lines/appendices",
+    "contribution": "Separates long history from attention context through online-updated fast weights.",
+    "retention_or_core_mechanism": "Gated test-time-training memory branch stores historical state; short sliding KV serves present perception; jointly trained on offline and real-time QA.",
+    "evaluation_scope": "StreamTTT-4B; OVO-Bench perception/backward tracing and StreamingBench RTVU; comparisons explicitly under each reported input protocol.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: training and architecture changes exceed a simple drop-in cache patch; per-paper protocol differences prevent treating headline scores as matched evidence."
+    ],
+    "candidate_gaps": [
+      "Training-free approximation of the recent/long-memory tradeoff needs direct controls; architecture equivalence cannot be assumed."
+    ],
+    "already_addressed_by": [
+      "Implemented fast-weight/short-KV separation closes broad claims that separating recent perception from long memory is new."
+    ],
+    "cheap_test": "Only compare with released weights under matching input/timestamp conditions; gate on memory and inference compatibility.",
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13416"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2608.30294v1.pdf",
+    "title": "Dynamic Hub-and-Spoke Memory for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2608.30294",
+    "sha256": "f8f0190e294439cdca49e53ae295045f420fb9f4bd021dcfbfabed49a2249198",
+    "pages": 21,
+    "source_type": "preprint PDF",
+    "topic": "D-HSM structured textual evidence and entity retrieval",
+    "relevance": "direct",
+    "review_depth": "abstract; memory/retrieval description; section 7 author limitations p10; selective review, not all lines/appendices",
+    "contribution": "Training-free entity-linked textual distant memory with recent visual evidence.",
+    "retention_or_core_mechanism": "Typed observations form entity hubs and evidence spokes; query-aware retrieval and graph expansion select historical text.",
+    "evaluation_scope": "Streaming and long-video benchmarks with frozen VLM backbones; distant history represented textually.",
+    "author_stated_limitations": [
+      "Section 7, PDF p10: entity recognition/OCR/action errors can propagate into memory; text can lose fine-grained distant detail; robust entity linking left for future work."
+    ],
+    "analyst_observed_limits": [
+      "Inference: author-admitted propagated observation error supports a reliability/provenance diagnostic, but does not establish that a proposed remedy is novel."
+    ],
+    "candidate_gaps": [
+      "How to prevent incorrect generated memory from steering future selection while preserving useful historical conditioning?"
+    ],
+    "already_addressed_by": [
+      "Implemented entity-graph retrieval overlaps generic structured memory. Robust entity linking is proposed future work, not an implemented solution."
+    ],
+    "cheap_test": "Inject one controlled wrong textual observation and compare downstream retrieval/evidence survival with history masked.",
+    "source_urls": [
+      "https://arxiv.org/abs/2608.30294"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2609.32182v1.pdf",
+    "title": "KeyRec: Bounded Visual Memory for Streaming and Long-Video Understanding",
+    "year": 2026,
+    "identifier": "2609.32182",
+    "sha256": "117cf7c000b19c4dc00227aa2efaf09eafdab5e5164a07a1c3afaca96d7b88e7",
+    "pages": 21,
+    "source_type": "preprint PDF",
+    "topic": "Bounded add-merge-evict event memory with query-adaptive readout",
+    "relevance": "direct",
+    "review_depth": "abstract; add-merge-evict/router mechanism; Appendix E limitations p17; selective review, not all lines/appendices",
+    "contribution": "Separates query-agnostic construction from query-adaptive fixed-budget visual readout.",
+    "retention_or_core_mechanism": "Recent cache plus novel event proposals, similarity/time consolidation and add-merge-evict; text-only query router allocates recent/event read budget.",
+    "evaluation_scope": "Four benchmarks and three backbones including Gemma 4 E2B/E4B and NEO-ov 2B; post-encoder visual memory and decoder cost.",
+    "author_stated_limitations": [
+      "Appendix E, PDF p17: fixed update/routing rules; no ViT encoding savings; attempted intermediate token reduction disrupted optimized path with no wall-time gain; lacks explicit identity/trajectory/state modeling."
+    ],
+    "analyst_observed_limits": [
+      "Inference: combining encoding compression with memory must be measured end to end; lower token count alone does not establish speed."
+    ],
+    "candidate_gaps": [
+      "Can native-path-compatible maintenance reduce wall time and retain brief evidence at constant budget?"
+    ],
+    "already_addressed_by": [
+      "Implemented bounded event organization and query router already exist. ObjectStream/MEMO implement some object directions merely proposed by KeyRec; learning update rules remains future work here."
+    ],
+    "cheap_test": "Profile encoder, decoder, update and decode costs separately; compare one compatible encoder optimization on identical clips.",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.32182"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2609.38900v1.pdf",
+    "title": "MEMO: Multi-Level Entity-Aware Memory for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2609.38900",
+    "sha256": "ddc75fafd991c198eaabda99808244041c22602229a2396632f9760ceb4c9e06",
+    "pages": 10,
+    "source_type": "preprint PDF",
+    "topic": "Entity-aware chunk indices with visual evidence retrieval",
+    "relevance": "direct",
+    "review_depth": "abstract; memory mechanism; experimental settings; section 5 limitations p8; selective review, not all lines/appendices",
+    "contribution": "Training-free multi-level global/entity/spatial memory.",
+    "retention_or_core_mechanism": "Detection/segmentation/association inform coherent chunks; lightweight indices retrieve high-resolution visual evidence from a separate CPU pool.",
+    "evaluation_scope": "StreamingBench and OVO-Bench; LLaVA-OV-0.5B/7B, Qwen2.5-VL-7B and Qwen3-VL-8B; 1 fps; top3 chunks; 16 frame visual input split recent/retrieved.",
+    "author_stated_limitations": [
+      "Section 5, PDF p8: upstream detector/segmenter/association errors propagate; implicit/absence-based states poorly represented; persistent cross-chunk identity and hour/day consolidation remain open; explicit scene-state memory/reranking/consolidation future work."
+    ],
+    "analyst_observed_limits": [
+      "Inference: bounded model input is distinct from bounded total CPU/raw-evidence storage; require growth accounting before claiming all-memory bounds."
+    ],
+    "candidate_gaps": [
+      "Absence/state-transition evidence and persistent error correction are specific comparative questions; hour/day consolidation is high-cost for this project."
+    ],
+    "already_addressed_by": [
+      "Implemented entity-aware chunk retrieval and object dynamics overlap generic object-memory claims. Explicit absence/state memory is stated future work, not solved by that statement."
+    ],
+    "cheap_test": "Small clips with object leaving, occlusion and true absence; compare with an entity-memory baseline and report false absence.",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.38900"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "2610.05940v1.pdf",
+    "title": "ReMem: Streaming Video Understanding With Long Context Retention",
+    "year": 2026,
+    "identifier": "2610.05940",
+    "sha256": "cd6ef8a83b875baaf895d0dc6535a42a7ea135d037fa34c575b336f21b280ac1",
+    "pages": 16,
+    "source_type": "preprint PDF",
+    "topic": "Recursive compressed context plus retrieved vision memory",
+    "relevance": "direct",
+    "review_depth": "abstract; SCM/RVM and GQC method pp3-4; experiments p5; selective review, not all lines/appendices",
+    "contribution": "Training-free adaptation combines fixed-length context state and question-conditioned vision retrieval.",
+    "retention_or_core_mechanism": "SCM recursively compresses previous context plus new visual tokens using GQC; RVM selects question-relevant tokens by cosine similarity and reinjects them into context.",
+    "evaluation_scope": "LLaVA-OV-7B and Qwen2.5-VL-7B; StreamingBench contextual SQA/MCU/ACU, OVO EPM/ASI/HLD; EgoSchema and VideoMME.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: repeated compression can create irreversible loss, and fixed SCM size alone does not prove bounded whole-system RVM storage."
+    ],
+    "candidate_gaps": [
+      "Compression-depth/cue-survival stress test with matched complete memory accounting."
+    ],
+    "already_addressed_by": [
+      "Implemented fixed compressed context and query-driven visual reinjection overlap generic recall/reinjection ideas; ProtoKV separately studies delayed queries."
+    ],
+    "cheap_test": "Measure answer stability and evidence survival after repeated irrelevant chunks, keeping query semantics fixed.",
+    "source_urls": [
+      "https://arxiv.org/abs/2610.05940"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "ANS0972-7531-20-155.pdf",
+    "title": "Memory: A Contribution to Experimental Psychology",
+    "year": 2013,
+    "identifier": "historical-reprint",
+    "sha256": "3418d7517e092736f58392d281d026578898eb733c53d5f45be3a34b0ff1b276",
+    "pages": 2,
+    "source_type": "historical reprint",
+    "topic": "Historical experimental psychology of memory",
+    "relevance": "peripheral",
+    "review_depth": "two-page extracted text and bibliographic header review; selective review, not all lines/appendices",
+    "contribution": "Historical account of memory experiments; conceptual context only.",
+    "retention_or_core_mechanism": "Human learning/retention experiments; no computational KV retention mechanism.",
+    "evaluation_scope": "Two-page 2013 Annals of Neurosciences reprint of historical Ebbinghaus work/translation.",
+    "author_stated_limitations": [
+      "Not applicable to modern computational-method claims; no transformer/KV limitations claimed."
+    ],
+    "analyst_observed_limits": [
+      "Inference: a biological analogy supplies motivation but no evidence of machine-learning novelty or algorithmic superiority."
+    ],
+    "candidate_gaps": [
+      "No original HERMES method gap can be inferred from this source alone."
+    ],
+    "already_addressed_by": [
+      "Not applicable."
+    ],
+    "cheap_test": "Not applicable; use empirical computational controls instead.",
+    "source_urls": [],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "HERMES_arxiv.pdf",
+    "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "2601.14724",
+    "sha256": "5a5d78d28fe07dfdb2fddeae55322a8cf537235aaa723773182ea5e8f580c007",
+    "pages": 34,
+    "source_type": "preprint PDF",
+    "topic": "Layer-wise hierarchical KV retention, smoothing and position reindexing",
+    "relevance": "direct",
+    "review_depth": "abstract; method architecture; experimental setup p6; targeted limitation search; selective review, not all lines/appendices",
+    "contribution": "Training-free hierarchical cache management motivated by layer-wise attention behavior.",
+    "retention_or_core_mechanism": "Shallow recency, deep anchors, middle transition; cross-layer smoothing and RoPE-aware position reindexing; direct reuse at query arrival.",
+    "evaluation_scope": "PDF p6: StreamingBench, OVO-Bench, RVS-Ego/Movie; MVBench, VideoMME and EgoSchema; LLaVA-OV and Qwen2.5-VL spanning 0.5B-32B; A800 efficiency tests.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations section identified in targeted review. Do not attribute local scorer defects to the authors without official-code/version comparison."
+    ],
+    "analyst_observed_limits": [
+      "Inference: project baseline has an inconclusive 4K advantage and a local proxy/native-attention mismatch; correcting implementation is a validity prerequisite, not original contribution."
+    ],
+    "candidate_gaps": [
+      "After correction, test cached causal scoring with refresh controls and error-feedback sensitivity against fixed native scoring."
+    ],
+    "already_addressed_by": [
+      "Same underlying work as local 2026.acl-long.381.pdf (version overlap; not necessarily identical bytes). Hierarchical retention itself is existing HERMES."
+    ],
+    "cheap_test": "Small paired corrected-scorer pilot with identical memory budget, then method ablations only if benefit survives.",
+    "source_urls": [
+      "https://arxiv.org/abs/2601.14724"
+    ],
+    "duplicate_of_if_identified": "2026.acl-long.381.pdf (same work; version-specific equivalence not verified)"
+  },
+  {
+    "filename": "Liang_OASIS_On-Demand_Hierarchical_Event_Memory_for_Streaming_Video_Reasoning_CVPR_2026_paper.pdf",
+    "title": "OASIS: On-Demand Hierarchical Event Memory for Streaming Video Reasoning",
+    "year": 2026,
+    "identifier": "CVPR2026-OASIS",
+    "sha256": "e4071c62e6eae78f22ce36bedcb807d4082b728723ee0a0f98e9c3f083b32d2a",
+    "pages": 11,
+    "source_type": "conference paper",
+    "topic": "Hierarchical event forest and selective historical recall",
+    "relevance": "direct",
+    "review_depth": "abstract; section 3 event-forest formulation; motivation p2 and conclusion; selective review, not all lines/appendices",
+    "contribution": "On-demand event-level temporal routing through multi-resolution event memory.",
+    "retention_or_core_mechanism": "High-fidelity short window, medium buffer, event forest with timestamps/frames/generated summaries/embeddings; short context first and selective distant retrieval.",
+    "evaluation_scope": "Streaming-video reasoning evaluation; detailed numerical comparability must be checked against actual protocol, not inferred from headline results.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: generated summaries/retrieval may introduce persistent errors; distinguish GPU context bounds from retained frame and text storage."
+    ],
+    "candidate_gaps": [
+      "Specific reliability/feedback or calibrated abstention diagnostic may remain comparative; generic uncertainty-triggered history recall is already implemented."
+    ],
+    "already_addressed_by": [
+      "Implemented on-demand short/long event routing overlaps broad EDMI-style historical recall. StreamFlow also implements generation-time visual injection."
+    ],
+    "cheap_test": "Compare no retrieval, always retrieval and existing selective retrieval on matched context/latency before designing a new trigger.",
+    "source_urls": [
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Liang_OASIS_On-Demand_Hierarchical_Event_Memory_for_Streaming_Video_Reasoning_CVPR_2026_paper.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "minh26a.pdf",
+    "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
+    "year": 2026,
+    "identifier": "PMLR-v306-minh26a",
+    "sha256": "cda3f3d1365c7f18e127017e3910cbf55afe80ba1e05fc94e575dcb76d4d75a2",
+    "pages": 20,
+    "source_type": "conference paper",
+    "topic": "Bounded summary-state memory and delayed-query evaluation",
+    "relevance": "direct",
+    "review_depth": "abstract; summary-state mechanism; section 4.1 delayed-query protocol p6; conclusion; selective review, not all lines/appendices",
+    "contribution": "Keeps exact near context and compressed object-centric prototype/residual state for far history.",
+    "retention_or_core_mechanism": "Spatial/semantic prototypes plus residual statistics exposed as bounded pseudo-tokens, rather than selecting only old token instances.",
+    "evaluation_scope": "Four streaming benchmarks; controlled delayed-query sweeps using dataset timestamp t0; retrospective-type filter and common valid-query intersection (section 4.1 p6).",
+    "author_stated_limitations": [
+      "Section 4.1, p6 explicitly notes no ground-truth last-evidence time te; delay is measured from dataset query timestamp t0 instead. Conclusion leaves richer summaries/broader streaming settings to future work."
+    ],
+    "analyst_observed_limits": [
+      "Inference: timestamp-delay sweeps are weaker than annotated last-evidence-delay tests; cue timing needs verification for precise retention claims."
+    ],
+    "candidate_gaps": [
+      "Evidence-anchored delay and contamination robustness are more precise than generic delayed-query memory."
+    ],
+    "already_addressed_by": [
+      "Implemented bounded summary state and controlled delayed-query experiments directly overlap broad delayed-evidence retention novelty."
+    ],
+    "cheap_test": "Use a few clips with known decisive cue time; retrospective answers only; compare matched query sets across delays.",
+    "source_urls": [
+      "https://proceedings.mlr.press/v306/minh26a.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "pang26a.pdf",
+    "title": "Decouple and Cache: KV Cache Construction for Streaming Video Understanding",
+    "year": 2026,
+    "identifier": "PMLR-v306-pang26a",
+    "sha256": "5c40f419b901441d8ab734f165746d6ca70a8c4034fa376ddf2978282400aa13",
+    "pages": 16,
+    "source_type": "conference paper",
+    "topic": "DSCache position-agnostic past memory and instant recent context",
+    "relevance": "direct",
+    "review_depth": "abstract; section 3 and figure 2 p4; conclusion section 6; selective review, not all lines/appendices",
+    "contribution": "Training-free decoupling of cumulative past cache from on-demand recent cache construction.",
+    "retention_or_core_mechanism": "Store pre-RoPE keys; small FIFO feature buffer supplies independently constructed recent/instant cache; combine with cumulative past cache for QA.",
+    "evaluation_scope": "Streaming-video QA; recent-context construction incurs query-time work; numeric comparisons require matching input and budget.",
+    "author_stated_limitations": [
+      "Conclusion section 6 proposes faster instant-cache construction and better past-cache optimization as future work."
+    ],
+    "analyst_observed_limits": [
+      "Inference: pre-RoPE decoupling solves a positional/cache-construction concern but does not itself establish query-state freshness or correctness of local scorer."
+    ],
+    "candidate_gaps": [
+      "Amortized causal scoring versus on-demand recent reconstruction is a cost/quality comparison, not proof of novel cache decoupling."
+    ],
+    "already_addressed_by": [
+      "Implemented position-agnostic cache and recent/past separation; related pre-RoPE safety also Video-MemComp."
+    ],
+    "cheap_test": "Time first query and repeated queries separately with identical recent buffer and total byte budget.",
+    "source_urls": [
+      "https://proceedings.mlr.press/v306/pang26a.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "Wang_Accelerating_Streaming_Video_Large_Language_Models_via_Hierarchical_Token_Compression_CVPR_2026_paper.pdf",
+    "title": "Accelerating Streaming Video Large Language Models via Hierarchical Token Compression",
+    "year": 2026,
+    "identifier": "CVPR2026-STC",
+    "sha256": "4c8d3f913a0f543c9a520e99b44b28acf656ae0b9a1ea38a7f541b0dc290aa60",
+    "pages": 11,
+    "source_type": "conference paper",
+    "topic": "STC encoder feature caching plus prefill pruning",
+    "relevance": "direct",
+    "review_depth": "abstract; section 3 compressors; contribution list p2; conclusion; selective review, not all lines/appendices",
+    "contribution": "Training-free compression spanning vision encoder and LLM prefill.",
+    "retention_or_core_mechanism": "STC-Cacher reuses adjacent-frame visual features; STC-Pruner removes low-saliency tokens while respecting causal unknown-future-query streaming.",
+    "evaluation_scope": "Streaming VideoLLMs, including ReKV; efficiency and task-quality evaluation.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: high redundancy and end-to-end bottleneck placement determine benefit; report hit rate and wall time, not only token reduction."
+    ],
+    "candidate_gaps": [
+      "Can compatible feature reuse help the actual HERMES profile without compounding retention errors?"
+    ],
+    "already_addressed_by": [
+      "Implemented causal ViT caching and prefill compression close generic proposals to cache adjacent frames for streaming speed."
+    ],
+    "cheap_test": "Profile first, then test one encoder-cache setting on identical videos with full wall-clock timing.",
+    "source_urls": [
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Accelerating_Streaming_Video_Large_Language_Models_via_Hierarchical_Token_Compression_CVPR_2026_paper.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "Xiao_MuKV_Multi-Grained_KV_Cache_Compression_for_Long_Streaming_Video_Question-Answering_CVPR_2026_paper.pdf",
+    "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+    "year": 2026,
+    "identifier": "CVPR2026-MuKV",
+    "sha256": "639f24f7a9edba930e780b9aecf1ee1b3091f336ed954b63bd2a18133c8fc360",
+    "pages": 11,
+    "source_type": "conference paper",
+    "topic": "Multi-grain compressed historical KV with retrieval/reranking",
+    "relevance": "direct",
+    "review_depth": "abstract; compression/retrieval mechanism; section 4.1 p5; conclusion; selective review, not all lines/appendices",
+    "contribution": "Patch-, frame- and segment-grained historical KV compression and efficient retrieval.",
+    "retention_or_core_mechanism": "Self-attention/Fourier compression; offline KV storage; grain-agnostic parallel retrieval then hierarchical reranking at query time.",
+    "evaluation_scope": "Section 4.1 p5: RVS-Ego, RVS-Movie, StreamingBench RTVU subset; metrics online accuracy, efficiency and offline cache storage; changed GPT-3.5 judge version noted.",
+    "author_stated_limitations": [
+      "Section 4.1 p5 discloses original GPT-3.5-turbo-0613 judge was deprecated, so a different GPT-3.5-turbo judge is used; this is an evaluation comparability caveat, not a declared algorithm limitation."
+    ],
+    "analyst_observed_limits": [
+      "Inference: storage/retrieval improves recall but is not equivalent to strictly bounded total-memory eviction; judge-version differences can obscure cross-paper score comparisons."
+    ],
+    "candidate_gaps": [
+      "Whole-system boundedness and matched-judge controlled recall comparison."
+    ],
+    "already_addressed_by": [
+      "Implemented multigrain KV retrieval and reranking overlap generic multiresolution-memory recall."
+    ],
+    "cheap_test": "Report stored bytes versus elapsed stream and use the same answer scorer for any direct comparison.",
+    "source_urls": [
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_MuKV_Multi-Grained_KV_Cache_Compression_for_Long_Streaming_Video_Question-Answering_CVPR_2026_paper.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "Yang_Revisiting_Multimodal_KV_Cache_Compression_A_Frequency-Domain-Guided_Outlier-KV-Aware_Approach_CVPR_2026_paper.pdf",
+    "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
+    "year": 2026,
+    "identifier": "CVPR2026-FlashCache",
+    "sha256": "2e713459bb139da3b07e3e5d5ff31aadc9b9de165aa8395d5c459047e5c47012",
+    "pages": 11,
+    "source_type": "conference paper",
+    "topic": "Attention-free frequency/outlier scoring with layer-adaptive budgets",
+    "relevance": "supporting",
+    "review_depth": "abstract; scoring/budget mechanism; setup and main evaluation table pp5-6; conclusion; selective review, not all lines/appendices",
+    "contribution": "Training-free FlashAttention-compatible multimodal cache compression without attention scores.",
+    "retention_or_core_mechanism": "Frequency-domain outlier key/value signals drive token retention and layer budget assignment.",
+    "evaluation_scope": "MileBench temporal/semantic multi-image, needle retrieval and image retrieval tasks; LLaVA-OV-1.5-8B, Qwen2.5-VL-7B/32B (section 4.1 pp5-6).",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: offline multimodal evaluation alone does not establish causal unknown-question streaming performance; backbone and policy must be controlled."
+    ],
+    "candidate_gaps": [
+      "Compare cheap outlier scoring with causal-state scoring in the same streaming retention policy."
+    ],
+    "already_addressed_by": [
+      "Implemented attention-free scoring and layer-adaptive budget allocation; broad cheap-score/adaptive-layer-budget novelty is occupied."
+    ],
+    "cheap_test": "Hold budget, policy and selected token granularity fixed; swap only signal on a small streaming replay.",
+    "source_urls": [
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Revisiting_Multimodal_KV_Cache_Compression_A_Frequency-Domain-Guided_Outlier-KV-Aware_Approach_CVPR_2026_paper.html"
+    ],
+    "duplicate_of_if_identified": null
+  },
+  {
+    "filename": "Zhang_Think-as-You-See_Streaming_Chain-of-Thought_Reasoning_for_Large_Vision-Language_Models_CVPR_2026_paper.pdf",
+    "title": "Think-as-You-See: Streaming Chain-of-Thought Reasoning for Large Vision-Language Models",
+    "year": 2026,
+    "identifier": "CVPR2026-TaYS",
+    "sha256": "9a7fe9856f1fd5591b30d1ce3028eb955fae58d6704a3f09750f053b2a5889ae",
+    "pages": 11,
+    "source_type": "conference paper",
+    "topic": "Stream-aligned training and parallel perception/reasoning KV",
+    "relevance": "supporting",
+    "review_depth": "abstract; mechanism overview; section 4.1 p6; conclusion; selective review, not all lines/appendices",
+    "contribution": "Streaming chain-of-thought with separate perception and reasoning caches.",
+    "retention_or_core_mechanism": "Parallel-cache design allows perception and progressive reasoning to evolve while frames arrive; trained on stream-aligned reasoning data.",
+    "evaluation_scope": "Section 4.1 p6: extended VideoEspresso-derived reasoning protocol; Qwen2.5-VL-3B/7B; batch/interleaved and SFT controls; quality and latency.",
+    "author_stated_limitations": [
+      "No dedicated author-limitations passage identified in targeted review."
+    ],
+    "analyst_observed_limits": [
+      "Inference: training-dependent reasoning pipeline is a conceptual comparison, not a drop-in baseline for a few-day cache-only improvement."
+    ],
+    "candidate_gaps": [
+      "Separate reasoning correctness from retention quality; wrong intermediate reasoning may influence subsequent state and needs explicit diagnostics."
+    ],
+    "already_addressed_by": [
+      "Implemented progressive streaming reasoning and dual cache structure overlap generic asynchronous reasoning/cache separation."
+    ],
+    "cheap_test": "If weights available, use one fixed clip and intervene in intermediate reasoning; otherwise keep as conceptual prior art.",
+    "source_urls": [
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Think-as-You-See_Streaming_Chain-of-Thought_Reasoning_for_Large_Vision-Language_Models_CVPR_2026_paper.html"
+    ],
+    "duplicate_of_if_identified": null
+  }
+]
