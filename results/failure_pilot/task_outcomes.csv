@@ -1,0 +1,11 @@
+task,questions,hermes_correct,fifo_correct,hermes_only,fifo_only,both_wrong,both_correct
+Action Recognition,353,230,222,13,5,118,217
+Attribute Recognition,303,221,223,8,10,72,213
+Causal Reasoning,128,79,80,0,1,48,79
+Clips Summarize,317,228,231,2,5,84,226
+Counting,193,37,38,3,4,152,34
+Event Understanding,159,112,108,6,2,45,106
+Object Recognition,367,264,265,7,8,95,257
+Prospective Reasoning,108,66,64,6,4,38,60
+Spatial Understanding,246,133,133,4,4,109,129
+Text-Rich Understanding,321,185,182,9,6,130,176

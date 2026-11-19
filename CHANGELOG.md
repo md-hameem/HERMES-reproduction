@@ -2,6 +2,14 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-19 — Literature gap register and diagnostic pilot
+
+- Added a review ledger for all 51 local PDF files, a 39-entry gap register, detailed source notes and a publication strategy with the supplied CCF catalogue.
+- Updated the technical report's historical EDMI proposal with StreamFlow's implemented attention-guided memory-injection overlap. Originality remains unverified for conditional candidates.
+- Started a CPU-only failure pilot with validated joins for all 2,495 HERMES/FIFO predictions and 30 outcome-selected cases across distinct videos. Full conversations preserve 150 questions for replay.
+- Added a reproducible standard-library builder, identity/selection safeguard tests, source provenance and a human evidence-review sheet. Existing review entries are preserved on regeneration.
+- Documented evidence-review, sampling, causal-scorer and separate history-feedback controls. Video inspection and GPU treatments remain pending; no new accuracy improvement is claimed.
+
 ## 2026-11-19 — Five-stage intake, full-benchmark audit and organization
 
 ### Repository organization

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "seed": 2024,
+  "quotas": {
+    "hermes_only": 8,
+    "fifo_only": 8,
+    "both_wrong": 10,
+    "both_correct": 4
+  },
+  "selection": "Outcome-selected task round-robin with SHA256 ranking and globally distinct videos; duplicate gold excluded",
+  "annotation_sha256": "968071f9f3fe969ece600d08d6365b72d0b1766d6cbc2ee25b27fe7927b26e96",
+  "archive_sha256": "b8bc4cf8a3b28e6854b2e76b8c0239b12d3b5598ee1a07dafc03d0326a900518",
+  "prediction_sha256": {
+    "exports/full_hermes_4000_predictions.csv": "658fe64c8d63e1bfff202e76da53036643616f3b78e1621b7272d846001f004f",
+    "exports/full_fifo_4000_predictions.csv": "622f2a10679af459de0adbf4ce189c249ab58489cf66b2ce122c17ff2b8039af"
+  },
+  "builder_sha256": "660331bf87aaef5da1165102d552c43dea11a6d42991e1c078ed0def2c66280d",
+  "inventory_questions": 2495,
+  "inventory_videos": 498,
+  "outcome_counts": {
+    "both_wrong": 891,
+    "both_correct": 1497,
+    "hermes_only": 58,
+    "fifo_only": 49
+  },
+  "selected_questions": 30,
+  "selected_videos": 30,
+  "selected_video_full_history_questions": 150,
+  "selected_case_ids": [
+    "sample_381_q2",
+    "sample_499_q3",
+    "sample_385_q2",
+    "sample_212_q3",
+    "sample_277_q3",
+    "sample_370_q3",
+    "sample_493_q2",
+    "sample_489_q3",
+    "sample_114_q3",
+    "sample_180_q2",
+    "sample_189_q1",
+    "sample_431_q1",
+    "sample_086_q3",
+    "sample_349_q2",
+    "sample_219_q3",
+    "sample_059_q4",
+    "sample_062_q2",
+    "sample_305_q1",
+    "sample_487_q0",
+    "sample_035_q1",
+    "sample_427_q0",
+    "sample_342_q1",
+    "sample_218_q2",
+    "sample_232_q4",
+    "sample_429_q0",
+    "sample_071_q0",
+    "sample_072_q1",
+    "sample_302_q0",
+    "sample_480_q3",
+    "sample_222_q2"
+  ],
+  "limits": [
+    "Development reuse; selected outcomes cannot estimate accuracy or confirm a method",
+    "No video inspection, evidence survival measurement or GPU inference performed",
+    "Question time is not evidence age; previous wrong answers do not prove feedback harm",
+    "Replay complete selected video histories; do not run selected questions in isolation"
+  ]
+}

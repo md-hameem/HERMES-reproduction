@@ -84,6 +84,12 @@ python scripts/validate_five_stage_evidence.py
 
 The current status page describes completed work, remaining research and the evidence layout. The original uploaded ZIP, published summaries and executed notebook are indexed there. [Project status](docs/PROJECT_STATUS.md) · [Local audit](evidence/audits/five_stage_local_audit.json) · [Archive report](results/five_stage/final_research_report.md)
 
+### Research extension in progress
+
+The [research gap map](<docs/reports/HERMES research gap map.md>) accounts for 51 local PDF files at recorded review depths. Its [39-entry register](<docs/reports/HERMES gap register.csv>) distinguishes existing solutions, implementation fixes, evaluation gaps and conditional method ideas. The [publication strategy](<docs/reports/HERMES journal publication strategy.md>) records venue fit and the supplied CCF catalogue; the university's qualifying categories still require confirmation.
+
+The next step is the [evidence-loss diagnostic pilot](docs/FAILURE_PILOT.md). CPU preparation joins all 2,495 HERMES/FIFO question pairs and selects 30 review targets across 30 videos with complete QA histories. Video evidence review and corrected-scorer GPU experiments remain pending. Rebuild the casebook with `python scripts/build_failure_pilot.py`; no GPU or external Python packages are required.
+
 ### Original Validated AutoDL Run — 25 October 2026
 
 | Configuration | Correct | Accuracy | Total runtime |

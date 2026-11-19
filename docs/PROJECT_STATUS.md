@@ -66,11 +66,13 @@ The full benchmark combines October results on samples 201–250 with November m
 
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 
+The [failure-analysis pilot](FAILURE_PILOT.md) has started with a reproducible CPU casebook. All 2,495 paired outcomes reproduce the audited totals. Thirty target questions span 30 distinct videos, with 150 full-history questions retained for replay. The [review sheet](../results/failure_pilot/evidence_review.csv) is pending because benchmark videos are absent from this checkout. Video review and GPU scorer treatments have not run. The builder, source hashes, selection limitations and execution protocol are saved alongside the outputs.
+
 1. Complete thesis synthesis around the audited reproduction, component diagnostics and full-benchmark result, including the null accuracy finding.
 2. Measure a corrected-attention QA treatment if pursuing a claim about the scorer's effect on answer quality. Current attention results establish numerical and selection differences on one video chunk.
 3. Establish a matched native LLaVA baseline on a feasible, explicitly defined context range if making claims against the base model. Current 50K results use the HERMES pipeline.
 4. Verify a clean replay of the maintained notebook. The existing evidence establishes a recovered completed run.
-5. Decide with the advisor whether the thesis needs an original extension or further models and workloads. EDMI remains a proposal with no measured implementation in this evidence.
+5. Develop an original method or improvement as required by the advisor, after the diagnostic pilot identifies a recoverable failure. Broad EDMI-style reinjection overlaps StreamFlow and is not an established original contribution. Confirm which CCF categories satisfy the university's publication requirement; additional models and workloads depend on the eventual claim and compute budget.
 
 All three historical archival omissions have been recovered in the supplemental ZIP with their original hashes. The old bundles still document the omissions. Raw model weights, videos and full attention tensors are outside this evidence package. Attention tables and selection sets can be checked locally, while rerunning the GPU computation requires the pinned assets and environment.
 

@@ -1,0 +1,2282 @@
+[
+  {
+    "video_id": 243,
+    "video_path": "/data/streamingbench/videos/sample_35_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the man holding in his right hand?",
+        "answer": "An olive oil bottle.",
+        "choices": [
+          "A pen.",
+          "A spatula.",
+          "An olive oil bottle.",
+          "A remote."
+        ],
+        "end_time": 196.0,
+        "task": "Object Recognition",
+        "time_stamp": "0:03:16",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the person holding in his hand right now?",
+        "answer": "A knife and a towel.",
+        "choices": [
+          "A spoon and a piece of ginger.",
+          "A knife and a towel.",
+          "A fork and a piece of onion.",
+          "A spatula and a piece of pepper."
+        ],
+        "end_time": 360.0,
+        "task": "Object Recognition",
+        "time_stamp": "0:06:00",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What action is the person performing right now?",
+        "answer": "Chopping garlic.",
+        "choices": [
+          "Stirring a pot.",
+          "Slicing an onion.",
+          "Chopping garlic.",
+          "Peeling potatoes."
+        ],
+        "end_time": 369.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:06:09",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What color is the handle of the frying pan that contains meat inside?",
+        "answer": "Red.",
+        "choices": [
+          "Black.",
+          "Silver.",
+          "Red.",
+          "Blue."
+        ],
+        "end_time": 541.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:09:01",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What does the person do after adding yogurt into the pot?",
+        "answer": "Begins mixing the contents of the pot.",
+        "choices": [
+          "Turns off the stove.",
+          "Begins mixing the contents of the pot.",
+          "Places a lid on the pot.",
+          "Adds more green vegetables."
+        ],
+        "end_time": 729.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:12:09",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 475,
+    "video_path": "/data/streamingbench/videos/sample_59_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the hand doing right now?",
+        "answer": "Displaying some heavy weight cardstock.",
+        "choices": [
+          "Cutting the paper.",
+          "Displaying some heavy weight cardstock.",
+          "Holding a pen.",
+          "Arranging flowers."
+        ],
+        "end_time": 23.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:00:23",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What action is being performed just now?",
+        "answer": "Clicking the continue button.",
+        "choices": [
+          "Displaying different material options.",
+          "Highlighting the \"On Mat\" option.",
+          "Clicking the continue button.",
+          "Changing the project type to \"Multiple Ways.\"."
+        ],
+        "end_time": 83.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:01:23",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the person doing right now?",
+        "answer": "Sliding the cutting mat into a Cricut cutting machine.",
+        "choices": [
+          "Cutting strips of double-sided tape.",
+          "Positioning the paper onto the mat.",
+          "Sliding the cutting mat into a Cricut cutting machine.",
+          "Peeling a strip of tape using scissors."
+        ],
+        "end_time": 183.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:03:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the person doing right now?",
+        "answer": "Peeling off the protective layer from the foam tape.",
+        "choices": [
+          "Peeling off the protective layer from the foam tape.",
+          "Using the white-handled craft scissors to cut the foam tape.",
+          "Writing \"Happy Mother's Day\" on a cutout.",
+          "Arranging small paper cutouts on the surface."
+        ],
+        "end_time": 259.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:04:19",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What are the hands doing right now?",
+        "answer": "Making final adjustments to the placed flowers.",
+        "choices": [
+          "Placing a new cutout on the surface.",
+          "Adding more circular sequins.",
+          "Making final adjustments to the placed flowers.",
+          "Writing \"Happy Mother's Day\" on the cutout."
+        ],
+        "end_time": 341.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:05:41",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 388,
+    "video_path": "/data/streamingbench/videos/sample_62_real.mp4",
+    "conversations": [
+      {
+        "question": "What is being displayed right now?",
+        "answer": "Circular donut keychains with names.",
+        "choices": [
+          "Round, glittery discs with names.",
+          "Text \"How To Resin Over Vinyl\".",
+          "A black screen with text.",
+          "Circular donut keychains with names."
+        ],
+        "end_time": 19.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:00:19",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What did the person do just now?",
+        "answer": "Held and examined two round items.",
+        "choices": [
+          "Presented a respiratory mask from various angles.",
+          "Directed a heat tool at a canvas.",
+          "Disassembled the resin kit.",
+          "Held and examined two round items."
+        ],
+        "end_time": 143.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:02:23",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is both hands securing right now?",
+        "answer": "A transparent tape printed with many patterns on it.",
+        "choices": [
+          "A transparent sheet onto a blue object.",
+          "A white piece onto a purple circular object.",
+          "A yellow and white crafting tool onto a white speckled piece.",
+          "A transparent tape printed with many patterns on it."
+        ],
+        "end_time": 260.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:04:20",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What action is the person performing right now?",
+        "answer": "Consistently stirring the liquid.",
+        "choices": [
+          "Measuring ingredients in two cups.",
+          "Pouring liquid into a third container.",
+          "Wearing black gloves.",
+          "Consistently stirring the liquid."
+        ],
+        "end_time": 379.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:06:19",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What did the person do with the lighter just now?",
+        "answer": "Brought the flame close to a gold glitter-covered top.",
+        "choices": [
+          "Ignited a match.",
+          "Removed the popsicle stick from the container.",
+          "Adjusted the measurement markings on the container.",
+          "Brought the flame close to a gold glitter-covered top."
+        ],
+        "end_time": 488.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:08:08",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 99,
+    "video_path": "/data/streamingbench/videos/sample_71_real.mp4",
+    "conversations": [
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "0.",
+          "1.",
+          "3.",
+          "4."
+        ],
+        "end_time": 18.0,
+        "task": "Counting",
+        "time_stamp": "00:00:18",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "0.",
+          "1.",
+          "3.",
+          "4."
+        ],
+        "end_time": 58.0,
+        "task": "Counting",
+        "time_stamp": "00:00:58",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "0.",
+          "1.",
+          "3.",
+          "4."
+        ],
+        "end_time": 138.0,
+        "task": "Counting",
+        "time_stamp": "00:02:18",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "0.",
+          "1.",
+          "3.",
+          "4."
+        ],
+        "end_time": 178.0,
+        "task": "Counting",
+        "time_stamp": "00:02:58",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "0.",
+          "1.",
+          "3.",
+          "4."
+        ],
+        "end_time": 318.0,
+        "task": "Counting",
+        "time_stamp": "00:05:18",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 210,
+    "video_path": "/data/streamingbench/videos/sample_72_real.mp4",
+    "conversations": [
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "1.",
+        "choices": [
+          "1.",
+          "3.",
+          "4.",
+          "0."
+        ],
+        "end_time": 192.0,
+        "task": "Counting",
+        "time_stamp": "00:03:12",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "2.",
+        "choices": [
+          "1.",
+          "2.",
+          "4.",
+          "0."
+        ],
+        "end_time": 208.0,
+        "task": "Counting",
+        "time_stamp": "00:03:28",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "3.",
+        "choices": [
+          "1.",
+          "3.",
+          "4.",
+          "0."
+        ],
+        "end_time": 262.0,
+        "task": "Counting",
+        "time_stamp": "00:04:22",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "4.",
+        "choices": [
+          "1.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "end_time": 318.0,
+        "task": "Counting",
+        "time_stamp": "00:05:18",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "13.",
+        "choices": [
+          "10.",
+          "11.",
+          "12.",
+          "13."
+        ],
+        "end_time": 810.0,
+        "task": "Counting",
+        "time_stamp": "00:13:30",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 446,
+    "video_path": "/data/streamingbench/videos/sample_86_real.mp4",
+    "conversations": [
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "0.",
+        "choices": [
+          "2.",
+          "3.",
+          "4.",
+          "0."
+        ],
+        "end_time": 18.0,
+        "task": "Counting",
+        "time_stamp": "00:00:18",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "3.",
+        "choices": [
+          "3.",
+          "5.",
+          "6.",
+          "0."
+        ],
+        "end_time": 222.0,
+        "task": "Counting",
+        "time_stamp": "00:03:42",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "3.",
+        "choices": [
+          "2.",
+          "4.",
+          "3.",
+          "6."
+        ],
+        "end_time": 242.0,
+        "task": "Counting",
+        "time_stamp": "00:04:02",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "4.",
+        "choices": [
+          "2.",
+          "5.",
+          "4.",
+          "6."
+        ],
+        "end_time": 301.0,
+        "task": "Counting",
+        "time_stamp": "00:05:01",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many times in total have movie clips been inserted during this person's explanation so far?",
+        "answer": "5.",
+        "choices": [
+          "4.",
+          "8.",
+          "6.",
+          "5."
+        ],
+        "end_time": 379.0,
+        "task": "Counting",
+        "time_stamp": "00:06:19",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 322,
+    "video_path": "/data/streamingbench/videos/sample_114_real.mp4",
+    "conversations": [
+      {
+        "question": "What label is prominently visible on the computer case right now?",
+        "answer": "NZXT.",
+        "choices": [
+          "ASUS.",
+          "Corsair.",
+          "Cooler Master.",
+          "NZXT."
+        ],
+        "end_time": 6.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:00:06",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What label is visible on the memory bank just now?",
+        "answer": "Crucial.",
+        "choices": [
+          "Essential.",
+          "Major.",
+          "Primary.",
+          "Crucial."
+        ],
+        "end_time": 247.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:04:07",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which brand name appears on the black fans inside the computer case right now?",
+        "answer": "NZXT.",
+        "choices": [
+          "Corsair.",
+          "Cooler Master.",
+          "Thermaltake.",
+          "NZXT."
+        ],
+        "end_time": 459.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:07:39",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which CPU's performance are displayed right now?",
+        "answer": "RTX 4070Ti.",
+        "choices": [
+          "RTX 4070 Ti SUPER.",
+          "RTX 4090.",
+          "RTX 4080.",
+          "RTX 4070Ti."
+        ],
+        "end_time": 680.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:11:20",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What words can be seen inside the computer case now",
+        "answer": "GIGABYTE.",
+        "choices": [
+          "GPU.",
+          "RTX 4070 Ti SUPER.",
+          "FAN.",
+          "GIGABYTE."
+        ],
+        "end_time": 856.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:14:16",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 401,
+    "video_path": "/data/streamingbench/videos/sample_180_real.mp4",
+    "conversations": [
+      {
+        "question": "How many trees are on the left side of the road right now?",
+        "answer": "Three.",
+        "choices": [
+          "Four.",
+          "Six.",
+          "Seven.",
+          "Three."
+        ],
+        "end_time": 3.0,
+        "task": "Counting",
+        "time_stamp": "00:00:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Where are the hay bales located right now?",
+        "answer": "On the both sides of the road.",
+        "choices": [
+          "On the left side of the road.",
+          "On the both sides of the road.",
+          "In the middle of the road.",
+          "Directly ahead of the cyclist."
+        ],
+        "end_time": 141.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:02:21",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the object located near the lamp post right now?",
+        "answer": "A tree with white flowers.",
+        "choices": [
+          "A car.",
+          "A bicycle.",
+          "A mailbox.",
+          "A tree with white flowers."
+        ],
+        "end_time": 276.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:04:36",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Where is the tree shadow located right now?",
+        "answer": "Across the entire road.",
+        "choices": [
+          "On the left side of the road.",
+          "Across the entire road.",
+          "On the right side of the road.",
+          "In the middle of the road."
+        ],
+        "end_time": 423.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:07:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Where is the cyclist heading right now?",
+        "answer": "Towards a residential area.",
+        "choices": [
+          "Towards a commercial area.",
+          "Towards a residential area.",
+          "Towards an industrial area.",
+          "Towards a forest."
+        ],
+        "end_time": 563.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:09:23",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 185,
+    "video_path": "/data/streamingbench/videos/sample_189_real.mp4",
+    "conversations": [
+      {
+        "question": "What color is the character's outfit standing on the path?",
+        "answer": "Yellow and pink.",
+        "choices": [
+          "Blue and white.",
+          "Yellow and pink.",
+          "Red and green.",
+          "Black and yellow."
+        ],
+        "end_time": 17.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "0:00:17",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What objects are seen on the grassy area below the stone structure?",
+        "answer": "A white and red bed and a crafting table.",
+        "choices": [
+          "A white and red bed and a crafting table.",
+          "A brown chair and a red table.",
+          "A yellow bed and a crafting table.",
+          "A green chair and a red table."
+        ],
+        "end_time": 300.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:05:00",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What action is the player performing in the video right now?",
+        "answer": "Pruning the vines on the tree.",
+        "choices": [
+          "Planting seeds.",
+          "Pruning the vines on the tree.",
+          "Climbing the tree.",
+          "Collecting bamboo stalks."
+        ],
+        "end_time": 577.0,
+        "task": "Action Recognition",
+        "time_stamp": "0:09:37",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What tool is the player holding in his hand right now?",
+        "answer": "A pixel-style scissors.",
+        "choices": [
+          "A shovel.",
+          "A pixel-style scissors.",
+          "A saw.",
+          "A pickaxe."
+        ],
+        "end_time": 581.0,
+        "task": "Object Recognition",
+        "time_stamp": "0:09:41",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What can be seen flying away when the user removes a block of dirt?",
+        "answer": "Bits of dirt.",
+        "choices": [
+          "Bits of stone.",
+          "Bits of dirt.",
+          "Grass particles.",
+          "Wood fragments."
+        ],
+        "end_time": 843.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "0:14:03",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 125,
+    "video_path": "/data/streamingbench/videos/sample_212_real.mp4",
+    "conversations": [
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to add mixed numbers.",
+        "choices": [
+          "How to add mixed numbers.",
+          "The subtraction of mixed numbers.",
+          "The multiplication of fractions.",
+          "The properties of whole numbers."
+        ],
+        "end_time": 20.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:00:20",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to add those two mixed numbers.",
+        "choices": [
+          "How to add those two mixed numbers.",
+          "The process of converting mixed numbers to improper fractions.",
+          "Subtracting mixed numbers.",
+          "The definition of mixed numbers."
+        ],
+        "end_time": 130.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:02:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker do next?",
+        "answer": "How to add those two mixed numbers.",
+        "choices": [
+          "How to add those two mixed numbers.",
+          "Subtract the fractions.",
+          "Multiply the fractions.",
+          "Divide the fractions."
+        ],
+        "end_time": 248.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:04:08",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to add those two fractions numbers.",
+        "choices": [
+          "How to add mixed numbers.",
+          "How to convert fractions to decimals.",
+          "The process of subtracting fractions.",
+          "How to add those two fractions numbers."
+        ],
+        "end_time": 396.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:06:36",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "Adding the fractions together.",
+        "choices": [
+          "Adding the fractions together.",
+          "Converting the results back to whole numbers.",
+          "Finding a different common denominator.",
+          "Subtracting the fractions."
+        ],
+        "end_time": 478.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:07:58",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 492,
+    "video_path": "/data/streamingbench/videos/sample_218_real.mp4",
+    "conversations": [
+      {
+        "question": "What topic might the teacher explain next?",
+        "answer": "mixed numbers and improper fractions.",
+        "choices": [
+          "mixed numbers and improper fractions.",
+          "Add mixed numbers.",
+          "Subtract improper fractions.",
+          "Multiply fractions."
+        ],
+        "end_time": 11.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:00:11",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the teacher explain next?",
+        "answer": "Explain how improper fractions is connected to proper fractions and whole fractions.",
+        "choices": [
+          "Compare the fractions using decimal values.",
+          "Explain how improper fractions is connected to proper fractions and whole fractions.",
+          "Demonstrate how to multiply two fractions.",
+          "Discuss the concept of mixed numbers."
+        ],
+        "end_time": 190.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:03:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to convert mixed numbers to improper fractions.",
+        "choices": [
+          "How to convert mixed numbers to improper fractions.",
+          "The method for adding mixed numbers and improper fractions.",
+          "Simplifying improper fractions.",
+          "Dividing fractions by whole numbers."
+        ],
+        "end_time": 331.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "0:05:31",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What concept will the speaker likely explain next?",
+        "answer": "Converting improper fractions to mixed numbers.",
+        "choices": [
+          "Multiplying mixed fractions by a whole number.",
+          "Converting improper fractions to mixed numbers.",
+          "Adding improper fractions together.",
+          "Simplifying mixed fractions."
+        ],
+        "end_time": 500.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:08:20",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to use dividing to convert improper fractions to a mixed number form.",
+        "choices": [
+          "Add the remainder to the quotient.",
+          "Subtract 6 from 1.",
+          "Divide 7 by 3.",
+          "How to use dividing to convert improper fractions to a mixed number form."
+        ],
+        "end_time": 646.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:10:46",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 456,
+    "video_path": "/data/streamingbench/videos/sample_219_real.mp4",
+    "conversations": [
+      {
+        "question": "What mathematical topic might the speaker focus on next?",
+        "answer": "Multiplying Fractions.",
+        "choices": [
+          "Adding Fractions.",
+          "Dividing Fractions.",
+          "Simplifying Fractions.",
+          "Multiplying Fractions."
+        ],
+        "end_time": 10.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:00:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker do next?",
+        "answer": "Show the steps to multiply the fractions.",
+        "choices": [
+          "Explain how to convert the fractions.",
+          "Show the steps to add the fractions.",
+          "Show the steps to multiply the fractions.",
+          "Discuss the importance of common denominators."
+        ],
+        "end_time": 55.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:00:55",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker do next?",
+        "answer": "Show the steps to multiply the fractions.",
+        "choices": [
+          "Add the fractions together.",
+          "Subtract the fractions.",
+          "Show the steps to multiply the fractions.",
+          "Divide the fractions."
+        ],
+        "end_time": 149.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:02:29",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What mathematical concept might the speaker move on to explain next?",
+        "answer": "Another explanation to fractions.",
+        "choices": [
+          "Addition of fractions.",
+          "Subtraction of fractions.",
+          "Simplifying fractions.",
+          "Another explanation to fractions."
+        ],
+        "end_time": 231.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:03:51",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker discuss next?",
+        "answer": "How to multiply the denominators.",
+        "choices": [
+          "How to add fractions.",
+          "How to divide fractions.",
+          "How to multiply the denominators.",
+          "How to subtract fractions."
+        ],
+        "end_time": 310.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:05:10",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 494,
+    "video_path": "/data/streamingbench/videos/sample_222_real.mp4",
+    "conversations": [
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to simplify fractions.",
+        "choices": [
+          "How to plot 25/50 on a graph.",
+          "How to further simplify 1/2.",
+          "How to simplify fractions.",
+          "How to multiply fractions."
+        ],
+        "end_time": 13.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:00:13",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "Equivalent fractions of 3/6.",
+        "choices": [
+          "Converting 1/2 to a decimal.",
+          "Adding fractions with different denominators.",
+          "Equivalent fractions of 3/6.",
+          "Subtracting fractions with common denominators."
+        ],
+        "end_time": 84.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:01:24",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker discuss next?",
+        "answer": "Simplifying fractions by finding common factors.",
+        "choices": [
+          "Converting improper fractions to mixed numbers.",
+          "Adding fractions with different denominators.",
+          "Simplifying fractions by finding common factors.",
+          "Multiplying fractions by whole numbers."
+        ],
+        "end_time": 153.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:02:33",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker explain next?",
+        "answer": "How to factorize each number to prime factors.",
+        "choices": [
+          "How to find the greatest common divisor.",
+          "How to convert the fraction to a decimal.",
+          "How to factorize each number to prime factors.",
+          "How to add fractions with different denominators."
+        ],
+        "end_time": 345.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:05:45",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What might the speaker discuss next?",
+        "answer": "Simplifying fractions using greatest common factor.",
+        "choices": [
+          "How to find common denominators.",
+          "The process of cross-multiplication.",
+          "Simplifying fractions using greatest common factor.",
+          "The difference between factors and multiples."
+        ],
+        "end_time": 437.0,
+        "task": "Prospective Reasoning",
+        "time_stamp": "00:07:17",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 286,
+    "video_path": "/data/streamingbench/videos/sample_232_real.mp4",
+    "conversations": [
+      {
+        "question": "Why does the frog appear from the toilet?",
+        "answer": "Because the chicken that was just thrown into the toilet is wearing a frog's disguise.",
+        "choices": [
+          "Because the frog was hiding there to avoid being caught by the rabbit.",
+          "Because the frog was attracted by the water and jumped in.",
+          "Because the toilet leads to a secret underground pond where the frog lives.",
+          "Because the chicken that was just thrown into the toilet is wearing a frog's disguise."
+        ],
+        "end_time": 17.0,
+        "task": "Causal Reasoning",
+        "time_stamp": "0:00:17",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Why does the rabbit dressed in red and white start to become restless?",
+        "answer": "Because the fly just disturbed him, he is swatting the fly.",
+        "choices": [
+          "Because the fly just disturbed him, he is swatting the fly.",
+          "Because he suddenly remembered he left something important outside.",
+          "Because he heard a strange noise coming from the next room.",
+          "Because he can't find the key to the door and is getting frustrated."
+        ],
+        "end_time": 86.0,
+        "task": "Causal Reasoning",
+        "time_stamp": "0:01:26",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Why is this cartoon chicken very shocked now?",
+        "answer": "Because just now another small cartoon chicken was eaten by a frog.",
+        "choices": [
+          "Because just now another small cartoon chicken was eaten by a frog.",
+          "Because it just saw a mirror and didn't recognize its own reflection.",
+          "Because a loud noise suddenly scared it from behind.",
+          "Because it saw a large shadow pass overhead, thinking it was a predator."
+        ],
+        "end_time": 174.0,
+        "task": "Causal Reasoning",
+        "time_stamp": "0:02:54",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Why does the character encounter a heavy legacy robot in the room?",
+        "answer": "Because the character reads a comic book.",
+        "choices": [
+          "Because the character turns on a machine.",
+          "Because the character follows someone into the room.",
+          "Because the character activates a hidden switch.",
+          "Because the character reads a comic book."
+        ],
+        "end_time": 251.0,
+        "task": "Causal Reasoning",
+        "time_stamp": "0:04:11",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Why is this red rabbit standing in front of the iron gate now?",
+        "answer": "Because the cartoon character on the iron gate has been whistling just now.",
+        "choices": [
+          "Because the red rabbit is trying to figure out how to open the gate.",
+          "Because the iron gate suddenly started glowing, and the rabbit is curious.",
+          "Because the cartoon character is seeking amusement.",
+          "Because the cartoon character on the iron gate has been whistling just now."
+        ],
+        "end_time": 253.0,
+        "task": "Causal Reasoning",
+        "time_stamp": "00:04:13",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 201,
+    "video_path": "/data/streamingbench/videos/sample_277_real.mp4",
+    "conversations": [
+      {
+        "question": "What did the car do just now?",
+        "answer": "It parked near a shopping center.",
+        "choices": [
+          "It stopped at a traffic light.",
+          "It turned left at an intersection.",
+          "It parked near a shopping center.",
+          "It reversed into a parking space."
+        ],
+        "end_time": 13.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:00:13",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the car doing right now?",
+        "answer": "Completing a right turn at the intersection.",
+        "choices": [
+          "Preparing to make a right turn.",
+          "Driving on a multi-lane bridge.",
+          "Completing a right turn at the intersection.",
+          "Stopping at a red light."
+        ],
+        "end_time": 164.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:02:44",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the individual in the blue hoodie doing right now?",
+        "answer": "Holding and looking at a tablet.",
+        "choices": [
+          "Checking their reflection in a window.",
+          "Writing on a piece of paper.",
+          "Holding and looking at a tablet.",
+          "Adjusting their clothing."
+        ],
+        "end_time": 332.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:05:32",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What did the player do just now?",
+        "answer": "Finalizing inventory management.",
+        "choices": [
+          "Exiting the driver's seat.",
+          "Driving the vehicle.",
+          "Finalizing inventory management.",
+          "Interacting with another character."
+        ],
+        "end_time": 500.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:08:20",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the person in the blue hoodie doing right now?",
+        "answer": "Puting the goods into the trunk of the car.",
+        "choices": [
+          "Walking on the sidewalk.",
+          "Stopping at the rear of the vehicle.",
+          "Turning towards the dark vehicle.",
+          "Puting the goods into the trunk of the car."
+        ],
+        "end_time": 607.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:10:07",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 206,
+    "video_path": "/data/streamingbench/videos/sample_302_real.mp4",
+    "conversations": [
+      {
+        "question": "What notable feature is seen in the middle of the street as the camera moves forward?",
+        "answer": "A tall evergreen tree.",
+        "choices": [
+          "A tall evergreen tree.",
+          "A parked truck.",
+          "A street vendor.",
+          "A bicycle lane."
+        ],
+        "end_time": 8.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:00:08",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What does the camera capture after showing the manicured shrubs and bushes?",
+        "answer": "A stone pathway flanked by garden beds.",
+        "choices": [
+          "A stone pathway flanked by garden beds.",
+          "A wooden bridge over a stream.",
+          "A large fountain in a central plaza.",
+          "An open field with wildflowers."
+        ],
+        "end_time": 93.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:01:33",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What becomes visible past the dense part of the hedge now?",
+        "answer": "The garden and houses.",
+        "choices": [
+          "A park.",
+          "A row of shops.",
+          "The garden and houses.",
+          "A busy street."
+        ],
+        "end_time": 173.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:02:53",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What distinguishes the car closest to the camera now?",
+        "answer": "It has blue stripes on the hood.",
+        "choices": [
+          "It has red stripes on the hood.",
+          "It has green stripes on the hood.",
+          "It has yellow stripes on the hood.",
+          "It has blue stripes on the hood."
+        ],
+        "end_time": 247.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:04:07",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the position of the house relative to the white car?",
+        "answer": "To the left, beside the car.",
+        "choices": [
+          "To the right, behind the car.",
+          "To the left, in front of the car.",
+          "To the left, beside the car.",
+          "To the right, beside the car."
+        ],
+        "end_time": 253.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:04:13",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 497,
+    "video_path": "/data/streamingbench/videos/sample_305_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the color of the sky now?",
+        "answer": "Pale yellow to deep red and purple.",
+        "choices": [
+          "Blue and white.",
+          "Pale yellow to deep red and purple.",
+          "Grey and yellow.",
+          "Orange and blue."
+        ],
+        "end_time": 3.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "0:00:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Where is the dog seen when the perspective shifts to the right?",
+        "answer": "On a leash.",
+        "choices": [
+          "In a park.",
+          "On a leash.",
+          "In a car.",
+          "At a storefront."
+        ],
+        "end_time": 14.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "0:00:14",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What number is displayed prominently on the building with large glass windows just now",
+        "answer": "10.",
+        "choices": [
+          "5.",
+          "7.",
+          "10.",
+          "12."
+        ],
+        "end_time": 144.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:02:24",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which sign is prominently displayed on the left side of the street now?",
+        "answer": "BROADWAY PLAZA HOTEL.",
+        "choices": [
+          "BROADWAY PLAZA HOTEL.",
+          "CITY LIBRARY.",
+          "CENTRAL PARK CAFE.",
+          "GRAND THEATER."
+        ],
+        "end_time": 296.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:04:56",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What action is the person near the sidewalk doing now?",
+        "answer": "Taking a photo or video.",
+        "choices": [
+          "Walking a dog.",
+          "Talking on the phone.",
+          "Taking a photo or video.",
+          "Eating at a table."
+        ],
+        "end_time": 440.0,
+        "task": "Action Recognition",
+        "time_stamp": "00:07:20",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 163,
+    "video_path": "/data/streamingbench/videos/sample_342_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the best summary of the actions performed just now?",
+        "answer": "The individual took wrapping papers, handled buns by hands, and placed the buns on the counter.",
+        "choices": [
+          "The individual cleaned the counter, set up station supplies, and took a coffee break.",
+          "The individual collected wrapping papers, retrieved buns, and placed them on the counter.",
+          "The individual took wrapping papers, handled buns by hands, and placed the buns on the counter.",
+          "The individual stocked the shelves, wiped down surfaces, and organized condiments."
+        ],
+        "end_time": 10.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:00:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What summarizes the actions performed just now?",
+        "answer": "The individual selected a yellow wrapping paper, placed an order ticket on it.",
+        "choices": [
+          "The individual cleaned the station, organized utensils, and disposed of waste materials.",
+          "The individual picked and packed food items, marked them for delivery, and cleaned the station afterward.",
+          "The individual selected a yellow wrapping paper, placed an order ticket on it.",
+          "The individual placed food items in a container, labeled it, and set it aside for pickup."
+        ],
+        "end_time": 47.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:00:47",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the best summary of the actions performed just now?",
+        "answer": "The individual cooked bacon, meat pie, and scrambled eggs, then placed them in a container.",
+        "choices": [
+          "The individual cleaned the counter, organized ingredients, and prepared a salad.",
+          "The individual prepared a sandwich, added condiments, and wrapped it for delivery.",
+          "The individual cooked bacon, meat pie, and scrambled eggs, then placed them in a container.",
+          "The individual prepared a fruit platter, arranged it neatly, and handed it to a customer."
+        ],
+        "end_time": 96.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:01:36",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the best summary of the actions performed just now?",
+        "answer": "The individual took pancakes, added meat pie from the warmer, and placed scrambled eggs on the same tray.",
+        "choices": [
+          "The individual prepared a batch of fries, added salt, and placed them in a serving container.",
+          "The individual organized several orders, packed different items, and completed the preparation station setup.",
+          "The individual took pancakes, added meat pie from the warmer, and placed scrambled eggs on the same tray.",
+          "The individual assembled a salad with fresh ingredients, topped it with dressing, and delivered it to the counter."
+        ],
+        "end_time": 141.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:02:21",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the best summary of the actions performed just now?",
+        "answer": "The individual prepared a breakfast burger, added egg and cheese, and neatly wrapped it.",
+        "choices": [
+          "The individual toasted buns, added condiments, and wrapped sandwiches for delivery.",
+          "The individual organized cooking utensils, took inventory, and sanitized the station.",
+          "The individual prepared a breakfast burger, added egg and cheese, and neatly wrapped it.",
+          "The individual made a cup of coffee, added cream, and handed it to a customer."
+        ],
+        "end_time": 182.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:03:02",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 192,
+    "video_path": "/data/streamingbench/videos/sample_349_real.mp4",
+    "conversations": [
+      {
+        "question": "Which of the following options best summarizes the content of the video just shown?",
+        "answer": "An employee prepares a burger, adds mayo, lettuce, and packs it in a box.",
+        "choices": [
+          "An employee prepares a breakfast sandwich, adds condiments, and serves it to the customer.",
+          "An employee prepares a sandwich, toasts the buns, adds sauce, lettuce, and serves it in a box.",
+          "An employee prepares a salad, chops vegetables, and arranges them in a bowl.",
+          "An employee prepares a burger, adds mayo, lettuce, and packs it in a box."
+        ],
+        "end_time": 10.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:00:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the worker's actions just now?",
+        "answer": "An employee prepares a burger, adds cheese, lettuce, and sauce, and packs it in a box.",
+        "choices": [
+          "An employee prepares a burger, adds cheese, lettuce, and sauce, and packs it in a box.",
+          "An employee fries a chicken patty, adds mayo and lettuce, and packs it in a bag.",
+          "An employee prepares a sandwich, adds cucumbers, tomatoes, and sauce, and packs it in a wrap.",
+          "An employee prepares a vegan burger, adds vegan cheese, lettuce, and sauce, and packs it in a box."
+        ],
+        "end_time": 109.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:01:49",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the worker's actions just now?",
+        "answer": "The worker toasts a burger bun, adds tartar sauce and lettuce, and places the assembled burger back on the counter.",
+        "choices": [
+          "The worker toasts a burger bun, adds tartar sauce and lettuce, and places the assembled burger back on the counter.",
+          "The worker grills a patty, adds ketchup and onions to the bun, and places the assembled burger in a bag.",
+          "The worker fetches ingredients from the refrigerator, cuts tomatoes, and adds them to a bowl.",
+          "The worker fries a fish fillet, adds mayo and pickles to a bun, and places the assembled sandwich in a wrap."
+        ],
+        "end_time": 208.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:03:28",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the employee's actions just now?",
+        "answer": "The employee prepared a fish burger by toasting buns, adding cheese, and placing it in a box.",
+        "choices": [
+          "The employee prepared a chicken sandwich by toasting buns, adding mayonnaise and lettuce, and packing it in a box.",
+          "The employee prepared a fish burger by toasting buns, adding cheese, and placing it in a box.",
+          "The employee prepared a fish sandwich by toasting buns, adding tartar sauce and lettuce, and packing it in a box.",
+          "The employee prepared a veggie burger by toasting buns, adding vegetables, and packing it in a box."
+        ],
+        "end_time": 321.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:05:21",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the content of the video just shown?",
+        "answer": "The employee packed chicken nuggets into boxes.",
+        "choices": [
+          "The employee cooked and served fries, adding salt and packing them in a container.",
+          "The employee grilled a chicken patty, added lettuce and mayo, and packed the sandwich in a box.",
+          "The employee packed chicken nuggets into boxes.",
+          "The employee prepared a fish sandwich, adding tartar sauce and lettuce, and packed it in a paper wrap."
+        ],
+        "end_time": 406.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:06:46",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 314,
+    "video_path": "/data/streamingbench/videos/sample_370_real.mp4",
+    "conversations": [
+      {
+        "question": "Which of the following options best summarizes the actions taken just now?",
+        "answer": "cleaned the coffee machine, and wiped down the counter.",
+        "choices": [
+          "Prepared a cup of coffee, added milk, and served it with biscuits on the side.",
+          "cleaned the coffee machine, and wiped down the counter.",
+          "Cleaned a cup of coffee, added sugar and cream, and handed it to a customer.",
+          "Assembled a coffee machine, ground coffee beans, and served coffee to a customer."
+        ],
+        "end_time": 10.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:00:10",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the actions taken just now?",
+        "answer": "Poured milk into a pitcher, cleaned the workspace, and dumped the used coffee grounds.",
+        "choices": [
+          "Filled a pitcher with almond milk, prepared a blender, and blended a smoothie.",
+          "Poured milk into a jug, steamed it, and prepared a latte for a customer.",
+          "Poured milk into a pitcher, cleaned the workspace, and dumped the used coffee grounds.",
+          "Selected multiple milk alternatives, tasted each, and served samples to customers."
+        ],
+        "end_time": 112.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:01:52",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the actions taken just now?",
+        "answer": "Poured espresso into a cup, added steamed milk, and created a latte art.",
+        "choices": [
+          "Poured water into a cup, added instant coffee, and stirred it.",
+          "Poured espresso into a cup, added steamed milk, and created a latte art.",
+          "Brewed tea, added sugar, and placed the cup on a tray.",
+          "Poured espresso into a cup, cleaned the area, and served the drink without milk."
+        ],
+        "end_time": 214.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:03:34",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the actions taken just now?",
+        "answer": "The individual steamed milk, poured it into an espresso shot, and created a latte art before serving it.",
+        "choices": [
+          "The individual poured milk into a cup, added sugar, and mixed it, then served the drink to a customer.",
+          "The individual poured milk into an espresso shot, added syrup, and served a flavored coffee drink to a customer.",
+          "The individual steamed milk, poured it into an espresso shot, and created a latte art before serving it.",
+          "The individual brewed coffee, added cream and sugar, then served it to a customer."
+        ],
+        "end_time": 316.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:05:16",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which of the following options best summarizes the actions taken just now?",
+        "answer": "The individual ground the coffee, tamped it, locked the portafilter, and started brewing a shot of espresso.",
+        "choices": [
+          "The individual cleaned the coffee machine, refilled the water tank, and wiped the counter.",
+          "The individual ground the coffee, tamped it, locked the portafilter, and started brewing a shot of espresso.",
+          "The individual steamed milk, poured it into a pitcher, and created latte art.",
+          "The individual packaged pastries, displayed them, and organized the counter."
+        ],
+        "end_time": 418.0,
+        "task": "Clips Summarize",
+        "time_stamp": "00:06:58",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 415,
+    "video_path": "/data/streamingbench/videos/sample_381_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the vehicle immediately in front of the taxi right now?",
+        "answer": "A yellow car.",
+        "choices": [
+          "A bus.",
+          "A bicycle.",
+          "A yellow car.",
+          "A motorcycle."
+        ],
+        "end_time": 2.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:00:02",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What colors are the advertisements on the left buildings right now?",
+        "answer": "Red and White.",
+        "choices": [
+          "Red and White.",
+          "Black and Yellow.",
+          "Green and White.",
+          "Blue and Red."
+        ],
+        "end_time": 125.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:02:05",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What type of vehicle is in front of the yellow taxi right now?",
+        "answer": "A black car.",
+        "choices": [
+          "A black car.",
+          "A white van.",
+          "A gray SUV.",
+          "A red truck."
+        ],
+        "end_time": 247.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:04:07",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the person in the crosswalk holding in her hand right now?",
+        "answer": "A shopping bag and a handbag.",
+        "choices": [
+          "A handbag.",
+          "A phone.",
+          "A shopping bag and a handbag.",
+          "An umbrella."
+        ],
+        "end_time": 368.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:06:08",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What colors are the cones lining the street?",
+        "answer": "Orange and white.",
+        "choices": [
+          "Orange and white.",
+          "Yellow and black.",
+          "Green and white.",
+          "Blue and white."
+        ],
+        "end_time": 488.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:08:08",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 191,
+    "video_path": "/data/streamingbench/videos/sample_385_real.mp4",
+    "conversations": [
+      {
+        "question": "Which store's name is visible on the left side of the street?",
+        "answer": "Bed Bath & Beyond.",
+        "choices": [
+          "Bed Bath & Beyond.",
+          "Barnes & Noble.",
+          "Target.",
+          "Best Buy."
+        ],
+        "end_time": 4.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:00:04",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which brand logo is visible on the store awnings?",
+        "answer": "Trader Joe's.",
+        "choices": [
+          "Walmart.",
+          "Trader Joe's.",
+          "Whole Foods.",
+          "Starbucks."
+        ],
+        "end_time": 123.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:02:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the Citibank sign located right now?",
+        "answer": "On the left side of the road.",
+        "choices": [
+          "On the right side of the road.",
+          "On the left side of the road.",
+          "In the front of the car.",
+          "Behind the car."
+        ],
+        "end_time": 247.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:04:07",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the notable color of the taxi right now?",
+        "answer": "Yellow.",
+        "choices": [
+          "Red.",
+          "Blue.",
+          "Yellow.",
+          "Green."
+        ],
+        "end_time": 370.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:06:10",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the brand of the visible pharmacy right now?",
+        "answer": "Duane Reade.",
+        "choices": [
+          "Walgreens.",
+          "Duane Reade.",
+          "Rite Aid.",
+          "CVS."
+        ],
+        "end_time": 490.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:08:10",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 296,
+    "video_path": "/data/streamingbench/videos/sample_427_real.mp4",
+    "conversations": [
+      {
+        "question": "What color is the man's shirt right now?",
+        "answer": "White.",
+        "choices": [
+          "Blue.",
+          "Red.",
+          "Black.",
+          "White."
+        ],
+        "end_time": 5.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:00:05",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the man in the video holding right now?",
+        "answer": "An air pump.",
+        "choices": [
+          "A wrench.",
+          "An air pump.",
+          "A screwdriver.",
+          "A flashlight."
+        ],
+        "end_time": 134.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:02:14",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What color are the man's shorts right now?",
+        "answer": "Blue.",
+        "choices": [
+          "Black.",
+          "Red.",
+          "Blue.",
+          "Green."
+        ],
+        "end_time": 267.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:04:27",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the main source of light illuminating the area right now?",
+        "answer": "Tent light.",
+        "choices": [
+          "Street lamp.",
+          "Campfire.",
+          "Flashlight.",
+          "Tent light."
+        ],
+        "end_time": 402.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:06:42",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the man setting up right now?",
+        "answer": "A tent.",
+        "choices": [
+          "A tent.",
+          "A table.",
+          "A chair.",
+          "A blanket."
+        ],
+        "end_time": 535.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:08:55",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 271,
+    "video_path": "/data/streamingbench/videos/sample_429_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the alphanumeric code visible on the helicopter's tail right now?",
+        "answer": "N939SH.",
+        "choices": [
+          "N939HS.",
+          "N9398H.",
+          "N939SH.",
+          "N9399H."
+        ],
+        "end_time": 1.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:00:01",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What color is the person on the right side of the picture wearing now?",
+        "answer": "Blue.",
+        "choices": [
+          "Blue.",
+          "Yellow.",
+          "White.",
+          "Black."
+        ],
+        "end_time": 122.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:02:02",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What color are visible on the man's shirt right now?",
+        "answer": "Black.",
+        "choices": [
+          "Black.",
+          "White.",
+          "Red.",
+          "Blue."
+        ],
+        "end_time": 255.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:04:15",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the predominant color of the landscape right now?",
+        "answer": "Green.",
+        "choices": [
+          "Green.",
+          "Blue.",
+          "Yellow.",
+          "Brown."
+        ],
+        "end_time": 364.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:06:04",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What color is the man's shirt right now?",
+        "answer": "Black.",
+        "choices": [
+          "Black.",
+          "Blue.",
+          "White.",
+          "Red."
+        ],
+        "end_time": 482.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:08:02",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 436,
+    "video_path": "/data/streamingbench/videos/sample_431_real.mp4",
+    "conversations": [
+      {
+        "question": "What is the man standing in front of the glider wearing on his head right now?",
+        "answer": "A cap.",
+        "choices": [
+          "A helmet.",
+          "A hat.",
+          "A cap.",
+          "No headgear."
+        ],
+        "end_time": 3.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:00:03",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the current texture of the sky right now?",
+        "answer": "Overcast and cloudy.",
+        "choices": [
+          "Clear with few clouds.",
+          "Overcast and cloudy.",
+          "Sunny with scattered clouds.",
+          "Stormy with dark clouds."
+        ],
+        "end_time": 102.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:01:42",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Right now, what is the man holding in his hand?",
+        "answer": "A sandwich.",
+        "choices": [
+          "A map.",
+          "A burger.",
+          "A sandwich.",
+          "A piece of paper."
+        ],
+        "end_time": 200.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:03:20",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is displayed on the central screen of the control panel right now?",
+        "answer": "A navigation map.",
+        "choices": [
+          "A navigation map.",
+          "A weather forecast.",
+          "A music player.",
+          "An engine monitoring system."
+        ],
+        "end_time": 298.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:04:58",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the primary color of the joystick in the pilot's left hand right now?",
+        "answer": "Blue.",
+        "choices": [
+          "Red.",
+          "Blue.",
+          "Yellow.",
+          "Green."
+        ],
+        "end_time": 396.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:06:36",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 471,
+    "video_path": "/data/streamingbench/videos/sample_480_real.mp4",
+    "conversations": [
+      {
+        "question": "What letters are mounted on the wall?",
+        "answer": "PADO.",
+        "choices": [
+          "PADO.",
+          "GATO.",
+          "LADO.",
+          "FADO."
+        ],
+        "end_time": 7.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:00:07",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Where is the fabric artwork depicting a tall tree located in relation to the letters \"PADO\"?",
+        "answer": "Below the letters.",
+        "choices": [
+          "To the right of the letters.",
+          "Below the letters.",
+          "To the left of the letters.",
+          "Above the letters."
+        ],
+        "end_time": 10.0,
+        "task": "Spatial Understanding",
+        "time_stamp": "00:00:10",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What does the upper left painting feature?",
+        "answer": "A large tree in bloom with pink flowers.",
+        "choices": [
+          "A large tree in bloom with pink flowers.",
+          "A large tree with green foliage.",
+          "A whimsical figure with flowers around its head.",
+          "An abstract design with swirling shapes."
+        ],
+        "end_time": 222.0,
+        "task": "Object Recognition",
+        "time_stamp": "00:03:42",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is a common feature in the artworks by SungTae Kim?",
+        "answer": "Surreal pencil constructions.",
+        "choices": [
+          "Bright colors and abstract shapes.",
+          "Surreal pencil constructions.",
+          "Ornate crowns.",
+          "Reflective surfaces with water."
+        ],
+        "end_time": 457.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:07:37",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the main theme depicted in the painting just now?",
+        "answer": "A giraffe family under a tree.",
+        "choices": [
+          "A cityscape with zebras.",
+          "A giraffe family under a tree.",
+          "An urban skyline at night.",
+          "Animals in a forest."
+        ],
+        "end_time": 675.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "0:11:15",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 407,
+    "video_path": "/data/streamingbench/videos/sample_487_real.mp4",
+    "conversations": [
+      {
+        "question": "What is seen in the initial scene of the video?",
+        "answer": "A red racing car sped past on the track.",
+        "choices": [
+          "A red racing car is parked on the track.",
+          "A green racing car in the pits.",
+          "A blue racing car near a curve.",
+          "A red racing car sped past on the track."
+        ],
+        "end_time": 20.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:00:20",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which racing car won first place in this competition?",
+        "answer": "The red car.",
+        "choices": [
+          "The purple car.",
+          "The blue car.",
+          "The yellow car.",
+          "The red car."
+        ],
+        "end_time": 88.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:01:28",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What was being advertised on the blue billboard?",
+        "answer": "Crazy Cars.",
+        "choices": [
+          "Speedy Cars.",
+          "Toy Race.",
+          "Crazy Cars.",
+          "Miniature Motors."
+        ],
+        "end_time": 120.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:02:00",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "What is the color of the car that leads the race right now?",
+        "answer": "Yellow.",
+        "choices": [
+          "Red.",
+          "Blue.",
+          "Yellow.",
+          "Purple."
+        ],
+        "end_time": 207.0,
+        "task": "Object Recognition",
+        "time_stamp": "0:03:27",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What is the position of Lightning McQueen in the standings for the Group 1 final?",
+        "answer": "Second.",
+        "choices": [
+          "First.",
+          "Second.",
+          "Third.",
+          "Fourth."
+        ],
+        "end_time": 320.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:05:20",
+        "required_ability": "working memory"
+      }
+    ]
+  },
+  {
+    "video_id": 138,
+    "video_path": "/data/streamingbench/videos/sample_489_real.mp4",
+    "conversations": [
+      {
+        "question": "What does the subtitle below the title card read right now?",
+        "answer": "\"The Next Generation of Diecast Racing\".",
+        "choices": [
+          "\"The New Era of Toy Racing\".",
+          "\"The Future of Car Racing\".",
+          "\"The Next Generation of Diecast Racing\".",
+          "\"Ultimate Toy Car Showdown\"."
+        ],
+        "end_time": 5.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:00:05",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which car is in the front row along with car #2.0 at the start of the race?",
+        "answer": "Car #21.",
+        "choices": [
+          "Car #21.",
+          "Car #123.",
+          "Car #94.",
+          "Car #3."
+        ],
+        "end_time": 165.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:02:45",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which racing car won first place in this competition?",
+        "answer": "The dark green car.",
+        "choices": [
+          "The pink car.",
+          "The dark green car.",
+          "The light green car.",
+          "The blue car."
+        ],
+        "end_time": 351.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:05:51",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many points does the second-place racer in Heat 3 have?",
+        "answer": "10 points.",
+        "choices": [
+          "4 points.",
+          "6 points.",
+          "10 points.",
+          "13 points."
+        ],
+        "end_time": 497.0,
+        "task": "Counting",
+        "time_stamp": "00:08:17",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "What event is labeled \"Group 2 - Heat 4\" in the video?",
+        "answer": "The cars at the starting line.",
+        "choices": [
+          "The finish line celebration.",
+          "The cars at the starting line.",
+          "The awards ceremony.",
+          "The scoreboard update."
+        ],
+        "end_time": 507.0,
+        "task": "Event Understanding",
+        "time_stamp": "00:08:27",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 111,
+    "video_path": "/data/streamingbench/videos/sample_493_real.mp4",
+    "conversations": [
+      {
+        "question": "What significant change happened just now?",
+        "answer": "The scene transitions to a field with green hills.",
+        "choices": [
+          "The scene transitions to a field with green hills.",
+          "The logo with \"GRAVITY THROTTLE RACING\" reappears.",
+          "The abstract background becomes darker.",
+          "The Texaco gas station disappears."
+        ],
+        "end_time": 19.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:00:19",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which car won first place in this competition?",
+        "answer": "The black car.",
+        "choices": [
+          "The red car.",
+          "The orange car.",
+          "The yellow car.",
+          "The black car."
+        ],
+        "end_time": 265.0,
+        "task": "Event Understanding",
+        "time_stamp": "00:04:25",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How is the terrain described where the toy cars are racing at the beginning?",
+        "answer": "Snowy with scattered toy trees.",
+        "choices": [
+          "Snowy with scattered toy trees.",
+          "Rocky and steep.",
+          "Desert-themed with rail tracks.",
+          "Grassy with ponds."
+        ],
+        "end_time": 482.0,
+        "task": "Attribute Recognition",
+        "time_stamp": "00:08:02",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which team is leading in the racing points?",
+        "answer": "Larro.",
+        "choices": [
+          "Jay Bo.",
+          "Pacific Pirate.",
+          "Sisters of the Heavy.",
+          "Larro."
+        ],
+        "end_time": 734.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "00:12:14",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which car won first place in this competition?",
+        "answer": "The brown and blue car.",
+        "choices": [
+          "The red and bluecar.",
+          "The black car.",
+          "The yellow car.",
+          "The brown and blue car."
+        ],
+        "end_time": 915.0,
+        "task": "Event Understanding",
+        "time_stamp": "00:15:15",
+        "required_ability": "episodic memory"
+      }
+    ]
+  },
+  {
+    "video_id": 281,
+    "video_path": "/data/streamingbench/videos/sample_499_real.mp4",
+    "conversations": [
+      {
+        "question": "What happens right after the train moves out of the tunnel?",
+        "answer": "The steam locomotive number 765 becomes visible.",
+        "choices": [
+          "The train stops.",
+          "The logo \"Gravity Throttle Racing\" appears.",
+          "A red and white boxcar appears.",
+          "The steam locomotive number 765 becomes visible."
+        ],
+        "end_time": 15.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:00:15",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "Which car has the fastest time displayed on the leaderboard right now?",
+        "answer": "BLR.",
+        "choices": [
+          "Flip.",
+          "BLR.",
+          "Jonabi.",
+          "Fast Track."
+        ],
+        "end_time": 146.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:02:26",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which of the following names is not listed as a contender in \"RACE 2\"?",
+        "answer": "Flip.",
+        "choices": [
+          "Fat Dad.",
+          "Numbskull.",
+          "Iceman.",
+          "Flip."
+        ],
+        "end_time": 152.0,
+        "task": "Text-Rich Understanding",
+        "time_stamp": "0:02:32",
+        "required_ability": "working memory"
+      },
+      {
+        "question": "Which car won first place in this competition?",
+        "answer": "The white car with red decorations on it.",
+        "choices": [
+          "The blue car.",
+          "The dark purple car.",
+          "The white car with red decorations on it.",
+          "The red car."
+        ],
+        "end_time": 291.0,
+        "task": "Event Understanding",
+        "time_stamp": "0:04:51",
+        "required_ability": "episodic memory"
+      },
+      {
+        "question": "How many different racing teams' names are displayed on the scoreboard?",
+        "answer": "Four.",
+        "choices": [
+          "Three.",
+          "Four.",
+          "Five.",
+          "Six."
+        ],
+        "end_time": 431.0,
+        "task": "Counting",
+        "time_stamp": "00:07:11",
+        "required_ability": "working memory"
+      }
+    ]
+  }
+]
