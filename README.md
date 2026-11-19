@@ -90,6 +90,8 @@ The [research gap map](<docs/reports/HERMES research gap map.md>) accounts for 5
 
 The next step is the [evidence-loss diagnostic pilot](docs/FAILURE_PILOT.md). CPU preparation joins all 2,495 HERMES/FIFO question pairs and selects 30 review targets across 30 videos with complete QA histories. Video evidence review and corrected-scorer GPU experiments remain pending. Rebuild the casebook with `python scripts/build_failure_pilot.py`; no GPU or external Python packages are required.
 
+For the next rented GPU session, upload the [fresh-container AutoDL pilot notebook](notebooks/autodl/hermes-causal-scorer-pilot.ipynb) alone and Run All. Its default fast screen uses eight videos from the small 201–250 archive, shared video features and three matched methods, with a native-attention preflight, resumable checkpoints and a downloadable evidence ZIP. The notebook has local CPU/flow validation; complete AutoDL execution remains pending.
+
 ### Original Validated AutoDL Run — 25 October 2026
 
 | Configuration | Correct | Accuracy | Total runtime |

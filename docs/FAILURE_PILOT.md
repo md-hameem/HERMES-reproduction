@@ -2,6 +2,26 @@
 
 Started 19 November 2026. The CPU preparation is complete. Video review and GPU treatments remain pending. This pilot follows the [research gap map](<reports/HERMES research gap map.md>) and addresses G01–G05 and G12 in the [gap register](<reports/HERMES gap register.csv>).
 
+## Fresh-container AutoDL notebook
+
+Upload [hermes-causal-scorer-pilot.ipynb](../notebooks/autodl/hermes-causal-scorer-pilot.ipynb) by itself and select **Restart Kernel and Run All Cells**. The notebook contains the experimental runner, sparsely clones the pinned source revision and installs an isolated Python 3.12 environment with the audited Transformers commit and CUDA 12.8 PyTorch wheel. It does not require uploading an earlier evidence archive. A 24 GB RTX 4090 is recommended; startup checks require at least 15 GiB GPU memory and 18 GiB free data-disk space.
+
+The default fast screen selects **eight distinct videos from samples 201–250**, with two targets from each original outcome category. It retains all 40 questions and evaluates FIFO, current HERMES and fresh causal HERMES, for 120 answers. This is a separately recorded, smaller screen than the 30-case review set below. It reuses inspected development data and cannot support population accuracy or original-method claims.
+
+`PER_OUTCOME=1` selects four videos and 60 answers; `2` selects eight and 120; `3` selects twelve and 180. If changing screen size after a run, use a new `WORK` directory to preserve existing human annotations. `MAX_HOURS=2` is a soft inference budget checked between complete three-method video blocks after at least two videos. It excludes installation/downloads and can overrun by one block. A partial result is explicitly labeled and packaged. Increasing the time budget preserves matching checkpoints.
+
+The data loader first extracts selected members through validated HTTP byte ranges and ZIP member CRC checks. In this mode, the whole-archive SHA is explicitly unverified; observed video SHA256 values support later resumption. If range requests fail, it downloads only the 2.08 GiB 201–250 archive and verifies its known full SHA256. Both public endpoints accepted range requests during the local preparation check. Network performance and availability can change.
+
+Video chunks are decoded/preprocessed/vision-encoded once into CPU feature files and reused across methods. Native language-model ingestion still runs for each method with its own positions and cache. Mandatory GPU preflight verifies bitwise-equivalent K/V ingestion from cached features and native causal attention agreement before and after actual summary pruning. The fresh scorer propagates hidden states through real decoder layers with explicit causal masks and separate temporary cache lists. It changes only the manual scoring method on the experimental instance; original source files, answering and hierarchy policy stay intact.
+
+Outputs include full-history predictions, paired question outcomes, target summaries, shared-preparation metadata, per-method replay times, source/asset hashes, sampled frame timestamps, sparse contact sheets and a pending evidence-review sheet. Shared feature preparation is outside method replay timings, so these timings do not establish full-system streaming latency. Contact sheets are review aids and cannot establish cue survival. Past-answer interventions and a native full-prefix QA control are not included in this first screen.
+
+The final cell exposes `HERMES_causal_scorer_pilot_evidence.zip` for download. Atomic, identity-validated per-method/video checkpoints resume on Run All. Logs are snapshotted before manifest hashing and repackaged after the subprocess closes. Failures after model setup preserve a partial diagnostic package. Model weights, video files and feature tensors are excluded from the evidence ZIP.
+
+Local verification covers nine CPU numerical/safety tests, actual summary pruning, mocked range/ZIP64 extraction, checkpoint rejection, package hashes, fresh/repeated sparse Git bootstrap and headless execution of all notebook code cells in validation mode. CUDA inference and the complete fresh-container install remain unexecuted locally. The notebook's own CUDA probe and numerical gate check those boundaries during the AutoDL run.
+
+Regenerate the notebook after runner changes with `python scripts/make_failure_pilot_notebook.py`. Numerical tests require the pinned Transformers environment and run with `python -m unittest discover -s scripts -p test_autodl_failure_pilot.py -v`.
+
 ## Question and decision
 
 Determine whether failures contain recoverable visual evidence that a memory-policy change could preserve. Then test whether fresh causal scoring improves QA under the same compressed-cache budget. The existing attention discrepancy alone does not establish an answer-quality effect or an original method.

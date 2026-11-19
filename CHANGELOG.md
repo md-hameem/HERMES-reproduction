@@ -9,6 +9,8 @@ All notable reproduction, evidence, control, and documentation changes for this 
 - Started a CPU-only failure pilot with validated joins for all 2,495 HERMES/FIFO predictions and 30 outcome-selected cases across distinct videos. Full conversations preserve 150 questions for replay.
 - Added a reproducible standard-library builder, identity/selection safeguard tests, source provenance and a human evidence-review sheet. Existing review entries are preserved on regeneration.
 - Documented evidence-review, sampling, causal-scorer and separate history-feedback controls. Video inspection and GPU treatments remain pending; no new accuracy improvement is claimed.
+- Added a self-contained fresh-container AutoDL notebook for an eight-video, three-method causal-scorer screen, with pinned isolated setup, sparse source checkout, selective ZIP downloads and full-archive fallback.
+- Added shared-feature ingestion, a layerwise native causal scorer, mandatory GPU preflight, atomic checkpoints, contact sheets and hashed evidence packaging. Nine CPU tests and notebook flow validation pass; complete AutoDL execution remains pending.
 
 ## 2026-11-19 — Five-stage intake, full-benchmark audit and organization
 

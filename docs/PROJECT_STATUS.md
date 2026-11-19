@@ -68,6 +68,8 @@ The [research gap map](<reports/HERMES research gap map.md>) and [paper review l
 
 The [failure-analysis pilot](FAILURE_PILOT.md) has started with a reproducible CPU casebook. All 2,495 paired outcomes reproduce the audited totals. Thirty target questions span 30 distinct videos, with 150 full-history questions retained for replay. The [review sheet](../results/failure_pilot/evidence_review.csv) is pending because benchmark videos are absent from this checkout. Video review and GPU scorer treatments have not run. The builder, source hashes, selection limitations and execution protocol are saved alongside the outputs.
 
+The [new AutoDL notebook](../notebooks/autodl/hermes-causal-scorer-pilot.ipynb) is prepared for a fresh container. A smaller eight-video screen from samples 201–250 defaults to 120 answers across three matched methods, selective downloads, shared features, a mandatory native-attention gate and resumable checkpoints. Nine CPU numerical/safety tests and notebook validation pass. Full CUDA execution and fresh-container installation remain pending; the notebook checks those on the rented GPU.
+
 1. Complete thesis synthesis around the audited reproduction, component diagnostics and full-benchmark result, including the null accuracy finding.
 2. Measure a corrected-attention QA treatment if pursuing a claim about the scorer's effect on answer quality. Current attention results establish numerical and selection differences on one video chunk.
 3. Establish a matched native LLaVA baseline on a feasible, explicitly defined context range if making claims against the base model. Current 50K results use the HERMES pipeline.
