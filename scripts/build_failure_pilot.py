@@ -139,7 +139,7 @@ def select_cases(rows, seed=2024, quotas=None):
 
 def write_csv(path, rows, fields=None):
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields or list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=fields or list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -195,7 +195,7 @@ def main():
     videos = sorted((v for v in annotations if str(v["video_id"]) in selected_ids),
                     key=lambda v: int(re.search(r"sample_(\d+)", v["video_path"])[1]))
     (args.output / "selected_videos.json").write_text(
-        json.dumps(videos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        json.dumps(videos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     provenance = dict(
         schema_version=1, seed=args.seed, quotas=QUOTAS,
         selection="Outcome-selected task round-robin with SHA256 ranking and globally distinct videos; duplicate gold excluded",
@@ -211,7 +211,8 @@ def main():
                 "Question time is not evidence age; previous wrong answers do not prove feedback harm",
                 "Replay complete selected video histories; do not run selected questions in isolation"],
     )
-    (args.output / "provenance.json").write_text(json.dumps(provenance, indent=2) + "\n", encoding="utf-8")
+    (args.output / "provenance.json").write_text(
+        json.dumps(provenance, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({k: provenance[k] for k in (
         "inventory_questions", "outcome_counts", "selected_questions", "selected_videos",
         "selected_video_full_history_questions")}, indent=2))
