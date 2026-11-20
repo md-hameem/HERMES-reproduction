@@ -4,6 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Stage attribution — next run](autodl/hermes-stage-attribution.ipynb) | 200 main answers separating recent construction from direct history readout, plus four optional separate long-case answers; mask/position/replay gates and resumable evidence export. [Instructions](../docs/STAGE_ATTRIBUTION.md). Complete GPU run pending. |
 | [Context/content diagnostic](autodl/hermes-context-diagnostic.ipynb) | Maintained seven-case content/position and partition workflow; completed execution now audited. [Instructions](../docs/CONTEXT_DIAGNOSTIC.md) · [Analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) |
 | [Input/capability diagnostic — next run](autodl/hermes-input-diagnostic.ipynb) | Upload alone and Run All; 120 mandatory fresh-state answers, feasible uncompressed prefixes, optional reviewed-support inputs, verified reuse, progress/checkpoints and evidence export. [Instructions](../docs/INPUT_DIAGNOSTIC.md) |
 | [Fresh-container causal-scorer pilot](autodl/hermes-causal-scorer-pilot.ipynb) | Upload this notebook alone and Run All. Default eight-video, three-method screen with pinned setup, selective downloads, shared video features, mandatory numerical preflight, checkpoints and an evidence ZIP |

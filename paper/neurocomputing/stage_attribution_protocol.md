@@ -1,6 +1,6 @@
 # Next experiment: separate recent-cache construction from historical readout
 
-Plan dated 20 November 2026, following the [audited context result](<../../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>). **No runner/notebook or GPU result for this matrix is created by this plan.** This is a bounded attribution/baseline gate before selecting at most one candidate method, not a new paper contribution by itself.
+Plan dated 20 November 2026, following the [audited context result](<../../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>). The separate [stage notebook](../../notebooks/autodl/hermes-stage-attribution.ipynb) now implements this design with [instructions](../../docs/STAGE_ATTRIBUTION.md) and fourteen local tests; complete GPU execution is pending. This is a bounded attribution/baseline gate before selecting at most one candidate method, not a new paper contribution by itself.
 
 ## Why this is now justified
 
@@ -18,6 +18,8 @@ On **all 40 existing development questions**, select the last up to 20 original 
 | D | No | No | Independent recent information with original logical positions retained |
 
 Retain the **same physical H/R cache slots and budget** for answer-time comparisons; an attention mask changes access, not reported storage. Sink/initial prompt tokens remain available. For B/D, encode R against only initial prompt/sink state while assigning R the same logical positions it had after H, then assemble H/R for answering with correct rotary positions. Do not simply concatenate independently encoded keys with incompatible phases. Native-mask/position and source-cache immutability preflight is mandatory, and no-op cell A must reproduce the tested recent-20 path.
+
+The implemented equivalent keeps H physically present and applies an H-blocking causal mask during R encoding. GPU preflight compares its R K/V against physically independent construction at the same logical positions. This avoids unnecessary cache reassembly without changing the intended information visibility. H states are sliced from A's causally encoded cache and held identical across cells. The original partition is preserved for A so it can replay the earlier reference.
 
 Report transient caches, feature buffers, complete query time and peak allocation. Equal answer-cache slots do not imply equal total resource cost, especially when independent construction or snapshots require extra work/state.
 

@@ -45,7 +45,7 @@ Publish a short pilot interpretation with question-level examples and explicit l
 | Earlier incorrect answers appear related to later errors | Run a separate controlled history intervention on identical pre-ingestion state. | Generated/corrected/plausibly wrong/question-only histories diagnose causality. Correlation alone is insufficient. |
 | Mixed improvements and regressions | Stratify by actual support age, question type and failure stage; check repeatability. | Avoid selecting a favorable subgroup after seeing results and treating it as confirmation. |
 
-The scorer, input and [context diagnostic](../notebooks/autodl/hermes-context-diagnostic.ipynb) have now completed. The context run includes fixed-length/fixed-tail replacements and chunking controls on seven questions, with two successful analyst candidate-support probes. [Context instructions](CONTEXT_DIAGNOSTIC.md). Fourteen implementation tests and five new saved-evidence tests pass. The stage-attribution matrix remains a plan; no certified human-oracle result, validated new refresh rule or history-feedback remedy is established.
+The scorer, input and [context diagnostic](../notebooks/autodl/hermes-context-diagnostic.ipynb) have completed. The context run includes fixed-length/fixed-tail replacements and chunking controls on seven questions, with two successful analyst candidate-support probes. The [stage-attribution notebook](../notebooks/autodl/hermes-stage-attribution.ipynb) is now implemented with [instructions](STAGE_ATTRIBUTION.md), fourteen local tests and pending GPU execution. No certified human-oracle result, validated new refresh rule or history-feedback remedy is established.
 
 ## 4. Define one original contribution before the main run
 

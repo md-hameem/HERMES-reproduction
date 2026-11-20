@@ -2,6 +2,13 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Stage-attribution AutoDL notebook
+
+- Added a self-contained, resumable 200-answer construction/readout matrix with four separate optional long-case answers and existing verified asset/environment reuse.
+- Added instance-local causal H masks covering every layer and question/decode call, independent-construction and physically removed-history numerical references, source-cache checks and strict per-question historical replay gates.
+- Recorded shared control-cache preparation/residency separately from per-answer metrics; protected factor/position/source maps and kept compact-reference and long-case scopes explicit.
+- Passed fourteen local numerical/safety/notebook tests, including the real answer path and mismatch-on-resume protection. Complete GPU execution and scientific outcomes remain pending; no original-method claim is made.
+
 ## 2026-11-20 — Completed context diagnostic intake and stage decision
 
 - Preserved uploaded context ZIP/notebook bytes under canonical archive/executed paths; kept extraction ignored and published compact original/derived tables and source review images.

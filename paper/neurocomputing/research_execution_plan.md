@@ -6,6 +6,8 @@ Decision date: 20 November 2026. Working venue: **Neurocomputing**, assuming the
 
 **Subsequent update:** the [context experiment](<../../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) completed 74 answers with exact comparable replay, stable partition choices and three fixed-position full-prefix recoveries. Two analyst support probes succeed. The next [stage-attribution protocol](stage_attribution_protocol.md) localizes construction versus readout and treats existing decoupling as a comparator. Filler sensitivity is not a new algorithm; stop repeating the same seven-case padding screen. No stage runner or validated original improvement is established.
 
+**Implementation update:** [hermes-stage-attribution.ipynb](../../notebooks/autodl/hermes-stage-attribution.ipynb) now implements the 200-answer matrix and four separate optional longer-prefix answers, with [instructions](../../docs/STAGE_ATTRIBUTION.md), fourteen local tests and pending GPU execution. It validates H masking against independent construction/compact readout references and stops on a historical replay mismatch. Shared control construction/residency is accounted separately; no algorithm-efficiency or originality claim is implied.
+
 ## Honest starting position
 
 The engineering and reproducibility foundation is substantial; the original contribution remains missing. The full 2,495-question HERMES/FIFO difference is +0.3607 percentage points with a video-cluster interval crossing zero. The selected 40-question scorer pilot gives 24 correct answers for every method. Fresh causal scoring changes no correctness outcome and increases recorded replay time. These are informative development results, not proof that HERMES never works or that the methods are equivalent.
@@ -111,7 +113,7 @@ Resolve in parallel: institution-accepted Q1 database/category/year, whether CCF
 ## Immediate deliverables
 
 1. A reviewed support sheet copied from the generated queue, with seven initial cases and unresolved ambiguities explicit.
-2. The input and [context notebooks](../../notebooks/autodl/hermes-context-diagnostic.ipynb) have executed and been audited. The context run has fourteen implementation tests, five saved-evidence audit tests and [instructions](../../docs/CONTEXT_DIAGNOSTIC.md). Its two successful analyst candidate-support probes do not certify human oracle evidence or an original mechanism. The next stage-attribution runner remains unimplemented.
+2. The input and [context notebooks](../../notebooks/autodl/hermes-context-diagnostic.ipynb) have executed and been audited. Their two successful analyst candidate-support probes do not certify human oracle evidence or an original mechanism. The next [stage-attribution runner/notebook](../../notebooks/autodl/hermes-stage-attribution.ipynb) is implemented and locally tested, with complete GPU execution pending.
 3. A diagnostic decision memo choosing feedback, retention/readout, input/backbone investigation, or stopping the immediate branch.
 4. A full-method/code comparison against nearest work before implementing the selected proposed contribution.
 5. Only after those gates: one prototype, frozen confirmation plan, and an evidence-led manuscript.

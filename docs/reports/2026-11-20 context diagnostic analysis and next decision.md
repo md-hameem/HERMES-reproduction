@@ -67,3 +67,7 @@ If the nearest simple decoupling/readout baseline explains the recoveries, credi
 ## Timing
 
 The recorded post-model phase is **75.330 seconds**, including preflight, verified feature work, arm replay and review/export. It excludes setup/download/model loading/final packaging. Five feature sets were reused. Arm timing scopes differ with input length and partitioning, and this is not a repeated full-system efficiency study or a fresh-container runtime guarantee.
+
+## Subsequent implementation
+
+The [stage-attribution notebook](../../notebooks/autodl/hermes-stage-attribution.ipynb) is now implemented with [instructions](../STAGE_ATTRIBUTION.md), fourteen local tests and pending complete GPU execution. It implements the 200-answer main matrix and four separate optional 204/q3 answers. This later code availability does not change the measured outcomes or establish an original improvement in this report.
