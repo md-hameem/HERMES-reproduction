@@ -20,6 +20,10 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def normalized_sha(path):
+    return sha(path.read_bytes().replace(b"\r\n", b"\n"))
+
+
 def sample_id(path):
     match = re.search(r"sample_(\d+)_real\.mp4$", path)
     if not match:
@@ -58,9 +62,9 @@ def build():
         status="frozen_clip_ids_source_overlap_unverified",
         scope="Within-benchmark confirmation on previously unused diagnostic clip IDs",
         source_dataset="StreamingBench Real-Time Visual Understanding",
-        annotation_path=ANNOTATION.relative_to(ROOT).as_posix(), annotation_sha256=sha(source),
+        annotation_path=ANNOTATION.relative_to(ROOT).as_posix(), annotation_sha256=normalized_sha(ANNOTATION),
         prior_targeted_review_path=REVIEW.relative_to(ROOT).as_posix(),
-        prior_targeted_review_sha256=sha(REVIEW.read_bytes()), seed=SEED,
+        prior_targeted_review_sha256=normalized_sha(REVIEW), seed=SEED,
         selection="15 per shard by ascending SHA256(seed:sample_id), excluding targeted review clips",
         source_group_metadata="Original source-channel and overlap metadata unavailable in local annotation",
         arms=["compact_recent4", "latest_two_short_readout", "all_history_short_readout"],

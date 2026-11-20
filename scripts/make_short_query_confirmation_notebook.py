@@ -11,7 +11,8 @@ INTRO = """# HERMES short query-cache confirmation
 
 Open this notebook in the **same AutoDL container**, then choose **Restart Kernel → Run All**.
 Defaults reuse the pinned environment and model. The run writes to
-`/root/autodl-tmp/hermes_short_query_confirmation`.
+`/root/autodl-tmp/hermes_short_query_confirmation_v2`. This preserves the first
+attempt and uses the same frozen annotations on Windows and Linux.
 
 **30 frozen StreamingBench clips, 150 questions, 450 arm-level answers.** This is a
 clip-disjoint test within the same benchmark. Original source overlap is unverified.
@@ -51,7 +52,7 @@ def notebook():
         cells[i]["source"] = content.splitlines(keepends=True)
 
     put(0, INTRO)
-    config = "".join(cells[1]["source"]).replace("hermes_construction_selection", "hermes_short_query_confirmation").replace(
+    config = "".join(cells[1]["source"]).replace("hermes_construction_selection", "hermes_short_query_confirmation_v2").replace(
         "HERMES_SELECTION_VALIDATE_ONLY", "HERMES_CONFIRMATION_VALIDATE_ONLY").replace(
         "240 construction-selection answers", "450 answers on 30 frozen clips").replace("MAX_HOURS = 1.0", "MAX_HOURS = 2.0")
     put(1, config)

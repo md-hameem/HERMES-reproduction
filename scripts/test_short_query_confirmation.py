@@ -27,6 +27,21 @@ class ConfirmationTests(unittest.TestCase):
         self.assertEqual(stat["leave_one_video_min_pp"], 0.0)
         self.assertEqual(stat["leave_one_video_max_pp"], 75.0)
 
+    def test_frozen_annotation_hash_accepts_both_checkout_newlines(self):
+        manifest = builder.build()
+        relative = Path(manifest["annotation_path"])
+        lf = (builder.ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            path = repo / relative
+            path.parent.mkdir(parents=True)
+            for version in (lf, lf.replace(b"\n", b"\r\n")):
+                path.write_bytes(version)
+                self.assertEqual(len(runner.videos_for_manifest(manifest, repo)), 30)
+            path.write_bytes(lf + b" ")
+            with self.assertRaisesRegex(ValueError, "Annotation digest differs"):
+                runner.videos_for_manifest(manifest, repo)
+
     def test_grid_never_uses_later_frame(self):
         source = [[.1, 1.0], [1.0, 2.2], [2.2, 3.75], [3.75, 5.1], [5.1, 7.0]]
         v = {"conversations": [{"end_time": 6.1}]}

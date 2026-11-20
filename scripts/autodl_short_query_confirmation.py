@@ -1,5 +1,6 @@
 """Run the frozen clip-disjoint StreamingBench comparison."""
 import argparse
+import hashlib
 import json
 import os
 import random
@@ -82,9 +83,11 @@ def acquire_media(shards, work):
 
 def videos_for_manifest(manifest, repo):
     path = repo / manifest["annotation_path"]
-    if p.digest(path) != manifest["annotation_sha256"]:
-        raise ValueError("Annotation digest differs from the frozen manifest")
-    annotation = {p.sample_id(v): v for v in json.loads(path.read_text(encoding="utf-8"))}
+    raw = path.read_bytes().replace(b"\r\n", b"\n")
+    actual = hashlib.sha256(raw).hexdigest()
+    if actual != manifest["annotation_sha256"]:
+        raise ValueError(f"Annotation digest differs after newline normalization: {actual}")
+    annotation = {p.sample_id(v): v for v in json.loads(raw)}
     videos = []
     for shard in manifest["shards"]:
         for clip in shard["clips"]:

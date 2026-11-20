@@ -3,7 +3,7 @@
   "scope": "Within-benchmark confirmation on previously unused diagnostic clip IDs",
   "source_dataset": "StreamingBench Real-Time Visual Understanding",
   "annotation_path": "data/streamingbench/streamingbench_realtime.json",
-  "annotation_sha256": "968071f9f3fe969ece600d08d6365b72d0b1766d6cbc2ee25b27fe7927b26e96",
+  "annotation_sha256": "6a2969953e11db44f5f8584d0d9fd3ec47c41dacf63807ef0003ccf446869f73",
   "prior_targeted_review_path": "results/failure_pilot/evidence_review.csv",
   "prior_targeted_review_sha256": "903f7169983f0d53aa0e2837e30b5d3d3729eaa972bcef61bf3623cd3bb6e248",
   "seed": "HERMES-short-query-confirmation-2026-11-21-v1",
