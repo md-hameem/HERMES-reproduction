@@ -4,6 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Short query-cache control — next run](autodl/hermes-short-query-cache.ipynb) | 160 arm-level answers and two interleaved timed calls per arm. Tests physical history removal at preserved positions. [Instructions](../docs/SHORT_QUERY_CACHE.md). |
 | [Matched-boundary workflow](autodl/hermes-matched-boundary.ipynb) | Completed control on the same 40 questions with matched recent encoding groups. [Run notes](../docs/MATCHED_BOUNDARY.md). |
 | [Stage attribution workflow](autodl/hermes-stage-attribution.ipynb) | Base workflow for the 200-answer main matrix. The executed record below contains the final GPU preflight adjustments. [Run notes](../docs/STAGE_ATTRIBUTION.md). |
 | [Context/content diagnostic](autodl/hermes-context-diagnostic.ipynb) | Maintained seven-case content/position and partition workflow; completed execution now audited. [Instructions](../docs/CONTEXT_DIAGNOSTIC.md) · [Analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) |

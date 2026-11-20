@@ -2078,3 +2078,9 @@ The main scores were A 21/40, B 24/40, C 27/40, D 25/40 and compact recent-four 
 The AutoDL run completed 200 answers on the same 40 questions. The audit verified 274 payloads, all checkpoint identities, matched construction-mask shapes and groups, and all 120 required replays. Historical A and C also reproduced every choice. C matched scores 27/40 versus D at 25/40, with retained wins on 208/q4 and 209/q0. A matched versus B loses three answers when history is visible at readout. C matched beats compact recent-four by three wins and one loss.
 
 Proceed to one physically short query-cache prototype with preserved logical positions. Verify it against masked C, then freeze a candidate before comparing it with compact recent-four and strong history controls on source-separated data. The same-question rerun resolves grouping for this test. It supplies neither independent accuracy evidence nor a storage or latency measurement for physical history removal. [Analysis and next decision](<reports/2026-11-21 matched-boundary results and next decision.md>).
+
+## 42. Short query-cache development notebook, 21 November 2026
+
+Implemented the [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) with 160 arm-level answers and 320 timed calls at the default two repeats. The prototype removes older visual K/V from the query cache while keeping recent logical positions and the original QA wrapper. Three reference arms replay the matched experiment. Stable FP16 differences in the short path are recorded, and query bytes, extraction and answer time are measured separately.
+
+The local tests execute all notebook cells in validation mode and verify FP32/FP16 diagnostics, physical compaction and real decode positions on a small CPU model. The AutoDL run remains pending. [Run instructions](SHORT_QUERY_CACHE.md).

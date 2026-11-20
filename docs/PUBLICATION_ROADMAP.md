@@ -81,4 +81,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-The [matched-boundary audit](<reports/2026-11-21 matched-boundary results and next decision.md>) confirms the two construction wins on these development questions. Implement one physically short query-cache candidate with preserved logical positions and verify it against masked C. Evaluate a frozen candidate against compact recent-four and strong history baselines on source-separated confirmation data before making an original improvement claim.
+The [matched-boundary audit](<reports/2026-11-21 matched-boundary results and next decision.md>) confirms the two construction wins on these development questions. Run the [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) to measure answer agreement and query cost against masked C, full contextual and compact recent-four. Evaluate a frozen candidate against strong baselines on source-separated confirmation data before making an original improvement claim.

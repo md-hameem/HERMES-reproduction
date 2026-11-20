@@ -18,6 +18,8 @@ The strict FP32 physical reference passed, as did the exact FP16 same-shape pert
 
 ## Next experiment
 
+The [short query-cache notebook](../../notebooks/autodl/hermes-short-query-cache.ipynb) implements the development comparison below. [Run instructions](../SHORT_QUERY_CACHE.md).
+
 Implement one **physically short query cache** for the matched C policy. Let the recent frames attend to older history during encoding, then construct an answer cache that contains the prompt and recent slots only. Preserve the recent keys' logical positions and the prefill/decode position starts. Use the existing masked C run as the behavior reference. First verify the physical and masked paths numerically and record choice changes on the 40 development questions. Keep mismatches visible because finite-precision replay can differ when the physical shape changes.
 
 Freeze one candidate before evaluating accuracy. Compare it against compact recent-four, full contextual readout and masked C. Use footage from source groups that did not inform development, with video-level pairing, point estimates and intervals. If using a new subset of the previously inspected StreamingBench benchmark, report it as within-benchmark confirmation and retain a source-separated external test for any generalization claim. Set the evaluation manifest using metadata and source overlap checks before reviewing candidate outcomes. Use actual GPU throughput to choose sample size, and distinguish query-cache bytes and query time from total live cache memory, construction work and whole-system timing.

@@ -1,0 +1,13 @@
+# AutoDL short query-cache experiment
+
+Upload [hermes-short-query-cache.ipynb](../notebooks/autodl/hermes-short-query-cache.ipynb) to the **same AutoDL container** and select **Restart Kernel → Run All**. The notebook uses the verified environment, model and features under `/root/autodl-tmp/hermes_causal_pilot` and writes a separate run under `/root/autodl-tmp/hermes_short_query`. No new visual inputs or annotations are needed.
+
+The notebook compares four answer paths on the same 40 development questions. Full contextual, masked contextual and short contextual use the same recent K/V tensors. The short path physically removes the older visual slots, retains the system prompt and preserves the recent positions. Compact recent-four encodes recent frames without older history and uses ordinary compact positions.
+
+The main pair is short versus masked contextual. The runner captures actual prefill and decode positions and checks each physical cache length. A strict FP32 fixture compares masked and short logits. FP16 differences between those paths are recorded, including changed top tokens. All three reference arms must replay the matched run. A stable short-path choice change is a measured outcome.
+
+The default produces **160 arm-level answers and 320 timed calls**. The two repeats are interleaved in a seeded order per question. One initial per-arm warmup is excluded. Answer latency includes the synchronized QA function with the common trace hook, excluding cache restoration, compaction and shared preparation. The paired table also reports timing for the subset with equal numbers of decode calls. The export records query K/V tensor bytes and one-time extraction cost separately. It leaves total live memory and whole-system latency for a separate evaluation. Repeats improve timing coverage while retaining a 40-question accuracy denominator.
+
+Watch for `SHORT_QUERY_PREFLIGHT_PASS`, `QUESTION_BLOCK_DONE 1/40` and `SHORT_QUERY_COMPLETE`. Download **HERMES_short_query_evidence.zip** and save the executed notebook. The ZIP includes the paired tables, cache and timing traces, source provenance and closed logs. A time-budget stop can resume with the same WORK and settings. If a gate fails, run the final cell to retrieve available failure evidence.
+
+Local checks cover the notebook entry point, the FP32/FP16 preflight and real prefill and decode on a small CPU Qwen model. AutoDL results are pending. Use the development result to decide whether to freeze this candidate for confirmation on source-separated footage. [Matched-boundary results](<reports/2026-11-21 matched-boundary results and next decision.md>).

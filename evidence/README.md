@@ -60,3 +60,5 @@ The [evidence ZIP](archives/HERMES_stage_attribution_evidence.zip) and [executed
 ## Matched-boundary control received 21 November 2026
 
 The [evidence ZIP](archives/HERMES_matched_boundary_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-matched-boundary.ipynb) preserve the original uploads. Run `python scripts/validate_matched_boundary_evidence.py` to verify 274 payloads, 200 checkpoints, construction and readout mask traces, 120 required replays and all paired counts. It reads embedded sources as literals and does not run uploaded code. [Audit and hashes](audits/matched_boundary_2026-11-21_audit.json) · [Tables](../results/matched_boundary_2026-11-21/).
+
+The [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) uses this archive to pin 120 baseline choices. Its own evidence is pending the AutoDL run.

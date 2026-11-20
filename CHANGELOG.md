@@ -2,6 +2,11 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Short query-cache AutoDL notebook
+
+- Added a four-arm development comparison of physical history removal. It records actual query and decode positions, preserves the three baseline replay checks, and reports query bytes, answer latency and extraction time separately.
+- Passed local notebook and CPU reference checks. The AutoDL result is pending.
+
 ## 2026-11-21 — Completed matched-boundary control
 
 - Preserved the uploaded ZIP and executed notebook. Audited 274 payloads, 200 checkpoints, 120 required replays and matched construction traces.
