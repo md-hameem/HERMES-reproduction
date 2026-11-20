@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Adversarial research and publication plan
+
+- Added a gated research execution plan with reviewer objections, support/capability tests, conditional feedback/retention hypotheses, matched controls, independent confirmation and compute stopping rules.
+- Rechecked primary sources and recorded MemInStream's direct overlap with evidence-solvability/necessity diagnostics, plus selective-access and memory-method overlaps. Controls are not claimed as original contributions.
+- Linked the plan from current paper/status documents and corrected one stale pre-pilot QA statement. No new notebook, original method, GPU result or submission was produced in this planning step.
+
 ## 2026-11-20 — Completed causal scorer pilot intake and publication decision
 
 - Moved the uploaded ZIP to the canonical evidence archive and the uploaded notebook to dated executed records, preserving exact bytes. Kept the full extraction local/ignored and published compact original/derived tables.

@@ -12,3 +12,5 @@ Use editable source and the journal's current template when beginning the manusc
 Q1 is mandatory according to the user. The applicable institutional database/category/year, whether CCF B is also required, recognized article type and publication milestone remain to be resolved before submission. Preparing this workspace does not certify eligibility or acceptance.
 
 The [completed pilot decision](<../../docs/reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) and [next diagnostic protocol](next_diagnostic_protocol.md) now govern the next step. Fresh causal scoring showed no correctness gain in the selected screen. Prioritize support/capability controls before a proposed method or larger validation campaign.
+
+The [research execution plan and adversarial review](research_execution_plan.md) adds current prior-art overlap, reviewer objections, conditional method choices, budget allocation and publication gates. MemInStream already covers evidence-solvability/necessity diagnostics; these controls are research infrastructure for us, not an original contribution. No new method or follow-up notebook has been implemented by this plan.
