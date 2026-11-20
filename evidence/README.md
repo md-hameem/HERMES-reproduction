@@ -70,3 +70,7 @@ The [evidence ZIP](archives/HERMES_short_query_evidence.zip) and [executed noteb
 The [evidence ZIP](archives/HERMES_construction_selection_evidence.zip) preserves the upload. The accompanying notebook was byte-identical to the [maintained source](../notebooks/autodl/hermes-construction-selection.ipynb) and had no execution outputs. Its local copy is under ignored `local/construction_selection_2026-11-21/`. Run `python scripts/validate_construction_selection_evidence.py` to verify 117 payloads, 240 answers, 80 replays, position traces and paired results from the ZIP. [Audit](audits/construction_selection_2026-11-21_audit.json) · [Tables](../results/construction_selection_2026-11-21/).
 
 The subsequently saved [executed notebook](../notebooks/executed/2026-11-21_hermes-construction-selection.ipynb) is archived separately. The validator now also checks that its source and logged final ZIP hash match the audited run.
+
+## Short query confirmation notebook received 21 November 2026
+
+The [executed v2 notebook](../notebooks/executed/2026-11-21_hermes-short-query-confirmation.ipynb) shows completion of all 30 clips and 450 answers. Its SHA256 is `57873f9a0c2b714cadcc9c00a14ed9f747b09d2c08b7d55648f14a34dd623d12`. The accompanying ZIP is the earlier v1 checksum failure and contains no answers. It is preserved under ignored `local/short_query_confirmation_v1_failed/`. The v2 notebook reports the final ZIP SHA256 `291114a32391bbb039e176355688b4b4af269f35ad7a129a73205c73d05575e3`. Per-question audit awaits that ZIP.
