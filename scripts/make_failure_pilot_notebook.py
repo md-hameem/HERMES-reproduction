@@ -19,6 +19,8 @@ The default fast screen uses **8 videos × all 5 questions × 3 methods = 120 an
 
 Speed comes from selective ZIP downloads where supported, one model load, shared video features, and per-method/video checkpoints. Startup depends on network speed. A soft two-hour inference budget is checked after complete three-method video blocks, after at least two videos. It excludes installation/download time and can overrun by one block. A valid partial result is packaged if the budget is reached; rerun All to continue. Actual timing estimates appear after the first block.
 
+The runner prints its current stage immediately and a heartbeat every 30 seconds, including while waiting for network I/O. Read `WORK/progress.json` from a separate terminal for the current stage, elapsed time and time since the last stage update. A heartbeat indicates process liveness, not successful transfer or GPU progress. Existing processes must finish or be restarted to use code changes; do not restart a productive run just to obtain new logging.
+
 At the end download **`HERMES_causal_scorer_pilot_evidence.zip`** using the displayed link. It contains predictions, paired summaries, scorer preflight, asset/source hashes, logs, sampled timestamps, contact sheets and a review sheet. It excludes model weights, video files and feature tensors. Evidence-support annotation remains a human task.
 
 This notebook has CPU numerical/safety tests and a headless validation mode. The complete fresh-container GPU execution is pending your run. Any failed correctness preflight stops the experiments and preserves a diagnostic package.
@@ -256,7 +258,7 @@ if not VALIDATE_ONLY:
         runner_sha256=hashlib.sha256(RUNNER_SOURCE.encode()).hexdigest(), per_outcome=PER_OUTCOME,
         max_hours=MAX_HOURS, gpu_driver=smi.stdout.strip()), indent=2), encoding='utf-8')
     try:
-        logged([PYTHON, RUNNER, '--repo', REPO, '--work', WORK, '--model', MODEL_PATH,
+        logged([PYTHON, '-u', RUNNER, '--repo', REPO, '--work', WORK, '--model', MODEL_PATH,
                 '--per-outcome', str(PER_OUTCOME), '--max-hours', str(MAX_HOURS)], 'pilot.log', ENV, REPO)
     finally:
         if (WORK/'exports/completion.json').is_file() and (WORK/'HERMES_causal_scorer_pilot_evidence.zip').is_file():

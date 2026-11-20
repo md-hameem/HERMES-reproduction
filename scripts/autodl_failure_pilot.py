@@ -19,6 +19,7 @@ import random
 import re
 import subprocess
 import sys
+import threading
 import time
 import types
 from pathlib import Path
@@ -33,6 +34,7 @@ SHARD_SHA = "b7946e8b678fbf704b9816fa708e6febb77f5c37a7ad884084adf858f5d20dbf"
 METHODS = ("fifo", "hermes", "causal")
 FPS = 0.5
 SEED = 2024
+_PROGRESS = None
 
 
 def stable(value):
@@ -71,6 +73,66 @@ def write_csv(path, rows):
 def read_csv(path):
     with Path(path).open(encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+class ProgressMonitor:
+    """Report liveness separately from completed work, including blocked I/O."""
+    def __init__(self, work, interval=30):
+        self.work, self.interval = Path(work), interval
+        self.work.mkdir(parents=True, exist_ok=True)
+        self.started = time.monotonic()
+        self.changed = self.started
+        self.lock = threading.Lock()
+        self.stop = threading.Event()
+        self.state = {"stage": "starting", "detail": "No completed work yet"}
+        self.thread = threading.Thread(target=self._heartbeat, daemon=True)
+
+    def _write(self, heartbeat=False):
+        # Caller holds the lock, so update and heartbeat cannot race the temp file.
+        value = {**self.state, "elapsed_s": round(time.monotonic() - self.started, 1),
+                 "seconds_since_stage_update": round(time.monotonic() - self.changed, 1),
+                 "heartbeat_unix_time": time.time(),
+                 "note": "Heartbeat shows process liveness; it does not prove download or GPU progress"}
+        try:
+            atomic_json(self.work / "progress.json", value)
+        except OSError as exc:
+            # A Windows reader can temporarily prevent atomic replacement.
+            # Progress reporting must not terminate a scientific computation;
+            # a subsequent heartbeat retries while stdout remains available.
+            print(f"PROGRESS_FILE_RETRY error_type={type(exc).__name__}", flush=True)
+        label = "HEARTBEAT" if heartbeat else "STAGE"
+        print(label + " " + stable(value), flush=True)
+
+    def update(self, stage, **detail):
+        with self.lock:
+            self.state = {"stage": stage, **detail}
+            self.changed = time.monotonic()
+            self._write()
+
+    def _heartbeat(self):
+        while not self.stop.wait(self.interval):
+            with self.lock:
+                self._write(heartbeat=True)
+
+    def __enter__(self):
+        global _PROGRESS
+        _PROGRESS = self
+        self.update("starting", detail="Selecting diagnostic videos")
+        self.thread.start()
+        return self
+
+    def __exit__(self, kind, error, traceback):
+        global _PROGRESS
+        self.stop.set()
+        self.thread.join(timeout=5)
+        if kind is not None:
+            self.update("failed", error_type=kind.__name__)
+        _PROGRESS = None
+
+
+def report_progress(stage, **detail):
+    if _PROGRESS is not None:
+        _PROGRESS.update(stage, **detail)
 
 
 def sample_id(video):
@@ -140,6 +202,10 @@ class HTTPRangeFile(io.RawIOBase):
                 end = min(self.size - 1, start + max(self.block_size, min(count, self.block_size)) - 1)
                 for attempt in range(3):
                     try:
+                        from urllib.parse import urlsplit
+                        report_progress("dataset_range_request", endpoint=urlsplit(self.url).hostname,
+                                        request_bytes=end - start + 1, range_start=start,
+                                        received_mib=round(self.bytes_received / 1024**2, 2), attempt=attempt + 1)
                         with self.session.get(self.url, headers={"Range": f"bytes={start}-{end}",
                                                                "Accept-Encoding": "identity"},
                                               stream=True, timeout=(30, 120)) as response:
@@ -150,11 +216,13 @@ class HTTPRangeFile(io.RawIOBase):
                             if len(data) != end - start + 1:
                                 raise OSError("Truncated HTTP range")
                             self.bytes_received += len(data)
+                            report_progress("dataset_range_received", received_mib=round(self.bytes_received / 1024**2, 2))
                             self.buffer_start, self.buffer = start, data
                         break
                     except RangeUnsupported:
                         raise
-                    except Exception:
+                    except Exception as exc:
+                        report_progress("dataset_range_retry", attempt=attempt + 1, error_type=type(exc).__name__)
                         if attempt == 2:
                             raise
                         time.sleep(2 * (attempt + 1))
@@ -182,6 +250,7 @@ def extract_members(archive, videos, directory):
     for video in videos:
         sid = sample_id(video)
         item = members[sid]
+        report_progress("extracting_video", sample_id=sid, expected_mib=round(item.file_size / 1024**2, 2))
         # The archive name is never used as an extraction path.
         dest = directory / f"sample_{sid}_real{Path(item.filename).suffix.lower()}"
         temp = dest.with_suffix(dest.suffix + ".tmp")
@@ -211,6 +280,7 @@ def download_full(urls, path):
                 if start >= SHARD_BYTES:
                     path.unlink()
                     start = 0
+                report_progress("dataset_full_download", cached_mib=round(start / 1024**2, 2))
                 with requests.get(url, headers={"Range": f"bytes={start}-", "Accept-Encoding": "identity"},
                                   stream=True, timeout=(30, 180)) as response:
                     response.raise_for_status()
@@ -225,6 +295,7 @@ def download_full(urls, path):
                         for block in response.iter_content(4 * 1024**2):
                             handle.write(block)
                             if time.monotonic() - last > 30:
+                                report_progress("dataset_full_download", downloaded_mib=round(path.stat().st_size / 1024**2, 2))
                                 print(f"Archive {path.stat().st_size/1024**3:.2f}/2.08 GiB", flush=True)
                                 last = time.monotonic()
                 if path.stat().st_size == SHARD_BYTES and digest(path) == SHARD_SHA:
@@ -241,6 +312,7 @@ def prepare_assets(videos, work):
     directory = work / "videos"
     marker = work / "asset_manifest.json"
     if marker.exists():
+        report_progress("verifying_cached_videos", videos=len(videos))
         saved = json.loads(marker.read_text(encoding="utf-8"))
         if {x["sample_id"] for x in saved["videos"]} == {sample_id(v) for v in videos}:
             if all(Path(x["path"]).is_file() and Path(x["path"]).stat().st_size == x["bytes"]
@@ -252,6 +324,8 @@ def prepare_assets(videos, work):
             for host in ("hf-mirror.com", "huggingface.co")]
     for url in urls:
         try:
+            from urllib.parse import urlsplit
+            report_progress("opening_remote_zip", endpoint=urlsplit(url).hostname, selected_videos=len(videos))
             with requests.Session() as session:
                 remote = HTTPRangeFile(url, SHARD_BYTES, session)
                 with ZipFile(remote) as archive:
@@ -415,6 +489,7 @@ def prepare_features(model, video, work, identity):
     from decord import VideoReader
     from PIL import Image, ImageDraw
     directory = work / "features" / f"sample_{sample_id(video)}"
+    report_progress("preparing_video_features", sample_id=sample_id(video))
     marker = directory / "complete.json"
     if marker.exists():
         saved = json.loads(marker.read_text(encoding="utf-8"))
@@ -448,10 +523,13 @@ def prepare_features(model, video, work, identity):
         torch.save(features, temp)
         os.replace(temp, dest)
         chunks.append(dict(**item, file=dest.name, sha256=digest(dest), tokens=features.shape[1]))
+        report_progress("preparing_video_features", sample_id=sample_id(video), chunks_done=index + 1,
+                        chunks_total=len(plan))
     # Contact sheets are sparse review aids, not evidence annotations.
     review_dir = work / "review"
     review_dir.mkdir(exist_ok=True)
     for qi, qa in enumerate(video["conversations"]):
+        report_progress("making_contact_sheets", sample_id=sample_id(video), qa_index=qi)
         end = math.ceil(float(qa["end_time"]) * FPS)
         chosen = sorted(set(np.linspace(0, end - 1, min(12, end), dtype=int).tolist()))
         thumbnails = reader.get_batch([indices[i] for i in chosen]).asnumpy()
@@ -503,6 +581,7 @@ def sha_predictions(rows):
 def run_method(model, analyzer, video, method, feature_meta, work, config_hash):
     import torch
     output = work / "checkpoints" / method / f"sample_{sample_id(video)}.json"
+    report_progress("method_replay", method=method, sample_id=sample_id(video))
     if checkpoint_valid(output, config_hash, video, method):
         print(f"REUSE method={method} sample={sample_id(video)}", flush=True)
         return json.loads(output.read_text(encoding="utf-8"))
@@ -518,6 +597,7 @@ def run_method(model, analyzer, video, method, feature_meta, work, config_hash):
     events, rows = [], []
     try:
         for i, qa in enumerate(video["conversations"]):
+            report_progress("method_replay", method=method, sample_id=sample_id(video), qa_index=i)
             for item in feature_meta["chunks"]:
                 if item["qa_index"] != i:
                     continue
@@ -565,6 +645,7 @@ def run_method(model, analyzer, video, method, feature_meta, work, config_hash):
 def preflight(model, video, work):
     """Prove feature ingestion and fresh scores agree with original/native paths."""
     import torch
+    report_progress("gpu_preflight", sample_id=sample_id(video))
     from decord import VideoReader
     reader = VideoReader(video["video_path"], num_threads=1)
     step = int(round(reader.get_avg_fps()) / FPS)
@@ -675,6 +756,8 @@ def export_results(results, selected, work, config):
 def package(work, status):
     import shutil
     from zipfile import ZIP_DEFLATED
+    if (work / "progress.json").exists():
+        atomic_json(work / "exports/progress_snapshot.json", json.loads((work / "progress.json").read_text(encoding="utf-8")))
     # The notebook writes the live subprocess log concurrently. Freeze copies
     # before hashing, otherwise archive entries can race their manifest hashes.
     for source in (work / "logs").rglob("*"):
@@ -710,12 +793,18 @@ def main():
     parser.add_argument("--per-outcome", type=int, default=2, choices=[1, 2, 3])
     parser.add_argument("--max-hours", type=float, default=2.0)
     args = parser.parse_args()
+    with ProgressMonitor(args.work):
+        execute(args)
+
+
+def execute(args):
     if args.model.name != MODEL_SHA:
         raise ValueError("Use the pinned model snapshot directory named by MODEL_SHA")
     work, repo = args.work.resolve(), args.repo.resolve()
     sys.path.insert(0, str(repo / "scripts"))
     sys.path.insert(0, str(repo))
     selected, videos = choose_screen(repo, args.per_outcome)
+    report_progress("dataset_preparation", selected_videos=len(videos))
     work.mkdir(parents=True, exist_ok=True)
     review_sheet = work / "review/evidence_review.csv"
     if review_sheet.exists() and [r["case_id"] for r in read_csv(review_sheet)] != [r["case_id"] for r in selected]:
@@ -737,6 +826,7 @@ def main():
                                     support_intervals_seconds_json="", support_visible_at_original_sampling="",
                                     failure_cause="unclassified", notes="") for r in selected])
     # Pin inference sources and assets in every checkpoint identity.
+    report_progress("importing_gpu_libraries")
     import numpy as np
     import torch
     import transformers
@@ -765,6 +855,7 @@ def main():
     config["config_hash"] = config_hash
     config["soft_budget_hours_this_invocation"] = args.max_hours
     atomic_json(work / "exports/run_config.json", config)
+    report_progress("loading_model", model_revision=MODEL_SHA)
     model, processor = load_model(model_path=str(args.model), kv_size=4000, streaming=True, sample_fps=FPS)
     if model.language_model.config._attn_implementation != "sdpa":
         raise RuntimeError("Current HERMES control must use its original SDPA/manual-score path")
@@ -791,6 +882,7 @@ def main():
                 for method in order:
                     results.append(run_method(model, analyzer, video, method, meta, work, config_hash))
                 completed_videos += 1
+                report_progress("video_block_complete", completed_videos=completed_videos, planned_videos=len(videos))
                 summary = export_results(results, selected, work, config)
                 elapsed = time.perf_counter() - started
                 print(f"BLOCK_DONE {completed_videos}/{len(videos)} elapsed_min={elapsed/60:.1f} remaining_estimate_min={(len(videos)-completed_videos)*elapsed/completed_videos/60:.1f}", flush=True)
@@ -798,6 +890,7 @@ def main():
         atomic_json(work / "exports/completion.json", dict(status=status, videos=completed_videos,
                     planned_videos=len(videos), methods=list(METHODS), summary=summary,
                     config_hash=config_hash, elapsed_s=time.perf_counter() - started))
+        report_progress(status, completed_videos=completed_videos, planned_videos=len(videos))
         package(work, status)
         print("PILOT_COMPLETE" if status == "complete" else "PILOT_PARTIAL", flush=True)
     except Exception as exc:

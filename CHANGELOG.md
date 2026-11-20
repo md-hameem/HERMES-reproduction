@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — AutoDL startup and download visibility
+
+- Recorded a user report of more than ten minutes without visible run-cell output; the actual remote process/network state remains unconfirmed.
+- Added immediate stage messages, dataset byte-range progress, feature-chunk progress and a 30-second heartbeat with a separate progress JSON file. Liveness is distinguished from successful work.
+- Added monitor lifecycle/failure tests and a frozen progress snapshot in the evidence archive. Launched the embedded runner unbuffered and regenerated the main notebook.
+
 ## 2026-11-20 — Neurocomputing manuscript preparation roadmap
 
 - Recorded Neurocomputing as the user's working target and the latest AutoDL run as planned for today, with no new completed results supplied.

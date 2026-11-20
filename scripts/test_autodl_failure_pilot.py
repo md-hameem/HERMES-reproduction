@@ -5,10 +5,12 @@ selection tests also run in a standard-library environment.
 """
 
 import copy
+import contextlib
 import io
 import json
 import pathlib
 import tempfile
+import time
 import types
 import unittest
 import zipfile
@@ -45,6 +47,35 @@ class Session:
 
 
 class DataSafetyTests(unittest.TestCase):
+    def test_heartbeat_records_liveness_and_stops_cleanly(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory).resolve()
+            self.assertTrue(root.is_relative_to(pathlib.Path(tempfile.gettempdir()).resolve()))
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                with pilot.ProgressMonitor(root, interval=0.01) as monitor:
+                    pilot.report_progress("waiting_for_fixture", requested_bytes=100)
+                    time.sleep(0.04)
+                    value = json.loads((root / "progress.json").read_text(encoding="utf-8"))
+                    self.assertEqual(value["stage"], "waiting_for_fixture")
+                    self.assertEqual(value["requested_bytes"], 100)
+                    self.assertGreaterEqual(value["seconds_since_stage_update"], 0)
+            self.assertIn("HEARTBEAT", output.getvalue())
+            self.assertFalse(monitor.thread.is_alive())
+            self.assertIsNone(pilot._PROGRESS)
+
+    def test_monitor_reports_failure_without_suppressing_exception(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory).resolve()
+            self.assertTrue(root.is_relative_to(pathlib.Path(tempfile.gettempdir()).resolve()))
+            with contextlib.redirect_stdout(io.StringIO()), self.assertRaisesRegex(ValueError, "fixture"):
+                with pilot.ProgressMonitor(root):
+                    raise ValueError("fixture")
+            value = json.loads((root / "progress.json").read_text(encoding="utf-8"))
+            self.assertEqual(value["stage"], "failed")
+            self.assertEqual(value["error_type"], "ValueError")
+            self.assertIsNone(pilot._PROGRESS)
+
     def test_remote_zip64_member_extraction(self):
         data = io.BytesIO()
         with zipfile.ZipFile(data, "w", compression=zipfile.ZIP_DEFLATED) as archive:

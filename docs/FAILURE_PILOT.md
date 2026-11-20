@@ -34,6 +34,14 @@ Local verification covers nine CPU numerical/safety tests, actual summary prunin
 
 Regenerate the notebook after runner changes with `python scripts/make_failure_pilot_notebook.py`. Numerical tests require the pinned Transformers environment and run with `python -m unittest discover -s scripts -p test_autodl_failure_pilot.py -v`.
 
+### Monitoring a quiet run
+
+The user reported more than ten minutes without visible output in the run cell. The earlier downloader reported a video only after complete extraction, leaving network attempts and initial preparation silent. This observation alone does not establish a stalled download, failed GPU or completed experiment.
+
+The maintained runner now emits immediate `STAGE` messages, range-request/received-byte information, feature-chunk counts and a `HEARTBEAT` every 30 seconds. `WORK/progress.json` records the current stage, elapsed time and time since the last stage update. A heartbeat establishes liveness only. It does not prove byte transfer, GPU activity or scientific completion. The monitor is stopped cleanly, and diagnostic-file write failures do not terminate computation. The evidence package includes a frozen progress snapshot.
+
+For an existing run using the earlier code, inspect `pilot_runner.py` in the process list, `logs/pilot.log`, sizes of files under `videos/` and `downloads/`, and `nvidia-smi` from a separate terminal. Compare file sizes over time to distinguish active transfer from waiting. GPU inactivity during data preparation can be normal. Do not start a second runner against the same work directory or change files used by an active run. Updated logging takes effect only in a newly launched process; a changed runner hash also changes checkpoint/feature identities, so avoid restarting a productive run merely to see the new logging.
+
 ## Question and decision
 
 Determine whether failures contain recoverable visual evidence that a memory-policy change could preserve. Then test whether fresh causal scoring improves QA under the same compressed-cache budget. The existing attention discrepancy alone does not establish an answer-quality effect or an original method.
