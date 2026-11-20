@@ -125,6 +125,50 @@ class StageNumericalTests(unittest.TestCase):
         self.assertTrue(result["all_layer_hidden_history_attention_zero"])
         self.assertEqual([r["query_and_decode_mask_calls"] for r in result["comparisons"][1:]],[3,3])
 
+    def run_half_preflight(self, path):
+        torch=self.torch
+        model,bank,meta,_=self.fixture()
+        model.dtype=torch.float16
+        lm=model.language_model.half()
+        for layer in lm.model.layers:
+            layer.self_attn.rotary_emb.inv_freq=layer.self_attn.rotary_emb.inv_freq.float()
+        weights={name:value.clone() for name,value in lm.named_parameters()}
+        buffers={name:value.clone() for name,value in lm.named_buffers()}
+        def reset(target):
+            target._layer_position_ids.clear()
+            target.kv_cache=list(lm(input_ids=torch.tensor([[1,3,5,7,9]]),use_cache=True).past_key_values)
+            target._position_ids_cache=[torch.arange(5) for _ in range(model.num_layers)]
+        try:
+            with torch.inference_mode(),patch.object(s.p,"reset",side_effect=reset):
+                return s.numerical_preflight(model,bank,meta,torch.tensor([[2,4,6]]),diagnostic_path=path)
+        finally:
+            for name,value in lm.named_parameters():
+                torch.testing.assert_close(value,weights[name],atol=0,rtol=0)
+            for name,value in lm.named_buffers():
+                torch.testing.assert_close(value,buffers[name],atol=0,rtol=0)
+
+    def test_half_preflight_runs_fp32_reference_then_restored_half(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/"diagnostics.json"
+            result=self.run_half_preflight(path)
+            diagnostics=json.loads(path.read_text())
+        self.assertEqual(result["status"],"pass")
+        self.assertEqual(diagnostics["fp32"]["dtype"],"torch.float32")
+        self.assertEqual(diagnostics["production"]["dtype"],"torch.float16")
+        self.assertEqual(len(diagnostics["production"]["construction_by_layer"]),6)
+
+    def test_history_leak_stops_at_fp32_and_saves_diagnostics(self):
+        causal_mask=s.causal_mask
+        def unblocked(batch,q,past,dtype,device,blocked_start,blocked_stop):
+            return causal_mask(batch,q,past,dtype,device,0,0)
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/"diagnostics.json"
+            with patch.object(s,"causal_mask",side_effect=unblocked),self.assertRaises(AssertionError):
+                self.run_half_preflight(path)
+            diagnostics=json.loads(path.read_text())
+        self.assertTrue(diagnostics["fp32"]["construction_by_layer"])
+        self.assertEqual(diagnostics["production"],{})
+
     def test_history_cache_is_identical_but_recent_deeper_cache_can_change(self):
         torch=self.torch;model,bank,meta,initial=self.fixture()
         with torch.inference_mode(),patch.object(s.p,"reset",side_effect=lambda m:s.restore(m,initial)):

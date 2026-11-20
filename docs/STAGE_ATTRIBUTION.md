@@ -4,7 +4,7 @@ Prepared 20 November 2026. [Notebook](../notebooks/autodl/hermes-stage-attributi
 
 ## Run now
 
-Upload **hermes-stage-attribution.ipynb alone**, preferably into the same AutoDL container, and choose **Restart Kernel and Run All**. Defaults require no edits. Output is `/root/autodl-tmp/hermes_stage_attribution`. The verified reuse candidate remains `/root/autodl-tmp/hermes_causal_pilot`; old execution directories are not overwritten. A fresh container is supported with additional setup/download/feature preparation. Recommended: RTX 4090 / 24 GB, CUDA 12.8-compatible driver and 18 GiB free for fresh setup.
+Upload **hermes-stage-attribution.ipynb alone**, preferably into the same AutoDL container, and choose **Restart Kernel and Run All**. Defaults require no edits. Output is `/root/autodl-tmp/hermes_stage_attribution_v2`, which preserves evidence from the first attempt. The verified reuse candidate is `/root/autodl-tmp/hermes_causal_pilot`. A fresh container is supported with additional setup/download/feature preparation. Recommended: RTX 4090 / 24 GB, CUDA 12.8-compatible driver and 18 GiB free for fresh setup.
 
 The notebook embeds four current source modules and immutable historical comparison data. It uses the previously tested network/package routing, sparse pinned inference checkout, exact environment/model probe and video/feature hash checks. Notebook kernel imports remain CPU/standard-library; the isolated subprocess owns the GPU. No archived Python/notebook cells are executed from evidence ZIPs.
 
@@ -38,15 +38,19 @@ Before QA, the runner checks the original feature/native-attention preflight plu
 - Every layer assigns zero attention to hidden H and future tokens on the checked fixture.
 - Source cache snapshots remain unchanged.
 
-GPU tolerances and measured errors are saved in `stage_preflight.json`; the checked prefix is not a certification of every possible input. During actual QA, masking is traced on every LM call, source states are restored and checked after answering, and no historical-answer guidance survives between arms. **A and compact recent-4 must reproduce their earlier choices on every main question**; the longer A must reproduce the previous full-prefix choice. Any mismatch stops attribution and saves evidence. A matching rerun cannot bypass a previously stored mismatch.
+The first AutoDL attempt stopped before QA when one of 25,088 entries in a K/V comparison exceeded the original FP16 bound. Its absolute difference was approximately 0.005615. The screenshot alone does not establish the cause.
+
+The revised preflight first checks the two-frame fixture with FP32 math attention (K/V absolute and relative tolerances of 0.0001 each, logit tolerances of 0.001 each). It then restores the original language-model weights and buffers and repeats the comparisons in FP16 (K/V tolerances of 0.01 each, logit absolute and relative tolerances of 0.02 and 0.005). Both passes require identical tested argmaxes and zero attention to blocked history and future positions. Per-layer K/V differences and exceedance counts for both the original and active bounds are saved to `exports/stage_preflight_diagnostics.json` before the K/V assertions. The successful summary is saved to `stage_preflight.json`.
+
+During QA, the runner traces masking on every LM call and restores and checks the source states after answering. **A and compact recent-4 must reproduce their earlier choices on every main question.** The longer A must reproduce the previous full-prefix choice. Any mismatch stops attribution and saves evidence. A matching rerun cannot bypass a previously stored mismatch.
 
 ## Progress, resume and return
 
 Setup prints stage/liveness while silent. The runner prints preflight, per-arm results, question-block completion and 30-second heartbeat. From another AutoDL terminal:
 
 ```bash
-tail -n 40 /root/autodl-tmp/hermes_stage_attribution/logs/stage.log
-cat /root/autodl-tmp/hermes_stage_attribution/progress.json
+tail -n 40 /root/autodl-tmp/hermes_stage_attribution_v2/logs/stage.log
+cat /root/autodl-tmp/hermes_stage_attribution_v2/progress.json
 nvidia-smi
 ```
 
@@ -63,4 +67,4 @@ python scripts/make_stage_attribution_notebook.py
 python -m unittest discover -s scripts -p test_stage_attribution.py -v
 ```
 
-Fourteen local tests pass: causal/future/history masks, independent-construction and compact-reference numerical preflight on a small native Qwen decoder, identical H/changed deeper R states, history-empty null factors, all-decode coverage using the real answer function, checkpoint/config protection, immutable failure gate on resume, separate main/long denominators, archive integrity, exact embedded sources and execution of all notebook cells with network/GPU actions disabled. CPU tests use pinned Transformers; complete AutoDL GPU execution remains pending.
+Local tests exercise both precision passes on a small Qwen decoder, exact restoration of parameters and mixed-precision buffers, and failure with saved diagnostics when an injected error exposes hidden history. They also check the real answer function's decode-mask coverage, checkpoint and archive integrity, and headless execution of every notebook cell with network and GPU actions disabled. Complete AutoDL GPU execution remains pending.

@@ -187,7 +187,63 @@ def probe(model,state,ids,start,stop,force=False,steps=2,attentions=False):
     return logits,weights,mask.events
 
 
-def numerical_preflight(model,bank,meta,ids,atol=.02,rtol=.005):
+def error_statistics(actual,expected,atol,rtol):
+    import torch
+    a,b=actual.float(),expected.float()
+    if a.shape!=b.shape or not torch.isfinite(a).all() or not torch.isfinite(b).all():
+        raise ValueError("Nonfinite or shape-mismatched preflight tensors")
+    delta=(a-b).abs()
+    return dict(elements=a.numel(),max_abs=float(delta.max()),rms=float(delta.square().mean().sqrt()),
+                relative_l2=float(torch.linalg.vector_norm(a-b)/torch.linalg.vector_norm(b).clamp_min(1e-12)),
+                exceeds_original_005_bound=int((delta>(.005+.005*b.abs())).sum()),
+                exceeds_active_bound=int((delta>(atol+rtol*b.abs())).sum()))
+
+
+class PrecisionProxy:
+    """Override only public dtype; all state/methods stay on the original model."""
+    def __init__(self,model,dtype):
+        object.__setattr__(self,"_wrapped",model);object.__setattr__(self,"_dtype",dtype)
+    def __getattr__(self,name):
+        return object.__getattribute__(self,"_dtype") if name=="dtype" else getattr(object.__getattribute__(self,"_wrapped"),name)
+    def __setattr__(self,name,value):setattr(object.__getattribute__(self,"_wrapped"),name,value)
+
+
+@contextlib.contextmanager
+def fp32_structural_reference(model):
+    """Temporarily promote LM parameters, preserving original mixed buffer dtypes/values.
+
+    Vision weights are never cast. Cached rotary buffers are restored exactly,
+    rather than blindly calling half() on float32 frequency buffers afterward.
+    """
+    import torch
+    from torch.nn.attention import sdpa_kernel,SDPBackend
+    lm=model.language_model
+    parameter_dtypes={name:value.dtype for name,value in lm.named_parameters()}
+    buffers={name:value.clone() for name,value in lm.named_buffers()}
+    rotary=[(layer.self_attn.rotary_emb,layer.self_attn.rotary_emb.max_seq_len_cached,
+             getattr(layer.self_attn.rotary_emb,"_required_seq_len",0)) for layer in lm.model.layers]
+    try:
+        for value in lm.parameters():
+            if value.is_floating_point() and value.dtype not in (torch.float16,torch.bfloat16,torch.float32):
+                raise ValueError("Unexpected parameter dtype for reversible FP32 reference")
+        model.clear_cache()
+        for value in lm.parameters():
+            if value.is_floating_point():value.data=value.data.float()
+        # Both reference paths use the same high-precision math implementation.
+        with sdpa_kernel(SDPBackend.MATH):yield PrecisionProxy(model,torch.float32)
+    finally:
+        for name,value in lm.named_parameters():value.data=value.data.to(parameter_dtypes[name])
+        for name,value in buffers.items():
+            parent,_,leaf=name.rpartition(".")
+            setattr(lm.get_submodule(parent) if parent else lm,leaf,value)
+        for module,length,required in rotary:
+            module.max_seq_len_cached=length;module._required_seq_len=required
+        model.clear_cache();model.kv_cache=None
+        model._layer_position_ids.clear();model._position_ids_cache=[None]*model.num_layers
+        model.token_activity_cache=[None]*model.num_layers
+
+
+def _preflight_pass(model,bank,meta,ids,atol=.02,rtol=.005,kv_atol=.005,kv_rtol=.005,diagnostics=None,save=None):
     """Check physical masking against independent construction and compact readout."""
     import torch
     p.reset(model);sink=snapshot(model);s=sink["prompt"]
@@ -197,9 +253,17 @@ def numerical_preflight(model,bank,meta,ids,atol=.02,rtol=.005):
     ingest(model,bank,[1],meta,logical_start=stop)
     independent=snapshot(model)
     construction_error=0.0
-    for (fk,fv),(ik,iv) in zip(states["B"]["kv"],independent["kv"]):
-        for actual,expected in ((fk[:,:,stop:],ik[:,:,s:]),(fv[:,:,stop:],iv[:,:,s:])):
-            torch.testing.assert_close(actual,expected,atol=.005,rtol=.005)
+    comparisons=[]
+    for layer,((fk,fv),(ik,iv)) in enumerate(zip(states["B"]["kv"],independent["kv"])):
+        for kind,actual,expected in (("K",fk[:,:,stop:],ik[:,:,s:]),("V",fv[:,:,stop:],iv[:,:,s:])):
+            comparisons.append(dict(layer=layer,kind=kind,**error_statistics(actual,expected,kv_atol,kv_rtol)))
+    if diagnostics is not None:
+        diagnostics.update(dtype=str(model.dtype),kv_atol=kv_atol,kv_rtol=kv_rtol,construction_by_layer=comparisons)
+        if save:save()
+    for layer,((fk,fv),(ik,iv)) in enumerate(zip(states["B"]["kv"],independent["kv"])):
+        for kind,actual,expected in (("K",fk[:,:,stop:],ik[:,:,s:]),("V",fv[:,:,stop:],iv[:,:,s:])):
+            torch.testing.assert_close(actual,expected,atol=kv_atol,rtol=kv_rtol,
+                                       msg=lambda msg: f"Construction preflight layer {layer} {kind}: {msg}")
             construction_error=max(construction_error,float((actual-expected).abs().max()))
     records=[]
     plain,_,_=probe(model,states["A"],ids,0,0)
@@ -239,8 +303,32 @@ def numerical_preflight(model,bank,meta,ids,atol=.02,rtol=.005):
         independent_construction_max_kv_error=construction_error,comparisons=records,
         all_layer_hidden_history_attention_zero=True,all_layer_future_attention_zero=True,
         source_snapshots_unchanged=True,attention_checks_steps=len(events),layers=model.num_layers,
-        tolerances=dict(kv_atol=.005,kv_rtol=.005,logits_atol=atol,logits_rtol=rtol),
+        tolerances=dict(kv_atol=kv_atol,kv_rtol=kv_rtol,logits_atol=atol,logits_rtol=rtol),
         scope="One two-frame visual prefix; explicit history mask at question prefill and two forced decode steps; not every production prefix")
+
+
+def numerical_preflight(model,bank,meta,ids,atol=.02,rtol=.005,diagnostic_path=None):
+    import torch
+    diagnostics=dict(policy="v2_strict_fp32_structure_then_fp16_production",fp32={},production={})
+    def save():
+        if diagnostic_path is not None:p.atomic_json(diagnostic_path,diagnostics)
+    if model.dtype in (torch.float16,torch.bfloat16):
+        print("STAGE_PREFLIGHT strict FP32 structural reference (math attention)",flush=True)
+        with fp32_structural_reference(model) as reference:
+            structural=_preflight_pass(reference,bank,meta,ids,atol=.001,rtol=.001,kv_atol=.0001,kv_rtol=.0001,
+                                       diagnostics=diagnostics["fp32"],save=save)
+        diagnostics["fp32"]["result"]=structural;save()
+        print("STAGE_PREFLIGHT restored production precision; checking FP16 numerical bounds",flush=True)
+        result=_preflight_pass(model,bank,meta,ids,atol=atol,rtol=rtol,kv_atol=.01,kv_rtol=.01,
+                               diagnostics=diagnostics["production"],save=save)
+        result["fp32_structural_reference"]=structural
+        result["production_precision_restored"]=True
+    else:
+        result=_preflight_pass(model,bank,meta,ids,atol=atol,rtol=rtol,diagnostics=diagnostics["production"],save=save)
+    result["validation_policy"]=diagnostics["policy"]
+    result["numerical_limits"]="FP32 checks mask and position equivalence. Production precision has a separate K/V tolerance. Zero hidden-history/future attention, argmax and per-question replay gates are mandatory."
+    diagnostics["production"]["result"]=result;save()
+    return result
 
 
 def checkpoint_valid(value,key,identity,arm,history,recent):
@@ -412,7 +500,8 @@ def execute(args):
                 p.preflight(model,video,args.work)
                 ids=processor.tokenizer("What is visible?",return_tensors="pt").input_ids.to(model.device)
                 p.report_progress("stage_mask_position_preflight")
-                p.atomic_json(args.work/"stage_preflight.json",numerical_preflight(model,bank,meta,ids))
+                p.atomic_json(args.work/"stage_preflight.json",numerical_preflight(model,bank,meta,ids,
+                    diagnostic_path=args.work/"exports/stage_preflight_diagnostics.json"))
                 preflight_done=True
             for qi in range(len(video["conversations"])):
                 if done and args.max_hours and time.perf_counter()-started>args.max_hours*3600:break

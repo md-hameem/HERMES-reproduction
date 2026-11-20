@@ -21,6 +21,8 @@ Retain the **same physical H/R cache slots and budget** for answer-time comparis
 
 The implemented equivalent keeps H physically present and applies an H-blocking causal mask during R encoding. GPU preflight compares its R K/V against physically independent construction at the same logical positions. This avoids unnecessary cache reassembly without changing the intended information visibility. H states are sliced from A's causally encoded cache and held identical across cells. The original partition is preserved for A so it can replay the earlier reference.
 
+The revised preflight uses FP32 math attention to check structural equivalence on the two-frame fixture, then restores the model's original precision and checks FP16 agreement with separately declared tolerances. The run records per-layer differences and requires both passes, exact zero attention on blocked positions, matching tested argmaxes and the existing per-question replay. The initial FP16 tolerance failure occurred before QA and supplies no stage-attribution outcomes. [Validation and rerun instructions](../../docs/STAGE_ATTRIBUTION.md).
+
 Report transient caches, feature buffers, complete query time and peak allocation. Equal answer-cache slots do not imply equal total resource cost, especially when independent construction or snapshots require extra work/state.
 
 For C/D, mask H for the question prefill **and every generated answer token at every layer**. Masking only the first step is insufficient. Preserve causality among question/generation tokens. H can still influence C indirectly through R: hiding direct attention is not erasing all historical information. Store explicit logical/physical position maps, cache lengths and mask policy.

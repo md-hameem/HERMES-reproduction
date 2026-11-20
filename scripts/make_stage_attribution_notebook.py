@@ -29,7 +29,7 @@ def reference_data():
 
 INTRO="""# HERMES stage attribution — recent construction versus history readout
 
-Upload **this notebook alone**, preferably into your existing AutoDL container, then **Restart Kernel → Run All**. Defaults need no edits. It reuses verified assets under `/root/autodl-tmp/hermes_causal_pilot` and writes only to the new `/root/autodl-tmp/hermes_stage_attribution`. A fresh container is supported with extra setup/download/feature preparation.
+Upload **this notebook alone**, preferably into your existing AutoDL container, then **Restart Kernel → Run All**. Defaults need no edits. It reuses verified assets under `/root/autodl-tmp/hermes_causal_pilot` and writes to `/root/autodl-tmp/hermes_stage_attribution_v2`, preserving the first run. A fresh container is supported with extra setup/download/feature preparation.
 
 **Main experiment: 40 questions × five conditions = 200 answers.** Each input uses the last up to 20 original sampled frames: older H (up to 16) plus recent R (last up to four). All answers reset state and use no eviction, past-answer guidance or gold-dependent policy.
 
@@ -47,6 +47,8 @@ The default also runs **four separate A–D answers for 204/q3's longer prefix**
 
 **Mandatory gates:** feature/native-attention preflight; explicit-mask versus native logits; independent-construction K/V agreement at fixed positions; masked readout versus physically removed H through prefill and two decode steps; zero hidden-H/future attention at all layers; source-cache preservation. A and compact must replay their earlier choices on every question or the experiment stops and exports failure evidence. Do not bypass a mismatch by rerunning.
 
+The two-frame stage preflight checks mask and position equivalence with FP32 math attention, restores the original model precision, then repeats the comparisons in FP16. The evidence ZIP includes per-layer K/V errors in `exports/stage_preflight_diagnostics.json`.
+
 Recommended: **RTX 4090 / 24 GB**, CUDA 12.8-compatible driver, 18 GiB free for fresh setup. Same pinned 0.5B model, source sampling, prompt/parser and greedy 16-token policy as before. The kernel never imports torch. Shared A/B/compact cache construction is recorded separately; held control snapshots and transient buffers are included in observed allocation, so per-answer times are not standalone algorithm efficiency.
 
 Setup and inference have stage output, per-arm results, progress JSON and 30-second liveness messages. `MAX_HOURS=1.0` is a soft post-model budget checked between question blocks, excluding setup/download/model loading/final packaging; it is not a runtime estimate. Rerun with the same WORK/settings to resume validated checkpoints; change WORK for changed code or long-case settings.
@@ -58,6 +60,7 @@ At completion download **`HERMES_stage_attribution_evidence.zip`** and save the 
 def config():
     value=base.CONFIG.replace("hermes_input_diagnostic","hermes_stage_attribution").replace("HERMES_DIAGNOSTIC_VALIDATE_ONLY","HERMES_STAGE_VALIDATE_ONLY")
     value=value.replace("RUNNER = WORK/'diagnostic_runner.py'","RUNNER = WORK/'stage_runner.py'")
+    value=value.replace("WORK = Path('/root/autodl-tmp/hermes_stage_attribution')","WORK = Path('/root/autodl-tmp/hermes_stage_attribution_v2')")
     value=value.replace("RUN_NATIVE = True","RUN_LONG_CASE = True")
     value=value.replace("NATIVE_MAX_VISUAL_TOKENS = 8192  # no truncation: larger prefixes are skipped explicitly\n","")
     value=value.replace("MAKE_REVIEW_PAGES = True\n","")

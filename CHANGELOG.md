@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Revised stage-attribution preflight
+
+- The first AutoDL attempt stopped before QA on a single FP16 tensor entry outside the K/V tolerance.
+- Added an FP32 reference pass, a separate FP16 K/V tolerance and per-layer diagnostics that are saved before the comparison can stop the run. The new work directory preserves the first attempt.
+- Passed 16 local tests, including the two precision passes and rejection of an injected history leak. AutoDL verification is pending.
+
 ## 2026-11-20 — Stage-attribution AutoDL notebook
 
 - Added a self-contained, resumable 200-answer construction/readout matrix with four separate optional long-case answers and existing verified asset/environment reuse.
