@@ -4,6 +4,10 @@
 
 This report synthesizes the repository evidence and a targeted primary-source search checked on **19 November 2026**. It distinguishes measured project results, published methods and proposed research. The literature directory contains 51 PDF files, including identifiers and named papers. The search did not exhaustively review every local PDF or certify novelty across all publications. Detailed research notes accompany this report under `docs/research_notes/HERMES journal publication strategy/`.
 
+## Later clarification and alternatives, 20 November 2026
+
+The user clarified that Q1 is required and asked for alternatives to TCSVT. The [alternative Q1 shortlist](<HERMES alternative Q1 journal shortlist.md>) now compares TOMM, Neurocomputing, ESWA and EAAI with their source-qualified rankings and exact CCF categories. TOMM is B; the other three are C in the supplied catalogue. Whether C venues qualify through Q1 remains unspecified. Investigate Neurocomputing for a method-centered contribution and TOMM for a multimedia-system contribution, with applicable current JCR eligibility to verify. No verified comparative acceptance-rate claim is made. TCSVT is an initial candidate rather than a committed destination. Conference categories alone do not meet the mandatory journal-Q1 condition.
+
 ## Advisor confirmation, 20 November 2026
 
 The user reported: “teacher said, i can publish at Q1 CCF B is okay.” Record CCF B as acceptable and retain Q1 as the journal objective. This statement does not specify whether Q1 and CCF B are joint requirements or alternative routes. TCSVT is a practical primary target under either reading because the supplied catalogue classifies it B and the previously retrieved publisher ranking record labels it JIF Q1. This update records advisor guidance; it does not refresh ranking data or establish a university-wide policy.

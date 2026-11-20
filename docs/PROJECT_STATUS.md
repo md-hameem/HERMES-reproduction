@@ -83,3 +83,7 @@ The RTX 4090 rental planning estimate is 2–3 hours for a fresh default session
 All three historical archival omissions have been recovered in the supplemental ZIP with their original hashes. The old bundles still document the omissions. Raw model weights, videos and full attention tensors are outside this evidence package. Attention tables and selection sets can be checked locally, while rerunning the GPU computation requires the pinned assets and environment.
 
 Related documents are the detailed research log, the dated technical audit and the comprehensive research report. [Research log](research_log.md) · [Technical audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) · [Technical report](HERMES_Comprehensive_Technical_Research_Report.md)
+
+## Publication-target clarification, 20 November 2026
+
+The user clarified that Q1 is mandatory and requested a more attainable alternative to TCSVT. The [alternative journal comparison](<reports/HERMES alternative Q1 journal shortlist.md>) records TOMM as CCF B and Neurocomputing, ESWA and EAAI as CCF C, with separate source-qualified Q1 evidence. Their relative acceptance difficulty was not established. The final venue remains open; whether C journals qualify through Q1 and the applicable quartile database/year remain unspecified.
