@@ -528,5 +528,5 @@ Start with a CPU-supported failure audit and a small inference-only pilot. Expen
 ### Gaps
 
 - No experiments were run as part of this literature shard. Expected improvements are hypotheses, not results.
-- No venue acceptance is guaranteed by a gap map. The professor still needs to confirm qualifying CCF categories/rankings.
+- No venue acceptance is guaranteed by a gap map. Update on 20 November 2026: the user reports that the professor accepts CCF B; the applicable Q1 database/year and publication milestone remain unspecified.
 - Exact sample size and which baseline checkpoints fit the rented GPU depend on the pilot effect and actual hardware.

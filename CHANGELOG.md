@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Advisor publication-category confirmation
+
+- Recorded the user's report that the professor accepts CCF B and retained Q1 as the journal objective.
+- Prioritized TCSVT using the supplied CCF B classification and previously retrieved publisher JIF Q1 evidence. Kept other venues conditional on scope and ranking checks.
+- Updated the publication strategy, catalogue interpretation, project status, README and literature-note crossreference. The Q1/B condition logic, applicable quartile database/year and recognition milestone remain unspecified. No new ranking search or GPU result is claimed.
+
 ## 2026-11-19 — Literature gap register and diagnostic pilot
 
 - Added a review ledger for all 51 local PDF files, a 39-entry gap register, detailed source notes and a publication strategy with the supplied CCF catalogue.

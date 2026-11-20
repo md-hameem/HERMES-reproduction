@@ -86,7 +86,7 @@ The current status page describes completed work, remaining research and the evi
 
 ### Research extension in progress
 
-The [research gap map](<docs/reports/HERMES research gap map.md>) accounts for 51 local PDF files at recorded review depths. Its [39-entry register](<docs/reports/HERMES gap register.csv>) distinguishes existing solutions, implementation fixes, evaluation gaps and conditional method ideas. The [publication strategy](<docs/reports/HERMES journal publication strategy.md>) records venue fit and the supplied CCF catalogue; the university's qualifying categories still require confirmation.
+The [research gap map](<docs/reports/HERMES research gap map.md>) accounts for 51 local PDF files at recorded review depths. Its [39-entry register](<docs/reports/HERMES gap register.csv>) distinguishes existing solutions, implementation fixes, evaluation gaps and conditional method ideas. The [publication strategy](<docs/reports/HERMES journal publication strategy.md>) records venue fit and the supplied CCF catalogue; the user reported on 20 November 2026 that the professor accepts CCF B. Q1 remains the journal objective, with TCSVT the current primary target based on the previously checked ranking and catalogue evidence.
 
 The next step is the [evidence-loss diagnostic pilot](docs/FAILURE_PILOT.md). CPU preparation joins all 2,495 HERMES/FIFO question pairs and selects 30 review targets across 30 videos with complete QA histories. Video evidence review and corrected-scorer GPU experiments remain pending. Rebuild the casebook with `python scripts/build_failure_pilot.py`; no GPU or external Python packages are required.
 
