@@ -2,6 +2,13 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Targeted AutoDL context diagnostic notebook
+
+- Added an upload-alone, resumable context/partition notebook for seven selected questions: 84 arm records and up to 74 default answers, with explicit candidate/context skips.
+- Added original/fixed/framewise replay controls, equal-length replacements preserving recent-frame token positions, explicit repeated source-slot maps and historical replay checks. Filler neutrality and human-oracle status are not assumed.
+- Included source-only review pages and original-resolution images for two analyst-selected support candidates. Reused pinned environment/asset verification, stage/heartbeat logging, safe checkpoint/config handling and final evidence packaging.
+- Passed fourteen local tests, including CPU native-decoder numerical partition checks, counterfactual execution/resume and headless notebook cells. Complete GPU execution and scientific effects remain pending.
+
 ## 2026-11-20 — Completed input diagnostic intake and analysis
 
 - Preserved the uploaded ZIP/notebook under canonical archive/executed paths with unchanged hashes; kept the full extraction ignored and published compact original/derived tables plus two unchanged review images.
