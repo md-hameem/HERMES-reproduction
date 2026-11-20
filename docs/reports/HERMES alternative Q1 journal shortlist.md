@@ -15,6 +15,10 @@ The recommendation concerns fit and a manageable contribution, not measured acce
 
 The supplied [2026 CCF catalogue](<../research_notes/HERMES journal publication strategy/sources/ccf_catalogue_2026.pdf>) was re-extracted for the exact venue names, B/C headings and continuation pages. These classifications are distinct from Q1. Do not present the three C journals as satisfying a B requirement. Before submission, use the university's recognized ranking source and applicable year, and check any local exclusion list and article-track rules.
 
+## Supplied Neurocomputing guide, reviewed 20 November 2026
+
+The user subsequently supplied the 19-page guide for authors. The [page-referenced requirements and HERMES readiness assessment](<Neurocomputing submission requirements and HERMES readiness.md>) records regular, replication and software article routes, formatting, research-data and AI-disclosure requirements. The regular route requires direct relevance to neural networks/learning systems. Replication/software routes do not automatically satisfy the advisor's original-method requirement; the replication wording specifically describes original studies in Neurocomputing and other major journals, while HERMES originated at ACL. The guide supplies no quartile or comparative acceptance-rate evidence.
+
 ## Practical decision
 
 Investigate Neurocomputing for a method-centered paper and TOMM for a multimedia-system paper. If both Q1 and CCF B are necessary, TOMM is the more relevant alternative to investigate first, with current JCR eligibility still to verify. If Q1 is sufficient independently of CCF tier, Neurocomputing and ESWA widen the scope-fit shortlist. EAAI is appropriate only when a real engineering application is part of the actual research. TCSVT remains an option rather than a committed submission target.

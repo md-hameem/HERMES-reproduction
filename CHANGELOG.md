@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Neurocomputing author-guide intake
+
+- Archived the supplied 19-page guide for authors with exact file hash and reading provenance.
+- Added a page-referenced submission checklist and HERMES readiness assessment covering regular, replication and software routes; editable sources; abstract/keywords/highlights; data sharing; AI disclosure; and figures.
+- Kept original-method, quartile and institutional-eligibility checks distinct from journal formatting. No manuscript submission or new GPU result was produced.
+
 ## 2026-11-20 — Advisor publication-category confirmation
 
 - Recorded the user's report that the professor accepts CCF B and retained Q1 as the journal objective.

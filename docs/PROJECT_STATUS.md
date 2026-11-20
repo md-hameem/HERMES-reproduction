@@ -87,3 +87,7 @@ Related documents are the detailed research log, the dated technical audit and t
 ## Publication-target clarification, 20 November 2026
 
 The user clarified that Q1 is mandatory and requested a more attainable alternative to TCSVT. The [alternative journal comparison](<reports/HERMES alternative Q1 journal shortlist.md>) records TOMM as CCF B and Neurocomputing, ESWA and EAAI as CCF C, with separate source-qualified Q1 evidence. Their relative acceptance difficulty was not established. The final venue remains open; whether C journals qualify through Q1 and the applicable quartile database/year remain unspecified.
+
+## Neurocomputing guide intake, 20 November 2026
+
+The supplied 19-page author guide has been archived with its original SHA256 and reviewed across all pages using rendered-page OCR, with critical clauses visually checked. The [requirements and readiness assessment](<reports/Neurocomputing submission requirements and HERMES readiness.md>) separates journal rules from our proposed evidence plan. A regular article remains the preferred route under the original-method requirement. Replication/software tracks exist, with scope and graduation eligibility still to establish. No new GPU result, manuscript submission, quartile verification or acceptance probability is established by this intake.
