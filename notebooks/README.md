@@ -4,6 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Matched-boundary control — next run](autodl/hermes-matched-boundary.ipynb) | Same 40 questions with matched recent encoding groups, 200 answers, 120 replay gates and a paired export. [Run instructions](../docs/MATCHED_BOUNDARY.md). |
 | [Stage attribution workflow](autodl/hermes-stage-attribution.ipynb) | Base workflow for the 200-answer main matrix. The executed record below contains the final GPU preflight adjustments. [Run notes](../docs/STAGE_ATTRIBUTION.md). |
 | [Context/content diagnostic](autodl/hermes-context-diagnostic.ipynb) | Maintained seven-case content/position and partition workflow; completed execution now audited. [Instructions](../docs/CONTEXT_DIAGNOSTIC.md) · [Analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) |
 | [Input/capability diagnostic — next run](autodl/hermes-input-diagnostic.ipynb) | Upload alone and Run All; 120 mandatory fresh-state answers, feasible uncompressed prefixes, optional reviewed-support inputs, verified reuse, progress/checkpoints and evidence export. [Instructions](../docs/INPUT_DIAGNOSTIC.md) |
