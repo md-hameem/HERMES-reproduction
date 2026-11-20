@@ -6,7 +6,7 @@ Decision date: 20 November 2026. Working venue: **Neurocomputing**, assuming the
 
 **Subsequent update:** the [context experiment](<../../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) completed 74 answers with exact comparable replay, stable partition choices and three fixed-position full-prefix recoveries. Two analyst support probes succeeded. These findings motivated the [stage-attribution protocol](stage_attribution_protocol.md) to localize construction versus readout and include existing decoupling as a comparator.
 
-**Current experiment:** The [completed stage and matched-boundary runs](<../../docs/reports/2026-11-21 matched-boundary results and next decision.md>) retain two construction wins with older history masked during answering. The [short query-cache notebook](../../notebooks/autodl/hermes-short-query-cache.ipynb) is ready for the development comparison. It tests physical removal at unchanged positions and measures answer agreement and query cost. Independent evidence and a distinct contribution are still required for submission. [Run instructions](../../docs/SHORT_QUERY_CACHE.md).
+**Current experiment:** The [completed stage and matched-boundary runs](<../../docs/reports/2026-11-21 matched-boundary results and next decision.md>) retain two construction wins with older history masked during answering. The [completed short query-cache run](<../../docs/reports/2026-11-21 short query-cache results and next decision.md>) preserves all 40 masked answers while reducing query K/V. Freeze the candidate for independent confirmation. Compare it with compact recent-four at the same query-cache budget and audit prior-method overlap before submission.
 
 ## Honest starting position
 

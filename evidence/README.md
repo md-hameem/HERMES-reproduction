@@ -1,6 +1,6 @@
 # Research evidence
 
-The five-stage, causal-scorer, input, context, stage-attribution and matched-boundary ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
+Each experiment ZIP is stored once under `archives/`. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
 
 | Location | Contents |
 |---|---|
@@ -61,4 +61,6 @@ The [evidence ZIP](archives/HERMES_stage_attribution_evidence.zip) and [executed
 
 The [evidence ZIP](archives/HERMES_matched_boundary_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-matched-boundary.ipynb) preserve the original uploads. Run `python scripts/validate_matched_boundary_evidence.py` to verify 274 payloads, 200 checkpoints, construction and readout mask traces, 120 required replays and all paired counts. It reads embedded sources as literals and does not run uploaded code. [Audit and hashes](audits/matched_boundary_2026-11-21_audit.json) · [Tables](../results/matched_boundary_2026-11-21/).
 
-The [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) uses this archive to pin 120 baseline choices. Its own evidence is pending the AutoDL run.
+## Short query-cache run received 21 November 2026
+
+The [evidence ZIP](archives/HERMES_short_query_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-short-query-cache.ipynb) preserve the original uploads. Run `python scripts/validate_short_query_evidence.py` to verify 115 payloads, 40 checkpoints, 160 answers, 320 timed calls and the paired cost accounting. The validator parses the recorded source and outputs without executing them. [Audit and hashes](audits/short_query_2026-11-21_audit.json) · [Tables](../results/short_query_2026-11-21/).

@@ -4,7 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
-| [Short query-cache control — next run](autodl/hermes-short-query-cache.ipynb) | 160 arm-level answers and two interleaved timed calls per arm. Tests physical history removal at preserved positions. [Instructions](../docs/SHORT_QUERY_CACHE.md). |
+| [Short query-cache workflow](autodl/hermes-short-query-cache.ipynb) | Completed control for physical history removal at preserved positions. [Run notes and audit](../docs/SHORT_QUERY_CACHE.md). |
 | [Matched-boundary workflow](autodl/hermes-matched-boundary.ipynb) | Completed control on the same 40 questions with matched recent encoding groups. [Run notes](../docs/MATCHED_BOUNDARY.md). |
 | [Stage attribution workflow](autodl/hermes-stage-attribution.ipynb) | Base workflow for the 200-answer main matrix. The executed record below contains the final GPU preflight adjustments. [Run notes](../docs/STAGE_ATTRIBUTION.md). |
 | [Context/content diagnostic](autodl/hermes-context-diagnostic.ipynb) | Maintained seven-case content/position and partition workflow; completed execution now audited. [Instructions](../docs/CONTEXT_DIAGNOSTIC.md) · [Analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) |
@@ -19,6 +19,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 | [Executed context diagnostic](executed/2026-11-20_hermes-context-diagnostic.ipynb) | Supplied completed seven-case run: 84 records, 74 answers, ten planned skips; original bytes preserved |
 | [Executed stage attribution](executed/2026-11-21_hermes-stage-attribution.ipynb) | Complete 200-answer main matrix and four separate long-case answers with the same-shape FP16 preflight. Original bytes and exploratory failure outputs preserved. |
 | [Executed matched-boundary control](executed/2026-11-21_hermes-matched-boundary.ipynb) | Completed 200 answers, 120 required replays and zero choice changes relative to the preceding stage run. Original bytes preserved. |
+| [Executed short query-cache control](executed/2026-11-21_hermes-short-query-cache.ipynb) | Completed 160 answers, 320 timed calls, 120 required baseline replays and all 40 masked answers reproduced. Original bytes preserved. |
 | [Executed five-stage work file](executed/2026-11-18_hermes-five-stage-autodl.ipynb) | Uploaded completed November run, preserving its exact bytes and outputs |
 | [Historical notebooks](archive/) | Earlier Kaggle development notebooks and the superseded five-stage AutoDL draft |
 

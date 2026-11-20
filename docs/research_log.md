@@ -2084,3 +2084,7 @@ Proceed to one physically short query-cache prototype with preserved logical pos
 Implemented the [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) with 160 arm-level answers and 320 timed calls at the default two repeats. The prototype removes older visual K/V from the query cache while keeping recent logical positions and the original QA wrapper. Three reference arms replay the matched experiment. Stable FP16 differences in the short path are recorded, and query bytes, extraction and answer time are measured separately.
 
 The local tests execute all notebook cells in validation mode and verify FP32/FP16 diagnostics, physical compaction and real decode positions on a small CPU model. The AutoDL run remains pending. [Run instructions](SHORT_QUERY_CACHE.md).
+
+## 43. Completed short query-cache audit, 21 November 2026
+
+The AutoDL run completed 160 answers and 320 timed calls on the same 40 questions. The audit verified 115 payloads, all position traces and 120 historical baseline replays. All 40 saved masked answers match the short path. Median query K/V drops by 79.7%. Accounting for per-question extraction leaves a 4.45 ms median saving versus masking and a 2.99 ms median cost versus compact recent-four. Compact scores 25/40 and short contextual scores 27/40. Freeze the candidate and test it on source-separated confirmation data before extending the method or its claims. [Analysis](<reports/2026-11-21 short query-cache results and next decision.md>).

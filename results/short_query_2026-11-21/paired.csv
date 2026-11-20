@@ -1,0 +1,4 @@
+left,right,questions,left_only_correct,right_only_correct,choice_changes,median_kv_bytes_saved,median_paired_answer_s_saved,equal_decode_count_questions,median_equal_decode_answer_s_saved
+short_contextual,masked_contextual,40,0,0,0,38535168.0,0.007489031180739403,40,0.007489031180739403
+short_contextual,compact_recent4,40,3,1,6,0.0,7.85142183303833e-05,38,0.0001054038293659687
+short_contextual,full_contextual,40,7,1,8,38535168.0,0.0008694962598383427,36,0.0008694962598383427

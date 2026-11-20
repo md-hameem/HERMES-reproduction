@@ -1,0 +1,4 @@
+baseline,exact_answer_text,median_extraction_s,median_net_s_saved,positive_net_questions
+masked_contextual,40,0.0030284393578767776,0.004452845081686974,35
+compact_recent4,34,0.0030284393578767776,-0.002990103792399168,0
+full_contextual,32,0.0030284393578767776,-0.0021941587328910828,11

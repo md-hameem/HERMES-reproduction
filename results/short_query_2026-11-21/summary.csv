@@ -1,0 +1,5 @@
+arm,answered,correct,median_kv_bytes,median_answer_s
+full_contextual,40,21,48328704.0,0.15693904925137758
+masked_contextual,40,27,48328704.0,0.16134628048166633
+short_contextual,40,27,9793536.0,0.15623020520433784
+compact_recent4,40,25,9793536.0,0.15473701851442456

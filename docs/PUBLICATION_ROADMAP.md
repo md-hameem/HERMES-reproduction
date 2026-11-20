@@ -81,4 +81,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-The [matched-boundary audit](<reports/2026-11-21 matched-boundary results and next decision.md>) confirms the two construction wins on these development questions. Run the [short query-cache notebook](../notebooks/autodl/hermes-short-query-cache.ipynb) to measure answer agreement and query cost against masked C, full contextual and compact recent-four. Evaluate a frozen candidate against strong baselines on source-separated confirmation data before making an original improvement claim.
+The [short query-cache audit](<reports/2026-11-21 short query-cache results and next decision.md>) shows all 40 masked answers preserved and lower query cache cost versus masking. Freeze the current candidate, build a source-separated confirmation manifest, and make compact recent-four the primary accuracy comparator at the same query-cache budget. Establish generalization and distinguish the candidate from existing compact and decoupled methods before making an original improvement claim.

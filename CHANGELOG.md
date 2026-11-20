@@ -2,6 +2,11 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Completed short query-cache evidence
+
+- Preserved the uploaded ZIP and executed notebook. Verified 160 answers, 320 timed calls and all 120 required baseline replays.
+- Reconstructed extraction-adjusted paired timing and confirmed that all 40 masked answers match the short path. Documented the source-separated confirmation gate.
+
 ## 2026-11-21 — Short query-cache AutoDL notebook
 
 - Added a four-arm development comparison of physical history removal. It records actual query and decode positions, preserves the three baseline replay checks, and reports query bytes, answer latency and extraction time separately.

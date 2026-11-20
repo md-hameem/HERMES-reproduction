@@ -1,5 +1,7 @@
 # AutoDL short query-cache experiment
 
+The completed run reproduced all 40 masked answers and measured median query K/V of 9.34 MiB versus 46.09 MiB for masked readout. The [audit and decision](<reports/2026-11-21 short query-cache results and next decision.md>) details timing, extraction and the independent evaluation needed next. [Executed notebook](../notebooks/executed/2026-11-21_hermes-short-query-cache.ipynb).
+
 Upload [hermes-short-query-cache.ipynb](../notebooks/autodl/hermes-short-query-cache.ipynb) to the **same AutoDL container** and select **Restart Kernel → Run All**. The notebook uses the verified environment, model and features under `/root/autodl-tmp/hermes_causal_pilot` and writes a separate run under `/root/autodl-tmp/hermes_short_query`. No new visual inputs or annotations are needed.
 
 The notebook compares four answer paths on the same 40 development questions. Full contextual, masked contextual and short contextual use the same recent K/V tensors. The short path physically removes the older visual slots, retains the system prompt and preserves the recent positions. Compact recent-four encodes recent frames without older history and uses ordinary compact positions.
@@ -10,4 +12,4 @@ The default produces **160 arm-level answers and 320 timed calls**. The two repe
 
 Watch for `SHORT_QUERY_PREFLIGHT_PASS`, `QUESTION_BLOCK_DONE 1/40` and `SHORT_QUERY_COMPLETE`. Download **HERMES_short_query_evidence.zip** and save the executed notebook. The ZIP includes the paired tables, cache and timing traces, source provenance and closed logs. A time-budget stop can resume with the same WORK and settings. If a gate fails, run the final cell to retrieve available failure evidence.
 
-Local checks cover the notebook entry point, the FP32/FP16 preflight and real prefill and decode on a small CPU Qwen model. AutoDL results are pending. Use the development result to decide whether to freeze this candidate for confirmation on source-separated footage. [Matched-boundary results](<reports/2026-11-21 matched-boundary results and next decision.md>).
+Local checks cover the notebook entry point, the FP32/FP16 preflight and real prefill and decode on a small CPU Qwen model. The completed AutoDL result supports freezing the candidate for confirmation on source-separated footage. [Matched-boundary results](<reports/2026-11-21 matched-boundary results and next decision.md>).
