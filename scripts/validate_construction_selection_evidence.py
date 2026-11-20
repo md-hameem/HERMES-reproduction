@@ -16,6 +16,8 @@ DATE = "2026-11-21"
 ARCHIVE = ROOT / "evidence/archives/HERMES_construction_selection_evidence.zip"
 ARCHIVE_SHA = "ff35ca3c7431f911a904d486acd0ec80bbbd585545ab672feb2c28a5e4144cfa"
 NOTEBOOK_SHA = "5c45d70d0ec8b351b55623165255303dbe3235ef78e11ab2a161ace054014b8b"
+EXECUTED_NOTEBOOK = ROOT / f"notebooks/executed/{DATE}_hermes-construction-selection.ipynb"
+EXECUTED_SHA = "238cc955ecf4d1b3bef83eea1282cd4fd8f3047998892352573e983bd1d18a72"
 ARMS = ("selected_two", "latest_two", "attention_mass_two", "no_history", "all_history", "compact_recent4")
 SOURCES = dict(zip(
     ("stage_runner.py", "provenance/stage_base.py", "provenance/matched_base.py", "provenance/short_base.py",
@@ -45,6 +47,14 @@ def audit(tables, output):
     assert fingerprint({k: v for k, v in config.items() if k != "config_hash"}) == config["config_hash"] == completion["config_hash"]
     cells = json.loads(DEST.read_bytes())["cells"]
     assert all(not c.get("outputs") for c in cells)
+    assert sha(EXECUTED_NOTEBOOK.read_bytes()) == EXECUTED_SHA
+    executed = json.loads(EXECUTED_NOTEBOOK.read_bytes())["cells"]
+    executed_sources = {cell["id"]: cell["source"] for cell in executed}
+    assert all(executed_sources[cell["id"]] == cell["source"] for cell in cells)
+    outputs = [o for cell in executed for o in cell.get("outputs", [])]
+    assert not any(o["output_type"] == "error" for o in outputs)
+    streams = "\n".join("".join(o["text"]) for o in outputs if o["output_type"] == "stream")
+    assert f"SHA256={ARCHIVE_SHA}" in streams and "CONSTRUCTION_SELECTION_COMPLETE" in streams
     embedded_cell = next(c for c in cells if c["id"] == "selection-08")
     embedded = {}
     for node in ast.parse("".join(embedded_cell["source"])).body:
@@ -184,7 +194,8 @@ def audit(tables, output):
                          median_construction_s_saved=statistics.median(b["construction_s"] - a["construction_s"]
                                                                        for a, b in recency_pairs))
     result = dict(status="pass", archive_sha256=ARCHIVE_SHA, source_notebook_sha256=NOTEBOOK_SHA,
-                  source_notebook_has_execution_outputs=False, payloads=len(payload), questions=40, answers=240,
+                  source_notebook_has_execution_outputs=False, executed_notebook_sha256=EXECUTED_SHA,
+                  payloads=len(payload), questions=40, answers=240,
                   exact_replays=replays, elapsed_post_model_s=completion["elapsed_post_model_s"],
                   median_selector_s=statistics.median(r["score_s"] for r in receipts.values()),
                   selection_possible_questions=len(proxies),

@@ -82,3 +82,5 @@ Use the current author guide and submission system for a final format/policy che
 ## Current next action
 
 The [construction selection audit](<reports/2026-11-21 construction selection results and next decision.md>) finds the greedy selector ties both simpler two-frame controls at higher cost than recency. Retire that scorer. Use a frozen source-separated manifest to compare compact recent-four, latest-two contextual construction and all-history contextual construction at the same answer-cache budget. Establish generalization and distinguish any surviving method from existing compact and decoupled approaches before making an original improvement claim.
+
+The [first confirmation notebook](../notebooks/autodl/hermes-short-query-confirmation.ipynb) is ready with a frozen list of 30 distinct StreamingBench clip IDs and video-paired uncertainty. It is a within-benchmark check. Reserve an external source-separated comparison for the generalization claim. [Protocol and media plan](../paper/neurocomputing/short_query_confirmation_protocol.md).

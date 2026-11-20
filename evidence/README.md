@@ -68,3 +68,5 @@ The [evidence ZIP](archives/HERMES_short_query_evidence.zip) and [executed noteb
 ## Construction selection received 21 November 2026
 
 The [evidence ZIP](archives/HERMES_construction_selection_evidence.zip) preserves the upload. The accompanying notebook was byte-identical to the [maintained source](../notebooks/autodl/hermes-construction-selection.ipynb) and had no execution outputs. Its local copy is under ignored `local/construction_selection_2026-11-21/`. Run `python scripts/validate_construction_selection_evidence.py` to verify 117 payloads, 240 answers, 80 replays, position traces and paired results from the ZIP. [Audit](audits/construction_selection_2026-11-21_audit.json) · [Tables](../results/construction_selection_2026-11-21/).
+
+The subsequently saved [executed notebook](../notebooks/executed/2026-11-21_hermes-construction-selection.ipynb) is archived separately. The validator now also checks that its source and logged final ZIP hash match the audited run.

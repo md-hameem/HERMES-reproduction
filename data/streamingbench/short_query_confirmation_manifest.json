@@ -1,0 +1,366 @@
+{
+  "status": "frozen_clip_ids_source_overlap_unverified",
+  "scope": "Within-benchmark confirmation on previously unused diagnostic clip IDs",
+  "source_dataset": "StreamingBench Real-Time Visual Understanding",
+  "annotation_path": "data/streamingbench/streamingbench_realtime.json",
+  "annotation_sha256": "968071f9f3fe969ece600d08d6365b72d0b1766d6cbc2ee25b27fe7927b26e96",
+  "prior_targeted_review_path": "results/failure_pilot/evidence_review.csv",
+  "prior_targeted_review_sha256": "903f7169983f0d53aa0e2837e30b5d3d3729eaa972bcef61bf3623cd3bb6e248",
+  "seed": "HERMES-short-query-confirmation-2026-11-21-v1",
+  "selection": "15 per shard by ascending SHA256(seed:sample_id), excluding targeted review clips",
+  "source_group_metadata": "Original source-channel and overlap metadata unavailable in local annotation",
+  "arms": [
+    "compact_recent4",
+    "latest_two_short_readout",
+    "all_history_short_readout"
+  ],
+  "primary_accuracy_contrast": [
+    "all_history_short_readout",
+    "compact_recent4"
+  ],
+  "settings": {
+    "sample_fps": 0.5,
+    "recent_frames": 4,
+    "total_context_frames": 20,
+    "latest_history_frames": 2,
+    "model_revision": "74dd0bf867a4cda7950c17663794267c60cf4b40"
+  },
+  "clips": 30,
+  "questions": 150,
+  "shards": [
+    {
+      "shard": "51-100",
+      "archive": "Real-Time Visual Understanding_51-100.zip",
+      "archive_bytes": 8708188924,
+      "archive_sha256": "6a2b3317008e2f2c4cb30046bf74fedb5c8a75e18b6a042a0949c6032224a934",
+      "eligible_clips": 45,
+      "clips": [
+        {
+          "sample_id": 53,
+          "video_id": 350,
+          "video_basename": "sample_53_real.mp4",
+          "question_count": 5,
+          "last_query_s": 184.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 54,
+          "video_id": 109,
+          "video_basename": "sample_54_real.mp4",
+          "question_count": 5,
+          "last_query_s": 407.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 57,
+          "video_id": 378,
+          "video_basename": "sample_57_real.mp4",
+          "question_count": 5,
+          "last_query_s": 660.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 63,
+          "video_id": 225,
+          "video_basename": "sample_63_real.mp4",
+          "question_count": 5,
+          "last_query_s": 442.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 66,
+          "video_id": 252,
+          "video_basename": "sample_66_real.mp4",
+          "question_count": 5,
+          "last_query_s": 499.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 69,
+          "video_id": 110,
+          "video_basename": "sample_69_real.mp4",
+          "question_count": 5,
+          "last_query_s": 233.0,
+          "tasks": {
+            "Action Recognition": 5
+          }
+        },
+        {
+          "sample_id": 77,
+          "video_id": 242,
+          "video_basename": "sample_77_real.mp4",
+          "question_count": 5,
+          "last_query_s": 427.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 80,
+          "video_id": 493,
+          "video_basename": "sample_80_real.mp4",
+          "question_count": 5,
+          "last_query_s": 333.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 81,
+          "video_id": 264,
+          "video_basename": "sample_81_real.mp4",
+          "question_count": 5,
+          "last_query_s": 333.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 82,
+          "video_id": 247,
+          "video_basename": "sample_82_real.mp4",
+          "question_count": 5,
+          "last_query_s": 333.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 89,
+          "video_id": 31,
+          "video_basename": "sample_89_real.mp4",
+          "question_count": 5,
+          "last_query_s": 379.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 90,
+          "video_id": 227,
+          "video_basename": "sample_90_real.mp4",
+          "question_count": 5,
+          "last_query_s": 384.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 91,
+          "video_id": 11,
+          "video_basename": "sample_91_real.mp4",
+          "question_count": 5,
+          "last_query_s": 313.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 92,
+          "video_id": 128,
+          "video_basename": "sample_92_real.mp4",
+          "question_count": 5,
+          "last_query_s": 317.0,
+          "tasks": {
+            "Counting": 5
+          }
+        },
+        {
+          "sample_id": 93,
+          "video_id": 233,
+          "video_basename": "sample_93_real.mp4",
+          "question_count": 5,
+          "last_query_s": 331.0,
+          "tasks": {
+            "Counting": 5
+          }
+        }
+      ]
+    },
+    {
+      "shard": "101-150",
+      "archive": "Real-Time Visual Understanding_101-150.zip",
+      "archive_bytes": 8218047488,
+      "archive_sha256": "6fdc44e97d1888b471b2d7f55dddace16291c04fdfcaab10433b35fb315bb8b3",
+      "eligible_clips": 49,
+      "clips": [
+        {
+          "sample_id": 108,
+          "video_id": 124,
+          "video_basename": "sample_108_real.mp4",
+          "question_count": 5,
+          "last_query_s": 735.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 109,
+          "video_id": 56,
+          "video_basename": "sample_109_real.mp4",
+          "question_count": 5,
+          "last_query_s": 743.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 111,
+          "video_id": 372,
+          "video_basename": "sample_111_real.mp4",
+          "question_count": 5,
+          "last_query_s": 842.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 112,
+          "video_id": 78,
+          "video_basename": "sample_112_real.mp4",
+          "question_count": 5,
+          "last_query_s": 673.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 113,
+          "video_id": 357,
+          "video_basename": "sample_113_real.mp4",
+          "question_count": 5,
+          "last_query_s": 631.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 118,
+          "video_id": 169,
+          "video_basename": "sample_118_real.mp4",
+          "question_count": 5,
+          "last_query_s": 581.0,
+          "tasks": {
+            "Object Recognition": 1,
+            "Text-Rich Understanding": 4
+          }
+        },
+        {
+          "sample_id": 120,
+          "video_id": 282,
+          "video_basename": "sample_120_real.mp4",
+          "question_count": 5,
+          "last_query_s": 891.0,
+          "tasks": {
+            "Attribute Recognition": 1,
+            "Text-Rich Understanding": 4
+          }
+        },
+        {
+          "sample_id": 121,
+          "video_id": 155,
+          "video_basename": "sample_121_real.mp4",
+          "question_count": 5,
+          "last_query_s": 705.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 123,
+          "video_id": 469,
+          "video_basename": "sample_123_real.mp4",
+          "question_count": 5,
+          "last_query_s": 571.0,
+          "tasks": {
+            "Text-Rich Understanding": 5
+          }
+        },
+        {
+          "sample_id": 127,
+          "video_id": 5,
+          "video_basename": "sample_127_real.mp4",
+          "question_count": 5,
+          "last_query_s": 680.0,
+          "tasks": {
+            "Action Recognition": 1,
+            "Attribute Recognition": 1,
+            "Event Understanding": 2,
+            "Spatial Understanding": 1
+          }
+        },
+        {
+          "sample_id": 131,
+          "video_id": 34,
+          "video_basename": "sample_131_real.mp4",
+          "question_count": 5,
+          "last_query_s": 559.0,
+          "tasks": {
+            "Action Recognition": 1,
+            "Clips Summarize": 1,
+            "Event Understanding": 3
+          }
+        },
+        {
+          "sample_id": 133,
+          "video_id": 98,
+          "video_basename": "sample_133_real.mp4",
+          "question_count": 5,
+          "last_query_s": 619.0,
+          "tasks": {
+            "Clips Summarize": 2,
+            "Event Understanding": 1,
+            "Spatial Understanding": 2
+          }
+        },
+        {
+          "sample_id": 135,
+          "video_id": 162,
+          "video_basename": "sample_135_real.mp4",
+          "question_count": 5,
+          "last_query_s": 560.0,
+          "tasks": {
+            "Clips Summarize": 3,
+            "Spatial Understanding": 2
+          }
+        },
+        {
+          "sample_id": 140,
+          "video_id": 94,
+          "video_basename": "sample_140_real.mp4",
+          "question_count": 5,
+          "last_query_s": 380.0,
+          "tasks": {
+            "Action Recognition": 1,
+            "Causal Reasoning": 1,
+            "Clips Summarize": 2,
+            "Spatial Understanding": 1
+          }
+        },
+        {
+          "sample_id": 146,
+          "video_id": 399,
+          "video_basename": "sample_146_real.mp4",
+          "question_count": 5,
+          "last_query_s": 486.0,
+          "tasks": {
+            "Action Recognition": 1,
+            "Event Understanding": 1,
+            "Object Recognition": 2,
+            "Text-Rich Understanding": 1
+          }
+        }
+      ]
+    }
+  ]
+}
