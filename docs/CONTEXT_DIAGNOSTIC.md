@@ -2,6 +2,8 @@
 
 Prepared 20 November 2026 after the [completed input diagnostic](<reports/2026-11-20 input diagnostic analysis and next decision.md>). This is a targeted causal diagnostic, not an implemented original method or independent confirmation.
 
+**Completed-run update:** the [audited context result](<reports/2026-11-20 context diagnostic analysis and next decision.md>) verifies all seven blocks, 84 records/74 answers, 26 matching historical replays and 19 unchanged answered partition contrasts. Three full-prefix failures recover with fixed-position opening replacement; local replacement also causes a regression. The next [stage-attribution protocol](../paper/neurocomputing/stage_attribution_protocol.md) is a plan, not an implemented follow-up notebook. The instructions below describe the completed maintained workflow.
+
 ## Run
 
 Upload [hermes-context-diagnostic.ipynb](../notebooks/autodl/hermes-context-diagnostic.ipynb) alone, preferably to the same RTX 4090 / 24 GB container, then **Restart Kernel and Run All**. Defaults require no edits. Output goes to `/root/autodl-tmp/hermes_context_diagnostic`; the separate reuse candidate remains `/root/autodl-tmp/hermes_causal_pilot`. The old input diagnostic directory is not modified. Pinned environment/videos/features are verified before reuse; a fresh container is supported with extra setup/download/encoding work. Fresh setup checks 18 GiB free and a CUDA 12.8-compatible GPU environment.
@@ -54,4 +56,4 @@ python scripts/make_context_diagnostic_notebook.py
 python -m unittest discover -s scripts -p test_context_diagnostic.py -v
 ```
 
-Fourteen local tests pass: source/time bounds, fixed-length/tail invariants, declared duplicates and ineffective replacements, candidate bounds, exact default denominators, chunk-group content identity, checkpoint/config protection, archive integrity, headless execution of every notebook cell, feature-bank mapping, a small native-decoder numerical partition check, mocked arm execution/resume, and exact-content contrast reporting. CPU tests use pinned Transformers; complete AutoDL GPU execution remains pending.
+Fourteen implementation tests pass: source/time bounds, fixed-length/tail invariants, declared duplicates and ineffective replacements, candidate bounds, exact default denominators, chunk-group content identity, checkpoint/config protection, archive integrity, headless execution of every notebook cell, feature-bank mapping, a small native-decoder numerical partition check, mocked arm execution/resume, and exact-content contrast reporting. CPU tests use pinned Transformers. The supplied reused-asset AutoDL execution subsequently completed and passed GPU preflight; five independent saved-evidence audit tests also pass. This does not establish a fresh-container installation test or an original method.

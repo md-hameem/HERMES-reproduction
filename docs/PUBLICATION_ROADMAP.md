@@ -4,6 +4,8 @@ Updated 20 November 2026. The user selected Neurocomputing as the working target
 
 **Latest update:** the follow-up input diagnostic also completed. The [audited decision](<reports/2026-11-20 input diagnostic analysis and next decision.md>) records question-only 14/40, recent-4 25/40, recent-20 21/40 and native 10/14, matching historical baselines on the exact native subset. Prioritize reviewed support and controlled context/position tests before an original method. No support-oracle answers were run, and a one-question net recent-4 gain does not establish a publishable improvement.
 
+**Subsequent context result:** the [new analysis](<reports/2026-11-20 context diagnostic analysis and next decision.md>) audits 74 answers, all comparable replays and answer-level chunking stability. Fixed-position content replacement recovers three selected full-prefix errors; local filler also harms one answer. Two analyst support probes succeed. Move to the [stage-attribution/existing-baseline gate](../paper/neurocomputing/stage_attribution_protocol.md), not more padding variants or a full benchmark. No original method or certified-oracle result is established.
+
 Source requirements are recorded in the [19-page guide assessment](<reports/Neurocomputing submission requirements and HERMES readiness.md>). Q1 remains mandatory. Neurocomputing is CCF C in the supplied catalogue; the user has not explicitly resolved whether B is an additional condition. The applicable Q1 database/category/year and recognized publication milestone must be checked before submission. This check does not prevent the research preparation below.
 
 ## Current decision after evidence intake
@@ -43,7 +45,7 @@ Publish a short pilot interpretation with question-level examples and explicit l
 | Earlier incorrect answers appear related to later errors | Run a separate controlled history intervention on identical pre-ingestion state. | Generated/corrected/plausibly wrong/question-only histories diagnose causality. Correlation alone is insufficient. |
 | Mixed improvements and regressions | Stratify by actual support age, question type and failure stage; check repeatability. | Avoid selecting a favorable subgroup after seeing results and treating it as confirmation. |
 
-The original notebook implements the scorer diagnostic. The separate [input diagnostic notebook](../notebooks/autodl/hermes-input-diagnostic.ipynb) has executed its fresh-state question-only/recent controls and feasible uncompressed prefixes. The next [context diagnostic](../notebooks/autodl/hermes-context-diagnostic.ipynb) now implements fixed-length/fixed-tail replacements and chunking controls on seven questions, with two analyst candidate-support probes. [Context instructions](CONTEXT_DIAGNOSTIC.md). Fourteen local tests pass; its complete GPU execution remains pending. No certified human-oracle result, validated new refresh rule or history-feedback remedy is established.
+The scorer, input and [context diagnostic](../notebooks/autodl/hermes-context-diagnostic.ipynb) have now completed. The context run includes fixed-length/fixed-tail replacements and chunking controls on seven questions, with two successful analyst candidate-support probes. [Context instructions](CONTEXT_DIAGNOSTIC.md). Fourteen implementation tests and five new saved-evidence tests pass. The stage-attribution matrix remains a plan; no certified human-oracle result, validated new refresh rule or history-feedback remedy is established.
 
 ## 4. Define one original contribution before the main run
 

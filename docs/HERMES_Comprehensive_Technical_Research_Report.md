@@ -2,8 +2,12 @@
 
 > **Document status:** Living reference document for the HERMES reproduction project<br>
 > **Last updated:** 20 November 2026<br>
-> **Companion documents:** [`docs/research_log.md`](research_log.md) (37 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (25 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Companion documents:** [`docs/research_log.md`](research_log.md) (38 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (26 sections) · [Changelog](../CHANGELOG.md)<br>
 > **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. The corrected-scorer and subsequent input diagnostic have also completed. Verified-support QA, controlled cause attribution and a validated original method remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+
+## Context diagnostic update 20 November 2026
+
+The [completed context audit](<reports/2026-11-20 context diagnostic analysis and next decision.md>) validates 84 checkpoints/74 answers, all 26 comparable historical choices and 19 answer-stable chunk-partition contrasts. Opening-frame replacement at fixed recent positions recovers three full-prefix errors; local replacement also causes one regression. Two analyst support probes answer correctly and original-resolution candidate images are preserved. This establishes selected intervention-sensitive examples, not a new algorithm or population gain. The [next protocol](../paper/neurocomputing/stage_attribution_protocol.md) separates recent-cache construction from historical readout and treats existing decoupling as a comparator. Certified human-oracle evaluation, original mechanism and independent confirmation remain pending. Older source-preserving report/Word appendices retain historical context.
 
 ## Input/capability diagnostic update 20 November 2026
 

@@ -1,9 +1,11 @@
 # Research evidence
 
-The five-stage, causal-scorer and input-diagnostic ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
+The five-stage, causal-scorer, input and context diagnostic ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
 
 | Location | Contents |
 |---|---|
+| [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |
+| [Context-diagnostic audit](audits/context_diagnostic_2026-11-20_audit.json) | Independent source-slot/position/partition, replay, status and paired-export verification |
 | [Input-diagnostic archive](archives/HERMES_input_diagnostic_evidence.zip) | Completed input controls: 287 manifest payloads, 200 checkpoints, 134 answers, 66 explicit skips and 57 review pages |
 | [Input-diagnostic audit](audits/input_diagnostic_2026-11-20_audit.json) | Independent identity, frame/status, paired-subset, export and provenance checks |
 | [Causal-scorer pilot archive](archives/HERMES_causal_scorer_pilot_evidence.zip) | Supplied completed eight-video screen: 103 manifest payloads, 24 checkpoints, 120 predictions, source, logs, sampling metadata and contact sheets |
@@ -44,3 +46,9 @@ Run `python scripts/validate_causal_pilot_evidence.py` using Python's standard l
 The canonical archive SHA256 is `f184271bd8929f2ca5dead71a1ec60e4e1b555f33f2ed66d9909e3d7e0ffa1e8`. The [executed notebook](../notebooks/executed/2026-11-20_hermes-input-diagnostic.ipynb) SHA256 is `24df662b86955295cae4aa24a559806b72021ded6ce6a0815a0eb1ce321313bf`. Both preserve the uploaded bytes. Full extraction under `local/input_diagnostic_2026-11-20/` is ignored. [Compact results](../results/input_diagnostic_2026-11-20/) and [analysis](<../docs/reports/2026-11-20 input diagnostic analysis and next decision.md>) are published separately.
 
 Run `python scripts/validate_input_diagnostic_evidence.py` with the standard library. It verifies all 287 payloads, 200 unique case checkpoints, 120 mandatory answers plus 14 native answers, explicit skips, all export tables, historical exact-subset comparisons and eight historical feature-reuse provenance records. It never executes archived code. Five audit tests include corrupted correctness/cache/input identities and skipped-case counting. Raw videos and tensors remain outside the package; oracle tests and original-method claims are not established.
+
+## Context diagnostic received 20 November 2026
+
+Archive SHA256: `fee3165e323c0f7106688a37cb185ec390d4f831e9debdfbf0352bd72881b774`. [Executed notebook](../notebooks/executed/2026-11-20_hermes-context-diagnostic.ipynb) SHA256: `26f2ec995b044b7d1595c73945eebc0285675882a7f93bd7719b53dfa6bf2055`. Both preserve uploaded bytes. Full extraction under `local/context_diagnostic_2026-11-20/` is ignored; [compact results](../results/context_diagnostic_2026-11-20/) and [analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) are published separately.
+
+Run `python scripts/validate_context_diagnostic_evidence.py` using the standard library. It verifies all 140 payloads, 84 checkpoints, 74 answers/ten explicit skips, exact source-slot maps (including declared duplicates), tail positions, ingestion groups, prior replay choices and all exported tables. Five new audit tests pass. Archived code is parsed/read rather than executed. Local auditing cannot rerun absent video/tensors or GPU inference; repeated filler and selected support are diagnostic conditions, not established original methods.

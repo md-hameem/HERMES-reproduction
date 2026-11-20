@@ -2,6 +2,13 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Completed context diagnostic intake and stage decision
+
+- Preserved uploaded context ZIP/notebook bytes under canonical archive/executed paths; kept extraction ignored and published compact original/derived tables and source review images.
+- Added a standard-library independent validator and five rejection/control tests. Verified 140 payloads, 84 checkpoints, 74 answers, ten skips, all 26 comparable replay choices and 19 answer-stable chunk-partition contrasts.
+- Documented three fixed-position full-prefix recoveries, a local-filler regression and two successful analyst support probes without population/oracle/original-method claims.
+- Updated current research/paper/status documents and defined a bounded construction-versus-readout attribution protocol with an existing decoupling comparator. No new stage runner, broad benchmark or submission was produced.
+
 ## 2026-11-20 — Targeted AutoDL context diagnostic notebook
 
 - Added an upload-alone, resumable context/partition notebook for seven selected questions: 84 arm records and up to 74 default answers, with explicit candidate/context skips.

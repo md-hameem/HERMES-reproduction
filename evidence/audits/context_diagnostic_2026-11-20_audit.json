@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "archive_sha256": "fee3165e323c0f7106688a37cb185ec390d4f831e9debdfbf0352bd72881b774",
+  "notebook_sha256": "26f2ec995b044b7d1595c73945eebc0285675882a7f93bd7719b53dfa6bf2055",
+  "payloads": 140,
+  "case_blocks": 7,
+  "checkpoints": 84,
+  "answered": 74,
+  "skip_reasons": {
+    "candidate_not_defined": 5,
+    "configured_native_cap": 5
+  },
+  "methods": [
+    {
+      "arm": "question_only",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 1
+    },
+    {
+      "arm": "recent_4_original",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 3
+    },
+    {
+      "arm": "recent_20_original",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 2
+    },
+    {
+      "arm": "full_prefix_original",
+      "recorded": 7,
+      "answered": 6,
+      "skipped": 1,
+      "correct": 1
+    },
+    {
+      "arm": "full_prefix_framewise",
+      "recorded": 7,
+      "answered": 6,
+      "skipped": 1,
+      "correct": 1
+    },
+    {
+      "arm": "recent_20_fixed4",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 2
+    },
+    {
+      "arm": "recent_20_opening_fill",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 4
+    },
+    {
+      "arm": "recent_20_local_fill",
+      "recorded": 7,
+      "answered": 7,
+      "skipped": 0,
+      "correct": 2
+    },
+    {
+      "arm": "full_prefix_fixed4",
+      "recorded": 7,
+      "answered": 6,
+      "skipped": 1,
+      "correct": 1
+    },
+    {
+      "arm": "full_prefix_opening_fill",
+      "recorded": 7,
+      "answered": 6,
+      "skipped": 1,
+      "correct": 4
+    },
+    {
+      "arm": "full_prefix_local_fill",
+      "recorded": 7,
+      "answered": 6,
+      "skipped": 1,
+      "correct": 2
+    },
+    {
+      "arm": "candidate_support",
+      "recorded": 7,
+      "answered": 2,
+      "skipped": 5,
+      "correct": 2
+    }
+  ],
+  "comparable_replays": 26,
+  "replay_choice_mismatches": 0,
+  "contrast_rows": 49,
+  "answered_contrasts": 45,
+  "pair_summary": [
+    {
+      "arm_a": "full_prefix_original",
+      "arm_b": "full_prefix_framewise",
+      "matched_questions": 6,
+      "effective_replacements": 0,
+      "choice_changes": 0,
+      "b_only_correct": 0,
+      "a_only_correct": 0
+    },
+    {
+      "arm_a": "full_prefix_original",
+      "arm_b": "full_prefix_fixed4",
+      "matched_questions": 6,
+      "effective_replacements": 0,
+      "choice_changes": 0,
+      "b_only_correct": 0,
+      "a_only_correct": 0
+    },
+    {
+      "arm_a": "recent_20_original",
+      "arm_b": "recent_20_fixed4",
+      "matched_questions": 7,
+      "effective_replacements": 0,
+      "choice_changes": 0,
+      "b_only_correct": 0,
+      "a_only_correct": 0
+    },
+    {
+      "arm_a": "recent_20_fixed4",
+      "arm_b": "recent_20_opening_fill",
+      "matched_questions": 7,
+      "effective_replacements": 6,
+      "choice_changes": 3,
+      "b_only_correct": 2,
+      "a_only_correct": 0
+    },
+    {
+      "arm_a": "recent_20_fixed4",
+      "arm_b": "recent_20_local_fill",
+      "matched_questions": 7,
+      "effective_replacements": 6,
+      "choice_changes": 3,
+      "b_only_correct": 1,
+      "a_only_correct": 1
+    },
+    {
+      "arm_a": "full_prefix_fixed4",
+      "arm_b": "full_prefix_opening_fill",
+      "matched_questions": 6,
+      "effective_replacements": 5,
+      "choice_changes": 3,
+      "b_only_correct": 3,
+      "a_only_correct": 0
+    },
+    {
+      "arm_a": "full_prefix_fixed4",
+      "arm_b": "full_prefix_local_fill",
+      "matched_questions": 6,
+      "effective_replacements": 5,
+      "choice_changes": 3,
+      "b_only_correct": 2,
+      "a_only_correct": 1
+    }
+  ],
+  "feature_reuse_videos": 5,
+  "retained_notebook_errors": 0,
+  "gpu_preflight": "pass; zero maximum native attention error on checked prefix before/after pruning",
+  "review_pages": 27,
+  "candidate_images": 3,
+  "elapsed_post_model_s": 75.33020767942071,
+  "limitations": [
+    "Selected development cases; repeated arms and multiple contrasts are not independent test examples",
+    "Counterfactual repeats preserve positions but alter content/repetition; filler neutrality and a unique internal mechanism are unestablished",
+    "Two analyst support probes are not certified human-oracle or population results",
+    "Saved evidence audit; raw videos/feature tensors and numerical GPU computation cannot be independently rerun from this ZIP",
+    "No deployable selection policy, validated original method or independent confirmation"
+  ]
+}

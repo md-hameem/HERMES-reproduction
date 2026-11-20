@@ -24,6 +24,8 @@ Describe the reproduction and pilot as development evidence with their respectiv
 
 The subsequent input controls completed: question-only 14/40, recent-4 25/40, recent-20 21/40 and native 10/14, matching historical baselines on that exact native subset. Include regressions and the unpruned context-sensitive examples if relevant to the eventual method. Verified-support answers and an isolated cause remain pending; the single net recent-4 gain is not the proposed contribution.
 
+The later context screen reproduces all 26 comparable choices and preserves choices across 19 answered partition contrasts. Fixed-position opening replacement recovers three selected full-prefix failures; another filler also causes a regression. Two analyst-selected support probes answer correctly. These motivate stage-specific attribution and an existing-method comparator, not a claim of original method or general accuracy improvement. Certified human-oracle evidence and the specific internal path remain open.
+
 ## 4. Proposed method — pending selection and validation
 
 Supply the precise algorithm, state representation, update/invalidation rules, positional semantics, complexity and all memory costs. Explain why the mechanism addresses the observed failure and how it differs from the nearest work. Include pseudocode and a reproducible diagram. State any assumptions and failure conditions.

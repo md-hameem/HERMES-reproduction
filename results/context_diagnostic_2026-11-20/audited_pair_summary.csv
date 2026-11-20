@@ -1,0 +1,8 @@
+arm_a,arm_b,matched_questions,effective_replacements,choice_changes,b_only_correct,a_only_correct
+full_prefix_original,full_prefix_framewise,6,0,0,0,0
+full_prefix_original,full_prefix_fixed4,6,0,0,0,0
+recent_20_original,recent_20_fixed4,7,0,0,0,0
+recent_20_fixed4,recent_20_opening_fill,7,6,3,2,0
+recent_20_fixed4,recent_20_local_fill,7,6,3,1,1
+full_prefix_fixed4,full_prefix_opening_fill,6,5,3,3,0
+full_prefix_fixed4,full_prefix_local_fill,6,5,3,2,1

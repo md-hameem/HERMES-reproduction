@@ -1,0 +1,13 @@
+arm,recorded,answered,skipped,correct
+question_only,7,7,0,1
+recent_4_original,7,7,0,3
+recent_20_original,7,7,0,2
+full_prefix_original,7,6,1,1
+full_prefix_framewise,7,6,1,1
+recent_20_fixed4,7,7,0,2
+recent_20_opening_fill,7,7,0,4
+recent_20_local_fill,7,7,0,2
+full_prefix_fixed4,7,6,1,1
+full_prefix_opening_fill,7,6,1,4
+full_prefix_local_fill,7,6,1,2
+candidate_support,7,2,5,2

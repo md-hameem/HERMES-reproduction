@@ -1,0 +1,50 @@
+sample_id,qa_index,arm_a,arm_b,both_answered,same_content,same_length,choice_changed,same_tail_sources,replacement_effective,a_correct,b_correct,interpretation
+204,0,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,0,0,Chunking/numerical control
+204,0,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+204,0,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+204,0,recent_20_fixed4,recent_20_opening_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,0,recent_20_fixed4,recent_20_local_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,0,full_prefix_fixed4,full_prefix_opening_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,0,full_prefix_fixed4,full_prefix_local_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+203,2,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,0,0,Chunking/numerical control
+203,2,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+203,2,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+203,2,recent_20_fixed4,recent_20_opening_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+203,2,recent_20_fixed4,recent_20_local_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+203,2,full_prefix_fixed4,full_prefix_opening_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+203,2,full_prefix_fixed4,full_prefix_local_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+204,3,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,0,0,Chunking/numerical control
+204,3,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+204,3,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,1,1,Chunking/numerical control
+204,3,recent_20_fixed4,recent_20_opening_fill,True,False,True,False,True,True,1,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,3,recent_20_fixed4,recent_20_local_fill,True,False,True,False,True,True,1,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,3,full_prefix_fixed4,full_prefix_opening_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+204,3,full_prefix_fixed4,full_prefix_local_fill,True,False,True,True,True,True,0,1,Counterfactual earlier-content replacement; repeated filler is a confound
+209,0,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,1,1,Chunking/numerical control
+209,0,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,1,1,Chunking/numerical control
+209,0,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,1,1,Chunking/numerical control
+209,0,recent_20_fixed4,recent_20_opening_fill,True,False,True,False,True,True,1,1,Counterfactual earlier-content replacement; repeated filler is a confound
+209,0,recent_20_fixed4,recent_20_local_fill,True,False,True,True,True,True,1,0,Counterfactual earlier-content replacement; repeated filler is a confound
+209,0,full_prefix_fixed4,full_prefix_opening_fill,True,False,True,False,True,True,1,1,Counterfactual earlier-content replacement; repeated filler is a confound
+209,0,full_prefix_fixed4,full_prefix_local_fill,True,False,True,True,True,True,1,0,Counterfactual earlier-content replacement; repeated filler is a confound
+208,4,full_prefix_original,full_prefix_framewise,False,True,True,,True,False,,,Chunking/numerical control
+208,4,full_prefix_original,full_prefix_fixed4,False,True,True,,True,False,,,Chunking/numerical control
+208,4,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+208,4,recent_20_fixed4,recent_20_opening_fill,True,False,True,True,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+208,4,recent_20_fixed4,recent_20_local_fill,True,False,True,True,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+208,4,full_prefix_fixed4,full_prefix_opening_fill,False,False,True,,True,True,,,Counterfactual earlier-content replacement; repeated filler is a confound
+208,4,full_prefix_fixed4,full_prefix_local_fill,False,False,True,,True,True,,,Counterfactual earlier-content replacement; repeated filler is a confound
+202,0,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,0,0,Chunking/numerical control
+202,0,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+202,0,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+202,0,recent_20_fixed4,recent_20_opening_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+202,0,recent_20_fixed4,recent_20_local_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+202,0,full_prefix_fixed4,full_prefix_opening_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+202,0,full_prefix_fixed4,full_prefix_local_fill,True,False,True,False,True,True,0,0,Counterfactual earlier-content replacement; repeated filler is a confound
+208,0,full_prefix_original,full_prefix_framewise,True,True,True,False,True,False,0,0,Chunking/numerical control
+208,0,full_prefix_original,full_prefix_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+208,0,recent_20_original,recent_20_fixed4,True,True,True,False,True,False,0,0,Chunking/numerical control
+208,0,recent_20_fixed4,recent_20_opening_fill,True,True,True,False,True,False,0,0,Identical-input null control
+208,0,recent_20_fixed4,recent_20_local_fill,True,True,True,False,True,False,0,0,Identical-input null control
+208,0,full_prefix_fixed4,full_prefix_opening_fill,True,True,True,False,True,False,0,0,Identical-input null control
+208,0,full_prefix_fixed4,full_prefix_local_fill,True,True,True,False,True,False,0,0,Identical-input null control
