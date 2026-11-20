@@ -9,7 +9,7 @@
 | **Model** | LLaVA-OneVision-Qwen2-0.5B |
 | **Framework** | HERMES VideoQA inference pipeline |
 | **Current Benchmark Scale** | Full StreamingBench real-time visual annotations, 498 videos / 2,495 questions per method |
-| **Last Updated** | 19 November 2026 |
+| **Last Updated** | 20 November 2026 |
 | **Supporting Documents** | [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---
@@ -1996,3 +1996,21 @@ All five execution stages are complete. The full-benchmark results leave a HERME
 The repository was reorganized on 19 November 2026 for publication. AutoDL and Kaggle workflows, historical notebooks and the executed work file are under `notebooks/`. The October evidence packages are under `evidence/autodl_2026-10-25/` and `evidence/autodl_2026-10-28/`, preserving internal manifest paths. The original five-stage archive and historical supplement are under `evidence/archives/`. The local full extraction is under `evidence/local/five_stage/` and is excluded from Git. Compact new results are under `results/five_stage/`, historical Kaggle results under `results/kaggle/`, and historical Kaggle logs under `logs/kaggle/`.
 
 Research writing, figures and literature are collected under `docs/`. Command defaults and the maintained AutoDL workflow follow the new paths. The dated executed notebooks retain their original bytes. Generated Python bytecode has been removed from Git tracking. [Repository layout](../README.md) · [Evidence index](../evidence/README.md)
+
+# 33. Completed causal scorer screen and publication decision
+
+## 33.1 Preserved evidence and audit
+
+The 20 November 2026 intake adds the unchanged `evidence/archives/HERMES_causal_scorer_pilot_evidence.zip` and `notebooks/executed/2026-11-20_hermes-causal-scorer-pilot.ipynb`. The standard-library audit verifies 103 manifest payloads, 24 checkpoints, 120 predictions, sampling/source/config identities, exported tables and historical baseline agreement. The executed runner predates the later heartbeat changes; the preserved record is not rewritten as the maintained workflow.
+
+## 33.2 Results and measured scope
+
+FIFO, current HERMES and fresh causal HERMES each score 24/40, including 4/8 selected targets. Fresh causal scoring changes one wrong choice and zero correctness outcomes relative to HERMES. HERMES/FIFO correctness discordances split two wins each. All 40 FIFO/HERMES choices match the historical predictions. The GPU preflight reports zero native-attention difference on a single 16-frame prefix before/after forced pruning and bitwise feature-ingestion equivalence.
+
+Replay totals are 12.398, 19.874 and 22.307 seconds for FIFO, HERMES and causal; compression totals are 0.248, 7.679 and 10.051 seconds. Peak allocated memory is about 4.671 GiB. The post-model-load phase took 327.028 seconds; shared preparation is 176.394 seconds. Installation/download/model-load costs are excluded, so this is not total rental duration or an end-to-end streaming speed comparison.
+
+## 33.3 Scientific and publication decision
+
+Fourteen failures are shared, including three before any prior token eviction. Supporting-cue visibility and actual causes remain to be annotated. Deprioritize causal-probe reuse as the immediate main contribution. The next step is a narrow question-only/recent-frame/feasible-native-prefix/verified-support diagnostic using existing assets if available. No validated original improvement exists yet for the intended Neurocomputing regular article. Do not launch a large benchmark grid or infer equivalence from this selected null screen.
+
+[Analysis and publication decision](<reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) · [Next diagnostic protocol](../paper/neurocomputing/next_diagnostic_protocol.md) · [Audit](../evidence/audits/causal_pilot_2026-11-20_audit.json)

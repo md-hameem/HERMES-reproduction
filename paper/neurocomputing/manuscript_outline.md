@@ -20,7 +20,7 @@ Organize around streaming video-language inference, bounded memory versus offloa
 
 Define unknown future questions, chronological QA, retained GPU KV, auxiliary states, CPU/disk storage and maintenance/readout timing. Specify source-video identities and sampling timestamps. Separate native full-prefix QA from a native attention reference on the same compressed cache.
 
-Describe the reproduction and pilot as development evidence with their respective scope and selection rules. The default pilot contains eight outcome-selected videos, 40 distinct questions and 120 answers across three methods. Report its actual completion status after the ZIP is audited.
+Describe the reproduction and pilot as development evidence with their respective scope and selection rules. The default pilot contains eight outcome-selected videos, 40 distinct questions and 120 answers across three methods. The ZIP is now audited: all eight videos completed, all methods score 24/40, and causal scoring changes zero correctness outcomes relative to HERMES. This is diagnostic development evidence, not the new method's main result.
 
 ## 4. Proposed method — pending selection and validation
 

@@ -2,6 +2,14 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Completed causal scorer pilot intake and publication decision
+
+- Moved the uploaded ZIP to the canonical evidence archive and the uploaded notebook to dated executed records, preserving exact bytes. Kept the full extraction local/ignored and published compact original/derived tables.
+- Added an independent standard-library validator and five evidence-rejection tests. Verified 103 payloads, 24 checkpoints, 120 predictions, exported tables/timings and exact historical FIFO/HERMES replay.
+- Recorded all methods at 24/40, zero correctness changes from fresh causal scoring, and three shared failures before any eviction. Native GPU preflight passed on its checked prefix.
+- Updated current indexes, research log, audit, technical reports and paper claim ledger. Added an 18-case review queue and a next diagnostic protocol; a validated original method remains pending for Neurocomputing.
+- Replaced unmeasured planning assumptions with scoped observed timings where available. No claim of a whole-system speedup, general accuracy benefit or publication readiness is made.
+
 ## 2026-11-20 — AutoDL startup and download visibility
 
 - Recorded a user report of more than ten minutes without visible run-cell output; the actual remote process/network state remains unconfirmed.

@@ -1,0 +1,4 @@
+method_a,method_b,questions,a_only_correct,b_only_correct,choice_changes,correctness_changes,inference_scope
+causal,hermes,40,0,0,1,0,Outcome-selected development sample; no population significance claim
+hermes,fifo,40,2,2,5,4,Outcome-selected development sample; no population significance claim
+causal,fifo,40,2,2,4,4,Outcome-selected development sample; no population significance claim

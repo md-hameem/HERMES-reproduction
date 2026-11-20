@@ -1,0 +1,9 @@
+task,questions,fifo_correct,hermes_correct,causal_correct,shared_failures
+Action Recognition,2,1,1,1,1
+Attribute Recognition,6,2,2,2,4
+Counting,3,3,3,3,0
+Event Understanding,10,5,5,5,5
+Object Recognition,1,1,1,1,0
+Prospective Reasoning,15,10,11,11,3
+Spatial Understanding,2,1,1,1,1
+Text-Rich Understanding,1,1,0,0,0

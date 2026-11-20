@@ -4,8 +4,8 @@
 **Prepared:** 9 October 2026  
 **Project:** Training-free hierarchical KV-cache memory for streaming video question answering  
 **Current implementation:** HERMES + LLaVA-OneVision-Qwen2-0.5B on Kaggle Tesla T4, AutoDL RTX 4080-family GPUs and AutoDL RTX 4090<br>
-**Evidence cutoff:** 19 November 2026, including the completed five-stage archive, executed notebook and independent local audit<br>
-**Assessment status:** **Full real-time visual benchmark and all five planned execution stages completed and audited. Primary HERMES/FIFO accuracy interval includes zero. Native baseline, corrected-attention QA and clean replay verification remain open.**
+**Evidence cutoff:** 20 November 2026, adding the completed eight-video causal-scorer pilot to the earlier five-stage archive and audits<br>
+**Assessment status:** **Full real-time visual benchmark and all five planned execution stages completed and audited. Primary HERMES/FIFO accuracy interval includes zero. The completed selected corrected-scorer screen shows no correctness gain over HERMES. Native-prefix capability controls, support attribution and an original method remain open.**
 
 > **Scope and evidence rule.** Historical sections examine the uploaded research log, Kaggle notebooks, HERMES paper, and recovered Kaggle artifacts. Section 20 adds the executed AutoDL notebook, its validated outputs, and an independent positional comparison against Kaggle. Section 21 adds reproducible efficiency extraction from the preserved AutoDL logs. Section 22 adds the final same-hardware repeatability run, pseudo-query attention differential, FIFO controls, and independent evidence validator. The audit distinguishes documented outputs, locally recomputed checks, interpretation, and unresolved evidence. Reported measurements remain associated with their original hardware and execution session.
 
@@ -995,3 +995,11 @@ The execution and evidence-audit stages are complete. The current research work 
 ### 23.5 Publication layout
 
 The current source tree separates notebooks, evidence, published results and research writing. The original five-stage ZIP is canonical under `evidence/archives/`, and its full local extraction is ignored under `evidence/local/five_stage/`. The October evidence directories preserve their internal manifest paths under `evidence/`. The executed work file is under `notebooks/executed/`, with exact-byte Git attributes. The maintained workflow and validator defaults were updated to the reorganized layout. Summaries and figures are accessible under `results/five_stage/`. [Evidence index](../evidence/README.md)
+
+## 24. Completed causal scorer pilot and publication gate 20 November 2026
+
+The preserved ZIP has 103 independently verified manifest payloads and the executed notebook emits its final archive hash. All 24 method/video checkpoints and 120 aligned predictions validate. The recovered source matches the known pre-heartbeat runner and pinned inference/model/environment identities. GPU preflight reports bitwise feature-ingestion equivalence and zero native-attention error on one 16-frame prefix before/after forced pruning.
+
+FIFO, HERMES and fresh causal HERMES each score 24/40. Causal scoring changes one wrong choice and zero correctness outcomes versus HERMES. HERMES and FIFO exactly replay their historical choices at this scope. Replay totals are 12.398/19.874/22.307 seconds, with shared preparation excluded; the measured post-model-load phase is 327.028 seconds. These are selected development outcomes and cannot establish a population gain, equivalence or a full-system speedup.
+
+Fourteen common failures include three before any prior token eviction. Prioritize the [next support/capability protocol](../paper/neurocomputing/next_diagnostic_protocol.md), not a large benchmark or a new probe-state method without recoverable headroom. The [analysis](<reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) and [audit JSON](../evidence/audits/causal_pilot_2026-11-20_audit.json) record the evidence. An original neural-inference improvement remains necessary for the current Neurocomputing regular-article plan.

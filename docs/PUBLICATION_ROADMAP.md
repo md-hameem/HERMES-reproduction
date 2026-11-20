@@ -1,10 +1,14 @@
 # Neurocomputing publication roadmap
 
-Updated 20 November 2026. The user selected Neurocomputing as the working target and plans to run the latest AutoDL notebook today. No completed result from that notebook has been supplied. The earlier setup attempt timed out downloading a dependency; the maintained notebook includes the recovery changes. This roadmap prepares a regular article under the advisor's original-method requirement. It is a research plan, not a submission-ready manuscript or an acceptance forecast.
+Updated 20 November 2026. The user selected Neurocomputing as the working target. The supplied eight-video screen is now complete and independently audited, with all methods at 24/40 and no correctness gain from fresh causal scoring. The earlier setup attempt timed out downloading a dependency; the maintained notebook includes the recovery changes. This roadmap prepares a regular article under the advisor's original-method requirement. It is a research plan, not a submission-ready manuscript or an acceptance forecast.
 
 Source requirements are recorded in the [19-page guide assessment](<reports/Neurocomputing submission requirements and HERMES readiness.md>). Q1 remains mandatory. Neurocomputing is CCF C in the supplied catalogue; the user has not explicitly resolved whether B is an additional condition. The applicable Q1 database/category/year and recognized publication milestone must be checked before submission. This check does not prevent the research preparation below.
 
-## 1. Finish today's development screen and preserve evidence
+## Current decision after evidence intake
+
+Stages 1–2 below are complete for the supplied screen. The [audited decision](<reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) finds no QA benefit from fresh causal scoring at this scope and three shared errors before any eviction. Proceed to the [failure-attribution/control protocol](../paper/neurocomputing/next_diagnostic_protocol.md) before choosing a new memory mechanism. Original-method and manuscript-result claims remain pending. Keep the initial intake instructions below for reproducibility and later packages.
+
+## 1. Completed development screen and preserved evidence
 
 Run [hermes-causal-scorer-pilot.ipynb](../notebooks/autodl/hermes-causal-scorer-pilot.ipynb) with the chosen settings. The default eight-video run contains **40 distinct questions answered by three methods, producing 120 answers**. Methods are FIFO, current HERMES and fresh causal HERMES at 4K. All questions in each video are replayed in order. The videos were selected using existing outcomes, so this is an exploratory development screen.
 
@@ -73,4 +77,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-**User:** run the notebook and provide the evidence ZIP. **Analysis:** audit the package and produce the pilot decision memo. **Research:** choose and validate one original improvement. **Writing:** complete the paper around evidence that survives matched tests. No acceptance date or guaranteed publication outcome is established.
+**User/analysis:** preserve assets and complete support review plus targeted input/capability controls. The evidence ZIP and pilot decision memo are complete. **Research:** identify recoverable headroom before choosing and validating one original improvement. **Writing:** complete the paper around evidence that survives matched tests. No acceptance date or guaranteed publication outcome is established.

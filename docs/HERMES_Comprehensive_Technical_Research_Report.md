@@ -1,9 +1,13 @@
 # Comprehensive Technical Research Report: Hierarchical KV-Cache Management, Multimodal Streaming Video Understanding, and Advanced Agent Architectures
 
 > **Document status:** Living reference document for the HERMES reproduction project<br>
-> **Last updated:** 19 November 2026<br>
-> **Companion documents:** [`docs/research_log.md`](research_log.md) (32 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (23 sections) · [Changelog](../CHANGELOG.md)<br>
-> **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. Native-model baseline, corrected-attention QA and clean replay verification remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+> **Last updated:** 20 November 2026<br>
+> **Companion documents:** [`docs/research_log.md`](research_log.md) (33 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (24 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. An eight-video corrected-scorer QA screen now passes native preflight but shows no correctness gain over HERMES. A feasible native-model QA baseline, support/capability controls and a validated original method remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+
+## Causal scorer pilot update 20 November 2026
+
+The completed selected screen contains eight annotated videos and 120 answers. FIFO, HERMES and fresh causal HERMES each score 24/40. Fresh causal attention matches the checked native reference exactly, but changes one wrong choice and zero correctness outcomes relative to HERMES. Three of fourteen shared failures occur before prior eviction. The next step is failure attribution and capability/input controls, with an original Neurocomputing regular-article contribution still pending. The [audited decision](<reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) supersedes earlier statements that corrected-scorer QA is entirely unmeasured. Historical literature/proposal sections retain their original context.
 
 # Report A: Complete Literature Catalogue and Taxonomic Categorization
 

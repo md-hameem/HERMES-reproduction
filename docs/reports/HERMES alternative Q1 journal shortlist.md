@@ -40,3 +40,7 @@ This does not justify reducing scientific rigor. Finish the scorer diagnostic, i
 - [EAAI university ranking profile](https://www.iit.comillas.edu/publicacion/info_revista/en/240/engineering-applications-of-artificial-intelligence), retrieved, 2025 JCR-JIF/SJR row.
 
 Some search results imitated publisher sites on unrelated domains. They were excluded. Community difficulty ratings and unverified journal-metric aggregators were not used to assert acceptance likelihood.
+
+## Completed pilot decision
+
+The user selected Neurocomputing as the working target. The [20 November pilot audit](<2026-11-20 causal scorer pilot analysis and publication decision.md>) shows all methods at 24/40 and no correctness gain from fresh causal scoring. Journal preparation can continue, but an original contribution remains to be established through support/capability diagnostics and subsequent matched validation. This is not a reason to claim a lower publication bar or an easier acceptance probability.

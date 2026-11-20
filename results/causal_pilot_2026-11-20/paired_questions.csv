@@ -1,0 +1,41 @@
+sample_id,video_id,qa_index,task,hermes_correct,fifo_correct,causal_correct,hermes_choice,fifo_choice,causal_choice,is_selected_target
+212,125,0,Prospective Reasoning,1,1,1,A,A,A,False
+212,125,1,Prospective Reasoning,0,0,0,B,B,B,False
+212,125,2,Prospective Reasoning,1,1,1,A,A,A,False
+212,125,3,Prospective Reasoning,1,0,1,D,C,D,True
+212,125,4,Prospective Reasoning,1,1,1,A,A,A,False
+204,335,0,Attribute Recognition,0,0,0,A,A,A,False
+204,335,1,Attribute Recognition,1,1,1,B,B,B,False
+204,335,2,Event Understanding,0,0,0,B,B,B,False
+204,335,3,Text-Rich Understanding,0,1,0,A,B,A,True
+204,335,4,Event Understanding,1,1,1,B,B,B,False
+209,118,0,Event Understanding,1,1,1,D,D,D,False
+209,118,1,Action Recognition,1,1,1,D,D,D,False
+209,118,2,Event Understanding,0,0,0,B,D,D,False
+209,118,3,Spatial Understanding,0,0,0,B,B,B,False
+209,118,4,Action Recognition,0,0,0,B,B,B,True
+203,355,0,Counting,1,1,1,A,A,A,False
+203,355,1,Counting,1,1,1,D,D,D,True
+203,355,2,Attribute Recognition,0,0,0,A,A,A,False
+203,355,3,Event Understanding,1,1,1,A,A,A,False
+203,355,4,Event Understanding,0,0,0,B,B,B,False
+218,492,0,Prospective Reasoning,1,1,1,A,A,A,False
+218,492,1,Prospective Reasoning,1,1,1,B,B,B,False
+218,492,2,Prospective Reasoning,0,0,0,B,B,B,False
+218,492,3,Prospective Reasoning,1,0,1,B,D,B,True
+218,492,4,Prospective Reasoning,1,1,1,D,D,D,False
+219,456,0,Prospective Reasoning,1,1,1,D,D,D,False
+219,456,1,Prospective Reasoning,1,1,1,C,C,C,False
+219,456,2,Prospective Reasoning,1,1,1,C,C,C,False
+219,456,3,Prospective Reasoning,0,1,0,C,D,C,True
+219,456,4,Prospective Reasoning,0,0,0,B,B,B,False
+202,459,0,Attribute Recognition,0,0,0,A,A,A,False
+202,459,1,Attribute Recognition,1,1,1,B,B,B,False
+202,459,2,Spatial Understanding,1,1,1,B,B,B,False
+202,459,3,Object Recognition,1,1,1,B,B,B,False
+202,459,4,Event Understanding,0,0,0,D,D,D,True
+208,448,0,Attribute Recognition,0,0,0,D,D,D,False
+208,448,1,Event Understanding,1,1,1,C,C,C,False
+208,448,2,Event Understanding,1,1,1,D,D,D,True
+208,448,3,Event Understanding,0,0,0,A,A,A,False
+208,448,4,Counting,1,1,1,C,C,C,False

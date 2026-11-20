@@ -1,0 +1,198 @@
+{
+  "status": "pass",
+  "archive_sha256": "af4b7392e90bd3f433ad20182a9058d8c8027a8ede936ed5d759572be04e0361",
+  "notebook_sha256": "24620321fc4b2783e68706928e8831456579aa8e8e03a4eccbf2c5a1345686a6",
+  "manifest_payloads": 103,
+  "archive_files": 104,
+  "video_checkpoints": 24,
+  "distinct_videos": 8,
+  "questions_per_method": 40,
+  "answers": 120,
+  "runner_sha256": "6b52ce8cc8b8ac068dfe076f1b2bc575ef318df8b4853b87acf025f524d9faa9",
+  "runner_matches_revision": "39be0c5",
+  "config_hash": "ac672878bbc0be2de2ebc44c37ca5ebf967a748499df69daa55509dba283edcf",
+  "runner_history_byte_comparison_available": true,
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "transformers": "4.45.0.dev0",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "preflight": {
+    "status": "pass",
+    "feature_ingestion": "bitwise_equal_KV_and_positions",
+    "causal_scorer_comparisons": [
+      {
+        "stage": "before_pruning",
+        "max_attention_error": 0.0,
+        "cache_lengths": [
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149,
+          3149
+        ]
+      },
+      {
+        "stage": "after_position_sensitive_pruning",
+        "max_attention_error": 0.0,
+        "cache_lengths": [
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269,
+          269
+        ]
+      }
+    ],
+    "source_cache_unchanged": true
+  },
+  "method_metrics": [
+    {
+      "method": "fifo",
+      "videos": 8,
+      "questions": 40,
+      "correct": 24,
+      "accuracy_pct": 60.0,
+      "selected_targets": 8,
+      "target_correct": 4,
+      "total_replay_s": 12.398155340924859,
+      "peak_allocated_gib": 4.670329570770264,
+      "total_ingest_s": 4.836995232850313,
+      "total_compression_s": 0.2482170481234789,
+      "total_answer_s": 7.1477801240980625
+    },
+    {
+      "method": "hermes",
+      "videos": 8,
+      "questions": 40,
+      "correct": 24,
+      "accuracy_pct": 60.0,
+      "selected_targets": 8,
+      "target_correct": 4,
+      "total_replay_s": 19.8743653036654,
+      "peak_allocated_gib": 4.670695781707764,
+      "total_ingest_s": 4.836439833045006,
+      "total_compression_s": 7.679006660357118,
+      "total_answer_s": 7.198866141960025
+    },
+    {
+      "method": "causal",
+      "videos": 8,
+      "questions": 40,
+      "correct": 24,
+      "accuracy_pct": 60.0,
+      "selected_targets": 8,
+      "target_correct": 4,
+      "total_replay_s": 22.307480584830046,
+      "peak_allocated_gib": 4.670695781707764,
+      "total_ingest_s": 4.8334137592464685,
+      "total_compression_s": 10.05138056538999,
+      "total_answer_s": 7.248627912253141
+    }
+  ],
+  "pairwise_outcomes": [
+    {
+      "method_a": "causal",
+      "method_b": "hermes",
+      "questions": 40,
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "choice_changes": 1,
+      "correctness_changes": 0,
+      "inference_scope": "Outcome-selected development sample; no population significance claim"
+    },
+    {
+      "method_a": "hermes",
+      "method_b": "fifo",
+      "questions": 40,
+      "a_only_correct": 2,
+      "b_only_correct": 2,
+      "choice_changes": 5,
+      "correctness_changes": 4,
+      "inference_scope": "Outcome-selected development sample; no population significance claim"
+    },
+    {
+      "method_a": "causal",
+      "method_b": "fifo",
+      "questions": 40,
+      "a_only_correct": 2,
+      "b_only_correct": 2,
+      "choice_changes": 4,
+      "correctness_changes": 4,
+      "inference_scope": "Outcome-selected development sample; no population significance claim"
+    }
+  ],
+  "historical_replay": [
+    {
+      "method": "fifo",
+      "questions": 40,
+      "old_correct": 24,
+      "new_correct": 24,
+      "choice_changes": 0
+    },
+    {
+      "method": "hermes",
+      "questions": 40,
+      "old_correct": 24,
+      "new_correct": 24,
+      "choice_changes": 0
+    }
+  ],
+  "shared_failures": 14,
+  "shared_failures_before_any_eviction": 3,
+  "shared_preparation_s": 176.39434223808348,
+  "chunks_per_method": 99,
+  "encoded_frames_per_method": 1292,
+  "completion_elapsed_s": 327.02800051495433,
+  "completion_elapsed_scope": "Post-model-load/preflight/features/replay phase; excludes dataset download, installation, model loading and final packaging",
+  "asset_transfer_bytes": 369126256,
+  "whole_dataset_archive_sha256_verified": false,
+  "future_sampled_start_bound_violations": 0,
+  "retained_review_rows_pending": 8,
+  "limits": [
+    "Outcome-selected development sample, not untouched confirmation",
+    "Raw videos/feature tensors absent; GPU computation not independently rerun",
+    "Native check is one 16-frame prefix before/after forced pruning, not all scored chunks",
+    "Reported timings share vision preparation; no full-system speed claim",
+    "Executed notebook has extra network/environment cells and nonconsecutive counts; no claim of a fresh single-pass replay",
+    "Contact sheets are sparse; support intervals/token survival remain unverified"
+  ]
+}
