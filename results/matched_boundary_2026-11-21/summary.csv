@@ -1,0 +1,6 @@
+scope,arm,recorded,answered,correct,history_empty_questions
+main,A_history_both,40,40,21,1
+main,B_independent_recent,40,40,24,1
+main,C_hide_history_readout,40,40,27,1
+main,D_independent_hide_readout,40,40,25,1
+main,compact_recent4,40,40,25,1

@@ -1,0 +1,120 @@
+{
+  "status": "pass",
+  "archive_sha256": "cef5ea2d59b6fdf212a27cf13de470e56c936054c45387e0a7d27fecccac8a59",
+  "notebook_sha256": "3e97795ecacb6b2a8296b99102efced0511e8f0a7ace07ece155ed413e9b6030",
+  "payloads": 274,
+  "questions": 40,
+  "checkpoints": 200,
+  "exact_replays": 120,
+  "all_arm_historical_choice_changes": 0,
+  "elapsed_post_model_s": 55.52740015089512,
+  "fp16_logit_top_token_checks": 9,
+  "fp16_logit_exceedances": 44,
+  "feature_origins": {
+    "verified_historical_cache": 8
+  },
+  "summary": [
+    {
+      "scope": "main",
+      "arm": "A_history_both",
+      "recorded": 40,
+      "answered": 40,
+      "correct": 21,
+      "history_empty_questions": 1
+    },
+    {
+      "scope": "main",
+      "arm": "B_independent_recent",
+      "recorded": 40,
+      "answered": 40,
+      "correct": 24,
+      "history_empty_questions": 1
+    },
+    {
+      "scope": "main",
+      "arm": "C_hide_history_readout",
+      "recorded": 40,
+      "answered": 40,
+      "correct": 27,
+      "history_empty_questions": 1
+    },
+    {
+      "scope": "main",
+      "arm": "D_independent_hide_readout",
+      "recorded": 40,
+      "answered": 40,
+      "correct": 25,
+      "history_empty_questions": 1
+    },
+    {
+      "scope": "main",
+      "arm": "compact_recent4",
+      "recorded": 40,
+      "answered": 40,
+      "correct": 25,
+      "history_empty_questions": 1
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "primary_C_matched_vs_D",
+      "questions": 40,
+      "left_only_correct": 2,
+      "right_only_correct": 0,
+      "choice_changes": 2
+    },
+    {
+      "contrast": "A_matched_vs_B",
+      "questions": 40,
+      "left_only_correct": 0,
+      "right_only_correct": 3,
+      "choice_changes": 3
+    },
+    {
+      "contrast": "C_matched_vs_original_C",
+      "questions": 40,
+      "left_only_correct": 0,
+      "right_only_correct": 0,
+      "choice_changes": 0
+    },
+    {
+      "contrast": "A_matched_vs_original_A",
+      "questions": 40,
+      "left_only_correct": 0,
+      "right_only_correct": 0,
+      "choice_changes": 0
+    },
+    {
+      "contrast": "C_matched_vs_compact_recent4",
+      "questions": 40,
+      "left_only_correct": 3,
+      "right_only_correct": 1,
+      "choice_changes": 6
+    },
+    {
+      "contrast": "C_matched_vs_A_matched_readout",
+      "questions": 40,
+      "left_only_correct": 7,
+      "right_only_correct": 1,
+      "choice_changes": 8
+    }
+  ],
+  "primary_changes": [
+    {
+      "sample_id": 208,
+      "qa_index": 4,
+      "question": "How many green blocks are stacked now?",
+      "gold": "Nine.",
+      "c_answer": "C",
+      "d_answer": "A"
+    },
+    {
+      "sample_id": 209,
+      "qa_index": 0,
+      "question": "What happens after the first green block is placed on the yellow block?",
+      "gold": "The hand adds another green block.",
+      "c_answer": "D",
+      "d_answer": "A"
+    }
+  ]
+}

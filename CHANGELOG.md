@@ -2,6 +2,11 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Completed matched-boundary control
+
+- Preserved the uploaded ZIP and executed notebook. Audited 274 payloads, 200 checkpoints, 120 required replays and matched construction traces.
+- Confirmed the two construction wins under matched grouping and zero choice changes from the previous run. Documented the short query-cache experiment and independent confirmation plan.
+
 ## 2026-11-21 — Completed stage-attribution evidence
 
 - Preserved the supplied evidence ZIP and executed notebook. Verified 271 payloads, 204 checkpoints and 81 historical replays.

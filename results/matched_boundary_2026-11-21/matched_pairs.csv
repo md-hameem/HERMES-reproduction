@@ -1,0 +1,7 @@
+contrast,questions,left_only_correct,right_only_correct,choice_changes
+primary_C_matched_vs_D,40,2,0,2
+A_matched_vs_B,40,0,3,3
+C_matched_vs_original_C,40,0,0,0
+A_matched_vs_original_A,40,0,0,0
+C_matched_vs_compact_recent4,40,3,1,6
+C_matched_vs_A_matched_readout,40,7,1,8

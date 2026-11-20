@@ -81,4 +81,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-Match the history/recent boundary during encoding on the existing development questions. Use that result to decide whether to screen a deployable readout policy. Compare a frozen candidate with compact recent-four and a strong history baseline on source-separated confirmation data before making an original improvement claim.
+The [matched-boundary audit](<reports/2026-11-21 matched-boundary results and next decision.md>) confirms the two construction wins on these development questions. Implement one physically short query-cache candidate with preserved logical positions and verify it against masked C. Evaluate a frozen candidate against compact recent-four and strong history baselines on source-separated confirmation data before making an original improvement claim.

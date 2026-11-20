@@ -1,6 +1,6 @@
 # Research evidence
 
-The five-stage, causal-scorer, input, context and stage-attribution ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
+The five-stage, causal-scorer, input, context, stage-attribution and matched-boundary ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
 
 | Location | Contents |
 |---|---|
@@ -56,3 +56,7 @@ Run `python scripts/validate_context_diagnostic_evidence.py` using the standard 
 ## Stage attribution received 21 November 2026
 
 The [evidence ZIP](archives/HERMES_stage_attribution_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-stage-attribution.ipynb) preserve the original upload. Run `python scripts/validate_stage_attribution_evidence.py` to verify 271 payloads, 204 checkpoints, mask/position metadata, 81 historical replays and reconstructed counts. It reads uploaded source and cells as data. [Audit and hashes](audits/stage_attribution_2026-11-21_audit.json) · [Tables](../results/stage_attribution_2026-11-21/).
+
+## Matched-boundary control received 21 November 2026
+
+The [evidence ZIP](archives/HERMES_matched_boundary_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-matched-boundary.ipynb) preserve the original uploads. Run `python scripts/validate_matched_boundary_evidence.py` to verify 274 payloads, 200 checkpoints, construction and readout mask traces, 120 required replays and all paired counts. It reads embedded sources as literals and does not run uploaded code. [Audit and hashes](audits/matched_boundary_2026-11-21_audit.json) · [Tables](../results/matched_boundary_2026-11-21/).
