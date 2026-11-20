@@ -2,7 +2,11 @@
 
 Prepared 20 November 2026. [Notebook](../notebooks/autodl/hermes-stage-attribution.ipynb) · [Scientific protocol](../paper/neurocomputing/stage_attribution_protocol.md) · [Previous evidence](<reports/2026-11-20 context diagnostic analysis and next decision.md>)
 
-## Run now
+## Completed run
+
+The [executed notebook](../notebooks/executed/2026-11-21_hermes-stage-attribution.ipynb) contains the successful same-shape FP16 diagnostic and the resulting 204 answers. The instructions below refer to the base notebook, whose FP16 elementwise gate stopped on AutoDL. The [audit and analysis](<reports/2026-11-21 stage attribution analysis and next decision.md>) document the checks used for the completed run and what the results support.
+
+## Base workflow
 
 Upload **hermes-stage-attribution.ipynb alone**, preferably into the same AutoDL container, and choose **Restart Kernel and Run All**. Defaults require no edits. Output is `/root/autodl-tmp/hermes_stage_attribution_v2`, which preserves evidence from the first attempt. The verified reuse candidate is `/root/autodl-tmp/hermes_causal_pilot`. A fresh container is supported with additional setup/download/feature preparation. Recommended: RTX 4090 / 24 GB, CUDA 12.8-compatible driver and 18 GiB free for fresh setup.
 
@@ -58,7 +62,7 @@ nvidia-smi
 
 Download **HERMES_stage_attribution_evidence.zip** using the final link and save the executed notebook. The archive includes checkpoints, source/config/feature provenance, shared preparation records, all readout mask traces, logical/physical position metadata, preflight metrics, summaries/pairs and final closed logs. Weights, videos, feature tensors and GPU cache tensors are excluded. Keep those assets for reuse.
 
-If a runner gate/error stops Run All, run the final download cell manually when an archive exists. Setup failures may precede archive creation; inspect WORK/logs. No GPU run or scientific outcome for this matrix is established by creating the notebook.
+If a runner gate/error stops Run All, run the final download cell manually when an archive exists. Setup failures may precede archive creation; inspect WORK/logs.
 
 ## Local validation
 
@@ -67,4 +71,4 @@ python scripts/make_stage_attribution_notebook.py
 python -m unittest discover -s scripts -p test_stage_attribution.py -v
 ```
 
-Local tests exercise both precision passes on a small Qwen decoder, exact restoration of parameters and mixed-precision buffers, and failure with saved diagnostics when an injected error exposes hidden history. They also check the real answer function's decode-mask coverage, checkpoint and archive integrity, and headless execution of every notebook cell with network and GPU actions disabled. Complete AutoDL GPU execution remains pending.
+Local tests exercise both precision passes on a small Qwen decoder, exact restoration of parameters and mixed-precision buffers, and failure with saved diagnostics when an injected error exposes hidden history. They also check the real answer function's decode-mask coverage, checkpoint and archive integrity, and headless execution of every base notebook cell with network and GPU actions disabled. The completed GPU run and its validation changes are recorded in the executed notebook.

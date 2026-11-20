@@ -1,6 +1,6 @@
 # Research evidence
 
-The five-stage, causal-scorer, input and context diagnostic ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
+The five-stage, causal-scorer, input, context and stage-attribution ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
 
 | Location | Contents |
 |---|---|
@@ -52,3 +52,7 @@ Run `python scripts/validate_input_diagnostic_evidence.py` with the standard lib
 Archive SHA256: `fee3165e323c0f7106688a37cb185ec390d4f831e9debdfbf0352bd72881b774`. [Executed notebook](../notebooks/executed/2026-11-20_hermes-context-diagnostic.ipynb) SHA256: `26f2ec995b044b7d1595c73945eebc0285675882a7f93bd7719b53dfa6bf2055`. Both preserve uploaded bytes. Full extraction under `local/context_diagnostic_2026-11-20/` is ignored; [compact results](../results/context_diagnostic_2026-11-20/) and [analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) are published separately.
 
 Run `python scripts/validate_context_diagnostic_evidence.py` using the standard library. It verifies all 140 payloads, 84 checkpoints, 74 answers/ten explicit skips, exact source-slot maps (including declared duplicates), tail positions, ingestion groups, prior replay choices and all exported tables. Five new audit tests pass. Archived code is parsed/read rather than executed. Local auditing cannot rerun absent video/tensors or GPU inference; repeated filler and selected support are diagnostic conditions, not established original methods.
+
+## Stage attribution received 21 November 2026
+
+The [evidence ZIP](archives/HERMES_stage_attribution_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-stage-attribution.ipynb) preserve the original upload. Run `python scripts/validate_stage_attribution_evidence.py` to verify 271 payloads, 204 checkpoints, mask/position metadata, 81 historical replays and reconstructed counts. It reads uploaded source and cells as data. [Audit and hashes](audits/stage_attribution_2026-11-21_audit.json) · [Tables](../results/stage_attribution_2026-11-21/).

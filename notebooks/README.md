@@ -4,7 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
-| [Stage attribution — next run](autodl/hermes-stage-attribution.ipynb) | 200 main answers separating recent construction from direct history readout, plus four optional separate long-case answers; mask/position/replay gates and resumable evidence export. [Instructions](../docs/STAGE_ATTRIBUTION.md). Complete GPU run pending. |
+| [Stage attribution workflow](autodl/hermes-stage-attribution.ipynb) | Base workflow for the 200-answer main matrix. The executed record below contains the final GPU preflight adjustments. [Run notes](../docs/STAGE_ATTRIBUTION.md). |
 | [Context/content diagnostic](autodl/hermes-context-diagnostic.ipynb) | Maintained seven-case content/position and partition workflow; completed execution now audited. [Instructions](../docs/CONTEXT_DIAGNOSTIC.md) · [Analysis](<../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) |
 | [Input/capability diagnostic — next run](autodl/hermes-input-diagnostic.ipynb) | Upload alone and Run All; 120 mandatory fresh-state answers, feasible uncompressed prefixes, optional reviewed-support inputs, verified reuse, progress/checkpoints and evidence export. [Instructions](../docs/INPUT_DIAGNOSTIC.md) |
 | [Fresh-container causal-scorer pilot](autodl/hermes-causal-scorer-pilot.ipynb) | Upload this notebook alone and Run All. Default eight-video, three-method screen with pinned setup, selective downloads, shared video features, mandatory numerical preflight, checkpoints and an evidence ZIP |
@@ -15,6 +15,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 | [Executed causal-scorer pilot](executed/2026-11-20_hermes-causal-scorer-pilot.ipynb) | Supplied completed eight-video, 120-answer execution record; preserved unchanged, with pre-heartbeat runner source |
 | [Executed input diagnostic](executed/2026-11-20_hermes-input-diagnostic.ipynb) | Supplied successful reused-asset run: 120 mandatory answers, 14 native answers, 66 explicit skips, no oracle answers; original bytes preserved |
 | [Executed context diagnostic](executed/2026-11-20_hermes-context-diagnostic.ipynb) | Supplied completed seven-case run: 84 records, 74 answers, ten planned skips; original bytes preserved |
+| [Executed stage attribution](executed/2026-11-21_hermes-stage-attribution.ipynb) | Complete 200-answer main matrix and four separate long-case answers with the same-shape FP16 preflight. Original bytes and exploratory failure outputs preserved. |
 | [Executed five-stage work file](executed/2026-11-18_hermes-five-stage-autodl.ipynb) | Uploaded completed November run, preserving its exact bytes and outputs |
 | [Historical notebooks](archive/) | Earlier Kaggle development notebooks and the superseded five-stage AutoDL draft |
 

@@ -45,7 +45,7 @@ Publish a short pilot interpretation with question-level examples and explicit l
 | Earlier incorrect answers appear related to later errors | Run a separate controlled history intervention on identical pre-ingestion state. | Generated/corrected/plausibly wrong/question-only histories diagnose causality. Correlation alone is insufficient. |
 | Mixed improvements and regressions | Stratify by actual support age, question type and failure stage; check repeatability. | Avoid selecting a favorable subgroup after seeing results and treating it as confirmation. |
 
-The scorer, input and [context diagnostic](../notebooks/autodl/hermes-context-diagnostic.ipynb) have completed. The context run includes fixed-length/fixed-tail replacements and chunking controls on seven questions, with two successful analyst candidate-support probes. The [stage-attribution notebook](../notebooks/autodl/hermes-stage-attribution.ipynb) is now implemented with [instructions](STAGE_ATTRIBUTION.md), fourteen local tests and pending GPU execution. No certified human-oracle result, validated new refresh rule or history-feedback remedy is established.
+The scorer, input, context and [stage-attribution](<reports/2026-11-21 stage attribution analysis and next decision.md>) diagnostics have completed. The strongest stage contrast improves from 21/40 to 27/40 by masking direct history during answering, while compact recent-four already scores 25/40. This result motivates a matched construction control and a comparison with the simple baseline on source-separated data.
 
 ## 4. Define one original contribution before the main run
 
@@ -81,4 +81,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-**User/analysis:** preserve assets and complete support review plus targeted input/capability controls. The evidence ZIP and pilot decision memo are complete. **Research:** identify recoverable headroom before choosing and validating one original improvement. **Writing:** complete the paper around evidence that survives matched tests. No acceptance date or guaranteed publication outcome is established.
+Match the history/recent boundary during encoding on the existing development questions. Use that result to decide whether to screen a deployable readout policy. Compare a frozen candidate with compact recent-four and a strong history baseline on source-separated confirmation data before making an original improvement claim.

@@ -1,0 +1,10 @@
+scope,arm_a,arm_b,questions,a_only_correct,b_only_correct,choice_changes,history_empty_pairs
+main,A_history_both,B_independent_recent,40,0,3,3,1
+long_204_q3,A_history_both,B_independent_recent,1,0,0,0,0
+main,A_history_both,C_hide_history_readout,40,1,7,8,1
+long_204_q3,A_history_both,C_hide_history_readout,1,0,1,1,0
+main,B_independent_recent,D_independent_hide_readout,40,3,4,7,1
+long_204_q3,B_independent_recent,D_independent_hide_readout,1,0,1,1,0
+main,C_hide_history_readout,D_independent_hide_readout,40,2,0,2,1
+long_204_q3,C_hide_history_readout,D_independent_hide_readout,1,0,0,0,0
+main,D_independent_hide_readout,compact_recent4,40,1,1,4,1

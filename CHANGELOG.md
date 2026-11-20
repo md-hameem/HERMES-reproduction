@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Completed stage-attribution evidence
+
+- Preserved the supplied evidence ZIP and executed notebook. Verified 271 payloads, 204 checkpoints and 81 historical replays.
+- Recorded that masking direct history with the same contextualized cache moves accuracy from 21/40 to 27/40, versus 25/40 for compact recent-four.
+- Published the paired counts, numerical validation details and matched-boundary next experiment.
+
 ## 2026-11-21 — Revised stage-attribution preflight
 
 - The first AutoDL attempt stopped before QA on a single FP16 tensor entry outside the K/V tolerance.
