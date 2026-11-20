@@ -4,6 +4,8 @@ Proposed on 21 November 2026. The candidate is a training-free, bounded history 
 
 The [AutoDL development notebook](../../notebooks/autodl/hermes-construction-selection.ipynb) implements the six-arm pilot. Reuse the previous container and select **Restart Kernel → Run All**. The result ZIP is `HERMES_construction_selection_evidence.zip`.
 
+**Pilot outcome:** The selector tied both equal-budget controls at 26/40 and was slower than latest-two. All-history scored 27/40. The [audited decision](<../../docs/reports/2026-11-21 construction selection results and next decision.md>) retires this scorer and advances the simpler practical controls for independent confirmation.
+
 ## Why this follows from the results
 
 On the same 40 development questions, the matched comparison gained two correct answers when the model could use older history to encode recent frames while older slots were hidden at readout. Making all those slots visible during answering produced a net loss in the contextual arm. Physical removal then preserved all 40 saved masked answers. The short path scored 27/40 versus 25/40 for compact recent-four, which used the same query KV bytes and was faster after extraction. These observations motivate testing whether a small subset of older frames can preserve useful context at lower construction cost. They do not identify which earlier frames should be selected or establish a gain on independent sources. [Matched construction audit](<../../docs/reports/2026-11-21 matched-boundary results and next decision.md>) · [Short query-cache audit](<../../docs/reports/2026-11-21 short query-cache results and next decision.md>).

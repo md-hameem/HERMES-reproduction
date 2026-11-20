@@ -64,3 +64,7 @@ The [evidence ZIP](archives/HERMES_matched_boundary_evidence.zip) and [executed 
 ## Short query-cache run received 21 November 2026
 
 The [evidence ZIP](archives/HERMES_short_query_evidence.zip) and [executed notebook](../notebooks/executed/2026-11-21_hermes-short-query-cache.ipynb) preserve the original uploads. Run `python scripts/validate_short_query_evidence.py` to verify 115 payloads, 40 checkpoints, 160 answers, 320 timed calls and the paired cost accounting. The validator parses the recorded source and outputs without executing them. [Audit and hashes](audits/short_query_2026-11-21_audit.json) · [Tables](../results/short_query_2026-11-21/).
+
+## Construction selection received 21 November 2026
+
+The [evidence ZIP](archives/HERMES_construction_selection_evidence.zip) preserves the upload. The accompanying notebook was byte-identical to the [maintained source](../notebooks/autodl/hermes-construction-selection.ipynb) and had no execution outputs. Its local copy is under ignored `local/construction_selection_2026-11-21/`. Run `python scripts/validate_construction_selection_evidence.py` to verify 117 payloads, 240 answers, 80 replays, position traces and paired results from the ZIP. [Audit](audits/construction_selection_2026-11-21_audit.json) · [Tables](../results/construction_selection_2026-11-21/).

@@ -1,0 +1,12 @@
+sample_id,qa_index,baseline,selected_choice,baseline_choice,selected_correct,baseline_correct,selected_history,baseline_history
+209,0,latest_two,D,A,1,0,"[6, 8]","[7, 8]"
+208,4,latest_two,A,C,0,1,"[126, 128]","[127, 128]"
+209,0,attention_mass_two,D,A,1,0,"[6, 8]","[7, 8]"
+208,4,attention_mass_two,A,C,0,1,"[126, 128]","[127, 128]"
+209,0,no_history,D,A,1,0,"[6, 8]",[]
+208,4,all_history,A,C,0,1,"[126, 128]","[113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128]"
+209,0,compact_recent4,D,A,1,0,"[6, 8]",[]
+209,2,compact_recent4,D,B,0,0,"[98, 100]",[]
+203,4,compact_recent4,B,A,0,1,"[65, 66]",[]
+202,4,compact_recent4,D,A,0,0,"[108, 109]",[]
+208,3,compact_recent4,D,A,1,0,"[79, 81]",[]

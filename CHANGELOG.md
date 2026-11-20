@@ -2,6 +2,11 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Completed construction selection evidence
+
+- Verified 240 answers, 80 reference replays and paired cost and accuracy. The selector ties both simple rules at 26/40 and adds cost versus recency.
+- Preserved the evidence ZIP and documented the decision to retire the scorer and evaluate simpler contextual controls on different footage.
+
 ## 2026-11-21 — Completed short query-cache evidence
 
 - Preserved the uploaded ZIP and executed notebook. Verified 160 answers, 320 timed calls and all 120 required baseline replays.

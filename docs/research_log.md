@@ -2088,3 +2088,7 @@ The local tests execute all notebook cells in validation mode and verify FP32/FP
 ## 43. Completed short query-cache audit, 21 November 2026
 
 The AutoDL run completed 160 answers and 320 timed calls on the same 40 questions. The audit verified 115 payloads, all position traces and 120 historical baseline replays. All 40 saved masked answers match the short path. Median query K/V drops by 79.7%. Accounting for per-question extraction leaves a 4.45 ms median saving versus masking and a 2.99 ms median cost versus compact recent-four. Compact scores 25/40 and short contextual scores 27/40. Freeze the candidate and test it on source-separated confirmation data before extending the method or its claims. [Analysis](<reports/2026-11-21 short query-cache results and next decision.md>).
+
+## 44. Completed construction selection pilot, 21 November 2026
+
+Verified 117 payloads, 240 answers and 80 historical replays. The supplied notebook is the clean source template. Greedy selection ties latest-two and attention mass at 26/40 versus 27/40 for all-history. It lowers the first-layer proxy on 26 of 36 eligible questions and adds a paired median 7.82 ms versus latest-two. Retire the scorer. Test compact recent-four, latest-two and all-history contextual short readout on source-separated footage. [Analysis and decision](<reports/2026-11-21 construction selection results and next decision.md>).

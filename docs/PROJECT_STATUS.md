@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 21 November 2026 after auditing the completed short query-cache run. This page is the current project index. Dated entries in the research log and audit retain their historical context.
+Updated 21 November 2026 after auditing the completed construction selection run. This page is the current project index. Dated entries in the research log and audit retain their historical context.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -124,4 +124,4 @@ Opening-frame replacement recovers three full-prefix errors at fixed input lengt
 
 **Short query-cache experiment complete:** All 40 saved masked answers match the short path. Median query K/V falls from 46.09 to 9.34 MiB. Median paired saving versus masked readout is 4.45 ms after extraction. Compact recent-four uses the same query bytes and is faster after extraction, with 25 correct versus 27 for short contextual. Freeze the candidate and establish source-separated confirmation. [Analysis](<reports/2026-11-21 short query-cache results and next decision.md>) · [Audited tables](../results/short_query_2026-11-21/).
 
-**New improvement pilot:** The [construction selection notebook](../notebooks/autodl/hermes-construction-selection.ipynb) tests whether a two-frame history selector retains the short contextual result at lower construction cost. It compares against equal-budget recency and attention-mass rules. The same 40 questions remain development data. [Protocol and decision criteria](../paper/neurocomputing/construction_history_selection_protocol.md).
+**Construction selection complete:** Selected two, latest two and attention-mass two each score 26/40. The greedy selector costs 7.82 ms more than latest-two on a median paired question and loses one answer to all-history. Lower first-layer proxy error does not improve aggregate QA on these cases. Retire this selector and run frozen practical controls on different sources. [Analysis](<reports/2026-11-21 construction selection results and next decision.md>).

@@ -1,0 +1,6 @@
+candidate,baseline,questions,candidate_only_correct,baseline_only_correct,choice_changes,median_score_and_construction_s_saved
+selected_two,latest_two,40,1,1,2,-0.007819496095180511
+selected_two,attention_mass_two,40,1,1,2,-4.733819514513016e-05
+selected_two,no_history,40,1,0,1,-0.009381282143294811
+selected_two,all_history,40,0,1,1,-0.0029140934348106384
+selected_two,compact_recent4,40,2,1,5,0.00552323367446661

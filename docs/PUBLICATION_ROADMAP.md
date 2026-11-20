@@ -81,4 +81,4 @@ Use the current author guide and submission system for a final format/policy che
 
 ## Current next action
 
-The [short query-cache audit](<reports/2026-11-21 short query-cache results and next decision.md>) shows all 40 masked answers preserved and lower query cache cost versus masking. Freeze the current candidate, build a source-separated confirmation manifest, and make compact recent-four the primary accuracy comparator at the same query-cache budget. Establish generalization and distinguish the candidate from existing compact and decoupled methods before making an original improvement claim.
+The [construction selection audit](<reports/2026-11-21 construction selection results and next decision.md>) finds the greedy selector ties both simpler two-frame controls at higher cost than recency. Retire that scorer. Use a frozen source-separated manifest to compare compact recent-four, latest-two contextual construction and all-history contextual construction at the same answer-cache budget. Establish generalization and distinguish any surviving method from existing compact and decoupled approaches before making an original improvement claim.
