@@ -22,6 +22,8 @@ Define unknown future questions, chronological QA, retained GPU KV, auxiliary st
 
 Describe the reproduction and pilot as development evidence with their respective scope and selection rules. The default pilot contains eight outcome-selected videos, 40 distinct questions and 120 answers across three methods. The ZIP is now audited: all eight videos completed, all methods score 24/40, and causal scoring changes zero correctness outcomes relative to HERMES. This is diagnostic development evidence, not the new method's main result.
 
+The subsequent input controls completed: question-only 14/40, recent-4 25/40, recent-20 21/40 and native 10/14, matching historical baselines on that exact native subset. Include regressions and the unpruned context-sensitive examples if relevant to the eventual method. Verified-support answers and an isolated cause remain pending; the single net recent-4 gain is not the proposed contribution.
+
 ## 4. Proposed method — pending selection and validation
 
 Supply the precise algorithm, state representation, update/invalidation rules, positional semantics, complexity and all memory costs. Explain why the mechanism addresses the observed failure and how it differs from the nearest work. Include pseudocode and a reproducible diagram. State any assumptions and failure conditions.

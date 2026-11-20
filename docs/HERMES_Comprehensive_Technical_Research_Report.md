@@ -2,8 +2,12 @@
 
 > **Document status:** Living reference document for the HERMES reproduction project<br>
 > **Last updated:** 20 November 2026<br>
-> **Companion documents:** [`docs/research_log.md`](research_log.md) (33 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (24 sections) · [Changelog](../CHANGELOG.md)<br>
-> **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. An eight-video corrected-scorer QA screen now passes native preflight but shows no correctness gain over HERMES. A feasible native-model QA baseline, support/capability controls and a validated original method remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+> **Companion documents:** [`docs/research_log.md`](research_log.md) (36 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (25 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. The corrected-scorer and subsequent input diagnostic have also completed. Verified-support QA, controlled cause attribution and a validated original method remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+
+## Input/capability diagnostic update 20 November 2026
+
+The [audited input controls](<reports/2026-11-20 input diagnostic analysis and next decision.md>) contain 200 case records: 120 mandatory answers, 14 native answers and 66 explicit skips. Question-only/recent-4/recent-20 score 14/25/21 out of 40. Native scores 10/14 with choices identical to historical baselines on that subset. Recent-4 recovers sample 204/q0 where the unpruned eight-frame input fails; the purple 204/q3 overlay is located at sampled index 69, 138 seconds. Prioritize support plus controlled context/position/chunking interventions, with both short-window gains and regressions preserved. This is development evidence, not an original contribution. Older source-preserving literature/proposal sections and the Word report's dated appendices retain their historical context; the linked current analysis supplies this later update.
 
 ## Causal scorer pilot update 20 November 2026
 

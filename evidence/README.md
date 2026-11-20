@@ -1,9 +1,11 @@
 # Research evidence
 
-The five-stage and causal-scorer pilot ZIPs are each stored once as canonical evidence payloads in Git. Its full local extraction is kept under `local/five_stage/` and excluded from Git. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
+The five-stage, causal-scorer and input-diagnostic ZIPs are each stored once as canonical evidence payloads in Git. Full local extractions are under ignored `local/` subdirectories. Published summary tables and figures are available directly in the repository. [Five-stage results](../results/five_stage/) · [Project status](../docs/PROJECT_STATUS.md)
 
 | Location | Contents |
 |---|---|
+| [Input-diagnostic archive](archives/HERMES_input_diagnostic_evidence.zip) | Completed input controls: 287 manifest payloads, 200 checkpoints, 134 answers, 66 explicit skips and 57 review pages |
+| [Input-diagnostic audit](audits/input_diagnostic_2026-11-20_audit.json) | Independent identity, frame/status, paired-subset, export and provenance checks |
 | [Causal-scorer pilot archive](archives/HERMES_causal_scorer_pilot_evidence.zip) | Supplied completed eight-video screen: 103 manifest payloads, 24 checkpoints, 120 predictions, source, logs, sampling metadata and contact sheets |
 | [Causal-pilot audit](audits/causal_pilot_2026-11-20_audit.json) | Independent integrity, identity, table, timing and historical replay checks |
 | [Original five-stage archive](archives/HERMES_AutoDL_five_stage_evidence.zip) | All 2,921 original manifest payloads, including predictions, video checkpoints, timing events, annotations, scripts, logs and embedded October evidence |
@@ -36,3 +38,9 @@ Historical evidence, the uploaded executed notebook and published summary copies
 The archive SHA256 is `af4b7392e90bd3f433ad20182a9058d8c8027a8ede936ed5d759572be04e0361`. The [executed notebook](../notebooks/executed/2026-11-20_hermes-causal-scorer-pilot.ipynb) SHA256 is `24620321fc4b2783e68706928e8831456579aa8e8e03a4eccbf2c5a1345686a6`. They preserve the uploaded bytes. Full extraction under `local/causal_pilot_2026-11-20/` is ignored; [compact results](../results/causal_pilot_2026-11-20/README.md) and the [publication decision](<../docs/reports/2026-11-20 causal scorer pilot analysis and publication decision.md>) are readable without extraction.
 
 Run `python scripts/validate_causal_pilot_evidence.py` using Python's standard library. The validator never executes archived code. It verifies all 103 payloads and recomputes prediction, pairwise and timing tables, while documenting that raw videos/features and the GPU computation cannot be independently rerun from the package alone. The original ZIP retains three benign editor-checkpoint logs; reader-facing exports omit those caches. Later workflow heartbeat changes are not rewritten into the archived execution.
+
+## Input/capability diagnostic received 20 November 2026
+
+The canonical archive SHA256 is `f184271bd8929f2ca5dead71a1ec60e4e1b555f33f2ed66d9909e3d7e0ffa1e8`. The [executed notebook](../notebooks/executed/2026-11-20_hermes-input-diagnostic.ipynb) SHA256 is `24df662b86955295cae4aa24a559806b72021ded6ce6a0815a0eb1ce321313bf`. Both preserve the uploaded bytes. Full extraction under `local/input_diagnostic_2026-11-20/` is ignored. [Compact results](../results/input_diagnostic_2026-11-20/) and [analysis](<../docs/reports/2026-11-20 input diagnostic analysis and next decision.md>) are published separately.
+
+Run `python scripts/validate_input_diagnostic_evidence.py` with the standard library. It verifies all 287 payloads, 200 unique case checkpoints, 120 mandatory answers plus 14 native answers, explicit skips, all export tables, historical exact-subset comparisons and eight historical feature-reuse provenance records. It never executes archived code. Five audit tests include corrupted correctness/cache/input identities and skipped-case counting. Raw videos and tensors remain outside the package; oracle tests and original-method claims are not established.

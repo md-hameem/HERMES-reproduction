@@ -2,6 +2,8 @@
 
 Prepared 20 November 2026. [Notebook](../notebooks/autodl/hermes-input-diagnostic.ipynb) · [Scientific protocol](../paper/neurocomputing/next_diagnostic_protocol.md) · [Research plan](../paper/neurocomputing/research_execution_plan.md)
 
+**Execution update:** the supplied reused-asset GPU run has completed and passed the [independent audit](../evidence/audits/input_diagnostic_2026-11-20_audit.json). It produced 134 answers and 66 explicit skips, including all 120 mandatory answers. The [analysis](<reports/2026-11-20 input diagnostic analysis and next decision.md>) now governs the next step: support review and controlled context/position tests. These instructions describe the maintained input-control workflow, not an implemented context-replacement treatment.
+
 ## Run now
 
 Upload `hermes-input-diagnostic.ipynb` alone to AutoDL. Recommended: RTX 4090 / 24 GB, CUDA 12.8-compatible driver and at least 18 GiB free on `/root/autodl-tmp`. Choose **Restart Kernel and Run All**. Defaults are ready for the initial screen; no annotation or old ZIP upload is needed.
@@ -61,4 +63,4 @@ python scripts/make_input_diagnostic_notebook.py
 python -m unittest discover -s scripts -p test_input_diagnostic.py -v
 ```
 
-Eighteen new tests passed locally, including native small-decoder numerical checks, exact frame slicing, question execution/resume, context skips, damaged metadata/checkpoint rejection, workspace protection, partial asset reuse, environment reuse, package integrity and execution of every notebook code cell with network/GPU actions disabled. Eleven reused pilot utility tests and three setup-routing tests also passed. Numerical tests used the local CPU environment with pinned Transformers, not an AutoDL GPU. A fresh complete AutoDL execution remains to be verified by the user's run; mandatory GPU preflight is part of that execution.
+Eighteen implementation tests passed locally, including native small-decoder numerical checks, exact frame slicing, question execution/resume, context skips, damaged metadata/checkpoint rejection, workspace protection, partial asset reuse, environment reuse, package integrity and execution of every notebook code cell with network/GPU actions disabled. Eleven reused pilot utility tests and three setup-routing tests also passed. Numerical tests used the local CPU environment with pinned Transformers. The supplied reused-asset AutoDL execution subsequently passed mandatory GPU preflight and completed; fresh-container installation was not independently rerun. Five new saved-evidence audit tests also pass.

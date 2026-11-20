@@ -1,0 +1,16 @@
+method,historical_baseline,matched_questions,diagnostic_correct,historical_correct,diagnostic_only_correct,historical_only_correct,comparison_scope
+question_only,fifo,40,14,24,1,11,Exact shared identities; historical session; changed input/history; descriptive development comparison
+question_only,hermes,40,14,24,1,11,Exact shared identities; historical session; changed input/history; descriptive development comparison
+question_only,causal,40,14,24,1,11,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_4,fifo,40,25,24,3,2,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_4,hermes,40,25,24,5,4,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_4,causal,40,25,24,5,4,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_20,fifo,40,21,24,1,4,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_20,hermes,40,21,24,2,5,Exact shared identities; historical session; changed input/history; descriptive development comparison
+recent_20,causal,40,21,24,2,5,Exact shared identities; historical session; changed input/history; descriptive development comparison
+native_prefix,fifo,14,10,10,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison
+native_prefix,hermes,14,10,10,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison
+native_prefix,causal,14,10,10,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison
+support_oracle,fifo,0,0,0,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison
+support_oracle,hermes,0,0,0,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison
+support_oracle,causal,0,0,0,0,0,Exact shared identities; historical session; changed input/history; descriptive development comparison

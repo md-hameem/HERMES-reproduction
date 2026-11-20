@@ -2,6 +2,8 @@
 
 Decision date: 20 November 2026. Working venue: **Neurocomputing**, assuming the user's reference to “neuroscience” means the journal previously selected. This plan does not propose biological neuroscience claims. It extends the [diagnostic protocol](next_diagnostic_protocol.md) and [completed pilot analysis](<../../docs/reports/2026-11-20 causal scorer pilot analysis and publication decision.md>).
 
+**Execution update:** Phase 1's mandatory input controls and feasible native arm have now completed. The [input diagnostic decision](<../../docs/reports/2026-11-20 input diagnostic analysis and next decision.md>) records 14/40 question-only, 25/40 recent-4, 21/40 recent-20 and 10/14 native, with no oracle answers. It prioritizes support-traced context/position interventions before the conditional generated-answer-feedback candidate below. The earlier candidate ordering was provisional. Originality and independent confirmation remain pending.
+
 ## Honest starting position
 
 The engineering and reproducibility foundation is substantial; the original contribution remains missing. The full 2,495-question HERMES/FIFO difference is +0.3607 percentage points with a video-cluster interval crossing zero. The selected 40-question scorer pilot gives 24 correct answers for every method. Fresh causal scoring changes no correctness outcome and increases recorded replay time. These are informative development results, not proof that HERMES never works or that the methods are equivalent.
@@ -107,7 +109,7 @@ Resolve in parallel: institution-accepted Q1 database/category/year, whether CCF
 ## Immediate deliverables
 
 1. A reviewed support sheet copied from the generated queue, with seven initial cases and unresolved ambiguities explicit.
-2. A new resumable AutoDL diagnostic notebook implementing the 120-answer control matrix, feasible native arm and explicit optional annotated-support input. Subsequently implemented as [hermes-input-diagnostic.ipynb](../../notebooks/autodl/hermes-input-diagnostic.ipynb), with eighteen local tests and [run instructions](../../docs/INPUT_DIAGNOSTIC.md). Fresh GPU execution and interpretation remain pending.
+2. A new resumable AutoDL diagnostic notebook implementing the 120-answer control matrix, feasible native arm and explicit optional annotated-support input. Implemented and executed as [hermes-input-diagnostic.ipynb](../../notebooks/autodl/hermes-input-diagnostic.ipynb), with eighteen implementation tests, five saved-evidence audit tests and [run instructions](../../docs/INPUT_DIAGNOSTIC.md). Verified-support QA remains pending; fixed-position context replacements and new mechanisms require separate implementation.
 3. A diagnostic decision memo choosing feedback, retention/readout, input/backbone investigation, or stopping the immediate branch.
 4. A full-method/code comparison against nearest work before implementing the selected proposed contribution.
 5. Only after those gates: one prototype, frozen confirmation plan, and an evidence-led manuscript.

@@ -1,0 +1,25 @@
+task,method,questions,correct
+Action Recognition,question_only,2,1
+Action Recognition,recent_4,2,1
+Action Recognition,recent_20,2,1
+Attribute Recognition,question_only,6,0
+Attribute Recognition,recent_4,6,4
+Attribute Recognition,recent_20,6,2
+Counting,question_only,3,2
+Counting,recent_4,3,2
+Counting,recent_20,3,2
+Event Understanding,question_only,10,4
+Event Understanding,recent_4,10,5
+Event Understanding,recent_20,10,4
+Object Recognition,question_only,1,1
+Object Recognition,recent_4,1,1
+Object Recognition,recent_20,1,0
+Prospective Reasoning,question_only,15,5
+Prospective Reasoning,recent_4,15,10
+Prospective Reasoning,recent_20,15,10
+Spatial Understanding,question_only,2,1
+Spatial Understanding,recent_4,2,1
+Spatial Understanding,recent_20,2,1
+Text-Rich Understanding,question_only,1,0
+Text-Rich Understanding,recent_4,1,1
+Text-Rich Understanding,recent_20,1,1

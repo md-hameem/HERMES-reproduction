@@ -1,0 +1,41 @@
+sample_id,qa_index,question,task,query_time_s,gold,historical_hermes_choice,historical_hermes_correct,question_only_choice,question_only_correct,question_only_status,recent_4_choice,recent_4_correct,recent_4_status,recent_20_choice,recent_20_correct,recent_20_status,native_prefix_choice,native_prefix_correct,native_prefix_status
+212,0,What might the speaker explain next?,Prospective Reasoning,20.0,How to add mixed numbers.,A,1,B,0,answered,A,1,answered,A,1,answered,A,1,answered
+212,1,What might the speaker explain next?,Prospective Reasoning,130.0,How to add those two mixed numbers.,B,0,B,0,answered,B,0,answered,B,0,answered,,,skipped
+212,2,What might the speaker do next?,Prospective Reasoning,248.0,How to add those two mixed numbers.,A,1,D,0,answered,A,1,answered,A,1,answered,,,skipped
+212,3,What might the speaker explain next?,Prospective Reasoning,396.0,How to add those two fractions numbers.,D,1,C,0,answered,C,0,answered,D,1,answered,,,skipped
+212,4,What might the speaker explain next?,Prospective Reasoning,478.0,Adding the fractions together.,A,1,C,0,answered,A,1,answered,C,0,answered,,,skipped
+204,0,What color is the plastic block added on top of the green blocks?,Attribute Recognition,16.0,Yellow.,A,0,A,0,answered,C,1,answered,A,0,answered,A,0,answered
+204,1,What are the primary colors of the plastic building blocks shown right now?,Attribute Recognition,62.0,"Red, green, and yellow.",B,1,C,0,answered,B,1,answered,B,1,answered,B,1,answered
+204,2,Which block was picked up and attached to the top of red block first just now?,Event Understanding,85.0,An yellow block.,B,0,A,0,answered,B,0,answered,B,0,answered,,,skipped
+204,3,What was the white text on the purple animated overlay read just now?,Text-Rich Understanding,141.0,"""Alphabet B transform to Box"".",A,0,A,0,answered,B,1,answered,B,1,answered,,,skipped
+204,4,What happens to the blocks after they are disassembled and mixed?,Event Understanding,198.0,The blocks are scattered and then gathered into a pile.,B,1,B,1,answered,B,1,answered,B,1,answered,,,skipped
+209,0,What happens after the first green block is placed on the yellow block?,Event Understanding,25.0,The hand adds another green block.,D,1,A,0,answered,A,0,answered,D,1,answered,D,1,answered
+209,1,What action do the hands perform just before moving away from the structure?,Action Recognition,118.0,Pressing down the green blocks.,D,1,D,1,answered,D,1,answered,D,1,answered,,,skipped
+209,2,What sequence of actions occured with the green and yellow blocks just now?,Event Understanding,210.0,"The green block is placed first, followed by the yellow block.",B,0,B,0,answered,B,0,answered,D,0,answered,,,skipped
+209,3,Where is the new yellow and green block placed relative to the original structure?,Spatial Understanding,212.0,In front of the original structure.,B,0,B,0,answered,B,0,answered,B,0,answered,,,skipped
+209,4,What did the person do with the yellow block just now?,Action Recognition,315.0,Placed them above the green block and another yellow block.,B,0,B,0,answered,B,0,answered,B,0,answered,,,skipped
+203,0,How many studs does each yellow interlocking block placed by the hand have?,Counting,15.0,Eight.,A,1,D,0,answered,A,1,answered,A,1,answered,A,1,answered
+203,1,How many interlocking blocks are positioned in a straight line by the hand?,Counting,19.0,Four.,D,1,D,1,answered,D,1,answered,D,1,answered,D,1,answered
+203,2,What is the color of the block that the hand is reaching for right now?,Attribute Recognition,76.0,Green.,A,0,A,0,answered,C,1,answered,A,0,answered,A,0,answered
+203,3,What color is the brick first added after the initial blue bricks form a two-layered structure?,Event Understanding,134.0,Green.,A,1,B,0,answered,A,1,answered,B,0,answered,,,skipped
+203,4,What is the sequence of bricks added to the structure after the blue bricks?,Event Understanding,141.0,"Green, yellow, orange.",B,0,D,0,answered,A,1,answered,B,0,answered,,,skipped
+218,0,What topic might the teacher explain next?,Prospective Reasoning,11.0,mixed numbers and improper fractions.,A,1,A,1,answered,A,1,answered,A,1,answered,A,1,answered
+218,1,What might the teacher explain next?,Prospective Reasoning,190.0,Explain how improper fractions is connected to proper fractions and whole fractions.,B,1,B,1,answered,B,1,answered,B,1,answered,,,skipped
+218,2,What might the speaker explain next?,Prospective Reasoning,331.0,How to convert mixed numbers to improper fractions.,B,0,C,0,answered,B,0,answered,B,0,answered,,,skipped
+218,3,What concept will the speaker likely explain next?,Prospective Reasoning,500.0,Converting improper fractions to mixed numbers.,B,1,D,0,answered,D,0,answered,D,0,answered,,,skipped
+218,4,What might the speaker explain next?,Prospective Reasoning,646.0,How to use dividing to convert improper fractions to a mixed number form.,D,1,D,1,answered,D,1,answered,D,1,answered,,,skipped
+219,0,What mathematical topic might the speaker focus on next?,Prospective Reasoning,10.0,Multiplying Fractions.,D,1,C,0,answered,D,1,answered,D,1,answered,D,1,answered
+219,1,What might the speaker do next?,Prospective Reasoning,55.0,Show the steps to multiply the fractions.,C,1,C,1,answered,C,1,answered,C,1,answered,C,1,answered
+219,2,What might the speaker do next?,Prospective Reasoning,149.0,Show the steps to multiply the fractions.,C,1,C,1,answered,C,1,answered,C,1,answered,,,skipped
+219,3,What mathematical concept might the speaker move on to explain next?,Prospective Reasoning,231.0,Another explanation to fractions.,C,0,C,0,answered,D,1,answered,D,1,answered,,,skipped
+219,4,What might the speaker discuss next?,Prospective Reasoning,310.0,How to multiply the denominators.,B,0,B,0,answered,B,0,answered,B,0,answered,,,skipped
+202,0,What colors are the wheels of the race car?,Attribute Recognition,12.0,Yellow and Red.,A,0,B,0,answered,A,0,answered,A,0,answered,A,0,answered
+202,1,What feature is present on the front of the toy?,Attribute Recognition,72.0,A happy face.,B,1,A,0,answered,B,1,answered,B,1,answered,B,1,answered
+202,2,How are the yellow building blocks arranged before the blue block is placed on top?,Spatial Understanding,128.0,In a straight line.,B,1,B,1,answered,B,1,answered,B,1,answered,,,skipped
+202,3,What is the new item introduced in the video?,Object Recognition,202.0,A small structure made of yellow and red blocks with wheels.,B,1,B,1,answered,B,1,answered,C,0,answered,,,skipped
+202,4,What happened to the toy vehicle just now?,Event Understanding,227.0,The toy vehicle start circling around the table.,D,0,D,0,answered,A,0,answered,D,0,answered,,,skipped
+208,0,What are the colors of the crane arm?,Attribute Recognition,7.0,"Yellow, green.",D,0,D,0,answered,D,0,answered,D,0,answered,D,0,answered
+208,1,What happens to the orange block as the video progresses?,Event Understanding,19.0,It lifts and swings gently.,C,1,C,1,answered,C,1,answered,C,1,answered,C,1,answered
+208,2,What was the sequence of actions performed with the blocks just now?,Event Understanding,96.0,"The hand places a yellow block, moves it, then places a green block next to it.",D,1,D,1,answered,D,1,answered,D,1,answered,,,skipped
+208,3,What happens to the smaller structure after it is first moved out of view?,Event Understanding,171.0,It is placed back beside the larger structure.,A,0,D,1,answered,A,0,answered,A,0,answered,,,skipped
+208,4,How many green blocks are stacked now?,Counting,265.0,Nine.,C,1,C,1,answered,A,0,answered,D,0,answered,,,skipped

@@ -1,0 +1,6 @@
+method,planned,recorded,answered,skipped,correct,accuracy_pct,measured_wall_s
+question_only,40,40,40,0,14,35.0,9.07282985560596
+recent_4,40,40,40,0,25,62.5,10.68346662633121
+recent_20,40,40,40,0,21,52.5,13.355240466073155
+native_prefix,40,40,14,26,10,71.42857142857143,3.97325268574059
+support_oracle,40,40,0,40,0,,0

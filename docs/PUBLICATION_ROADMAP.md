@@ -2,6 +2,8 @@
 
 Updated 20 November 2026. The user selected Neurocomputing as the working target. The supplied eight-video screen is now complete and independently audited, with all methods at 24/40 and no correctness gain from fresh causal scoring. The earlier setup attempt timed out downloading a dependency; the maintained notebook includes the recovery changes. This roadmap prepares a regular article under the advisor's original-method requirement. It is a research plan, not a submission-ready manuscript or an acceptance forecast.
 
+**Latest update:** the follow-up input diagnostic also completed. The [audited decision](<reports/2026-11-20 input diagnostic analysis and next decision.md>) records question-only 14/40, recent-4 25/40, recent-20 21/40 and native 10/14, matching historical baselines on the exact native subset. Prioritize reviewed support and controlled context/position tests before an original method. No support-oracle answers were run, and a one-question net recent-4 gain does not establish a publishable improvement.
+
 Source requirements are recorded in the [19-page guide assessment](<reports/Neurocomputing submission requirements and HERMES readiness.md>). Q1 remains mandatory. Neurocomputing is CCF C in the supplied catalogue; the user has not explicitly resolved whether B is an additional condition. The applicable Q1 database/category/year and recognized publication milestone must be checked before submission. This check does not prevent the research preparation below.
 
 ## Current decision after evidence intake
@@ -41,7 +43,7 @@ Publish a short pilot interpretation with question-level examples and explicit l
 | Earlier incorrect answers appear related to later errors | Run a separate controlled history intervention on identical pre-ingestion state. | Generated/corrected/plausibly wrong/question-only histories diagnose causality. Correlation alone is insufficient. |
 | Mixed improvements and regressions | Stratify by actual support age, question type and failure stage; check repeatability. | Avoid selecting a favorable subgroup after seeing results and treating it as confirmation. |
 
-The original notebook implements the scorer diagnostic. The separate [input diagnostic notebook](../notebooks/autodl/hermes-input-diagnostic.ipynb) now implements fresh-state question-only/recent controls, feasible uncompressed prefixes and optional reviewed-support QA. It has local tests and [run instructions](INPUT_DIAGNOSTIC.md); complete fresh GPU execution remains pending. No validated new refresh rule or history-feedback remedy is implemented.
+The original notebook implements the scorer diagnostic. The separate [input diagnostic notebook](../notebooks/autodl/hermes-input-diagnostic.ipynb) has now executed its fresh-state question-only/recent controls and feasible uncompressed prefixes. Reviewed-support QA remains optional and unrun. It has local tests, an independent evidence audit and [instructions](INPUT_DIAGNOSTIC.md). No fixed-position context-replacement treatment, validated new refresh rule or history-feedback remedy is implemented.
 
 ## 4. Define one original contribution before the main run
 

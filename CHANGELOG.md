@@ -2,6 +2,14 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Completed input diagnostic intake and analysis
+
+- Preserved the uploaded ZIP/notebook under canonical archive/executed paths with unchanged hashes; kept the full extraction ignored and published compact original/derived tables plus two unchanged review images.
+- Added an independent saved-evidence validator and five rejection/control tests. Verified 287 payloads, 200 checkpoints, 134 answers, 66 explicit skips, original feature reuse and exact-subset historical comparisons without executing archived code.
+- Recorded question-only 14/40, recent-4 25/40, recent-20 21/40 and native 10/14, matching historical baselines on the native subset. No support-oracle answers were requested.
+- Located the sampled 204/q3 overlay and documented an unpruned 204/q0 input-extent recovery. Prioritized controlled support/context/position tests while preserving regressions; no original-method or population gain claim is made.
+- Updated current status, instructions, paper plans/claims, technical Markdown reports and research log. The maintained runner/notebook and historical execution bytes remain unchanged.
+
 ## 2026-11-20 — AutoDL input/capability diagnostic notebook
 
 - Added an upload-alone notebook and reproducible builder for 120 mandatory fresh-state question-only/recent-frame answers, explicitly feasible uncompressed prefixes and optional human-verified support inputs.

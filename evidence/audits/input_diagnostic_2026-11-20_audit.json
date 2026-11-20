@@ -1,0 +1,178 @@
+{
+  "status": "pass",
+  "archive_sha256": "f184271bd8929f2ca5dead71a1ec60e4e1b555f33f2ed66d9909e3d7e0ffa1e8",
+  "notebook_sha256": "24df662b86955295cae4aa24a559806b72021ded6ce6a0815a0eb1ce321313bf",
+  "payloads": 287,
+  "checkpoints": 200,
+  "answered": 134,
+  "skipped": {
+    "not_requested": 40,
+    "configured_native_cap": 22,
+    "context_limit": 4
+  },
+  "methods": [
+    {
+      "method": "question_only",
+      "planned": 40,
+      "recorded": 40,
+      "answered": 40,
+      "skipped": 0,
+      "correct": 14,
+      "accuracy_pct": 35.0,
+      "measured_wall_s": 9.07282985560596
+    },
+    {
+      "method": "recent_4",
+      "planned": 40,
+      "recorded": 40,
+      "answered": 40,
+      "skipped": 0,
+      "correct": 25,
+      "accuracy_pct": 62.5,
+      "measured_wall_s": 10.68346662633121
+    },
+    {
+      "method": "recent_20",
+      "planned": 40,
+      "recorded": 40,
+      "answered": 40,
+      "skipped": 0,
+      "correct": 21,
+      "accuracy_pct": 52.5,
+      "measured_wall_s": 13.355240466073155
+    },
+    {
+      "method": "native_prefix",
+      "planned": 40,
+      "recorded": 40,
+      "answered": 14,
+      "skipped": 26,
+      "correct": 10,
+      "accuracy_pct": 71.42857142857143,
+      "measured_wall_s": 3.97325268574059
+    },
+    {
+      "method": "support_oracle",
+      "planned": 40,
+      "recorded": 40,
+      "answered": 0,
+      "skipped": 40,
+      "correct": 0,
+      "accuracy_pct": "",
+      "measured_wall_s": 0
+    }
+  ],
+  "within_run_pairs": [
+    {
+      "method_a": "question_only",
+      "method_b": "recent_4",
+      "matched_questions": 40,
+      "a_correct": 14,
+      "b_correct": 25,
+      "a_only_correct": 2,
+      "b_only_correct": 13,
+      "choice_changes": 19
+    },
+    {
+      "method_a": "question_only",
+      "method_b": "recent_20",
+      "matched_questions": 40,
+      "a_correct": 14,
+      "b_correct": 21,
+      "a_only_correct": 3,
+      "b_only_correct": 10,
+      "choice_changes": 18
+    },
+    {
+      "method_a": "question_only",
+      "method_b": "native_prefix",
+      "matched_questions": 14,
+      "a_correct": 4,
+      "b_correct": 10,
+      "a_only_correct": 0,
+      "b_only_correct": 6,
+      "choice_changes": 7
+    },
+    {
+      "method_a": "recent_4",
+      "method_b": "recent_20",
+      "matched_questions": 40,
+      "a_correct": 25,
+      "b_correct": 21,
+      "a_only_correct": 6,
+      "b_only_correct": 2,
+      "choice_changes": 11
+    },
+    {
+      "method_a": "recent_4",
+      "method_b": "native_prefix",
+      "matched_questions": 14,
+      "a_correct": 11,
+      "b_correct": 10,
+      "a_only_correct": 2,
+      "b_only_correct": 1,
+      "choice_changes": 3
+    },
+    {
+      "method_a": "recent_20",
+      "method_b": "native_prefix",
+      "matched_questions": 14,
+      "a_correct": 10,
+      "b_correct": 10,
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "choice_changes": 0
+    }
+  ],
+  "native_historical_pairs": [
+    {
+      "method": "native_prefix",
+      "historical_baseline": "fifo",
+      "matched_questions": 14,
+      "diagnostic_correct": 10,
+      "historical_correct": 10,
+      "diagnostic_only_correct": 0,
+      "historical_only_correct": 0,
+      "comparison_scope": "Exact shared identities; historical session; changed input/history; descriptive development comparison"
+    },
+    {
+      "method": "native_prefix",
+      "historical_baseline": "hermes",
+      "matched_questions": 14,
+      "diagnostic_correct": 10,
+      "historical_correct": 10,
+      "diagnostic_only_correct": 0,
+      "historical_only_correct": 0,
+      "comparison_scope": "Exact shared identities; historical session; changed input/history; descriptive development comparison"
+    },
+    {
+      "method": "native_prefix",
+      "historical_baseline": "causal",
+      "matched_questions": 14,
+      "diagnostic_correct": 10,
+      "historical_correct": 10,
+      "diagnostic_only_correct": 0,
+      "historical_only_correct": 0,
+      "comparison_scope": "Exact shared identities; historical session; changed input/history; descriptive development comparison"
+    }
+  ],
+  "native_historical_choice_changes": {
+    "fifo": 0,
+    "hermes": 0,
+    "causal": 0
+  },
+  "feature_reuse_videos": 8,
+  "gpu_preflight": "pass; zero maximum attention error on checked prefix before/after pruning",
+  "review_rows_pending": 40,
+  "review_pages": 57,
+  "retained_notebook_errors": 0,
+  "elapsed_post_model_s": 100.96117307059467,
+  "limits": [
+    "Saved evidence audit; raw videos/feature tensors and GPU computation cannot be independently rerun from ZIP",
+    "Outcome-selected development sample; no population significance or equivalence claim",
+    "Native answers cover 14 early feasible questions, not all 40",
+    "No verified-support oracle or controlled past-answer intervention executed",
+    "Changed input extent, positions and history do not isolate eviction causation",
+    "Historical comparisons are not same-session efficiency comparisons"
+  ]
+}
