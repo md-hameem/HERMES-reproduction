@@ -2,6 +2,12 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — Neurocomputing manuscript preparation roadmap
+
+- Recorded Neurocomputing as the user's working target and the latest AutoDL run as planned for today, with no new completed results supplied.
+- Added a post-run roadmap covering package auditing, decision branches, original-method selection, matched validation and submission preparation.
+- Added a paper workspace with manuscript outline and a claim/evidence ledger, leaving all unmeasured method/results claims pending.
+
 ## 2026-11-20 — Neurocomputing author-guide intake
 
 - Archived the supplied 19-page guide for authors with exact file hash and reading provenance.

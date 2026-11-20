@@ -4,6 +4,10 @@
 
 This report synthesizes the repository evidence and a targeted primary-source search checked on **19 November 2026**. It distinguishes measured project results, published methods and proposed research. The literature directory contains 51 PDF files, including identifiers and named papers. The search did not exhaustively review every local PDF or certify novelty across all publications. Detailed research notes accompany this report under `docs/research_notes/HERMES journal publication strategy/`.
 
+## Working target selected for preparation, 20 November 2026
+
+The user selected Neurocomputing as the working journal target after reviewing its supplied author guide, and plans to run the latest AutoDL screen today. This supersedes the initial TCSVT-first planning order below. The [publication roadmap](../PUBLICATION_ROADMAP.md) and [paper workspace](../../paper/neurocomputing/README.md) define the next steps after evidence intake. No final original method or completed new pilot result is established. The applicable Q1 and institutional article-recognition checks remain necessary before submission.
+
 ## Later clarification and alternatives, 20 November 2026
 
 The user clarified that Q1 is required and asked for alternatives to TCSVT. The [alternative Q1 shortlist](<HERMES alternative Q1 journal shortlist.md>) now compares TOMM, Neurocomputing, ESWA and EAAI with their source-qualified rankings and exact CCF categories. TOMM is B; the other three are C in the supplied catalogue. Whether C venues qualify through Q1 remains unspecified. Investigate Neurocomputing for a method-centered contribution and TOMM for a multimedia-system contribution, with applicable current JCR eligibility to verify. No verified comparative acceptance-rate claim is made. TCSVT is an initial candidate rather than a committed destination. Conference categories alone do not meet the mandatory journal-Q1 condition.

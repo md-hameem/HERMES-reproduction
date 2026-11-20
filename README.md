@@ -39,6 +39,7 @@ HERMES/
 ├── results/               # Published five-stage summaries and historical Kaggle results
 ├── logs/                  # Historical Kaggle logs
 ├── docs/                  # Research writing, figures and related papers
+├── paper/                 # Manuscript planning and claim/evidence tracking
 ├── asset/                 # Project logo
 ├── models/                # Local model snapshots, excluded from Git
 ├── requirements_*.txt
@@ -93,6 +94,8 @@ The next step is the [evidence-loss diagnostic pilot](docs/FAILURE_PILOT.md). CP
 For the next rented GPU session, upload the [fresh-container AutoDL pilot notebook](notebooks/autodl/hermes-causal-scorer-pilot.ipynb) alone and Run All. Its default fast screen uses eight videos from the small 201–250 archive, shared video features and three matched methods, with a native-attention preflight, resumable checkpoints and a downloadable evidence ZIP. The notebook has local CPU/flow validation; complete AutoDL execution remains pending.
 
 Plan roughly 2–3 hours on an RTX 4090 for a fresh default session, subject to network and GPU performance. This is an estimate rather than a measured pilot runtime. The optional four-video screen uses `PER_OUTCOME=1`. The default two-hour soft experiment budget excludes setup/downloads and saves partial results for resumption. See the [pilot protocol](docs/FAILURE_PILOT.md) for timing ranges, settings and evidence-download instructions.
+
+The user selected **Neurocomputing as the working publication target** on 20 November 2026. The [publication roadmap](docs/PUBLICATION_ROADMAP.md) describes evidence intake after today's run, method selection, matched validation, manuscript preparation and submission checks. The [paper workspace](paper/neurocomputing/README.md) contains an outline and claim/evidence ledger. An original method and its validated benefit remain pending.
 
 ### Original Validated AutoDL Run — 25 October 2026
 
