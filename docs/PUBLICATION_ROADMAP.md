@@ -41,7 +41,7 @@ Publish a short pilot interpretation with question-level examples and explicit l
 | Earlier incorrect answers appear related to later errors | Run a separate controlled history intervention on identical pre-ingestion state. | Generated/corrected/plausibly wrong/question-only histories diagnose causality. Correlation alone is insufficient. |
 | Mixed improvements and regressions | Stratify by actual support age, question type and failure stage; check repeatability. | Avoid selecting a favorable subgroup after seeing results and treating it as confirmation. |
 
-The current notebook implements the scorer diagnostic. It does not implement a validated new refresh rule, history-feedback remedy, oracle-support QA or native full-prefix QA control. Those treatments require separate implementation and validation.
+The original notebook implements the scorer diagnostic. The separate [input diagnostic notebook](../notebooks/autodl/hermes-input-diagnostic.ipynb) now implements fresh-state question-only/recent controls, feasible uncompressed prefixes and optional reviewed-support QA. It has local tests and [run instructions](INPUT_DIAGNOSTIC.md); complete fresh GPU execution remains pending. No validated new refresh rule or history-feedback remedy is implemented.
 
 ## 4. Define one original contribution before the main run
 

@@ -2,6 +2,13 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-20 — AutoDL input/capability diagnostic notebook
+
+- Added an upload-alone notebook and reproducible builder for 120 mandatory fresh-state question-only/recent-frame answers, explicitly feasible uncompressed prefixes and optional human-verified support inputs.
+- Added verified historical video/feature/environment reuse, missing-video-only downloads, pinned sparse source setup with retries, stage/liveness output, question checkpoints, native skip reasons and final failure/success evidence packaging.
+- Added complete original sampled-prefix review pages for seven priority cases, pending support annotations and exact-subset historical paired comparisons. No original-method or same-session speed claim is made.
+- Passed eighteen new local tests, including native small-decoder numerical checks and headless execution of all notebook cells; eleven reused utility and three setup tests also passed. Complete fresh AutoDL GPU execution remains pending.
+
 ## 2026-11-20 — Adversarial research and publication plan
 
 - Added a gated research execution plan with reviewer objections, support/capability tests, conditional feedback/retention hypotheses, matched controls, independent confirmation and compute stopping rules.

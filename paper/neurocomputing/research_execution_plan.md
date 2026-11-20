@@ -107,7 +107,7 @@ Resolve in parallel: institution-accepted Q1 database/category/year, whether CCF
 ## Immediate deliverables
 
 1. A reviewed support sheet copied from the generated queue, with seven initial cases and unresolved ambiguities explicit.
-2. A new resumable AutoDL diagnostic notebook implementing the 120-answer control matrix, feasible native arm and explicit optional annotated-support input. It has not been implemented by this plan.
+2. A new resumable AutoDL diagnostic notebook implementing the 120-answer control matrix, feasible native arm and explicit optional annotated-support input. Subsequently implemented as [hermes-input-diagnostic.ipynb](../../notebooks/autodl/hermes-input-diagnostic.ipynb), with eighteen local tests and [run instructions](../../docs/INPUT_DIAGNOSTIC.md). Fresh GPU execution and interpretation remain pending.
 3. A diagnostic decision memo choosing feedback, retention/readout, input/backbone investigation, or stopping the immediate branch.
 4. A full-method/code comparison against nearest work before implementing the selected proposed contribution.
 5. Only after those gates: one prototype, frozen confirmation plan, and an evidence-led manuscript.
