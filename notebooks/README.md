@@ -4,6 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Construction history selection — next run](autodl/hermes-construction-selection.ipynb) | Six arms and 240 answers at an equal answer-cache budget. [Protocol](../paper/neurocomputing/construction_history_selection_protocol.md). |
 | [Short query-cache workflow](autodl/hermes-short-query-cache.ipynb) | Completed control for physical history removal at preserved positions. [Run notes and audit](../docs/SHORT_QUERY_CACHE.md). |
 | [Matched-boundary workflow](autodl/hermes-matched-boundary.ipynb) | Completed control on the same 40 questions with matched recent encoding groups. [Run notes](../docs/MATCHED_BOUNDARY.md). |
 | [Stage attribution workflow](autodl/hermes-stage-attribution.ipynb) | Base workflow for the 200-answer main matrix. The executed record below contains the final GPU preflight adjustments. [Run notes](../docs/STAGE_ATTRIBUTION.md). |
