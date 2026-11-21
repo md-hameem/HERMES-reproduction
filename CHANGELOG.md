@@ -2,6 +2,11 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-21 — Audited frozen short query confirmation
+
+- Verified the completed v2 ZIP, all 450 answers and the registered comparison. Compact recent-four scores 74/150 versus all-history short readout at 70/150.
+- Published paired outcomes, video sensitivity and the decision to inspect discordant visual evidence before developing another rule.
+
 ## 2026-11-21 — Completed construction selection evidence
 
 - Verified 240 answers, 80 reference replays and paired cost and accuracy. The selector ties both simple rules at 26/40 and adds cost versus recency.

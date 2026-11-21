@@ -21,4 +21,4 @@ The [matched-boundary control](<../../docs/reports/2026-11-21 matched-boundary r
 
 The [completed construction selection pilot](<../../docs/reports/2026-11-21 construction selection results and next decision.md>) shows no accuracy gain over simple two-frame selection and extra cost versus recency. Preserve it as a negative result.
 
-The [frozen confirmation protocol](short_query_confirmation_protocol.md) pins 30 other StreamingBench clips and 150 questions for the comparison of compact, latest-two and all-history short readout. The [AutoDL notebook](../../notebooks/autodl/hermes-short-query-confirmation.ipynb) is ready. Original source overlap remains unverified. External confirmation has a separate data requirement.
+The [frozen confirmation result](<../../docs/reports/2026-11-21 short query confirmation analysis.md>) compares compact, latest-two and all-history short readout on 30 other StreamingBench clips. Compact scores 74/150 and all-history 70/150. The development accuracy gain did not repeat. Retain the controlled findings and review discordant visual evidence before proposing a new method. [Protocol](short_query_confirmation_protocol.md).

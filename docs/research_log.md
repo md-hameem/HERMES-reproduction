@@ -2092,3 +2092,7 @@ The AutoDL run completed 160 answers and 320 timed calls on the same 40 question
 ## 44. Completed construction selection pilot, 21 November 2026
 
 Verified 117 payloads, 240 answers and 80 historical replays. The supplied notebook is the clean source template. Greedy selection ties latest-two and attention mass at 26/40 versus 27/40 for all-history. It lowers the first-layer proxy on 26 of 36 eligible questions and adds a paired median 7.82 ms versus latest-two. Retire the scorer. Test compact recent-four, latest-two and all-history contextual short readout on source-separated footage. [Analysis and decision](<reports/2026-11-21 construction selection results and next decision.md>).
+
+## 45. Audited frozen short query confirmation, 21 November 2026
+
+The completed v2 ZIP matches the executed notebook's final hash. The audit verified 360 payloads and 450 answers on 150 questions from the registered 30 clip IDs. Compact, latest-two and all-history scored 74, 72 and 70. All-history versus compact has four recoveries and eight losses, and omitting any one video leaves a negative point estimate. The video-bootstrap interval is −7.33 to +1.33 points. Review the 12 primary discordances for causal visual support before proposing a new rule. [Analysis](<reports/2026-11-21 short query confirmation analysis.md>).

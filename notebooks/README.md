@@ -23,7 +23,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 | [Executed matched-boundary control](executed/2026-11-21_hermes-matched-boundary.ipynb) | Completed 200 answers, 120 required replays and zero choice changes relative to the preceding stage run. Original bytes preserved. |
 | [Executed short query-cache control](executed/2026-11-21_hermes-short-query-cache.ipynb) | Completed 160 answers, 320 timed calls, 120 required baseline replays and all 40 masked answers reproduced. Original bytes preserved. |
 | [Executed construction selection](executed/2026-11-21_hermes-construction-selection.ipynb) | Completed 240 answers and 80 required replays. Source and final archive hash verified. |
-| [Executed short query confirmation](executed/2026-11-21_hermes-short-query-confirmation.ipynb) | Notebook output shows 450 completed answers. The matching result ZIP is pending. |
+| [Executed short query confirmation](executed/2026-11-21_hermes-short-query-confirmation.ipynb) | Completed and audited 450 answers across 30 frozen clips. [Matching evidence ZIP](../evidence/archives/HERMES_short_query_confirmation_evidence.zip). |
 | [Executed five-stage work file](executed/2026-11-18_hermes-five-stage-autodl.ipynb) | Uploaded completed November run, preserving its exact bytes and outputs |
 | [Historical notebooks](archive/) | Earlier Kaggle development notebooks and the superseded five-stage AutoDL draft |
 

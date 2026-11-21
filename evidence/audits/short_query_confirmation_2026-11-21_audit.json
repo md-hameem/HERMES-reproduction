@@ -1,0 +1,88 @@
+{
+  "status": "pass",
+  "archive_sha256": "291114a32391bbb039e176355688b4b4af269f35ad7a129a73205c73d05575e3",
+  "notebook_sha256": "57873f9a0c2b714cadcc9c00a14ed9f747b09d2c08b7d55648f14a34dd623d12",
+  "payloads": 360,
+  "clips": 30,
+  "exact_unique_media_sha256": 30,
+  "source_overlap": "unverified",
+  "questions": 150,
+  "answers": 450,
+  "empty_history_questions": 5,
+  "transferred_bytes": 4949500665,
+  "elapsed_post_model_s": 700.8758725244552,
+  "summary": [
+    {
+      "arm": "compact_recent4",
+      "answers": 150,
+      "correct": 74,
+      "median_query_kv_bytes": 9793536.0,
+      "median_construction_s": 0.03922742512077093,
+      "median_extraction_s": 0.0,
+      "median_answer_s": 0.141886948607862
+    },
+    {
+      "arm": "latest_two_short_readout",
+      "answers": 150,
+      "correct": 72,
+      "median_query_kv_bytes": 9793536.0,
+      "median_construction_s": 0.02401711791753769,
+      "median_extraction_s": 0.002988196909427643,
+      "median_answer_s": 0.14059568475931883
+    },
+    {
+      "arm": "all_history_short_readout",
+      "answers": 150,
+      "correct": 70,
+      "median_query_kv_bytes": 9793536.0,
+      "median_construction_s": 0.0280496533960104,
+      "median_extraction_s": 0.002966024912893772,
+      "median_answer_s": 0.14366459101438522
+    }
+  ],
+  "primary": {
+    "candidate": "all_history_short_readout",
+    "baseline": "compact_recent4",
+    "wins": 4,
+    "losses": 8,
+    "videos": 30,
+    "questions": 150,
+    "difference_pp": -2.6666666666666665,
+    "ci_low_pp": -7.333333333333333,
+    "ci_high_pp": 1.3333333333333333,
+    "leave_one_video_min_pp": -3.4482758620689653,
+    "leave_one_video_max_pp": -1.3793103448275863
+  },
+  "paired": [
+    {
+      "candidate": "all_history_short_readout",
+      "baseline": "compact_recent4",
+      "wins": 4,
+      "losses": 8,
+      "choice_changes": 19,
+      "videos_positive": 3,
+      "videos_negative": 6,
+      "median_prepared_s_saved": 0.009720176458358765
+    },
+    {
+      "candidate": "latest_two_short_readout",
+      "baseline": "compact_recent4",
+      "wins": 3,
+      "losses": 5,
+      "choice_changes": 14,
+      "videos_positive": 3,
+      "videos_negative": 5,
+      "median_prepared_s_saved": 0.012082356959581375
+    },
+    {
+      "candidate": "all_history_short_readout",
+      "baseline": "latest_two_short_readout",
+      "wins": 2,
+      "losses": 4,
+      "choice_changes": 6,
+      "videos_positive": 1,
+      "videos_negative": 3,
+      "median_prepared_s_saved": -0.002377532422542572
+    }
+  ]
+}

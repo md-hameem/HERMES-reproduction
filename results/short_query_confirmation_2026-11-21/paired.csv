@@ -1,0 +1,4 @@
+candidate,baseline,wins,losses,choice_changes,videos_positive,videos_negative,median_prepared_s_saved
+all_history_short_readout,compact_recent4,4,8,19,3,6,0.009720176458358765
+latest_two_short_readout,compact_recent4,3,5,14,3,5,0.012082356959581375
+all_history_short_readout,latest_two_short_readout,2,4,6,1,3,-0.002377532422542572

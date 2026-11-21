@@ -1,0 +1,40 @@
+candidate,baseline,sample_id,qa_index,task,candidate_choice,baseline_choice,gold,outcome
+all_history_short_readout,compact_recent4,53,0,Action Recognition,B,D,D,-1
+all_history_short_readout,compact_recent4,63,4,Action Recognition,B,A,A,-1
+all_history_short_readout,compact_recent4,80,0,Counting,A,B,D,0
+all_history_short_readout,compact_recent4,82,2,Counting,C,B,A,0
+all_history_short_readout,compact_recent4,108,2,Text-Rich Understanding,D,A,C,0
+all_history_short_readout,compact_recent4,109,3,Text-Rich Understanding,D,C,D,1
+all_history_short_readout,compact_recent4,112,3,Text-Rich Understanding,A,D,A,1
+all_history_short_readout,compact_recent4,113,1,Text-Rich Understanding,A,C,D,0
+all_history_short_readout,compact_recent4,118,1,Text-Rich Understanding,A,B,B,-1
+all_history_short_readout,compact_recent4,121,3,Text-Rich Understanding,D,A,A,-1
+all_history_short_readout,compact_recent4,121,4,Text-Rich Understanding,A,C,C,-1
+all_history_short_readout,compact_recent4,127,0,Attribute Recognition,D,A,C,0
+all_history_short_readout,compact_recent4,131,3,Action Recognition,A,C,C,-1
+all_history_short_readout,compact_recent4,133,0,Spatial Understanding,D,A,B,0
+all_history_short_readout,compact_recent4,133,2,Spatial Understanding,A,C,C,-1
+all_history_short_readout,compact_recent4,133,3,Clips Summarize,B,C,B,1
+all_history_short_readout,compact_recent4,135,1,Spatial Understanding,B,A,D,0
+all_history_short_readout,compact_recent4,140,2,Action Recognition,C,A,C,1
+all_history_short_readout,compact_recent4,146,2,Object Recognition,A,C,C,-1
+latest_two_short_readout,compact_recent4,53,0,Action Recognition,B,D,D,-1
+latest_two_short_readout,compact_recent4,63,4,Action Recognition,B,A,A,-1
+latest_two_short_readout,compact_recent4,80,0,Counting,A,B,D,0
+latest_two_short_readout,compact_recent4,82,2,Counting,C,B,A,0
+latest_two_short_readout,compact_recent4,108,2,Text-Rich Understanding,D,A,C,0
+latest_two_short_readout,compact_recent4,109,3,Text-Rich Understanding,D,C,D,1
+latest_two_short_readout,compact_recent4,113,1,Text-Rich Understanding,A,C,D,0
+latest_two_short_readout,compact_recent4,121,3,Text-Rich Understanding,D,A,A,-1
+latest_two_short_readout,compact_recent4,127,0,Attribute Recognition,D,A,C,0
+latest_two_short_readout,compact_recent4,131,3,Action Recognition,A,C,C,-1
+latest_two_short_readout,compact_recent4,133,0,Spatial Understanding,D,A,B,0
+latest_two_short_readout,compact_recent4,135,1,Spatial Understanding,D,A,D,1
+latest_two_short_readout,compact_recent4,140,2,Action Recognition,C,A,C,1
+latest_two_short_readout,compact_recent4,146,2,Object Recognition,A,C,C,-1
+all_history_short_readout,latest_two_short_readout,112,3,Text-Rich Understanding,A,D,A,1
+all_history_short_readout,latest_two_short_readout,118,1,Text-Rich Understanding,A,B,B,-1
+all_history_short_readout,latest_two_short_readout,121,4,Text-Rich Understanding,A,C,C,-1
+all_history_short_readout,latest_two_short_readout,133,2,Spatial Understanding,A,C,C,-1
+all_history_short_readout,latest_two_short_readout,133,3,Clips Summarize,B,C,B,1
+all_history_short_readout,latest_two_short_readout,135,1,Spatial Understanding,B,D,D,-1

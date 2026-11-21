@@ -1,5 +1,7 @@
 # Frozen short query-cache confirmation
 
+**Run complete:** All 450 answers passed the saved-data audit. The primary point estimate is −2.67 percentage points with a 95% video-bootstrap interval of −7.33 to +1.33. [Analysis and next decision](<../../docs/reports/2026-11-21 short query confirmation analysis.md>).
+
 The first confirmation set contains [30 clips and 150 questions](../../data/streamingbench/short_query_confirmation_manifest.json). It uses the same StreamingBench real-time visual benchmark as the reproduction and excludes the diagnostic clips and targeted failure-review clips. There are 15 clips from each of the two smallest eligible archive shards outside the early reproduction and development bands. The builder ranks clips by a seeded hash and reads clip metadata and the exclusion list. It does not read predictions or accuracy. Rebuild or verify with `python scripts/make_confirmation_manifest.py`.
 
 The local annotation has benchmark IDs and file paths without original source identities. This is a **clip-disjoint, within-benchmark confirmation** with source overlap unverified. The initial HERMES/FIFO evaluation covered this benchmark, so describe prior exposure and keep the original eight development clips outside this estimate. Use a separate benchmark with documented sources to establish external generalization. [StreamingBench source and task construction](https://arxiv.org/html/2411.03628#S3.SS2).
