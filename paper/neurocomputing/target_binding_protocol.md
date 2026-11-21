@@ -24,3 +24,16 @@ Existing work already retrieves historical evidence conditioned on the question 
 Use [the maintained notebook](../../notebooks/autodl/hermes-target-binding.ipynb) in the existing RTX 4090 container and choose **Restart Kernel → Run All**. The verified pilot environment and model can be reused. The four public ZIP indexes returned 11.06 GiB of selected video members during local validation. Allow at least 16 GiB free on the data disk with the existing model/runtime in place. Full archive downloads are unnecessary. Rerun the same notebook with the same work directory and GPU type to resume. A fresh full AutoDL run is pending.
 
 After `TARGET_BINDING_COMPLETE`, save the executed notebook and download `HERMES_target_binding_evidence.zip`. The ZIP includes the frozen manifest, timings, per-window scores and answers, checkpoints, data hashes, summary, and a blinded review worksheet with a separate key when there are selector disagreements. The source videos and model remain in the container.
+
+### Resume a stalled download
+
+If repeated `dataset_range_request` heartbeats show the same byte range and byte count, stop the notebook and restart its kernel to release the run lock. Upload [the terminal prefetch helper](../../scripts/autodl_target_binding_prefetch.py) to `/root/autodl-tmp` and run the following in a terminal.
+
+```bash
+cd /root/autodl-tmp
+PY=/root/autodl-tmp/hermes_target_binding/venv/bin/python
+[ -x "$PY" ] || PY=/root/autodl-tmp/hermes_causal_pilot/venv/bin/python
+"$PY" -u ./autodl_target_binding_prefetch.py
+```
+
+The helper uses the embedded manifest and the existing per-clip receipts. It retries a failed range through the other host with a bounded request and verifies the response, ZIP CRC and clip hash. If both hosts fail with the active proxy settings, try the command with `--direct`. After `MEDIA_PREFETCH_COMPLETE clips=60`, run the original notebook again with the same work directory. The prefetch phase requires no GPU.
