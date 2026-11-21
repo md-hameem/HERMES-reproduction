@@ -4,6 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Target binding](autodl/hermes-target-binding.ipynb) | Next GPU run. Six selectors on 60 frozen clips and 300 questions at a matched four-frame answer budget. [Protocol](../paper/neurocomputing/target_binding_protocol.md). |
 | [Confirmation visual review](autodl/hermes-confirmation-visual-review.ipynb) | CPU-only sheets for the 12 primary discordances from the same 10 cached clips. [Instructions](../docs/CONFIRMATION_VISUAL_REVIEW.md). |
 | [Short query confirmation workflow](autodl/hermes-short-query-confirmation.ipynb) | 30 frozen StreamingBench clips and 450 answers across three fixed arms. [Protocol](../paper/neurocomputing/short_query_confirmation_protocol.md). |
 | [Construction history selection](autodl/hermes-construction-selection.ipynb) | Completed six-arm control with 240 answers at an equal answer-cache budget. [Run result and archived logs](<../docs/reports/2026-11-21 construction selection results and next decision.md>). |

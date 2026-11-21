@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 21 November 2026 after auditing the completed construction selection run. This page is the current project index. Dated entries in the research log and audit retain their historical context.
+Updated 21 November 2026 after the visual review and preparation of the target-binding experiment. Dated entries in the research log and audit retain their historical context.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -131,3 +131,5 @@ Opening-frame replacement recovers three full-prefix errors at fixed input lengt
 **Frozen confirmation audited:** The v2 ZIP verifies all 450 answers. Compact scores 74/150, latest-two 72/150 and all-history 70/150. The primary difference is −2.67 percentage points with a video-bootstrap interval of −7.33 to +1.33. The point estimate remains negative after omitting any one clip. Keep compact as the baseline and review visual support for the 12 primary discordances. [Analysis](<reports/2026-11-21 short query confirmation analysis.md>) · [Results](../results/short_query_confirmation_2026-11-21/).
 
 **Visual review and chart checks complete:** The audit verifies 35 sheets across 12 discordances. The originals confirm an older-only chart match at 112/q3 and a benchmark value discrepancy at 121/q3. Excluding the discrepancy as an exploratory check leaves all-history 2.01 percentage points below compact recent-four. Next, isolate target matching across time before evaluating any new routing rule. [Analysis](<reports/2026-11-21 confirmation visual review analysis.md>) · [Notes](../results/confirmation_visual_review_2026-11-21/).
+
+**Target-binding experiment prepared:** Six selectors, 60 frozen clips, and 300 questions, with 269 eligible for the primary comparison. The experiment compares two rules over identical verifier scores and causal four-frame windows. AutoDL execution is pending. [Notebook](../notebooks/autodl/hermes-target-binding.ipynb) · [Protocol](../paper/neurocomputing/target_binding_protocol.md).

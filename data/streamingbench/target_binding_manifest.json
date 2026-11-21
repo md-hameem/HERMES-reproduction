@@ -1,0 +1,587 @@
+{
+  "annotation_path": "data/streamingbench/streamingbench_realtime.json",
+  "annotation_sha256": "6a2969953e11db44f5f8584d0d9fd3ec47c41dacf63807ef0003ccf446869f73",
+  "seed": "HERMES-target-binding-2026-11-21-v1",
+  "excluded_diagnostic_sample_ids": [
+    35,
+    53,
+    54,
+    57,
+    59,
+    62,
+    63,
+    66,
+    69,
+    71,
+    72,
+    77,
+    80,
+    81,
+    82,
+    86,
+    89,
+    90,
+    91,
+    92,
+    93,
+    108,
+    109,
+    111,
+    112,
+    113,
+    114,
+    118,
+    120,
+    121,
+    123,
+    127,
+    131,
+    133,
+    135,
+    140,
+    146,
+    180,
+    189,
+    212,
+    218,
+    219,
+    222,
+    232,
+    277,
+    302,
+    305,
+    342,
+    349,
+    370,
+    381,
+    385,
+    427,
+    429,
+    431,
+    480,
+    487,
+    489,
+    493,
+    499
+  ],
+  "selection": "Metadata-only SHA256 rank, reserved text-rich clips by shard, then rank-fill",
+  "scope": "New diagnostic clip IDs within StreamingBench; original source overlap unverified",
+  "clips": 60,
+  "questions": 300,
+  "primary_questions": 269,
+  "text_rich_questions": 32,
+  "shards": [
+    {
+      "shard": "101-150",
+      "archive": "Real-Time Visual Understanding_101-150.zip",
+      "archive_bytes": 8218047488,
+      "archive_sha256": "6fdc44e97d1888b471b2d7f55dddace16291c04fdfcaab10433b35fb315bb8b3",
+      "clips": [
+        {
+          "sample_id": 105,
+          "video_id": 421,
+          "video_basename": "sample_105_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 5
+        },
+        {
+          "sample_id": 115,
+          "video_id": 29,
+          "video_basename": "sample_115_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 5
+        },
+        {
+          "sample_id": 116,
+          "video_id": 152,
+          "video_basename": "sample_116_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 2
+        },
+        {
+          "sample_id": 119,
+          "video_id": 333,
+          "video_basename": "sample_119_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 3
+        },
+        {
+          "sample_id": 125,
+          "video_id": 24,
+          "video_basename": "sample_125_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 126,
+          "video_id": 106,
+          "video_basename": "sample_126_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 134,
+          "video_id": 175,
+          "video_basename": "sample_134_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 139,
+          "video_id": 262,
+          "video_basename": "sample_139_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 144,
+          "video_id": 316,
+          "video_basename": "sample_144_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 147,
+          "video_id": 481,
+          "video_basename": "sample_147_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 2
+        },
+        {
+          "sample_id": 149,
+          "video_id": 309,
+          "video_basename": "sample_149_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 2
+        },
+        {
+          "sample_id": 150,
+          "video_id": 274,
+          "video_basename": "sample_150_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 1
+        }
+      ]
+    },
+    {
+      "shard": "151-200",
+      "archive": "Real-Time Visual Understanding_151-200.zip",
+      "archive_bytes": 17984397733,
+      "archive_sha256": "ce4c47e4161a5502f25e9fe9b7ee3929aa839b6916777e3614a81fa31def4472",
+      "clips": [
+        {
+          "sample_id": 153,
+          "video_id": 208,
+          "video_basename": "sample_153_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 156,
+          "video_id": 420,
+          "video_basename": "sample_156_real.mp4",
+          "question_count": 5,
+          "primary_count": 3,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 166,
+          "video_id": 100,
+          "video_basename": "sample_166_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 169,
+          "video_id": 362,
+          "video_basename": "sample_169_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 170,
+          "video_id": 429,
+          "video_basename": "sample_170_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 173,
+          "video_id": 168,
+          "video_basename": "sample_173_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 174,
+          "video_id": 49,
+          "video_basename": "sample_174_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 176,
+          "video_id": 454,
+          "video_basename": "sample_176_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 177,
+          "video_id": 123,
+          "video_basename": "sample_177_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 179,
+          "video_id": 76,
+          "video_basename": "sample_179_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 190,
+          "video_id": 214,
+          "video_basename": "sample_190_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 2
+        },
+        {
+          "sample_id": 197,
+          "video_id": 204,
+          "video_basename": "sample_197_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 1
+        }
+      ]
+    },
+    {
+      "shard": "201-250",
+      "archive": "Real-Time Visual Understanding_201-250.zip",
+      "archive_bytes": 2230277873,
+      "archive_sha256": "b7946e8b678fbf704b9816fa708e6febb77f5c37a7ad884084adf858f5d20dbf",
+      "clips": [
+        {
+          "sample_id": 206,
+          "video_id": 173,
+          "video_basename": "sample_206_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 209,
+          "video_id": 118,
+          "video_basename": "sample_209_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 210,
+          "video_id": 289,
+          "video_basename": "sample_210_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 213,
+          "video_id": 447,
+          "video_basename": "sample_213_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 214,
+          "video_id": 91,
+          "video_basename": "sample_214_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 215,
+          "video_id": 171,
+          "video_basename": "sample_215_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 217,
+          "video_id": 427,
+          "video_basename": "sample_217_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 220,
+          "video_id": 302,
+          "video_basename": "sample_220_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 221,
+          "video_id": 3,
+          "video_basename": "sample_221_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 223,
+          "video_id": 402,
+          "video_basename": "sample_223_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 224,
+          "video_id": 367,
+          "video_basename": "sample_224_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 225,
+          "video_id": 376,
+          "video_basename": "sample_225_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 229,
+          "video_id": 222,
+          "video_basename": "sample_229_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 230,
+          "video_id": 266,
+          "video_basename": "sample_230_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 231,
+          "video_id": 334,
+          "video_basename": "sample_231_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 233,
+          "video_id": 89,
+          "video_basename": "sample_233_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 234,
+          "video_id": 220,
+          "video_basename": "sample_234_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 239,
+          "video_id": 146,
+          "video_basename": "sample_239_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 240,
+          "video_id": 23,
+          "video_basename": "sample_240_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 243,
+          "video_id": 326,
+          "video_basename": "sample_243_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 244,
+          "video_id": 292,
+          "video_basename": "sample_244_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 247,
+          "video_id": 141,
+          "video_basename": "sample_247_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 248,
+          "video_id": 306,
+          "video_basename": "sample_248_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 249,
+          "video_id": 216,
+          "video_basename": "sample_249_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        }
+      ]
+    },
+    {
+      "shard": "251-300",
+      "archive": "Real-Time Visual Understanding_251-300.zip",
+      "archive_bytes": 18838513104,
+      "archive_sha256": "776f78a9338aaa72ed2e8c99a10eeced813c8499988bda29f4205c542a8a577a",
+      "clips": [
+        {
+          "sample_id": 259,
+          "video_id": 411,
+          "video_basename": "sample_259_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 261,
+          "video_id": 270,
+          "video_basename": "sample_261_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 265,
+          "video_id": 236,
+          "video_basename": "sample_265_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 266,
+          "video_id": 290,
+          "video_basename": "sample_266_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 3
+        },
+        {
+          "sample_id": 278,
+          "video_id": 69,
+          "video_basename": "sample_278_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 282,
+          "video_id": 140,
+          "video_basename": "sample_282_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 283,
+          "video_id": 41,
+          "video_basename": "sample_283_real.mp4",
+          "question_count": 5,
+          "primary_count": 5,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 284,
+          "video_id": 484,
+          "video_basename": "sample_284_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 287,
+          "video_id": 164,
+          "video_basename": "sample_287_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 291,
+          "video_id": 300,
+          "video_basename": "sample_291_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        },
+        {
+          "sample_id": 294,
+          "video_id": 272,
+          "video_basename": "sample_294_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 1
+        },
+        {
+          "sample_id": 300,
+          "video_id": 255,
+          "video_basename": "sample_300_real.mp4",
+          "question_count": 5,
+          "primary_count": 4,
+          "text_rich_count": 0
+        }
+      ]
+    }
+  ]
+}

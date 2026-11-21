@@ -22,3 +22,5 @@ The [matched-boundary control](<../../docs/reports/2026-11-21 matched-boundary r
 The [completed construction selection pilot](<../../docs/reports/2026-11-21 construction selection results and next decision.md>) shows no accuracy gain over simple two-frame selection and extra cost versus recency. Preserve it as a negative result.
 
 The [frozen confirmation result](<../../docs/reports/2026-11-21 short query confirmation analysis.md>) compares compact, latest-two and all-history short readout on 30 other StreamingBench clips. Compact scores 74/150 and all-history 70/150. The development accuracy gain did not repeat. Retain the controlled findings and review discordant visual evidence before proposing a new method. [Protocol](short_query_confirmation_protocol.md).
+
+The visual audit confirmed one older-window recovery where the latest frames showed the wrong game. The [target-binding protocol](target_binding_protocol.md) turns that observation into a frozen test of how to rank equal-budget causal windows. The AutoDL notebook is ready for execution. A second backbone and external benchmark are required for the planned generalization test if the candidate advances.
