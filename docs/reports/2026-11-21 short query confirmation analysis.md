@@ -20,4 +20,6 @@ Do not advance unconditional contextual encoding as an accuracy improvement. Ret
 
 The next useful work is a **visual evidence review of the 12 primary discordant questions**. Compare the frames actually available before each query and document whether decisive evidence appears in the recent four, in older history, in both, or in neither. Keep visible evidence and annotation ambiguity separate. This is a diagnostic follow-up after seeing outcomes. Use it to identify a mechanism that predicts when history could help, then evaluate any resulting rule on footage kept separate from both development and confirmation. Avoid tuning the older-frame count on these 30 clips. A distinct validated method for the Q1 submission remains open.
 
+The [CPU review workflow](../CONFIRMATION_VISUAL_REVIEW.md) is ready. It uses the saved clips and frame IDs from this run.
+
 [Audited tables](../../results/short_query_confirmation_2026-11-21/) · [Audit and hashes](../../evidence/audits/short_query_confirmation_2026-11-21_audit.json) · [Executed notebook](../../notebooks/executed/2026-11-21_hermes-short-query-confirmation.ipynb)
