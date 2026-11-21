@@ -31,7 +31,9 @@ def bounded_reader(pilot, curl, direct):
                     headers, body = Path(scratch) / "headers", Path(scratch) / "body"
                     command = [curl, "-q", "-fsSL", "--connect-timeout", "8", "--max-time", "50",
                                "--speed-limit", "32768", "--speed-time", "12", "--max-redirs", "8",
-                               "--max-filesize", str(count), "--header", "Accept-Encoding: identity",
+                               # Keep a transfer ceiling independent of the requested span. Small
+                               # ZIP tail reads can redirect through responses longer than the span.
+                               "--max-filesize", str(2 * self.block_size), "--header", "Accept-Encoding: identity",
                                "--range", f"{start}-{end}", "--dump-header", str(headers),
                                "--output", str(body), *proxy, endpoint]
                     try:
