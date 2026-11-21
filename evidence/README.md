@@ -78,3 +78,5 @@ The [completed v2 archive](archives/HERMES_short_query_confirmation_evidence.zip
 ## Confirmation visual review received 21 November 2026
 
 The [visual review ZIP](archives/HERMES_confirmation_visual_review.zip) matches the final hash in the [executed notebook](../notebooks/executed/2026-11-21_hermes-confirmation-visual-review.ipynb). The package contains all 35 contact sheets and 231 frame slots. The submitted notes were blank and remain intact. Run `python scripts/validate_confirmation_visual_review_evidence.py` to verify the saved material. [Analyst observations](../results/confirmation_visual_review_2026-11-21/) · [Audit](audits/confirmation_visual_review_2026-11-21_audit.json).
+
+The follow-up ZIP (SHA256 `dbe820afbb90e5f60cc5e479250da07f0f33812bf6ce03443c5b3ca2fdb7d526`) adds two PNGs. Every original ZIP member matches byte for byte. The [verified PNGs](../results/confirmation_visual_review_2026-11-21/originals/) are tracked directly, and the full follow-up ZIP is preserved under ignored `local/confirmation_visual_review_2026-11-21/`.

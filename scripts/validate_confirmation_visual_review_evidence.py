@@ -2,7 +2,8 @@
 import csv
 import io
 import json
-from collections import Counter
+import random
+from collections import Counter, defaultdict
 from pathlib import PurePosixPath
 from zipfile import ZipFile
 
@@ -14,6 +15,44 @@ ARCHIVE = ROOT / "evidence/archives/HERMES_confirmation_visual_review.zip"
 NOTEBOOK = ROOT / f"notebooks/executed/{DATE}_hermes-confirmation-visual-review.ipynb"
 ARCHIVE_SHA = "1c3facd389dda4d2d92d6064ee193da44422471e37fb08cb6d31f474504bb1d9"
 NOTEBOOK_SHA = "003fc0fcf0f78dee77137ed65b53a597784e1b26c330c0f4065275b62827faf9"
+ORIGINALS = (
+    ("sample_112_q3", 273, (1920, 1080), "89ff1f9ac9154bb7889b18bfc6c2153b54cf94fa19912c268129c2223346c55e"),
+    ("sample_121_q3", 278, (1920, 960), "629938fd57e6e715fc655d6add83ff6d8c4e50c4baafc208cb06e542ec168919"),
+)
+
+
+def verify_originals_and_sensitivity(tables, cases):
+    from PIL import Image
+    from validate_short_query_confirmation_evidence import ARCHIVE as PARENT_ARCHIVE
+
+    originals = []
+    for case_id, index, size, digest in ORIGINALS:
+        path = tables / "originals" / f"{case_id}_sample_{index:04d}.png"
+        assert sha(path.read_bytes()) == digest
+        with Image.open(path) as image:
+            assert image.format == "PNG" and image.size == size
+            image.verify()
+        frame = next(f for f in cases[case_id]["frames"] if f["sampled_index"] == index)
+        originals.append(dict(case_id=case_id, filename=path.name, sha256=digest, **frame))
+    by_video, correct = defaultdict(list), Counter()
+    with ZipFile(PARENT_ARCHIVE) as zipped:
+        for name in zipped.namelist():
+            if not name.startswith("checkpoints/") or name.endswith("/sample_121_q3.json"):
+                continue
+            compact, latest, all_history = json.loads(zipped.read(name))["rows"]
+            correct.update({r["method"]: r["correct"] for r in (compact, latest, all_history)})
+            by_video[compact["sample_id"]].append(all_history["correct"] - compact["correct"])
+    rng = random.Random(2024)
+    groups = [(sum(v), len(v)) for v in by_video.values()]
+    assert len(groups) == 30 and sum(n for _, n in groups) == 149
+    draws = []
+    for _ in range(10000):
+        draw = rng.choices(groups, k=len(groups))
+        draws.append(100 * sum(w for w, _ in draw) / sum(n for _, n in draw))
+    draws.sort()
+    return dict(originals=originals, exploratory_exclusion=dict(case_id="sample_121_q3", questions=149,
+        correct=dict(correct), all_history_vs_compact_pp=100 * sum(w for w, _ in groups) / 149,
+        ci_low_pp=draws[250], ci_high_pp=draws[9750]))
 
 
 def audit(tables, destination):
@@ -102,6 +141,7 @@ def audit(tables, destination):
                   sheets=len(expected_sheets), frame_slots=len(frame_slots), uploaded_notes_filled=0,
                   original_resolution_frames=0, analyst_support_counts=counts,
                   verification_limit="Saved frame maps and JPEGs verified. Raw video decoding was not repeated locally.")
+    result["original_frame_supplement"] = verify_originals_and_sensitivity(tables, cases)
     destination.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     return result
 

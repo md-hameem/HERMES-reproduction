@@ -41,5 +41,39 @@
       "compact_wins": 2
     }
   ],
-  "verification_limit": "Saved frame maps and JPEGs verified. Raw video decoding was not repeated locally."
+  "verification_limit": "Saved frame maps and JPEGs verified. Raw video decoding was not repeated locally.",
+  "original_frame_supplement": {
+    "originals": [
+      {
+        "case_id": "sample_112_q3",
+        "filename": "sample_112_q3_sample_0273.png",
+        "sha256": "89ff1f9ac9154bb7889b18bfc6c2153b54cf94fa19912c268129c2223346c55e",
+        "sampled_index": 273,
+        "source_frame": 32727,
+        "start_s": 545.9954833984375,
+        "region": "older"
+      },
+      {
+        "case_id": "sample_121_q3",
+        "filename": "sample_121_q3_sample_0278.png",
+        "sha256": "629938fd57e6e715fc655d6add83ff6d8c4e50c4baafc208cb06e542ec168919",
+        "sampled_index": 278,
+        "source_frame": 33360,
+        "start_s": 556.0,
+        "region": "recent"
+      }
+    ],
+    "exploratory_exclusion": {
+      "case_id": "sample_121_q3",
+      "questions": 149,
+      "correct": {
+        "compact_recent4": 73,
+        "latest_two_short_readout": 72,
+        "all_history_short_readout": 70
+      },
+      "all_history_vs_compact_pp": -2.0134228187919465,
+      "ci_low_pp": -6.040268456375839,
+      "ci_high_pp": 2.0
+    }
+  }
 }
