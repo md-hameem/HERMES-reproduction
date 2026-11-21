@@ -74,3 +74,7 @@ The subsequently saved [executed notebook](../notebooks/executed/2026-11-21_herm
 ## Short query confirmation notebook received 21 November 2026
 
 The [completed v2 archive](archives/HERMES_short_query_confirmation_evidence.zip) matches the final SHA256 in the [executed notebook](../notebooks/executed/2026-11-21_hermes-short-query-confirmation.ipynb). Run `python scripts/validate_short_query_confirmation_evidence.py` to verify all 360 payloads, 150 question checkpoints, 450 answers and the video-paired comparison. The separate v1 checksum-failure ZIP remains under ignored `local/short_query_confirmation_v1_failed/`. [Audit and hashes](audits/short_query_confirmation_2026-11-21_audit.json) · [Tables](../results/short_query_confirmation_2026-11-21/).
+
+## Confirmation visual review received 21 November 2026
+
+The [visual review ZIP](archives/HERMES_confirmation_visual_review.zip) matches the final hash in the [executed notebook](../notebooks/executed/2026-11-21_hermes-confirmation-visual-review.ipynb). The package contains all 35 contact sheets and 231 frame slots. The submitted notes were blank and remain intact. Run `python scripts/validate_confirmation_visual_review_evidence.py` to verify the saved material. [Analyst observations](../results/confirmation_visual_review_2026-11-21/) · [Audit](audits/confirmation_visual_review_2026-11-21_audit.json).

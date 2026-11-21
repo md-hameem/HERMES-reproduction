@@ -1,5 +1,7 @@
 # Visual review of the confirmation disagreements
 
+The completed ZIP includes all 35 requested sheets. The first analyst pass found recent evidence in nine cases, one older-only candidate and two uncertain cases. [Findings and original-frame checks](<reports/2026-11-21 confirmation visual review analysis.md>).
+
 Run [hermes-confirmation-visual-review.ipynb](../notebooks/autodl/hermes-confirmation-visual-review.ipynb) in the same AutoDL workspace. It can run on CPU. Keep the existing confirmation videos in `/root/autodl-tmp/hermes_short_query_confirmation_v2/videos` and the shared Python environment in `/root/autodl-tmp/hermes_causal_pilot/venv`. It uses the existing Decord and Pillow packages to render frames.
 
 The case list is the 12 primary correctness disagreements from the [audited confirmation](<reports/2026-11-21 short query confirmation analysis.md>). These cover 10 clips. The notebook checks the video hashes, uses the recorded source frame IDs, verifies decoder timestamps and rejects post-query frames. It renders the recent four separately from the older frames used during full-history construction.

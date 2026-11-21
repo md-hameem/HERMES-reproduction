@@ -1,0 +1,7 @@
+support_region,all_history_wins,compact_wins
+recent_only,1,3
+older_only,1,0
+both_independently,2,3
+needs_both,0,0
+not_visible,0,0
+uncertain,0,2

@@ -4,7 +4,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
-| [Confirmation visual review — next run](autodl/hermes-confirmation-visual-review.ipynb) | CPU-only sheets for the 12 primary discordances from the same 10 cached clips. [Instructions](../docs/CONFIRMATION_VISUAL_REVIEW.md). |
+| [Confirmation visual review](autodl/hermes-confirmation-visual-review.ipynb) | CPU-only sheets for the 12 primary discordances from the same 10 cached clips. [Instructions](../docs/CONFIRMATION_VISUAL_REVIEW.md). |
 | [Short query confirmation workflow](autodl/hermes-short-query-confirmation.ipynb) | 30 frozen StreamingBench clips and 450 answers across three fixed arms. [Protocol](../paper/neurocomputing/short_query_confirmation_protocol.md). |
 | [Construction history selection](autodl/hermes-construction-selection.ipynb) | Completed six-arm control with 240 answers at an equal answer-cache budget. [Run result and archived logs](<../docs/reports/2026-11-21 construction selection results and next decision.md>). |
 | [Short query-cache workflow](autodl/hermes-short-query-cache.ipynb) | Completed control for physical history removal at preserved positions. [Run notes and audit](../docs/SHORT_QUERY_CACHE.md). |
@@ -25,6 +25,7 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 | [Executed short query-cache control](executed/2026-11-21_hermes-short-query-cache.ipynb) | Completed 160 answers, 320 timed calls, 120 required baseline replays and all 40 masked answers reproduced. Original bytes preserved. |
 | [Executed construction selection](executed/2026-11-21_hermes-construction-selection.ipynb) | Completed 240 answers and 80 required replays. Source and final archive hash verified. |
 | [Executed short query confirmation](executed/2026-11-21_hermes-short-query-confirmation.ipynb) | Completed and audited 450 answers across 30 frozen clips. [Matching evidence ZIP](../evidence/archives/HERMES_short_query_confirmation_evidence.zip). |
+| [Executed confirmation visual review](executed/2026-11-21_hermes-confirmation-visual-review.ipynb) | Generated 35 contact sheets. The archived analyst notes are separate from the submitted blank form. |
 | [Executed five-stage work file](executed/2026-11-18_hermes-five-stage-autodl.ipynb) | Uploaded completed November run, preserving its exact bytes and outputs |
 | [Historical notebooks](archive/) | Earlier Kaggle development notebooks and the superseded five-stage AutoDL draft |
 

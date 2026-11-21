@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "archive_sha256": "1c3facd389dda4d2d92d6064ee193da44422471e37fb08cb6d31f474504bb1d9",
+  "notebook_sha256": "003fc0fcf0f78dee77137ed65b53a597784e1b26c330c0f4065275b62827faf9",
+  "parent_archive_sha256": "291114a32391bbb039e176355688b4b4af269f35ad7a129a73205c73d05575e3",
+  "clips": 10,
+  "cases": 12,
+  "sheets": 35,
+  "frame_slots": 231,
+  "uploaded_notes_filled": 0,
+  "original_resolution_frames": 0,
+  "analyst_support_counts": [
+    {
+      "support_region": "recent_only",
+      "all_history_wins": 1,
+      "compact_wins": 3
+    },
+    {
+      "support_region": "older_only",
+      "all_history_wins": 1,
+      "compact_wins": 0
+    },
+    {
+      "support_region": "both_independently",
+      "all_history_wins": 2,
+      "compact_wins": 3
+    },
+    {
+      "support_region": "needs_both",
+      "all_history_wins": 0,
+      "compact_wins": 0
+    },
+    {
+      "support_region": "not_visible",
+      "all_history_wins": 0,
+      "compact_wins": 0
+    },
+    {
+      "support_region": "uncertain",
+      "all_history_wins": 0,
+      "compact_wins": 2
+    }
+  ],
+  "verification_limit": "Saved frame maps and JPEGs verified. Raw video decoding was not repeated locally."
+}
