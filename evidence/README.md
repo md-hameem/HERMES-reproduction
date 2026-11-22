@@ -4,6 +4,8 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 
 | Location | Contents |
 |---|---|
+| [Target-binding archive](archives/HERMES_target_binding_evidence.zip) | Original 60-clip run, 300 checkpoints, 1,800 selector outcomes and blinded window-pair worksheet |
+| [Target-binding audit](audits/target_binding_2026-11-22_audit.json) | Reconstructed integrity, candidate windows, selector outputs, paired estimates and component timing |
 | [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |
 | [Context-diagnostic audit](audits/context_diagnostic_2026-11-20_audit.json) | Independent source-slot/position/partition, replay, status and paired-export verification |
 | [Input-diagnostic archive](archives/HERMES_input_diagnostic_evidence.zip) | Completed input controls: 287 manifest payloads, 200 checkpoints, 134 answers, 66 explicit skips and 57 review pages |

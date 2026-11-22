@@ -1,0 +1,102 @@
+{
+  "status": "pass",
+  "archive_sha256": "7f1c8795fbb72f28aa5b43e2aebc1d2edfee79c2aec6341e088f833966fcd01c",
+  "notebook_sha256": "9b7f80466e4bea5c9c05d292c1a93c930804e685fe0fa755f0aa895945ead531",
+  "payload_files": 395,
+  "videos": 60,
+  "questions": 300,
+  "selector_outcomes": 1800,
+  "candidate_windows": 1295,
+  "elapsed_post_model_s": 1847.5200960431248,
+  "primary_questions": 269,
+  "text_rich_primary_questions": 23,
+  "media_bytes": 11880474167,
+  "primary_correct": {
+    "recent": 156,
+    "previous": 141,
+    "global_relevance": 147,
+    "target_only": 150,
+    "mean": 152,
+    "conjunction": 147
+  },
+  "primary_oracle_correct": 189,
+  "older_only_correct": 33,
+  "recent_only_correct": 14,
+  "both_correct": 142,
+  "neither_correct": 80,
+  "blind_review_pairs": 64,
+  "paired": {
+    "primary": {
+      "candidate": "conjunction",
+      "baseline": "mean",
+      "wins": 2,
+      "losses": 7,
+      "window_changes": 64,
+      "questions": 269,
+      "videos": 60,
+      "difference_pp": -1.858736059479554,
+      "ci_low_pp": -4.395604395604396,
+      "ci_high_pp": 0.37453183520599254,
+      "leave_one_video_min_pp": -2.272727272727273,
+      "leave_one_video_max_pp": -1.1363636363636365
+    },
+    "secondary": [
+      {
+        "candidate": "conjunction",
+        "baseline": "recent",
+        "wins": 14,
+        "losses": 23,
+        "window_changes": 175,
+        "questions": 269,
+        "videos": 60,
+        "difference_pp": -3.345724907063197,
+        "ci_low_pp": -7.636363636363637,
+        "ci_high_pp": 0.7352941176470589,
+        "leave_one_video_min_pp": -3.787878787878788,
+        "leave_one_video_max_pp": -2.2641509433962264
+      },
+      {
+        "candidate": "conjunction",
+        "baseline": "global_relevance",
+        "wins": 9,
+        "losses": 9,
+        "window_changes": 102,
+        "questions": 269,
+        "videos": 60,
+        "difference_pp": 0.0,
+        "ci_low_pp": -3.3962264150943398,
+        "ci_high_pp": 3.345724907063197,
+        "leave_one_video_min_pp": -0.3787878787878788,
+        "leave_one_video_max_pp": 0.7575757575757576
+      },
+      {
+        "candidate": "conjunction",
+        "baseline": "target_only",
+        "wins": 9,
+        "losses": 12,
+        "window_changes": 110,
+        "questions": 269,
+        "videos": 60,
+        "difference_pp": -1.1152416356877324,
+        "ci_low_pp": -4.395604395604396,
+        "ci_high_pp": 1.9011406844106464,
+        "leave_one_video_min_pp": -1.5151515151515151,
+        "leave_one_video_max_pp": -0.3787878787878788
+      },
+      {
+        "candidate": "conjunction",
+        "baseline": "previous",
+        "wins": 27,
+        "losses": 21,
+        "window_changes": 222,
+        "questions": 269,
+        "videos": 60,
+        "difference_pp": 2.2304832713754648,
+        "ci_low_pp": -2.573529411764706,
+        "ci_high_pp": 7.011070110701107,
+        "leave_one_video_min_pp": 1.509433962264151,
+        "leave_one_video_max_pp": 3.0303030303030303
+      }
+    ]
+  }
+}
