@@ -1,0 +1,248 @@
+{
+  "archive_sha256": "03182751d6e2c166f5d37673a0acddd3e7a736c2c6570b20fe509c5e9079de60",
+  "notebook_sha256": "526694851dfd7467e54a8c6a05e818582d350df35bae7d37bef6aa22900285fe",
+  "verified_payloads": 24,
+  "previous_archive_sha256": "1012290654a465153fc4fc9853990695d92f7b8dbbc54d4c0bfbb59743c39701",
+  "preflight": {
+    "status": "pass",
+    "pair_id": "twinpast_0208",
+    "checks": [
+      {
+        "order": "canonical",
+        "max_native_cache_diff": 0.015625
+      },
+      {
+        "order": "reversed",
+        "max_native_cache_diff": 0.015625
+      }
+    ],
+    "peak_gpu_allocated_bytes": 17748245504
+  },
+  "peak_gpu_allocated_bytes": 17748245504,
+  "pairs": 7,
+  "scores": 28,
+  "historical_state_robust": 2,
+  "historical_state_total": 4,
+  "positive_control_robust": 3,
+  "positive_control_total": 3,
+  "development_criterion_met": true,
+  "per_pair": [
+    {
+      "pair_id": "twinpast_0208",
+      "cohort": "historical_state",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.046875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.140625
+          }
+        },
+        "robust": false
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 1.78125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 2.53125
+          }
+        },
+        "robust": false
+      },
+      "peak_gpu_allocated_bytes": 17748245504
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "cohort": "historical_state",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.90625
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.984375
+          }
+        },
+        "robust": false
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 4.90625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 4.28125
+          }
+        },
+        "robust": true
+      },
+      "peak_gpu_allocated_bytes": 17725822464
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "cohort": "historical_state",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.03125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          }
+        },
+        "robust": false
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.0625
+          }
+        },
+        "robust": false
+      },
+      "peak_gpu_allocated_bytes": 17742639616
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "cohort": "historical_state",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": -0.09375
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          }
+        },
+        "robust": false
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 1.265625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 1.28125
+          }
+        },
+        "robust": true
+      },
+      "peak_gpu_allocated_bytes": 17730494464
+    },
+    {
+      "pair_id": "twinpast_0185",
+      "cohort": "positive_control",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 1.1875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 0.453125
+          }
+        },
+        "robust": true
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 7.671875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 8.796875
+          }
+        },
+        "robust": true
+      },
+      "peak_gpu_allocated_bytes": 16996128768
+    },
+    {
+      "pair_id": "twinpast_0079",
+      "cohort": "positive_control",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 2.875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 4.375
+          }
+        },
+        "robust": true
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 10.3515625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 10.6796875
+          }
+        },
+        "robust": true
+      },
+      "peak_gpu_allocated_bytes": 16987719680
+    },
+    {
+      "pair_id": "twinpast_0236",
+      "cohort": "positive_control",
+      "prior": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 2.71875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 2.078125
+          }
+        },
+        "robust": true
+      },
+      "current": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 8.578125
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 8.25
+          }
+        },
+        "robust": true
+      },
+      "peak_gpu_allocated_bytes": 16983048192
+    }
+  ]
+}

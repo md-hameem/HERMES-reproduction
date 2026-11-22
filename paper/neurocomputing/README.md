@@ -1,8 +1,9 @@
 # Neurocomputing paper preparation
 
-Working target selected by the user on 20 November 2026. Intended route is a regular research article with an original neural-inference improvement. The eight-video GPU screen is complete and all methods score 24/40; no validated original method or final paper title has been established. No manuscript has been submitted.
+Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. The first automatic-selection screen tied uniform and relevance at 3/7 robust pairs. The next milestone is a candidate-pool capability check on four historical-state pairs.
 
-- [Publication roadmap](../../docs/PUBLICATION_ROADMAP.md) describes the steps after today's AutoDL screen.
+- [Phased Neurocomputing plan](submission_phase_plan.md) records current evidence, advancement criteria, confirmation, submission and revision.
+- [Publication roadmap](../../docs/PUBLICATION_ROADMAP.md) records the progression from the AutoDL scorer screen to TwinPast.
 - [Manuscript outline](manuscript_outline.md) separates draftable background from result-dependent sections.
 - [Claim/evidence ledger](claim_evidence.csv) records which statements have support and which remain pending. Pending rows are research questions, not manuscript findings.
 - [Journal requirements](<../../docs/reports/Neurocomputing submission requirements and HERMES readiness.md>) records the supplied guide with page references.
@@ -25,4 +26,4 @@ The [frozen confirmation result](<../../docs/reports/2026-11-21 short query conf
 
 The [completed target-binding experiment](<../../docs/reports/2026-11-22 target binding analysis.md>) found that using the weaker verifier score fell short of averaging and of recent-only on the frozen sample. The [blinded review](<../../docs/reports/2026-11-23 blinded visual support first pass.md>) also fell short of the same-clip pilot threshold in a single-reviewer assessment.
 
-The [historical-correction execution plan](historical_correction_execution_plan.md) defines the conditional follow-ups. The immediate experiment swaps two earlier frames while holding the recent frames fixed on nine screened TwinPast development pairs. The [CPU audit](<../../docs/reports/2026-11-23 twinpast development review.md>) records the matched frames and evidence checks. GPU outcomes, method validation and confirmation are pending.
+The [historical-correction execution plan](historical_correction_execution_plan.md) records the fixed-recent history swap. The [automatic-selection analysis](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>) records the method comparison and candidate-pool follow-up.

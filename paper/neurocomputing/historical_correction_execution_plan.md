@@ -2,7 +2,7 @@
 
 **Decision on 22 November 2026:** The next experiment is defined. The active milestone is blinded visual-support review. Recent-first correction remains a candidate method, with originality and performance still open.
 
-**23 November update:** The review packet and one blinded pass are complete. The first pass found only two questions with clear earlier support. The GPU pilot stays pending an independent review and enough matched cases. [First-pass findings](<../../docs/reports/2026-11-23 blinded visual support first pass.md>)
+**23 November update.** The StreamingBench same-clip pilot stays pending an independent review and enough matched cases. The first TwinPast automatic-selection screen tied uniform and relevance at 3/7, and the history-control variant fell to 1/7. Check candidate-pool capability before trying another policy. [StreamingBench findings](<../../docs/reports/2026-11-23 blinded visual support first pass.md>) · [Automatic-selection findings](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>)
 
 The local independent reviewer packet is `evidence/local/target_binding_2026-11-22/HERMES_independent_reviewer_packet.zip`. It includes the same sheets and an empty `independent_review.csv` with explicit option, supporting frame and temporal validity fields. Validate the returned CSV with `python scripts/prepare_independent_support_review.py --validate PATH_TO_CSV` before reconciling the two reviews.
 

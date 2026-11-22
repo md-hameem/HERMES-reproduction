@@ -1,0 +1,142 @@
+{
+  "archive_sha256": "976fb04edcb1bd849d524d1a5ab10f9e9cb622f6cf6d686b348a0137ad415ed3",
+  "notebook_sha256": "ffe3f16253ca6c0a6e98b2264ec32c3ac0b9499bece54f29c6c014fcc4b72a0b",
+  "verified_zip_payloads": 24,
+  "runtime": {
+    "bundle_sha256": "451af6336af2e67906a9d9f3263cc22d210adaaf6ecfa8c3a8ad826a68d3d004",
+    "runner_sha256": "5f4e15c54168502763fb8ad2054e6c701e7440a09295b01240ef05e3865066f0",
+    "model_name": "74dd0bf867a4cda7950c17663794267c60cf4b40",
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "cuda": "12.8",
+    "driver": null
+  },
+  "preflight": {
+    "status": "pass",
+    "pair_id": "twinpast_0208",
+    "checks": [
+      {
+        "order": "canonical",
+        "native_cache_max_abs": 0.015625
+      },
+      {
+        "order": "reversed",
+        "native_cache_max_abs": 0.015625
+      }
+    ]
+  },
+  "pairs": 9,
+  "scores": 72,
+  "robust_correct_pairs": 3,
+  "order_summary": {
+    "canonical": {
+      "correct_branches": 13,
+      "both_correct": 4,
+      "unchanged": 5,
+      "wrong_reversals": 0,
+      "recent_four_correct_branches": 9,
+      "question_only_correct_branches": 9,
+      "recoveries_vs_recent": 5,
+      "regressions_vs_recent": 1,
+      "median_directional_change": 0.546875,
+      "positive_direction_pairs": 8
+    },
+    "reversed": {
+      "correct_branches": 12,
+      "both_correct": 3,
+      "unchanged": 6,
+      "wrong_reversals": 0,
+      "recent_four_correct_branches": 9,
+      "question_only_correct_branches": 9,
+      "recoveries_vs_recent": 3,
+      "regressions_vs_recent": 0,
+      "median_directional_change": 0.265625,
+      "positive_direction_pairs": 9
+    }
+  },
+  "numeric_development_gate": false,
+  "source_groups_verified": false,
+  "per_pair": [
+    {
+      "pair_id": "twinpast_0208",
+      "task": "HSR",
+      "canonical_correct_branches": 1,
+      "canonical_directional_change": 0.03125,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 0.03125,
+      "both_orders_correct": false
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "task": "HSR",
+      "canonical_correct_branches": 1,
+      "canonical_directional_change": 0.546875,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 0.265625,
+      "both_orders_correct": false
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "task": "HSR",
+      "canonical_correct_branches": 1,
+      "canonical_directional_change": 0.015625,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 0.03125,
+      "both_orders_correct": false
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "task": "HSR",
+      "canonical_correct_branches": 1,
+      "canonical_directional_change": -0.015625,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 0.109375,
+      "both_orders_correct": false
+    },
+    {
+      "pair_id": "twinpast_0185",
+      "task": "AIR",
+      "canonical_correct_branches": 2,
+      "canonical_directional_change": 0.953125,
+      "reversed_correct_branches": 2,
+      "reversed_directional_change": 0.265625,
+      "both_orders_correct": true
+    },
+    {
+      "pair_id": "twinpast_0214",
+      "task": "AIR",
+      "canonical_correct_branches": 2,
+      "canonical_directional_change": 0.140625,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 0.0625,
+      "both_orders_correct": false
+    },
+    {
+      "pair_id": "twinpast_0079",
+      "task": "AIR",
+      "canonical_correct_branches": 2,
+      "canonical_directional_change": 2.4375,
+      "reversed_correct_branches": 2,
+      "reversed_directional_change": 3.65625,
+      "both_orders_correct": true
+    },
+    {
+      "pair_id": "twinpast_0236",
+      "task": "AIR",
+      "canonical_correct_branches": 2,
+      "canonical_directional_change": 2.09375,
+      "reversed_correct_branches": 2,
+      "reversed_directional_change": 1.671875,
+      "both_orders_correct": true
+    },
+    {
+      "pair_id": "twinpast_0036",
+      "task": "AIR",
+      "canonical_correct_branches": 1,
+      "canonical_directional_change": 1.25,
+      "reversed_correct_branches": 1,
+      "reversed_directional_change": 2.328125,
+      "both_orders_correct": false
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "archive_sha256": "1012290654a465153fc4fc9853990695d92f7b8dbbc54d4c0bfbb59743c39701",
+  "notebook_sha256": "e82c9d42cb8c1a99bff989661ec2cbf3721d1021c9aa03a040b463dfef7d7991",
+  "previous_archive_sha256": "976fb04edcb1bd849d524d1a5ab10f9e9cb622f6cf6d686b348a0137ad415ed3",
+  "verified_payloads": 32,
+  "preflight": {
+    "status": "pass",
+    "checks": [
+      {
+        "order": "canonical",
+        "max_native_cache_diff": 0.0
+      },
+      {
+        "order": "reversed",
+        "max_native_cache_diff": 0.0
+      }
+    ]
+  },
+  "score_counts": {
+    "two_scores": 36,
+    "dense_scores": 16
+  },
+  "pairs": 9,
+  "two_history_only_robust": 3,
+  "restored_from_original": 0,
+  "lost_from_original": 0,
+  "dense_pairs": 4,
+  "dense_robust": 0,
+  "per_pair": [
+    {
+      "pair_id": "twinpast_0208",
+      "task": "HSR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.03125
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 0.046875
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false,
+      "dense_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.046875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.140625
+          }
+        },
+        "robust": false
+      }
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "task": "HSR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 0.6875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.4375
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false,
+      "dense_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.90625
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.984375
+          }
+        },
+        "robust": false
+      }
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "task": "HSR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.046875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.0
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false,
+      "dense_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.03125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          }
+        },
+        "robust": false
+      }
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "task": "HSR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": -0.046875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.046875
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false,
+      "dense_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": -0.09375
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          }
+        },
+        "robust": false
+      }
+    },
+    {
+      "pair_id": "twinpast_0185",
+      "task": "AIR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 1.1875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 0.453125
+          }
+        },
+        "robust": true
+      },
+      "prior_history_with_recent_robust": true
+    },
+    {
+      "pair_id": "twinpast_0214",
+      "task": "AIR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.21875
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.015625
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false
+    },
+    {
+      "pair_id": "twinpast_0079",
+      "task": "AIR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 2.875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 4.375
+          }
+        },
+        "robust": true
+      },
+      "prior_history_with_recent_robust": true
+    },
+    {
+      "pair_id": "twinpast_0236",
+      "task": "AIR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 2.71875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 2.078125
+          }
+        },
+        "robust": true
+      },
+      "prior_history_with_recent_robust": true
+    },
+    {
+      "pair_id": "twinpast_0036",
+      "task": "AIR",
+      "two_history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.53125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 1.84375
+          }
+        },
+        "robust": false
+      },
+      "prior_history_with_recent_robust": false
+    }
+  ]
+}

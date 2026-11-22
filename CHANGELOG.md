@@ -2,6 +2,13 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-23 — TwinPast capability studies and automatic-selection results
+
+- Archived and audited the fixed-recent 0.5B run, history-only follow-up, exact-frame 7B replay, and 7B fixed-recent and automatic-selection runs.
+- Verified that 7B preserved both historical-state recoveries and all three positive controls when recent frames were added to curated histories.
+- Recomputed all six automatic method paths. Uniform and relevance each passed 3/7 robust pairs. The history-control rule recovered one and regressed six branch-order answers versus direct decoding on the same frames.
+- Added a four-pair AutoDL diagnostic that compares capped and denser causal candidate pools under a fixed ten-frame input budget. GPU execution is pending.
+
 ## 2026-11-23 — Blinded support review and TwinPast development screen
 
 - Verified the 147-window review packet and preserved the executed CPU notebook. Recorded the single-reviewer labels and the two cases with clear earlier evidence, both also visible in the latest window.

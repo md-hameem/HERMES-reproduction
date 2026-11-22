@@ -1,6 +1,6 @@
 # Manuscript planning outline
 
-Status as of 23 November 2026. Neurocomputing is the working venue for a regular article. The current scientific question is whether time-valid earlier evidence can correct a recent answer at a fixed streaming budget. The completed reproduction and controls can support the background and diagnostic sections. The nine-pair TwinPast GPU diagnostic and any method results are pending. [Execution plan](historical_correction_execution_plan.md)
+Status as of 23 November 2026. Neurocomputing is the working venue for a regular article. The 7B curated evidence diagnostic established headroom. The first automatic relevance selector tied uniform in robust pair count, and the tested history-control rule regressed against same-frame direct decoding. A validated original method remains open. [Automatic-selection audit](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>)
 
 ## Title, abstract and keywords
 

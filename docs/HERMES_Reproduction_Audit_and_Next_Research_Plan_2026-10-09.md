@@ -11,7 +11,7 @@
 
 ---
 
-The current project index records evidence locations and pending work. Historical assessments retain their original dates. [Project status](PROJECT_STATUS.md)
+The current project index records later TwinPast GPU studies and the annotation-guided candidate-pool diagnostic. The dated audit below retains its original evidence cutoff. [Project status](PROJECT_STATUS.md) · [Latest TwinPast decision](<reports/2026-11-23 twinpast automatic selection analysis.md>)
 
 ## Contents
 

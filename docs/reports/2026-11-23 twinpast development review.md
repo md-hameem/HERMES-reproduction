@@ -10,7 +10,9 @@ The StreamingBench assistant review now has a validated structured worksheet for
 
 This is a single-reviewer development screen. The nine clear pairs can test whether our decoder responds to a controlled change in history. The visual agreement is not model accuracy or an estimate for all TwinPast questions. Preserve the 12 frozen IDs as development cases and keep them out of confirmation. [Frozen sample](../../data/twinpast/historical_correction_development.json) · [Media checks](../../results/twinpast_development_2026-11-23/media_check.json) · [Visual decisions](../../results/twinpast_development_2026-11-23/pair_visual_screen.csv) · [Reference comparison](../../results/twinpast_development_2026-11-23/visual_audit.json)
 
-## Next test
+## GPU test design
+
+The experiment below has since completed. Three of nine pairs passed both option orders, below the advancement threshold of five. [GPU results and follow-up](<2026-11-23 twinpast gpu diagnostic.md>)
 
 Run a small paired GPU diagnostic. For each of the nine clear pairs, hold the same four verified recent frames, question, choices and decoder fixed. Evaluate those recent frames alone, then prepend earlier evidence from branch A or branch B in chronological order. Both earlier-evidence arms use two earlier frames and identical token and position budgets. Check whether the top answer reverses in the correct direction, whether the option logit difference changes with the history, and whether reversing the answer labels changes the conclusion. Report pair accuracy, single-branch accuracy and unchanged answers, with the two uncertain inputs reported separately if evaluated.
 

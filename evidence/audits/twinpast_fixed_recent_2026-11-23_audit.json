@@ -1,0 +1,481 @@
+{
+  "archive_sha256": "f07b857a4b8badc179e5d5b3f75f0a8b53add4bc34291ae0a8f0390c7938e66e",
+  "notebook_sha256": "6f9a656bf80a756faed856fc0f4fc5f8e0229708f4c3a7b2f9651b3b2e9819f9",
+  "prior_archive_sha256": "03182751d6e2c166f5d37673a0acddd3e7a736c2c6570b20fe509c5e9079de60",
+  "verified_payloads": 24,
+  "preflight": {
+    "status": "pass",
+    "pair_id": "twinpast_0208",
+    "checks": [
+      {
+        "order": "canonical",
+        "branch": "a",
+        "lm_tokens": 2058
+      },
+      {
+        "order": "canonical",
+        "branch": "b",
+        "lm_tokens": 2058
+      },
+      {
+        "order": "reversed",
+        "branch": "a",
+        "lm_tokens": 2058
+      },
+      {
+        "order": "reversed",
+        "branch": "b",
+        "lm_tokens": 2058
+      }
+    ],
+    "peak_gpu_allocated_bytes": 18514433024
+  },
+  "recent_only_branch_correct": {
+    "canonical": 6,
+    "reversed": 6
+  },
+  "pairs": 7,
+  "scores": 70,
+  "replay_failures": [],
+  "replay_atol": 0.05,
+  "previously_recovered_states": [
+    "twinpast_0094",
+    "twinpast_0259"
+  ],
+  "retained_recovered_states": [
+    "twinpast_0094",
+    "twinpast_0259"
+  ],
+  "newly_recovered_states": [],
+  "positive_controls_retained": 3,
+  "development_criterion_met": true,
+  "per_pair": [
+    {
+      "pair_id": "twinpast_0208",
+      "cohort": "historical_state",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 1.78125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 2.53125
+          }
+        },
+        "robust": false
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 1.53125
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 2.21875
+          }
+        },
+        "robust": false
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "D",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "D",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 18514433024
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "cohort": "historical_state",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 4.90625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 4.28125
+          }
+        },
+        "robust": true
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 4.5625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 3.640625
+          }
+        },
+        "robust": true
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 18492009984
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "cohort": "historical_state",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": -0.015625
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": -0.0625
+          }
+        },
+        "robust": false
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 1,
+            "directional_change": 0.015625
+          },
+          "reversed": {
+            "branches_correct": 1,
+            "directional_change": 0.0625
+          }
+        },
+        "robust": false
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 18508827136
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "cohort": "historical_state",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 1.265625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 1.28125
+          }
+        },
+        "robust": true
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 1.5
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 1.484375
+          }
+        },
+        "robust": true
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 18496681984
+    },
+    {
+      "pair_id": "twinpast_0185",
+      "cohort": "positive_control",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 7.671875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 8.796875
+          }
+        },
+        "robust": true
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 7.46875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 8.625
+          }
+        },
+        "robust": true
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 17751076864
+    },
+    {
+      "pair_id": "twinpast_0079",
+      "cohort": "positive_control",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 10.3515625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 10.6796875
+          }
+        },
+        "robust": true
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 10.6640625
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 10.453125
+          }
+        },
+        "robust": true
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 17742667776
+    },
+    {
+      "pair_id": "twinpast_0236",
+      "cohort": "positive_control",
+      "history_only": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 8.578125
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 8.25
+          }
+        },
+        "robust": true
+      },
+      "history_with_recent": {
+        "orders": {
+          "canonical": {
+            "branches_correct": 2,
+            "directional_change": 7.296875
+          },
+          "reversed": {
+            "branches_correct": 2,
+            "directional_change": 6.921875
+          }
+        },
+        "robust": true
+      },
+      "replay_checks": [
+        {
+          "order": "canonical",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "canonical",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "a",
+          "archived_prediction": "B",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        },
+        {
+          "order": "reversed",
+          "branch": "b",
+          "archived_prediction": "A",
+          "max_abs_score_difference": 0.0,
+          "pass_replay": true
+        }
+      ],
+      "peak_gpu_allocated_bytes": 17737996288
+    }
+  ]
+}

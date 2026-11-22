@@ -1,9 +1,13 @@
 # Comprehensive Technical Research Report: Hierarchical KV-Cache Management, Multimodal Streaming Video Understanding, and Advanced Agent Architectures
 
 > **Document status:** Living reference document for the HERMES reproduction project<br>
-> **Last updated:** 20 November 2026<br>
-> **Companion documents:** [`docs/research_log.md`](research_log.md) (39 sections) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) (26 sections) · [Changelog](../CHANGELOG.md)<br>
+> **Last updated:** 23 November 2026<br>
+> **Companion documents:** [Research log](research_log.md) · [Reproduction audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) · [Changelog](../CHANGELOG.md)<br>
 > **Reproduction status:** All five AutoDL stages completed and audited, including 498 videos / 2,495 questions per method, second-shard generalization, four ablations, real-video attention and interleaved timing. The corrected-scorer and subsequent input diagnostic have also completed. Verified-support QA, controlled cause attribution and a validated original method remain open. The current evidence index is [PROJECT_STATUS.md](PROJECT_STATUS.md).
+
+## TwinPast development update 23 November 2026
+
+Exact-frame replay on 7B recovered two of four historical-state pairs and retained three controls. The recovered answers also survived adding four shared recent frames. Under automatic selection, relevance tied uniform history at 3/7 robust pairs, and the tested correction rule regressed against direct decoding from the same frames. The next experiment checks whether improved causal candidate coverage helps on the four historical-state cases. The report sections below preserve the earlier study's scope. [Automatic-selection audit and next test](<reports/2026-11-23 twinpast automatic selection analysis.md>)
 
 ## Context diagnostic update 20 November 2026
 

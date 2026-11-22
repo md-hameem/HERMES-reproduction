@@ -1,0 +1,117 @@
+{
+  "archive_sha256": "6e6a340f4d80323c5dc6d4f1b7745f33ee17d1ce26e12eac14306322ef5a2a55",
+  "notebook_sha256": "e01b70b4989ce6de386f5beb85d1335d315282e7a156189313be0d6e803e280f",
+  "prior_archive_sha256": "f07b857a4b8badc179e5d5b3f75f0a8b53add4bc34291ae0a8f0390c7938e66e",
+  "verified_payloads": 24,
+  "branch_order_correct": {
+    "recent": 12,
+    "latest": 15,
+    "uniform": 18,
+    "relevance": 19,
+    "margin_gate": 19,
+    "history_control_gate": 14
+  },
+  "forward_calls_by_phase": {
+    "retrieval": 304,
+    "recent": 28,
+    "latest": 28,
+    "uniform": 24,
+    "relevance": 24
+  },
+  "forward_seconds_by_phase": {
+    "retrieval": 16.954384421929717,
+    "recent": 2.7769909258931875,
+    "latest": 6.3399954829365015,
+    "uniform": 5.518633393570781,
+    "relevance": 5.532472612336278
+  },
+  "recovered_state_curated_frame_overlap": [
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "a",
+      "curated_slots": 6,
+      "in_candidates": 1,
+      "in_relevance": 1
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "b",
+      "curated_slots": 6,
+      "in_candidates": 1,
+      "in_relevance": 1
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "a",
+      "curated_slots": 6,
+      "in_candidates": 2,
+      "in_relevance": 1
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "b",
+      "curated_slots": 6,
+      "in_candidates": 2,
+      "in_relevance": 1
+    }
+  ],
+  "pairs": 7,
+  "branch_order_answers": 28,
+  "methods": {
+    "recent": {
+      "robust_pairs": [],
+      "recoveries_vs_recent": 0,
+      "regressions_vs_recent": 0
+    },
+    "latest": {
+      "robust_pairs": [
+        "twinpast_0185"
+      ],
+      "recoveries_vs_recent": 5,
+      "regressions_vs_recent": 2
+    },
+    "uniform": {
+      "robust_pairs": [
+        "twinpast_0094",
+        "twinpast_0185",
+        "twinpast_0236"
+      ],
+      "recoveries_vs_recent": 7,
+      "regressions_vs_recent": 1
+    },
+    "relevance": {
+      "robust_pairs": [
+        "twinpast_0185",
+        "twinpast_0079",
+        "twinpast_0236"
+      ],
+      "recoveries_vs_recent": 8,
+      "regressions_vs_recent": 1
+    },
+    "margin_gate": {
+      "robust_pairs": [
+        "twinpast_0185",
+        "twinpast_0079",
+        "twinpast_0236"
+      ],
+      "recoveries_vs_recent": 7,
+      "regressions_vs_recent": 0
+    },
+    "history_control_gate": {
+      "robust_pairs": [
+        "twinpast_0079"
+      ],
+      "recoveries_vs_recent": 2,
+      "regressions_vs_recent": 0
+    }
+  },
+  "overrides": {
+    "margin_gate": 9,
+    "history_control_gate": 3
+  },
+  "controlled_gate_vs_same_frames_direct": {
+    "recoveries": 1,
+    "regressions": 6
+  },
+  "total_forward_calls": 408
+}

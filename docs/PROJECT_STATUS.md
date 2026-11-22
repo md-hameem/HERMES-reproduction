@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 23 November 2026 after the blinded support review and TwinPast CPU checks. Dated entries in the research log and audit retain their historical context.
+Updated 23 November 2026 after the TwinPast automatic-selection audit. Dated entries in the research log and audit retain their historical context.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -64,7 +64,7 @@ The full benchmark combines October results on samples 201–250 with November m
 
 ## Remaining work
 
-**Immediate experiment:** On nine screened TwinPast development pairs, hold the four recent frames fixed and compare answers after adding two earlier frames from branch A or B. Measure both-answer correctness, answer reversals and option-order sensitivity. The matched media and labels have been checked on CPU. The GPU diagnostic is pending. [Run design](../paper/neurocomputing/historical_correction_execution_plan.md) · [TwinPast audit](<reports/2026-11-23 twinpast development review.md>)
+**Immediate experiment.** Compare annotation-guided selection from the capped and denser candidate pools on four historical-state pairs. The automatic run tied uniform and relevance at 3/7 robust pairs and the history-control correction fell to 1/7. [AutoDL notebook](../notebooks/autodl/hermes-twinpast-candidate-pool.ipynb) · [Audit and follow-up](<reports/2026-11-23 twinpast automatic selection analysis.md>)
 
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 
@@ -139,3 +139,13 @@ Opening-frame replacement recovers three full-prefix errors at fixed input lengt
 **Blinded support review complete for one reviewer:** Of 147 reviewed windows, 17 were labeled visible support and 43 were uncertain. Two questions showed clear earlier support and both also showed it in recent frames. The same-clip pilot gate remains unmet. [First-pass findings](<reports/2026-11-23 blinded visual support first pass.md>)
 
 **TwinPast development check complete:** Eleven of 12 frozen pairs had disjoint causal sample windows. All 44 sampled recent frame pairs were identical at decoded RGB resolution. Nine pairs showed clear earlier-evidence contrasts. All 12 inspected pairs are excluded from later confirmation. [CPU audit](<reports/2026-11-23 twinpast development review.md>)
+
+**TwinPast GPU diagnostic complete.** The history swap produced 4/9 paired successes in canonical order and 3/9 in reversed order. Three pairs passed both orders, all on Attribute and Identity Recall. The numeric development gate failed. [GPU audit](<reports/2026-11-23 twinpast gpu diagnostic.md>)
+
+**TwinPast history-only diagnostic complete.** The two-frame condition retained the same three robust pairs. The denser condition produced zero robust historical-state successes on four cases. All 52 score rows and native RGB hashes for 84 input frame slots were verified. [History-only audit](<reports/2026-11-23 twinpast history-only analysis.md>)
+
+**TwinPast 7B check complete.** The stronger checkpoint recovered two historical-state pairs and preserved all three positive controls with exactly matched inputs. The development gate passed. The result concerns supplied earlier evidence without recent context. [7B audit](<reports/2026-11-23 twinpast 7b backbone analysis.md>)
+
+**TwinPast fixed-recent check complete.** The same 2/4 historical-state pairs and 3/3 controls remained robust with recent frames added. All 70 score rows were verified and the predeclared gate passed. [Fixed-recent audit](<reports/2026-11-23 twinpast 7b fixed-recent analysis.md>)
+
+**TwinPast automatic-selection screen complete.** Uniform and relevance passed 3/7 robust pairs each. The history-control rule regressed six branch-order answers and recovered one versus same-frames direct decoding. [Automatic-selection audit](<reports/2026-11-23 twinpast automatic selection analysis.md>)

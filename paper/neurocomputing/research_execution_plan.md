@@ -1,6 +1,6 @@
 # Research execution plan and adversarial review
 
-**23 November checkpoint:** The target-binding run and blinded support review are complete. The active plan is the [nine-pair TwinPast diagnostic](historical_correction_execution_plan.md), with CPU checks recorded and GPU inference pending. This document preserves the earlier alternatives and reviewer objections.
+**23 November checkpoint.** The automatic-selection screen tied uniform and relevance in robust pair count. The next decision follows a [candidate-pool capability check](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md#next-experiment>). This document preserves the earlier alternatives and reviewer objections.
 
 Decision date: 20 November 2026. Working venue: **Neurocomputing**, assuming the user's reference to “neuroscience” means the journal previously selected. This plan does not propose biological neuroscience claims. It extends the [diagnostic protocol](next_diagnostic_protocol.md) and [completed pilot analysis](<../../docs/reports/2026-11-20 causal scorer pilot analysis and publication decision.md>).
 

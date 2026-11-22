@@ -6,7 +6,17 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 |---|---|
 | [Blinded support review audit](../results/target_binding_2026-11-22/blind_review_first_pass_audit.json) | Archive hashes, execution verification and first-pass counts. The original image ZIP is stored in the local evidence directory. |
 | [TwinPast media checks](../results/twinpast_development_2026-11-23/media_check.json) | Pinned pair IDs, video and sampled frame hashes, timestamps, and the exclusion reason for one pair |
-| [TwinPast visual audit](../results/twinpast_development_2026-11-23/visual_audit.json) | Nine development contrasts with a matching option in both branches. Model outputs are pending. |
+| [TwinPast visual audit](../results/twinpast_development_2026-11-23/visual_audit.json) | Nine development contrasts with a matching visual option in both branches |
+| [TwinPast GPU archive](archives/HERMES_twinpast_diagnostic_evidence.zip) | Original ZIP containing 9 checkpoints and 72 score rows |
+| [TwinPast GPU audit](audits/twinpast_diagnostic_2026-11-23_audit.json) | Recomputed paired outcomes and archive, notebook and source integrity checks |
+| [TwinPast history-only archive](archives/HERMES_twinpast_history_only_evidence.zip) | Original 9-pair run, 52 score rows and historical-state contact sheets |
+| [TwinPast history-only audit](audits/twinpast_history_only_2026-11-23_audit.json) | Independent archive, prior score, frame alignment and paired-outcome verification |
+| [TwinPast 7B archive](archives/HERMES_twinpast_backbone_evidence.zip) | Saved 7B run with seven checkpoints and 28 scores |
+| [TwinPast 7B audit](audits/twinpast_backbone_2026-11-23_audit.json) | Exact-frame comparison against the 0.5B archive and recomputed decision |
+| [TwinPast fixed-recent archive](archives/HERMES_twinpast_fixed_recent_evidence.zip) | Seven saved 7B checkpoints and 70 scores across history-only, history-plus-recent and recent-only conditions |
+| [TwinPast fixed-recent audit](audits/twinpast_fixed_recent_2026-11-23_audit.json) | Verified inputs, prior replay, outcomes and decision |
+| [TwinPast automatic-selection archive](archives/HERMES_twinpast_automatic_evidence.zip) | Seven saved checkpoints, six method outcomes and frame coverage |
+| [TwinPast automatic-selection audit](audits/twinpast_automatic_2026-11-23_audit.json) | Recomputed ranking, predictions, correction, costs and curated-frame overlap |
 | [Target-binding archive](archives/HERMES_target_binding_evidence.zip) | Original 60-clip run, 300 checkpoints, 1,800 selector outcomes and blinded window-pair worksheet |
 | [Target-binding audit](audits/target_binding_2026-11-22_audit.json) | Reconstructed integrity, candidate windows, selector outputs, paired estimates and component timing |
 | [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |

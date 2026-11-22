@@ -4,17 +4,17 @@
 
 | | |
 |---|---|
-| **Project Status** | Five-stage reproduction and control study completed and audited; thesis synthesis and extension decision pending |
+| **Project Status** | Five-stage reproduction and TwinPast development runs audited. The next test compares capped and denser historical candidate pools. |
 | **Primary Environment** | AutoDL RTX 4090 for November five-stage study; earlier Kaggle T4 and AutoDL RTX 4080-family runs retained |
-| **Model** | LLaVA-OneVision-Qwen2-0.5B |
+| **Model** | LLaVA-OneVision Qwen2 0.5B for reproduction and 7B for later TwinPast diagnostics |
 | **Framework** | HERMES VideoQA inference pipeline |
 | **Current Benchmark Scale** | Full StreamingBench real-time visual annotations, 498 videos / 2,495 questions per method |
-| **Last Updated** | 20 November 2026 |
+| **Last Updated** | 23 November 2026 |
 | **Supporting Documents** | [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---
 
-Current status and evidence locations are summarized in [PROJECT_STATUS.md](PROJECT_STATUS.md). Sections 1–31 retain their dated historical assessments. Section 32 records the completed five-stage study.
+Current evidence locations are in [PROJECT_STATUS.md](PROJECT_STATUS.md). Section 32 records the completed five-stage study. The [latest TwinPast results](#48-twinpast-gpu-diagnostics-and-candidate-pool-decision-23-november-2026) record the method-development decision.
 
 ## Table of Contents
 
@@ -2106,3 +2106,9 @@ The AutoDL run completed 1,800 selector outcomes for 300 questions from 60 clips
 The CPU notebook generated 147 window sheets from 28 cached clips. One reviewer identified two questions with clear earlier visual support, both also supported in the latest window. That kept the same-clip pilot below its development threshold. The structured labels and audit are saved with the review. [Review findings](<reports/2026-11-23 blinded visual support first pass.md>)
 
 Frozen TwinPast metadata yielded 12 development pairs. Eleven had two disjoint earlier slots and four recent slots. All 44 recent frame comparisons matched at decoded RGB resolution. Nine clear earlier contrasts matched the reference option in both branches in the assistant visual screen. The next GPU test changes only the two earlier frames while keeping the four recent frames fixed. All 12 pairs remain excluded from confirmation. [TwinPast audit](<reports/2026-11-23 twinpast development review.md>)
+
+## 48. TwinPast GPU diagnostics and candidate-pool decision, 23 November 2026
+
+The 0.5B fixed-recent test reached 3/9 robust pairs, and the history-only follow-up preserved the same three. Six earlier frames yielded zero robust historical-state pairs out of four. The exact-frame 7B replay recovered two of those four and retained all three attribute/identity controls. Both recoveries and all controls survived adding four matched recent frames.
+
+The annotation-blind screen tied relevance and uniform history at 3/7 robust pairs. The history-control correction fell to 1/7 and added six regressions against same-frame direct decoding. Use uniform as the practical baseline. The next diagnostic holds the 7B answer input at six older plus four fixed recent frames and compares annotation-guided selection from capped and dense causal pools. [Run analysis](<reports/2026-11-23 twinpast automatic selection analysis.md>) · [Candidate-pool notebook](../notebooks/autodl/hermes-twinpast-candidate-pool.ipynb)
