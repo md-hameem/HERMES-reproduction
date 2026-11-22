@@ -4,6 +4,8 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 
 | Notebook | Purpose |
 |---|---|
+| [Blinded visual-support review](autodl/hermes-blind-support-review.ipynb) | CPU-only packet with 147 blinded windows from the existing target-binding cache. [Execution plan](../paper/neurocomputing/historical_correction_execution_plan.md). |
+| [Executed blinded support review](executed/2026-11-23_hermes-blind-support-review.ipynb) | Completed rendering across 28 cached clips. [First-pass findings](<../docs/reports/2026-11-23 blinded visual support first pass.md>). |
 | [Target binding](autodl/hermes-target-binding.ipynb) | Six selectors on 60 frozen clips at a matched four-frame answer budget. [Protocol](../paper/neurocomputing/target_binding_protocol.md). |
 | [Executed target binding](executed/2026-11-22_hermes-target-binding.ipynb) | Audited 300 questions and 1,800 selector outcomes. [Analysis](<../docs/reports/2026-11-22 target binding analysis.md>). |
 | [Confirmation visual review](autodl/hermes-confirmation-visual-review.ipynb) | CPU-only sheets for the 12 primary discordances from the same 10 cached clips. [Instructions](../docs/CONFIRMATION_VISUAL_REVIEW.md). |
@@ -32,6 +34,8 @@ The causal-scorer pilot has a completed eight-video execution record; use the ma
 | [Historical notebooks](archive/) | Earlier Kaggle development notebooks and the superseded five-stage AutoDL draft |
 
 The maintained workflow has permanent fixes for the issues recovered during the executed run. A fresh complete GPU replay remains unverified. The evidence validator audits saved measurements independently. [Current project status](../docs/PROJECT_STATUS.md) · [Evidence index](../evidence/README.md)
+
+The next GPU notebook will implement the nine-pair TwinPast history-swap diagnostic. The CPU media check is complete. [Current execution plan](../paper/neurocomputing/historical_correction_execution_plan.md)
 
 The maintained pilot has eleven local safety/numerical/monitor tests, separate setup tests and headless notebook validation. The supplied pre-heartbeat execution passed GPU preflight and completed all QA; fresh causal scoring changed zero correctness outcomes versus HERMES on these 40 questions. The default is a development screen on eight videos from the inspected 201–250 shard, distinct from the broader 30-case review set. [Pilot protocol](../docs/FAILURE_PILOT.md)
 

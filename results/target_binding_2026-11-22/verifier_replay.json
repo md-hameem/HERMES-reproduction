@@ -1,0 +1,18 @@
+{
+  "eligible_questions": 269,
+  "eligible_windows": 1264,
+  "minimum_equals_binding": 1262,
+  "binding_only_matches_conjunction": 269,
+  "strict_sign_reversals": {
+    "binding": 815,
+    "relevance": 252,
+    "target": 134
+  },
+  "sign_gate": {
+    "switches": 7,
+    "wins": 0,
+    "losses": 0
+  },
+  "review_questions": 32,
+  "review_windows": 147
+}

@@ -1,0 +1,13 @@
+pair_id,status,observed_option_a,observed_option_b,note
+twinpast_0208,clear_contrast,D,C,Book moves from closed to open versus from open to closed.
+twinpast_0094,clear_contrast,A,B,Liquid streams from the tilted bottle versus a person holding the bottle below.
+twinpast_0099,uncertain,,,"Colored letters are visible, but order in the oblique view is uncertain at this sheet resolution."
+twinpast_0252,uncertain,,,"Door position differs at frame 56 s, but both look open at 58 s and the last-attempt endpoint is unclear."
+twinpast_0095,clear_contrast,B,A,Door reaches closed position versus remaining open with stool in the way.
+twinpast_0259,clear_contrast,B,A,Box ends closed versus remaining propped open.
+twinpast_0196,insufficient_disjoint_earlier_slots,,,One older slot overlaps the latest-four window.
+twinpast_0185,clear_contrast,A,B,Bright green nails holding the pen versus no visible green nail polish.
+twinpast_0214,clear_contrast,B,A,Planting bed lacks the large white rabbit ornament versus a clearly visible ornament.
+twinpast_0079,clear_contrast,B,A,Knitted beanie versus a hat with antlers.
+twinpast_0236,clear_contrast,B,A,White robot to the right of monitor versus a black tower.
+twinpast_0036,clear_contrast,B,A,White cup with brown liquid versus brown cup with dark lumps.

@@ -2096,3 +2096,13 @@ Verified 117 payloads, 240 answers and 80 historical replays. The supplied noteb
 ## 45. Audited frozen short query confirmation, 21 November 2026
 
 The completed v2 ZIP matches the executed notebook's final hash. The audit verified 360 payloads and 450 answers on 150 questions from the registered 30 clip IDs. Compact, latest-two and all-history scored 74, 72 and 70. All-history versus compact has four recoveries and eight losses, and omitting any one video leaves a negative point estimate. The video-bootstrap interval is −7.33 to +1.33 points. Review the 12 primary discordances for causal visual support before proposing a new rule. [Analysis](<reports/2026-11-21 short query confirmation analysis.md>).
+
+## 46. Completed target-binding experiment and score replay, 22 November 2026
+
+The AutoDL run completed 1,800 selector outcomes for 300 questions from 60 clips. On the 269 eligible questions, the minimum rule scored 147, mean 152 and recent-only 156. The primary estimate was −1.86 percentage points (95% video-bootstrap interval −4.40 to +0.37). The CPU replay found that ranking by the binding score alone reproduces all 269 minimum-rule choices. The binding prompt changed score sign under the A/B swap in 815 of 1,264 windows. [Target-binding analysis](<reports/2026-11-22 target binding analysis.md>) · [Verifier replay](../results/target_binding_2026-11-22/verifier_replay.json)
+
+## 47. Completed blinded support review and TwinPast development check, 23 November 2026
+
+The CPU notebook generated 147 window sheets from 28 cached clips. One reviewer identified two questions with clear earlier visual support, both also supported in the latest window. That kept the same-clip pilot below its development threshold. The structured labels and audit are saved with the review. [Review findings](<reports/2026-11-23 blinded visual support first pass.md>)
+
+Frozen TwinPast metadata yielded 12 development pairs. Eleven had two disjoint earlier slots and four recent slots. All 44 recent frame comparisons matched at decoded RGB resolution. Nine clear earlier contrasts matched the reference option in both branches in the assistant visual screen. The next GPU test changes only the two earlier frames while keeping the four recent frames fixed. All 12 pairs remain excluded from confirmation. [TwinPast audit](<reports/2026-11-23 twinpast development review.md>)

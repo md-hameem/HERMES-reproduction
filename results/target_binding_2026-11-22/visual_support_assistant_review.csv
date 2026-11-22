@@ -1,0 +1,148 @@
+review_id,support_label,supported_option,supporting_sample_indices,temporal_validity,notes
+Q01-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q01-B,visible_support,A,128 130 131,yes,"128,130,131: standing on the cart to reach the shelf"
+Q01-C,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q01-D,insufficient,,,,"124–127: initial reach and beginning to use cart, successful retrieval not established"
+Q01-E,wrong_target_setting_or_time,,,,120–123: reaches without getting the bottle; close same-shelf setup
+Q02-A,uncertain,,,uncertain,Shows the sequence starting through multiplication and division; prospective inference only
+Q02-B,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q02-C,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q02-D,uncertain,,,uncertain,"Addition/subtraction is listed in 70–72, but this does not establish what is taught after the query"
+Q02-E,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q03-A,visible_support,C,78 79 80 81,yes,78–81: tape remains along the horizon
+Q03-B,wrong_target_setting_or_time,,,,Bare canvas and developing painted edge before tape is applied
+Q03-C,visible_support,C,72 73,yes,"72,73: tape physically applied across horizon"
+Q03-D,visible_support,C,74 75 76 77,yes,74–77: tape visibly extends across the horizon
+Q03-E,wrong_target_setting_or_time,,,,"66–69: dark painted line at horizon before the tape, a close visual distractor"
+Q04-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q04-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q04-C,wrong_target_setting_or_time,,,,Earlier stop-area/gas-station maneuver at 292–295
+Q04-D,uncertain,,,uncertain,300–303: van joins a straight roadway after curve; exact turn direction is uncertain
+Q04-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q05-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q05-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q05-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q05-D,visible_support,D,126 127 128 129,yes,126–129: trees along both sides at the nearest observed time
+Q05-E,wrong_target_setting_or_time,,,,Different road segment and changing right-side tree cover; cannot certify the current segment
+Q06-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q06-B,wrong_target_setting_or_time,,,,257–260: no tree shadow on this earlier open stretch
+Q06-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q06-D,wrong_target_setting_or_time,,,,249–252: different tree positions and patchy illumination
+Q06-E,visible_support,B,262 263,yes,"262,263: tree shadow falls on the right side of the current road"
+Q07-A,uncertain,,,uncertain,"15–17: red rabbit examines fish then approaches door; exact motive inferred, not shown"
+Q07-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q07-C,wrong_target_setting_or_time,,,,Fish delivery and green rabbit rather than the later red rabbit action
+Q07-D,wrong_target_setting_or_time,,,,"Green rabbit eats the fish; similar object, different subject"
+Q08-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q08-B,insufficient,,,,60–63: collar adjustment is still underway
+Q08-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q08-D,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q08-E,visible_support,D,65 66 67,yes,"65–67: after the helper steps back, the man lowers his gaze; eyes also briefly appear shut at 66"
+Q09-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q09-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q09-C,uncertain,,,uncertain,"Coins, spinner and dice coexist; no unique next topic"
+Q09-D,uncertain,,,uncertain,"Dice-outcome tallies suggest option D, but the next spoken concept is unconfirmed"
+Q09-E,uncertain,,,uncertain,"Dice faces and a first trial, without unique future claim"
+Q10-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q10-B,uncertain,,,uncertain,"67–68: remote and surprised expression co-occur, cause unclear"
+Q10-C,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q10-D,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q10-E,uncertain,,,uncertain,"73–74: confused expression with remote already beside him; TV content changes, exact cause unclear"
+Q11-A,uncertain,,,uncertain,"131–134: earlier right-triangle example, not evidence of the next segment"
+Q11-B,uncertain,,,uncertain,"144–146: equilateral column becomes active and an acute triangle appears; suggests B, next explanation unconfirmed"
+Q11-C,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q11-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q11-E,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q12-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q12-B,uncertain,,,uncertain,No unambiguous bench in the current open stretch; limited viewpoints prevent strong absence claim
+Q12-C,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q12-D,uncertain,,,uncertain,Dark section limits visibility
+Q12-E,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q13-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q13-B,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q13-C,insufficient,,,,"54–57: looks around or into sofa, object not identified"
+Q13-D,uncertain,,,uncertain,"64–65: reaches into sofa and lifts remote, consistent with C; falling into the gap is not shown directly"
+Q13-E,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q14-A,insufficient,,,,"184–187: later wall escape visible, motive absent in this window"
+Q14-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q14-C,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q14-D,wrong_target_setting_or_time,,,,"172–175: inspecting a shoe and fly, adjacent action with the same subject"
+Q14-E,uncertain,,,uncertain,"177–179: reads a newspaper, then distinct red-shoe advertisement; strongest older clue for D, motive remains inferential"
+Q15-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q15-B,wrong_target_setting_or_time,,,,"84–87: other toilet sequence, prominently features red rabbit"
+Q15-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q15-D,visible_support,D,96 97 98,yes,96–98: green rabbit opens door and reacts to visible noose/skull
+Q15-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q16-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q16-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q16-C,wrong_target_setting_or_time,,,,"143–146: different comparison chart, not the side-by-side scene"
+Q16-D,visible_support,A,159 160 161,yes,159–162: right panel adds Frame Generation
+Q16-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q17-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q17-B,wrong_target_setting_or_time,,,,"259–262: earlier stretching then single-panel face pull, distinct setting without a left panel"
+Q17-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q17-D,visible_support,C,267 268 269 270,yes,267–270: left panel explicitly labeled LOW-TO-HIGH
+Q17-E,visible_support,C,264 265 266,yes,"264–266: same left-panel label earlier, still applies"
+Q18-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q18-B,uncertain,,,uncertain,296–299: circles emphasize yellow marbles as green calculation concludes; supports a prediction but next topic not directly shown
+Q18-C,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q18-D,wrong_target_setting_or_time,,,,"292–295: green-marble probability, different color"
+Q18-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q19-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q19-B,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q19-C,uncertain,,,uncertain,"164–166: person by door at an earlier time, uncertain whether same event"
+Q19-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q19-E,uncertain,,,uncertain,175: light-shirted person near side of van; sparse motion and exact action uncertain
+Q20-A,wrong_target_setting_or_time,,,,5: card explicitly says RTX 4070 SUPER and 36 shader TFLOPS
+Q20-B,wrong_target_setting_or_time,,,,"6: shows RTX 4080 SUPER and 52 shader TFLOPS; later chart lists CUDA, not 44 shader TFLOPS"
+Q21-A,uncertain,,,uncertain,Distant signs cannot be matched to an option
+Q21-B,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q21-C,uncertain,,,uncertain,177–180: requested advertisement cannot be read in the sheet
+Q21-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q21-E,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q22-A,wrong_target_setting_or_time,,,,138–141: vehicle ahead changes over this earlier interval
+Q22-B,visible_support,B,145,yes,145: yellow taxi directly ahead at the nearest observed time
+Q22-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q22-D,wrong_target_setting_or_time,,,,134–137: an earlier white van is a concrete time-stale distractor
+Q22-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q23-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q23-B,uncertain,,,uncertain,"63–66 juxtapose one-dimensional perimeter and a 2D shape, which suggests C but does not directly establish next topic"
+Q23-C,wrong_target_setting_or_time,,,,51–52: an earlier completed perimeter calculation
+Q23-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q23-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q24-A,uncertain,,,uncertain,"141–142: new shapes suggest discussion of other areas, but the new calculation is not visible"
+Q24-B,wrong_target_setting_or_time,,,,"123–126: earlier single rectangle, a different worked example"
+Q24-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q24-D,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q24-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q25-A,wrong_target_setting_or_time,,,,"2–5: building backdrop and opening text, no specified TNT objective"
+Q25-B,visible_support,B,7,yes,7: on-screen objective explicitly says Get a bunch of TNT
+Q26-A,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q26-B,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q26-C,insufficient,,,,"Distributive setup with 40 + 7, no explicit separate calculation yet"
+Q26-D,insufficient,,,,The sampled stills do not establish a specific option for the query time.
+Q26-E,uncertain,,,uncertain,"198–201 visibly include 5 × 7, supporting option A as a likely step; exact execution order is not shown"
+Q27-A,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q27-B,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q27-C,uncertain,,,uncertain,"215–218 show 72 ÷ 3 with 12 highlighted, not the literal 24 ÷ 3 operation in the prompt; no unambiguous listed step"
+Q27-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q27-E,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q28-A,visible_support,D,6,yes,6: title card reads The Ultimate Push Pull Legs Series
+Q28-B,wrong_target_setting_or_time,,,,1: Jeff Nippard Presents identifies the presenter but is a different title
+Q29-A,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q29-B,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q29-C,uncertain,,,uncertain,98–101: briefly visible red sleeve and multiple players; exact dribbler and time of reference need motion context
+Q29-D,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q29-E,uncertain,,,uncertain,The sampled stills do not establish a specific option for the query time.
+Q30-A,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q30-B,visible_support,B,129,yes,129: a pale bench appears to the right near the nearest sampled frame
+Q30-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q30-D,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q30-E,wrong_target_setting_or_time,,,,"122–125: earlier section with pylons and vegetation, no localized bench"
+Q31-A,wrong_target_setting_or_time,,,,"195: earlier dark parked car next to a building, potentially misleading for the current view"
+Q31-B,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q31-C,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q31-D,visible_support,C,201 202 203,yes,201–203: light building on right at the current section
+Q31-E,wrong_target_setting_or_time,,,,Earlier scene or configuration differs from the query-timed evidence.
+Q32-A,visible_support,B,4 7,yes,"4,7: several bright overhead lights clearly illuminate the field"
+Q32-B,insufficient,,,,"0–3: illuminated turf and shadows, but light fixtures are outside the view"

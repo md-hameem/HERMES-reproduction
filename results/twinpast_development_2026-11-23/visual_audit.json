@@ -1,0 +1,19 @@
+{
+  "review_protocol": "Assistant visually judged sampled earlier frames before comparison to reference answer letters.",
+  "selected_pairs": 12,
+  "checked_pairs": 11,
+  "overlap_exclusions": 1,
+  "uncertain_pairs": 2,
+  "visual_contrasts": 9,
+  "match_both_official_options": {
+    "twinpast_0208": true,
+    "twinpast_0094": true,
+    "twinpast_0095": true,
+    "twinpast_0259": true,
+    "twinpast_0185": true,
+    "twinpast_0214": true,
+    "twinpast_0079": true,
+    "twinpast_0236": true,
+    "twinpast_0036": true
+  }
+}

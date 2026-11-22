@@ -1,0 +1,27 @@
+{
+  "status": "packet_verified_first_pass_complete",
+  "packet_sha256": "24fbab77c4c68564dfb9549b11cf57aae9821385098edc373c7b61b1789260e3",
+  "executed_notebook_sha256": "c250bfaf52eafd722b14712b528c3807341b90fa4a77440fd102e65f9e8e24e9",
+  "packet_members": 149,
+  "questions": 32,
+  "clips": 28,
+  "windows": 147,
+  "first_pass_counts": {
+    "insufficient": 24,
+    "visible_support": 17,
+    "wrong_target_setting_or_time": 63,
+    "uncertain": 43
+  },
+  "questions_with_clear_earlier_visual_support": {
+    "Q03": [
+      "Q03-C",
+      "Q03-D"
+    ],
+    "Q17": [
+      "Q17-E"
+    ]
+  },
+  "clear_earlier_support_also_visible_in_latest": 2,
+  "reviewers_completed": 1,
+  "review_type": "Assistant visual screen; no gold or model outcomes used"
+}

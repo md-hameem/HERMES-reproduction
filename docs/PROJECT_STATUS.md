@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 22 November 2026 after auditing the target-binding run. Dated entries in the research log and audit retain their historical context.
+Updated 23 November 2026 after the blinded support review and TwinPast CPU checks. Dated entries in the research log and audit retain their historical context.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -64,6 +64,8 @@ The full benchmark combines October results on samples 201–250 with November m
 
 ## Remaining work
 
+**Immediate experiment:** On nine screened TwinPast development pairs, hold the four recent frames fixed and compare answers after adding two earlier frames from branch A or B. Measure both-answer correctness, answer reversals and option-order sensitivity. The matched media and labels have been checked on CPU. The GPU diagnostic is pending. [Run design](../paper/neurocomputing/historical_correction_execution_plan.md) · [TwinPast audit](<reports/2026-11-23 twinpast development review.md>)
+
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 
 The [failure-analysis pilot](FAILURE_PILOT.md) has started with a reproducible CPU casebook. All 2,495 paired outcomes reproduce the audited totals. Thirty target questions span 30 distinct videos, with 150 full-history questions retained for replay. The [review sheet](../results/failure_pilot/evidence_review.csv) is pending because benchmark videos are absent from this checkout. The separate eight-video GPU scorer screen has now completed; its 18-case follow-up queue still needs full support annotation. The builder, source hashes, selection limitations and execution protocol are saved alongside the outputs.
@@ -75,7 +77,7 @@ The user's first AutoDL attempt reached dependency installation and timed out do
 Earlier 2–3-hour rental planning ranges were unmeasured and conservative. The completed RTX 4090 screen records 327.028 seconds for its post-model-load phase, including preflight, feature preparation and replay, while excluding installation, downloads, model loading and final packaging. Shared preparation totals 176.394 seconds and all three methods together replay in 54.580 seconds. Total container rental wall time is not established. Use the measured scopes to budget further diagnostics, not as a promise for fresh setup or larger workloads.
 
 1. Complete thesis synthesis around the audited reproduction, component diagnostics and full-benchmark result, including the null accuracy finding.
-2. Follow the completed scorer screen with capability/input controls and source-evidence review. Fresh causal scoring passes preflight but adds no correctness benefit over HERMES on the selected 40 questions. An original mechanism remains to be established.
+2. Use the completed scorer, input, cache and visual controls to motivate the TwinPast diagnostic. A deployable improvement still needs validation against a simple baseline and the closest applicable published method.
 3. Establish a matched native LLaVA baseline on a feasible, explicitly defined context range if making claims against the base model. Current 50K results use the HERMES pipeline.
 4. Verify a clean replay of the maintained notebook. The existing evidence establishes a recovered completed run.
 5. Develop an original method or improvement as required by the advisor, after the diagnostic pilot identifies a recoverable failure. Broad EDMI-style reinjection overlaps StreamFlow and is not an established original contribution. The user confirmed on 20 November 2026 that the professor accepts CCF B. Q1 remains mandatory. The user subsequently selected Neurocomputing as the working journal target; use the supplied author guide and the current publication roadmap for preparation. The applicable Q1 database/year and required publication milestone remain unspecified; additional models and workloads depend on the eventual claim and compute budget.
@@ -133,3 +135,7 @@ Opening-frame replacement recovers three full-prefix errors at fixed input lengt
 **Visual review and chart checks complete:** The audit verifies 35 sheets across 12 discordances. The originals confirm an older-only chart match at 112/q3 and a benchmark value discrepancy at 121/q3. Excluding the discrepancy as an exploratory check leaves all-history 2.01 percentage points below compact recent-four. Next, isolate target matching across time before evaluating any new routing rule. [Analysis](<reports/2026-11-21 confirmation visual review analysis.md>) · [Notes](../results/confirmation_visual_review_2026-11-21/).
 
 **Target-binding experiment complete:** The audit verified 1,800 outcomes across 300 questions and 60 clips. The minimum-score rule scored 147/269 versus 152/269 for mean and 156/269 for recent-only. A correct answer existed in an older window on 33 questions where recent was wrong. The fixed-window oracle scored 189/269. Next, label visual support before changing the verifier or spending on another GPU sweep. [Analysis](<reports/2026-11-22 target binding analysis.md>) · [Audit](../evidence/audits/target_binding_2026-11-22_audit.json).
+
+**Blinded support review complete for one reviewer:** Of 147 reviewed windows, 17 were labeled visible support and 43 were uncertain. Two questions showed clear earlier support and both also showed it in recent frames. The same-clip pilot gate remains unmet. [First-pass findings](<reports/2026-11-23 blinded visual support first pass.md>)
+
+**TwinPast development check complete:** Eleven of 12 frozen pairs had disjoint causal sample windows. All 44 sampled recent frame pairs were identical at decoded RGB resolution. Nine pairs showed clear earlier-evidence contrasts. All 12 inspected pairs are excluded from later confirmation. [CPU audit](<reports/2026-11-23 twinpast development review.md>)

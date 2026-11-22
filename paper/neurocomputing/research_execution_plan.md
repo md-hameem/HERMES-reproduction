@@ -1,12 +1,14 @@
 # Research execution plan and adversarial review
 
+**23 November checkpoint:** The target-binding run and blinded support review are complete. The active plan is the [nine-pair TwinPast diagnostic](historical_correction_execution_plan.md), with CPU checks recorded and GPU inference pending. This document preserves the earlier alternatives and reviewer objections.
+
 Decision date: 20 November 2026. Working venue: **Neurocomputing**, assuming the user's reference to “neuroscience” means the journal previously selected. This plan does not propose biological neuroscience claims. It extends the [diagnostic protocol](next_diagnostic_protocol.md) and [completed pilot analysis](<../../docs/reports/2026-11-20 causal scorer pilot analysis and publication decision.md>).
 
 **Execution update:** Phase 1's mandatory input controls and feasible native arm have now completed. The [input diagnostic decision](<../../docs/reports/2026-11-20 input diagnostic analysis and next decision.md>) records 14/40 question-only, 25/40 recent-4, 21/40 recent-20 and 10/14 native, with no oracle answers. It prioritizes support-traced context/position interventions before the conditional generated-answer-feedback candidate below. The earlier candidate ordering was provisional. Originality and independent confirmation remain pending.
 
 **Subsequent update:** the [context experiment](<../../docs/reports/2026-11-20 context diagnostic analysis and next decision.md>) completed 74 answers with exact comparable replay, stable partition choices and three fixed-position full-prefix recoveries. Two analyst support probes succeeded. These findings motivated the [stage-attribution protocol](stage_attribution_protocol.md) to localize construction versus readout and include existing decoupling as a comparator.
 
-**Current experiment:** The [completed stage and matched-boundary runs](<../../docs/reports/2026-11-21 matched-boundary results and next decision.md>) retain two construction wins with older history masked during answering. The [completed short query-cache run](<../../docs/reports/2026-11-21 short query-cache results and next decision.md>) preserves all 40 masked answers while reducing query K/V. Freeze the candidate for independent confirmation. Compare it with compact recent-four at the same query-cache budget and audit prior-method overlap before submission.
+**21 November cache controls:** The [completed stage and matched-boundary runs](<../../docs/reports/2026-11-21 matched-boundary results and next decision.md>) retain two construction wins with older history masked during answering. The [completed short query-cache run](<../../docs/reports/2026-11-21 short query-cache results and next decision.md>) preserves all 40 masked answers while reducing query K/V. The later [30-clip comparison](<../../docs/reports/2026-11-21 short query confirmation analysis.md>) favored compact recent-four in the point estimate.
 
 ## Honest starting position
 

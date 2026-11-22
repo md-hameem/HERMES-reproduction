@@ -1,0 +1,973 @@
+[
+  {
+    "pair_id": "twinpast_0208",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      26,
+      28,
+      30,
+      32
+    ],
+    "normalized_rgb_difference": [
+      0.07562276839748246,
+      0.07629130355846042,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 19355906,
+        "sha256": "913c198fc475031b0431c84f05332c144925e30ae812ea1b7c4aabafcb81bd7b",
+        "source_frames": [
+          0,
+          48,
+          624,
+          672,
+          720,
+          768
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          26.0,
+          28.0,
+          30.0,
+          32.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "d17e1732e88474db59ecaa97ae569059e3a24aa005105a9798bcc232c1cd0302",
+          "11ef8a873cd1e1bed978562906aba096b3e3679085dccb7b13ae16ee9961c67e",
+          "5cec797760bbb48ec2b000850f628f9a8c8a6102d82926dd7dcbad503703e6d1",
+          "7e2bd866391a4a680cff36d7378410fb2eb2f3fa40c80d9ff560bff9742df0e9",
+          "256582e1e57616173390d7637df3e1a932e7d95f10559c37f04c7013cb5ed7e1",
+          "f572ccd4b3a45967db488bbe4bb2d4ab8b52729bdd709801df63cd205ab00551"
+        ]
+      },
+      "b": {
+        "bytes": 19367971,
+        "sha256": "90da807127daed7dee910a83e831c8d468cc530754e945cc6c2011847812a102",
+        "source_frames": [
+          0,
+          48,
+          624,
+          672,
+          720,
+          768
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          26.0,
+          28.0,
+          30.0,
+          32.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "bbec0ed7398d8620aae53183b9f1a7cc63ef584464991ee24579c1ad43f43333",
+          "af0aeaedd2eaf24ec6d3d3b37a484b580073dfba1f2adfacf5c6bcf968728c07",
+          "5cec797760bbb48ec2b000850f628f9a8c8a6102d82926dd7dcbad503703e6d1",
+          "7e2bd866391a4a680cff36d7378410fb2eb2f3fa40c80d9ff560bff9742df0e9",
+          "256582e1e57616173390d7637df3e1a932e7d95f10559c37f04c7013cb5ed7e1",
+          "f572ccd4b3a45967db488bbe4bb2d4ab8b52729bdd709801df63cd205ab00551"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0094",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      6,
+      8,
+      48,
+      50,
+      52,
+      54
+    ],
+    "normalized_rgb_difference": [
+      0.1399284122085048,
+      0.14136489600984428,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 23523559,
+        "sha256": "a4bc3db1a72cf2aa05deacedbcc79a25d60a9bb1e7181886600e08fc6dea4b89",
+        "source_frames": [
+          144,
+          192,
+          1152,
+          1200,
+          1248,
+          1296
+        ],
+        "frame_start_s": [
+          6.0,
+          8.0,
+          48.0,
+          50.0,
+          52.0,
+          54.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "2df65a127e44a6cce55dffd8e071a04dc8ac5040ccb27a70120c64ec7ec8e91c",
+          "727c3cf00a49fa638de8123d168aed84d33a72354687c3b63ce770ed037b3d6b",
+          "e3af61406bb5b76df88ed4daeb586e3cfda60aec7e6f4e8bc0b33ae1896d3a80",
+          "919b30f1b67bba58602603d2b05b3b26b7db17013243ad09e3d990a560baabf7",
+          "91e8ddfd077d7f284e8ec61dac2a41b11d168797815fbc583c05a0de88ff156c",
+          "f7818d6ed63a7576578e5849a81ce7b0ad36aebb8b114061cf2be98b8e8478c5"
+        ]
+      },
+      "b": {
+        "bytes": 22992602,
+        "sha256": "c78deb69dd5f496a65a527262fd48b9aa7e89821efd604893dcbd78984e1bc8c",
+        "source_frames": [
+          144,
+          192,
+          1152,
+          1200,
+          1248,
+          1296
+        ],
+        "frame_start_s": [
+          6.0,
+          8.0,
+          48.0,
+          50.0,
+          52.0,
+          54.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "eb1b798b497684d9605a5def7222f9d0c3602f6708e13247118bb4cfca68444e",
+          "f88bef77ab3ef8170b0542ec2fc6c8722e5aa5414aaddbcdba10cd770ca704a9",
+          "e3af61406bb5b76df88ed4daeb586e3cfda60aec7e6f4e8bc0b33ae1896d3a80",
+          "919b30f1b67bba58602603d2b05b3b26b7db17013243ad09e3d990a560baabf7",
+          "91e8ddfd077d7f284e8ec61dac2a41b11d168797815fbc583c05a0de88ff156c",
+          "f7818d6ed63a7576578e5849a81ce7b0ad36aebb8b114061cf2be98b8e8478c5"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0099",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      44,
+      46,
+      48,
+      50
+    ],
+    "normalized_rgb_difference": [
+      0.23414232076575486,
+      0.23253613430969094,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 27571576,
+        "sha256": "3612dacef08616a655a52b2cb80d729167adc6f6f1058ef0a76728a4bb07a167",
+        "source_frames": [
+          0,
+          48,
+          1056,
+          1104,
+          1152,
+          1200
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          44.0,
+          46.0,
+          48.0,
+          50.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "a47938e1c69ebdb5f06f70a98b7d43bb83c891d3d03bc3cb7099bcfd38405efc",
+          "40b486bc71a199242d3d4ae21eea9ec44a5090da0172f3a2293b82f827551255",
+          "72df65e3d50cff007e55f9a23b32053528d4ec76e2ae21f519ac6846b580165c",
+          "d8acd3a595ac474ed235509f5c3f5654bcdb934e10706544186e366423bc76c3",
+          "5b27abce92fcde01ca059eeb30a665acbf54151fc82bc1a396e5d245c278e85f",
+          "e4365f9aadb90c2570cc0a86a32641055e94fe59fc361cf80101faa81fb4aa11"
+        ]
+      },
+      "b": {
+        "bytes": 29849686,
+        "sha256": "6ea5bb359efb0113e352a0e2ca3f0715a45fd088a3a411561606634e859f1639",
+        "source_frames": [
+          0,
+          48,
+          1056,
+          1104,
+          1152,
+          1200
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          44.0,
+          46.0,
+          48.0,
+          50.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "3bc6902d2a0683b43c34da2269dd443e2582c1e717dfb33670a1d8ba56075b16",
+          "8c00c9cbdd52ec8903497bfdf203f35ac118529a7b287f9e1f21d8d4e5fec426",
+          "72df65e3d50cff007e55f9a23b32053528d4ec76e2ae21f519ac6846b580165c",
+          "d8acd3a595ac474ed235509f5c3f5654bcdb934e10706544186e366423bc76c3",
+          "5b27abce92fcde01ca059eeb30a665acbf54151fc82bc1a396e5d245c278e85f",
+          "e4365f9aadb90c2570cc0a86a32641055e94fe59fc361cf80101faa81fb4aa11"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0252",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      56,
+      58,
+      108,
+      110,
+      112,
+      114
+    ],
+    "normalized_rgb_difference": [
+      0.10871535342532075,
+      0.10234652374324216,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 38872585,
+        "sha256": "903f8e8ac3f39c4b504db4836d23631fa41e401642ada4fa115ee0fa4f2f1e73",
+        "source_frames": [
+          1344,
+          1392,
+          2592,
+          2640,
+          2688,
+          2736
+        ],
+        "frame_start_s": [
+          56.0,
+          58.0,
+          108.0,
+          110.0,
+          112.0,
+          114.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "a9d3c94531e27053e6880aa93e93db68427d3ec79983be0e7c03c3c97c897e3a",
+          "128812291e83b528d1a9dad4b4afc7ebc0141e84cf493f1458823d37782b2d19",
+          "cfe7d5c94c62e9bd737096dd9e14580fcdb93363c7b41719c6f7f50ad3e2a2c1",
+          "0b7a5a775f37dea6e4b14b9ef27820f9eb1f165c22a22b7656e3f4e1cf6d67cc",
+          "a8e0b7862c86d3788a3aef828c1b1c88178c1b1b2d4077ee646e62e7b82e11f1",
+          "6bd362f5718cacdc6a5486bf4b9dd74d0a3547e40e4e98b04476b233e2e503e9"
+        ]
+      },
+      "b": {
+        "bytes": 39208455,
+        "sha256": "df5ec6d9f88971a2a6bf4a93bd5a8ff0be21b6aef15e8af1f7869abed3c692d5",
+        "source_frames": [
+          1344,
+          1392,
+          2592,
+          2640,
+          2688,
+          2736
+        ],
+        "frame_start_s": [
+          56.0,
+          58.0,
+          108.0,
+          110.0,
+          112.0,
+          114.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "4110f6990dd937353b42dac6eaa56b721a761e997946be41de23a699971da4d4",
+          "8a8d8099706efe2053bc83b55765dcf6b56e15ee7b8064faa0ffa4f5220af935",
+          "cfe7d5c94c62e9bd737096dd9e14580fcdb93363c7b41719c6f7f50ad3e2a2c1",
+          "0b7a5a775f37dea6e4b14b9ef27820f9eb1f165c22a22b7656e3f4e1cf6d67cc",
+          "a8e0b7862c86d3788a3aef828c1b1c88178c1b1b2d4077ee646e62e7b82e11f1",
+          "6bd362f5718cacdc6a5486bf4b9dd74d0a3547e40e4e98b04476b233e2e503e9"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0095",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      2,
+      8,
+      36,
+      38,
+      40,
+      42
+    ],
+    "normalized_rgb_difference": [
+      0.1163386715282821,
+      0.1550361090938433,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 13263369,
+        "sha256": "1b66c99709bd687ec4501e335e2e60487fb468b362210bfac182b3dabfde8a5e",
+        "source_frames": [
+          48,
+          192,
+          864,
+          912,
+          960,
+          1008
+        ],
+        "frame_start_s": [
+          2.0,
+          8.0,
+          36.0,
+          38.0,
+          40.0,
+          42.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "0a700de66602b5150af0ddc62fad3ccbac35555c5ba78d4e597364bae6a4f2d3",
+          "b0dc6285a371cc5913e73a5d6dcf2588186aa402d5191a82018ebd68593055fb",
+          "6bc68ab0477926bbfe7320ff215b1bc9a3b023d6f06708ed400fdffbf43d1ee9",
+          "167477b4d95644c85a6e1fd3428b040075a9a978b57c730eb9f6bbf2ce391d31",
+          "583bc821b0544c459a8e5339aa3c091416bd39d315c454ccf35df6fb27cf17ea",
+          "9dc9e981a0bd53d25d30596f62f4a17bc0f84eedfb76a55c50d3815594a1f830"
+        ]
+      },
+      "b": {
+        "bytes": 13179586,
+        "sha256": "d18fad754703d8608aaad645da26d4a34ca2a67132bea66ef4b5533b2d37b1f5",
+        "source_frames": [
+          48,
+          192,
+          864,
+          912,
+          960,
+          1008
+        ],
+        "frame_start_s": [
+          2.0,
+          8.0,
+          36.0,
+          38.0,
+          40.0,
+          42.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "3ac43dd88cc114adc01eac322ea0dcc775babc4e68edf33bbc35b794683aee2f",
+          "fc3a08728c48d9343dcbaf2037bf281a25489413e39e903c7f46b3c78a42333d",
+          "6bc68ab0477926bbfe7320ff215b1bc9a3b023d6f06708ed400fdffbf43d1ee9",
+          "167477b4d95644c85a6e1fd3428b040075a9a978b57c730eb9f6bbf2ce391d31",
+          "583bc821b0544c459a8e5339aa3c091416bd39d315c454ccf35df6fb27cf17ea",
+          "9dc9e981a0bd53d25d30596f62f4a17bc0f84eedfb76a55c50d3815594a1f830"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0259",
+    "task": "HSR",
+    "status": "checked",
+    "grid_s": [
+      22,
+      24,
+      30,
+      32,
+      34,
+      36
+    ],
+    "normalized_rgb_difference": [
+      0.12353893074719599,
+      0.09419638354312918,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 20144782,
+        "sha256": "17b8f37fe3484646cfcfce19be92cbc32ad7c3a9a14fbde09be9e584587c1122",
+        "source_frames": [
+          528,
+          576,
+          720,
+          768,
+          816,
+          864
+        ],
+        "frame_start_s": [
+          22.0,
+          24.0,
+          30.0,
+          32.0,
+          34.0,
+          36.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "9fbe6db2b29c905f3d915c0c3a34f3aabe3fa3a428b146cb490ab6b92b858743",
+          "66c11b1023ef953b1605a2212b3bd089f3e33d11bce6673dcedee6a3e8ebf7fd",
+          "a5b67238bbaa1eae08487c99799243c4099574b96f689706946beb330acfa606",
+          "465c87264ae1413d3bb0c234515dc2b764b47afe4af77aa6e2d00cac14fc16de",
+          "bf84131ed26e32d816eb58ee02a30198f8c7bff59d0012aa5645c64e8fb2b68f",
+          "a4912c8b14054332c03aa47e05577ebc1b7bb4996d7df86655b1f78c17f096ad"
+        ]
+      },
+      "b": {
+        "bytes": 20325120,
+        "sha256": "b53459376e6138f03c8d3f57e8c55db0e8fcb6c8dcb05af49ae2bc3584573349",
+        "source_frames": [
+          528,
+          576,
+          720,
+          768,
+          816,
+          864
+        ],
+        "frame_start_s": [
+          22.0,
+          24.0,
+          30.0,
+          32.0,
+          34.0,
+          36.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "974e4841d7e4f3300c29ed176d22e137e81b9df5dd341677a47d138faa6b858f",
+          "c6828ef14fd69cad69e2a9c3525bac9c8e8af6574607395e3eb446f03bccec52",
+          "a5b67238bbaa1eae08487c99799243c4099574b96f689706946beb330acfa606",
+          "465c87264ae1413d3bb0c234515dc2b764b47afe4af77aa6e2d00cac14fc16de",
+          "bf84131ed26e32d816eb58ee02a30198f8c7bff59d0012aa5645c64e8fb2b68f",
+          "a4912c8b14054332c03aa47e05577ebc1b7bb4996d7df86655b1f78c17f096ad"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0196",
+    "task": "AIR",
+    "status": "insufficient_disjoint_earlier_slots",
+    "earlier_grid_s": [
+      0
+    ],
+    "recent_grid_s": [
+      2,
+      4,
+      6,
+      8
+    ]
+  },
+  {
+    "pair_id": "twinpast_0185",
+    "task": "AIR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      10,
+      12,
+      14,
+      16
+    ],
+    "normalized_rgb_difference": [
+      0.017549095255386105,
+      0.018344277011216006,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 4102201,
+        "sha256": "cad2075904aaad5577e1a9b60887708502e4a09f2829039420445eabd664dd2f",
+        "source_frames": [
+          0,
+          48,
+          240,
+          288,
+          336,
+          384
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          10.0,
+          12.0,
+          14.0,
+          16.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "3eaee29d075cc5ded5af7a2f4257d391d5334c184d16d040435a9282fb124c7d",
+          "8060ad1622d691ee24cb93511011aed4d0a3411d2828fe67f029bfd32b8caf35",
+          "43eed2d75749730936e015e9b0da77a32ff6693b62fe9d246f05b501149584fd",
+          "2dfaebf576dae6e423a49437d42543129a31405a88735f5a67873fb7829be38a",
+          "50f5455db1814ea7db6fc13dfe955f59dd32f26a0adc15dfabefd92b66641451",
+          "3b4e6fb633e5a6bcfbefb000686638e4e75f66af1a38c1f488cefb1833e35af0"
+        ]
+      },
+      "b": {
+        "bytes": 4122677,
+        "sha256": "f9b1001a8a8110ac6c49e7fda3e4c63f7ab1acdc5e07d0a3857f1bf7b526f8a2",
+        "source_frames": [
+          0,
+          48,
+          240,
+          288,
+          336,
+          384
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          10.0,
+          12.0,
+          14.0,
+          16.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "bac14025ba11782792a426cd2dd149eee70d693641fa3e985bcf0d891d4545dc",
+          "be522aec23fadd17e2607ca5eee03ad52a53ad400be88eeff7cbea1e22db92aa",
+          "43eed2d75749730936e015e9b0da77a32ff6693b62fe9d246f05b501149584fd",
+          "2dfaebf576dae6e423a49437d42543129a31405a88735f5a67873fb7829be38a",
+          "50f5455db1814ea7db6fc13dfe955f59dd32f26a0adc15dfabefd92b66641451",
+          "3b4e6fb633e5a6bcfbefb000686638e4e75f66af1a38c1f488cefb1833e35af0"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0214",
+    "task": "AIR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      38,
+      40,
+      42,
+      44
+    ],
+    "normalized_rgb_difference": [
+      0.03903457344872105,
+      0.039463810215444206,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 25963688,
+        "sha256": "1f4ec4b343fd0ae0ab92cf07d61df32c71e8f56485d5d3ce0ed8095cb42985e1",
+        "source_frames": [
+          0,
+          48,
+          912,
+          960,
+          1008,
+          1056
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          38.0,
+          40.0,
+          42.0,
+          44.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "34d7ee56544be90bd5a66c95ce6180e6df41e585cd4e9e595eb0b711207129bd",
+          "1a5cc77d2dcff19637ff1dcea4ac9f6f0762a3d24f9927530d5b152f9f4eda0f",
+          "c551aa44877768a39ba8a3ca35a7356436fd29b3e0804619a3287093a7201b1d",
+          "af4317a3219e2a70b61a4cfce46fb6a74e21040d0c62b8470f4f2b68b7289e57",
+          "f800c78548f52bd969fe60c6ce1095f41ee5f668d05b020ccbb6d029b0c17101",
+          "723f7ca19bdfb2baf60ba5b09f5d92821dffa39adb6934a56ebe8c25a6906e53"
+        ]
+      },
+      "b": {
+        "bytes": 25802733,
+        "sha256": "0682f3652c834a8868df6de722caae39ddac9fac6da6b9fcec08ed96b96b7c27",
+        "source_frames": [
+          0,
+          48,
+          912,
+          960,
+          1008,
+          1056
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          38.0,
+          40.0,
+          42.0,
+          44.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "7c1ba7613e7d48cb7917ffb1cdf6d56f6593555ec24c6f9877607b4d0b21f0db",
+          "2c3acd91ccf37c91a136f26b47f69f0a9ff206901be94f0eff17a6797a158e78",
+          "c551aa44877768a39ba8a3ca35a7356436fd29b3e0804619a3287093a7201b1d",
+          "af4317a3219e2a70b61a4cfce46fb6a74e21040d0c62b8470f4f2b68b7289e57",
+          "f800c78548f52bd969fe60c6ce1095f41ee5f668d05b020ccbb6d029b0c17101",
+          "723f7ca19bdfb2baf60ba5b09f5d92821dffa39adb6934a56ebe8c25a6906e53"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0079",
+    "task": "AIR",
+    "status": "checked",
+    "grid_s": [
+      6,
+      8,
+      78,
+      80,
+      82,
+      84
+    ],
+    "normalized_rgb_difference": [
+      0.018347302912934724,
+      0.020493864984265312,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 50061847,
+        "sha256": "9593bf6dd0ed8f11779767f627e5add09a935ef1a1854c4acda8649c389aad27",
+        "source_frames": [
+          144,
+          192,
+          1872,
+          1920,
+          1968,
+          2016
+        ],
+        "frame_start_s": [
+          6.0,
+          8.0,
+          78.0,
+          80.0,
+          82.0,
+          84.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "98cac78f9c88c598608e9d2824a56ca9c03f9f33a3831af332f1175e23af26dd",
+          "e4189ac7821ce3fa99f4e52de13f2e9c090cc6949e4d302f4dc6dc8e9c9e4d59",
+          "8b9550ba136e4c0dd73e309f7da71ade707bb7307e4c75a634fe70be97125ecb",
+          "1b1cfc5384a3c9abaed2e1a75d332314e0ef5f05df0d6f59ebfd814886e7b644",
+          "164a38204107b892ec9d9b902f7e8081e2c9a58e6b25e167b86e027babc253a6",
+          "03f668abf4d9ec7511d060843c35628ba7185c4d142059f5aa760c0695b16155"
+        ]
+      },
+      "b": {
+        "bytes": 49883514,
+        "sha256": "7141fb5b3895869f0b7d258aea43dee43c55989c162b7e23aa6b7c2cd005acb9",
+        "source_frames": [
+          144,
+          192,
+          1872,
+          1920,
+          1968,
+          2016
+        ],
+        "frame_start_s": [
+          6.0,
+          8.0,
+          78.0,
+          80.0,
+          82.0,
+          84.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "a0b22ed4c4ab8716203eae1ee60db2c113048ab9520831c2c81bdb86faa66387",
+          "2a8385e9bf42c7f13befa638ce60da9c51bf0387d662aafb5fb6daa672d239cf",
+          "8b9550ba136e4c0dd73e309f7da71ade707bb7307e4c75a634fe70be97125ecb",
+          "1b1cfc5384a3c9abaed2e1a75d332314e0ef5f05df0d6f59ebfd814886e7b644",
+          "164a38204107b892ec9d9b902f7e8081e2c9a58e6b25e167b86e027babc253a6",
+          "03f668abf4d9ec7511d060843c35628ba7185c4d142059f5aa760c0695b16155"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0236",
+    "task": "AIR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      32,
+      34,
+      36,
+      38
+    ],
+    "normalized_rgb_difference": [
+      0.06756743978455579,
+      0.0672045837367869,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 16063112,
+        "sha256": "930820bc91fc7d02d8c3abb78c39897be89d5ea42c5cd4d1010a8a874b5d323d",
+        "source_frames": [
+          0,
+          48,
+          768,
+          816,
+          864,
+          912
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          32.0,
+          34.0,
+          36.0,
+          38.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "3d83b1ed21e6618d2d4b7df1e190ee1a5b9661cb13f82fc4059538c6fbd67a47",
+          "5f2efbcdfc72b51b7d5161dd0696d834c909705034eeec183ac80380b51c0fc7",
+          "bada6290738792500a15bc7238f9841afcda840d25789f962d14467a038a722d",
+          "0c472ecb7f599ea6187b98d66d47211a9a16366331e555b9b9968b96ec371267",
+          "33962a108546ee21b480e0a79788a48866cc9c11c06753ecbaf3f0d345aa54a5",
+          "897eac61866ada1b466a10e54b1e00b8859bd393216b82a5338f7e0633530baa"
+        ]
+      },
+      "b": {
+        "bytes": 15999399,
+        "sha256": "b9c9886edbced749b9bc6d6e326f564ab10bce9f5c34238c5441b99060f6f84a",
+        "source_frames": [
+          0,
+          48,
+          768,
+          816,
+          864,
+          912
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          32.0,
+          34.0,
+          36.0,
+          38.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "fa4858f7e4fc2e4f31eb09af1f2a8e0357c09c835bab1db5088cc2ce5f51b376",
+          "934786e60c08527e9608279240a907c3eb824ceff81a3d6c0d60d000c3a232cc",
+          "bada6290738792500a15bc7238f9841afcda840d25789f962d14467a038a722d",
+          "0c472ecb7f599ea6187b98d66d47211a9a16366331e555b9b9968b96ec371267",
+          "33962a108546ee21b480e0a79788a48866cc9c11c06753ecbaf3f0d345aa54a5",
+          "897eac61866ada1b466a10e54b1e00b8859bd393216b82a5338f7e0633530baa"
+        ]
+      }
+    }
+  },
+  {
+    "pair_id": "twinpast_0036",
+    "task": "AIR",
+    "status": "checked",
+    "grid_s": [
+      0,
+      2,
+      36,
+      38,
+      40,
+      42
+    ],
+    "normalized_rgb_difference": [
+      0.024057053376906317,
+      0.025663618070685065,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decoded": {
+      "a": {
+        "bytes": 17576106,
+        "sha256": "4fa6c986d8f9ccd3ca4446f1443e27a272f503cfaec5f48ffa83c2affc11efd9",
+        "source_frames": [
+          0,
+          48,
+          864,
+          912,
+          960,
+          1008
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          36.0,
+          38.0,
+          40.0,
+          42.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "a7087d59a82eaa534cdeb7a7e4658b90c567fbb821006287ddb06f9525d645bf",
+          "9ff15e013914ec9e72fa260a1a429e9e521ea84a201e9deda889e6582d616f9d",
+          "10bec95e44330134059179acca695988028a13c452fea71cc037b17ed6f70956",
+          "8643e484463441ab8881b171b2517b2c66f707c5a483c8b2ab89fe70717cf8cb",
+          "90fd9562473536c1145fbb0db0e426d3da7d595789ddb0e66e42743edcd87ee2",
+          "476b94ea69d0908dd0e42004acd3d621a48ad5e2127846ede605c025fad6e3d3"
+        ]
+      },
+      "b": {
+        "bytes": 17480443,
+        "sha256": "8ed2e5a5d7dec040cf207eadfa0523ab92498aee34e2762b468779f40fdbee92",
+        "source_frames": [
+          0,
+          48,
+          864,
+          912,
+          960,
+          1008
+        ],
+        "frame_start_s": [
+          0.0,
+          2.0,
+          36.0,
+          38.0,
+          40.0,
+          42.0
+        ],
+        "early_samples_inside": [
+          true,
+          true
+        ],
+        "decoded_rgb_sha256": [
+          "7d110980d012aa21e2329db52881007a5664d83e8a30c8a486b45bf80c1b12a4",
+          "b8a757c00933198580b36a2714ba29f91470e5255cb744ea70275d0e1a4795d2",
+          "10bec95e44330134059179acca695988028a13c452fea71cc037b17ed6f70956",
+          "8643e484463441ab8881b171b2517b2c66f707c5a483c8b2ab89fe70717cf8cb",
+          "90fd9562473536c1145fbb0db0e426d3da7d595789ddb0e66e42743edcd87ee2",
+          "476b94ea69d0908dd0e42004acd3d621a48ad5e2127846ede605c025fad6e3d3"
+        ]
+      }
+    }
+  }
+]

@@ -2,6 +2,17 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-23 — Blinded support review and TwinPast development screen
+
+- Verified the 147-window review packet and preserved the executed CPU notebook. Recorded the single-reviewer labels and the two cases with clear earlier evidence, both also visible in the latest window.
+- Pinned 12 TwinPast development pairs. Verified 44 matching recent frames at decoded RGB resolution across 11 checked pairs and recorded nine clear earlier-evidence contrasts. Defined the next paired GPU diagnostic.
+- Updated the project status, publication roadmap, manuscript outline, research log, and evidence and notebook indexes.
+
+## 2026-11-22 — Target-binding experiment and verifier audit
+
+- Audited 1,800 outcomes across 300 questions. The weaker-score rule scored 147/269, versus 152/269 for mean and 156/269 for recent-only, on the fixed eligible subset.
+- Replayed the saved scores. Binding-only ranking reproduced every weaker-score choice, and A/B option order reversed the binding margin sign in 815 of 1,264 windows.
+
 ## 2026-11-21 — Audited frozen short query confirmation
 
 - Verified the completed v2 ZIP, all 450 answers and the registered comparison. Compact recent-four scores 74/150 versus all-history short readout at 70/150.

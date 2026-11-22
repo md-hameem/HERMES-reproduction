@@ -1,6 +1,6 @@
 # Manuscript planning outline
 
-Status as of 20 November 2026: planning only. Working venue: Neurocomputing. Intended article type: regular article. Working scientific question: can an original memory-maintenance mechanism improve a defensible quality/cost trade-off in streaming video-language inference?
+Status as of 23 November 2026. Neurocomputing is the working venue for a regular article. The current scientific question is whether time-valid earlier evidence can correct a recent answer at a fixed streaming budget. The completed reproduction and controls can support the background and diagnostic sections. The nine-pair TwinPast GPU diagnostic and any method results are pending. [Execution plan](historical_correction_execution_plan.md)
 
 ## Title, abstract and keywords
 
