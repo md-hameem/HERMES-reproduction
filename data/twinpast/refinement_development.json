@@ -1,0 +1,1062 @@
+{
+  "dataset": "younght/TwinPast",
+  "revision": "c1f1cbab68bfda2982565c0491f1a97474b73558",
+  "annotation_sha256": "f36073ba77565748175741a0e3a11e0bf6536559d6b002ffa43a87016f30542e",
+  "seed": "HERMES-TwinPast-local-refinement-v1",
+  "expected_max_pairs": 8,
+  "excluded_ids": [
+    "twinpast_0208",
+    "twinpast_0094",
+    "twinpast_0099",
+    "twinpast_0252",
+    "twinpast_0095",
+    "twinpast_0259",
+    "twinpast_0196",
+    "twinpast_0185",
+    "twinpast_0214",
+    "twinpast_0079",
+    "twinpast_0236",
+    "twinpast_0036",
+    "twinpast_0001",
+    "twinpast_0037",
+    "twinpast_0153",
+    "twinpast_0031",
+    "twinpast_0291",
+    "twinpast_0083",
+    "twinpast_0132",
+    "twinpast_0326",
+    "twinpast_0166",
+    "twinpast_0162",
+    "twinpast_0249",
+    "twinpast_0034"
+  ],
+  "reference_ids": [
+    "twinpast_0208",
+    "twinpast_0094",
+    "twinpast_0099",
+    "twinpast_0252",
+    "twinpast_0095",
+    "twinpast_0259",
+    "twinpast_0196",
+    "twinpast_0185",
+    "twinpast_0214",
+    "twinpast_0079",
+    "twinpast_0236",
+    "twinpast_0036",
+    "twinpast_0001",
+    "twinpast_0037",
+    "twinpast_0153",
+    "twinpast_0031",
+    "twinpast_0291",
+    "twinpast_0083",
+    "twinpast_0132",
+    "twinpast_0326"
+  ],
+  "candidates": [
+    {
+      "pair_id": "twinpast_0255",
+      "video_a": "videos/twinpast_0255/A.mp4",
+      "video_b": "videos/twinpast_0255/B.mp4",
+      "question": "In the earlier clip, what was the order of the letters at the beginning?",
+      "options": [
+        "sel",
+        "home"
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 35.5,
+      "evidence_intervals": {
+        "A": [
+          [
+            0.0,
+            0.4
+          ]
+        ],
+        "B": [
+          [
+            0.0,
+            1.4
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 1.4,
+      "target_event_rank": 1,
+      "position_bin": "Early",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0118",
+      "video_a": "videos/twinpast_0118/A.mp4",
+      "video_b": "videos/twinpast_0118/B.mp4",
+      "question": "At the end of the guitar-case scene, before the player in a green shirt appears, was the case cover lowered over the guitar body or lifted away from it?",
+      "options": [
+        "Lowered over the guitar body.",
+        "Lifted away from the guitar body."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 45.625,
+      "evidence_intervals": {
+        "A": [
+          [
+            5.0,
+            5.625
+          ]
+        ],
+        "B": [
+          [
+            5.0,
+            5.625
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 5.625,
+      "target_event_rank": 1,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0338",
+      "video_a": "videos/twinpast_0338/A.mp4",
+      "video_b": "videos/twinpast_0338/B.mp4",
+      "question": "At the end of the earlier tiled-floor segment, immediately before the scene changes, was the small yellow box visible or hidden beneath the red cover?",
+      "options": [
+        "Hidden beneath the red cover.",
+        "Visible on the floor."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 39.208333333333336,
+      "evidence_intervals": {
+        "A": [
+          [
+            1.4,
+            3.3
+          ],
+          [
+            3.6,
+            4.2
+          ]
+        ],
+        "B": [
+          [
+            0.9,
+            2.9
+          ],
+          [
+            3.6,
+            4.2
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 4.208333333333333,
+      "target_event_rank": 1,
+      "position_bin": "Middle",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0164",
+      "video_a": "videos/twinpast_0164/A.mp4",
+      "video_b": "videos/twinpast_0164/B.mp4",
+      "question": "At the end of the close-up of the orange publication on the stone counter, was the publication open or closed?",
+      "options": [
+        "The publication was open.",
+        "The publication was closed."
+      ],
+      "answer_a": "B",
+      "answer_b": "A",
+      "t_query": 22.041666666666668,
+      "evidence_intervals": {
+        "A": [
+          [
+            4.166666666666667,
+            4.5
+          ]
+        ],
+        "B": [
+          [
+            4.166666666666667,
+            4.5
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 4.5,
+      "target_event_rank": 1,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0120",
+      "video_a": "videos/twinpast_0120/A.mp4",
+      "video_b": "videos/twinpast_0120/B.mp4",
+      "question": "At the end of the box-packing scene, before the video moves on to packing a backpack, what is the visible state of the box top?",
+      "options": [
+        "The top flaps lay flat across the opening, covering the contents.",
+        "The top flaps remained raised and the contents were exposed."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 42.958333333333336,
+      "evidence_intervals": null,
+      "last_decisive_evidence_time": null,
+      "target_event_rank": null,
+      "position_bin": null,
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0085",
+      "video_a": "videos/twinpast_0085/A.mp4",
+      "video_b": "videos/twinpast_0085/B.mp4",
+      "question": "At the end of the earlier bedding segment, immediately before the scene changes, was the white pillow exposed or covered by the gray sheet?",
+      "options": [
+        "Covered by the gray sheet.",
+        "Exposed beside the gray sheet."
+      ],
+      "answer_a": "B",
+      "answer_b": "A",
+      "t_query": 39.041666666666664,
+      "evidence_intervals": {
+        "A": [
+          [
+            1.4,
+            3.2
+          ],
+          [
+            3.433333333333333,
+            4.033333333333333
+          ]
+        ],
+        "B": [
+          [
+            0.7,
+            2.7
+          ],
+          [
+            3.433333333333333,
+            4.033333333333333
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 4.041666666666667,
+      "target_event_rank": 1,
+      "position_bin": "Middle",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0206",
+      "video_a": "videos/twinpast_0206/A.mp4",
+      "video_b": "videos/twinpast_0206/B.mp4",
+      "question": "In the wooden-table scene with the green bottle, what was the large round blue lid resting on just before the scene changed?",
+      "options": [
+        "The tall translucent pitcher.",
+        "The small rectangular clear container."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 20.958333333333332,
+      "evidence_intervals": {
+        "A": [
+          [
+            11.8,
+            11.958333333333334
+          ]
+        ],
+        "B": [
+          [
+            11.8,
+            11.958333333333334
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 11.958333333333334,
+      "target_event_rank": 2,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0021",
+      "video_a": "videos/twinpast_0021/A.mp4",
+      "video_b": "videos/twinpast_0021/B.mp4",
+      "question": "In the last view of the orange bowl resting on the counter before the eggs are poured into the frying pan, are separate yolks still visible, or have the eggs been beaten into a blended mixture?",
+      "options": [
+        "Separate yolks were still visible.",
+        "The eggs had been beaten into a blended mixture."
+      ],
+      "answer_a": "B",
+      "answer_b": "A",
+      "t_query": 66.95833333333333,
+      "evidence_intervals": null,
+      "last_decisive_evidence_time": null,
+      "target_event_rank": null,
+      "position_bin": null,
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0272",
+      "video_a": "videos/twinpast_0272/A.mp4",
+      "video_b": "videos/twinpast_0272/B.mp4",
+      "question": "At the end of the opening tabletop scene with a black travel mug and two blue bowls, which bowl was underneath the larger translucent lid?",
+      "options": [
+        "The larger bowl.",
+        "The smaller bowl."
+      ],
+      "answer_a": "B",
+      "answer_b": "A",
+      "t_query": 38.958333333333336,
+      "evidence_intervals": {
+        "A": [
+          [
+            2.8,
+            2.9583333333333335
+          ]
+        ],
+        "B": [
+          [
+            2.8,
+            2.9583333333333335
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 2.9583333333333335,
+      "target_event_rank": 1,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0204",
+      "video_a": "videos/twinpast_0204/A.mp4",
+      "video_b": "videos/twinpast_0204/B.mp4",
+      "question": "At the end of the scene where the person holds a blue bottle in front of the camera, was the cap on or off the bottle?",
+      "options": [
+        "The cap was on the bottle.",
+        "The cap was off the bottle."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 22.791666666666668,
+      "evidence_intervals": {
+        "A": [
+          [
+            3.4166666666666665,
+            3.75
+          ]
+        ],
+        "B": [
+          [
+            3.4166666666666665,
+            3.75
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 3.75,
+      "target_event_rank": 1,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0141",
+      "video_a": "videos/twinpast_0141/A.mp4",
+      "video_b": "videos/twinpast_0141/B.mp4",
+      "question": "Where was the pen at the end of the mug scene, before the pen-sorting scene resumed?",
+      "options": [
+        "To the left of the mug.",
+        "Behind the mug, with its top still visible."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 29.125,
+      "evidence_intervals": {
+        "A": [
+          [
+            12.75,
+            13.125
+          ]
+        ],
+        "B": [
+          [
+            12.75,
+            13.125
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 13.125,
+      "target_event_rank": 2,
+      "position_bin": "Late",
+      "task": "HSR"
+    },
+    {
+      "pair_id": "twinpast_0107",
+      "video_a": "videos/twinpast_0107/A.mp4",
+      "video_b": "videos/twinpast_0107/B.mp4",
+      "question": "At the end of the opening wooden-table scene with a tall glass soda bottle, what was the large black domed lid resting on?",
+      "options": [
+        "The white cylindrical flask.",
+        "The clear plastic bottle."
+      ],
+      "answer_a": "A",
+      "answer_b": "B",
+      "t_query": 38.958333333333336,
+      "evidence_intervals": {
+        "A": [
+          [
+            2.8,
+            2.9583333333333335
+          ]
+        ],
+        "B": [
+          [
+            2.8,
+            2.9583333333333335
+          ]
+        ]
+      },
+      "last_decisive_evidence_time": 2.9583333333333335,
+      "target_event_rank": 1,
+      "position_bin": "Late",
+      "task": "HSR"
+    }
+  ],
+  "media_plan": [
+    [
+      {
+        "pair_id": "twinpast_0208",
+        "video_a": "videos/twinpast_0208/A.mp4",
+        "video_b": "videos/twinpast_0208/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 19355906,
+            "sha256": "913c198fc475031b0431c84f05332c144925e30ae812ea1b7c4aabafcb81bd7b"
+          },
+          "b": {
+            "bytes": 19367971,
+            "sha256": "90da807127daed7dee910a83e831c8d468cc530754e945cc6c2011847812a102"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0094",
+        "video_a": "videos/twinpast_0094/A.mp4",
+        "video_b": "videos/twinpast_0094/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 23523559,
+            "sha256": "a4bc3db1a72cf2aa05deacedbcc79a25d60a9bb1e7181886600e08fc6dea4b89"
+          },
+          "b": {
+            "bytes": 22992602,
+            "sha256": "c78deb69dd5f496a65a527262fd48b9aa7e89821efd604893dcbd78984e1bc8c"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0099",
+        "video_a": "videos/twinpast_0099/A.mp4",
+        "video_b": "videos/twinpast_0099/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 27571576,
+            "sha256": "3612dacef08616a655a52b2cb80d729167adc6f6f1058ef0a76728a4bb07a167"
+          },
+          "b": {
+            "bytes": 29849686,
+            "sha256": "6ea5bb359efb0113e352a0e2ca3f0715a45fd088a3a411561606634e859f1639"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0252",
+        "video_a": "videos/twinpast_0252/A.mp4",
+        "video_b": "videos/twinpast_0252/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 38872585,
+            "sha256": "903f8e8ac3f39c4b504db4836d23631fa41e401642ada4fa115ee0fa4f2f1e73"
+          },
+          "b": {
+            "bytes": 39208455,
+            "sha256": "df5ec6d9f88971a2a6bf4a93bd5a8ff0be21b6aef15e8af1f7869abed3c692d5"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0095",
+        "video_a": "videos/twinpast_0095/A.mp4",
+        "video_b": "videos/twinpast_0095/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 13263369,
+            "sha256": "1b66c99709bd687ec4501e335e2e60487fb468b362210bfac182b3dabfde8a5e"
+          },
+          "b": {
+            "bytes": 13179586,
+            "sha256": "d18fad754703d8608aaad645da26d4a34ca2a67132bea66ef4b5533b2d37b1f5"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0259",
+        "video_a": "videos/twinpast_0259/A.mp4",
+        "video_b": "videos/twinpast_0259/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 20144782,
+            "sha256": "17b8f37fe3484646cfcfce19be92cbc32ad7c3a9a14fbde09be9e584587c1122"
+          },
+          "b": {
+            "bytes": 20325120,
+            "sha256": "b53459376e6138f03c8d3f57e8c55db0e8fcb6c8dcb05af49ae2bc3584573349"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0196",
+        "video_a": "videos/twinpast_0196/A.mp4",
+        "video_b": "videos/twinpast_0196/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 3713947,
+            "sha256": "62fc90176f7a14ffbf8524265d09b64cb4dc1f140c3ee065c19c9c484f18b706"
+          },
+          "b": {
+            "bytes": 3835416,
+            "sha256": "22192642f05331bae9da57228a0f6a611ebc3dddd3f0b76ccf628d8784f55027"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0185",
+        "video_a": "videos/twinpast_0185/A.mp4",
+        "video_b": "videos/twinpast_0185/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 4102201,
+            "sha256": "cad2075904aaad5577e1a9b60887708502e4a09f2829039420445eabd664dd2f"
+          },
+          "b": {
+            "bytes": 4122677,
+            "sha256": "f9b1001a8a8110ac6c49e7fda3e4c63f7ab1acdc5e07d0a3857f1bf7b526f8a2"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0214",
+        "video_a": "videos/twinpast_0214/A.mp4",
+        "video_b": "videos/twinpast_0214/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 25963688,
+            "sha256": "1f4ec4b343fd0ae0ab92cf07d61df32c71e8f56485d5d3ce0ed8095cb42985e1"
+          },
+          "b": {
+            "bytes": 25802733,
+            "sha256": "0682f3652c834a8868df6de722caae39ddac9fac6da6b9fcec08ed96b96b7c27"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0079",
+        "video_a": "videos/twinpast_0079/A.mp4",
+        "video_b": "videos/twinpast_0079/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 50061847,
+            "sha256": "9593bf6dd0ed8f11779767f627e5add09a935ef1a1854c4acda8649c389aad27"
+          },
+          "b": {
+            "bytes": 49883514,
+            "sha256": "7141fb5b3895869f0b7d258aea43dee43c55989c162b7e23aa6b7c2cd005acb9"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0236",
+        "video_a": "videos/twinpast_0236/A.mp4",
+        "video_b": "videos/twinpast_0236/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 16063112,
+            "sha256": "930820bc91fc7d02d8c3abb78c39897be89d5ea42c5cd4d1010a8a874b5d323d"
+          },
+          "b": {
+            "bytes": 15999399,
+            "sha256": "b9c9886edbced749b9bc6d6e326f564ab10bce9f5c34238c5441b99060f6f84a"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0036",
+        "video_a": "videos/twinpast_0036/A.mp4",
+        "video_b": "videos/twinpast_0036/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 17576106,
+            "sha256": "4fa6c986d8f9ccd3ca4446f1443e27a272f503cfaec5f48ffa83c2affc11efd9"
+          },
+          "b": {
+            "bytes": 17480443,
+            "sha256": "8ed2e5a5d7dec040cf207eadfa0523ab92498aee34e2762b468779f40fdbee92"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0001",
+        "video_a": "videos/twinpast_0001/A.mp4",
+        "video_b": "videos/twinpast_0001/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 13171396,
+            "sha256": "cfad5602a5b1167252d68fffca1b2a78a223455227f24c5b6a8be37efae95c9a"
+          },
+          "b": {
+            "bytes": 13217506,
+            "sha256": "97ad24e0d62bc8dab4d9b5acaa111eaa3a1d6a82ec6aa8a273b6882e2e90845b"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0037",
+        "video_a": "videos/twinpast_0037/A.mp4",
+        "video_b": "videos/twinpast_0037/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 10906636,
+            "sha256": "68371488689c87aed6a63f066ac8d75074b1010f1704f97cb00400481e40e646"
+          },
+          "b": {
+            "bytes": 10993223,
+            "sha256": "87049eeafddaac85b6b7d09c48e90cdcea07c827e3d050ac9de0f210be055ed0"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0153",
+        "video_a": "videos/twinpast_0153/A.mp4",
+        "video_b": "videos/twinpast_0153/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 8207871,
+            "sha256": "5b8b4ec98f8efa8138e7bf8934eb9c768a6b9c26bbc066423944d7a7a22c3fc9"
+          },
+          "b": {
+            "bytes": 8324053,
+            "sha256": "4cb31fb5e432908ffae28c1098d23f9bf9caf33784a9d12a2fe6751db9ef5299"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0031",
+        "video_a": "videos/twinpast_0031/A.mp4",
+        "video_b": "videos/twinpast_0031/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 9496513,
+            "sha256": "f611520139836f531c70765c06fc85a002d8f6e1d2f02b4f9656ac335558902c"
+          },
+          "b": {
+            "bytes": 9574043,
+            "sha256": "5299ccde4d090adc9bbccce56622559b6be2df1d8839e4bff32c2d07a1e007c0"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0291",
+        "video_a": "videos/twinpast_0291/A.mp4",
+        "video_b": "videos/twinpast_0291/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 11004021,
+            "sha256": "ba781165aeb06a4e9dc29b3988395b43e4c37a25cd1c46ed82bf908f2cb86056"
+          },
+          "b": {
+            "bytes": 10969101,
+            "sha256": "d4f3e0cd47b6ced30bd2c2cf06ab890176b97d7709339a8a23073cd63d9b0864"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0083",
+        "video_a": "videos/twinpast_0083/A.mp4",
+        "video_b": "videos/twinpast_0083/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 20102984,
+            "sha256": "66357c8c27082eb95a9ccadb32674b2a19f2a28f6c3fdb2c93154c9febfc49d9"
+          },
+          "b": {
+            "bytes": 20081207,
+            "sha256": "5143763f50177ef46d63e48a252ea5f5d066e64b6d676e54a0f747c6cd588d08"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0132",
+        "video_a": "videos/twinpast_0132/A.mp4",
+        "video_b": "videos/twinpast_0132/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 12169725,
+            "sha256": "e4027888640981f79e0df2c17e695962d0ff2513dea7d8125b7e7951756da260"
+          },
+          "b": {
+            "bytes": 12197287,
+            "sha256": "30af0773b972d76b69ea29204833798d6f8172c84433270490a6a6d340fd079f"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0326",
+        "video_a": "videos/twinpast_0326/A.mp4",
+        "video_b": "videos/twinpast_0326/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 38864193,
+            "sha256": "bc868588e810c64bc3f7ba42eee766a84e13c5d8d071e6b311df0df2be97ffa1"
+          },
+          "b": {
+            "bytes": 38793936,
+            "sha256": "db99c3048cae8d28243ca3295e924880cf54a3aea28fe992103208f27c812e28"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0255",
+        "video_a": "videos/twinpast_0255/A.mp4",
+        "video_b": "videos/twinpast_0255/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 16624513,
+            "sha256": "a5abe9605f5b8748ef6532db89ab6cbb55612f7db562d9609168e3cf135d64eb"
+          },
+          "b": {
+            "bytes": 16846600,
+            "sha256": "050cd5028cef8274781cddbaa38ed58b3de975613daf570795074febeb58c6da"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0118",
+        "video_a": "videos/twinpast_0118/A.mp4",
+        "video_b": "videos/twinpast_0118/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 15711648,
+            "sha256": "1e2c077d7960adadaecd54d5eacb5ddbfdb9fa4e0d760f90d44da17ec0671d6c"
+          },
+          "b": {
+            "bytes": 15785368,
+            "sha256": "e58b4b79362be9876edb284a9cf441a7f2aac8f1f5ad98619eab2a37c550f479"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0338",
+        "video_a": "videos/twinpast_0338/A.mp4",
+        "video_b": "videos/twinpast_0338/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 11553424,
+            "sha256": "f9ba9c04ee2b3ddaee8e05ea0a09cf596aea1943204cf70e41e8ccab68ef2b34"
+          },
+          "b": {
+            "bytes": 11528085,
+            "sha256": "33e0c317de9f05651a3640adb419a5ad76a694056022446609db18d0c09c7e82"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0164",
+        "video_a": "videos/twinpast_0164/A.mp4",
+        "video_b": "videos/twinpast_0164/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 7044647,
+            "sha256": "2aae7b2a1d8717fa50800c33f3345b69f12f100121ba7b742d122514d24e0a82"
+          },
+          "b": {
+            "bytes": 7090016,
+            "sha256": "80db2aca755771b394ba1d72f875663144c80e637d7ccfd8fb35b8605fc87d3d"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0120",
+        "video_a": "videos/twinpast_0120/A.mp4",
+        "video_b": "videos/twinpast_0120/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 25283725,
+            "sha256": "9bcbd0ff510845f5385ecb9aecd0e63f160fb3f70619dbc57dc7a9acb8fd70b3"
+          },
+          "b": {
+            "bytes": 26609694,
+            "sha256": "1f701a8e5746e67c3aa6abded420da371339d069998cd8e743f856a96f8cc199"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0085",
+        "video_a": "videos/twinpast_0085/A.mp4",
+        "video_b": "videos/twinpast_0085/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 4608254,
+            "sha256": "23909dece7fad9af70b53e8b1b333057600095ceaf999d1d2d4c485b077348ca"
+          },
+          "b": {
+            "bytes": 4651289,
+            "sha256": "06ea2b4e280cabc773f7b2c0566f8f7890f52d8bc293e74a85d757aa6b256494"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0206",
+        "video_a": "videos/twinpast_0206/A.mp4",
+        "video_b": "videos/twinpast_0206/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 7534621,
+            "sha256": "dec07694bf90c232ef4b26ddf824e42fd805c5e3b6ffe99821fe4c7d3bacefbb"
+          },
+          "b": {
+            "bytes": 7541950,
+            "sha256": "e0799ab8db777a0d67a0ea176177b8937bfd750c318fafaa6a0793a4a923a1e1"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0021",
+        "video_a": "videos/twinpast_0021/A.mp4",
+        "video_b": "videos/twinpast_0021/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 24797005,
+            "sha256": "96f47091116bbad5d8bc4c2dda471255372950e5565ff063d57f09e735a812f6"
+          },
+          "b": {
+            "bytes": 24575581,
+            "sha256": "6d2a1d5f22652301859dffbcadba8e970d597538ddc75007fba1ff413b63fbf3"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0272",
+        "video_a": "videos/twinpast_0272/A.mp4",
+        "video_b": "videos/twinpast_0272/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 17241368,
+            "sha256": "c3347c2951f17cdde6343209455699818846c9c3f37a01b0d1a4175559d29e3b"
+          },
+          "b": {
+            "bytes": 17053208,
+            "sha256": "538cda9cefa318cfce3da67c49244b69abe77d19d135445e11c441b3314eb260"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0204",
+        "video_a": "videos/twinpast_0204/A.mp4",
+        "video_b": "videos/twinpast_0204/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 6370525,
+            "sha256": "66376858cc6fce8780015a53117b45ae6bad5365bf0f546acac1d6ea80cbb56a"
+          },
+          "b": {
+            "bytes": 6356519,
+            "sha256": "7692ff8b1ab5db456c1f4f282c8898fc82382a287cd6a2a48919ebfe25d17ce3"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0141",
+        "video_a": "videos/twinpast_0141/A.mp4",
+        "video_b": "videos/twinpast_0141/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 11005563,
+            "sha256": "5f01a224b8eab263f3482f9e57516b8ff379e90b476013d52af566cba6734378"
+          },
+          "b": {
+            "bytes": 11051711,
+            "sha256": "aae370b7a451402585a091247344da41dcfabaccd658f578cc631424e97613a6"
+          }
+        }
+      },
+      null
+    ],
+    [
+      {
+        "pair_id": "twinpast_0107",
+        "video_a": "videos/twinpast_0107/A.mp4",
+        "video_b": "videos/twinpast_0107/B.mp4"
+      },
+      {
+        "decoded": {
+          "a": {
+            "bytes": 15912952,
+            "sha256": "c0f429f59bec0868cf5e80e377b460c361b2fcdc2290c5e556e83e3417955586"
+          },
+          "b": {
+            "bytes": 15898401,
+            "sha256": "8e00de3bf38fe4f87c922638057fd4cfe491beb17edce7982e75ec38026297e9"
+          }
+        }
+      },
+      null
+    ]
+  ],
+  "source_status": "Original source IDs unavailable. Sampled media screening is a duplicate proxy."
+}

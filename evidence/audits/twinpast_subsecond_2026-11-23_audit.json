@@ -1,0 +1,31 @@
+{
+  "archive_sha256": "5c4ae82d43bea514074bd9bf375912a39362203c308b387bb8c8e0f02844f10a",
+  "notebook_sha256": "863ee5c3866a6fecee4c816d56c2ac3fe70224322f371b7219ecc5a714e76698",
+  "verified_payloads": 38,
+  "correct_branch_orders": {
+    "uniform": 11,
+    "annotated_native": 19
+  },
+  "max_abs_replay_difference": 0.0,
+  "prior_1fps_missed_both_branches": [
+    "twinpast_0153",
+    "twinpast_0291",
+    "twinpast_0132"
+  ],
+  "recovered_from_missed_both": [],
+  "pairs": 7,
+  "scores": 56,
+  "robust_pairs": {
+    "uniform": [],
+    "annotated_native": [
+      "twinpast_0001",
+      "twinpast_0037"
+    ]
+  },
+  "recovered_pairs": [
+    "twinpast_0001",
+    "twinpast_0037"
+  ],
+  "replay_failures": [],
+  "development_criterion_met": true
+}

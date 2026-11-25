@@ -1,6 +1,6 @@
 # HERMES research and Neurocomputing submission plan
 
-23 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. The first automatic-selection screen tied uniform and relevance at 3/7 robust pairs, and the tested history-control gate regressed answers. The next experiment checks the candidate pool before further method work. [AutoDL notebook](../../notebooks/autodl/hermes-twinpast-candidate-pool.ipynb) · [Automatic-selection audit and follow-up](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>)
+23 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. Annotated sub-second inputs recovered 2/7 robust pairs against 0/7 with uniform history. The next experiment tests automatic local refinement at matched cost. [Sub-second audit and follow-up](<../../docs/reports/2026-11-23 twinpast subsecond analysis.md>)
 
 ## Evidence and publication gaps
 
@@ -9,7 +9,7 @@
 | HERMES versus FIFO at 4K, 2,495 questions from 498 StreamingBench clips | HERMES scored 62.32% versus 61.96%, a +0.36 percentage-point difference with a 95% video-cluster interval of [−0.48, +1.16]. This is a mixed-session reproduction result. | A same-session comparison for any new method or system claim. |
 | Scorer, construction, readout and verifier experiments | Fresh causal scoring changed no correctness outcomes on 40 selected questions. The short cache preserved 40 masked answers and cut median query KV bytes by 79.7% in that comparison. Recent-four won the point estimate in the 150-question confirmation (74/150 versus 70/150). In the target-binding screen it also beat the minimum rule (156/269 versus 147/269). | A method that can retain useful earlier evidence without sacrificing too many correct recent answers, with total cost measured. |
 | 51 reviewed source files and 39 gap entries | A literature and failure map for narrowing the problem. Records include version overlap and varying review depth. | A full-method and available-code comparison for the final candidate and its closest prior. |
-| TwinPast visual screen and GPU diagnostics | Twelve inspected pairs. Five of seven passed with curated historical frames and shared recent frames on 7B. Uniform and relevance each passed three pairs with automatic selection. The history-control correction passed one. | Determine candidate-pool capability and test any revised mechanism against uniform on independent sources. |
+| TwinPast visual screen and GPU diagnostics | The broader annotated pool recovered 2/4 state pairs. The automatic endpoint screen passed 0/8. Annotated native timestamps recovered 2/7 with exact uniform replay. | Test local refinement against uniform refinement. Keep both evaluated sets out of confirmation. |
 
 [Project evidence](../../docs/PROJECT_STATUS.md) · [Claim ledger](claim_evidence.csv) · [TwinPast dev audit](<../../docs/reports/2026-11-23 twinpast development review.md>)
 

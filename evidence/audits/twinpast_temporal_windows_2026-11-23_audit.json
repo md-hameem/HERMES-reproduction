@@ -1,0 +1,101 @@
+{
+  "archive_sha256": "54a9cb211d6b8ebf5917fa2af0d17ebd4a6cac7d187458c17084884f799b2b3c",
+  "notebook_sha256": "9034a012a609812867e6b5faacba4bbdd294ff540f0cc23289998d9f4ca85627",
+  "verified_payloads": 26,
+  "source_status": "Original source IDs unavailable. Media screening is a duplicate proxy.",
+  "per_order": {
+    "recent": {
+      "canonical": {
+        "both_correct": 0,
+        "unchanged_answer": 8
+      },
+      "reversed": {
+        "both_correct": 0,
+        "unchanged_answer": 8
+      }
+    },
+    "uniform": {
+      "canonical": {
+        "both_correct": 0,
+        "unchanged_answer": 6
+      },
+      "reversed": {
+        "both_correct": 0,
+        "unchanged_answer": 7
+      }
+    },
+    "individual": {
+      "canonical": {
+        "both_correct": 1,
+        "unchanged_answer": 7
+      },
+      "reversed": {
+        "both_correct": 1,
+        "unchanged_answer": 6
+      }
+    },
+    "endpoints": {
+      "canonical": {
+        "both_correct": 2,
+        "unchanged_answer": 6
+      },
+      "reversed": {
+        "both_correct": 1,
+        "unchanged_answer": 6
+      }
+    }
+  },
+  "forward_seconds_by_phase": {
+    "retrieval": 21.398574605584145,
+    "recent": 3.1714565083384514,
+    "uniform": 7.350191628560424,
+    "individual": 7.419921800494194,
+    "endpoints": 3.665224028751254
+  },
+  "identical_endpoint_and_individual_branches": 8,
+  "annotated_frame_coverage": {
+    "annotated_branches": 14,
+    "candidate_pool_hit": 8,
+    "uniform_hit": 0,
+    "individual_hit": 5,
+    "endpoints_hit": 5
+  },
+  "pairs": 8,
+  "methods": {
+    "recent": {
+      "robust_pairs": [],
+      "correct_branch_orders": 16
+    },
+    "uniform": {
+      "robust_pairs": [],
+      "correct_branch_orders": 13
+    },
+    "individual": {
+      "robust_pairs": [],
+      "correct_branch_orders": 17
+    },
+    "endpoints": {
+      "robust_pairs": [],
+      "correct_branch_orders": 18
+    }
+  },
+  "matched_pair_changes": {
+    "uniform": {
+      "recoveries": [],
+      "regressions": []
+    },
+    "individual": {
+      "recoveries": [],
+      "regressions": []
+    }
+  },
+  "endpoints_more_robust_than_both_dense_baselines": false,
+  "forward_calls": 496,
+  "forward_calls_by_phase": {
+    "retrieval": 384,
+    "recent": 32,
+    "uniform": 32,
+    "individual": 32,
+    "endpoints": 16
+  }
+}

@@ -17,6 +17,12 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 | [TwinPast fixed-recent audit](audits/twinpast_fixed_recent_2026-11-23_audit.json) | Verified inputs, prior replay, outcomes and decision |
 | [TwinPast automatic-selection archive](archives/HERMES_twinpast_automatic_evidence.zip) | Seven saved checkpoints, six method outcomes and frame coverage |
 | [TwinPast automatic-selection audit](audits/twinpast_automatic_2026-11-23_audit.json) | Recomputed ranking, predictions, correction, costs and curated-frame overlap |
+| [TwinPast candidate-pool archive](archives/HERMES_twinpast_candidate_pool_evidence.zip) | Four checkpoints and 48 scores at a fixed answer frame budget |
+| [TwinPast candidate-pool audit](audits/twinpast_candidate_pool_2026-11-23_audit.json) | Recomputed selections, curated replay, paired outcomes and advancement rule |
+| [TwinPast temporal-window archive](archives/HERMES_twinpast_temporal_windows_evidence.zip) | Eight fresh-pair checkpoints, source-screen logs and four method outcomes |
+| [TwinPast temporal-window audit](audits/twinpast_temporal_windows_2026-11-23_audit.json) | Recomputed selections, paired outcomes, annotation overlap and forward calls |
+| [TwinPast sub-second archive](archives/HERMES_twinpast_subsecond_evidence.zip) | Seven checkpoints, 56 scores and 14 contact sheets |
+| [TwinPast sub-second audit](audits/twinpast_subsecond_2026-11-23_audit.json) | Exact uniform replay and two robust recoveries |
 | [Target-binding archive](archives/HERMES_target_binding_evidence.zip) | Original 60-clip run, 300 checkpoints, 1,800 selector outcomes and blinded window-pair worksheet |
 | [Target-binding audit](audits/target_binding_2026-11-22_audit.json) | Reconstructed integrity, candidate windows, selector outputs, paired estimates and component timing |
 | [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |

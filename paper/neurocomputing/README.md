@@ -1,6 +1,6 @@
 # Neurocomputing paper preparation
 
-Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. The first automatic-selection screen tied uniform and relevance at 3/7 robust pairs. The next milestone is a candidate-pool capability check on four historical-state pairs.
+Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. Annotated sub-second evidence recovered two of seven pairs at the same input budget. The next milestone compares automatic local refinement with uniform refinement.
 
 - [Phased Neurocomputing plan](submission_phase_plan.md) records current evidence, advancement criteria, confirmation, submission and revision.
 - [Publication roadmap](../../docs/PUBLICATION_ROADMAP.md) records the progression from the AutoDL scorer screen to TwinPast.
@@ -26,4 +26,4 @@ The [frozen confirmation result](<../../docs/reports/2026-11-21 short query conf
 
 The [completed target-binding experiment](<../../docs/reports/2026-11-22 target binding analysis.md>) found that using the weaker verifier score fell short of averaging and of recent-only on the frozen sample. The [blinded review](<../../docs/reports/2026-11-23 blinded visual support first pass.md>) also fell short of the same-clip pilot threshold in a single-reviewer assessment.
 
-The [historical-correction execution plan](historical_correction_execution_plan.md) records the fixed-recent history swap. The [automatic-selection analysis](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>) records the method comparison and candidate-pool follow-up.
+The [historical-correction execution plan](historical_correction_execution_plan.md) records the fixed-recent history swap. The [sub-second analysis](<../../docs/reports/2026-11-23 twinpast subsecond analysis.md>) records the capability result and the proposed matched refinement comparison.

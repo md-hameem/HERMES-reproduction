@@ -1,6 +1,6 @@
 # Neurocomputing publication roadmap
 
-Updated 23 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The first TwinPast automatic screen tied uniform and relevance at 3/7 robust pairs and the history-control correction fell to 1/7. [Automatic-selection audit](<reports/2026-11-23 twinpast automatic selection analysis.md>)
+Updated 23 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The annotated native-timestamp check passed its exploratory criterion with 2/7 robust recoveries at the fixed ten-frame budget. [Sub-second audit](<reports/2026-11-23 twinpast subsecond analysis.md>)
 
 Use the [phased Neurocomputing plan](../paper/neurocomputing/submission_phase_plan.md) for the current go/no-go criteria, confirmation design, pre-submission review and revision workflow. The previous experiment records below preserve their original decisions.
 
@@ -85,4 +85,4 @@ Use the current author guide and submission system for a final format/policy che
 
 The construction selector, frozen short-query confirmation and target-binding verifier did not meet their respective accuracy gates. The single-reviewer StreamingBench pass also fell below the same-clip pilot threshold. Preserve those results as development evidence. [Target-binding audit](<reports/2026-11-22 q1 audit of target binding.md>) · [Blinded review](<reports/2026-11-23 blinded visual support first pass.md>)
 
-Test candidate-pool capability on the four historical-state pairs before changing the selector or correction threshold. Use uniform history as the practical reference. Exclude all 12 inspected pairs and overlapping sources from confirmation. [Follow-up design](<reports/2026-11-23 twinpast automatic selection analysis.md#next-experiment>)
+Compare one annotation-blind local refinement rule with uniform refinement under matched search and answer budgets. Exclude both inspected development sets and overlapping sources from confirmation. [Follow-up design](<reports/2026-11-23 twinpast subsecond analysis.md#next-experiment>)

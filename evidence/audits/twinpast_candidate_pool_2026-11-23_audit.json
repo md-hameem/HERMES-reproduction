@@ -1,0 +1,140 @@
+{
+  "archive_sha256": "895dc49b9a79dcd180088b11f93e1d2df1f7448ec10ad498552f97324f3abaed",
+  "notebook_sha256": "f0f5b9769b93532b78dbba35330470eb20e2a84acb129e4e6eafc947bd347cb0",
+  "verified_payloads": 19,
+  "max_abs_replay_difference": 0.0,
+  "sampling": [
+    {
+      "pair_id": "twinpast_0208",
+      "branch": "a",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 2
+    },
+    {
+      "pair_id": "twinpast_0208",
+      "branch": "a",
+      "arm": "dense_pool",
+      "pool_size": 26,
+      "evidence_frames": 3
+    },
+    {
+      "pair_id": "twinpast_0208",
+      "branch": "b",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 2
+    },
+    {
+      "pair_id": "twinpast_0208",
+      "branch": "b",
+      "arm": "dense_pool",
+      "pool_size": 26,
+      "evidence_frames": 4
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "a",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 3
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "a",
+      "arm": "dense_pool",
+      "pool_size": 48,
+      "evidence_frames": 6
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "b",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 3
+    },
+    {
+      "pair_id": "twinpast_0094",
+      "branch": "b",
+      "arm": "dense_pool",
+      "pool_size": 48,
+      "evidence_frames": 6
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "branch": "a",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 2
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "branch": "a",
+      "arm": "dense_pool",
+      "pool_size": 36,
+      "evidence_frames": 4
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "branch": "b",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 3
+    },
+    {
+      "pair_id": "twinpast_0095",
+      "branch": "b",
+      "arm": "dense_pool",
+      "pool_size": 36,
+      "evidence_frames": 6
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "a",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 3
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "a",
+      "arm": "dense_pool",
+      "pool_size": 30,
+      "evidence_frames": 6
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "b",
+      "arm": "capped_pool",
+      "pool_size": 13,
+      "evidence_frames": 2
+    },
+    {
+      "pair_id": "twinpast_0259",
+      "branch": "b",
+      "arm": "dense_pool",
+      "pool_size": 30,
+      "evidence_frames": 6
+    }
+  ],
+  "pairs": 4,
+  "scores": 48,
+  "robust_pairs": {
+    "curated_replay": [
+      "twinpast_0094",
+      "twinpast_0259"
+    ],
+    "capped_pool": [],
+    "dense_pool": [
+      "twinpast_0094",
+      "twinpast_0259"
+    ]
+  },
+  "dense_only": [
+    "twinpast_0094",
+    "twinpast_0259"
+  ],
+  "capped_only": [],
+  "replay_failures": [],
+  "pool_expansion_supported": true
+}

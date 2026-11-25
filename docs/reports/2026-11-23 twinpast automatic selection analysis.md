@@ -23,6 +23,8 @@ Uniform recovered the bottle-stream state pair in both orders. Relevance recover
 
 ## Next experiment
 
+The candidate-pool experiment below is complete. [Audited result and automatic-selection proposal](<2026-11-23 twinpast candidate-pool analysis.md>)
+
 Run the [candidate-pool AutoDL notebook](../../notebooks/autodl/hermes-twinpast-candidate-pool.ipynb). It freezes the 1 FPS pool and the original capped pool, the same six-plus-four input budget, and direct forced-choice scoring. Advancement requires at least one dense-only robust pair, zero capped-only pairs and successful curated replay.
 
 Run one matched **candidate-pool capability check** on the four historical-state pairs before tuning any correction threshold. Keep the same 7B model, four recent frames, six older-frame budget, two option orders and direct forced-choice decoding. Compare a deterministic annotation-guided selection within the current capped pool with the same selection rule in a denser causal pool. Define the rule before inference to spread picks across eligible evidence intervals, then fill unused slots chronologically from the same pool. Replay the previously successful curated histories as a reference.

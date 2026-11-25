@@ -7,7 +7,9 @@ All notable reproduction, evidence, control, and documentation changes for this 
 - Archived and audited the fixed-recent 0.5B run, history-only follow-up, exact-frame 7B replay, and 7B fixed-recent and automatic-selection runs.
 - Verified that 7B preserved both historical-state recoveries and all three positive controls when recent frames were added to curated histories.
 - Recomputed all six automatic method paths. Uniform and relevance each passed 3/7 robust pairs. The history-control rule recovered one and regressed six branch-order answers versus direct decoding on the same frames.
-- Added a four-pair AutoDL diagnostic that compares capped and denser causal candidate pools under a fixed ten-frame input budget. GPU execution is pending.
+- Ran and audited the four-pair candidate-pool diagnostic. The annotated dense pool recovered two pairs versus zero from the capped pool under a fixed ten-frame answer budget.
+- Archived and audited the eight-pair temporal-window screen. All arms passed zero robust pairs, and six annotated branches lacked an interval-matched frame in the 1 FPS pool.
+- Archived the sub-second check. It recovered 2/7 robust pairs with annotated inputs. All archived uniform scores reproduced exactly.
 
 ## 2026-11-23 — Blinded support review and TwinPast development screen
 
