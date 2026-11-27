@@ -2112,3 +2112,31 @@ Frozen TwinPast metadata yielded 12 development pairs. Eleven had two disjoint e
 The 0.5B fixed-recent test reached 3/9 robust pairs, and the history-only follow-up preserved the same three. Six earlier frames yielded zero robust historical-state pairs out of four. The exact-frame 7B replay recovered two of those four and retained all three attribute/identity controls. Both recoveries and all controls survived adding four matched recent frames.
 
 The annotation-blind screen tied relevance and uniform history at 3/7 robust pairs. The history-control correction fell to 1/7 and added six regressions against same-frame direct decoding. The candidate-pool diagnostic then recovered 2/4 annotated historical-state pairs with a denser pool versus 0/4 with the capped pool at the same final input length. Use uniform as a practical baseline for the next temporal-window study. [Automatic screen](<reports/2026-11-23 twinpast automatic selection analysis.md>) · [Candidate-pool audit](<reports/2026-11-23 twinpast candidate-pool analysis.md>)
+
+## 49. Direction B reset and Gate 0 CPU verification
+
+**Date** — 28 November 2026.
+
+**Trigger/objective** — Close the retired accuracy, DROID, and standalone RoPE lanes. Backfill the reset audits and implement a four-arm Gate 0 profiler and parity check for the six frozen clips.
+
+**Files and scripts** — The reset added the paired analysis runner, Gate 0 runner and its CPU tests, the dated reset report, and the repository-wide documentation rule. Project status and this master log were synchronized. [Paired analysis](../scripts/analyze_streamingbench_pairs.py) · [Gate 0 runner](../scripts/profile_streaming_gate0.py) · [CPU tests](../scripts/test_profile_streaming_gate0.py) · [Dated report](<reports/2026-11-28 direction-b reset and gate0 spec.md>) · [Standing rule](../AGENTS.md) · [Project status](PROJECT_STATUS.md)
+
+**Verified commands and results [VERIFIED]** — `python -B scripts/analyze_streamingbench_pairs.py` reproduced 2,495 pairs, 1,555 HERMES correct, 1,546 FIFO correct, 95.71% binary correctness agreement, and the 58.07% episodic tie. Archived logs verified 1,986 post-eviction questions and a chunk-path peak of about 4,802 MiB. The matched 4K compaction audit and confounder check are recorded in the dated report. `python -B scripts/profile_streaming_gate0.py --manifest` printed six expected media hashes. `python -B scripts/test_profile_streaming_gate0.py` passed four CPU tests, including synthetic schema round trips for all 24 clip–arm combinations, 60 archived choice lookups, staging lifecycle, and first-token callback. All five pinned inference-source hashes matched the archive and `git diff --check` passed. No GPU jobs were run.
+
+**Open hypotheses and blockers [HYPOTHESIS]** — The dominant allocation within the 16-frame chunk path is still unknown. The six hash-matched originals, pinned model snapshot, and AutoDL environment are prerequisites for real stage data and GPU parity. The prepared-path short-cache saving does not establish a whole-stream efficiency gain.
+
+**Next gate/action** — Mount the six files and run the documented AutoDL Gate 0 command. Require both archived 4K answer sets, valid cache and compaction traces, and complete stage and latency records. Gate 1 remains on hold.
+
+## 50. Gate 0 release and AutoDL terminal handoff
+
+**Date** — 28 November 2026.
+
+**Trigger/objective** — Audit the commit scope and fresh-clone dependencies, publish the Gate 0 handoff, and provide an AutoDL CLI workflow for the pinned environment and six clips.
+
+**Files and scripts** — Added a dated AutoDL runbook and a selective media CLI. Updated project status and this log. The release also includes the pending reset report, documentation rule, CPU paired audit, Gate 0 runner, and CPU tests. Gate 0 profiling logic was unchanged during this handoff. [Terminal runbook](<reports/2026-11-28 gate0 autodl terminal runbook.md>) · [Selective media CLI](../scripts/fetch_streaming_gate0_media.py) · [Project status](PROJECT_STATUS.md)
+
+**Verified commands and results [VERIFIED]** — `git status --short --untracked-files=all`, `git check-ignore -v` and `git cat-file -s` established the staging scope and fresh-clone evidence requirements. The 7,938,475-byte evidence ZIP and annotation JSON are tracked. The runner reads the references from inside the ZIP. All four Gate 0 CPU tests passed. A synthetic ZIP verified selected extraction and SHA-256 checking. One-byte probes returned HTTP 206 with the archived shard sizes on both Hugging Face endpoints. Range reads of the four mirror central directories verified the exact six member IDs and byte lengths. Mirror metadata confirmed the pinned model revision and Safetensors filename. `bash -n` passed for all runbook blocks.
+
+**Open hypotheses and blockers [HYPOTHESIS]** — AutoDL package installation, full video member transfers, and GPU parity remain unverified in the new container. The release audit used range metadata and synthetic extraction without running GPU inference.
+
+**Next gate/action** — Pull the pushed revision, install the archived environment, hash-check the six clips, and run Gate 0 from tmux. Gate 1 remains on hold.

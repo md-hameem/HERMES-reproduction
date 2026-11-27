@@ -1,8 +1,12 @@
 # HERMES project status
 
-Updated 28 November 2026 after the DROID matched event-relative CPU screen.
+Updated 28 November 2026 after the Direction B reset and Gate 0 CPU verification.
 
-All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
+**Active direction.** Direction B studies physical KV efficiency with measured whole-stream VRAM and synchronized TTFT and answer latency. Gate 0 is implemented and CPU-verified. It awaits the six hash-matched media files and an AutoDL run. Gate 1 remains on hold pending the Gate 0 stage breakdown. Direction A, the DROID selector, terminal-attention pilots, controlled filming, and the physical contextual short-cache arm are retired. The 4K RoPE compaction association is closed as a standalone claim. [Reset audit and Gate 0 spec](<reports/2026-11-28 direction-b reset and gate0 spec.md>) · [Gate 0 runner](../scripts/profile_streaming_gate0.py) · [CPU tests](../scripts/test_profile_streaming_gate0.py) · [Master research log](research_log.md)
+
+The five historical reproduction stages culminated in the audited StreamingBench real-time visual comparison on 498 videos and 2,495 questions per method. The matched interleaved measurements used an RTX 4090 with 24,564 MiB. Gate 0 records the actual device, PyTorch/CUDA versions, and dtype on AutoDL.
+
+The AutoDL terminal runbook uses the archived environment, the pinned model snapshot, and six individually hash-verified media files. The tracked evidence ZIP supplies the parity inputs. [AutoDL terminal runbook](<reports/2026-11-28 gate0 autodl terminal runbook.md>)
 
 ## Main result
 
@@ -62,9 +66,9 @@ Numeric-looking gold answers require reading prediction CSVs as text. Sample 463
 
 The full benchmark combines October results on samples 201–250 with November measurements for the other shards. Its primary accuracy comparison therefore uses multiple sessions and GPU types. The dedicated interleaved efficiency comparison uses its own matched session. The historical 60.4% memory reduction compares the October 4K and 50K HERMES runs. Both small-budget methods use approximately the same memory in the new matched comparison.
 
-## Remaining work
+## Historical experiments and decisions
 
-**Immediate research step.** Film and review two controlled pilot pairs with opposite states at the same event. The natural DROID screen reviewed 14 candidate pairs and found zero eligible pairs. If the pilots pass the review, expand to eight pairs across at least three setups and verify the fixed windows before running the 7B comparison. [Filming protocol](<reports/2026-11-28 controlled event pair protocol.md>) · [Matched-screen results](<reports/2026-11-28 droid matched event results.md>) · [Interior GPU results](<reports/2026-11-28 droid interior GPU results.md>)
+The archived natural DROID screen reviewed 14 candidate pairs and found zero eligible pairs. The associated profiling and filming materials remain historical evidence. The priorities and next steps in this section record decisions at the time. [Archived filming protocol](<reports/2026-11-28 controlled event pair protocol.md>) · [Matched-screen results](<reports/2026-11-28 droid matched event results.md>) · [Interior GPU results](<reports/2026-11-28 droid interior GPU results.md>)
 
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 
