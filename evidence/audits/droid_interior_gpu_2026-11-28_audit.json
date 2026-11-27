@@ -1,0 +1,162 @@
+{
+  "archive_sha256": "184915565e053022d73e82b2081f1b34d37f9840b30e8ce065ed3618e5988155",
+  "notebook_sha256": "a2205b6a174b107a4f9336309da2343dc909b60552d5eb4760898611a28f07ed",
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "verified_payloads": 23,
+  "verified_frames": 70,
+  "parity_checks": 14,
+  "max_parity_error": 0.015625,
+  "clips": 7,
+  "choice_scores": 56,
+  "by_method": {
+    "native": {
+      "correct_orders": 10,
+      "correct_both_orders": [
+        "interior_02",
+        "interior_04",
+        "interior_05",
+        "interior_06"
+      ]
+    },
+    "fixed": {
+      "correct_orders": 13,
+      "correct_both_orders": [
+        "interior_01",
+        "interior_02",
+        "interior_03",
+        "interior_04",
+        "interior_05",
+        "interior_06"
+      ]
+    },
+    "recency": {
+      "correct_orders": 12,
+      "correct_both_orders": [
+        "interior_01",
+        "interior_02",
+        "interior_03",
+        "interior_05",
+        "interior_06"
+      ]
+    },
+    "annotated": {
+      "correct_orders": 11,
+      "correct_both_orders": [
+        "interior_02",
+        "interior_03",
+        "interior_04",
+        "interior_05",
+        "interior_06"
+      ]
+    }
+  },
+  "annotated_contrasts": {
+    "fixed": {
+      "recoveries": [],
+      "losses": [
+        "interior_01"
+      ],
+      "net": -1
+    },
+    "recency": {
+      "recoveries": [
+        "interior_04"
+      ],
+      "losses": [
+        "interior_01"
+      ],
+      "net": 0
+    },
+    "native": {
+      "recoveries": [
+        "interior_03"
+      ],
+      "losses": [],
+      "net": 1
+    }
+  },
+  "verified_attention_layers": {
+    "three_frame": 2,
+    "causal": 2
+  },
+  "per_clip": [
+    {
+      "case": "interior_00",
+      "fixed_support": false,
+      "both_endpoints_opposite": true,
+      "correct_orders": {
+        "native": 0,
+        "fixed": 1,
+        "recency": 1,
+        "annotated": 1
+      }
+    },
+    {
+      "case": "interior_01",
+      "fixed_support": true,
+      "both_endpoints_opposite": false,
+      "correct_orders": {
+        "native": 1,
+        "fixed": 2,
+        "recency": 2,
+        "annotated": 0
+      }
+    },
+    {
+      "case": "interior_02",
+      "fixed_support": true,
+      "both_endpoints_opposite": true,
+      "correct_orders": {
+        "native": 2,
+        "fixed": 2,
+        "recency": 2,
+        "annotated": 2
+      }
+    },
+    {
+      "case": "interior_03",
+      "fixed_support": false,
+      "both_endpoints_opposite": false,
+      "correct_orders": {
+        "native": 1,
+        "fixed": 2,
+        "recency": 2,
+        "annotated": 2
+      }
+    },
+    {
+      "case": "interior_04",
+      "fixed_support": true,
+      "both_endpoints_opposite": false,
+      "correct_orders": {
+        "native": 2,
+        "fixed": 2,
+        "recency": 1,
+        "annotated": 2
+      }
+    },
+    {
+      "case": "interior_05",
+      "fixed_support": true,
+      "both_endpoints_opposite": true,
+      "correct_orders": {
+        "native": 2,
+        "fixed": 2,
+        "recency": 2,
+        "annotated": 2
+      }
+    },
+    {
+      "case": "interior_06",
+      "fixed_support": true,
+      "both_endpoints_opposite": true,
+      "correct_orders": {
+        "native": 2,
+        "fixed": 2,
+        "recency": 2,
+        "annotated": 2
+      }
+    }
+  ],
+  "improved_over_best_fixed": false
+}

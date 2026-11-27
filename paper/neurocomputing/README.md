@@ -1,6 +1,6 @@
 # Neurocomputing paper preparation
 
-Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. Annotation-guided terminal attention improved robust results from 1/7 to 4/7 on seven DROID development pairs with ten fixed frames. A method claim now depends on finding useful spans without annotations and outperforming a matched recency baseline on fresh sources. [Terminal-attention results](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
+Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. Center-three led the DROID interior GPU comparison, and a review of 14 natural pairs found no eligible match. The next milestone is to film and review two controlled pilot pairs before deciding on another GPU run. [Matched-screen results](<../../docs/reports/2026-11-28 droid matched event results.md>) · [Filming protocol](<../../docs/reports/2026-11-28 controlled event pair protocol.md>)
 
 - [Phased Neurocomputing plan](submission_phase_plan.md) records current evidence, advancement criteria, confirmation, submission and revision.
 - [Publication roadmap](../../docs/PUBLICATION_ROADMAP.md) records the progression from the AutoDL scorer screen to TwinPast.

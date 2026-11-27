@@ -1,0 +1,16 @@
+{
+  "intake_sha256": "2fdae63912c51461e851b1fd47640645490f955874833596da6e475da5df9092",
+  "review_sha256": "d6a1323d0df5fee9745e21b930f5990d5a3c17ed762f3ee571df0ceefc41a21f",
+  "raw_strict_nominations": 11,
+  "raw_broad_nominations": 14,
+  "raw_pairs_acquired": 0,
+  "excluded_prior_episodes": 97,
+  "excluded_prior_scenes": 60,
+  "rlds_records_attempted": 19,
+  "rlds_records_recovered": 19,
+  "rlds_pairs_reviewed": 14,
+  "visually_qualified_pairs": 0,
+  "eligible_pairs": 0,
+  "verified_new_scenes": 0,
+  "gpu_gate_met": false
+}

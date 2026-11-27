@@ -42,6 +42,12 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 | [DROID earlier-state swap audit](audits/droid_state_swap_2026-11-27_audit.json) | Robust pair exchange and gold-margin analysis |
 | [DROID terminal attention archive](archives/HERMES_droid_terminal_attention_evidence.zip) | 112 score vectors and 56 replay comparisons across four conditions |
 | [DROID terminal attention audit](audits/droid_terminal_attention_2026-11-27_audit.json) | Verification of frame receipts, replay checks and paired outcomes |
+| [DROID automatic span selection archive](archives/HERMES_droid_span_selection_evidence.zip) | Six source-separated scene pairs, 240 scores and 48 parity checks |
+| [DROID automatic span selection audit](audits/droid_span_selection_2026-11-28_audit.json) | Recomputed accuracy, support coverage, window choices and advancement decision |
+| [DROID interior-evidence CPU audit](audits/droid_interior_cpu_2026-11-28.json) | 14 reviewed clips, seven accepted clips and exhaustive three-frame fixed-window coverage |
+| [DROID interior-evidence GPU archive](archives/HERMES_droid_interior_evidence.zip) | Input manifest, 56 scores and 14 causal-mask parity checks |
+| [DROID interior-evidence GPU audit](audits/droid_interior_gpu_2026-11-28_audit.json) | Per-clip outcomes, frame receipts and comparisons with fixed windows |
+| [DROID matched event-relative CPU audit](audits/droid_matched_event_cpu_2026-11-28.json) | Verified source receipts and 14 review dispositions |
 | [Target-binding archive](archives/HERMES_target_binding_evidence.zip) | Original 60-clip run, 300 checkpoints, 1,800 selector outcomes and blinded window-pair worksheet |
 | [Target-binding audit](audits/target_binding_2026-11-22_audit.json) | Reconstructed integrity, candidate windows, selector outputs, paired estimates and component timing |
 | [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |
@@ -57,6 +63,8 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 | [Local five-stage audit](audits/five_stage_local_audit.json) | Independently recomputed integrity, prediction, checkpoint, statistics and timing checks |
 
 To re-audit the DROID terminal-attention run, place the original `DROID_natural_history_frames.zip` in `evidence/local/droid-natural-history/` and run `python scripts/validate_droid_terminal_attention_evidence.py` from the project root. The frame pack stays local and is checked against the frozen SHA-256 and the 114 per-frame receipts. [Frame-pack preparation](<../docs/reports/2026-11-27 droid natural history protocol.md>)
+
+The interior coverage and matched-event CPU audits can be recomputed from the committed intake receipts and visual review decisions with `python scripts/check_droid_interior_coverage.py` and `python scripts/check_droid_matched_event_screen.py`. The span-selection and interior GPU audits also check the local frame ZIPs under `evidence/local/`. Use the companion ZIPs created by the respective notebook builders. [Span-selection protocol](<../docs/reports/2026-11-27 droid span selection protocol.md>) · [Interior GPU results](<../docs/reports/2026-11-28 droid interior GPU results.md>)
 
 The five-stage archive SHA-256 is `b8bc4cf8a3b28e6854b2e76b8c0239b12d3b5598ee1a07dafc03d0326a900518`. The supplement SHA-256 is `4be19b26c61237860c322c5431090dcafc900aae400b9c0ed8204a2c68aab66a`. The uploaded executed notebook is stored under `notebooks/executed/` and its SHA-256 is recorded in the local audit.
 

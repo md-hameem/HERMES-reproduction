@@ -1,0 +1,576 @@
+{
+  "intake_sha256": "0276a67b8ad92c168f4246c3b0f0a84ccaa71b79b5afaae0b25edd37e090f483",
+  "review_sha256": "d06a61ad9daeb1da0c571faaac7097dfeaa15cde18ff0be90cc68101fc638bf6",
+  "index_candidates": 155,
+  "metadata_requests": 73,
+  "unavailable": [
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-30m-59s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-24-18h-15m-27s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-25-12h-05m-31s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-55m-08s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-21h-33m-27s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-41m-34s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-21h-56m-35s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-50m-50s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+7ae1bcff+2023-06-04-17h-42m-56s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-18h-28m-52s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-14m-06s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-01m-39s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-17m-00s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-02m-24s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+85a5958f+2023-06-30-21h-53m-57s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+y2a59979+2023-06-16-22h-14m-41s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+7dfa2da3+2023-06-08-14h-12m-51s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    }
+  ],
+  "previewed": 14,
+  "eligible": 7,
+  "sites": [
+    "ILIAD",
+    "IPRL",
+    "IRIS",
+    "PennPAL",
+    "REAL"
+  ],
+  "labels": {
+    "open": 4,
+    "closed": 3
+  },
+  "covered": {
+    "first": 0,
+    "center": 5,
+    "last": 1,
+    "annotated": 7
+  },
+  "all_static_windows": [
+    {
+      "slots": [
+        0,
+        1,
+        2
+      ],
+      "covered": 0
+    },
+    {
+      "slots": [
+        1,
+        2,
+        3
+      ],
+      "covered": 1
+    },
+    {
+      "slots": [
+        2,
+        3,
+        4
+      ],
+      "covered": 2
+    },
+    {
+      "slots": [
+        3,
+        4,
+        5
+      ],
+      "covered": 3
+    },
+    {
+      "slots": [
+        4,
+        5,
+        6
+      ],
+      "covered": 5
+    },
+    {
+      "slots": [
+        5,
+        6,
+        7
+      ],
+      "covered": 5
+    },
+    {
+      "slots": [
+        6,
+        7,
+        8
+      ],
+      "covered": 4
+    },
+    {
+      "slots": [
+        7,
+        8,
+        9
+      ],
+      "covered": 1
+    }
+  ],
+  "best_static_coverage": 5,
+  "extra_coverage_over_best_static": 2,
+  "both_endpoint_states_opposite": 4,
+  "prior_episode_ids": 83,
+  "prior_scene_ids": 46,
+  "gate": {
+    "at_least_six_scenes": true,
+    "at_least_three_sites": true,
+    "at_least_two_per_state": true,
+    "at_least_two_more_than_static": true
+  },
+  "gpu_feasibility_criterion_met": true,
+  "cases": [
+    {
+      "episode_id": "ILIAD+50aee79f+2023-08-19-11h-36m-17s",
+      "camera": "ext1",
+      "question": "When the gripper first pulled back toward the cups after contacting the gray coffee maker, was its lid open or closed?",
+      "state": "closed",
+      "anchor_frame": 157,
+      "support_slots": [
+        3
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        8,
+        9
+      ],
+      "event_note": "Frame 157 shows the first withdrawal toward the cups and the lid flat. The lid is raised at the start and end.",
+      "site": "ILIAD",
+      "scene_id": 8098563998,
+      "frame_grid": [
+        0,
+        52,
+        104,
+        157,
+        209,
+        262,
+        314,
+        367,
+        419,
+        472
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11%3A36%3A17_2023/recordings/MP4/23897859.mp4",
+        "generation": "1710757614583839",
+        "bytes": 16930653,
+        "sha256": "a20832d6a391c2266e4d4908d585b2c0ff17220d78cb53c5ea1a79e43500d30c",
+        "frame_count": 473
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11%3A36%3A17_2023/metadata_ILIAD%2B50aee79f%2B2023-08-19-11h-36m-17s.json",
+        "generation": "1710757614565622",
+        "bytes": 1941,
+        "sha256": "d21549dbf6d983abfe29e645a9ac299cb0905824bdcc27f9ea95130054b8ca8e"
+      },
+      "annotated_window": [
+        1,
+        2,
+        3
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 0,
+        "last": 0,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "IPRL+2fe9715d+2023-08-24-13h-24m-27s",
+      "camera": "ext2",
+      "question": "When the gripper grasped the pink object on top of the microwave, was the microwave door open or closed?",
+      "state": "closed",
+      "anchor_frame": 277,
+      "support_slots": [
+        4
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2
+      ],
+      "event_note": "Frame 277 shows the gripper around the pink object with the microwave door flush. Frames 0\u2013138 show the door away from the frame; the later door also stays closed.",
+      "site": "IPRL",
+      "scene_id": 713171170,
+      "frame_grid": [
+        0,
+        69,
+        138,
+        208,
+        277,
+        347,
+        416,
+        486,
+        555,
+        625
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13%3A24%3A27_2023/recordings/MP4/27432424.mp4",
+        "generation": "1710757862409227",
+        "bytes": 24459126,
+        "sha256": "5e3e315cf4fdb9b87bcc75de7aa0346d9de4ad24b8a179e0bbfd9f922d7e0025",
+        "frame_count": 626
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13%3A24%3A27_2023/metadata_IPRL%2B2fe9715d%2B2023-08-24-13h-24m-27s.json",
+        "generation": "1710757862420376",
+        "bytes": 2017,
+        "sha256": "39f44a2a5a3a484562580d47ff4648512e88684efc2f89860ad1f3c64e88557d"
+      },
+      "annotated_window": [
+        2,
+        3,
+        4
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 1,
+        "last": 0,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "IPRL+7790ec0a+2023-06-30-20h-56m-04s",
+      "camera": "ext2",
+      "question": "As the gripper drew the long wooden piece away from the refrigerator, was the right door of the upper cabinet open or closed?",
+      "state": "open",
+      "anchor_frame": 419,
+      "support_slots": [
+        5
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2,
+        8,
+        9
+      ],
+      "event_note": "The gripper holds the wooden piece beside the refrigerator at frame 419. The right cabinet door exposes its shelves. The shelves are covered at both ends.",
+      "site": "IPRL",
+      "scene_id": 4290618632,
+      "frame_grid": [
+        0,
+        83,
+        167,
+        251,
+        335,
+        419,
+        503,
+        587,
+        671,
+        755
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20%3A56%3A04_2023/recordings/MP4/28221883.mp4",
+        "generation": "1710757810505641",
+        "bytes": 19121856,
+        "sha256": "87668cd0bf4fc9922aead8c5305a4017488af6210ab949de65080ae97ed55ca8",
+        "frame_count": 756
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20%3A56%3A04_2023/metadata_IPRL%2B7790ec0a%2B2023-06-30-20h-56m-04s.json",
+        "generation": "1710757810500273",
+        "bytes": 1758,
+        "sha256": "29ba0d85b9d17e8f2719b418e81963d6cfff784c7a23dcd3b6fef3611644cbef"
+      },
+      "annotated_window": [
+        3,
+        4,
+        5
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 1,
+        "last": 0,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "IRIS+85a5958f+2023-07-01-01h-21m-44s",
+      "camera": "ext1",
+      "question": "When the gripper reached down toward the rice cooker, was the microwave door open or closed?",
+      "state": "closed",
+      "anchor_frame": 312,
+      "support_slots": [
+        7
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "event_note": "Frame 312 shows the gripper descending over the rice cooker and the microwave door flush above it. The door also remains closed afterward.",
+      "site": "IRIS",
+      "scene_id": 9308446118,
+      "frame_grid": [
+        0,
+        44,
+        89,
+        134,
+        178,
+        223,
+        268,
+        312,
+        357,
+        402
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01%3A21%3A44_2023/recordings/MP4/23404442.mp4",
+        "generation": "1710758363835208",
+        "bytes": 10370196,
+        "sha256": "215ccb530191c8b0545aedb104c72ab5462fdcd529b2fe200e34ef249cd683d7",
+        "frame_count": 403
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01%3A21%3A44_2023/metadata_IRIS%2B85a5958f%2B2023-07-01-01h-21m-44s.json",
+        "generation": "1710758363823014",
+        "bytes": 1945,
+        "sha256": "e65f42ec5ebdee76579d38bd853774e9b15168c30e1e6e34ca27c5985e69177a"
+      },
+      "annotated_window": [
+        5,
+        6,
+        7
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 0,
+        "last": 1,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "IRIS+ef107c48+2023-05-31-09h-34m-26s",
+      "camera": "ext2",
+      "question": "When the gripper reached down to the loose white straw on the counter, was the wooden drawer below it open or closed?",
+      "state": "open",
+      "anchor_frame": 311,
+      "support_slots": [
+        6
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2
+      ],
+      "event_note": "At frame 311 the gripper contacts the straw and the drawer interior is exposed. The robot partly occludes the drawer at the end.",
+      "site": "IRIS",
+      "scene_id": 5612207605,
+      "frame_grid": [
+        0,
+        51,
+        103,
+        155,
+        207,
+        259,
+        311,
+        363,
+        415,
+        467
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09%3A34%3A26_2023/recordings/MP4/29838012.mp4",
+        "generation": "1710758317157598",
+        "bytes": 12317409,
+        "sha256": "f20b771a8203ae6cc74e6558754a64f2b700bb3dc94bd3041801f907f56bee78",
+        "frame_count": 468
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09%3A34%3A26_2023/metadata_IRIS%2Bef107c48%2B2023-05-31-09h-34m-26s.json",
+        "generation": "1710758317138587",
+        "bytes": 2018,
+        "sha256": "7cc0ce888459bbdb6844f03646478721678f91a6fda518286a04e17eae0118e0"
+      },
+      "annotated_window": [
+        4,
+        5,
+        6
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 1,
+        "last": 0,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "PennPAL+acda9df3+2023-06-23-20h-04m-20s",
+      "camera": "ext2",
+      "question": "When the gripper grasped the orange toy on the white countertop, was the wide wooden drawer below it open or closed?",
+      "state": "open",
+      "anchor_frame": 432,
+      "support_slots": [
+        6
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "event_note": "Frame 432 shows the gripper around the orange toy on the counter and a clear view of the open drawer. The toy has moved into the drawer by the next sampled frame.",
+      "site": "PennPAL",
+      "scene_id": 4760653248,
+      "frame_grid": [
+        0,
+        72,
+        144,
+        216,
+        288,
+        360,
+        432,
+        504,
+        576,
+        649
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20%3A04%3A20_2023/recordings/MP4/27085680.mp4",
+        "generation": "1710758526050534",
+        "bytes": 23315783,
+        "sha256": "de15ec335c5b7bd214bba992711dae67b0b7847c72674dd97b18586613aead4f",
+        "frame_count": 650
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20%3A04%3A20_2023/metadata_PennPAL%2Bacda9df3%2B2023-06-23-20h-04m-20s.json",
+        "generation": "1710758526013615",
+        "bytes": 1797,
+        "sha256": "1e11dca3bf97c1a8aa897265b9e289466d725f74b749159397bb0f6eee4499a3"
+      },
+      "annotated_window": [
+        4,
+        5,
+        6
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 1,
+        "last": 0,
+        "annotated": 1
+      }
+    },
+    {
+      "episode_id": "REAL+4dbb5646+2023-05-19-16h-20m-27s",
+      "camera": "ext2",
+      "question": "When the gripper picked up the red mug from the countertop, was the top drawer open or closed?",
+      "state": "open",
+      "anchor_frame": 276,
+      "support_slots": [
+        6
+      ],
+      "opposite_slots": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "event_note": "The red mug is in the gripper and the top drawer interior is exposed at frame 276. The drawer is closed before and after the interaction.",
+      "site": "REAL",
+      "scene_id": 9507507311,
+      "frame_grid": [
+        0,
+        46,
+        92,
+        138,
+        184,
+        230,
+        276,
+        322,
+        368,
+        415
+      ],
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16%3A20%3A27_2023/recordings/MP4/23960472.mp4",
+        "generation": "1710759442467001",
+        "bytes": 9239646,
+        "sha256": "e4f328be38e89678e6ae02ffaea5ae589c69d98cfd41112dd6997d1486a83f16",
+        "frame_count": 416
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16%3A20%3A27_2023/metadata_REAL%2B4dbb5646%2B2023-05-19-16h-20m-27s.json",
+        "generation": "1710759442476198",
+        "bytes": 1786,
+        "sha256": "c7d7e8f53275634ad8ad74f4a9b80aa70989e3dd724225c6ebf5bfcbf79c8ff2"
+      },
+      "annotated_window": [
+        4,
+        5,
+        6
+      ],
+      "support_counts": {
+        "first": 0,
+        "center": 1,
+        "last": 0,
+        "annotated": 1
+      }
+    }
+  ]
+}

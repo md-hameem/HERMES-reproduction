@@ -1,6 +1,6 @@
 # Manuscript planning outline
 
-Status as of 27 November 2026. Neurocomputing is the working venue for a regular article. Annotation-guided DROID terminal attention raised robust accuracy from 1/7 to 4/7 with a fixed input sequence. The original-method candidate is question-conditioned span selection, with its comparison against recency on fresh sources pending. [Terminal-attention audit](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
+Status as of 28 November 2026. Neurocomputing is the working venue for a regular article. The automatic selector matched the first/last rule, center-three led the interior GPU comparison, and the natural matched-pair screen found zero eligible pairs. The controlled filming protocol defines the next feasibility study. The original method remains open. [Interior GPU results](<../../docs/reports/2026-11-28 droid interior GPU results.md>) · [Filming protocol](<../../docs/reports/2026-11-28 controlled event pair protocol.md>)
 
 ## Title, abstract and keywords
 
@@ -30,7 +30,7 @@ The later context screen reproduces all 26 comparable choices and preserves choi
 
 Supply the precise algorithm, state representation, update/invalidation rules, positional semantics, complexity and all memory costs. Explain why the mechanism addresses the observed failure and how it differs from the nearest work. Include pseudocode and a reproducible diagram. State any assumptions and failure conditions.
 
-The current candidate chooses three visual frames based on the question and limits direct readout attention to those keys. Freeze the selection rule and availability assumptions before inference. A method claim requires gains against matched recency on fresh sources and a comparison with the nearest published mechanism.
+The controlled feasibility test compares annotated interior access with the strongest fixed three-frame window and unrestricted decoding. Match scene cues within each pair and vary when the shared event occurs across pairs. If the result supports a new automatic method, freeze its selection rule and availability assumptions before inference and test against the strongest matched baselines and closest published mechanism.
 
 ## 5. Experimental design
 

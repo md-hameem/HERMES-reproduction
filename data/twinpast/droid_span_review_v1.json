@@ -1,0 +1,65 @@
+[
+  {
+    "pair_id": "droid_span_1b931bcdc9",
+    "camera": "ext1",
+    "target": "pull-out wooden tray beside the window",
+    "branches": {
+      "a": {"first": {"state": "open", "support_slots": [0, 1, 2, 3]}, "last": {"state": "closed", "support_slots": [8, 9]}},
+      "b": {"first": {"state": "closed", "support_slots": [0, 1, 2, 3]}, "last": {"state": "open", "support_slots": [9]}}
+    }
+  },
+  {
+    "pair_id": "droid_span_dc2676ffac",
+    "camera": "ext2",
+    "target": "microwave door above the stove",
+    "branches": {
+      "a": {"first": {"state": "closed", "support_slots": [0, 1, 2]}, "last": {"state": "open", "support_slots": [7, 8, 9]}},
+      "b": {"first": {"state": "open", "support_slots": [0, 1, 2, 3]}, "last": {"state": "closed", "support_slots": [8, 9]}}
+    }
+  },
+  {
+    "pair_id": "droid_span_18857765d6",
+    "camera": "ext2",
+    "target": "left door of the wooden cupboard immediately right of the stove hood",
+    "branches": {
+      "a": {"first": {"state": "closed", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "open", "support_slots": [6, 7, 8, 9]}},
+      "b": {"first": {"state": "open", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "closed", "support_slots": [8, 9]}}
+    }
+  },
+  {"pair_id": "droid_span_9e49d8240a", "reason": "The selected cabinet panel is closed at the start and open at the end in both views."},
+  {"pair_id": "droid_span_d7f98870b3", "reason": "Branches manipulate different cabinet panels next to the microwave."},
+  {"pair_id": "droid_span_c2e16c3443", "reason": "Branch B starts and ends with the drawer slightly ajar. Its mid-episode opening does not give opposite endpoint labels."},
+  {
+    "pair_id": "droid_span_10675aa0b2",
+    "camera": "ext1",
+    "target": "door of the foreground washing machine at the right edge",
+    "branches": {
+      "a": {"first": {"state": "closed", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "open", "support_slots": [8, 9]}},
+      "b": {"first": {"state": "open", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "closed", "support_slots": [6, 7, 8, 9]}}
+    }
+  },
+  {
+    "pair_id": "droid_span_6d7857d0af",
+    "camera": "ext2",
+    "target": "wooden drawer at the far end of the white counter below the wall charts",
+    "branches": {
+      "a": {"first": {"state": "open", "support_slots": [0, 1, 2, 3]}, "last": {"state": "closed", "support_slots": [9]}},
+      "b": {"first": {"state": "closed", "support_slots": [0, 1, 2]}, "last": {"state": "open", "support_slots": [6, 7, 8, 9]}}
+    }
+  },
+  {"pair_id": "droid_span_351ac28003", "reason": "The footage shows a microwave in one episode and a cupboard in the other."},
+  {"pair_id": "droid_span_4ec1df9e90", "reason": "The arm and out-of-frame cabinetry leave the first and last states of the same panel unclear."},
+  {"pair_id": "droid_span_810129557e", "reason": "Branch A manipulates the detergent drawer rather than opening the same round door closed by branch B."},
+  {"pair_id": "droid_span_6994c55a74", "reason": "Branch A opens the upper cabinet panel and branch B closes a middle panel."},
+  {"pair_id": "droid_span_2ae9014054", "reason": "Both exterior views miss the manipulated cabinet or obscure its state."},
+  {"pair_id": "droid_span_c752dbdcea", "reason": "The endpoint cabinet state is outside the camera crop."},
+  {
+    "pair_id": "droid_span_8940a93e25",
+    "camera": "ext1",
+    "target": "right glass-front door of the white cabinet next to the fireplace",
+    "branches": {
+      "a": {"first": {"state": "open", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "closed", "support_slots": [7, 8, 9]}},
+      "b": {"first": {"state": "closed", "support_slots": [0, 1, 2, 3, 4]}, "last": {"state": "open", "support_slots": [6, 7, 8, 9]}}
+    }
+  }
+]

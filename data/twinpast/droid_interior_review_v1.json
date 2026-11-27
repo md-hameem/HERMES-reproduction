@@ -1,0 +1,148 @@
+[
+  {
+    "episode_id": "CLVR+13759f6e+2023-06-03-23h-30m-49s",
+    "reason": "The flask lid is too small or occluded to verify its state at a distinct event."
+  },
+  {
+    "episode_id": "CLVR+13759f6e+2023-06-13-01h-27m-21s",
+    "reason": "The small lid remains hard to distinguish from the gripper in both views, and there is no separate event."
+  },
+  {
+    "episode_id": "CLVR+13759f6e+2023-06-03-01h-13m-26s",
+    "reason": "The lid is cropped or occluded during the manipulation, without a separately identifiable event."
+  },
+  {
+    "episode_id": "ILIAD+50aee79f+2023-08-19-11h-36m-17s",
+    "camera": "ext1",
+    "question": "When the gripper first pulled back toward the cups after contacting the gray coffee maker, was its lid open or closed?",
+    "state": "closed",
+    "anchor_frame": 157,
+    "support_slots": [
+      3
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      8,
+      9
+    ],
+    "event_note": "Frame 157 shows the first withdrawal toward the cups and the lid flat. The lid is raised at the start and end."
+  },
+  {
+    "episode_id": "ILIAD+7ae1bcff+2023-05-18-11h-05m-08s",
+    "reason": "The views show repeated contact with the door. A distinct anchor and closed interval could not both be verified on the sampled grid."
+  },
+  {
+    "episode_id": "IPRL+2fe9715d+2023-08-24-13h-24m-27s",
+    "camera": "ext2",
+    "question": "When the gripper grasped the pink object on top of the microwave, was the microwave door open or closed?",
+    "state": "closed",
+    "anchor_frame": 277,
+    "support_slots": [
+      4
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2
+    ],
+    "event_note": "Frame 277 shows the gripper around the pink object with the microwave door flush. Frames 0–138 show the door away from the frame; the later door also stays closed."
+  },
+  {
+    "episode_id": "IPRL+7790ec0a+2023-06-30-20h-56m-04s",
+    "camera": "ext2",
+    "question": "As the gripper drew the long wooden piece away from the refrigerator, was the right door of the upper cabinet open or closed?",
+    "state": "open",
+    "anchor_frame": 419,
+    "support_slots": [
+      5
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2,
+      8,
+      9
+    ],
+    "event_note": "The gripper holds the wooden piece beside the refrigerator at frame 419. The right cabinet door exposes its shelves. The shelves are covered at both ends."
+  },
+  {
+    "episode_id": "IRIS+85a5958f+2023-07-01-01h-21m-44s",
+    "camera": "ext1",
+    "question": "When the gripper reached down toward the rice cooker, was the microwave door open or closed?",
+    "state": "closed",
+    "anchor_frame": 312,
+    "support_slots": [
+      7
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "event_note": "Frame 312 shows the gripper descending over the rice cooker and the microwave door flush above it. The door also remains closed afterward."
+  },
+  {
+    "episode_id": "IRIS+ef107c48+2023-05-31-09h-34m-26s",
+    "camera": "ext2",
+    "question": "When the gripper reached down to the loose white straw on the counter, was the wooden drawer below it open or closed?",
+    "state": "open",
+    "anchor_frame": 311,
+    "support_slots": [
+      6
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2
+    ],
+    "event_note": "At frame 311 the gripper contacts the straw and the drawer interior is exposed. The robot partly occludes the drawer at the end."
+  },
+  {
+    "episode_id": "PennPAL+acda9df3+2023-06-23-20h-04m-20s",
+    "camera": "ext2",
+    "question": "When the gripper grasped the orange toy on the white countertop, was the wide wooden drawer below it open or closed?",
+    "state": "open",
+    "anchor_frame": 432,
+    "support_slots": [
+      6
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "event_note": "Frame 432 shows the gripper around the orange toy on the counter and a clear view of the open drawer. The toy has moved into the drawer by the next sampled frame."
+  },
+  {
+    "episode_id": "REAL+4dbb5646+2023-05-19-16h-20m-27s",
+    "camera": "ext2",
+    "question": "When the gripper picked up the red mug from the countertop, was the top drawer open or closed?",
+    "state": "open",
+    "anchor_frame": 276,
+    "support_slots": [
+      6
+    ],
+    "opposite_slots": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "event_note": "The red mug is in the gripper and the top drawer interior is exposed at frame 276. The drawer is closed before and after the interaction."
+  },
+  {
+    "episode_id": "TRI+938130c4+2023-08-21-11h-39m-01s",
+    "reason": "Opening and closing are visible from ext2, but no separate event identifies a unique query time."
+  },
+  {
+    "episode_id": "TRI+938130c4+2023-08-21-17h-38m-52s",
+    "reason": "The cabinet state is outside the useful camera crop."
+  },
+  {
+    "episode_id": "TRI+938130c4+2023-08-21-14h-28m-07s",
+    "reason": "Opening and closing are visible from ext2, but no separate event identifies a unique query time."
+  }
+]

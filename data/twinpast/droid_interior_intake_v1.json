@@ -1,0 +1,1162 @@
+{
+  "index_candidates": 155,
+  "metadata_requests": 73,
+  "excluded_episodes": [
+    "CLVR+236539bc+2023-06-06-01h-09m-11s",
+    "GuptaLab+553d1bd5+2023-06-18-16h-54m-33s",
+    "GuptaLab+553d1bd5+2023-06-18-20h-19m-34s",
+    "ILIAD+5e938e3b+2023-07-19-12h-09m-23s",
+    "ILIAD+5e938e3b+2023-07-19-12h-56m-37s",
+    "ILIAD+5e938e3b+2023-07-20-10h-41m-00s",
+    "ILIAD+5e938e3b+2023-07-20-11h-52m-26s",
+    "IPRL+5085c3ce+2023-10-11-22h-47m-56s",
+    "IPRL+5085c3ce+2023-10-11-22h-50m-15s",
+    "IPRL+5085c3ce+2023-10-15-01h-31m-32s",
+    "IPRL+5085c3ce+2023-10-15-01h-43m-47s",
+    "IPRL+5085c3ce+2023-10-16-22h-07m-54s",
+    "IPRL+5085c3ce+2023-10-16-22h-09m-27s",
+    "IPRL+7790ec0a+2023-04-30-18h-30m-29s",
+    "IPRL+7790ec0a+2023-04-30-18h-30m-51s",
+    "IPRL+7790ec0a+2023-06-27-20h-28m-43s",
+    "IPRL+7790ec0a+2023-06-27-21h-01m-12s",
+    "IPRL+7790ec0a+2023-06-30-17h-24m-28s",
+    "IPRL+7790ec0a+2023-06-30-17h-30m-08s",
+    "IPRL+7790ec0a+2023-06-30-18h-58m-51s",
+    "IPRL+7790ec0a+2023-06-30-19h-00m-16s",
+    "IPRL+7790ec0a+2023-06-30-19h-17m-31s",
+    "IPRL+7790ec0a+2023-06-30-19h-17m-52s",
+    "IPRL+7790ec0a+2023-06-30-19h-28m-27s",
+    "IPRL+7790ec0a+2023-06-30-19h-31m-09s",
+    "IPRL+7790ec0a+2023-06-30-22h-04m-30s",
+    "IPRL+7790ec0a+2023-06-30-22h-05m-43s",
+    "IRIS+7dfa2da3+2023-05-15-15h-32m-30s",
+    "IRIS+7dfa2da3+2023-05-15-16h-00m-17s",
+    "IRIS+7dfa2da3+2023-05-18-14h-39m-17s",
+    "IRIS+7dfa2da3+2023-05-18-14h-43m-05s",
+    "IRIS+7dfa2da3+2023-05-23-11h-37m-06s",
+    "IRIS+7dfa2da3+2023-05-25-13h-34m-01s",
+    "IRIS+7dfa2da3+2023-05-25-13h-37m-03s",
+    "IRIS+7dfa2da3+2023-06-01-13h-38m-34s",
+    "IRIS+7dfa2da3+2023-06-01-13h-38m-52s",
+    "IRIS+7dfa2da3+2023-06-12-15h-51m-19s",
+    "IRIS+7dfa2da3+2023-06-12-15h-52m-14s",
+    "IRIS+85a5958f+2023-07-05-01h-20m-22s",
+    "IRIS+85a5958f+2023-07-05-01h-28m-14s",
+    "IRIS+85a5958f+2023-07-05-01h-28m-54s",
+    "IRIS+85a5958f+2023-07-05-15h-44m-47s",
+    "IRIS+85a5958f+2023-07-05-15h-45m-12s",
+    "IRIS+85a5958f+2023-07-05-15h-52m-08s",
+    "IRIS+85a5958f+2023-07-05-15h-52m-26s",
+    "IRIS+938130c4+2023-07-17-10h-55m-34s",
+    "IRIS+938130c4+2023-07-17-11h-03m-29s",
+    "IRIS+938130c4+2023-07-17-14h-17m-53s",
+    "IRIS+938130c4+2023-07-17-14h-20m-13s",
+    "IRIS+ef107c48+2023-05-31-10h-12m-54s",
+    "IRIS+ef107c48+2023-05-31-10h-13m-18s",
+    "PennPAL+06b0ffa5+2023-04-29-17h-35m-51s",
+    "PennPAL+acda9df3+2023-06-29-20h-29m-07s",
+    "PennPAL+acda9df3+2023-07-07-21h-06m-26s",
+    "PennPAL+acda9df3+2023-07-07-21h-06m-54s",
+    "PennPAL+acda9df3+2023-07-07-21h-18m-12s",
+    "PennPAL+acda9df3+2023-07-07-21h-18m-34s",
+    "PennPAL+acda9df3+2023-07-10-21h-04m-33s",
+    "PennPAL+acda9df3+2023-07-10-21h-05m-18s",
+    "PennPAL+c5f808b7+2023-10-19-00h-56m-40s",
+    "PennPAL+c5f808b7+2023-10-19-00h-57m-06s",
+    "REAL+4f8ca688+2023-08-24-13h-57m-42s",
+    "REAL+4f8ca688+2023-08-24-16h-12m-09s",
+    "REAL+4f8ca688+2023-08-31-13h-04m-55s",
+    "REAL+de601749+2023-05-20-15h-07m-52s",
+    "TRI+52ca9b6a+2023-10-16-11h-47m-45s",
+    "TRI+52ca9b6a+2023-10-16-11h-48m-25s",
+    "TRI+52ca9b6a+2023-10-16-14h-42m-35s",
+    "TRI+52ca9b6a+2023-10-16-14h-51m-36s",
+    "TRI+52ca9b6a+2023-10-16-16h-56m-12s",
+    "TRI+52ca9b6a+2023-10-16-16h-57m-43s",
+    "TRI+52ca9b6a+2023-10-17-14h-07m-39s",
+    "TRI+52ca9b6a+2023-10-17-14h-09m-01s",
+    "TRI+52ca9b6a+2023-10-18-11h-13m-44s",
+    "TRI+52ca9b6a+2023-10-18-11h-14m-03s",
+    "TRI+52ca9b6a+2023-10-19-12h-23m-18s",
+    "TRI+52ca9b6a+2023-10-19-12h-40m-19s",
+    "TRI+52ca9b6a+2023-10-19-15h-04m-59s",
+    "TRI+52ca9b6a+2023-10-23-11h-00m-50s",
+    "TRI+52ca9b6a+2023-10-23-11h-19m-11s",
+    "TRI+52ca9b6a+2023-10-23-11h-21m-20s",
+    "TRI+938130c4+2023-08-22-16h-23m-45s",
+    "TRI+938130c4+2023-08-22-16h-51m-37s"
+  ],
+  "excluded_scenes": [
+    [
+      "CLVR",
+      6498288010
+    ],
+    [
+      "GuptaLab",
+      5235850418
+    ],
+    [
+      "ILIAD",
+      1058976383
+    ],
+    [
+      "ILIAD",
+      2321227261
+    ],
+    [
+      "IPRL",
+      1611836543
+    ],
+    [
+      "IPRL",
+      2109410002
+    ],
+    [
+      "IPRL",
+      2739901198
+    ],
+    [
+      "IPRL",
+      4134662280
+    ],
+    [
+      "IPRL",
+      4991796633
+    ],
+    [
+      "IPRL",
+      6946017840
+    ],
+    [
+      "IPRL",
+      7603693755
+    ],
+    [
+      "IPRL",
+      7724213024
+    ],
+    [
+      "IPRL",
+      8351259745
+    ],
+    [
+      "IPRL",
+      9858009618
+    ],
+    [
+      "IRIS",
+      301637807
+    ],
+    [
+      "IRIS",
+      995323252
+    ],
+    [
+      "IRIS",
+      1330873366
+    ],
+    [
+      "IRIS",
+      2158993557
+    ],
+    [
+      "IRIS",
+      2271765186
+    ],
+    [
+      "IRIS",
+      3349104415
+    ],
+    [
+      "IRIS",
+      4430936219
+    ],
+    [
+      "IRIS",
+      5085711642
+    ],
+    [
+      "IRIS",
+      6154533347
+    ],
+    [
+      "IRIS",
+      7705815187
+    ],
+    [
+      "IRIS",
+      8066802860
+    ],
+    [
+      "IRIS",
+      8786722770
+    ],
+    [
+      "IRIS",
+      8930621648
+    ],
+    [
+      "PennPAL",
+      161410698
+    ],
+    [
+      "PennPAL",
+      334162896
+    ],
+    [
+      "PennPAL",
+      5493550952
+    ],
+    [
+      "PennPAL",
+      9160815698
+    ],
+    [
+      "PennPAL",
+      9306310171
+    ],
+    [
+      "PennPAL",
+      9551783935
+    ],
+    [
+      "REAL",
+      3918790350
+    ],
+    [
+      "REAL",
+      8626796008
+    ],
+    [
+      "REAL",
+      8969941950
+    ],
+    [
+      "TRI",
+      158368076
+    ],
+    [
+      "TRI",
+      1620574296
+    ],
+    [
+      "TRI",
+      2130427403
+    ],
+    [
+      "TRI",
+      3915626876
+    ],
+    [
+      "TRI",
+      5987390574
+    ],
+    [
+      "TRI",
+      6348543881
+    ],
+    [
+      "TRI",
+      8077138943
+    ],
+    [
+      "TRI",
+      8894075169
+    ],
+    [
+      "TRI",
+      9125171463
+    ],
+    [
+      "TRI",
+      9906823456
+    ]
+  ],
+  "unavailable": [
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-30m-59s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-24-18h-15m-27s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-25-12h-05m-31s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-55m-08s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-21h-33m-27s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-41m-34s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-21h-56m-35s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+5e938e3b+2023-07-17-15h-50m-50s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "ILIAD+7ae1bcff+2023-06-04-17h-42m-56s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-18h-28m-52s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-14m-06s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-01m-39s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-17m-00s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IPRL+7790ec0a+2023-07-01-20h-02m-24s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+85a5958f+2023-06-30-21h-53m-57s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+y2a59979+2023-06-16-22h-14m-41s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    },
+    {
+      "episode": "IRIS+7dfa2da3+2023-06-08-14h-12m-51s",
+      "stage": "metadata",
+      "error": "HTTPError"
+    }
+  ],
+  "intake": [
+    {
+      "episode_id": "CLVR+13759f6e+2023-06-03-23h-30m-49s",
+      "site": "CLVR",
+      "prefix": "robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_23:30:49_2023/",
+      "instruction": "Close the flask then open it",
+      "between_action": false,
+      "starts_open": true,
+      "scene_id": 8591652464,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_23%3A30%3A49_2023/metadata_CLVR%2B13759f6e%2B2023-06-03-23h-30m-49s.json",
+        "generation": "1710757134552657",
+        "bytes": 1746,
+        "sha256": "2ae61989b7d43334f07bcd2011f324e16a97860cd54bec4ed6fc3cf4a844b1b0"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_23%3A30%3A49_2023/recordings/MP4/20103212.mp4",
+          "generation": "1710757134540875",
+          "bytes": 4727824,
+          "sha256": "d8945e4799be4388a55b86f3539b53ef5361bd9923b350892ae1c5d9c4e5a0c8",
+          "frame_count": 280
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_23%3A30%3A49_2023/recordings/MP4/20655732.mp4",
+          "generation": "1710757134554642",
+          "bytes": 5121680,
+          "sha256": "67d8e845e71bd7df876da093de85e246f03ebe72e6f160c280ed9fe6e0f8380b",
+          "frame_count": 280
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          31,
+          62,
+          93,
+          124,
+          155,
+          186,
+          217,
+          248,
+          279
+        ],
+        "ext2": [
+          0,
+          31,
+          62,
+          93,
+          124,
+          155,
+          186,
+          217,
+          248,
+          279
+        ]
+      }
+    },
+    {
+      "episode_id": "CLVR+13759f6e+2023-06-13-01h-27m-21s",
+      "site": "CLVR",
+      "prefix": "robotics/droid_raw/1.0.1/CLVR/success/2023-06-13/Tue_Jun_13_01:27:21_2023/",
+      "instruction": "Open and close the cup lid",
+      "between_action": false,
+      "starts_open": false,
+      "scene_id": 6667529842,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-13/Tue_Jun_13_01%3A27%3A21_2023/metadata_CLVR%2B13759f6e%2B2023-06-13-01h-27m-21s.json",
+        "generation": "1710757196424464",
+        "bytes": 1753,
+        "sha256": "6f1a4fc2e8cb8c0393f5b253770ad8d1e11c999adab45b5813c9094787be4ebd"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-13/Tue_Jun_13_01%3A27%3A21_2023/recordings/MP4/20103212.mp4",
+          "generation": "1710757196434406",
+          "bytes": 2064680,
+          "sha256": "1bc3e2d4269028bd8cbf403febfa2b41d30d95b54cd6ce7b5fd56d0485353664",
+          "frame_count": 227
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-13/Tue_Jun_13_01%3A27%3A21_2023/recordings/MP4/20655732.mp4",
+          "generation": "1710757196444427",
+          "bytes": 3303443,
+          "sha256": "b2a3dd68391129a7fad9b1a52831429320f601e74f76c599b607fea09a9bb631",
+          "frame_count": 227
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          226
+        ],
+        "ext2": [
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          226
+        ]
+      }
+    },
+    {
+      "episode_id": "CLVR+13759f6e+2023-06-03-01h-13m-26s",
+      "site": "CLVR",
+      "prefix": "robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_01:13:26_2023/",
+      "instruction": "Open and close the lid on the top of the flask",
+      "between_action": false,
+      "starts_open": false,
+      "scene_id": 5155589926,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_01%3A13%3A26_2023/metadata_CLVR%2B13759f6e%2B2023-06-03-01h-13m-26s.json",
+        "generation": "1710757119184476",
+        "bytes": 1870,
+        "sha256": "b09920cc60e32f07984c53b3c6ac12daa22b1ff9db5448f86f0ad4007bcc3401"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_01%3A13%3A26_2023/recordings/MP4/20103212.mp4",
+          "generation": "1710757119191821",
+          "bytes": 4608114,
+          "sha256": "34ce11b9ce89904ce113ed962288e842a534a9015a13d0c002b842b7b2071c8e",
+          "frame_count": 195
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-03/Sat_Jun__3_01%3A13%3A26_2023/recordings/MP4/20655732.mp4",
+          "generation": "1710757119221201",
+          "bytes": 4594450,
+          "sha256": "1eb2bc50f2b62bc5cc03d8cc66229ea4589bbe4e5cf9d9f93272bba211bba308",
+          "frame_count": 195
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          21,
+          43,
+          64,
+          86,
+          107,
+          129,
+          150,
+          172,
+          194
+        ],
+        "ext2": [
+          0,
+          21,
+          43,
+          64,
+          86,
+          107,
+          129,
+          150,
+          172,
+          194
+        ]
+      }
+    },
+    {
+      "episode_id": "ILIAD+50aee79f+2023-08-19-11h-36m-17s",
+      "site": "ILIAD",
+      "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11:36:17_2023/",
+      "instruction": "Close the lid of the coffee maker and then open it",
+      "between_action": false,
+      "starts_open": true,
+      "scene_id": 8098563998,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11%3A36%3A17_2023/metadata_ILIAD%2B50aee79f%2B2023-08-19-11h-36m-17s.json",
+        "generation": "1710757614565622",
+        "bytes": 1941,
+        "sha256": "d21549dbf6d983abfe29e645a9ac299cb0905824bdcc27f9ea95130054b8ca8e"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11%3A36%3A17_2023/recordings/MP4/23897859.mp4",
+          "generation": "1710757614583839",
+          "bytes": 16930653,
+          "sha256": "a20832d6a391c2266e4d4908d585b2c0ff17220d78cb53c5ea1a79e43500d30c",
+          "frame_count": 473
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-08-19/Sat_Aug_19_11%3A36%3A17_2023/recordings/MP4/27904255.mp4",
+          "generation": "1710757614576903",
+          "bytes": 14672719,
+          "sha256": "c16573c8d7f8120244564a957acf9b9b3965701a1617104bdd43b9eb731bf41b",
+          "frame_count": 473
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          52,
+          104,
+          157,
+          209,
+          262,
+          314,
+          367,
+          419,
+          472
+        ],
+        "ext2": [
+          0,
+          52,
+          104,
+          157,
+          209,
+          262,
+          314,
+          367,
+          419,
+          472
+        ]
+      }
+    },
+    {
+      "episode_id": "ILIAD+7ae1bcff+2023-05-18-11h-05m-08s",
+      "site": "ILIAD",
+      "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-05-18/Thu_May_18_11:05:08_2023/",
+      "instruction": "Close the open drawer and then open it again.",
+      "between_action": false,
+      "starts_open": true,
+      "scene_id": 9007093358,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-05-18/Thu_May_18_11%3A05%3A08_2023/metadata_ILIAD%2B7ae1bcff%2B2023-05-18-11h-05m-08s.json",
+        "generation": "1710757506269368",
+        "bytes": 1925,
+        "sha256": "2a2d883a0ae1fb494f0030c2140d83ca52310bd9fe33bb9a6b1f089db6480883"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-05-18/Thu_May_18_11%3A05%3A08_2023/recordings/MP4/23897859.mp4",
+          "generation": "1710757506286392",
+          "bytes": 18125965,
+          "sha256": "a3543bf16201d67e4eda1e39985278eb2bb33b46cee53bbb60df27df3bc6f8ee",
+          "frame_count": 578
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/ILIAD/success/2023-05-18/Thu_May_18_11%3A05%3A08_2023/recordings/MP4/27904255.mp4",
+          "generation": "1710757506288757",
+          "bytes": 19225220,
+          "sha256": "fe7eabf11adba50b1b94d19f08a947845f8479351e12e3db3e3656b0610c34a0",
+          "frame_count": 578
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512,
+          577
+        ],
+        "ext2": [
+          0,
+          64,
+          128,
+          192,
+          256,
+          320,
+          384,
+          448,
+          512,
+          577
+        ]
+      }
+    },
+    {
+      "episode_id": "IPRL+2fe9715d+2023-08-24-13h-24m-27s",
+      "site": "IPRL",
+      "prefix": "robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13:24:27_2023/",
+      "instruction": "Close the microwave door, remove the pink object from the top of the microwave, open the coffee maker",
+      "between_action": true,
+      "starts_open": true,
+      "scene_id": 713171170,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13%3A24%3A27_2023/metadata_IPRL%2B2fe9715d%2B2023-08-24-13h-24m-27s.json",
+        "generation": "1710757862420376",
+        "bytes": 2017,
+        "sha256": "39f44a2a5a3a484562580d47ff4648512e88684efc2f89860ad1f3c64e88557d"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13%3A24%3A27_2023/recordings/MP4/25916956.mp4",
+          "generation": "1710757862415822",
+          "bytes": 23091626,
+          "sha256": "75a0ed6572789abb9d72c0936913f229c335d59ac25649fac5d27433de35f471",
+          "frame_count": 626
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-08-24/Thu_Aug_24_13%3A24%3A27_2023/recordings/MP4/27432424.mp4",
+          "generation": "1710757862409227",
+          "bytes": 24459126,
+          "sha256": "5e3e315cf4fdb9b87bcc75de7aa0346d9de4ad24b8a179e0bbfd9f922d7e0025",
+          "frame_count": 626
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          69,
+          138,
+          208,
+          277,
+          347,
+          416,
+          486,
+          555,
+          625
+        ],
+        "ext2": [
+          0,
+          69,
+          138,
+          208,
+          277,
+          347,
+          416,
+          486,
+          555,
+          625
+        ]
+      }
+    },
+    {
+      "episode_id": "IPRL+7790ec0a+2023-06-30-20h-56m-04s",
+      "site": "IPRL",
+      "prefix": "robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20:56:04_2023/",
+      "instruction": "Open the right door of the cabinet above the toaster, remove one of the wooden objects from the side of the fridge and put it in the open cabinet, close the open cabinet door",
+      "between_action": true,
+      "starts_open": false,
+      "scene_id": 4290618632,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20%3A56%3A04_2023/metadata_IPRL%2B7790ec0a%2B2023-06-30-20h-56m-04s.json",
+        "generation": "1710757810500273",
+        "bytes": 1758,
+        "sha256": "29ba0d85b9d17e8f2719b418e81963d6cfff784c7a23dcd3b6fef3611644cbef"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20%3A56%3A04_2023/recordings/MP4/21582473.mp4",
+          "generation": "1710757810490104",
+          "bytes": 20681347,
+          "sha256": "e8eb207c61347c9c3d98e899299906eb62bc922ae26f3136e8d44ec772accc90",
+          "frame_count": 756
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_20%3A56%3A04_2023/recordings/MP4/28221883.mp4",
+          "generation": "1710757810505641",
+          "bytes": 19121856,
+          "sha256": "87668cd0bf4fc9922aead8c5305a4017488af6210ab949de65080ae97ed55ca8",
+          "frame_count": 756
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          83,
+          167,
+          251,
+          335,
+          419,
+          503,
+          587,
+          671,
+          755
+        ],
+        "ext2": [
+          0,
+          83,
+          167,
+          251,
+          335,
+          419,
+          503,
+          587,
+          671,
+          755
+        ]
+      }
+    },
+    {
+      "episode_id": "IRIS+85a5958f+2023-07-01-01h-21m-44s",
+      "site": "IRIS",
+      "prefix": "robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01:21:44_2023/",
+      "instruction": "Close the microwave door and open the rice cooker",
+      "between_action": false,
+      "starts_open": true,
+      "scene_id": 9308446118,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01%3A21%3A44_2023/metadata_IRIS%2B85a5958f%2B2023-07-01-01h-21m-44s.json",
+        "generation": "1710758363823014",
+        "bytes": 1945,
+        "sha256": "e65f42ec5ebdee76579d38bd853774e9b15168c30e1e6e34ca27c5985e69177a"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01%3A21%3A44_2023/recordings/MP4/23404442.mp4",
+          "generation": "1710758363835208",
+          "bytes": 10370196,
+          "sha256": "215ccb530191c8b0545aedb104c72ab5462fdcd529b2fe200e34ef249cd683d7",
+          "frame_count": 403
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-01/Sat_Jul__1_01%3A21%3A44_2023/recordings/MP4/29838012.mp4",
+          "generation": "1710758363851311",
+          "bytes": 12868297,
+          "sha256": "58b916403a04540d3096e49be943d039bfa891d1e4909f9fcb9e44f16ec764a2",
+          "frame_count": 403
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          44,
+          89,
+          134,
+          178,
+          223,
+          268,
+          312,
+          357,
+          402
+        ],
+        "ext2": [
+          0,
+          44,
+          89,
+          134,
+          178,
+          223,
+          268,
+          312,
+          357,
+          402
+        ]
+      }
+    },
+    {
+      "episode_id": "IRIS+ef107c48+2023-05-31-09h-34m-26s",
+      "site": "IRIS",
+      "prefix": "robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09:34:26_2023/",
+      "instruction": "Open the second drawer from the right, place the straw in the open drawer then close the drawer",
+      "between_action": true,
+      "starts_open": false,
+      "scene_id": 5612207605,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09%3A34%3A26_2023/metadata_IRIS%2Bef107c48%2B2023-05-31-09h-34m-26s.json",
+        "generation": "1710758317138587",
+        "bytes": 2018,
+        "sha256": "7cc0ce888459bbdb6844f03646478721678f91a6fda518286a04e17eae0118e0"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09%3A34%3A26_2023/recordings/MP4/23404442.mp4",
+          "generation": "1710758317153246",
+          "bytes": 11804195,
+          "sha256": "40793705d24e5316a3edd4e94929cb3daf444c811b75731bd0c8d251360afc1b",
+          "frame_count": 468
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-31/Wed_May_31_09%3A34%3A26_2023/recordings/MP4/29838012.mp4",
+          "generation": "1710758317157598",
+          "bytes": 12317409,
+          "sha256": "f20b771a8203ae6cc74e6558754a64f2b700bb3dc94bd3041801f907f56bee78",
+          "frame_count": 468
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          51,
+          103,
+          155,
+          207,
+          259,
+          311,
+          363,
+          415,
+          467
+        ],
+        "ext2": [
+          0,
+          51,
+          103,
+          155,
+          207,
+          259,
+          311,
+          363,
+          415,
+          467
+        ]
+      }
+    },
+    {
+      "episode_id": "PennPAL+acda9df3+2023-06-23-20h-04m-20s",
+      "site": "PennPAL",
+      "prefix": "robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20:04:20_2023/",
+      "instruction": "Open the drawer, pick up the orange plush toy, put it in the box that is in the drawer and close the drawer",
+      "between_action": true,
+      "starts_open": false,
+      "scene_id": 4760653248,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20%3A04%3A20_2023/metadata_PennPAL%2Bacda9df3%2B2023-06-23-20h-04m-20s.json",
+        "generation": "1710758526013615",
+        "bytes": 1797,
+        "sha256": "1e11dca3bf97c1a8aa897265b9e289466d725f74b749159397bb0f6eee4499a3"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20%3A04%3A20_2023/recordings/MP4/25455306.mp4",
+          "generation": "1710758526021073",
+          "bytes": 12253263,
+          "sha256": "26b583a3c19283c72383579ecff889ca46152f7fa9a08bab309ace52517178aa",
+          "frame_count": 650
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-23/Fri_Jun_23_20%3A04%3A20_2023/recordings/MP4/27085680.mp4",
+          "generation": "1710758526050534",
+          "bytes": 23315783,
+          "sha256": "de15ec335c5b7bd214bba992711dae67b0b7847c72674dd97b18586613aead4f",
+          "frame_count": 650
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          72,
+          144,
+          216,
+          288,
+          360,
+          432,
+          504,
+          576,
+          649
+        ],
+        "ext2": [
+          0,
+          72,
+          144,
+          216,
+          288,
+          360,
+          432,
+          504,
+          576,
+          649
+        ]
+      }
+    },
+    {
+      "episode_id": "REAL+4dbb5646+2023-05-19-16h-20m-27s",
+      "site": "REAL",
+      "prefix": "robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16:20:27_2023/",
+      "instruction": "Open the topmost drawer, put the red mug inside it, and then close the drawer",
+      "between_action": true,
+      "starts_open": false,
+      "scene_id": 9507507311,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16%3A20%3A27_2023/metadata_REAL%2B4dbb5646%2B2023-05-19-16h-20m-27s.json",
+        "generation": "1710759442476198",
+        "bytes": 1786,
+        "sha256": "c7d7e8f53275634ad8ad74f4a9b80aa70989e3dd724225c6ebf5bfcbf79c8ff2"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16%3A20%3A27_2023/recordings/MP4/20540549.mp4",
+          "generation": "1710759442452625",
+          "bytes": 11653979,
+          "sha256": "5a837fac936b7473af7f1860fa4149e381195d8e0a4db9373cfaae85b509518e",
+          "frame_count": 416
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-19/Fri_May_19_16%3A20%3A27_2023/recordings/MP4/23960472.mp4",
+          "generation": "1710759442467001",
+          "bytes": 9239646,
+          "sha256": "e4f328be38e89678e6ae02ffaea5ae589c69d98cfd41112dd6997d1486a83f16",
+          "frame_count": 416
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          46,
+          92,
+          138,
+          184,
+          230,
+          276,
+          322,
+          368,
+          415
+        ],
+        "ext2": [
+          0,
+          46,
+          92,
+          138,
+          184,
+          230,
+          276,
+          322,
+          368,
+          415
+        ]
+      }
+    },
+    {
+      "episode_id": "TRI+938130c4+2023-08-21-11h-39m-01s",
+      "site": "TRI",
+      "prefix": "robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_11:39:01_2023/",
+      "instruction": "Open the cabinet's left door, then close it",
+      "between_action": false,
+      "starts_open": false,
+      "scene_id": 4743887325,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_11%3A39%3A01_2023/metadata_TRI%2B938130c4%2B2023-08-21-11h-39m-01s.json",
+        "generation": "1710760095410713",
+        "bytes": 1782,
+        "sha256": "c15af95c0caeb9417d40f5cdccda00fd167f518d946246917a3fb27bf51fd97e"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_11%3A39%3A01_2023/recordings/MP4/20252535.mp4",
+          "generation": "1710760095450043",
+          "bytes": 6447140,
+          "sha256": "a9aa5c990ebbcd939d599c0f864cc9f641194ec2571b97a4283a4b64c511a51b",
+          "frame_count": 260
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_11%3A39%3A01_2023/recordings/MP4/25947356.mp4",
+          "generation": "1710760095485788",
+          "bytes": 4570617,
+          "sha256": "f995254caee1156c513dde1b14783ad83f22b2b762894a95f5b508561ef652b8",
+          "frame_count": 260
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          28,
+          57,
+          86,
+          115,
+          143,
+          172,
+          201,
+          230,
+          259
+        ],
+        "ext2": [
+          0,
+          28,
+          57,
+          86,
+          115,
+          143,
+          172,
+          201,
+          230,
+          259
+        ]
+      }
+    },
+    {
+      "episode_id": "TRI+938130c4+2023-08-21-17h-38m-52s",
+      "site": "TRI",
+      "prefix": "robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_17:38:52_2023/",
+      "instruction": "Open the left upper cabinet door then close it.",
+      "between_action": false,
+      "starts_open": false,
+      "scene_id": 5432664924,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_17%3A38%3A52_2023/metadata_TRI%2B938130c4%2B2023-08-21-17h-38m-52s.json",
+        "generation": "1710760101654812",
+        "bytes": 1783,
+        "sha256": "66794e110112f6a777d86a308b708bdea1f900590415d4aa9aa40244f9e6f90a"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_17%3A38%3A52_2023/recordings/MP4/20252535.mp4",
+          "generation": "1710760101674364",
+          "bytes": 3315049,
+          "sha256": "49ddb9b467a67c9539b29c8515c0d3d71324359f3a630ac3ba1a91b21f7eec04",
+          "frame_count": 215
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_17%3A38%3A52_2023/recordings/MP4/25947356.mp4",
+          "generation": "1710760101686789",
+          "bytes": 4566181,
+          "sha256": "c4e3ef40a97e2eb6304ebdd9bb855663dbd09121e2315dc22388ebb0569691d6",
+          "frame_count": 215
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          23,
+          47,
+          71,
+          95,
+          118,
+          142,
+          166,
+          190,
+          214
+        ],
+        "ext2": [
+          0,
+          23,
+          47,
+          71,
+          95,
+          118,
+          142,
+          166,
+          190,
+          214
+        ]
+      }
+    },
+    {
+      "episode_id": "TRI+938130c4+2023-08-21-14h-28m-07s",
+      "site": "TRI",
+      "prefix": "robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_14:28:07_2023/",
+      "instruction": "Open and close the cabinet",
+      "between_action": false,
+      "starts_open": false,
+      "scene_id": 4244574282,
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_14%3A28%3A07_2023/metadata_TRI%2B938130c4%2B2023-08-21-14h-28m-07s.json",
+        "generation": "1710760098757599",
+        "bytes": 1781,
+        "sha256": "c21f1169093beec71fe9f920d8c499a1bb03a67b19a1c25e4a9cb19558edd1cc"
+      },
+      "cameras": {
+        "ext1": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_14%3A28%3A07_2023/recordings/MP4/20252535.mp4",
+          "generation": "1710760098772894",
+          "bytes": 2002102,
+          "sha256": "076ecedee943fefb76ab4808a0be78ead77a2407546c6876a1d2646af63a5a99",
+          "frame_count": 133
+        },
+        "ext2": {
+          "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-08-21/Mon_Aug_21_14%3A28%3A07_2023/recordings/MP4/25947356.mp4",
+          "generation": "1710760098774729",
+          "bytes": 3701554,
+          "sha256": "2b39d96ec809fc91237e3aa23a81b02486d433cddab765bb705cb920b8661617",
+          "frame_count": 133
+        }
+      },
+      "grids": {
+        "ext1": [
+          0,
+          14,
+          29,
+          44,
+          58,
+          73,
+          88,
+          102,
+          117,
+          132
+        ],
+        "ext2": [
+          0,
+          14,
+          29,
+          44,
+          58,
+          73,
+          88,
+          102,
+          117,
+          132
+        ]
+      }
+    }
+  ]
+}

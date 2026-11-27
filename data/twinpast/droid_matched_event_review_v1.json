@@ -1,0 +1,142 @@
+[
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-20-12h-28m-58s",
+      "ILIAD+5e938e3b+2023-07-20-13h-03m-44s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "fixed_window_cue",
+    "reason": "Both clips show the wooden tray next to the window. The center slots already show it extended in one clip and retracted in the other. The setup also resembles a previously reviewed ILIAD scene."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-06-15-13h-49m-35s",
+      "ILIAD+j807b3f8+2023-06-18-17h-44m-02s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "The silver oven and red microwave are different appliances. The plate placement cannot define the same target-state question."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-06-18-17h-42m-10s",
+      "ILIAD+j807b3f8+2023-06-18-17h-44m-02s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_event",
+    "reason": "One clip puts a light-green bowl into the microwave. The other transfers its contents to a plate. The late window shows opposite door states."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-24-17h-26m-35s",
+      "ILIAD+5e938e3b+2023-07-25-11h-43m-11s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "fixed_window_cue",
+    "reason": "The episodes share the air-fryer and cupboard setting. The second clip shows cupboard closure by slot 6, while the first still shows the open cupboard during its center window."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-06-18-17h-14m-31s",
+      "ILIAD+j807b3f8+2023-06-18-17h-08m-19s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "fixed_window_cue",
+    "reason": "This is the closest shared-event match. Both clips handle a pale green bowl and end with the red microwave closed. Slot 4 already exposes the open door in one branch and closed door in the other. The initial bowl location also differs."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-06-18-18h-04m-55s",
+      "ILIAD+j807b3f8+2023-06-18-17h-08m-19s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "fixed_window_cue",
+    "reason": "The microwave stays open at the late endpoint in the bowl-removal branch and ends closed in the other branch."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-19-18h-05m-43s",
+      "ILIAD+5e938e3b+2023-07-20-13h-03m-44s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "One bottle is placed into a drawer at the kitchen counter. The other is placed on the cabinet by the window. The drawer and placement event do not match."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+      "ILIAD+5e938e3b+2023-07-20-13h-03m-44s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "The clear bottle beside the kitchen sink and the bottle at the nightstand are different anchors with different drawers."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+      "ILIAD+5e938e3b+2023-07-20-16h-34m-21s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "The clips show different drawers and distinct pickup locations. The kitchen drawer closes, while the nightstand tray stays extended at the end."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+      "ILIAD+5e938e3b+2023-07-24-17h-11m-59s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "One clip manipulates an under-counter drawer beside the sink, and the other works at the air fryer and upper cupboard."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-05-17-15h-00m-16s",
+      "ILIAD+j807b3f8+2023-06-18-17h-44m-02s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_target",
+    "reason": "The toy kitchen and red-microwave tabletop provide different target doors and bowl events."
+  },
+  {
+    "episode_ids": [
+      "IRIS+938130c4+2023-07-13-18h-41m-48s",
+      "IRIS+938130c4+2023-07-13-18h-45m-01s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_event",
+    "reason": "The two clips place different objects above the oven, a plate and a metal container. A shared state question at the same event could not be verified."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+j807b3f8+2023-06-18-17h-57m-19s",
+      "ILIAD+j807b3f8+2023-06-18-17h-44m-02s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "different_event",
+    "reason": "The green bowl moves into the red microwave in one clip, and its contents move to a plate in the other. The center windows also show different door states."
+  },
+  {
+    "episode_ids": [
+      "ILIAD+5e938e3b+2023-07-24-17h-42m-44s",
+      "ILIAD+5e938e3b+2023-07-24-17h-26m-35s"
+    ],
+    "reviewed": true,
+    "status": "visual_reject",
+    "category": "visibility",
+    "reason": "The fryer drawer and the relevant bottle movement cannot both be read clearly enough in either exterior view to verify opposite states at the same event."
+  }
+]

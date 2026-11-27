@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 27 November 2026 after the DROID fixed-position terminal-attention audit.
+Updated 28 November 2026 after the DROID matched event-relative CPU screen.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -64,7 +64,7 @@ The full benchmark combines October results on samples 201–250 with November m
 
 ## Remaining work
 
-**Immediate research step.** Test whether an annotation-blind selector can choose useful spans on fresh sources. With ten fixed frames and token positions, annotation-guided terminal attention reached 4/7 robust DROID pairs versus 1/7 for native and causal controls and 0/7 for matched earlier access. It recovered three pairs and preserved the causal control's only robust pair. [Terminal-attention results](<reports/2026-11-27 droid terminal attention results.md>)
+**Immediate research step.** Film and review two controlled pilot pairs with opposite states at the same event. The natural DROID screen reviewed 14 candidate pairs and found zero eligible pairs. If the pilots pass the review, expand to eight pairs across at least three setups and verify the fixed windows before running the 7B comparison. [Filming protocol](<reports/2026-11-28 controlled event pair protocol.md>) · [Matched-screen results](<reports/2026-11-28 droid matched event results.md>) · [Interior GPU results](<reports/2026-11-28 droid interior GPU results.md>)
 
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 

@@ -1,0 +1,219 @@
+{
+  "archive_sha256": "7f256e8dc1324bdd4bbdc3ab13961c0a625fde35fc711054350bb3340374c333",
+  "notebook_sha256": "73bc958070b3d4941f585c978358092e9563aaaab2c4303b44ef13bc2bc6d6e7",
+  "verified_payloads": 22,
+  "verified_frames": 120,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "parity_checks": 48,
+  "max_causal_logit_error": 0.03125,
+  "scenes": 6,
+  "tasks": {
+    "first": {
+      "native": {
+        "robust": 3,
+        "correct": 20,
+        "support": 52
+      },
+      "recency": {
+        "robust": 0,
+        "correct": 10,
+        "support": 0
+      },
+      "endpoint": {
+        "robust": 2,
+        "correct": 19,
+        "support": 36
+      },
+      "selector": {
+        "robust": 2,
+        "correct": 19,
+        "support": 36
+      },
+      "annotated": {
+        "robust": 2,
+        "correct": 19,
+        "support": 36
+      }
+    },
+    "last": {
+      "native": {
+        "robust": 2,
+        "correct": 19,
+        "support": 32
+      },
+      "recency": {
+        "robust": 3,
+        "correct": 20,
+        "support": 28
+      },
+      "endpoint": {
+        "robust": 3,
+        "correct": 20,
+        "support": 28
+      },
+      "selector": {
+        "robust": 3,
+        "correct": 20,
+        "support": 27
+      },
+      "annotated": {
+        "robust": 3,
+        "correct": 20,
+        "support": 28
+      }
+    }
+  },
+  "contrasts": {
+    "recency": {
+      "absolute": 0.16666666666666666,
+      "scene_bootstrap_95": [
+        0.0,
+        0.3333333333333333
+      ]
+    },
+    "endpoint": {
+      "absolute": 0.0,
+      "scene_bootstrap_95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "total_reported_choice_scores": 240,
+  "verified_attention_layers": {
+    "three_frame": 2,
+    "causal": 2
+  },
+  "distinct_selector_decisions": [
+    {
+      "pair": "droid_span_10675aa0b2",
+      "branch": "b",
+      "task": "last",
+      "selector": [
+        5,
+        6,
+        7
+      ],
+      "endpoint": [
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "branch_order_changes": {
+    "recency": {
+      "wrong_to_correct": 9,
+      "correct_to_wrong": 0
+    },
+    "endpoint": {
+      "wrong_to_correct": 0,
+      "correct_to_wrong": 0
+    },
+    "native": {
+      "wrong_to_correct": 4,
+      "correct_to_wrong": 4
+    }
+  },
+  "median_pooling_ms": 0.28416886925697327,
+  "median_selection_ms": 0.4228483885526657,
+  "per_scene_correct_branch_orders": {
+    "droid_span_1b931bcdc9": {
+      "first": {
+        "native": 2,
+        "recency": 3,
+        "endpoint": 3,
+        "selector": 3,
+        "annotated": 3
+      },
+      "last": {
+        "native": 3,
+        "recency": 3,
+        "endpoint": 3,
+        "selector": 3,
+        "annotated": 3
+      }
+    },
+    "droid_span_dc2676ffac": {
+      "first": {
+        "native": 4,
+        "recency": 3,
+        "endpoint": 4,
+        "selector": 4,
+        "annotated": 4
+      },
+      "last": {
+        "native": 3,
+        "recency": 2,
+        "endpoint": 2,
+        "selector": 2,
+        "annotated": 2
+      }
+    },
+    "droid_span_18857765d6": {
+      "first": {
+        "native": 4,
+        "recency": 1,
+        "endpoint": 3,
+        "selector": 3,
+        "annotated": 3
+      },
+      "last": {
+        "native": 4,
+        "recency": 4,
+        "endpoint": 4,
+        "selector": 4,
+        "annotated": 4
+      }
+    },
+    "droid_span_10675aa0b2": {
+      "first": {
+        "native": 4,
+        "recency": 2,
+        "endpoint": 3,
+        "selector": 3,
+        "annotated": 3
+      },
+      "last": {
+        "native": 4,
+        "recency": 4,
+        "endpoint": 4,
+        "selector": 4,
+        "annotated": 4
+      }
+    },
+    "droid_span_6d7857d0af": {
+      "first": {
+        "native": 3,
+        "recency": 0,
+        "endpoint": 4,
+        "selector": 4,
+        "annotated": 4
+      },
+      "last": {
+        "native": 2,
+        "recency": 4,
+        "endpoint": 4,
+        "selector": 4,
+        "annotated": 4
+      }
+    },
+    "droid_span_8940a93e25": {
+      "first": {
+        "native": 3,
+        "recency": 1,
+        "endpoint": 2,
+        "selector": 2,
+        "annotated": 2
+      },
+      "last": {
+        "native": 3,
+        "recency": 3,
+        "endpoint": 3,
+        "selector": 3,
+        "annotated": 3
+      }
+    }
+  },
+  "advancement_criterion_met": false
+}

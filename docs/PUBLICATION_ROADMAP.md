@@ -1,6 +1,6 @@
 # Neurocomputing publication roadmap
 
-Updated 27 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The DROID terminal-attention feasibility run recovered three robust pairs at fixed input length and positions. The next milestone is a source-disjoint test of automatic span selection against matched recency. [Terminal-attention audit](<reports/2026-11-27 droid terminal attention results.md>)
+Updated 28 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The DROID matched screen found zero eligible natural pairs in 14 candidates. A small controlled cohort is the next way to test whether the model uses the event itself. [Matched-screen results](<reports/2026-11-28 droid matched event results.md>)
 
 Use the [phased Neurocomputing plan](../paper/neurocomputing/submission_phase_plan.md) for the current go/no-go criteria, confirmation design, pre-submission review and revision workflow. The previous experiment records below preserve their original decisions.
 
@@ -85,4 +85,4 @@ Use the current author guide and submission system for a final format/policy che
 
 The construction selector, frozen short-query confirmation and target-binding verifier did not meet their respective accuracy gates. The single-reviewer StreamingBench pass also fell below the same-clip pilot threshold. Preserve those results as development evidence. [Target-binding audit](<reports/2026-11-22 q1 audit of target binding.md>) · [Blinded review](<reports/2026-11-23 blinded visual support first pass.md>)
 
-The DROID terminal-context comparison found a drop from 6/7 robust pairs in isolation to 1/7 with full history. At fixed input length and positions, annotation-guided terminal readout recovered three robust pairs and preserved the causal control's only robust success. Evaluate an annotation-blind selector against a matched three-frame recency window on source-disjoint cases. [Terminal-attention results](<reports/2026-11-27 droid terminal attention results.md>)
+The event-relative CPU screen found a coverage advantage for annotated windows, and the GPU run found no corresponding accuracy gain. A follow-up screen found no eligible natural pair. Film two pilots and verify that their fixed windows lack obvious answer cues. Expand to the full controlled cohort after the pilot review. [Interior GPU results](<reports/2026-11-28 droid interior GPU results.md>) · [Matched-screen results](<reports/2026-11-28 droid matched event results.md>) · [Filming protocol](<reports/2026-11-28 controlled event pair protocol.md>)

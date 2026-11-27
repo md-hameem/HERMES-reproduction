@@ -1,6 +1,6 @@
 # HERMES research and Neurocomputing submission plan
 
-27 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. The annotation-guided DROID terminal attention test passed its feasibility criterion, recovering three robust pairs and preserving the causal control's only robust pair. Freeze an annotation-blind selector and compare it with fixed-budget recency on source-disjoint pairs before advancing a method claim. [Terminal-attention results](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
+28 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. Center-three won the event-relative GPU comparison 6/7 to 5/7. A subsequent review of 14 natural DROID pair nominations found zero eligible pairs. The next feasibility step is a controlled cohort with opposite event states and matched fixed-window evidence. [Interior GPU results](<../../docs/reports/2026-11-28 droid interior GPU results.md>) · [Matched-screen results](<../../docs/reports/2026-11-28 droid matched event results.md>)
 
 ## Evidence and publication gaps
 
@@ -10,7 +10,9 @@
 | Scorer, construction, readout and verifier experiments | Fresh causal scoring changed no correctness outcomes on 40 selected questions. The short cache preserved 40 masked answers and cut median query KV bytes by 79.7% in that comparison. Recent-four won the point estimate in the 150-question confirmation (74/150 versus 70/150). In the target-binding screen it also beat the minimum rule (156/269 versus 147/269). | A method that can retain useful earlier evidence without sacrificing too many correct recent answers, with total cost measured. |
 | 51 reviewed source files and 39 gap entries | A literature and failure map for narrowing the problem. Records include version overlap and varying review depth. | A full-method and available-code comparison for the final candidate and its closest prior. |
 | TwinPast visual screen and GPU diagnostics | Annotated native timestamps recovered 2/7 robust pairs on inspected footage. Automatic refinement and the fixed-frame readout yielded no robust gain. The boundary rule retained a final-interval frame on 8/12 annotated branches and solved 0/8 robust pairs. | Freeze independent footage and test the matched annotation-selected history control before another automatic policy. |
-| Fixed-position DROID terminal attention | On seven reused development pairs, terminal access scored 4/7 robust versus 1/7 with native and explicit causal attention and 0/7 with matched earlier access. All 56 replay comparisons passed. | Freeze a selector without span annotations or answer options. Test it against matched recency on independent sources, including queries about earlier states. |
+| Fixed-position DROID terminal attention | On seven reused development pairs, terminal access scored 4/7 robust versus 1/7 with native and explicit causal attention and 0/7 with matched earlier access. All 56 replay comparisons passed. | The follow-up automatic-selection comparison below tested this mechanism. |
+| DROID automatic span selector | The selector and question-only rule both scored 5/12 robust scene-question pairs. Last-three recency scored 3/12. | A task with visible interior support and coverage headroom over a question-only rule. |
+| DROID interior-evidence screen | Annotated access covered 7/7 eligible clips compared with 5/7 for the best fixed window. The fixed window won the GPU accuracy comparison 6/7 versus 5/7. | Match clips on fixed-window cues while varying the queried event state. |
 
 [Project evidence](../../docs/PROJECT_STATUS.md) · [Claim ledger](claim_evidence.csv) · [TwinPast dev audit](<../../docs/reports/2026-11-23 twinpast development review.md>)
 
@@ -22,9 +24,9 @@ SCImago reports 2025 Q1 in Computer Science Applications. The supplied CCF catal
 
 ## Current experiment sequence
 
-1. Freeze a fresh DROID cohort by original episode and scene, documenting overlap checks against all inspected DROID footage. Include cases where the queried state is earlier than the most recent plausible state. Record the matching annotations for evaluation.
-2. Freeze one question-conditioned span selector that uses only the sampled frames, timestamps and question available at inference. Compare its three-frame mask with a three-frame recency mask on the same full input. Use unrestricted decoding for a practical reference and annotation-guided masking to measure headroom.
-3. Use robust paired correctness against recency as the primary outcome. Report branch-order regressions, breakdowns for terminal and earlier-state questions, span coverage and selector cost. Freeze the gain target and uncertainty procedure before scoring. Advance the method claim only if the fresh result supports a practical gain, and check the final mechanism against its closest published comparators.
+1. Film two pilot pairs with the same neutral event and opposite visible states when that event occurs. Review the fixed windows for incidental visual cues. [Filming protocol](<../../docs/reports/2026-11-28 controlled event pair protocol.md>)
+2. If the pilots pass, expand to eight accepted pairs across at least three physical setups. Freeze pair identities, timing and evidence labels. Compare annotation-guided access with the strongest fixed control and unrestricted decoding after visual review.
+3. Require answer-level gains before prototyping another selector. Preserve the distinction between controlled capability and generalization to natural video.
 
 The earlier TwinPast phases below document the original hypothesis and diagnostics. Apply the confirmation and submission requirements to the selected method and its declared target cohort.
 

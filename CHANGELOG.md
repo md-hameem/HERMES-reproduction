@@ -2,6 +2,14 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-28 — DROID temporal evidence experiments
+
+- Archived and audited the six-scene run. All 48 parity checks passed. The selector scored 5/12 robust scene-question pairs and matched all question-only first/last predictions.
+- Screened 14 episodes for interior evidence. The annotation-guided window covered all seven eligible clips versus five for the best static window.
+- Archived the 56-score interior GPU comparison. Center-three scored 6/7 clips correct in both option orders versus 5/7 for annotated access. All 14 parity checks passed.
+- Recovered 19 public RLDS records for the matched-event follow-up and recorded all 14 pair rejections.
+- Added the controlled filming and review protocol to the publication plan.
+
 ## 2026-11-27 — TwinPast matched refinement
 
 - Archived the executed notebook and recomputed 96 answer scores across eight matched development pairs. Both local refinements scored 0/8 robust pairs. Coarse uniform scored 1/8.

@@ -1,0 +1,1699 @@
+{
+  "raw": {
+    "strict": {
+      "index_digests": {
+        "manifest.json": "f540f0a86e791d11588670f82e8045b54ae79959a8104aa6781087486f65a5d2",
+        "aggregated-annotations-030724.json": "42ed672ee974bfcb15752dc0768dd66a47e01ea3eebfdb74d8d5e468b37b2b6d"
+      },
+      "max_days_between_episodes": 31,
+      "nominate_by_implied_state": false,
+      "excluded_episodes": [
+        "CLVR+13759f6e+2023-06-03-01h-13m-26s",
+        "CLVR+13759f6e+2023-06-03-23h-30m-49s",
+        "CLVR+13759f6e+2023-06-13-01h-27m-21s",
+        "CLVR+236539bc+2023-06-06-01h-09m-11s",
+        "GuptaLab+553d1bd5+2023-06-18-16h-54m-33s",
+        "GuptaLab+553d1bd5+2023-06-18-20h-19m-34s",
+        "ILIAD+50aee79f+2023-08-19-11h-36m-17s",
+        "ILIAD+5e938e3b+2023-07-19-12h-09m-23s",
+        "ILIAD+5e938e3b+2023-07-19-12h-56m-37s",
+        "ILIAD+5e938e3b+2023-07-20-10h-41m-00s",
+        "ILIAD+5e938e3b+2023-07-20-11h-52m-26s",
+        "ILIAD+7ae1bcff+2023-05-18-11h-05m-08s",
+        "IPRL+2fe9715d+2023-08-24-13h-24m-27s",
+        "IPRL+5085c3ce+2023-10-11-22h-47m-56s",
+        "IPRL+5085c3ce+2023-10-11-22h-50m-15s",
+        "IPRL+5085c3ce+2023-10-15-01h-31m-32s",
+        "IPRL+5085c3ce+2023-10-15-01h-43m-47s",
+        "IPRL+5085c3ce+2023-10-16-22h-07m-54s",
+        "IPRL+5085c3ce+2023-10-16-22h-09m-27s",
+        "IPRL+7790ec0a+2023-04-30-18h-30m-29s",
+        "IPRL+7790ec0a+2023-04-30-18h-30m-51s",
+        "IPRL+7790ec0a+2023-06-27-20h-28m-43s",
+        "IPRL+7790ec0a+2023-06-27-21h-01m-12s",
+        "IPRL+7790ec0a+2023-06-30-17h-24m-28s",
+        "IPRL+7790ec0a+2023-06-30-17h-30m-08s",
+        "IPRL+7790ec0a+2023-06-30-18h-58m-51s",
+        "IPRL+7790ec0a+2023-06-30-19h-00m-16s",
+        "IPRL+7790ec0a+2023-06-30-19h-17m-31s",
+        "IPRL+7790ec0a+2023-06-30-19h-17m-52s",
+        "IPRL+7790ec0a+2023-06-30-19h-28m-27s",
+        "IPRL+7790ec0a+2023-06-30-19h-31m-09s",
+        "IPRL+7790ec0a+2023-06-30-20h-56m-04s",
+        "IPRL+7790ec0a+2023-06-30-22h-04m-30s",
+        "IPRL+7790ec0a+2023-06-30-22h-05m-43s",
+        "IRIS+7dfa2da3+2023-05-15-15h-32m-30s",
+        "IRIS+7dfa2da3+2023-05-15-16h-00m-17s",
+        "IRIS+7dfa2da3+2023-05-18-14h-39m-17s",
+        "IRIS+7dfa2da3+2023-05-18-14h-43m-05s",
+        "IRIS+7dfa2da3+2023-05-23-11h-37m-06s",
+        "IRIS+7dfa2da3+2023-05-25-13h-34m-01s",
+        "IRIS+7dfa2da3+2023-05-25-13h-37m-03s",
+        "IRIS+7dfa2da3+2023-06-01-13h-38m-34s",
+        "IRIS+7dfa2da3+2023-06-01-13h-38m-52s",
+        "IRIS+7dfa2da3+2023-06-12-15h-51m-19s",
+        "IRIS+7dfa2da3+2023-06-12-15h-52m-14s",
+        "IRIS+85a5958f+2023-07-01-01h-21m-44s",
+        "IRIS+85a5958f+2023-07-05-01h-20m-22s",
+        "IRIS+85a5958f+2023-07-05-01h-28m-14s",
+        "IRIS+85a5958f+2023-07-05-01h-28m-54s",
+        "IRIS+85a5958f+2023-07-05-15h-44m-47s",
+        "IRIS+85a5958f+2023-07-05-15h-45m-12s",
+        "IRIS+85a5958f+2023-07-05-15h-52m-08s",
+        "IRIS+85a5958f+2023-07-05-15h-52m-26s",
+        "IRIS+938130c4+2023-07-17-10h-55m-34s",
+        "IRIS+938130c4+2023-07-17-11h-03m-29s",
+        "IRIS+938130c4+2023-07-17-14h-17m-53s",
+        "IRIS+938130c4+2023-07-17-14h-20m-13s",
+        "IRIS+ef107c48+2023-05-31-09h-34m-26s",
+        "IRIS+ef107c48+2023-05-31-10h-12m-54s",
+        "IRIS+ef107c48+2023-05-31-10h-13m-18s",
+        "PennPAL+06b0ffa5+2023-04-29-17h-35m-51s",
+        "PennPAL+acda9df3+2023-06-23-20h-04m-20s",
+        "PennPAL+acda9df3+2023-06-29-20h-29m-07s",
+        "PennPAL+acda9df3+2023-07-07-21h-06m-26s",
+        "PennPAL+acda9df3+2023-07-07-21h-06m-54s",
+        "PennPAL+acda9df3+2023-07-07-21h-18m-12s",
+        "PennPAL+acda9df3+2023-07-07-21h-18m-34s",
+        "PennPAL+acda9df3+2023-07-10-21h-04m-33s",
+        "PennPAL+acda9df3+2023-07-10-21h-05m-18s",
+        "PennPAL+c5f808b7+2023-10-19-00h-56m-40s",
+        "PennPAL+c5f808b7+2023-10-19-00h-57m-06s",
+        "REAL+4dbb5646+2023-05-19-16h-20m-27s",
+        "REAL+4f8ca688+2023-08-24-13h-57m-42s",
+        "REAL+4f8ca688+2023-08-24-16h-12m-09s",
+        "REAL+4f8ca688+2023-08-31-13h-04m-55s",
+        "REAL+de601749+2023-05-20-15h-07m-52s",
+        "TRI+52ca9b6a+2023-10-16-11h-47m-45s",
+        "TRI+52ca9b6a+2023-10-16-11h-48m-25s",
+        "TRI+52ca9b6a+2023-10-16-14h-42m-35s",
+        "TRI+52ca9b6a+2023-10-16-14h-51m-36s",
+        "TRI+52ca9b6a+2023-10-16-16h-56m-12s",
+        "TRI+52ca9b6a+2023-10-16-16h-57m-43s",
+        "TRI+52ca9b6a+2023-10-17-14h-07m-39s",
+        "TRI+52ca9b6a+2023-10-17-14h-09m-01s",
+        "TRI+52ca9b6a+2023-10-18-11h-13m-44s",
+        "TRI+52ca9b6a+2023-10-18-11h-14m-03s",
+        "TRI+52ca9b6a+2023-10-19-12h-23m-18s",
+        "TRI+52ca9b6a+2023-10-19-12h-40m-19s",
+        "TRI+52ca9b6a+2023-10-19-15h-04m-59s",
+        "TRI+52ca9b6a+2023-10-23-11h-00m-50s",
+        "TRI+52ca9b6a+2023-10-23-11h-19m-11s",
+        "TRI+52ca9b6a+2023-10-23-11h-21m-20s",
+        "TRI+938130c4+2023-08-21-11h-39m-01s",
+        "TRI+938130c4+2023-08-21-14h-28m-07s",
+        "TRI+938130c4+2023-08-21-17h-38m-52s",
+        "TRI+938130c4+2023-08-22-16h-23m-45s",
+        "TRI+938130c4+2023-08-22-16h-51m-37s"
+      ],
+      "excluded_scenes": [
+        [
+          "CLVR",
+          5155589926
+        ],
+        [
+          "CLVR",
+          6498288010
+        ],
+        [
+          "CLVR",
+          6667529842
+        ],
+        [
+          "CLVR",
+          8591652464
+        ],
+        [
+          "GuptaLab",
+          5235850418
+        ],
+        [
+          "ILIAD",
+          1058976383
+        ],
+        [
+          "ILIAD",
+          2321227261
+        ],
+        [
+          "ILIAD",
+          8098563998
+        ],
+        [
+          "ILIAD",
+          9007093358
+        ],
+        [
+          "IPRL",
+          713171170
+        ],
+        [
+          "IPRL",
+          1611836543
+        ],
+        [
+          "IPRL",
+          2109410002
+        ],
+        [
+          "IPRL",
+          2739901198
+        ],
+        [
+          "IPRL",
+          4134662280
+        ],
+        [
+          "IPRL",
+          4290618632
+        ],
+        [
+          "IPRL",
+          4991796633
+        ],
+        [
+          "IPRL",
+          6946017840
+        ],
+        [
+          "IPRL",
+          7603693755
+        ],
+        [
+          "IPRL",
+          7724213024
+        ],
+        [
+          "IPRL",
+          8351259745
+        ],
+        [
+          "IPRL",
+          9858009618
+        ],
+        [
+          "IRIS",
+          301637807
+        ],
+        [
+          "IRIS",
+          995323252
+        ],
+        [
+          "IRIS",
+          1330873366
+        ],
+        [
+          "IRIS",
+          2158993557
+        ],
+        [
+          "IRIS",
+          2271765186
+        ],
+        [
+          "IRIS",
+          3349104415
+        ],
+        [
+          "IRIS",
+          4430936219
+        ],
+        [
+          "IRIS",
+          5085711642
+        ],
+        [
+          "IRIS",
+          5612207605
+        ],
+        [
+          "IRIS",
+          6154533347
+        ],
+        [
+          "IRIS",
+          7705815187
+        ],
+        [
+          "IRIS",
+          8066802860
+        ],
+        [
+          "IRIS",
+          8786722770
+        ],
+        [
+          "IRIS",
+          8930621648
+        ],
+        [
+          "IRIS",
+          9308446118
+        ],
+        [
+          "PennPAL",
+          161410698
+        ],
+        [
+          "PennPAL",
+          334162896
+        ],
+        [
+          "PennPAL",
+          4760653248
+        ],
+        [
+          "PennPAL",
+          5493550952
+        ],
+        [
+          "PennPAL",
+          9160815698
+        ],
+        [
+          "PennPAL",
+          9306310171
+        ],
+        [
+          "PennPAL",
+          9551783935
+        ],
+        [
+          "REAL",
+          3918790350
+        ],
+        [
+          "REAL",
+          8626796008
+        ],
+        [
+          "REAL",
+          8969941950
+        ],
+        [
+          "REAL",
+          9507507311
+        ],
+        [
+          "TRI",
+          158368076
+        ],
+        [
+          "TRI",
+          1620574296
+        ],
+        [
+          "TRI",
+          2130427403
+        ],
+        [
+          "TRI",
+          3915626876
+        ],
+        [
+          "TRI",
+          4244574282
+        ],
+        [
+          "TRI",
+          4743887325
+        ],
+        [
+          "TRI",
+          5432664924
+        ],
+        [
+          "TRI",
+          5987390574
+        ],
+        [
+          "TRI",
+          6348543881
+        ],
+        [
+          "TRI",
+          8077138943
+        ],
+        [
+          "TRI",
+          8894075169
+        ],
+        [
+          "TRI",
+          9125171463
+        ],
+        [
+          "TRI",
+          9906823456
+        ]
+      ],
+      "ranked_pairs": 11,
+      "shortlisted_pairs": 11,
+      "metadata_requests": 16,
+      "filter_counts": {
+        "unavailable": 11,
+        "different_scene": 0,
+        "prior_scene": 0,
+        "no_common_camera": 0
+      },
+      "metadata_matches": 0,
+      "failures": [
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-20-13h-03m-44s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-25-11h-43m-11s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-26m-35s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-14m-31s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-08m-19s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-18h-04m-55s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-11m-59s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "IRIS+938130c4+2023-07-13-18h-41m-48s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "IRIS+938130c4+2023-07-13-18h-45m-01s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-57m-19s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-42m-44s",
+          "error": "HTTPError"
+        }
+      ],
+      "pairs": []
+    },
+    "broad": {
+      "index_digests": {
+        "manifest.json": "f540f0a86e791d11588670f82e8045b54ae79959a8104aa6781087486f65a5d2",
+        "aggregated-annotations-030724.json": "42ed672ee974bfcb15752dc0768dd66a47e01ea3eebfdb74d8d5e468b37b2b6d"
+      },
+      "max_days_between_episodes": 60,
+      "nominate_by_implied_state": true,
+      "excluded_episodes": [
+        "CLVR+13759f6e+2023-06-03-01h-13m-26s",
+        "CLVR+13759f6e+2023-06-03-23h-30m-49s",
+        "CLVR+13759f6e+2023-06-13-01h-27m-21s",
+        "CLVR+236539bc+2023-06-06-01h-09m-11s",
+        "GuptaLab+553d1bd5+2023-06-18-16h-54m-33s",
+        "GuptaLab+553d1bd5+2023-06-18-20h-19m-34s",
+        "ILIAD+50aee79f+2023-08-19-11h-36m-17s",
+        "ILIAD+5e938e3b+2023-07-19-12h-09m-23s",
+        "ILIAD+5e938e3b+2023-07-19-12h-56m-37s",
+        "ILIAD+5e938e3b+2023-07-20-10h-41m-00s",
+        "ILIAD+5e938e3b+2023-07-20-11h-52m-26s",
+        "ILIAD+7ae1bcff+2023-05-18-11h-05m-08s",
+        "IPRL+2fe9715d+2023-08-24-13h-24m-27s",
+        "IPRL+5085c3ce+2023-10-11-22h-47m-56s",
+        "IPRL+5085c3ce+2023-10-11-22h-50m-15s",
+        "IPRL+5085c3ce+2023-10-15-01h-31m-32s",
+        "IPRL+5085c3ce+2023-10-15-01h-43m-47s",
+        "IPRL+5085c3ce+2023-10-16-22h-07m-54s",
+        "IPRL+5085c3ce+2023-10-16-22h-09m-27s",
+        "IPRL+7790ec0a+2023-04-30-18h-30m-29s",
+        "IPRL+7790ec0a+2023-04-30-18h-30m-51s",
+        "IPRL+7790ec0a+2023-06-27-20h-28m-43s",
+        "IPRL+7790ec0a+2023-06-27-21h-01m-12s",
+        "IPRL+7790ec0a+2023-06-30-17h-24m-28s",
+        "IPRL+7790ec0a+2023-06-30-17h-30m-08s",
+        "IPRL+7790ec0a+2023-06-30-18h-58m-51s",
+        "IPRL+7790ec0a+2023-06-30-19h-00m-16s",
+        "IPRL+7790ec0a+2023-06-30-19h-17m-31s",
+        "IPRL+7790ec0a+2023-06-30-19h-17m-52s",
+        "IPRL+7790ec0a+2023-06-30-19h-28m-27s",
+        "IPRL+7790ec0a+2023-06-30-19h-31m-09s",
+        "IPRL+7790ec0a+2023-06-30-20h-56m-04s",
+        "IPRL+7790ec0a+2023-06-30-22h-04m-30s",
+        "IPRL+7790ec0a+2023-06-30-22h-05m-43s",
+        "IRIS+7dfa2da3+2023-05-15-15h-32m-30s",
+        "IRIS+7dfa2da3+2023-05-15-16h-00m-17s",
+        "IRIS+7dfa2da3+2023-05-18-14h-39m-17s",
+        "IRIS+7dfa2da3+2023-05-18-14h-43m-05s",
+        "IRIS+7dfa2da3+2023-05-23-11h-37m-06s",
+        "IRIS+7dfa2da3+2023-05-25-13h-34m-01s",
+        "IRIS+7dfa2da3+2023-05-25-13h-37m-03s",
+        "IRIS+7dfa2da3+2023-06-01-13h-38m-34s",
+        "IRIS+7dfa2da3+2023-06-01-13h-38m-52s",
+        "IRIS+7dfa2da3+2023-06-12-15h-51m-19s",
+        "IRIS+7dfa2da3+2023-06-12-15h-52m-14s",
+        "IRIS+85a5958f+2023-07-01-01h-21m-44s",
+        "IRIS+85a5958f+2023-07-05-01h-20m-22s",
+        "IRIS+85a5958f+2023-07-05-01h-28m-14s",
+        "IRIS+85a5958f+2023-07-05-01h-28m-54s",
+        "IRIS+85a5958f+2023-07-05-15h-44m-47s",
+        "IRIS+85a5958f+2023-07-05-15h-45m-12s",
+        "IRIS+85a5958f+2023-07-05-15h-52m-08s",
+        "IRIS+85a5958f+2023-07-05-15h-52m-26s",
+        "IRIS+938130c4+2023-07-17-10h-55m-34s",
+        "IRIS+938130c4+2023-07-17-11h-03m-29s",
+        "IRIS+938130c4+2023-07-17-14h-17m-53s",
+        "IRIS+938130c4+2023-07-17-14h-20m-13s",
+        "IRIS+ef107c48+2023-05-31-09h-34m-26s",
+        "IRIS+ef107c48+2023-05-31-10h-12m-54s",
+        "IRIS+ef107c48+2023-05-31-10h-13m-18s",
+        "PennPAL+06b0ffa5+2023-04-29-17h-35m-51s",
+        "PennPAL+acda9df3+2023-06-23-20h-04m-20s",
+        "PennPAL+acda9df3+2023-06-29-20h-29m-07s",
+        "PennPAL+acda9df3+2023-07-07-21h-06m-26s",
+        "PennPAL+acda9df3+2023-07-07-21h-06m-54s",
+        "PennPAL+acda9df3+2023-07-07-21h-18m-12s",
+        "PennPAL+acda9df3+2023-07-07-21h-18m-34s",
+        "PennPAL+acda9df3+2023-07-10-21h-04m-33s",
+        "PennPAL+acda9df3+2023-07-10-21h-05m-18s",
+        "PennPAL+c5f808b7+2023-10-19-00h-56m-40s",
+        "PennPAL+c5f808b7+2023-10-19-00h-57m-06s",
+        "REAL+4dbb5646+2023-05-19-16h-20m-27s",
+        "REAL+4f8ca688+2023-08-24-13h-57m-42s",
+        "REAL+4f8ca688+2023-08-24-16h-12m-09s",
+        "REAL+4f8ca688+2023-08-31-13h-04m-55s",
+        "REAL+de601749+2023-05-20-15h-07m-52s",
+        "TRI+52ca9b6a+2023-10-16-11h-47m-45s",
+        "TRI+52ca9b6a+2023-10-16-11h-48m-25s",
+        "TRI+52ca9b6a+2023-10-16-14h-42m-35s",
+        "TRI+52ca9b6a+2023-10-16-14h-51m-36s",
+        "TRI+52ca9b6a+2023-10-16-16h-56m-12s",
+        "TRI+52ca9b6a+2023-10-16-16h-57m-43s",
+        "TRI+52ca9b6a+2023-10-17-14h-07m-39s",
+        "TRI+52ca9b6a+2023-10-17-14h-09m-01s",
+        "TRI+52ca9b6a+2023-10-18-11h-13m-44s",
+        "TRI+52ca9b6a+2023-10-18-11h-14m-03s",
+        "TRI+52ca9b6a+2023-10-19-12h-23m-18s",
+        "TRI+52ca9b6a+2023-10-19-12h-40m-19s",
+        "TRI+52ca9b6a+2023-10-19-15h-04m-59s",
+        "TRI+52ca9b6a+2023-10-23-11h-00m-50s",
+        "TRI+52ca9b6a+2023-10-23-11h-19m-11s",
+        "TRI+52ca9b6a+2023-10-23-11h-21m-20s",
+        "TRI+938130c4+2023-08-21-11h-39m-01s",
+        "TRI+938130c4+2023-08-21-14h-28m-07s",
+        "TRI+938130c4+2023-08-21-17h-38m-52s",
+        "TRI+938130c4+2023-08-22-16h-23m-45s",
+        "TRI+938130c4+2023-08-22-16h-51m-37s"
+      ],
+      "excluded_scenes": [
+        [
+          "CLVR",
+          5155589926
+        ],
+        [
+          "CLVR",
+          6498288010
+        ],
+        [
+          "CLVR",
+          6667529842
+        ],
+        [
+          "CLVR",
+          8591652464
+        ],
+        [
+          "GuptaLab",
+          5235850418
+        ],
+        [
+          "ILIAD",
+          1058976383
+        ],
+        [
+          "ILIAD",
+          2321227261
+        ],
+        [
+          "ILIAD",
+          8098563998
+        ],
+        [
+          "ILIAD",
+          9007093358
+        ],
+        [
+          "IPRL",
+          713171170
+        ],
+        [
+          "IPRL",
+          1611836543
+        ],
+        [
+          "IPRL",
+          2109410002
+        ],
+        [
+          "IPRL",
+          2739901198
+        ],
+        [
+          "IPRL",
+          4134662280
+        ],
+        [
+          "IPRL",
+          4290618632
+        ],
+        [
+          "IPRL",
+          4991796633
+        ],
+        [
+          "IPRL",
+          6946017840
+        ],
+        [
+          "IPRL",
+          7603693755
+        ],
+        [
+          "IPRL",
+          7724213024
+        ],
+        [
+          "IPRL",
+          8351259745
+        ],
+        [
+          "IPRL",
+          9858009618
+        ],
+        [
+          "IRIS",
+          301637807
+        ],
+        [
+          "IRIS",
+          995323252
+        ],
+        [
+          "IRIS",
+          1330873366
+        ],
+        [
+          "IRIS",
+          2158993557
+        ],
+        [
+          "IRIS",
+          2271765186
+        ],
+        [
+          "IRIS",
+          3349104415
+        ],
+        [
+          "IRIS",
+          4430936219
+        ],
+        [
+          "IRIS",
+          5085711642
+        ],
+        [
+          "IRIS",
+          5612207605
+        ],
+        [
+          "IRIS",
+          6154533347
+        ],
+        [
+          "IRIS",
+          7705815187
+        ],
+        [
+          "IRIS",
+          8066802860
+        ],
+        [
+          "IRIS",
+          8786722770
+        ],
+        [
+          "IRIS",
+          8930621648
+        ],
+        [
+          "IRIS",
+          9308446118
+        ],
+        [
+          "PennPAL",
+          161410698
+        ],
+        [
+          "PennPAL",
+          334162896
+        ],
+        [
+          "PennPAL",
+          4760653248
+        ],
+        [
+          "PennPAL",
+          5493550952
+        ],
+        [
+          "PennPAL",
+          9160815698
+        ],
+        [
+          "PennPAL",
+          9306310171
+        ],
+        [
+          "PennPAL",
+          9551783935
+        ],
+        [
+          "REAL",
+          3918790350
+        ],
+        [
+          "REAL",
+          8626796008
+        ],
+        [
+          "REAL",
+          8969941950
+        ],
+        [
+          "REAL",
+          9507507311
+        ],
+        [
+          "TRI",
+          158368076
+        ],
+        [
+          "TRI",
+          1620574296
+        ],
+        [
+          "TRI",
+          2130427403
+        ],
+        [
+          "TRI",
+          3915626876
+        ],
+        [
+          "TRI",
+          4244574282
+        ],
+        [
+          "TRI",
+          4743887325
+        ],
+        [
+          "TRI",
+          5432664924
+        ],
+        [
+          "TRI",
+          5987390574
+        ],
+        [
+          "TRI",
+          6348543881
+        ],
+        [
+          "TRI",
+          8077138943
+        ],
+        [
+          "TRI",
+          8894075169
+        ],
+        [
+          "TRI",
+          9125171463
+        ],
+        [
+          "TRI",
+          9906823456
+        ]
+      ],
+      "ranked_pairs": 14,
+      "shortlisted_pairs": 14,
+      "metadata_requests": 19,
+      "filter_counts": {
+        "unavailable": 14,
+        "different_scene": 0,
+        "prior_scene": 0,
+        "no_common_camera": 0
+      },
+      "metadata_matches": 0,
+      "failures": [
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-20-13h-03m-44s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-42m-10s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-26m-35s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-25-11h-43m-11s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-14m-31s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-08m-19s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-18h-04m-55s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-20-16h-34m-21s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-11m-59s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-05-17-15h-00m-16s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "IRIS+938130c4+2023-07-13-18h-41m-48s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "IRIS+938130c4+2023-07-13-18h-45m-01s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+j807b3f8+2023-06-18-17h-57m-19s",
+          "error": "HTTPError"
+        },
+        {
+          "episode": "ILIAD+5e938e3b+2023-07-24-17h-42m-44s",
+          "error": "HTTPError"
+        }
+      ],
+      "pairs": []
+    }
+  },
+  "rlds": {
+    "mapping_url": "https://huggingface.co/datasets/EpicPinkPenguin/droid_dataset_segmentation_mask/resolve/main/lerobot_to_rlds_episode_mapping.parquet",
+    "mapping_sha256": "7548f287fb4f2d62c642e4e89a8b7a5ac50d278d18b1d2ff0b042e4c7309eb5a",
+    "pairs": [
+      {
+        "nomination": [
+          "drawer",
+          "put",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-20-12h-28m-58s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-20/Thu_Jul_20_12:28:58_2023/",
+            "instruction": "Place the white bottle in the black bowl on top of the night stand, place the lemon in the white mug on the window sill, close the open drawer on the nightstand",
+            "stamp": "2023-07-20-12h-28m-58s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-20-13h-03m-44s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-20/Thu_Jul_20_13:03:44_2023/",
+            "instruction": "Put the airpod case on the white plate, then close the first top drawer, then put the white bottle on top of the cabinet",
+            "stamp": "2023-07-20-13h-03m-44s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "door",
+          "move",
+          "plate"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-15-13h-49m-35s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-15/Thu_Jun_15_13:49:35_2023/",
+            "instruction": "Move the pot backward, move the plate to the right, then close the mini oven door",
+            "stamp": "2023-06-15-13h-49m-35s",
+            "event_tokens": [
+              "plate"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:44:02_2023/",
+            "instruction": "Close the microwave door, move the white plate to the right, remove the zucchini and purple grapes from the green pot and place them on the white plate",
+            "stamp": "2023-06-18-17h-44m-02s",
+            "event_tokens": [
+              "plate"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "microwave",
+          "put",
+          "light"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-42m-10s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:42:10_2023/",
+            "instruction": "Open the microwave and put the light-green bowl inside it",
+            "stamp": "2023-06-18-17h-42m-10s",
+            "event_tokens": [
+              "bowl",
+              "light"
+            ],
+            "state_action": "open",
+            "state_action_before_event": true
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:44:02_2023/",
+            "instruction": "Close the microwave door, then move the white plate to next to the light green bowl, then put the contents of the light green bowl on the white plate",
+            "stamp": "2023-06-18-17h-44m-02s",
+            "event_tokens": [
+              "bowl",
+              "contents",
+              "light"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "cabinet",
+          "move",
+          "cellar"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-24-17h-26m-35s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-24/Mon_Jul_24_17:26:35_2023/",
+            "instruction": "Close the air fryer, move the salt cellar to the right, close the open upper cabinet door",
+            "stamp": "2023-07-24-17h-26m-35s",
+            "event_tokens": [
+              "cellar",
+              "salt"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-25-11h-43m-11s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-25/Tue_Jul_25_11:43:11_2023/",
+            "instruction": "Put the pink can inside the upper cabinet, close the right cabinet door, move the salt cellar forwards",
+            "stamp": "2023-07-25-11h-43m-11s",
+            "event_tokens": [
+              "cellar",
+              "forwards",
+              "salt"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "microwave",
+          "pickup",
+          "bowl"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-14m-31s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:14:31_2023/",
+            "instruction": "Open the microwave door then take out the green bowl and put it on the table then close the microwave door",
+            "stamp": "2023-06-18-17h-14m-31s",
+            "event_tokens": [
+              "bowl"
+            ],
+            "state_action": "open",
+            "state_action_before_event": true
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-08m-19s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:08:19_2023/",
+            "instruction": "Pick up the light green bowl and move it to the right. Open the microwave and put in the light green bowl.",
+            "stamp": "2023-06-18-17h-08m-19s",
+            "event_tokens": [
+              "bowl",
+              "light"
+            ],
+            "state_action": "open",
+            "state_action_before_event": false
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "microwave",
+          "pickup",
+          "bowl"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-18h-04m-55s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_18:04:55_2023/",
+            "instruction": "Open the microwave door, remove the green bowl from the microwave and place it on the table",
+            "stamp": "2023-06-18-18h-04m-55s",
+            "event_tokens": [
+              "bowl"
+            ],
+            "state_action": "open",
+            "state_action_before_event": true
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-08m-19s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:08:19_2023/",
+            "instruction": "Pick up the light green bowl and move it to the right. Open the microwave and put in the light green bowl.",
+            "stamp": "2023-06-18-17h-08m-19s",
+            "event_tokens": [
+              "bowl",
+              "light"
+            ],
+            "state_action": "open",
+            "state_action_before_event": false
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "drawer",
+          "put",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-19-18h-05m-43s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-19/Wed_Jul_19_18:05:43_2023/",
+            "instruction": "Put the white bottle with the yellow lid inside the open drawer on the right then close the drawer",
+            "stamp": "2023-07-19-18h-05m-43s",
+            "event_tokens": [
+              "bottle",
+              "with"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-20-13h-03m-44s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-20/Thu_Jul_20_13:03:44_2023/",
+            "instruction": "Put the airpod case on the white plate, then close the first top drawer, then put the white bottle on top of the cabinet",
+            "stamp": "2023-07-20-13h-03m-44s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "drawer",
+          "pickup",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-18/Tue_Jul_18_14:41:36_2023/",
+            "instruction": "Remove the clear bottle from the chopping board and place it on the left side of the counter, close the drawer",
+            "stamp": "2023-07-18-14h-41m-36s",
+            "event_tokens": [
+              "bottle",
+              "clear"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-20-13h-03m-44s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-20/Thu_Jul_20_13:03:44_2023/",
+            "instruction": "Pick the white object on the drawer and put it on the plate, then close the drawer and pick the bottle on the windowsill and put it on the cabinet",
+            "stamp": "2023-07-20-13h-03m-44s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "drawer",
+          "pickup",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-18/Tue_Jul_18_14:41:36_2023/",
+            "instruction": "Remove the clear bottle from the chopping board and place it on the left side of the counter, close the drawer",
+            "stamp": "2023-07-18-14h-41m-36s",
+            "event_tokens": [
+              "bottle",
+              "clear"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-20-16h-34m-21s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-20/Thu_Jul_20_16:34:21_2023/",
+            "instruction": "Pick the bottle from open drawer and place it near the caps",
+            "stamp": "2023-07-20-16h-34m-21s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "open",
+            "state_action_before_event": false
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "drawer",
+          "pickup",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-18-14h-41m-36s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-18/Tue_Jul_18_14:41:36_2023/",
+            "instruction": "Remove the clear bottle from the chopping board and place it on the left side of the counter, close the drawer",
+            "stamp": "2023-07-18-14h-41m-36s",
+            "event_tokens": [
+              "bottle",
+              "clear"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-24-17h-11m-59s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-24/Mon_Jul_24_17:11:59_2023/",
+            "instruction": "Close the drawer of the air fryer, open the right upper cabinet door, remove the black bottle from the cabinet and put it on the countertop",
+            "stamp": "2023-07-24-17h-11m-59s",
+            "event_tokens": [
+              "bottle"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "door",
+          "put",
+          "bowl"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-05-17-15h-00m-16s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-05-17/Wed_May_17_15:00:16_2023/",
+            "instruction": "Put the orange bowl in the sink, then close the cabinet door above the sink",
+            "stamp": "2023-05-17-15h-00m-16s",
+            "event_tokens": [
+              "bowl"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:44:02_2023/",
+            "instruction": "Close the microwave door, then move the white plate to next to the light green bowl, then put the contents of the light green bowl on the white plate",
+            "stamp": "2023-06-18-17h-44m-02s",
+            "event_tokens": [
+              "bowl",
+              "contents",
+              "light"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "oven",
+          "put",
+          "toaster"
+        ],
+        "episodes": [
+          {
+            "episode_id": "IRIS+938130c4+2023-07-13-18h-41m-48s",
+            "site": "IRIS",
+            "prefix": "robotics/droid_raw/1.0.1/IRIS/success/2023-07-13/Thu_Jul_13_18:41:48_2023/",
+            "instruction": "Open the toaster oven door, remove the plate that is inside it and place the plate atop the toaster oven",
+            "stamp": "2023-07-13-18h-41m-48s",
+            "event_tokens": [
+              "plate",
+              "toaster"
+            ],
+            "state_action": "open",
+            "state_action_before_event": true
+          },
+          {
+            "episode_id": "IRIS+938130c4+2023-07-13-18h-45m-01s",
+            "site": "IRIS",
+            "prefix": "robotics/droid_raw/1.0.1/IRIS/success/2023-07-13/Thu_Jul_13_18:45:01_2023/",
+            "instruction": "Put the metallic bottle atop the toaster oven and then open the oven door",
+            "stamp": "2023-07-13-18h-45m-01s",
+            "event_tokens": [
+              "bottle",
+              "metallic",
+              "toaster"
+            ],
+            "state_action": "open",
+            "state_action_before_event": false
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "microwave",
+          "put",
+          "bowl"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-57m-19s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:57:19_2023/",
+            "instruction": "Open the microwave door, place the dark green bowl in it, then close the microwave door",
+            "stamp": "2023-06-18-17h-57m-19s",
+            "event_tokens": [
+              "bowl",
+              "dark"
+            ],
+            "state_action": "open",
+            "state_action_before_event": true
+          },
+          {
+            "episode_id": "ILIAD+j807b3f8+2023-06-18-17h-44m-02s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-06-18/Sun_Jun_18_17:44:02_2023/",
+            "instruction": "Close the microwave door, then move the white plate to next to the light green bowl, then put the contents of the light green bowl on the white plate",
+            "stamp": "2023-06-18-17h-44m-02s",
+            "event_tokens": [
+              "bowl",
+              "contents",
+              "light"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      },
+      {
+        "nomination": [
+          "fryer",
+          "move",
+          "bottle"
+        ],
+        "episodes": [
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-24-17h-42m-44s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-24/Mon_Jul_24_17:42:44_2023/",
+            "instruction": "Move the glass bottle to the right of the counter, close the air fryer, then move the cellars to the right of the counter",
+            "stamp": "2023-07-24-17h-42m-44s",
+            "event_tokens": [
+              "bottle",
+              "counter",
+              "glass"
+            ],
+            "state_action": "close",
+            "state_action_before_event": false
+          },
+          {
+            "episode_id": "ILIAD+5e938e3b+2023-07-24-17h-26m-35s",
+            "site": "ILIAD",
+            "prefix": "robotics/droid_raw/1.0.1/ILIAD/success/2023-07-24/Mon_Jul_24_17:26:35_2023/",
+            "instruction": "Close the basket of the air fryer, then move the bottle of salt to the right, then close the right cabinet door",
+            "stamp": "2023-07-24-17h-26m-35s",
+            "event_tokens": [
+              "bottle",
+              "salt"
+            ],
+            "state_action": "close",
+            "state_action_before_event": true
+          }
+        ]
+      }
+    ],
+    "receipts": {
+      "ILIAD+5e938e3b+2023-07-20-12h-28m-58s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01465-of-02048",
+        "byte_offset": 317500139,
+        "bytes": 20343873,
+        "sha256": "d1040fbdca42d19a405ab1e9f2a78907d1e2e9362e8af5255aff7b4875ebcf62",
+        "sampled_indices": [
+          0,
+          40,
+          80,
+          121,
+          161,
+          202,
+          242,
+          283,
+          323,
+          364
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-20/Thu_Jul_20_12:28:58_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-20-13h-03m-44s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00572-of-02048",
+        "byte_offset": 680519680,
+        "bytes": 23703268,
+        "sha256": "9863b5fc4b5c4a6f594befab4df793a3a6e0b3a6d2a5d4280db5c031350a2915",
+        "sampled_indices": [
+          0,
+          45,
+          90,
+          135,
+          180,
+          226,
+          271,
+          316,
+          361,
+          407
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-20/Thu_Jul_20_13:03:44_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-15-13h-49m-35s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01500-of-02048",
+        "byte_offset": 604045036,
+        "bytes": 35553008,
+        "sha256": "de76f98001cda5692deaa6d5e0db231ed27c24f23104aff0aad1787d94c92ec4",
+        "sampled_indices": [
+          0,
+          61,
+          123,
+          185,
+          247,
+          308,
+          370,
+          432,
+          494,
+          556
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-15/Thu_Jun_15_13:49:35_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-17h-42m-10s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01000-of-02048",
+        "byte_offset": 758382484,
+        "bytes": 48247919,
+        "sha256": "24dbe1a2fa64617d9416bae6d6bcdc3b103a2e93d227fb9304405ecabddd66bb",
+        "sampled_indices": [
+          0,
+          74,
+          149,
+          223,
+          298,
+          372,
+          447,
+          521,
+          596,
+          671
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_17:42:10_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-24-17h-26m-35s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00670-of-02048",
+        "byte_offset": 67013935,
+        "bytes": 31199737,
+        "sha256": "bf03dd2295772811d4d0b2fc47c2826342bdfa0e2f8814b01f3eacaba04d2b76",
+        "sampled_indices": [
+          0,
+          68,
+          136,
+          204,
+          272,
+          341,
+          409,
+          477,
+          545,
+          614
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-24/Mon_Jul_24_17:26:35_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-25-11h-43m-11s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01597-of-02048",
+        "byte_offset": 699181160,
+        "bytes": 57691535,
+        "sha256": "388e578bd0b07cb0b3ccb8db5a88a74336febdb392751cb89f28f2d0e0f8d34f",
+        "sampled_indices": [
+          0,
+          92,
+          185,
+          278,
+          370,
+          463,
+          556,
+          648,
+          741,
+          834
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-25/Tue_Jul_25_11:43:11_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-17h-14m-31s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-02031-of-02048",
+        "byte_offset": 425435697,
+        "bytes": 57877969,
+        "sha256": "a09f23e85c01a8beee1bfedf2c1740995b7a2f8451776a96158dd905fc3af9da",
+        "sampled_indices": [
+          0,
+          92,
+          184,
+          276,
+          368,
+          460,
+          552,
+          644,
+          736,
+          828
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_17:14:31_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-18h-04m-55s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01022-of-02048",
+        "byte_offset": 311708734,
+        "bytes": 38695687,
+        "sha256": "0acea56d550c269edb2111768012170e5a1b677d596ae75b9dac71a8703a71a6",
+        "sampled_indices": [
+          0,
+          59,
+          119,
+          179,
+          239,
+          298,
+          358,
+          418,
+          478,
+          538
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_18:04:55_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-19-18h-05m-43s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01723-of-02048",
+        "byte_offset": 812180240,
+        "bytes": 44376325,
+        "sha256": "f05997ffa49e889935a346c6a2379038bff12521f8e2a6d7c37bb9886bf8668a",
+        "sampled_indices": [
+          0,
+          61,
+          123,
+          185,
+          247,
+          308,
+          370,
+          432,
+          494,
+          556
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-19/Wed_Jul_19_18:05:43_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-18-14h-41m-36s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01661-of-02048",
+        "byte_offset": 157271152,
+        "bytes": 29857380,
+        "sha256": "8698b2c788fb314d96906fb881fe02ae5bb55d8391adf99cf6b02b3787cddf89",
+        "sampled_indices": [
+          0,
+          37,
+          74,
+          111,
+          148,
+          185,
+          222,
+          259,
+          296,
+          333
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-18/Tue_Jul_18_14:41:36_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-20-16h-34m-21s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00637-of-02048",
+        "byte_offset": 777054825,
+        "bytes": 9960874,
+        "sha256": "1fdd565d17dc3a31e6f26924a8d3351dc64220691129f6886a52c53b6f377d43",
+        "sampled_indices": [
+          0,
+          18,
+          36,
+          55,
+          73,
+          91,
+          110,
+          128,
+          146,
+          165
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-20/Thu_Jul_20_16:34:21_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-05-17-15h-00m-16s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00175-of-02048",
+        "byte_offset": 369068649,
+        "bytes": 42729640,
+        "sha256": "026c2992a5fa009d0e96a9f202219ab3121ef5a04010a7185ef96d82af904f92",
+        "sampled_indices": [
+          0,
+          58,
+          116,
+          175,
+          233,
+          291,
+          350,
+          408,
+          466,
+          525
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-05-17/Wed_May_17_15:00:16_2023/recordings/MP4"
+      },
+      "IRIS+938130c4+2023-07-13-18h-41m-48s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01555-of-02048",
+        "byte_offset": 811842873,
+        "bytes": 29144130,
+        "sha256": "f9e963370960c20965c17701b23b2d1e4d6018e4a3b14afc2c8469223945dc5d",
+        "sampled_indices": [
+          0,
+          43,
+          86,
+          129,
+          172,
+          215,
+          258,
+          301,
+          344,
+          388
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/IRIS/success/2023-07-13/Thu_Jul_13_18:41:48_2023/recordings/MP4"
+      },
+      "IRIS+938130c4+2023-07-13-18h-45m-01s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00309-of-02048",
+        "byte_offset": 735977829,
+        "bytes": 20848140,
+        "sha256": "b742d5157fd90bd1c88aa478e4868b5875e734425036a209ca091d99701c3f17",
+        "sampled_indices": [
+          0,
+          30,
+          60,
+          91,
+          121,
+          151,
+          182,
+          212,
+          242,
+          273
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/IRIS/success/2023-07-13/Thu_Jul_13_18:45:01_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-24-17h-42m-44s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01969-of-02048",
+        "byte_offset": 1086928392,
+        "bytes": 33289990,
+        "sha256": "84641bca6ccdf147c3ca71b31ae07d1f82fef85fe333eb3bbbebf3c3e03f501c",
+        "sampled_indices": [
+          0,
+          75,
+          150,
+          226,
+          301,
+          377,
+          452,
+          528,
+          603,
+          679
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-24/Mon_Jul_24_17:42:44_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-17h-44m-02s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-01259-of-02048",
+        "byte_offset": 617366262,
+        "bytes": 82445199,
+        "sha256": "992de8d89749bf2b28bbb93415619b967cdb7d2026ed891cb14de6c29add82d0",
+        "sampled_indices": [
+          0,
+          127,
+          255,
+          382,
+          510,
+          637,
+          765,
+          892,
+          1020,
+          1148
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_17:44:02_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-17h-08m-19s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00177-of-02048",
+        "byte_offset": 170023264,
+        "bytes": 104293715,
+        "sha256": "ec88fb4be692c4313da677a572d79e5ac88e97e4f937e20d03d7957b44a614ea",
+        "sampled_indices": [
+          0,
+          165,
+          330,
+          496,
+          661,
+          826,
+          992,
+          1157,
+          1322,
+          1488
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_17:08:19_2023/recordings/MP4"
+      },
+      "ILIAD+5e938e3b+2023-07-24-17h-11m-59s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00683-of-02048",
+        "byte_offset": 234605216,
+        "bytes": 83950080,
+        "sha256": "8d3c6580b084f14607e23f79c76fb1795b3417e2cf902c5d4fff16aed99d0049",
+        "sampled_indices": [
+          0,
+          130,
+          260,
+          390,
+          520,
+          651,
+          781,
+          911,
+          1041,
+          1172
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-07-24/Mon_Jul_24_17:11:59_2023/recordings/MP4"
+      },
+      "ILIAD+j807b3f8+2023-06-18-17h-57m-19s": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid/1.0.1/droid_101-train.tfrecord-00289-of-02048",
+        "byte_offset": 606910680,
+        "bytes": 111465609,
+        "sha256": "4ba8b9f190579bb0d9e1a337b6d761ea907d59b81497d8ede27945f74f5da6e9",
+        "sampled_indices": [
+          0,
+          172,
+          345,
+          518,
+          691,
+          863,
+          1036,
+          1209,
+          1382,
+          1555
+        ],
+        "source_recording": "gs://xembodiment_data/r2d2/r2d2-data-full/ILIAD/success/2023-06-18/Sun_Jun_18_17:57:19_2023/recordings/MP4"
+      }
+    },
+    "failures": []
+  }
+}
