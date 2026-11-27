@@ -1,6 +1,6 @@
 # HERMES research and Neurocomputing submission plan
 
-23 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. Annotated sub-second inputs recovered 2/7 robust pairs against 0/7 with uniform history. The next experiment tests automatic local refinement at matched cost. [Sub-second audit and follow-up](<../../docs/reports/2026-11-23 twinpast subsecond analysis.md>)
+27 November 2026. Target a regular research article on an original neural-inference method for streaming video question answering. The annotation-guided DROID terminal attention test passed its feasibility criterion, recovering three robust pairs and preserving the causal control's only robust pair. Freeze an annotation-blind selector and compare it with fixed-budget recency on source-disjoint pairs before advancing a method claim. [Terminal-attention results](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
 
 ## Evidence and publication gaps
 
@@ -9,7 +9,8 @@
 | HERMES versus FIFO at 4K, 2,495 questions from 498 StreamingBench clips | HERMES scored 62.32% versus 61.96%, a +0.36 percentage-point difference with a 95% video-cluster interval of [−0.48, +1.16]. This is a mixed-session reproduction result. | A same-session comparison for any new method or system claim. |
 | Scorer, construction, readout and verifier experiments | Fresh causal scoring changed no correctness outcomes on 40 selected questions. The short cache preserved 40 masked answers and cut median query KV bytes by 79.7% in that comparison. Recent-four won the point estimate in the 150-question confirmation (74/150 versus 70/150). In the target-binding screen it also beat the minimum rule (156/269 versus 147/269). | A method that can retain useful earlier evidence without sacrificing too many correct recent answers, with total cost measured. |
 | 51 reviewed source files and 39 gap entries | A literature and failure map for narrowing the problem. Records include version overlap and varying review depth. | A full-method and available-code comparison for the final candidate and its closest prior. |
-| TwinPast visual screen and GPU diagnostics | The broader annotated pool recovered 2/4 state pairs. The automatic endpoint screen passed 0/8. Annotated native timestamps recovered 2/7 with exact uniform replay. | Test local refinement against uniform refinement. Keep both evaluated sets out of confirmation. |
+| TwinPast visual screen and GPU diagnostics | Annotated native timestamps recovered 2/7 robust pairs on inspected footage. Automatic refinement and the fixed-frame readout yielded no robust gain. The boundary rule retained a final-interval frame on 8/12 annotated branches and solved 0/8 robust pairs. | Freeze independent footage and test the matched annotation-selected history control before another automatic policy. |
+| Fixed-position DROID terminal attention | On seven reused development pairs, terminal access scored 4/7 robust versus 1/7 with native and explicit causal attention and 0/7 with matched earlier access. All 56 replay comparisons passed. | Freeze a selector without span annotations or answer options. Test it against matched recency on independent sources, including queries about earlier states. |
 
 [Project evidence](../../docs/PROJECT_STATUS.md) · [Claim ledger](claim_evidence.csv) · [TwinPast dev audit](<../../docs/reports/2026-11-23 twinpast development review.md>)
 
@@ -18,6 +19,14 @@
 Elsevier lists neural learning systems, practical neurocomputing and computer vision in scope. Its published record includes dynamic visual re-reading and budget-aware VideoQA evidence retrieval. These papers establish topical fit and raise the novelty bar. Use the regular article route for the advisor's original-method requirement. [Elsevier scope](https://shop.elsevier.com/journals/neurocomputing/0925-2312) · [DVR](https://doi.org/10.1016/j.neucom.2026.134448) · [MKG-Attention](https://www.sciencedirect.com/science/article/abs/pii/S0925231226022526)
 
 SCImago reports 2025 Q1 in Computer Science Applications. The supplied CCF catalogue lists Neurocomputing as C. Confirm the university's accepted ranking system, category and edition, any separate CCF minimum, required authorship position, and whether acceptance or publication satisfies the degree milestone. Record the confirmation with the advisor while research proceeds. [SCImago](https://www.scimagojr.com/journalsearch.php?q=24807&tip=sid) · [Local venue assessment](<../../docs/reports/Neurocomputing submission requirements and HERMES readiness.md>)
+
+## Current experiment sequence
+
+1. Freeze a fresh DROID cohort by original episode and scene, documenting overlap checks against all inspected DROID footage. Include cases where the queried state is earlier than the most recent plausible state. Record the matching annotations for evaluation.
+2. Freeze one question-conditioned span selector that uses only the sampled frames, timestamps and question available at inference. Compare its three-frame mask with a three-frame recency mask on the same full input. Use unrestricted decoding for a practical reference and annotation-guided masking to measure headroom.
+3. Use robust paired correctness against recency as the primary outcome. Report branch-order regressions, breakdowns for terminal and earlier-state questions, span coverage and selector cost. Freeze the gain target and uncertainty procedure before scoring. Advance the method claim only if the fresh result supports a practical gain, and check the final mechanism against its closest published comparators.
+
+The earlier TwinPast phases below document the original hypothesis and diagnostics. Apply the confirmation and submission requirements to the selected method and its declared target cohort.
 
 ## 1. Test whether the backbone uses earlier evidence
 

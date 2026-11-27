@@ -1,0 +1,44 @@
+{
+  "archive_sha256": "c6be9f68fdb96b0cbeef980872165f71dcfbac10a802fa164064c5d9637b55c9",
+  "notebook_sha256": "2ea86efc0b152f1c531ede6f7922c314b351b56b72a113f88cefdd0d76f4d0f2",
+  "verified_payloads": 21,
+  "verified_input_frames": 114,
+  "branch_order_changes": {
+    "wrong_to_correct": 2,
+    "correct_to_wrong": 0
+  },
+  "canonical_prediction_counts": {
+    "uniform": {
+      "A": 24,
+      "B": 4
+    },
+    "annotated": {
+      "A": 22,
+      "B": 6
+    }
+  },
+  "option_order_flip_branches": {
+    "uniform": 2,
+    "annotated": 2
+  },
+  "pairs": 7,
+  "scores": 56,
+  "uniform_replays": 28,
+  "methods": {
+    "uniform": {
+      "robust_pairs": [],
+      "correct_branch_orders": 12
+    },
+    "annotated": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    }
+  },
+  "recoveries": [
+    "droid_natural_87abc314ec"
+  ],
+  "regressions": [],
+  "exploratory_criterion_met": false
+}

@@ -1,0 +1,41 @@
+{
+  "archive_sha256": "a3299433444f6244497a4cf03277b3aed0ea6e611f1158cfd9a106fe6bfeff6e",
+  "notebook_sha256": "9b2fa8454308f48658609c59f828fccf4502e760b3c4d29953ebfcd8c8ec03c5",
+  "verified_payloads": 24,
+  "verified_input_frames": 114,
+  "replay_gate": {
+    "scores": 28,
+    "max_abs": 0.0,
+    "failures": []
+  },
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "prior_gpu": "NVIDIA GeForce RTX 4080",
+  "branch_order_changes": {
+    "wrong_to_correct": 6,
+    "correct_to_wrong": 2
+  },
+  "pairs": 7,
+  "scores": 56,
+  "methods": {
+    "original": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    },
+    "swapped": {
+      "robust_pairs": [
+        "droid_natural_6d74030dc0"
+      ],
+      "correct_branch_orders": 18
+    }
+  },
+  "recoveries": [
+    "droid_natural_6d74030dc0"
+  ],
+  "regressions": [
+    "droid_natural_87abc314ec"
+  ],
+  "median_gold_margin_delta": 0.375,
+  "positive_gold_margin_deltas": 23
+}

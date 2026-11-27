@@ -4,12 +4,12 @@
 
 | | |
 |---|---|
-| **Project Status** | Five-stage reproduction and TwinPast development runs audited. The next test compares capped and denser historical candidate pools. |
+| **Project Status** | Annotation-guided terminal attention recovered three robust DROID pairs at fixed input length and preserved the causal control's only robust pair. [Results](<reports/2026-11-27 droid terminal attention results.md>) |
 | **Primary Environment** | AutoDL RTX 4090 for November five-stage study; earlier Kaggle T4 and AutoDL RTX 4080-family runs retained |
 | **Model** | LLaVA-OneVision Qwen2 0.5B for reproduction and 7B for later TwinPast diagnostics |
 | **Framework** | HERMES VideoQA inference pipeline |
 | **Current Benchmark Scale** | Full StreamingBench real-time visual annotations, 498 videos / 2,495 questions per method |
-| **Last Updated** | 23 November 2026 |
+| **Last Updated** | 27 November 2026 |
 | **Supporting Documents** | [Technical Research Report](HERMES_Comprehensive_Technical_Research_Report.md) · [Reproduction Audit](HERMES_Reproduction_Audit_and_Next_Research_Plan_2026-10-09.md) |
 
 ---

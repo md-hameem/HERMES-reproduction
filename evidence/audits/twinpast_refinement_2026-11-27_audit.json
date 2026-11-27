@@ -1,0 +1,47 @@
+{
+  "archive_sha256": "c3848d6a96dd1fff1fce4c8465fc38c04ee22c7cd18afdea6697cc464f067201",
+  "notebook_sha256": "2bb9a03f257c1bb96d911344e77db6c79110a801779ad1f5d50c3734fc25044a",
+  "verified_payloads": 29,
+  "scores": 96,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "timestamp_overlap": {
+    "annotated_branches": 12,
+    "coarse_uniform": 2,
+    "local_uniform": 4,
+    "state_change": 6,
+    "fine_pool": 6,
+    "coarse_pool": 8
+  },
+  "covered_branches_correct_both_orders": {
+    "coarse_uniform": 2,
+    "local_uniform": 2,
+    "state_change": 3
+  },
+  "model_download_log_archived": false,
+  "pairs": 8,
+  "methods": {
+    "coarse_uniform": {
+      "robust_pairs": [
+        "twinpast_0255"
+      ],
+      "correct_branch_orders": 16
+    },
+    "local_uniform": {
+      "robust_pairs": [],
+      "correct_branch_orders": 14
+    },
+    "state_change": {
+      "robust_pairs": [],
+      "correct_branch_orders": 16
+    }
+  },
+  "state_change_only": [],
+  "local_uniform_only": [],
+  "state_change_net_robust_gain": 0,
+  "forward_calls_by_phase": {
+    "shared_retrieval": 384,
+    "coarse_uniform": 32,
+    "local_uniform": 32,
+    "state_change": 32
+  }
+}

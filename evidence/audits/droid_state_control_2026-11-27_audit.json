@@ -1,0 +1,51 @@
+{
+  "archive_sha256": "0fb822be6e06dfa3ba8dfe021e2102c5f147dcae9c4473b5681696b8a28da151",
+  "notebook_sha256": "c911fdf5f066190ba7d2ecd5ebc0c5ad9b8444f5d000d6c3667a23fafa14d9b1",
+  "verified_payloads": 22,
+  "verified_input_frames": 12,
+  "option_order_flip_branches": {
+    "aligned_uniform": 2,
+    "off_grid_uniform": 0,
+    "off_grid_annotated": 2,
+    "cue_only": 1
+  },
+  "hidden_cue_predictions": {
+    "B": 24
+  },
+  "pairs": 6,
+  "scores": 96,
+  "methods": {
+    "aligned_uniform": {
+      "robust_pairs": [
+        "droid_iprl",
+        "droid_pennpal",
+        "droid_real",
+        "droid_tri"
+      ],
+      "correct_branch_orders": 22
+    },
+    "off_grid_uniform": {
+      "robust_pairs": [],
+      "correct_branch_orders": 12
+    },
+    "off_grid_annotated": {
+      "robust_pairs": [
+        "droid_iprl",
+        "droid_pennpal",
+        "droid_real",
+        "droid_tri"
+      ],
+      "correct_branch_orders": 22
+    },
+    "cue_only": {
+      "robust_pairs": [
+        "droid_iprl",
+        "droid_pennpal",
+        "droid_real",
+        "droid_tri"
+      ],
+      "correct_branch_orders": 21
+    }
+  },
+  "controlled_capability_criterion_met": true
+}

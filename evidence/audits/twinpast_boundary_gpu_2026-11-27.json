@@ -1,0 +1,56 @@
+{
+  "archive_sha256": "7ec4e4c636ad14bb4ca244f80fb2ada6e796024bb126f4365714a243ba360ea8",
+  "notebook_sha256": "5431c7406dbe9cb1d69cb8b9167a8e9c47aef2c488b0515e554e4fc2602febdf",
+  "verified_payloads": 29,
+  "decoded_probe_frames": 1996,
+  "replay_gate": {
+    "scores": 64,
+    "max_abs": 0.0,
+    "retrieval_max_abs": 0.0,
+    "failures": []
+  },
+  "branch_order_changes_against": {
+    "coarse_uniform": {
+      "wrong_to_correct": 7,
+      "correct_to_wrong": 6
+    },
+    "local_uniform": {
+      "wrong_to_correct": 4,
+      "correct_to_wrong": 1
+    }
+  },
+  "pairs": 8,
+  "scores": 96,
+  "boundary_against": {
+    "coarse_uniform": {
+      "recoveries": [],
+      "regressions": [
+        "twinpast_0255"
+      ]
+    },
+    "local_uniform": {
+      "recoveries": [],
+      "regressions": []
+    }
+  },
+  "development_criterion_met": false,
+  "methods": {
+    "coarse_uniform": {
+      "robust_pairs": [
+        "twinpast_0255"
+      ],
+      "correct_branch_orders": 16,
+      "median_stage_sum_per_branch_s": 1.5966765582561493
+    },
+    "local_uniform": {
+      "robust_pairs": [],
+      "correct_branch_orders": 14,
+      "median_stage_sum_per_branch_s": 4.517847226932645
+    },
+    "boundary": {
+      "robust_pairs": [],
+      "correct_branch_orders": 17,
+      "median_stage_sum_per_branch_s": 6.343416725285351
+    }
+  }
+}

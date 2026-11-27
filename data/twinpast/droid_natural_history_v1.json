@@ -1,0 +1,1724 @@
+{
+  "protocol": "DROID natural state history capability v1",
+  "dataset": "DROID raw 1.0.1",
+  "dataset_reference": "https://droid-dataset.github.io/",
+  "dataset_license": "CC BY 4.0",
+  "frame_zip_sha256": "5bcfb613c5eb2cd8a40e306d94a79a3e77258ba162b47ddbb025ffc2a56f8b49",
+  "recent_donor": {
+    "source_episode": "CLVR+236539bc+2023-06-06-01h-09m-11s",
+    "source_site": "CLVR",
+    "camera": "ext2",
+    "source_frames": [
+      15,
+      75,
+      135,
+      195
+    ],
+    "video_source": {
+      "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/CLVR/success/2023-06-06/Tue_Jun__6_01%3A09%3A11_2023/recordings/MP4/20655732.mp4",
+      "generation": "1710757175937043",
+      "bytes": 4077697,
+      "sha256": "cd6862a22e370820d929d8aa18f3999dc4b5d3d65fa287998c38ab78b269b5a0",
+      "frame_count": 298
+    }
+  },
+  "frame_receipts": {
+    "droid_natural_10bd743a70_a_00000.png": {
+      "png_sha256": "c40dcd205dfdc84678b00ae4def3837bc3bf892c2d326518368380ccbf7cc0c7",
+      "rgb_sha256": "9cae7f271288eea988b2d9747f5397c73886e223195482738e355d2dbb2eb455"
+    },
+    "droid_natural_10bd743a70_a_00077.png": {
+      "png_sha256": "9d2d9bf5ab51d5dd7d9ce3387d2e9347ddf78ec0ed4f35b57f1146dd2881acf3",
+      "rgb_sha256": "3c73da3d7090412b873fe9ee48a8d5c29f228cf78561788de577bad3df429cd7"
+    },
+    "droid_natural_10bd743a70_a_00154.png": {
+      "png_sha256": "5890316104b7fcb72e47702fb2a86c114f4d19440e094a9689e2d66fc5656bc6",
+      "rgb_sha256": "88973b702a8acb303b16b57e52600c653b447e8a468b486685ed169812eace43"
+    },
+    "droid_natural_10bd743a70_a_00232.png": {
+      "png_sha256": "784a33a8c6b63eb3d4d91dc246200749a4b504a3cdf32828fe61b70a92669e01",
+      "rgb_sha256": "9da2567884182a616b10f71074974bba7352eb700ac7eb2ec4679c9a1e64374f"
+    },
+    "droid_natural_10bd743a70_a_00309.png": {
+      "png_sha256": "eb1a20d09f180f85bd6de4bd002a04b85883be32c3add4d52d2d7d239ae00352",
+      "rgb_sha256": "c60f28e576699485fbee45de80cce28fc5af64a0cd0ce3a7d42f7dcaa8c38db4"
+    },
+    "droid_natural_10bd743a70_a_00358.png": {
+      "png_sha256": "efff16c14e8aef629c1264b1c5bfd5f5339556502f6c52384901a5e8031f60c0",
+      "rgb_sha256": "009e8977fd1f8b117c7b703a506d1a04dc842fdaf4b8811a5a2b8cce72dbe43a"
+    },
+    "droid_natural_10bd743a70_a_00372.png": {
+      "png_sha256": "75a33ac5bf97476258d10b5c0c4c0acc66d4a9b21cc928930e1de8063dab3b86",
+      "rgb_sha256": "9ac304b5618125fb87cc599f494bba2435fa84986f4619592e887460c29ea624"
+    },
+    "droid_natural_10bd743a70_a_00387.png": {
+      "png_sha256": "19bdd9e864469e353e49b14d43bdfaa38bd2d249feb3fc4683797d1269ef01d4",
+      "rgb_sha256": "1aac2f2260e929006821fe64d3268c3c99b93c969522075b890cc5bd4865b099"
+    },
+    "droid_natural_10bd743a70_b_00000.png": {
+      "png_sha256": "7022063be9422ee64814215568e4b9d5de604de4e8bcb408e7a9863e4aa7d18c",
+      "rgb_sha256": "8766bf61a7a3e2e54d359f0253869ca154c5bed18bdae2740d9931430acef535"
+    },
+    "droid_natural_10bd743a70_b_00055.png": {
+      "png_sha256": "6db741114bfd4a184a51c26e6a4e3762b58e7b790360caba6a8345523b98e591",
+      "rgb_sha256": "bee2f7670e4910b0581132320ba4561136b6090623ee2bdd33891739cb592775"
+    },
+    "droid_natural_10bd743a70_b_00110.png": {
+      "png_sha256": "ebe1f8641f814981d7ffaab3a64312d10a0e253aa58942da7b4825eea24125c9",
+      "rgb_sha256": "587cc06314220796732fcec5456411e2141e1daef1e466d7a81ee8489d7cdfd2"
+    },
+    "droid_natural_10bd743a70_b_00166.png": {
+      "png_sha256": "1844fe98ce7a9fc176509bef3a1afb719d6aea0236f35a40b6e34f821e07e4af",
+      "rgb_sha256": "6c6b11ac7a4a8e3fe6b46740a918581664bbd6ac327cc1923cd31685a7af7fe8"
+    },
+    "droid_natural_10bd743a70_b_00221.png": {
+      "png_sha256": "206e871f6ff30d2098f493828e34cfaf1ecee2850e079e6d8fead5a86360327d",
+      "rgb_sha256": "bba4a33f142259e76852dc02fba72e9c371a925dad61cbe5e14a07a5ca3925f4"
+    },
+    "droid_natural_10bd743a70_b_00262.png": {
+      "png_sha256": "a5bf3458ba10b38b7fea4180793823100eb0134d32ef94972d7493e414d8b5e5",
+      "rgb_sha256": "c9f231b917cdde0017e5ccb3d5093f0d94f15df2fcbb8aaf5d2ab0e656134998"
+    },
+    "droid_natural_10bd743a70_b_00269.png": {
+      "png_sha256": "208bdc06bfa835c41f80f6deb8e49d9777ee33b2b48feee22d2108f5e64d51eb",
+      "rgb_sha256": "83288ad9ec01e4342f1e9c721eb58c126f9d68e53c01a770f677c627ee6818c6"
+    },
+    "droid_natural_10bd743a70_b_00277.png": {
+      "png_sha256": "3a6137ef5b040122124c2d7c0dcb0a4dba7f59cb43f01807addd826b2b116f1b",
+      "rgb_sha256": "7915e7b1ee3138e4eb7dc44456df83fedd18a152089e5e112e70111edfb0bd34"
+    },
+    "droid_natural_19bf4a67ee_a_00000.png": {
+      "png_sha256": "debacb052771f58ea21515c68f72bc67af3b8ce92178ceb6781beed0cc977efd",
+      "rgb_sha256": "03e96cfaf5854212720759e6b3e269af51a2833ad1818bb7da4a26881cbd9b7e"
+    },
+    "droid_natural_19bf4a67ee_a_00036.png": {
+      "png_sha256": "41b550d205ebf14c08561a7d91750bc49b818997b9e306c56be89a9e29d1cc22",
+      "rgb_sha256": "1cc79407e83482563f97a8e8945451159089153b058596b702dd0b50c865a9a3"
+    },
+    "droid_natural_19bf4a67ee_a_00073.png": {
+      "png_sha256": "6f0e2d2e55bd2491a63289a570ea772c3342c3fec8726e6c2d507ed56ee9cc5a",
+      "rgb_sha256": "1a3084049b7c6ee28b6c4bb756fd5a11ff13aa00738dc2661ab547f1dbace6b8"
+    },
+    "droid_natural_19bf4a67ee_a_00110.png": {
+      "png_sha256": "891a2198514c7ddb45abd73a156b2ae1c8f40e01acdd45a83127d19b8542fd56",
+      "rgb_sha256": "2385a7cff31db995056771e4fe15e7e4a6c55016b36dcc177b24eea9b29b565a"
+    },
+    "droid_natural_19bf4a67ee_a_00147.png": {
+      "png_sha256": "d619d0f4f87029c411de358067d24e56c015fb3f187e7e5a5826f6740d2c1278",
+      "rgb_sha256": "fe21833d6f7c4337ae8d209fa8bf4bcb0959f7bec3ee3460709044cf9db9609c"
+    },
+    "droid_natural_19bf4a67ee_a_00162.png": {
+      "png_sha256": "d1e8c26faff85f4a6b3ab04d016102d13fb0da1b0b4d646570806c986e1e02ce",
+      "rgb_sha256": "090a1255bd93e7f5da90f75f228def4d15fc4d966289b29ef0b631c9d89ceb9b"
+    },
+    "droid_natural_19bf4a67ee_a_00173.png": {
+      "png_sha256": "9fc98d98e6afaefcf2d04b9264ebf0b01b9e6a8a10131073557d1131d802a22f",
+      "rgb_sha256": "8e987aa7ad1adf52f8405b3db2cb35af45e3a61ea49ba5523fa6c49d5918c81c"
+    },
+    "droid_natural_19bf4a67ee_a_00184.png": {
+      "png_sha256": "0421d613e6efa7fa05f2232790753de29365c1864ca49ebd9353887ffbe2ce3c",
+      "rgb_sha256": "fc04240b13efe4dc8f93fe327c44015b8bcf290fd42a370378fc3b84d7485cae"
+    },
+    "droid_natural_19bf4a67ee_b_00000.png": {
+      "png_sha256": "b0efeb4463a1a1908e6b0d95f1276e7fe2c558ee9e757c01802ed5d45f7f7896",
+      "rgb_sha256": "f1848d98397bd2d656bb222001b9f2a02e37f8bbf63677cc803f46049f2d1648"
+    },
+    "droid_natural_19bf4a67ee_b_00062.png": {
+      "png_sha256": "6a13adc9415abc3667554d73bc452161beaf566820a29a2877c03cde640cff0d",
+      "rgb_sha256": "6ee37b935ad061df5a237c000fe306b6bf68361618b9cf1edecfaca76f6755ab"
+    },
+    "droid_natural_19bf4a67ee_b_00125.png": {
+      "png_sha256": "6da9f23967d312bc9b4e5b84e3e203272c5c3528320bff24b14c20a084ab3483",
+      "rgb_sha256": "7096ebfb5e1eebfbc71b7d5446921ade4bc2cbd703cff0517895a7cc61e74fea"
+    },
+    "droid_natural_19bf4a67ee_b_00187.png": {
+      "png_sha256": "2983a72e0e95eaa2f16cb2e99608b79346a65561628e146ef5280977cb14d493",
+      "rgb_sha256": "affa452bcdf880c6ee77f4e7396a953417f22bada5431085f4bded12ae546488"
+    },
+    "droid_natural_19bf4a67ee_b_00250.png": {
+      "png_sha256": "3eef60b01149d24d4b6f2ea1ded300850a8727cec60be43e9da877b5d7a3e711",
+      "rgb_sha256": "931348dcbe5d1e58970f01ba8da70fc68024abe858b875eeaa5c836d5ba88512"
+    },
+    "droid_natural_19bf4a67ee_b_00273.png": {
+      "png_sha256": "c2d721dc09522945f103589157a3312d269b500950f3ea92ac76c08a992ee2a5",
+      "rgb_sha256": "5b37d7337dd6ad03f402620875659878360c1336bdb2d3ec3074e7302b9500d1"
+    },
+    "droid_natural_19bf4a67ee_b_00293.png": {
+      "png_sha256": "338236c75313aae9f0dd4f3958a273077129b6de1891b4c26abc6d1e7904cdfb",
+      "rgb_sha256": "f8498a618758fcc0b4e038bcafaf6beaea22695372b123807b215069d38bf8af"
+    },
+    "droid_natural_19bf4a67ee_b_00313.png": {
+      "png_sha256": "474e8673e45b02f833babcc99d85f89a8477d62c38521bfbc1453d0719175409",
+      "rgb_sha256": "557b6ac3ffd004804229a55b6eb0b1a02767ce2dead1e53c1e1096cd879ad1f7"
+    },
+    "droid_natural_29137e19c7_a_00000.png": {
+      "png_sha256": "ca31407621e458a5dd08c7efd5572869bb9f4abee4ad67df71ddacb021cc1647",
+      "rgb_sha256": "b4fb7547434a3bab46eac6a5be94eaf227753f19173cf3ed223e69ed59e1d048"
+    },
+    "droid_natural_29137e19c7_a_00027.png": {
+      "png_sha256": "dfec0b22a96c9a87cc3187b5cff6a5f54e189c4d61c12e7d2945ffd5b9ae2efc",
+      "rgb_sha256": "3f48f342b8a284b81939b539df1fa96c2298a465e4468ba8d89ae7a09ed209e2"
+    },
+    "droid_natural_29137e19c7_a_00054.png": {
+      "png_sha256": "5299b74c8118f2f0dc73d5b6d1b6d787541163a90fad6ced0730efc61476e4ae",
+      "rgb_sha256": "d68e0c97147844e1a261e1b2e81ab75c4e73bd37f34798d380b36ceb25508b85"
+    },
+    "droid_natural_29137e19c7_a_00080.png": {
+      "png_sha256": "1615b37bad86dcbd5f4f5596b69ccc6ce1b289587a93b8ede836c1f2739b2373",
+      "rgb_sha256": "12d4eb8dbec808715c0dab84d9221c664e1c317a93e0c6022028c48c9d178d09"
+    },
+    "droid_natural_29137e19c7_a_00108.png": {
+      "png_sha256": "96bbfd509f43af7d3633a59a56584507627e68fe327f960a12f90e8aec605ebf",
+      "rgb_sha256": "08cf5c5bb858332b68cf96817e1c438278135c8d3b524e56763af0a7cd3b5249"
+    },
+    "droid_natural_29137e19c7_a_00131.png": {
+      "png_sha256": "a46588ca6b9c50a8f7a964dbf468dad50759dde3a0f56729c06a4af179da298a",
+      "rgb_sha256": "bf29320865420438dc3a54e2c4f0ae523ee03c99464fb896329fdb544389dfdb"
+    },
+    "droid_natural_29137e19c7_a_00133.png": {
+      "png_sha256": "c186cada9fcdce37792edbd8d90e1349641764741884734ed830abae0f0cdca7",
+      "rgb_sha256": "1bd8fce85f7157f4e74bed7006e2d8d5f5ce02fc060db51d70ccce6f54ebfeaa"
+    },
+    "droid_natural_29137e19c7_a_00135.png": {
+      "png_sha256": "70d9bafb7a7dd414cdab1572f88ceddad01c9803870ec405de8e7e04163be761",
+      "rgb_sha256": "31ccc8ca1510b9c5cf2ec7a14239fa28a4a1c0d20c6951b992d0738b7e13ced9"
+    },
+    "droid_natural_29137e19c7_b_00000.png": {
+      "png_sha256": "c01a7861a3fa580cdb9e6c8c3a2589cca7cfed92a71e179e9958ffd60e45f37d",
+      "rgb_sha256": "eede46b1066b617b26368eb7fff9ec58f2d5eac7142be9deace2c6b5daa43efa"
+    },
+    "droid_natural_29137e19c7_b_00041.png": {
+      "png_sha256": "b46d08c602aa6b8e1c376f18ae4634a8a854a31b1dd00b7adbaa6352bdf5fa5d",
+      "rgb_sha256": "11b45e94603c7c77748673d155964eeb5344c04462a514a4208a66f6c406c332"
+    },
+    "droid_natural_29137e19c7_b_00082.png": {
+      "png_sha256": "e915422fb15019ba905ecf14f196a235b397920a3bcb81cdb06056bd5e0f6b2f",
+      "rgb_sha256": "50b52e151062cfef792a246c35c2e159b9cf33e7c91eced996485d2439e28ca1"
+    },
+    "droid_natural_29137e19c7_b_00123.png": {
+      "png_sha256": "e8ded427979f5b1a34eec995fe286bbaef8a59140344bbd4dc3a49b8244232cc",
+      "rgb_sha256": "e28c94e20a0861b3ff7e2e661c292adca3eb44f5dadde9e18bc0904f4af3f184"
+    },
+    "droid_natural_29137e19c7_b_00164.png": {
+      "png_sha256": "65d6f2e35dceb2335970211d0c4f4beae28245e4453ad0b7f818be9feda7ede1",
+      "rgb_sha256": "bb37e534aa4efb88a147f5667022ef42800235977a4224829d83abe663b6fbe0"
+    },
+    "droid_natural_29137e19c7_b_00179.png": {
+      "png_sha256": "782339befc2d1c3cfe862df2849b551ac9151ef95d9099902703afa12f4a32e3",
+      "rgb_sha256": "0ddc8a2455eac4a57aa79cb9626dff020f94e56e2dcee32906f1f8d9ae2ec158"
+    },
+    "droid_natural_29137e19c7_b_00192.png": {
+      "png_sha256": "d037b3b1650fa8ed98a47dbcae267d65508a8c15b1a7b7d68cb2db70f911efa9",
+      "rgb_sha256": "bb1f2c704f7212f328945bc52d7e028985a85bd7775f30ba08833e04ef0ca22f"
+    },
+    "droid_natural_29137e19c7_b_00205.png": {
+      "png_sha256": "a164585443a01aa26f239ee529fb48254262d131d9a8e18dbee8976ed9ddd50a",
+      "rgb_sha256": "835fa93fce76e5fd978dc5efc5392a71b07ae2ed12e7f8da1af1f90eda7e6985"
+    },
+    "droid_natural_6d74030dc0_a_00000.png": {
+      "png_sha256": "bb15ff714e5d3b54497be4c24f6371dc36971708106c67e671a603ff617ad0ce",
+      "rgb_sha256": "4a57387d306680c976e0d51fdba04b69c8d4644dabee9f8ca5a97e2384f913e0"
+    },
+    "droid_natural_6d74030dc0_a_00034.png": {
+      "png_sha256": "adc93dbdd788b7cff8e90a8c0131bd74b1816e80677dd456775ee2f445958f21",
+      "rgb_sha256": "dbd5f88e3ea545b4314228c98a57fb355b180d84ff9b865019c6676d130957f3"
+    },
+    "droid_natural_6d74030dc0_a_00068.png": {
+      "png_sha256": "a661332ee34316fc64bcf6d973afc3f6d7b23d42d6e11f716b5df671379294e2",
+      "rgb_sha256": "8609f4fdeee8a51e93f165af3719576bb3d895ff1fd3fae4a0333429dbd2e38d"
+    },
+    "droid_natural_6d74030dc0_a_00102.png": {
+      "png_sha256": "c0c354ee8c93ace7f2034e479b5047b9cf45c9fe5cd81cdd4cfadd18d554b344",
+      "rgb_sha256": "fb5aed1d0d32f45efe5594dd2d47ac5a6078fb6f30601b697bf23806f36c9f59"
+    },
+    "droid_natural_6d74030dc0_a_00136.png": {
+      "png_sha256": "eb143b4a6187ad247a25b202e4899d47c7b080ea702d244ac24e969206a28b23",
+      "rgb_sha256": "652398bc62eaefc57362e4184011e95fd961c21beec075858bebae20c0e56ff1"
+    },
+    "droid_natural_6d74030dc0_a_00149.png": {
+      "png_sha256": "8cdf0806c6073e4d70b140ecb827e27c93cf82f29cbe770a399df24fbdf44183",
+      "rgb_sha256": "536e4ad3c2662ce50663a4c4860815916d45091d9dc78b930ebd7eeff707b70a"
+    },
+    "droid_natural_6d74030dc0_a_00160.png": {
+      "png_sha256": "088e4f4467a484abc80ac2594eba41a9b295c0a0d88f4827b4f03455da4146e5",
+      "rgb_sha256": "6d317bb548c3098314518cd88c74fa078c5cc5aa4c460e7a9657fe5bd89028cc"
+    },
+    "droid_natural_6d74030dc0_a_00171.png": {
+      "png_sha256": "1eecbbec9e9cc18a89468ebe169fed8f08c09a19a453dd463f98da2d41e84c7f",
+      "rgb_sha256": "714d7d2deb3e42ee3c704c80325b1aca3c363736fd93f23fb953c4e4fd9dea8f"
+    },
+    "droid_natural_6d74030dc0_b_00000.png": {
+      "png_sha256": "61983c8134f394fde7d7c5bee766777c8c8c88f5609275211a0919f7ba0eaa35",
+      "rgb_sha256": "f9a08a6a97bd2672583adb67daaff6f32bbc85deb1e39b89e8a823d0b5d9969a"
+    },
+    "droid_natural_6d74030dc0_b_00055.png": {
+      "png_sha256": "2a3a0dcedc2ccf2af785f314cd4c257e8b4f4f0e9967101cfbcf677c9f2853b1",
+      "rgb_sha256": "c10c9e4ede738994869d74607aa7fb096ee9ecfa5568ff4ffb6e8a498db1fa3a"
+    },
+    "droid_natural_6d74030dc0_b_00111.png": {
+      "png_sha256": "d7ad81ea7275446448072d6914bb077f8c9ff34a0e16ee75a5ba4b8a478b177b",
+      "rgb_sha256": "86405e22736d6c681bd9f467d269fee64cc5911aba411056c8a31f13ccf9a913"
+    },
+    "droid_natural_6d74030dc0_b_00167.png": {
+      "png_sha256": "5724dc13865a4a01157d7e4d2f84a2a2c9d044ef84b20bdc8ec0b7a2b60f8280",
+      "rgb_sha256": "5d91b643b745784ed753eec75a87171f3b4257d8a3f7ac97f4fc22ef9687cf0d"
+    },
+    "droid_natural_6d74030dc0_b_00223.png": {
+      "png_sha256": "ab59fb615d70e7ebd2a88d0d7297caed778a313ddd684afd484c40475b5e42a0",
+      "rgb_sha256": "481e05555aaac70cb96c37c51152fdd087ca257242ad147b816b18d8bcdc49b7"
+    },
+    "droid_natural_6d74030dc0_b_00229.png": {
+      "png_sha256": "436dba79a75c7fd5535f6fdf8313130b7ca5f08b0e3799cb2c7bf6064c9d37ba",
+      "rgb_sha256": "feab429de009c541c7cac29a0208a1e9ac01e922a731a88ecd06093c86da1a98"
+    },
+    "droid_natural_6d74030dc0_b_00280.png": {
+      "png_sha256": "12fa04c9ed7ada5c9621ba2503f9a8f03896c95540110218771c2a205aa5e6ca",
+      "rgb_sha256": "3ce83eff61a1a3609b1c0793d8433626ae5d5e2558b220ca0c0092b566e5d7cc"
+    },
+    "droid_natural_87abc314ec_a_00000.png": {
+      "png_sha256": "b80438ecff621713c84b51dd09c48dbcf09bf0d0175482116a39349bfadd8486",
+      "rgb_sha256": "f55789640ab2d5fd3e071f571725e6bd8d322f3190dd21e07fac56ff97ba475a"
+    },
+    "droid_natural_87abc314ec_a_00063.png": {
+      "png_sha256": "dde0ed8a9fadae6f672c3bfd16e6d8c1857a0d0b78f02f7409b8490034ca25a9",
+      "rgb_sha256": "314e2b4d0f0516a12740f15e6acd50203841aec1197703b65c3cad50e0653d12"
+    },
+    "droid_natural_87abc314ec_a_00127.png": {
+      "png_sha256": "c9a1cb1e14a3895c5e5054f6693d19ecd01c978c01017aac1b184d21d49d2029",
+      "rgb_sha256": "d7cd11dadbff2b5546528d616399acf665137b7e455064ea9f48aa12cd72481d"
+    },
+    "droid_natural_87abc314ec_a_00192.png": {
+      "png_sha256": "de7b5d3ccefa43b5cf7205b4bd3e2a9bee44ef144c1359f39ca840f2ad1efbb7",
+      "rgb_sha256": "4a83f6e8eb49d620e2e73c59bd319d90706fd0645e19f873341f3729622a0f44"
+    },
+    "droid_natural_87abc314ec_a_00255.png": {
+      "png_sha256": "b36bc3a87b2e113191d2dc63bf4003b0948e8addb4746bf865fe0dc3f0ad1230",
+      "rgb_sha256": "a1ce2804442a71ac4a922ecf62a87e3e964d512b424cfca18e4d88b270491081"
+    },
+    "droid_natural_87abc314ec_a_00279.png": {
+      "png_sha256": "ec3a2f0286439f91c5a221a32030a178873cf0f889e1ba86f3110ec7b9145871",
+      "rgb_sha256": "1c363c77b881d41a20d26225af05be5049e2a7a247ac8ea84e5acf1ea53924a9"
+    },
+    "droid_natural_87abc314ec_a_00299.png": {
+      "png_sha256": "c3243f8cdd63072bd4b5238be0d97d9b76a51cd7c97352fa769e0d7d6d70b447",
+      "rgb_sha256": "3da10f297a5ddea4ddd35b57ad88444d00e825dcb8de1890226fa2f639814e91"
+    },
+    "droid_natural_87abc314ec_a_00320.png": {
+      "png_sha256": "97638fe9b9c8784144f3ff589bddcb86fc8c737dc935b810030f349d7564e8bb",
+      "rgb_sha256": "3b7753bc7e2fef1b561e67aeea63010a94af0b37fdbd13599f7d282b9a8ce97f"
+    },
+    "droid_natural_87abc314ec_b_00000.png": {
+      "png_sha256": "b901c7d9ac0744bf121520278241d043c98d5dce173de808445078ba78ad8764",
+      "rgb_sha256": "07f653c8066e319d17105cb7a496214d690bf89c3b728a83af9c0f71c245ff74"
+    },
+    "droid_natural_87abc314ec_b_00030.png": {
+      "png_sha256": "68c7f689f41ef0c679d02e8e1b30f0d1c7e39df5e49d54dc4018488b7e0b585c",
+      "rgb_sha256": "17e0dc3f7af20cc0b0b87982dfa57cc912a4b28e2930c6703ece36835683f018"
+    },
+    "droid_natural_87abc314ec_b_00060.png": {
+      "png_sha256": "e1e3cb512c67329d65bacfb04aa489f7dba5261e59a1e239ee1551899f8daddc",
+      "rgb_sha256": "e1058907d3fbe663a54a8f53a6ba98cd93b5b685b37e8fa0f25db2e7f1756695"
+    },
+    "droid_natural_87abc314ec_b_00090.png": {
+      "png_sha256": "525d6142d8619e0cd9d9eb4ffe2beb2c89db5249044f6171e652ff61ebfd42db",
+      "rgb_sha256": "b215a98ae4d33ad75c1dd0ba15bdcacccb7358612322adb66e4996ddddcabaff"
+    },
+    "droid_natural_87abc314ec_b_00120.png": {
+      "png_sha256": "4b1a74048c68bc7f42c475ae6e1f45635e70c2ebe76a7a793cf8fc7e91d1c60b",
+      "rgb_sha256": "553671e325bb730c2986c350e6f57e6c37fe2b8f0b9355b329d3bfae0431d763"
+    },
+    "droid_natural_87abc314ec_b_00131.png": {
+      "png_sha256": "df5e39a020991bfacb60fc84ecf4557b6d4d465594ea2bb7700e7c57d0fb3359",
+      "rgb_sha256": "d840989e0548a7155c6765eb4c855ebd43488ead181f557c41e2fd9610914eaf"
+    },
+    "droid_natural_87abc314ec_b_00151.png": {
+      "png_sha256": "44be1519b81ca0e8ef198942af532fa0aa6118b731b9ec7298df0878e37f451f",
+      "rgb_sha256": "aeed76fd9d7e8f09d5c45a001b278ff75da5b0521416a82875553da29f1b91a9"
+    },
+    "droid_natural_8b01107c59_a_00000.png": {
+      "png_sha256": "17092527011e395d0feb686df9a05d3ecc38dba5cd94e9d436280baaa2ebdb47",
+      "rgb_sha256": "8767a47b9592203e4112d0cc979f5be77ba0ca64b7ffb1ec442e4596187c7d9e"
+    },
+    "droid_natural_8b01107c59_a_00051.png": {
+      "png_sha256": "89094a842cf2c88ef631636087b30ef2023ffd4e192cc077672f5811d9455758",
+      "rgb_sha256": "774194d6b591fab01b63b960c686f8c24109b7da39912644d264d19fcd42077c"
+    },
+    "droid_natural_8b01107c59_a_00102.png": {
+      "png_sha256": "cf252ecc092c4ba54b78406a52ec3cfcf6ed6c54e2e2c7bce783e68a269a008a",
+      "rgb_sha256": "2ca0a173c6eb65c63fd7f67b01e2b35bb60ea3d93df8d615dbd10705ee28e974"
+    },
+    "droid_natural_8b01107c59_a_00153.png": {
+      "png_sha256": "ccf10281877c3c1a02a0b187b591551c4a9836c491afea27524591afa5e32cb0",
+      "rgb_sha256": "71b73f81098ab14d5116cd4451aa6cd27ae9b449ecaead37d5b4ae7f4b62df68"
+    },
+    "droid_natural_8b01107c59_a_00204.png": {
+      "png_sha256": "921c5570ed4fe4bcc5928990548ef2649d3ee71737e0441d53dc4be92fcb8a59",
+      "rgb_sha256": "64955dfa6a305c8741650d00649948d4e787539b2e2e447064532a7ee5f60777"
+    },
+    "droid_natural_8b01107c59_a_00238.png": {
+      "png_sha256": "c1fe4fdd51fab29afda43da148db7cc6205a342907e4737393b13b72b06dc30f",
+      "rgb_sha256": "4411633b2a031a2aa903e37fc4f696abd968709cf7285cd9a9555a2b9fe11276"
+    },
+    "droid_natural_8b01107c59_a_00247.png": {
+      "png_sha256": "207d8ae730ac5acf4e59d2173ec7b639be595406caee095482fc7052aa6cfb50",
+      "rgb_sha256": "d9e04be59aacf03d404a58cab1762d200e0c3aa4137c70fa8c6f8464150a4953"
+    },
+    "droid_natural_8b01107c59_a_00256.png": {
+      "png_sha256": "00fd65554fdd3f8e485a12a0b59a8a0714f2519c067266f60ce8b0752ef02ce3",
+      "rgb_sha256": "e2e0fb7938b39beb6d177d4080b768640631c19d436c71625a5fdda7879e4c43"
+    },
+    "droid_natural_8b01107c59_b_00000.png": {
+      "png_sha256": "78c07fc56b04831ea95b5d0c495184a834db622c8b6092d9c73584a5be49fe47",
+      "rgb_sha256": "563c57dc0ee324dab566e17aba9b3cc8454c7b0711cfa7cb82ed0240fd8db275"
+    },
+    "droid_natural_8b01107c59_b_00035.png": {
+      "png_sha256": "c32b22bfceac6d1849c111f70b2014c8c98c06790af7c0e4034a06be54af8cd3",
+      "rgb_sha256": "25068a9d08a5fbb2af8627b48e7d3f9d05a5d0cf2c6b3ae6f28b6b8121f78094"
+    },
+    "droid_natural_8b01107c59_b_00070.png": {
+      "png_sha256": "3a1e921d084620f3faf8117ad79133eff428d45e2377016d4f67cf537800c947",
+      "rgb_sha256": "b8bb0793248358a78bfaf26df23ddfa4823f3c01dd88fa1febe30be244fd744b"
+    },
+    "droid_natural_8b01107c59_b_00105.png": {
+      "png_sha256": "b356cd0a17f022fdbd56b1ac708462bf44e7eb80caf4dee425f8a6e6a28af688",
+      "rgb_sha256": "003196286608593cbd6426fc5edcb1ff95d37a89336149eaf6f693eacad15328"
+    },
+    "droid_natural_8b01107c59_b_00140.png": {
+      "png_sha256": "80f2d03ef670ea3c0a24c53dbd3649288d0bb89499504c6d31a55a320ace328d",
+      "rgb_sha256": "887d203d9cbebfdf25798584881d53f6bad12020ded2bb049d46e4ffa8d0a89d"
+    },
+    "droid_natural_8b01107c59_b_00167.png": {
+      "png_sha256": "408bd7f29ea155346dfa5b8c9563bde5faac5b24e62e9175b140272d61063b92",
+      "rgb_sha256": "200bdfc090e8600d815055f0ccfce1ae5ff0e81fe5270d6815f09b379c18ec89"
+    },
+    "droid_natural_8b01107c59_b_00171.png": {
+      "png_sha256": "f33603d641e1fef3eed8eaa2bd875cdf154c51554617de63925b2322462c61bf",
+      "rgb_sha256": "d27b7ff452888572826e006ca08dbd15b05efba660a2798170c2107fafca447c"
+    },
+    "droid_natural_8b01107c59_b_00175.png": {
+      "png_sha256": "c43d4f69df774eefb6619ededb515d662527ebd9ec86e6c1d17d32f449990588",
+      "rgb_sha256": "f82aebffa2374e9b6e54e836fb6e4ea53aa9894c6e5640c15343c69691ce2519"
+    },
+    "droid_natural_c00374385e_a_00000.png": {
+      "png_sha256": "a8d7e3752f89f017fc999590ec22f012589ef65b4688ad2d0a75bc0702f6efb9",
+      "rgb_sha256": "25c93b20570a2d8d95836a2cfab1136f95ab1206a610c662b6262c8a987f38d1"
+    },
+    "droid_natural_c00374385e_a_00065.png": {
+      "png_sha256": "5a51251bb40406019e504babe3dda2bc2d47acb03a1e1fc83f8085948341442a",
+      "rgb_sha256": "adf413908710f43157dfdcbe667b0b7fe90590cad06ee946193f649fdf8776b7"
+    },
+    "droid_natural_c00374385e_a_00131.png": {
+      "png_sha256": "1f8ed7681bd83f232333bd66a30f9dc4cf6bf0ae2282abe6beb35f07cabf7e24",
+      "rgb_sha256": "334318dce375e6590833a55867734b85054354ca05fd1f9907253d7477dbdd75"
+    },
+    "droid_natural_c00374385e_a_00198.png": {
+      "png_sha256": "5aeb71da5d006288b405b42f97cd306066590e8edb744552a5d9b12adafc0433",
+      "rgb_sha256": "17b3311b595d9828e9c57c11fcf5d9cd5e74de71a2f473a0e4ccfd471a8c526c"
+    },
+    "droid_natural_c00374385e_a_00263.png": {
+      "png_sha256": "af11d36200aa3fa974d6d03e5c863f690469121617d10e60e18b6024a85adf0a",
+      "rgb_sha256": "d314f3a307fed1722b9c0e128eef304a5ae324c0b97ea3e8085d5d29871f0e73"
+    },
+    "droid_natural_c00374385e_a_00300.png": {
+      "png_sha256": "eed7605e632ff2cf0b6776d47d9337c7ff6a93f8124055d57a7e1c9a7f34b26c",
+      "rgb_sha256": "df78a12045202629bedbe5748aeb75db96637fcb14739ee97dddf5f7d50528f5"
+    },
+    "droid_natural_c00374385e_a_00315.png": {
+      "png_sha256": "c8d1fefe6b1ba65cdbf2f9672fe2c8496432746ea86ae1a7796fc1ec6b0d2d3d",
+      "rgb_sha256": "e1933e82c4783e1a700b295b0bb8877cd01de8b692107218a5fbc9d611ae19a4"
+    },
+    "droid_natural_c00374385e_a_00330.png": {
+      "png_sha256": "7ffef89523e769d9cad5d3587aa858909ea32dc669f263bb42718dfce02a9ff7",
+      "rgb_sha256": "53c3ff287b2a842433b5dd9bf51cd7486d640e33eb1fec53d1e273e055b4a8ed"
+    },
+    "droid_natural_c00374385e_b_00000.png": {
+      "png_sha256": "3d7da22cb2fa8f053661afacdab2a93a3d5468a3d95fcf56b8892acbbc5d9467",
+      "rgb_sha256": "36f3caf5219cec4c584a8b474a91decc7b71bdf45b150e3e7cd14cf6bc0e6e1e"
+    },
+    "droid_natural_c00374385e_b_00044.png": {
+      "png_sha256": "ce5ce93c6f18b45a8c670d19d3108edd8340cf7f0f4fdbbe804405f54484c5fe",
+      "rgb_sha256": "93f3fadedb4712056bc33a97983c7734d916922902ba7a9f56cb157fa63a216a"
+    },
+    "droid_natural_c00374385e_b_00089.png": {
+      "png_sha256": "bd65a846779f56bb92aa21a70c782d544754b7642551fe8a14e76d6132488f36",
+      "rgb_sha256": "5583e6fb1173ca27599bc4c89fcd187062085623b9004a3d713b3d771875e742"
+    },
+    "droid_natural_c00374385e_b_00133.png": {
+      "png_sha256": "4a9ef125787f62c5b0f5f2c80f3a1c328386e219a958b0c4e48be72cd24cef33",
+      "rgb_sha256": "047aa5bb6194d1fff6341f220b927a098ba9b47863d10ec26b9716b95da72f48"
+    },
+    "droid_natural_c00374385e_b_00178.png": {
+      "png_sha256": "32f459885bc88cee62b662853e7a3b40e8f7ee771d8bd7b06f13a441a7c9a316",
+      "rgb_sha256": "f14623a5c21f27bc072ba0d85aa3331a8b58914aea516913c74e17025979a2db"
+    },
+    "droid_natural_c00374385e_b_00194.png": {
+      "png_sha256": "4a8035b472109e037fd5ab39a85b012f8407f49a164dbf9219fcfe4599fbd171",
+      "rgb_sha256": "08d1193138eebdbcd99384cdc0d1d81832fd213c1bd64e512c37d783816d5bac"
+    },
+    "droid_natural_c00374385e_b_00208.png": {
+      "png_sha256": "a899fdf821a8954ec37020d7f9688412d53a0ad087b8f76f842f7dde5aeda2ef",
+      "rgb_sha256": "314fffb38910b2408fa9fee9af11451c1b273671b3453905fbd7dba6cda499e5"
+    },
+    "droid_natural_c00374385e_b_00223.png": {
+      "png_sha256": "02704cc8f932408e6542e7866a29a0c4d1a9c3dccb8fd0ed7c13b3678c35517c",
+      "rgb_sha256": "59443b34d012cee0f8c9d939032036e948ee66e1daa4b214a6499cc96bfe933d"
+    },
+    "droid_shared_recent_00015.png": {
+      "png_sha256": "c73295de2b63a2b7691ce3c4e7b0c25f7a93e06108bc3c850a66ac433aad1d79",
+      "rgb_sha256": "3d3a2dac71d987d075e9bbe321ca72f089a7b2d6fc3a159f64bf546029aefcb8"
+    },
+    "droid_shared_recent_00075.png": {
+      "png_sha256": "1bcb55ebbcd76a9671f4a826a46d38dd41e8514a0966e9b40bcffecc3b8f0ecb",
+      "rgb_sha256": "8ce787896e70698d3f30417a7fdbe3c487deab536488b7e212914481f7ada688"
+    },
+    "droid_shared_recent_00135.png": {
+      "png_sha256": "29563eb3bba0569b23ee90dc52d8dfb9bf4df41b5efcf151f42937bce7493fb6",
+      "rgb_sha256": "0090eadb9ac1f7478ac4313f5d41e127f0bc76b86b2db3b0bd02e69ee23fedbe"
+    },
+    "droid_shared_recent_00195.png": {
+      "png_sha256": "0d64158465ead4163d81607bc0b7edfcf7af3b829b9673777c44b8f9c7a0d8d5",
+      "rgb_sha256": "2fe28128f70b39462570ae0a3fe194314486d9336105fe500f8c428fe72c420f"
+    }
+  },
+  "cases": [
+    {
+      "pair_id": "droid_natural_8b01107c59",
+      "source_site": "IPRL",
+      "scene_id": 1611836543,
+      "camera": "ext2",
+      "question": "In the last view of the wooden drawer to the left of the stove before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "IPRL+7790ec0a+2023-06-30-22h-05m-43s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_22%3A05%3A43_2023/recordings/MP4/28221883.mp4",
+            "generation": "1710757816663629",
+            "bytes": 8311236,
+            "sha256": "9ddd63b993cf98aafb39d220197874c8c80ca16422557a48f56aa10c4574180e",
+            "frame_count": 260
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_22%3A05%3A43_2023/metadata_IPRL%2B7790ec0a%2B2023-06-30-22h-05m-43s.json",
+            "generation": "1710757816667902",
+            "bytes": 1780,
+            "sha256": "7a30014b88039c94150cd732c867ddae976c6db301bfd2061e5f4654072a1cdf"
+          },
+          "initial_interval": [
+            0,
+            55
+          ],
+          "terminal_interval": [
+            230,
+            256
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              51,
+              102,
+              153,
+              204,
+              256
+            ],
+            "annotated": [
+              0,
+              51,
+              102,
+              238,
+              247,
+              256
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.8500000238418579,
+              1.7000000476837158,
+              2.549999952316284,
+              3.4000000953674316,
+              4.266666889190674
+            ],
+            "annotated": [
+              0.0,
+              0.8500000238418579,
+              1.7000000476837158,
+              3.9666666984558105,
+              4.116666793823242,
+              4.266666889190674
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_8b01107c59_a_00000.png",
+              "droid_natural_8b01107c59_a_00051.png",
+              "droid_natural_8b01107c59_a_00102.png",
+              "droid_natural_8b01107c59_a_00153.png",
+              "droid_natural_8b01107c59_a_00204.png",
+              "droid_natural_8b01107c59_a_00256.png"
+            ],
+            "annotated": [
+              "droid_natural_8b01107c59_a_00000.png",
+              "droid_natural_8b01107c59_a_00051.png",
+              "droid_natural_8b01107c59_a_00102.png",
+              "droid_natural_8b01107c59_a_00238.png",
+              "droid_natural_8b01107c59_a_00247.png",
+              "droid_natural_8b01107c59_a_00256.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "IPRL+7790ec0a+2023-06-30-22h-04m-30s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_22%3A04%3A30_2023/recordings/MP4/28221883.mp4",
+            "generation": "1710757816422867",
+            "bytes": 5917508,
+            "sha256": "4e46d10846bde615b357407d8842ee496fa647c11369a5c14394b39989b30bef",
+            "frame_count": 178
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-30/Fri_Jun_30_22%3A04%3A30_2023/metadata_IPRL%2B7790ec0a%2B2023-06-30-22h-04m-30s.json",
+            "generation": "1710757816401695",
+            "bytes": 1784,
+            "sha256": "ca2f2753ab7d4c0629a201a57f5e3533b191ab2a8421c323d353e069a7463ccd"
+          },
+          "initial_interval": [
+            0,
+            65
+          ],
+          "terminal_interval": [
+            164,
+            175
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              35,
+              70,
+              105,
+              140,
+              175
+            ],
+            "annotated": [
+              0,
+              35,
+              70,
+              167,
+              171,
+              175
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.5833333134651184,
+              1.1666666269302368,
+              1.75,
+              2.3333332538604736,
+              2.9166667461395264
+            ],
+            "annotated": [
+              0.0,
+              0.5833333134651184,
+              1.1666666269302368,
+              2.7833333015441895,
+              2.8499999046325684,
+              2.9166667461395264
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_8b01107c59_b_00000.png",
+              "droid_natural_8b01107c59_b_00035.png",
+              "droid_natural_8b01107c59_b_00070.png",
+              "droid_natural_8b01107c59_b_00105.png",
+              "droid_natural_8b01107c59_b_00140.png",
+              "droid_natural_8b01107c59_b_00175.png"
+            ],
+            "annotated": [
+              "droid_natural_8b01107c59_b_00000.png",
+              "droid_natural_8b01107c59_b_00035.png",
+              "droid_natural_8b01107c59_b_00070.png",
+              "droid_natural_8b01107c59_b_00167.png",
+              "droid_natural_8b01107c59_b_00171.png",
+              "droid_natural_8b01107c59_b_00175.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_6d74030dc0",
+      "source_site": "IPRL",
+      "scene_id": 4134662280,
+      "camera": "ext1",
+      "question": "In the last view of the wooden cabinet door just right of the range hood before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "IPRL+5085c3ce+2023-10-16-22h-09m-27s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-10-16/Mon_Oct_16_22%3A09%3A27_2023/recordings/MP4/27432424.mp4",
+            "generation": "1710757941602537",
+            "bytes": 5705476,
+            "sha256": "eda54d343755fe54b5f6896fb09105781bb57a835d4e4eb4d63b707213391c70",
+            "frame_count": 174
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-10-16/Mon_Oct_16_22%3A09%3A27_2023/metadata_IPRL%2B5085c3ce%2B2023-10-16-22h-09m-27s.json",
+            "generation": "1710757941611160",
+            "bytes": 1799,
+            "sha256": "b0917641341c070d2c95f68ca75a142027272b37bf412a4db3305ea98f875fdd"
+          },
+          "initial_interval": [
+            0,
+            38
+          ],
+          "terminal_interval": [
+            138,
+            171
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              34,
+              68,
+              102,
+              136,
+              171
+            ],
+            "annotated": [
+              0,
+              34,
+              68,
+              149,
+              160,
+              171
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.5666666626930237,
+              1.1333333253860474,
+              1.7000000476837158,
+              2.2666666507720947,
+              2.8499999046325684
+            ],
+            "annotated": [
+              0.0,
+              0.5666666626930237,
+              1.1333333253860474,
+              2.4833333492279053,
+              2.6666667461395264,
+              2.8499999046325684
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_6d74030dc0_a_00000.png",
+              "droid_natural_6d74030dc0_a_00034.png",
+              "droid_natural_6d74030dc0_a_00068.png",
+              "droid_natural_6d74030dc0_a_00102.png",
+              "droid_natural_6d74030dc0_a_00136.png",
+              "droid_natural_6d74030dc0_a_00171.png"
+            ],
+            "annotated": [
+              "droid_natural_6d74030dc0_a_00000.png",
+              "droid_natural_6d74030dc0_a_00034.png",
+              "droid_natural_6d74030dc0_a_00068.png",
+              "droid_natural_6d74030dc0_a_00149.png",
+              "droid_natural_6d74030dc0_a_00160.png",
+              "droid_natural_6d74030dc0_a_00171.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "IPRL+5085c3ce+2023-10-16-22h-07m-54s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-10-16/Mon_Oct_16_22%3A07%3A54_2023/recordings/MP4/27432424.mp4",
+            "generation": "1710757941296647",
+            "bytes": 9285109,
+            "sha256": "ce1c868e7a2b93e2742d717bd2f46b7a4ba34cc60565f618ae1fa1d0960e7d3b",
+            "frame_count": 284
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-10-16/Mon_Oct_16_22%3A07%3A54_2023/metadata_IPRL%2B5085c3ce%2B2023-10-16-22h-07m-54s.json",
+            "generation": "1710757941280972",
+            "bytes": 1800,
+            "sha256": "ae73f48ea3d22f5c07a06aea068789b4bff379a020a1da71df2d24f9f4368f31"
+          },
+          "initial_interval": [
+            0,
+            85
+          ],
+          "terminal_interval": [
+            178,
+            280
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              55,
+              111,
+              167,
+              223,
+              280
+            ],
+            "annotated": [
+              0,
+              55,
+              111,
+              223,
+              229,
+              280
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.9166666865348816,
+              1.850000023841858,
+              2.7833333015441895,
+              3.7166666984558105,
+              4.666666507720947
+            ],
+            "annotated": [
+              0.0,
+              0.9166666865348816,
+              1.850000023841858,
+              3.7166666984558105,
+              3.816666603088379,
+              4.666666507720947
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_6d74030dc0_b_00000.png",
+              "droid_natural_6d74030dc0_b_00055.png",
+              "droid_natural_6d74030dc0_b_00111.png",
+              "droid_natural_6d74030dc0_b_00167.png",
+              "droid_natural_6d74030dc0_b_00223.png",
+              "droid_natural_6d74030dc0_b_00280.png"
+            ],
+            "annotated": [
+              "droid_natural_6d74030dc0_b_00000.png",
+              "droid_natural_6d74030dc0_b_00055.png",
+              "droid_natural_6d74030dc0_b_00111.png",
+              "droid_natural_6d74030dc0_b_00223.png",
+              "droid_natural_6d74030dc0_b_00229.png",
+              "droid_natural_6d74030dc0_b_00280.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_87abc314ec",
+      "source_site": "IRIS",
+      "scene_id": 8066802860,
+      "camera": "ext2",
+      "question": "In the last view of the wide white drawer below the countertop before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "IRIS+85a5958f+2023-07-05-15h-52m-26s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-05/Wed_Jul__5_15%3A52%3A26_2023/recordings/MP4/29838012.mp4",
+            "generation": "1710758376365608",
+            "bytes": 7156442,
+            "sha256": "e6e20fb2b68d3b38af76c732494fce322b79fd50c41c829f5daeb7f832b0d380",
+            "frame_count": 325
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-05/Wed_Jul__5_15%3A52%3A26_2023/metadata_IRIS%2B85a5958f%2B2023-07-05-15h-52m-26s.json",
+            "generation": "1710758376337176",
+            "bytes": 1794,
+            "sha256": "01a6dbd2ed52b507c3eef51f0e22a80733ae505f4be568a69c34881b53490555"
+          },
+          "initial_interval": [
+            0,
+            180
+          ],
+          "terminal_interval": [
+            259,
+            320
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              63,
+              127,
+              192,
+              255,
+              320
+            ],
+            "annotated": [
+              0,
+              63,
+              127,
+              279,
+              299,
+              320
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              1.0499999523162842,
+              2.116666555404663,
+              3.200000047683716,
+              4.25,
+              5.333333492279053
+            ],
+            "annotated": [
+              0.0,
+              1.0499999523162842,
+              2.116666555404663,
+              4.650000095367432,
+              4.983333110809326,
+              5.333333492279053
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_87abc314ec_a_00000.png",
+              "droid_natural_87abc314ec_a_00063.png",
+              "droid_natural_87abc314ec_a_00127.png",
+              "droid_natural_87abc314ec_a_00192.png",
+              "droid_natural_87abc314ec_a_00255.png",
+              "droid_natural_87abc314ec_a_00320.png"
+            ],
+            "annotated": [
+              "droid_natural_87abc314ec_a_00000.png",
+              "droid_natural_87abc314ec_a_00063.png",
+              "droid_natural_87abc314ec_a_00127.png",
+              "droid_natural_87abc314ec_a_00279.png",
+              "droid_natural_87abc314ec_a_00299.png",
+              "droid_natural_87abc314ec_a_00320.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "IRIS+85a5958f+2023-07-05-15h-52m-08s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-05/Wed_Jul__5_15%3A52%3A08_2023/recordings/MP4/29838012.mp4",
+            "generation": "1710758376295985",
+            "bytes": 3032291,
+            "sha256": "cb1e60e324a1cce7206934beb6587f2a326ddd408c9f43f892b043ce2dd5a251",
+            "frame_count": 154
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-07-05/Wed_Jul__5_15%3A52%3A08_2023/metadata_IRIS%2B85a5958f%2B2023-07-05-15h-52m-08s.json",
+            "generation": "1710758376266027",
+            "bytes": 1783,
+            "sha256": "2b38f21306c7d33f3a4b01a953181f20f987afe392a67815e159a339517cf1ff"
+          },
+          "initial_interval": [
+            0,
+            38
+          ],
+          "terminal_interval": [
+            110,
+            151
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              30,
+              60,
+              90,
+              120,
+              151
+            ],
+            "annotated": [
+              0,
+              30,
+              60,
+              120,
+              131,
+              151
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5166666507720947
+            ],
+            "annotated": [
+              0.0,
+              0.5,
+              1.0,
+              2.0,
+              2.183333396911621,
+              2.5166666507720947
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_87abc314ec_b_00000.png",
+              "droid_natural_87abc314ec_b_00030.png",
+              "droid_natural_87abc314ec_b_00060.png",
+              "droid_natural_87abc314ec_b_00090.png",
+              "droid_natural_87abc314ec_b_00120.png",
+              "droid_natural_87abc314ec_b_00151.png"
+            ],
+            "annotated": [
+              "droid_natural_87abc314ec_b_00000.png",
+              "droid_natural_87abc314ec_b_00030.png",
+              "droid_natural_87abc314ec_b_00060.png",
+              "droid_natural_87abc314ec_b_00120.png",
+              "droid_natural_87abc314ec_b_00131.png",
+              "droid_natural_87abc314ec_b_00151.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_29137e19c7",
+      "source_site": "IRIS",
+      "scene_id": 2158993557,
+      "camera": "ext1",
+      "question": "In the last view of the drawer under the white counter beside the black sink before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "IRIS+7dfa2da3+2023-06-01-13h-38m-34s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-06-01/Thu_Jun__1_13%3A38%3A34_2023/recordings/MP4/23404442.mp4",
+            "generation": "1710758322637107",
+            "bytes": 3654602,
+            "sha256": "8037e3eb013ed770746276791fcda236b0b7e6075a3de9e951ab0d71ac25754c",
+            "frame_count": 138
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-06-01/Thu_Jun__1_13%3A38%3A34_2023/metadata_IRIS%2B7dfa2da3%2B2023-06-01-13h-38m-34s.json",
+            "generation": "1710758322596568",
+            "bytes": 1778,
+            "sha256": "e63d53caebfee4f282ba8291dd1cd93c9326b53f46291a4e33bcaee5dcea6d2a"
+          },
+          "initial_interval": [
+            0,
+            44
+          ],
+          "terminal_interval": [
+            130,
+            135
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              27,
+              54,
+              80,
+              108,
+              135
+            ],
+            "annotated": [
+              0,
+              27,
+              54,
+              131,
+              133,
+              135
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.44999998807907104,
+              0.8999999761581421,
+              1.3333333730697632,
+              1.7999999523162842,
+              2.25
+            ],
+            "annotated": [
+              0.0,
+              0.44999998807907104,
+              0.8999999761581421,
+              2.183333396911621,
+              2.2166666984558105,
+              2.25
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_29137e19c7_a_00000.png",
+              "droid_natural_29137e19c7_a_00027.png",
+              "droid_natural_29137e19c7_a_00054.png",
+              "droid_natural_29137e19c7_a_00080.png",
+              "droid_natural_29137e19c7_a_00108.png",
+              "droid_natural_29137e19c7_a_00135.png"
+            ],
+            "annotated": [
+              "droid_natural_29137e19c7_a_00000.png",
+              "droid_natural_29137e19c7_a_00027.png",
+              "droid_natural_29137e19c7_a_00054.png",
+              "droid_natural_29137e19c7_a_00131.png",
+              "droid_natural_29137e19c7_a_00133.png",
+              "droid_natural_29137e19c7_a_00135.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "IRIS+7dfa2da3+2023-06-01-13h-38m-52s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-06-01/Thu_Jun__1_13%3A38%3A52_2023/recordings/MP4/23404442.mp4",
+            "generation": "1710758322698571",
+            "bytes": 5589729,
+            "sha256": "4b9c0c41f0825529c9e98b0f58cc38a2e8c66bcab54a51f30197b04f7936c277",
+            "frame_count": 209
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-06-01/Thu_Jun__1_13%3A38%3A52_2023/metadata_IRIS%2B7dfa2da3%2B2023-06-01-13h-38m-52s.json",
+            "generation": "1710758322695522",
+            "bytes": 1775,
+            "sha256": "a67182778d57fc82d72c66f29b17872e4fbf29c2a5366189035cefc893382bb6"
+          },
+          "initial_interval": [
+            0,
+            58
+          ],
+          "terminal_interval": [
+            166,
+            205
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              41,
+              82,
+              123,
+              164,
+              205
+            ],
+            "annotated": [
+              0,
+              41,
+              82,
+              179,
+              192,
+              205
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.6833333373069763,
+              1.3666666746139526,
+              2.049999952316284,
+              2.7333333492279053,
+              3.4166667461395264
+            ],
+            "annotated": [
+              0.0,
+              0.6833333373069763,
+              1.3666666746139526,
+              2.9833333492279053,
+              3.200000047683716,
+              3.4166667461395264
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_29137e19c7_b_00000.png",
+              "droid_natural_29137e19c7_b_00041.png",
+              "droid_natural_29137e19c7_b_00082.png",
+              "droid_natural_29137e19c7_b_00123.png",
+              "droid_natural_29137e19c7_b_00164.png",
+              "droid_natural_29137e19c7_b_00205.png"
+            ],
+            "annotated": [
+              "droid_natural_29137e19c7_b_00000.png",
+              "droid_natural_29137e19c7_b_00041.png",
+              "droid_natural_29137e19c7_b_00082.png",
+              "droid_natural_29137e19c7_b_00179.png",
+              "droid_natural_29137e19c7_b_00192.png",
+              "droid_natural_29137e19c7_b_00205.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_c00374385e",
+      "source_site": "PennPAL",
+      "scene_id": 5493550952,
+      "camera": "ext2",
+      "question": "In the last view of the wooden drawer just left of the white refrigerator before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "PennPAL+acda9df3+2023-07-07-21h-18m-34s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-07/Fri_Jul__7_21%3A18%3A34_2023/recordings/MP4/27085680.mp4",
+            "generation": "1710758561397919",
+            "bytes": 9508464,
+            "sha256": "e9e412020855e15ae7f636be3c0881999dbd23d16c5a336f324428975000b09c",
+            "frame_count": 335
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-07/Fri_Jul__7_21%3A18%3A34_2023/metadata_PennPAL%2Bacda9df3%2B2023-07-07-21h-18m-34s.json",
+            "generation": "1710758561353555",
+            "bytes": 1923,
+            "sha256": "4b3413661323da82e8237f923a9ba1e53329e7e3bcb01a8956d4a0eb5b894b26"
+          },
+          "initial_interval": [
+            0,
+            108
+          ],
+          "terminal_interval": [
+            285,
+            330
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              65,
+              131,
+              198,
+              263,
+              330
+            ],
+            "annotated": [
+              0,
+              65,
+              131,
+              300,
+              315,
+              330
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              1.0833333730697632,
+              2.183333396911621,
+              3.299999952316284,
+              4.383333206176758,
+              5.5
+            ],
+            "annotated": [
+              0.0,
+              1.0833333730697632,
+              2.183333396911621,
+              5.0,
+              5.25,
+              5.5
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_c00374385e_a_00000.png",
+              "droid_natural_c00374385e_a_00065.png",
+              "droid_natural_c00374385e_a_00131.png",
+              "droid_natural_c00374385e_a_00198.png",
+              "droid_natural_c00374385e_a_00263.png",
+              "droid_natural_c00374385e_a_00330.png"
+            ],
+            "annotated": [
+              "droid_natural_c00374385e_a_00000.png",
+              "droid_natural_c00374385e_a_00065.png",
+              "droid_natural_c00374385e_a_00131.png",
+              "droid_natural_c00374385e_a_00300.png",
+              "droid_natural_c00374385e_a_00315.png",
+              "droid_natural_c00374385e_a_00330.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "PennPAL+acda9df3+2023-07-07-21h-18m-12s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-07/Fri_Jul__7_21%3A18%3A12_2023/recordings/MP4/27085680.mp4",
+            "generation": "1710758561311076",
+            "bytes": 6155523,
+            "sha256": "d309345236d6628a4d7a4607e1810a8fb6d2186421b73a42fbe823fec2ceaa69",
+            "frame_count": 227
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-07/Fri_Jul__7_21%3A18%3A12_2023/metadata_PennPAL%2Bacda9df3%2B2023-07-07-21h-18m-12s.json",
+            "generation": "1710758561301150",
+            "bytes": 1787,
+            "sha256": "2b2e936cad942ca93db7d27000a0e5e8771bf560ea9deb81c59ec6263d7b7b2c"
+          },
+          "initial_interval": [
+            0,
+            60
+          ],
+          "terminal_interval": [
+            180,
+            223
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              44,
+              89,
+              133,
+              178,
+              223
+            ],
+            "annotated": [
+              0,
+              44,
+              89,
+              194,
+              208,
+              223
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.7333333492279053,
+              1.4833333492279053,
+              2.2166666984558105,
+              2.9666666984558105,
+              3.7166666984558105
+            ],
+            "annotated": [
+              0.0,
+              0.7333333492279053,
+              1.4833333492279053,
+              3.2333333492279053,
+              3.4666666984558105,
+              3.7166666984558105
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_c00374385e_b_00000.png",
+              "droid_natural_c00374385e_b_00044.png",
+              "droid_natural_c00374385e_b_00089.png",
+              "droid_natural_c00374385e_b_00133.png",
+              "droid_natural_c00374385e_b_00178.png",
+              "droid_natural_c00374385e_b_00223.png"
+            ],
+            "annotated": [
+              "droid_natural_c00374385e_b_00000.png",
+              "droid_natural_c00374385e_b_00044.png",
+              "droid_natural_c00374385e_b_00089.png",
+              "droid_natural_c00374385e_b_00194.png",
+              "droid_natural_c00374385e_b_00208.png",
+              "droid_natural_c00374385e_b_00223.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_19bf4a67ee",
+      "source_site": "PennPAL",
+      "scene_id": 9160815698,
+      "camera": "ext1",
+      "question": "In the last view of the glass door of the blue countertop oven before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "PennPAL+acda9df3+2023-07-10-21h-04m-33s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-10/Mon_Jul_10_21%3A04%3A33_2023/recordings/MP4/25455306.mp4",
+            "generation": "1710758567383463",
+            "bytes": 2508718,
+            "sha256": "6f6f27e35653e2fee7907845611c17535b8d611e883b1c1e403949c4714eeb3b",
+            "frame_count": 187
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-10/Mon_Jul_10_21%3A04%3A33_2023/metadata_PennPAL%2Bacda9df3%2B2023-07-10-21h-04m-33s.json",
+            "generation": "1710758567363957",
+            "bytes": 1803,
+            "sha256": "49d2cf2506a4960d24ee85ff6c9c29d5f5fc8292d68d9870e370fbf6f3df37ea"
+          },
+          "initial_interval": [
+            0,
+            69
+          ],
+          "terminal_interval": [
+            151,
+            184
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              36,
+              73,
+              110,
+              147,
+              184
+            ],
+            "annotated": [
+              0,
+              36,
+              73,
+              162,
+              173,
+              184
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.6000000238418579,
+              1.2166666984558105,
+              1.8333333730697632,
+              2.450000047683716,
+              3.066666603088379
+            ],
+            "annotated": [
+              0.0,
+              0.6000000238418579,
+              1.2166666984558105,
+              2.700000047683716,
+              2.883333444595337,
+              3.066666603088379
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_19bf4a67ee_a_00000.png",
+              "droid_natural_19bf4a67ee_a_00036.png",
+              "droid_natural_19bf4a67ee_a_00073.png",
+              "droid_natural_19bf4a67ee_a_00110.png",
+              "droid_natural_19bf4a67ee_a_00147.png",
+              "droid_natural_19bf4a67ee_a_00184.png"
+            ],
+            "annotated": [
+              "droid_natural_19bf4a67ee_a_00000.png",
+              "droid_natural_19bf4a67ee_a_00036.png",
+              "droid_natural_19bf4a67ee_a_00073.png",
+              "droid_natural_19bf4a67ee_a_00162.png",
+              "droid_natural_19bf4a67ee_a_00173.png",
+              "droid_natural_19bf4a67ee_a_00184.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "PennPAL+acda9df3+2023-07-10-21h-05m-18s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-10/Mon_Jul_10_21%3A05%3A18_2023/recordings/MP4/25455306.mp4",
+            "generation": "1710758567451868",
+            "bytes": 4391196,
+            "sha256": "d1838e81cfa032f199efcb795b467f0eeac2a22cdb52d95142176e18c67870a7",
+            "frame_count": 318
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-07-10/Mon_Jul_10_21%3A05%3A18_2023/metadata_PennPAL%2Bacda9df3%2B2023-07-10-21h-05m-18s.json",
+            "generation": "1710758567397746",
+            "bytes": 1804,
+            "sha256": "ff06c37ca40faec017ab7833e4d202b36020316c2f324f1ddd4a4a2988ba4b67"
+          },
+          "initial_interval": [
+            0,
+            110
+          ],
+          "terminal_interval": [
+            253,
+            313
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              62,
+              125,
+              187,
+              250,
+              313
+            ],
+            "annotated": [
+              0,
+              62,
+              125,
+              273,
+              293,
+              313
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              1.0333333015441895,
+              2.0833332538604736,
+              3.116666555404663,
+              4.166666507720947,
+              5.2166666984558105
+            ],
+            "annotated": [
+              0.0,
+              1.0333333015441895,
+              2.0833332538604736,
+              4.550000190734863,
+              4.883333206176758,
+              5.2166666984558105
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_19bf4a67ee_b_00000.png",
+              "droid_natural_19bf4a67ee_b_00062.png",
+              "droid_natural_19bf4a67ee_b_00125.png",
+              "droid_natural_19bf4a67ee_b_00187.png",
+              "droid_natural_19bf4a67ee_b_00250.png",
+              "droid_natural_19bf4a67ee_b_00313.png"
+            ],
+            "annotated": [
+              "droid_natural_19bf4a67ee_b_00000.png",
+              "droid_natural_19bf4a67ee_b_00062.png",
+              "droid_natural_19bf4a67ee_b_00125.png",
+              "droid_natural_19bf4a67ee_b_00273.png",
+              "droid_natural_19bf4a67ee_b_00293.png",
+              "droid_natural_19bf4a67ee_b_00313.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_10bd743a70",
+      "source_site": "TRI",
+      "scene_id": 8077138943,
+      "camera": "ext2",
+      "question": "In the last view of the glass-front cabinet door below the fruit basket before the scene changed, was it open or closed?",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "branches": {
+        "a": {
+          "source_episode": "TRI+52ca9b6a+2023-10-17-14h-09m-01s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-17/Tue_Oct_17_14%3A09%3A01_2023/recordings/MP4/28813166.mp4",
+            "generation": "1710760215340966",
+            "bytes": 13204787,
+            "sha256": "dffa11a53fd6b1578448e9f49def98e966a1833ca4f1c1bc6a19b9f3df51aaf1",
+            "frame_count": 392
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-17/Tue_Oct_17_14%3A09%3A01_2023/metadata_TRI%2B52ca9b6a%2B2023-10-17-14h-09m-01s.json",
+            "generation": "1710760215307612",
+            "bytes": 1796,
+            "sha256": "d35e395c94c59c1d3025d9e6ffcba3842804a87ea8f22910e5a36b915a0efe36"
+          },
+          "initial_interval": [
+            0,
+            140
+          ],
+          "terminal_interval": [
+            344,
+            387
+          ],
+          "gold": "A",
+          "source_indices": {
+            "uniform": [
+              0,
+              77,
+              154,
+              232,
+              309,
+              387
+            ],
+            "annotated": [
+              0,
+              77,
+              154,
+              358,
+              372,
+              387
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              1.2833333015441895,
+              2.566666603088379,
+              3.866666555404663,
+              5.150000095367432,
+              6.449999809265137
+            ],
+            "annotated": [
+              0.0,
+              1.2833333015441895,
+              2.566666603088379,
+              5.9666666984558105,
+              6.199999809265137,
+              6.449999809265137
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_10bd743a70_a_00000.png",
+              "droid_natural_10bd743a70_a_00077.png",
+              "droid_natural_10bd743a70_a_00154.png",
+              "droid_natural_10bd743a70_a_00232.png",
+              "droid_natural_10bd743a70_a_00309.png",
+              "droid_natural_10bd743a70_a_00387.png"
+            ],
+            "annotated": [
+              "droid_natural_10bd743a70_a_00000.png",
+              "droid_natural_10bd743a70_a_00077.png",
+              "droid_natural_10bd743a70_a_00154.png",
+              "droid_natural_10bd743a70_a_00358.png",
+              "droid_natural_10bd743a70_a_00372.png",
+              "droid_natural_10bd743a70_a_00387.png"
+            ]
+          }
+        },
+        "b": {
+          "source_episode": "TRI+52ca9b6a+2023-10-17-14h-07m-39s",
+          "video_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-17/Tue_Oct_17_14%3A07%3A39_2023/recordings/MP4/28813166.mp4",
+            "generation": "1710760215048774",
+            "bytes": 9654241,
+            "sha256": "0e299a82cbd34ad2f1ed72170c564c2e66166f4cfbb1b0dd911d7ced928a2c0f",
+            "frame_count": 281
+          },
+          "metadata_source": {
+            "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-17/Tue_Oct_17_14%3A07%3A39_2023/metadata_TRI%2B52ca9b6a%2B2023-10-17-14h-07m-39s.json",
+            "generation": "1710760215011050",
+            "bytes": 1786,
+            "sha256": "3115aeef488ab0e4e2fea7cf8d9ffbcd29e41bdb2a971175d8f70476e95b1ffe"
+          },
+          "initial_interval": [
+            0,
+            85
+          ],
+          "terminal_interval": [
+            255,
+            277
+          ],
+          "gold": "B",
+          "source_indices": {
+            "uniform": [
+              0,
+              55,
+              110,
+              166,
+              221,
+              277
+            ],
+            "annotated": [
+              0,
+              55,
+              110,
+              262,
+              269,
+              277
+            ]
+          },
+          "source_timestamps_s": {
+            "uniform": [
+              0.0,
+              0.9166666865348816,
+              1.8333333730697632,
+              2.7666666507720947,
+              3.683333396911621,
+              4.616666793823242
+            ],
+            "annotated": [
+              0.0,
+              0.9166666865348816,
+              1.8333333730697632,
+              4.366666793823242,
+              4.483333110809326,
+              4.616666793823242
+            ]
+          },
+          "frames": {
+            "uniform": [
+              "droid_natural_10bd743a70_b_00000.png",
+              "droid_natural_10bd743a70_b_00055.png",
+              "droid_natural_10bd743a70_b_00110.png",
+              "droid_natural_10bd743a70_b_00166.png",
+              "droid_natural_10bd743a70_b_00221.png",
+              "droid_natural_10bd743a70_b_00277.png"
+            ],
+            "annotated": [
+              "droid_natural_10bd743a70_b_00000.png",
+              "droid_natural_10bd743a70_b_00055.png",
+              "droid_natural_10bd743a70_b_00110.png",
+              "droid_natural_10bd743a70_b_00262.png",
+              "droid_natural_10bd743a70_b_00269.png",
+              "droid_natural_10bd743a70_b_00277.png"
+            ]
+          }
+        }
+      },
+      "recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    }
+  ]
+}

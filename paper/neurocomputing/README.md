@@ -1,6 +1,6 @@
 # Neurocomputing paper preparation
 
-Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. Annotated sub-second evidence recovered two of seven pairs at the same input budget. The next milestone compares automatic local refinement with uniform refinement.
+Working target selected by the user on 20 November 2026. The intended route is a regular research article with an original neural-inference improvement. Annotation-guided terminal attention improved robust results from 1/7 to 4/7 on seven DROID development pairs with ten fixed frames. A method claim now depends on finding useful spans without annotations and outperforming a matched recency baseline on fresh sources. [Terminal-attention results](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
 
 - [Phased Neurocomputing plan](submission_phase_plan.md) records current evidence, advancement criteria, confirmation, submission and revision.
 - [Publication roadmap](../../docs/PUBLICATION_ROADMAP.md) records the progression from the AutoDL scorer screen to TwinPast.

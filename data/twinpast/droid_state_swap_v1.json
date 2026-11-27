@@ -1,0 +1,378 @@
+{
+  "natural_history_manifest_sha256": "8422fcb786953ddb52ef7219b99cbe8bc21b78fdff4b6c00097fe6e2ebadb12e",
+  "terminal_context_archive_sha256": "7bdd55385917fc963a959bba0da8ecbb01d57a2ac2e14f7f65cebbcf10d52aaa",
+  "frame_zip_sha256": "5bcfb613c5eb2cd8a40e306d94a79a3e77258ba162b47ddbb025ffc2a56f8b49",
+  "cases": [
+    {
+      "pair_id": "droid_natural_8b01107c59",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_8b01107c59_a_00000.png",
+            "droid_natural_8b01107c59_a_00051.png",
+            "droid_natural_8b01107c59_a_00102.png",
+            "droid_natural_8b01107c59_a_00238.png",
+            "droid_natural_8b01107c59_a_00247.png",
+            "droid_natural_8b01107c59_a_00256.png"
+          ],
+          "swapped_history": [
+            "droid_natural_8b01107c59_b_00000.png",
+            "droid_natural_8b01107c59_b_00035.png",
+            "droid_natural_8b01107c59_a_00102.png",
+            "droid_natural_8b01107c59_a_00238.png",
+            "droid_natural_8b01107c59_a_00247.png",
+            "droid_natural_8b01107c59_a_00256.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_8b01107c59_b_00000.png",
+            "droid_natural_8b01107c59_b_00035.png",
+            "droid_natural_8b01107c59_b_00070.png",
+            "droid_natural_8b01107c59_b_00167.png",
+            "droid_natural_8b01107c59_b_00171.png",
+            "droid_natural_8b01107c59_b_00175.png"
+          ],
+          "swapped_history": [
+            "droid_natural_8b01107c59_a_00000.png",
+            "droid_natural_8b01107c59_a_00051.png",
+            "droid_natural_8b01107c59_b_00070.png",
+            "droid_natural_8b01107c59_b_00167.png",
+            "droid_natural_8b01107c59_b_00171.png",
+            "droid_natural_8b01107c59_b_00175.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_6d74030dc0",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_6d74030dc0_a_00000.png",
+            "droid_natural_6d74030dc0_a_00034.png",
+            "droid_natural_6d74030dc0_a_00068.png",
+            "droid_natural_6d74030dc0_a_00149.png",
+            "droid_natural_6d74030dc0_a_00160.png",
+            "droid_natural_6d74030dc0_a_00171.png"
+          ],
+          "swapped_history": [
+            "droid_natural_6d74030dc0_b_00000.png",
+            "droid_natural_6d74030dc0_b_00055.png",
+            "droid_natural_6d74030dc0_a_00068.png",
+            "droid_natural_6d74030dc0_a_00149.png",
+            "droid_natural_6d74030dc0_a_00160.png",
+            "droid_natural_6d74030dc0_a_00171.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_6d74030dc0_b_00000.png",
+            "droid_natural_6d74030dc0_b_00055.png",
+            "droid_natural_6d74030dc0_b_00111.png",
+            "droid_natural_6d74030dc0_b_00223.png",
+            "droid_natural_6d74030dc0_b_00229.png",
+            "droid_natural_6d74030dc0_b_00280.png"
+          ],
+          "swapped_history": [
+            "droid_natural_6d74030dc0_a_00000.png",
+            "droid_natural_6d74030dc0_a_00034.png",
+            "droid_natural_6d74030dc0_b_00111.png",
+            "droid_natural_6d74030dc0_b_00223.png",
+            "droid_natural_6d74030dc0_b_00229.png",
+            "droid_natural_6d74030dc0_b_00280.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_87abc314ec",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_87abc314ec_a_00000.png",
+            "droid_natural_87abc314ec_a_00063.png",
+            "droid_natural_87abc314ec_a_00127.png",
+            "droid_natural_87abc314ec_a_00279.png",
+            "droid_natural_87abc314ec_a_00299.png",
+            "droid_natural_87abc314ec_a_00320.png"
+          ],
+          "swapped_history": [
+            "droid_natural_87abc314ec_b_00000.png",
+            "droid_natural_87abc314ec_b_00030.png",
+            "droid_natural_87abc314ec_a_00127.png",
+            "droid_natural_87abc314ec_a_00279.png",
+            "droid_natural_87abc314ec_a_00299.png",
+            "droid_natural_87abc314ec_a_00320.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_87abc314ec_b_00000.png",
+            "droid_natural_87abc314ec_b_00030.png",
+            "droid_natural_87abc314ec_b_00060.png",
+            "droid_natural_87abc314ec_b_00120.png",
+            "droid_natural_87abc314ec_b_00131.png",
+            "droid_natural_87abc314ec_b_00151.png"
+          ],
+          "swapped_history": [
+            "droid_natural_87abc314ec_a_00000.png",
+            "droid_natural_87abc314ec_a_00063.png",
+            "droid_natural_87abc314ec_b_00060.png",
+            "droid_natural_87abc314ec_b_00120.png",
+            "droid_natural_87abc314ec_b_00131.png",
+            "droid_natural_87abc314ec_b_00151.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_29137e19c7",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_29137e19c7_a_00000.png",
+            "droid_natural_29137e19c7_a_00027.png",
+            "droid_natural_29137e19c7_a_00054.png",
+            "droid_natural_29137e19c7_a_00131.png",
+            "droid_natural_29137e19c7_a_00133.png",
+            "droid_natural_29137e19c7_a_00135.png"
+          ],
+          "swapped_history": [
+            "droid_natural_29137e19c7_b_00000.png",
+            "droid_natural_29137e19c7_b_00041.png",
+            "droid_natural_29137e19c7_a_00054.png",
+            "droid_natural_29137e19c7_a_00131.png",
+            "droid_natural_29137e19c7_a_00133.png",
+            "droid_natural_29137e19c7_a_00135.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_29137e19c7_b_00000.png",
+            "droid_natural_29137e19c7_b_00041.png",
+            "droid_natural_29137e19c7_b_00082.png",
+            "droid_natural_29137e19c7_b_00179.png",
+            "droid_natural_29137e19c7_b_00192.png",
+            "droid_natural_29137e19c7_b_00205.png"
+          ],
+          "swapped_history": [
+            "droid_natural_29137e19c7_a_00000.png",
+            "droid_natural_29137e19c7_a_00027.png",
+            "droid_natural_29137e19c7_b_00082.png",
+            "droid_natural_29137e19c7_b_00179.png",
+            "droid_natural_29137e19c7_b_00192.png",
+            "droid_natural_29137e19c7_b_00205.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_c00374385e",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_c00374385e_a_00000.png",
+            "droid_natural_c00374385e_a_00065.png",
+            "droid_natural_c00374385e_a_00131.png",
+            "droid_natural_c00374385e_a_00300.png",
+            "droid_natural_c00374385e_a_00315.png",
+            "droid_natural_c00374385e_a_00330.png"
+          ],
+          "swapped_history": [
+            "droid_natural_c00374385e_b_00000.png",
+            "droid_natural_c00374385e_b_00044.png",
+            "droid_natural_c00374385e_a_00131.png",
+            "droid_natural_c00374385e_a_00300.png",
+            "droid_natural_c00374385e_a_00315.png",
+            "droid_natural_c00374385e_a_00330.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_c00374385e_b_00000.png",
+            "droid_natural_c00374385e_b_00044.png",
+            "droid_natural_c00374385e_b_00089.png",
+            "droid_natural_c00374385e_b_00194.png",
+            "droid_natural_c00374385e_b_00208.png",
+            "droid_natural_c00374385e_b_00223.png"
+          ],
+          "swapped_history": [
+            "droid_natural_c00374385e_a_00000.png",
+            "droid_natural_c00374385e_a_00065.png",
+            "droid_natural_c00374385e_b_00089.png",
+            "droid_natural_c00374385e_b_00194.png",
+            "droid_natural_c00374385e_b_00208.png",
+            "droid_natural_c00374385e_b_00223.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_19bf4a67ee",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_19bf4a67ee_a_00000.png",
+            "droid_natural_19bf4a67ee_a_00036.png",
+            "droid_natural_19bf4a67ee_a_00073.png",
+            "droid_natural_19bf4a67ee_a_00162.png",
+            "droid_natural_19bf4a67ee_a_00173.png",
+            "droid_natural_19bf4a67ee_a_00184.png"
+          ],
+          "swapped_history": [
+            "droid_natural_19bf4a67ee_b_00000.png",
+            "droid_natural_19bf4a67ee_b_00062.png",
+            "droid_natural_19bf4a67ee_a_00073.png",
+            "droid_natural_19bf4a67ee_a_00162.png",
+            "droid_natural_19bf4a67ee_a_00173.png",
+            "droid_natural_19bf4a67ee_a_00184.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_19bf4a67ee_b_00000.png",
+            "droid_natural_19bf4a67ee_b_00062.png",
+            "droid_natural_19bf4a67ee_b_00125.png",
+            "droid_natural_19bf4a67ee_b_00273.png",
+            "droid_natural_19bf4a67ee_b_00293.png",
+            "droid_natural_19bf4a67ee_b_00313.png"
+          ],
+          "swapped_history": [
+            "droid_natural_19bf4a67ee_a_00000.png",
+            "droid_natural_19bf4a67ee_a_00036.png",
+            "droid_natural_19bf4a67ee_b_00125.png",
+            "droid_natural_19bf4a67ee_b_00273.png",
+            "droid_natural_19bf4a67ee_b_00293.png",
+            "droid_natural_19bf4a67ee_b_00313.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    },
+    {
+      "pair_id": "droid_natural_10bd743a70",
+      "replaced_history_slots": [
+        0,
+        1
+      ],
+      "branches": {
+        "a": {
+          "donor_branch": "b",
+          "original_history": [
+            "droid_natural_10bd743a70_a_00000.png",
+            "droid_natural_10bd743a70_a_00077.png",
+            "droid_natural_10bd743a70_a_00154.png",
+            "droid_natural_10bd743a70_a_00358.png",
+            "droid_natural_10bd743a70_a_00372.png",
+            "droid_natural_10bd743a70_a_00387.png"
+          ],
+          "swapped_history": [
+            "droid_natural_10bd743a70_b_00000.png",
+            "droid_natural_10bd743a70_b_00055.png",
+            "droid_natural_10bd743a70_a_00154.png",
+            "droid_natural_10bd743a70_a_00358.png",
+            "droid_natural_10bd743a70_a_00372.png",
+            "droid_natural_10bd743a70_a_00387.png"
+          ]
+        },
+        "b": {
+          "donor_branch": "a",
+          "original_history": [
+            "droid_natural_10bd743a70_b_00000.png",
+            "droid_natural_10bd743a70_b_00055.png",
+            "droid_natural_10bd743a70_b_00110.png",
+            "droid_natural_10bd743a70_b_00262.png",
+            "droid_natural_10bd743a70_b_00269.png",
+            "droid_natural_10bd743a70_b_00277.png"
+          ],
+          "swapped_history": [
+            "droid_natural_10bd743a70_a_00000.png",
+            "droid_natural_10bd743a70_a_00077.png",
+            "droid_natural_10bd743a70_b_00110.png",
+            "droid_natural_10bd743a70_b_00262.png",
+            "droid_natural_10bd743a70_b_00269.png",
+            "droid_natural_10bd743a70_b_00277.png"
+          ]
+        }
+      },
+      "shared_recent_frames": [
+        "droid_shared_recent_00015.png",
+        "droid_shared_recent_00075.png",
+        "droid_shared_recent_00135.png",
+        "droid_shared_recent_00195.png"
+      ]
+    }
+  ]
+}

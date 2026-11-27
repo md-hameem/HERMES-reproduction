@@ -23,6 +23,25 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 | [TwinPast temporal-window audit](audits/twinpast_temporal_windows_2026-11-23_audit.json) | Recomputed selections, paired outcomes, annotation overlap and forward calls |
 | [TwinPast sub-second archive](archives/HERMES_twinpast_subsecond_evidence.zip) | Seven checkpoints, 56 scores and 14 contact sheets |
 | [TwinPast sub-second audit](audits/twinpast_subsecond_2026-11-23_audit.json) | Exact uniform replay and two robust recoveries |
+| [TwinPast matched refinement archive](archives/HERMES_twinpast_refinement_evidence.zip) | Eight checkpoints and 96 answer scores |
+| [TwinPast matched refinement audit](audits/twinpast_refinement_2026-11-27_audit.json) | Verified paired outcomes, frame budgets and timestamp overlap |
+| [TwinPast fixed-frame readout archive](archives/HERMES_twinpast_readout_evidence.zip) | Eight checkpoints, 64 exact direct replays and 128 total choice scores |
+| [TwinPast fixed-frame readout audit](audits/twinpast_readout_2026-11-27_audit.json) | Paired outcomes, observation agreement and decoder cost |
+| [TwinPast CPU boundary-coverage audit](audits/twinpast_boundary_cpu_2026-11-27.json) | Frozen candidates, frame selections and paired interval coverage for 16 branches |
+| [TwinPast boundary GPU archive](archives/HERMES_twinpast_boundary_evidence.zip) | Eight checkpoints, frozen selections, 64 exact baseline replays and 96 total choice scores |
+| [TwinPast boundary GPU audit](audits/twinpast_boundary_gpu_2026-11-27.json) | Paired outcomes and synchronized stage times |
+| [DROID state-control archive](archives/HERMES_droid_state_control_evidence.zip) | Source receipts and 96 choice scores from six source-separated pairs |
+| [DROID state-control audit](audits/droid_state_control_2026-11-27_audit.json) | Identical-input checks and recomputed robust outcomes |
+| [DROID natural-history archive](archives/HERMES_droid_natural_history_evidence.zip) | Seven scene pairs, 56 answer scores and 28 exact uniform repeats |
+| [DROID natural-history audit](audits/droid_natural_history_2026-11-27_audit.json) | Verified 114 input frames, one recovery and no regression |
+| [DROID earlier-state masking archive](archives/HERMES_droid_state_interference_evidence.zip) | Equal-area masking with fixed terminal and recent frames |
+| [DROID earlier-state masking audit](audits/droid_state_interference_2026-11-27_audit.json) | 28 replay checks, 56 verified mask hashes and 84 choice scores |
+| [DROID terminal-context archive](archives/HERMES_droid_terminal_context_evidence.zip) | Three context lengths, 84 choice scores and 28 exact replays |
+| [DROID terminal-context audit](audits/droid_terminal_context_2026-11-27_audit.json) | Verified terminal images and paired context transitions |
+| [DROID earlier-state swap archive](archives/HERMES_droid_state_swap_evidence.zip) | Frozen symmetric substitutions, 56 scores and 28 exact replays |
+| [DROID earlier-state swap audit](audits/droid_state_swap_2026-11-27_audit.json) | Robust pair exchange and gold-margin analysis |
+| [DROID terminal attention archive](archives/HERMES_droid_terminal_attention_evidence.zip) | 112 score vectors and 56 replay comparisons across four conditions |
+| [DROID terminal attention audit](audits/droid_terminal_attention_2026-11-27_audit.json) | Verification of frame receipts, replay checks and paired outcomes |
 | [Target-binding archive](archives/HERMES_target_binding_evidence.zip) | Original 60-clip run, 300 checkpoints, 1,800 selector outcomes and blinded window-pair worksheet |
 | [Target-binding audit](audits/target_binding_2026-11-22_audit.json) | Reconstructed integrity, candidate windows, selector outputs, paired estimates and component timing |
 | [Context-diagnostic archive](archives/HERMES_context_diagnostic_evidence.zip) | Completed seven-case run: 140 payloads, 84 checkpoints, 74 answers, ten skips and original review images |
@@ -36,6 +55,8 @@ Each experiment ZIP is stored once under `archives/`. Full local extractions are
 | [Original AutoDL evidence](autodl_2026-10-25/) | Original three-budget results, logs, paired analyses and efficiency exports. Internal historical paths are preserved. |
 | [October controls](autodl_2026-10-28/) | Hash-verified HERMES repeats, FIFO controls, original attention diagnostic and preserved earlier evidence |
 | [Local five-stage audit](audits/five_stage_local_audit.json) | Independently recomputed integrity, prediction, checkpoint, statistics and timing checks |
+
+To re-audit the DROID terminal-attention run, place the original `DROID_natural_history_frames.zip` in `evidence/local/droid-natural-history/` and run `python scripts/validate_droid_terminal_attention_evidence.py` from the project root. The frame pack stays local and is checked against the frozen SHA-256 and the 114 per-frame receipts. [Frame-pack preparation](<../docs/reports/2026-11-27 droid natural history protocol.md>)
 
 The five-stage archive SHA-256 is `b8bc4cf8a3b28e6854b2e76b8c0239b12d3b5598ee1a07dafc03d0326a900518`. The supplement SHA-256 is `4be19b26c61237860c322c5431090dcafc900aae400b9c0ed8204a2c68aab66a`. The uploaded executed notebook is stored under `notebooks/executed/` and its SHA-256 is recorded in the local audit.
 

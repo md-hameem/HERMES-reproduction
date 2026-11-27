@@ -1,6 +1,6 @@
 # Neurocomputing publication roadmap
 
-Updated 23 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The annotated native-timestamp check passed its exploratory criterion with 2/7 robust recoveries at the fixed ten-frame budget. [Sub-second audit](<reports/2026-11-23 twinpast subsecond analysis.md>)
+Updated 27 November 2026. Neurocomputing remains the working target for a regular article under the advisor's original-method requirement. The DROID terminal-attention feasibility run recovered three robust pairs at fixed input length and positions. The next milestone is a source-disjoint test of automatic span selection against matched recency. [Terminal-attention audit](<reports/2026-11-27 droid terminal attention results.md>)
 
 Use the [phased Neurocomputing plan](../paper/neurocomputing/submission_phase_plan.md) for the current go/no-go criteria, confirmation design, pre-submission review and revision workflow. The previous experiment records below preserve their original decisions.
 
@@ -85,4 +85,4 @@ Use the current author guide and submission system for a final format/policy che
 
 The construction selector, frozen short-query confirmation and target-binding verifier did not meet their respective accuracy gates. The single-reviewer StreamingBench pass also fell below the same-clip pilot threshold. Preserve those results as development evidence. [Target-binding audit](<reports/2026-11-22 q1 audit of target binding.md>) · [Blinded review](<reports/2026-11-23 blinded visual support first pass.md>)
 
-Compare one annotation-blind local refinement rule with uniform refinement under matched search and answer budgets. Exclude both inspected development sets and overlapping sources from confirmation. [Follow-up design](<reports/2026-11-23 twinpast subsecond analysis.md#next-experiment>)
+The DROID terminal-context comparison found a drop from 6/7 robust pairs in isolation to 1/7 with full history. At fixed input length and positions, annotation-guided terminal readout recovered three robust pairs and preserved the causal control's only robust success. Evaluate an annotation-blind selector against a matched three-frame recency window on source-disjoint cases. [Terminal-attention results](<reports/2026-11-27 droid terminal attention results.md>)

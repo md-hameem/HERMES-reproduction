@@ -1,0 +1,80 @@
+{
+  "archive_sha256": "7bdd55385917fc963a959bba0da8ecbb01d57a2ac2e14f7f65cebbcf10d52aaa",
+  "notebook_sha256": "87ea1d863e6fe6f3f19946b5dbff0f098927b7d0040e53f3e4fecb40167179b0",
+  "verified_payloads": 23,
+  "verified_input_frames": 114,
+  "replay_gate": {
+    "scores": 28,
+    "max_abs": 0.0,
+    "failures": []
+  },
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "archived_full_gpu": "NVIDIA GeForce RTX 4080",
+  "branch_order_transitions": {
+    "added_recent": {
+      "wrong_to_correct": 1,
+      "correct_to_wrong": 2
+    },
+    "added_earlier": {
+      "wrong_to_correct": 0,
+      "correct_to_wrong": 12
+    }
+  },
+  "pairs": 7,
+  "scores": 84,
+  "methods": {
+    "terminal_only": {
+      "frames": 3,
+      "robust_pairs": [
+        "droid_natural_8b01107c59",
+        "droid_natural_87abc314ec",
+        "droid_natural_29137e19c7",
+        "droid_natural_c00374385e",
+        "droid_natural_19bf4a67ee",
+        "droid_natural_10bd743a70"
+      ],
+      "correct_branch_orders": 27,
+      "option_order_flips": 1
+    },
+    "terminal_recent": {
+      "frames": 7,
+      "robust_pairs": [
+        "droid_natural_8b01107c59",
+        "droid_natural_6d74030dc0",
+        "droid_natural_87abc314ec",
+        "droid_natural_29137e19c7",
+        "droid_natural_19bf4a67ee"
+      ],
+      "correct_branch_orders": 26,
+      "option_order_flips": 2
+    },
+    "full_annotated": {
+      "frames": 10,
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14,
+      "option_order_flips": 2
+    }
+  },
+  "context_transitions": {
+    "added_recent": {
+      "gains": [
+        "droid_natural_6d74030dc0"
+      ],
+      "losses": [
+        "droid_natural_10bd743a70",
+        "droid_natural_c00374385e"
+      ]
+    },
+    "added_earlier": {
+      "gains": [],
+      "losses": [
+        "droid_natural_19bf4a67ee",
+        "droid_natural_29137e19c7",
+        "droid_natural_6d74030dc0",
+        "droid_natural_8b01107c59"
+      ]
+    }
+  }
+}

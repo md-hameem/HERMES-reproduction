@@ -1,6 +1,6 @@
 # HERMES project status
 
-Updated 23 November 2026 after the TwinPast sub-second evidence audit. Dated evidence retains its historical context.
+Updated 27 November 2026 after the DROID fixed-position terminal-attention audit.
 
 All five planned execution stages have completed. The project has progressed from a 50-video reproduction to an audited full StreamingBench real-time visual benchmark comparison on 498 videos and 2,495 questions per method. The latest GPU recorded in the evidence is an RTX 4090 with 24,564 MiB. Earlier runs used the hardware recorded in the October evidence.
 
@@ -64,7 +64,7 @@ The full benchmark combines October results on samples 201–250 with November m
 
 ## Remaining work
 
-**Immediate experiment.** Compare automatic local refinement with uniform sub-second refinement at a matched cost. The annotated native-timestamp control recovered 2/7 pairs and uniform replay matched exactly. [Audit and follow-up](<reports/2026-11-23 twinpast subsecond analysis.md>)
+**Immediate research step.** Test whether an annotation-blind selector can choose useful spans on fresh sources. With ten fixed frames and token positions, annotation-guided terminal attention reached 4/7 robust DROID pairs versus 1/7 for native and causal controls and 0/7 for matched earlier access. It recovered three pairs and preserved the causal control's only robust pair. [Terminal-attention results](<reports/2026-11-27 droid terminal attention results.md>)
 
 The [research gap map](<reports/HERMES research gap map.md>) and [paper review ledger](<reports/HERMES paper review ledger.csv>) now account for all 51 local PDF files through selective method/evaluation/limitations review, with per-file depth and verified hashes. The [gap register](<reports/HERMES gap register.csv>) separates occupied directions, implementation fixes and conditional research questions. This 19 November review recommends evidence localization and a small corrected-scorer QA diagnostic before selecting a new method; it does not establish a validated original contribution.
 

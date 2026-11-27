@@ -1,0 +1,6196 @@
+{
+  "refinement_archive_sha256": "c3848d6a96dd1fff1fce4c8465fc38c04ee22c7cd18afdea6697cc464f067201",
+  "manifest_sha256": "3ef783e6f7df0a78ca945956d3f7c127f5cc457125df0ba43c0d5ed61d1e6370",
+  "threshold": 0.2,
+  "fps": 4,
+  "answer_history_frames": 6,
+  "shared_recent_frames": 4,
+  "window_budget": 3,
+  "summary": {
+    "branches": 16,
+    "annotated_branches": 12,
+    "coverage": {
+      "local_uniform": {
+        "any_interval": 4,
+        "final_interval": 0
+      },
+      "rank_only": {
+        "any_interval": 5,
+        "final_interval": 2
+      },
+      "anchor_only": {
+        "any_interval": 6,
+        "final_interval": 3
+      },
+      "combined": {
+        "any_interval": 8,
+        "final_interval": 8
+      },
+      "all_candidates": {
+        "any_interval": 10,
+        "final_interval": 10
+      },
+      "original_windows": {
+        "any_interval": 6,
+        "final_interval": 3
+      },
+      "constrained_windows": {
+        "any_interval": 8,
+        "final_interval": 8
+      }
+    },
+    "paired": {
+      "rank_only": {
+        "any_interval": {
+          "gained": [
+            "twinpast_0118/A",
+            "twinpast_0118/B"
+          ],
+          "lost": [
+            "twinpast_0085/B"
+          ]
+        },
+        "final_interval": {
+          "gained": [
+            "twinpast_0118/A",
+            "twinpast_0118/B"
+          ],
+          "lost": []
+        }
+      },
+      "anchor_only": {
+        "any_interval": {
+          "gained": [
+            "twinpast_0164/A",
+            "twinpast_0164/B"
+          ],
+          "lost": []
+        },
+        "final_interval": {
+          "gained": [
+            "twinpast_0164/A",
+            "twinpast_0164/B",
+            "twinpast_0085/A"
+          ],
+          "lost": []
+        }
+      },
+      "combined": {
+        "any_interval": {
+          "gained": [
+            "twinpast_0118/A",
+            "twinpast_0118/B",
+            "twinpast_0164/A",
+            "twinpast_0164/B"
+          ],
+          "lost": []
+        },
+        "final_interval": {
+          "gained": [
+            "twinpast_0118/A",
+            "twinpast_0118/B",
+            "twinpast_0338/A",
+            "twinpast_0338/B",
+            "twinpast_0164/A",
+            "twinpast_0164/B",
+            "twinpast_0085/A",
+            "twinpast_0085/B"
+          ],
+          "lost": []
+        }
+      }
+    },
+    "pairs_annotated_on_both_branches": 6,
+    "pairs_with_both_final_intervals": {
+      "local_uniform": 0,
+      "rank_only": 1,
+      "anchor_only": 1,
+      "combined": 4,
+      "all_candidates": 5,
+      "original_windows": 1,
+      "constrained_windows": 4
+    },
+    "changed_rankings": 7,
+    "changed_combined_history": 11,
+    "decoded_probe_frames": 1996,
+    "development_criterion_met": true
+  },
+  "branches": [
+    {
+      "pair_id": "twinpast_0255",
+      "branch": "A",
+      "decoded_probe_frames": 125,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.0546875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.022921204566955566,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": 0.0078125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.022224491462111473,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": 0.171875,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.018527595326304436,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            7,
+            10
+          ],
+          "relevance": 0.25,
+          "indices": [
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240
+          ],
+          "peak_delta": 0.01190314069390297,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": 0.265625,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.015781588852405548,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": 0.3046875,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.015781588852405548,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": 0.2265625,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.020000454038381577,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": 0.1953125,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.017960239201784134,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": 0.234375,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.016882263123989105,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            22,
+            25
+          ],
+          "relevance": 0.2734375,
+          "indices": [
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600
+          ],
+          "peak_delta": 0.3155682682991028,
+          "pre_cut_slot": 9
+        },
+        {
+          "window": [
+            25,
+            28
+          ],
+          "relevance": -0.125,
+          "indices": [
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672
+          ],
+          "peak_delta": 0.03300880268216133,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            28,
+            31
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744
+          ],
+          "peak_delta": 0.06600853055715561,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          7,
+          10
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          22,
+          25
+        ]
+      ],
+      "constrained_windows": [
+        [
+          7,
+          10
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          22,
+          25
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          186,
+          222,
+          306,
+          342,
+          546,
+          582
+        ],
+        "rank_only": [
+          186,
+          222,
+          306,
+          342,
+          546,
+          582
+        ],
+        "anchor_only": [
+          186,
+          222,
+          306,
+          342,
+          546,
+          582
+        ],
+        "combined": [
+          186,
+          222,
+          306,
+          342,
+          546,
+          582
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": false,
+          "final_interval": false
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0255",
+      "branch": "B",
+      "decoded_probe_frames": 125,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.0546875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.043391428887844086,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": 0.109375,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.030809732154011726,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": 0.140625,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.0668799877166748,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            7,
+            10
+          ],
+          "relevance": 0.1171875,
+          "indices": [
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240
+          ],
+          "peak_delta": 0.0668799877166748,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": 0.0390625,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.06461510807275772,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": 0.234375,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.03341503068804741,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": 0.140625,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.022249454632401466,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": 0.015625,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.02152097038924694,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": 0.1015625,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.029586508870124817,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            22,
+            25
+          ],
+          "relevance": -0.203125,
+          "indices": [
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600
+          ],
+          "peak_delta": 0.3849741220474243,
+          "pre_cut_slot": 9
+        },
+        {
+          "window": [
+            25,
+            28
+          ],
+          "relevance": -0.125,
+          "indices": [
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672
+          ],
+          "peak_delta": 0.03300880268216133,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            28,
+            31
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744
+          ],
+          "peak_delta": 0.06600853055715561,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          5,
+          8
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "constrained_windows": [
+        [
+          5,
+          8
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          22,
+          25
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          138,
+          174,
+          306,
+          342,
+          498,
+          534
+        ],
+        "rank_only": [
+          138,
+          174,
+          306,
+          342,
+          546,
+          582
+        ],
+        "anchor_only": [
+          138,
+          174,
+          306,
+          342,
+          498,
+          534
+        ],
+        "combined": [
+          138,
+          174,
+          306,
+          342,
+          546,
+          582
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": false,
+          "final_interval": false
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0118",
+      "branch": "A",
+      "decoded_probe_frames": 150,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.21875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.037338871508836746,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": 0.1953125,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.281358927488327,
+          "pre_cut_slot": 10
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.011161038652062416,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": -0.3671875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.020753903314471245,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.025753449648618698,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": -0.34375,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.03203295171260834,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": -0.3671875,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.009524782188236713,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            24,
+            27
+          ],
+          "relevance": -0.3515625,
+          "indices": [
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648
+          ],
+          "peak_delta": 0.024525688961148262,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            27,
+            30
+          ],
+          "relevance": -0.375,
+          "indices": [
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720
+          ],
+          "peak_delta": 0.006958060897886753,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            31,
+            34
+          ],
+          "relevance": -0.3515625,
+          "indices": [
+            744,
+            750,
+            756,
+            762,
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816
+          ],
+          "peak_delta": 0.0205019973218441,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            34,
+            37
+          ],
+          "relevance": -0.359375,
+          "indices": [
+            816,
+            822,
+            828,
+            834,
+            840,
+            846,
+            852,
+            858,
+            864,
+            870,
+            876,
+            882,
+            888
+          ],
+          "peak_delta": 0.019818900153040886,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            38,
+            41
+          ],
+          "relevance": -0.375,
+          "indices": [
+            912,
+            918,
+            924,
+            930,
+            936,
+            942,
+            948,
+            954,
+            960,
+            966,
+            972,
+            978,
+            984
+          ],
+          "peak_delta": 0.020277325063943863,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          24,
+          27
+        ]
+      ],
+      "constrained_windows": [
+        [
+          3,
+          6
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          24,
+          27
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          426,
+          462,
+          594,
+          630
+        ],
+        "rank_only": [
+          90,
+          126,
+          426,
+          462,
+          594,
+          630
+        ],
+        "anchor_only": [
+          18,
+          54,
+          426,
+          462,
+          594,
+          630
+        ],
+        "combined": [
+          90,
+          132,
+          426,
+          462,
+          594,
+          630
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0118",
+      "branch": "B",
+      "decoded_probe_frames": 150,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.484375,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.07436002045869827,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": 0.03125,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.28774964809417725,
+          "pre_cut_slot": 10
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.011161038652062416,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": -0.3671875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.020753903314471245,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.025753449648618698,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": -0.34375,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.03203295171260834,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": -0.3671875,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.009524782188236713,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            24,
+            27
+          ],
+          "relevance": -0.3515625,
+          "indices": [
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648
+          ],
+          "peak_delta": 0.024525688961148262,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            27,
+            30
+          ],
+          "relevance": -0.375,
+          "indices": [
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720
+          ],
+          "peak_delta": 0.006958060897886753,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            31,
+            34
+          ],
+          "relevance": -0.3515625,
+          "indices": [
+            744,
+            750,
+            756,
+            762,
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816
+          ],
+          "peak_delta": 0.0205019973218441,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            34,
+            37
+          ],
+          "relevance": -0.359375,
+          "indices": [
+            816,
+            822,
+            828,
+            834,
+            840,
+            846,
+            852,
+            858,
+            864,
+            870,
+            876,
+            882,
+            888
+          ],
+          "peak_delta": 0.019818900153040886,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            38,
+            41
+          ],
+          "relevance": -0.375,
+          "indices": [
+            912,
+            918,
+            924,
+            930,
+            936,
+            942,
+            948,
+            954,
+            960,
+            966,
+            972,
+            978,
+            984
+          ],
+          "peak_delta": 0.020277325063943863,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          24,
+          27
+        ]
+      ],
+      "constrained_windows": [
+        [
+          3,
+          6
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          24,
+          27
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          426,
+          462,
+          594,
+          630
+        ],
+        "rank_only": [
+          90,
+          126,
+          426,
+          462,
+          594,
+          630
+        ],
+        "anchor_only": [
+          18,
+          54,
+          426,
+          462,
+          594,
+          630
+        ],
+        "combined": [
+          90,
+          132,
+          426,
+          462,
+          594,
+          630
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0338",
+      "branch": "A",
+      "decoded_probe_frames": 141,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.0859375,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.050653595477342606,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -1.09375,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3917461037635803,
+          "pre_cut_slot": 8
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.515625,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.01331472396850586,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.40625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.008365105837583542,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": -0.359375,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.012992464937269688,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            14,
+            17
+          ],
+          "relevance": -0.5,
+          "indices": [
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408
+          ],
+          "peak_delta": 0.010019517503678799,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": -0.5703125,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.013396423310041428,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": -0.6328125,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.01194852963089943,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            23,
+            26
+          ],
+          "relevance": -0.5859375,
+          "indices": [
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624
+          ],
+          "peak_delta": 0.012833605520427227,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": -0.5078125,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.014449437148869038,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            29,
+            32
+          ],
+          "relevance": -0.625,
+          "indices": [
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744,
+            750,
+            756,
+            762,
+            768
+          ],
+          "peak_delta": 0.009018699638545513,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": -0.53125,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.014231572858989239,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          26,
+          29
+        ]
+      ],
+      "constrained_windows": [
+        [
+          2,
+          5
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          26,
+          29
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          282,
+          318,
+          642,
+          678
+        ],
+        "rank_only": [
+          66,
+          102,
+          282,
+          318,
+          642,
+          678
+        ],
+        "anchor_only": [
+          18,
+          54,
+          282,
+          318,
+          642,
+          678
+        ],
+        "combined": [
+          66,
+          96,
+          282,
+          318,
+          642,
+          678
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0338",
+      "branch": "B",
+      "decoded_probe_frames": 141,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.171875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.05959059298038483,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.953125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3522217571735382,
+          "pre_cut_slot": 8
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.515625,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.01331472396850586,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.40625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.008365105837583542,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": -0.359375,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.012992464937269688,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            14,
+            17
+          ],
+          "relevance": -0.5,
+          "indices": [
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408
+          ],
+          "peak_delta": 0.010019517503678799,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": -0.5703125,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.013396423310041428,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": -0.6328125,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.01194852963089943,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            23,
+            26
+          ],
+          "relevance": -0.5859375,
+          "indices": [
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624
+          ],
+          "peak_delta": 0.012833605520427227,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": -0.5078125,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.014449437148869038,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            29,
+            32
+          ],
+          "relevance": -0.625,
+          "indices": [
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744,
+            750,
+            756,
+            762,
+            768
+          ],
+          "peak_delta": 0.009018699638545513,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": -0.53125,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.014231572858989239,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          26,
+          29
+        ]
+      ],
+      "constrained_windows": [
+        [
+          2,
+          5
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          26,
+          29
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          282,
+          318,
+          642,
+          678
+        ],
+        "rank_only": [
+          66,
+          102,
+          282,
+          318,
+          642,
+          678
+        ],
+        "anchor_only": [
+          18,
+          54,
+          282,
+          318,
+          642,
+          678
+        ],
+        "combined": [
+          66,
+          96,
+          282,
+          318,
+          642,
+          678
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0164",
+      "branch": "A",
+      "decoded_probe_frames": 73,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.4453125,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.10825163125991821,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            1,
+            4
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96
+          ],
+          "peak_delta": 0.10825163125991821,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3595724403858185,
+          "pre_cut_slot": 10
+        },
+        {
+          "window": [
+            4,
+            7
+          ],
+          "relevance": 0.3125,
+          "indices": [
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168
+          ],
+          "peak_delta": 0.3595724403858185,
+          "pre_cut_slot": 2
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.3125,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.09280364960432053,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": -0.2734375,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.09280364960432053,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.2265625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.050290483981370926,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": -0.2421875,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.044825706630945206,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.03338099271059036,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": -0.1796875,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.010947712697088718,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.0064406320452690125,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.006474672816693783,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          4,
+          7
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "constrained_windows": [
+        [
+          4,
+          7
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          114,
+          150,
+          210,
+          246,
+          306,
+          342
+        ],
+        "rank_only": [
+          114,
+          150,
+          210,
+          246,
+          306,
+          342
+        ],
+        "anchor_only": [
+          108,
+          150,
+          210,
+          246,
+          306,
+          342
+        ],
+        "combined": [
+          108,
+          150,
+          210,
+          246,
+          306,
+          342
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0164",
+      "branch": "B",
+      "decoded_probe_frames": 73,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.1953125,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.10849673300981522,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            1,
+            4
+          ],
+          "relevance": 0.25,
+          "indices": [
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96
+          ],
+          "peak_delta": 0.10849673300981522,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.2578125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3619031310081482,
+          "pre_cut_slot": 10
+        },
+        {
+          "window": [
+            4,
+            7
+          ],
+          "relevance": -0.125,
+          "indices": [
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168
+          ],
+          "peak_delta": 0.3619031310081482,
+          "pre_cut_slot": 2
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.3125,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.09280364960432053,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": -0.2734375,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.09280364960432053,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.2265625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.050290483981370926,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": -0.2421875,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.044825706630945206,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.03338099271059036,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": -0.1796875,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.010947712697088718,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.0064406320452690125,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.006474672816693783,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "constrained_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          114,
+          150,
+          306,
+          342
+        ],
+        "rank_only": [
+          18,
+          54,
+          114,
+          150,
+          306,
+          342
+        ],
+        "anchor_only": [
+          18,
+          54,
+          108,
+          150,
+          306,
+          342
+        ],
+        "combined": [
+          18,
+          54,
+          108,
+          150,
+          306,
+          342
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0120",
+      "branch": "A",
+      "decoded_probe_frames": 147,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.0703125,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.07240831851959229,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": 0.1796875,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.06962145864963531,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": 0.2890625,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.3542642593383789,
+          "pre_cut_slot": 7
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": -0.1015625,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.0709717720746994,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": -0.2109375,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.052759621292352676,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": -0.234375,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.05604575201869011,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            19,
+            22
+          ],
+          "relevance": -0.234375,
+          "indices": [
+            456,
+            462,
+            468,
+            474,
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528
+          ],
+          "peak_delta": 0.0383419543504715,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            22,
+            25
+          ],
+          "relevance": -0.1015625,
+          "indices": [
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600
+          ],
+          "peak_delta": 0.07855845987796783,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            25,
+            28
+          ],
+          "relevance": -0.25,
+          "indices": [
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672
+          ],
+          "peak_delta": 0.043028321117162704,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            28,
+            31
+          ],
+          "relevance": -0.1328125,
+          "indices": [
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744
+          ],
+          "peak_delta": 0.11417710781097412,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            31,
+            34
+          ],
+          "relevance": -0.3828125,
+          "indices": [
+            744,
+            750,
+            756,
+            762,
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816
+          ],
+          "peak_delta": 0.07479121536016464,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            35,
+            38
+          ],
+          "relevance": -0.171875,
+          "indices": [
+            840,
+            846,
+            852,
+            858,
+            864,
+            870,
+            876,
+            882,
+            888,
+            894,
+            900,
+            906,
+            912
+          ],
+          "peak_delta": 0.05426652356982231,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          22,
+          25
+        ]
+      ],
+      "constrained_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          22,
+          25
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          162,
+          198,
+          546,
+          582
+        ],
+        "rank_only": [
+          18,
+          54,
+          162,
+          198,
+          546,
+          582
+        ],
+        "anchor_only": [
+          18,
+          54,
+          162,
+          186,
+          546,
+          582
+        ],
+        "combined": [
+          18,
+          54,
+          162,
+          186,
+          546,
+          582
+        ]
+      },
+      "overlap": null
+    },
+    {
+      "pair_id": "twinpast_0120",
+      "branch": "B",
+      "decoded_probe_frames": 147,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.3515625,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.06424972414970398,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": -0.625,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.08972403407096863,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            6,
+            9
+          ],
+          "relevance": -0.3046875,
+          "indices": [
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216
+          ],
+          "peak_delta": 0.2328658252954483,
+          "pre_cut_slot": 7
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": -0.1015625,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.0709717720746994,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            12,
+            15
+          ],
+          "relevance": -0.2109375,
+          "indices": [
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360
+          ],
+          "peak_delta": 0.052759621292352676,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            15,
+            18
+          ],
+          "relevance": -0.234375,
+          "indices": [
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432
+          ],
+          "peak_delta": 0.05604575201869011,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            19,
+            22
+          ],
+          "relevance": -0.234375,
+          "indices": [
+            456,
+            462,
+            468,
+            474,
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528
+          ],
+          "peak_delta": 0.0383419543504715,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            22,
+            25
+          ],
+          "relevance": -0.1015625,
+          "indices": [
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600
+          ],
+          "peak_delta": 0.07855845987796783,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            25,
+            28
+          ],
+          "relevance": -0.25,
+          "indices": [
+            600,
+            606,
+            612,
+            618,
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672
+          ],
+          "peak_delta": 0.043028321117162704,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            28,
+            31
+          ],
+          "relevance": -0.1328125,
+          "indices": [
+            672,
+            678,
+            684,
+            690,
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744
+          ],
+          "peak_delta": 0.11417710781097412,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            31,
+            34
+          ],
+          "relevance": -0.3828125,
+          "indices": [
+            744,
+            750,
+            756,
+            762,
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816
+          ],
+          "peak_delta": 0.07479121536016464,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            35,
+            38
+          ],
+          "relevance": -0.171875,
+          "indices": [
+            840,
+            846,
+            852,
+            858,
+            864,
+            870,
+            876,
+            882,
+            888,
+            894,
+            900,
+            906,
+            912
+          ],
+          "peak_delta": 0.05426652356982231,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          9,
+          12
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          28,
+          31
+        ]
+      ],
+      "constrained_windows": [
+        [
+          6,
+          9
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          28,
+          31
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          234,
+          270,
+          546,
+          582,
+          690,
+          726
+        ],
+        "rank_only": [
+          162,
+          198,
+          546,
+          582,
+          690,
+          726
+        ],
+        "anchor_only": [
+          234,
+          270,
+          546,
+          582,
+          690,
+          726
+        ],
+        "combined": [
+          162,
+          186,
+          546,
+          582,
+          690,
+          726
+        ]
+      },
+      "overlap": null
+    },
+    {
+      "pair_id": "twinpast_0085",
+      "branch": "A",
+      "decoded_probe_frames": 141,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.078125,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.08963780105113983,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": 0.03125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3443332314491272,
+          "pre_cut_slot": 8
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.5,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.007691085804253817,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.0390625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.005923202261328697,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": -0.0234375,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.007704702205955982,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            14,
+            17
+          ],
+          "relevance": 0.0859375,
+          "indices": [
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408
+          ],
+          "peak_delta": 0.007672930136322975,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": 0.078125,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.011415214277803898,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": 0.09375,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.014161219820380211,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            23,
+            26
+          ],
+          "relevance": 0.0,
+          "indices": [
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624
+          ],
+          "peak_delta": 0.020540578290820122,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": 0.0078125,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.019433097913861275,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            29,
+            32
+          ],
+          "relevance": 0.03125,
+          "indices": [
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744,
+            750,
+            756,
+            762,
+            768
+          ],
+          "peak_delta": 0.01798747107386589,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.009822077117860317,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          2,
+          5
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "constrained_windows": [
+        [
+          2,
+          5
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          66,
+          102,
+          354,
+          390,
+          498,
+          534
+        ],
+        "rank_only": [
+          66,
+          102,
+          354,
+          390,
+          498,
+          534
+        ],
+        "anchor_only": [
+          66,
+          96,
+          354,
+          390,
+          498,
+          534
+        ],
+        "combined": [
+          66,
+          96,
+          354,
+          390,
+          498,
+          534
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0085",
+      "branch": "B",
+      "decoded_probe_frames": 141,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.859375,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.08991239964962006,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.03125,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.3546704649925232,
+          "pre_cut_slot": 8
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.5,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.007691085804253817,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.0390625,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.005923202261328697,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": -0.0234375,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.007704702205955982,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            14,
+            17
+          ],
+          "relevance": 0.0859375,
+          "indices": [
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384,
+            390,
+            396,
+            402,
+            408
+          ],
+          "peak_delta": 0.007672930136322975,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            17,
+            20
+          ],
+          "relevance": 0.078125,
+          "indices": [
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456,
+            462,
+            468,
+            474,
+            480
+          ],
+          "peak_delta": 0.011415214277803898,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            20,
+            23
+          ],
+          "relevance": 0.09375,
+          "indices": [
+            480,
+            486,
+            492,
+            498,
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552
+          ],
+          "peak_delta": 0.014161219820380211,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            23,
+            26
+          ],
+          "relevance": 0.0,
+          "indices": [
+            552,
+            558,
+            564,
+            570,
+            576,
+            582,
+            588,
+            594,
+            600,
+            606,
+            612,
+            618,
+            624
+          ],
+          "peak_delta": 0.020540578290820122,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": 0.0078125,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.019433097913861275,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            29,
+            32
+          ],
+          "relevance": 0.03125,
+          "indices": [
+            696,
+            702,
+            708,
+            714,
+            720,
+            726,
+            732,
+            738,
+            744,
+            750,
+            756,
+            762,
+            768
+          ],
+          "peak_delta": 0.01798747107386589,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": -0.21875,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.009822077117860317,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          0,
+          3
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "constrained_windows": [
+        [
+          2,
+          5
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          18,
+          54,
+          354,
+          390,
+          498,
+          534
+        ],
+        "rank_only": [
+          66,
+          102,
+          354,
+          390,
+          498,
+          534
+        ],
+        "anchor_only": [
+          18,
+          54,
+          354,
+          390,
+          498,
+          534
+        ],
+        "combined": [
+          66,
+          96,
+          354,
+          390,
+          498,
+          534
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "all_candidates": {
+          "any_interval": true,
+          "final_interval": true
+        },
+        "original_windows": {
+          "any_interval": true,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": true,
+          "final_interval": true
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0206",
+      "branch": "A",
+      "decoded_probe_frames": 65,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.2734375,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.01701388880610466,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            1,
+            4
+          ],
+          "relevance": -0.1171875,
+          "indices": [
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96
+          ],
+          "peak_delta": 0.01701388880610466,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.3046875,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.015316357836127281,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": -0.2578125,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            4,
+            7
+          ],
+          "relevance": -0.0625,
+          "indices": [
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.1328125,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            7,
+            10
+          ],
+          "relevance": -0.3828125,
+          "indices": [
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240
+          ],
+          "peak_delta": 0.1946782022714615,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.5,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.1946782022714615,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": 0.34375,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 11
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": 0.4296875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 7
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": 0.640625,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 3
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.59375,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.02846541255712509,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "constrained_windows": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          42,
+          78,
+          138,
+          174,
+          282,
+          318
+        ],
+        "rank_only": [
+          42,
+          78,
+          138,
+          174,
+          282,
+          318
+        ],
+        "anchor_only": [
+          42,
+          78,
+          138,
+          174,
+          282,
+          318
+        ],
+        "combined": [
+          42,
+          78,
+          138,
+          174,
+          282,
+          318
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "all_candidates": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": false,
+          "final_interval": false
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0206",
+      "branch": "B",
+      "decoded_probe_frames": 65,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": -0.2734375,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.01701388880610466,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            1,
+            4
+          ],
+          "relevance": -0.1171875,
+          "indices": [
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96
+          ],
+          "peak_delta": 0.01701388880610466,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            2,
+            5
+          ],
+          "relevance": -0.3046875,
+          "indices": [
+            48,
+            54,
+            60,
+            66,
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120
+          ],
+          "peak_delta": 0.015316357836127281,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            3,
+            6
+          ],
+          "relevance": -0.2578125,
+          "indices": [
+            72,
+            78,
+            84,
+            90,
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            4,
+            7
+          ],
+          "relevance": -0.0625,
+          "indices": [
+            96,
+            102,
+            108,
+            114,
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.1328125,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.023427288979291916,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            7,
+            10
+          ],
+          "relevance": 0.0859375,
+          "indices": [
+            168,
+            174,
+            180,
+            186,
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240
+          ],
+          "peak_delta": 0.19686365127563477,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            8,
+            11
+          ],
+          "relevance": -0.0078125,
+          "indices": [
+            192,
+            198,
+            204,
+            210,
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264
+          ],
+          "peak_delta": 0.19686365127563477,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            9,
+            12
+          ],
+          "relevance": -0.5078125,
+          "indices": [
+            216,
+            222,
+            228,
+            234,
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 11
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 7
+        },
+        {
+          "window": [
+            11,
+            14
+          ],
+          "relevance": -0.296875,
+          "indices": [
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312,
+            318,
+            324,
+            330,
+            336
+          ],
+          "peak_delta": 0.2016952633857727,
+          "pre_cut_slot": 3
+        },
+        {
+          "window": [
+            13,
+            16
+          ],
+          "relevance": -0.59375,
+          "indices": [
+            312,
+            318,
+            324,
+            330,
+            336,
+            342,
+            348,
+            354,
+            360,
+            366,
+            372,
+            378,
+            384
+          ],
+          "peak_delta": 0.02846541255712509,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "constrained_windows": [
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          42,
+          78,
+          186,
+          222,
+          282,
+          318
+        ],
+        "rank_only": [
+          42,
+          78,
+          186,
+          222,
+          282,
+          318
+        ],
+        "anchor_only": [
+          42,
+          78,
+          186,
+          222,
+          282,
+          318
+        ],
+        "combined": [
+          42,
+          78,
+          186,
+          222,
+          282,
+          318
+        ]
+      },
+      "overlap": {
+        "local_uniform": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "rank_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "anchor_only": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "combined": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "all_candidates": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "original_windows": {
+          "any_interval": false,
+          "final_interval": false
+        },
+        "constrained_windows": {
+          "any_interval": false,
+          "final_interval": false
+        }
+      }
+    },
+    {
+      "pair_id": "twinpast_0021",
+      "branch": "A",
+      "decoded_probe_frames": 156,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.2421875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.06006490811705589,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.4296875,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.10650190711021423,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": 0.1328125,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.007856754586100578,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            16,
+            19
+          ],
+          "relevance": 0.375,
+          "indices": [
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456
+          ],
+          "peak_delta": 0.011823710985481739,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            21,
+            24
+          ],
+          "relevance": 0.125,
+          "indices": [
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576
+          ],
+          "peak_delta": 0.04030955210328102,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": 0.5078125,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.10228077322244644,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": 0.84375,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.019787129014730453,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            37,
+            40
+          ],
+          "relevance": 0.8828125,
+          "indices": [
+            888,
+            894,
+            900,
+            906,
+            912,
+            918,
+            924,
+            930,
+            936,
+            942,
+            948,
+            954,
+            960
+          ],
+          "peak_delta": 0.03982388973236084,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            42,
+            45
+          ],
+          "relevance": 0.546875,
+          "indices": [
+            1008,
+            1014,
+            1020,
+            1026,
+            1032,
+            1038,
+            1044,
+            1050,
+            1056,
+            1062,
+            1068,
+            1074,
+            1080
+          ],
+          "peak_delta": 0.032983843237161636,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            48,
+            51
+          ],
+          "relevance": -0.5390625,
+          "indices": [
+            1152,
+            1158,
+            1164,
+            1170,
+            1176,
+            1182,
+            1188,
+            1194,
+            1200,
+            1206,
+            1212,
+            1218,
+            1224
+          ],
+          "peak_delta": 0.03303150087594986,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            53,
+            56
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            1272,
+            1278,
+            1284,
+            1290,
+            1296,
+            1302,
+            1308,
+            1314,
+            1320,
+            1326,
+            1332,
+            1338,
+            1344
+          ],
+          "peak_delta": 0.019069990143179893,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            59,
+            62
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            1416,
+            1422,
+            1428,
+            1434,
+            1440,
+            1446,
+            1452,
+            1458,
+            1464,
+            1470,
+            1476,
+            1482,
+            1488
+          ],
+          "peak_delta": 0.02490241453051567,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          32,
+          35
+        ],
+        [
+          37,
+          40
+        ],
+        [
+          42,
+          45
+        ]
+      ],
+      "constrained_windows": [
+        [
+          32,
+          35
+        ],
+        [
+          37,
+          40
+        ],
+        [
+          42,
+          45
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          786,
+          822,
+          906,
+          942,
+          1026,
+          1062
+        ],
+        "rank_only": [
+          786,
+          822,
+          906,
+          942,
+          1026,
+          1062
+        ],
+        "anchor_only": [
+          786,
+          822,
+          906,
+          942,
+          1026,
+          1062
+        ],
+        "combined": [
+          786,
+          822,
+          906,
+          942,
+          1026,
+          1062
+        ]
+      },
+      "overlap": null
+    },
+    {
+      "pair_id": "twinpast_0021",
+      "branch": "B",
+      "decoded_probe_frames": 156,
+      "candidates": [
+        {
+          "window": [
+            0,
+            3
+          ],
+          "relevance": 0.2421875,
+          "indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            30,
+            36,
+            42,
+            48,
+            54,
+            60,
+            66,
+            72
+          ],
+          "peak_delta": 0.06006490811705589,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            5,
+            8
+          ],
+          "relevance": -0.1640625,
+          "indices": [
+            120,
+            126,
+            132,
+            138,
+            144,
+            150,
+            156,
+            162,
+            168,
+            174,
+            180,
+            186,
+            192
+          ],
+          "peak_delta": 0.06771968305110931,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            10,
+            13
+          ],
+          "relevance": 0.5703125,
+          "indices": [
+            240,
+            246,
+            252,
+            258,
+            264,
+            270,
+            276,
+            282,
+            288,
+            294,
+            300,
+            306,
+            312
+          ],
+          "peak_delta": 0.05108251795172691,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            16,
+            19
+          ],
+          "relevance": 0.4765625,
+          "indices": [
+            384,
+            390,
+            396,
+            402,
+            408,
+            414,
+            420,
+            426,
+            432,
+            438,
+            444,
+            450,
+            456
+          ],
+          "peak_delta": 0.10255083441734314,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            21,
+            24
+          ],
+          "relevance": 0.6015625,
+          "indices": [
+            504,
+            510,
+            516,
+            522,
+            528,
+            534,
+            540,
+            546,
+            552,
+            558,
+            564,
+            570,
+            576
+          ],
+          "peak_delta": 0.038553014397621155,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            26,
+            29
+          ],
+          "relevance": 0.2734375,
+          "indices": [
+            624,
+            630,
+            636,
+            642,
+            648,
+            654,
+            660,
+            666,
+            672,
+            678,
+            684,
+            690,
+            696
+          ],
+          "peak_delta": 0.10008396953344345,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            32,
+            35
+          ],
+          "relevance": 0.84375,
+          "indices": [
+            768,
+            774,
+            780,
+            786,
+            792,
+            798,
+            804,
+            810,
+            816,
+            822,
+            828,
+            834,
+            840
+          ],
+          "peak_delta": 0.019787129014730453,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            37,
+            40
+          ],
+          "relevance": 0.8828125,
+          "indices": [
+            888,
+            894,
+            900,
+            906,
+            912,
+            918,
+            924,
+            930,
+            936,
+            942,
+            948,
+            954,
+            960
+          ],
+          "peak_delta": 0.03982388973236084,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            42,
+            45
+          ],
+          "relevance": 0.546875,
+          "indices": [
+            1008,
+            1014,
+            1020,
+            1026,
+            1032,
+            1038,
+            1044,
+            1050,
+            1056,
+            1062,
+            1068,
+            1074,
+            1080
+          ],
+          "peak_delta": 0.032983843237161636,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            48,
+            51
+          ],
+          "relevance": -0.5390625,
+          "indices": [
+            1152,
+            1158,
+            1164,
+            1170,
+            1176,
+            1182,
+            1188,
+            1194,
+            1200,
+            1206,
+            1212,
+            1218,
+            1224
+          ],
+          "peak_delta": 0.03303150087594986,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            53,
+            56
+          ],
+          "relevance": -0.390625,
+          "indices": [
+            1272,
+            1278,
+            1284,
+            1290,
+            1296,
+            1302,
+            1308,
+            1314,
+            1320,
+            1326,
+            1332,
+            1338,
+            1344
+          ],
+          "peak_delta": 0.019069990143179893,
+          "pre_cut_slot": null
+        },
+        {
+          "window": [
+            59,
+            62
+          ],
+          "relevance": -0.1875,
+          "indices": [
+            1416,
+            1422,
+            1428,
+            1434,
+            1440,
+            1446,
+            1452,
+            1458,
+            1464,
+            1470,
+            1476,
+            1482,
+            1488
+          ],
+          "peak_delta": 0.02490241453051567,
+          "pre_cut_slot": null
+        }
+      ],
+      "original_windows": [
+        [
+          21,
+          24
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          37,
+          40
+        ]
+      ],
+      "constrained_windows": [
+        [
+          21,
+          24
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          37,
+          40
+        ]
+      ],
+      "history_indices": {
+        "local_uniform": [
+          522,
+          558,
+          786,
+          822,
+          906,
+          942
+        ],
+        "rank_only": [
+          522,
+          558,
+          786,
+          822,
+          906,
+          942
+        ],
+        "anchor_only": [
+          522,
+          558,
+          786,
+          822,
+          906,
+          942
+        ],
+        "combined": [
+          522,
+          558,
+          786,
+          822,
+          906,
+          942
+        ]
+      },
+      "overlap": null
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "protocol": "DROID open/closed historical-state capability, v1",
+  "dataset": "DROID raw 1.0.1",
+  "dataset_license": "CC BY 4.0",
+  "dataset_reference": "https://droid-dataset.github.io/",
+  "source_index_sha256": {
+    "manifest.json": "f540f0a86e791d11588670f82e8045b54ae79959a8104aa6781087486f65a5d2",
+    "aggregated-annotations-030724.json": "42ed672ee974bfcb15752dc0768dd66a47e01ea3eebfdb74d8d5e468b37b2b6d"
+  },
+  "scope": "Controlled virtual timelines with real RGB evidence and neutral filler.",
+  "timeline": {
+    "history_grid_s": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "recent_grid_s": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "query_s": 20,
+    "neutral_rgb": [
+      112,
+      112,
+      112
+    ],
+    "aligned": {
+      "cue_start_s": 8.75,
+      "cue_end_s": 9.25,
+      "oracle_grid_s": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ]
+    },
+    "off_grid": {
+      "cue_start_s": 9.25,
+      "cue_end_s": 9.75,
+      "oracle_grid_s": [
+        0,
+        3,
+        6,
+        9.5,
+        12,
+        15
+      ]
+    },
+    "cue_representation": "One RGB video frame held for the entire half-open cue interval."
+  },
+  "cases": [
+    {
+      "pair_id": "droid_guptalab",
+      "source_group": "GuptaLab",
+      "source_episode": "GuptaLab+553d1bd5+2023-06-18-16h-54m-33s",
+      "scene_id": 5235850418,
+      "camera": "ext1",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/GuptaLab/success/2023-06-18/Sun_Jun_18_16%3A54%3A33_2023/recordings/MP4/22246076.mp4",
+        "generation": "1710757373238187",
+        "bytes": 2838784,
+        "sha256": "f3b7e797f676309a3ba89e7ca6a155673c9e594423fa9830f26b313b287a8ba8",
+        "frame_count": 98
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/GuptaLab/success/2023-06-18/Sun_Jun_18_16%3A54%3A33_2023/metadata_GuptaLab%2B553d1bd5%2B2023-06-18-16h-54m-33s.json",
+        "generation": "1710757373239219",
+        "bytes": 1802,
+        "sha256": "a52e0d8a47a9d6fae18ce1974fd717cf41aee387628b0a30cd9af91ce25d891f"
+      },
+      "object": "top drawer of the silver cabinet",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the top drawer of the silver cabinet open or closed?",
+      "branches": {
+        "a": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            6,
+            14
+          ],
+          "source_frame": 10,
+          "source_frame_timestamp_s": 0.1666666716337204,
+          "decoded_rgb_sha256": "f2a73f7b436ad03ce53c80c28a00c382086f229e0edc12d4e3292b09d209a732"
+        },
+        "b": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            88,
+            96
+          ],
+          "source_frame": 92,
+          "source_frame_timestamp_s": 1.5333333015441895,
+          "decoded_rgb_sha256": "46090e45fcfcba4b26cde9689da2493a53760583015f3eb0da0d85e45587f39b"
+        }
+      }
+    },
+    {
+      "pair_id": "droid_iprl",
+      "source_group": "IPRL",
+      "source_episode": "IPRL+7790ec0a+2023-06-27-21h-01m-12s",
+      "scene_id": 8351259745,
+      "camera": "ext2",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-27/Tue_Jun_27_21%3A01%3A12_2023/recordings/MP4/28221883.mp4",
+        "generation": "1710757797574694",
+        "bytes": 3983053,
+        "sha256": "6b80f2277a44f73b77c5e806fc84748e44e8bcf4f762b731bca8a2b520001bde",
+        "frame_count": 199
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IPRL/success/2023-06-27/Tue_Jun_27_21%3A01%3A12_2023/metadata_IPRL%2B7790ec0a%2B2023-06-27-21h-01m-12s.json",
+        "generation": "1710757797547531",
+        "bytes": 1791,
+        "sha256": "42a83eca526befbaf2f2b376636d49df732a143f8b4546c719aee499835d8c2b"
+      },
+      "object": "white door with the dark handle",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the white door with the dark handle open or closed?",
+      "branches": {
+        "a": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            9,
+            17
+          ],
+          "source_frame": 13,
+          "source_frame_timestamp_s": 0.21666666865348816,
+          "decoded_rgb_sha256": "12241eea93aa13be72668bda08c942a40611ed451af53dd923704b7df820cc32"
+        },
+        "b": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            178,
+            190
+          ],
+          "source_frame": 184,
+          "source_frame_timestamp_s": 3.066666603088379,
+          "decoded_rgb_sha256": "0a5b3be898c103f873fd2002713436a0b360a77d008811c2d913850a7671f3a4"
+        }
+      }
+    },
+    {
+      "pair_id": "droid_iris",
+      "source_group": "IRIS",
+      "source_episode": "IRIS+7dfa2da3+2023-05-23-11h-37m-06s",
+      "scene_id": 301637807,
+      "camera": "ext1",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-23/Tue_May_23_11%3A37%3A06_2023/recordings/MP4/23404442.mp4",
+        "generation": "1710758297673046",
+        "bytes": 9011677,
+        "sha256": "461ec50692165f00bef10eed2bba9f00a49775f28a0bc823b8913527fc9e0c06",
+        "frame_count": 397
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/IRIS/success/2023-05-23/Tue_May_23_11%3A37%3A06_2023/metadata_IRIS%2B7dfa2da3%2B2023-05-23-11h-37m-06s.json",
+        "generation": "1710758297659600",
+        "bytes": 1840,
+        "sha256": "100f22834cf2fd625e33295d2a564191dd108af13f2c5c970d9b14cf4ea501cd"
+      },
+      "object": "white wall cabinet door",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the white wall cabinet door open or closed?",
+      "branches": {
+        "a": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            24,
+            32
+          ],
+          "source_frame": 28,
+          "source_frame_timestamp_s": 0.46666666865348816,
+          "decoded_rgb_sha256": "f70f1de49bd7a261b157b121fc2acb6caecd842258888d015a4ddff689ca4794"
+        },
+        "b": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            345,
+            355
+          ],
+          "source_frame": 350,
+          "source_frame_timestamp_s": 5.833333492279053,
+          "decoded_rgb_sha256": "0e4e3140e34123ad922f44d5dc05b4e0d08cb2f9ee68b0c00e0d06838705114e"
+        }
+      }
+    },
+    {
+      "pair_id": "droid_pennpal",
+      "source_group": "PennPAL",
+      "source_episode": "PennPAL+acda9df3+2023-06-29-20h-29m-07s",
+      "scene_id": 334162896,
+      "camera": "ext2",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-29/Thu_Jun_29_20%3A29%3A07_2023/recordings/MP4/27085680.mp4",
+        "generation": "1710758548903627",
+        "bytes": 9776755,
+        "sha256": "85f54b8fe7411a781cadca30b4ccd6e1c35ded25e6bbf9ed74ec271973324664",
+        "frame_count": 330
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/PennPAL/success/2023-06-29/Thu_Jun_29_20%3A29%3A07_2023/metadata_PennPAL%2Bacda9df3%2B2023-06-29-20h-29m-07s.json",
+        "generation": "1710758548843915",
+        "bytes": 1788,
+        "sha256": "71cd372c662df7a601169135926cf5ebbec4bcd32303a6917fe9cc95cd8515e3"
+      },
+      "object": "wooden drawer just below the countertop",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the wooden drawer just below the countertop open or closed?",
+      "branches": {
+        "a": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            26,
+            35
+          ],
+          "source_frame": 30,
+          "source_frame_timestamp_s": 0.5,
+          "decoded_rgb_sha256": "fa9394d790323cf5893237057cfff0ce89b0708d59c7f9ec6617a37b1849c840"
+        },
+        "b": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            296,
+            310
+          ],
+          "source_frame": 303,
+          "source_frame_timestamp_s": 5.050000190734863,
+          "decoded_rgb_sha256": "b875c6270bfaad913fd12cbbd98165ebbfbcddd6411004015c0b769fe5c05238"
+        }
+      }
+    },
+    {
+      "pair_id": "droid_real",
+      "source_group": "REAL",
+      "source_episode": "REAL+de601749+2023-05-20-15h-07m-52s",
+      "scene_id": 3918790350,
+      "camera": "ext2",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-20/Sat_May_20_15%3A07%3A52_2023/recordings/MP4/23960472.mp4",
+        "generation": "1710759444690367",
+        "bytes": 4859573,
+        "sha256": "a13c502bbc1073286a0b073fe685f94bc1334675bc3c9d90ae5e5db77361c69f",
+        "frame_count": 144
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/REAL/success/2023-05-20/Sat_May_20_15%3A07%3A52_2023/metadata_REAL%2Bde601749%2B2023-05-20-15h-07m-52s.json",
+        "generation": "1710759444629997",
+        "bytes": 1781,
+        "sha256": "c4566876392eac4e5014a9a13f9e7e28ca23c98e6d7430135c2671d323e2163f"
+      },
+      "object": "top white kitchen drawer",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the top white kitchen drawer open or closed?",
+      "branches": {
+        "a": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            11,
+            20
+          ],
+          "source_frame": 15,
+          "source_frame_timestamp_s": 0.25,
+          "decoded_rgb_sha256": "e3fd866b90d6f07e81b89ae5fbc752e0ba99e0b33a0675d6f9ac09956e14d72c"
+        },
+        "b": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            127,
+            137
+          ],
+          "source_frame": 132,
+          "source_frame_timestamp_s": 2.200000047683716,
+          "decoded_rgb_sha256": "5822c31e1eeeb499a80edc546766ff6d4110c5d910bb9858cc63f4ff24fd915b"
+        }
+      }
+    },
+    {
+      "pair_id": "droid_tri",
+      "source_group": "TRI",
+      "source_episode": "TRI+52ca9b6a+2023-10-19-15h-04m-59s",
+      "scene_id": 8894075169,
+      "camera": "ext2",
+      "video_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-19/Thu_Oct_19_15%3A04%3A59_2023/recordings/MP4/28813166.mp4",
+        "generation": "1710760258330343",
+        "bytes": 3583512,
+        "sha256": "e9dc3b2a217f20f518db74d710f7564f8ed1a7bcc841a02643fdf895d0af2939",
+        "frame_count": 201
+      },
+      "metadata_source": {
+        "url": "https://storage.googleapis.com/gresearch/robotics/droid_raw/1.0.1/TRI/success/2023-10-19/Thu_Oct_19_15%3A04%3A59_2023/metadata_TRI%2B52ca9b6a%2B2023-10-19-15h-04m-59s.json",
+        "generation": "1710760258305831",
+        "bytes": 1764,
+        "sha256": "9eedab979cbd1e3e26e7e63b762755f53e630e2485884c8ddca8e88c388d0f27"
+      },
+      "object": "white closet door in front of the robot",
+      "options": [
+        "Open",
+        "Closed"
+      ],
+      "question": "In the earlier view, was the white closet door in front of the robot open or closed?",
+      "branches": {
+        "a": {
+          "state": "open",
+          "gold": "A",
+          "source_interval_inclusive": [
+            16,
+            26
+          ],
+          "source_frame": 21,
+          "source_frame_timestamp_s": 0.3499999940395355,
+          "decoded_rgb_sha256": "b336b1072ae987290e3cc30937d8fafed69c07c5eef61fce8261e1010aaec2d7"
+        },
+        "b": {
+          "state": "closed",
+          "gold": "B",
+          "source_interval_inclusive": [
+            174,
+            188
+          ],
+          "source_frame": 181,
+          "source_frame_timestamp_s": 3.0166666507720947,
+          "decoded_rgb_sha256": "0841a4059d63869d0760607a84e1defc8c37fd06a5f151c59b8197f7b25355c3"
+        }
+      }
+    }
+  ]
+}

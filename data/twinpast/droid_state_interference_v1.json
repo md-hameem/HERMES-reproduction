@@ -1,0 +1,299 @@
+{
+  "natural_history_archive_sha256": "c6be9f68fdb96b0cbeef980872165f71dcfbac10a802fa164064c5d9637b55c9",
+  "natural_history_manifest_sha256": "8422fcb786953ddb52ef7219b99cbe8bc21b78fdff4b6c00097fe6e2ebadb12e",
+  "frames_verified": 114,
+  "fill_rgb": [
+    112,
+    112,
+    112
+  ],
+  "cases": [
+    {
+      "pair_id": "droid_natural_8b01107c59",
+      "target": [
+        141,
+        180,
+        320,
+        310
+      ],
+      "control": [
+        429,
+        180,
+        608,
+        310
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_8b01107c59_a_00000.png": {
+            "target": "8de42cad76e3ff420ef6f77dba3941831a61385a8bde89e4c77dbf8d18856e53",
+            "control": "c704ba94d7b518896a93ace2514afdb9a4fd094880e9e1fb7335df3c4f07d288"
+          },
+          "droid_natural_8b01107c59_a_00051.png": {
+            "target": "922d37c5c4ff8536c0db79a0eb1428728240effbafce575b7b4981742147e531",
+            "control": "d92314c487307ae686f6c94b0c791d1d059a192ade3899e074f59a08e088c322"
+          }
+        },
+        "b": {
+          "droid_natural_8b01107c59_b_00000.png": {
+            "target": "cd43210350e55f4b75fb6cc9fcbdeb85ff78c64135698ced2e174b1cc603d513",
+            "control": "2dd5304a2ece0b8ffcf2e4590dd9383b4e8c282246101caaa99bc484725375e2"
+          },
+          "droid_natural_8b01107c59_b_00035.png": {
+            "target": "c289972c4605bc6b9e2f16d1407275e0a6530d010d3134ba06388db28c51dbaa",
+            "control": "72bc0987a8999f38ba56a99f4626520b1c871a235dd6e899e816db027fc048d6"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_6d74030dc0",
+      "target": [
+        220,
+        12,
+        416,
+        286
+      ],
+      "control": [
+        432,
+        12,
+        628,
+        286
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_6d74030dc0_a_00000.png": {
+            "target": "83d3a633d6b4a7d1f45ebbadca37ae7a30bfce8dd6be167e62a96d03c1747436",
+            "control": "b8ab5e6dc1537ff54fdfbb14fa18a663ff34a737a63ada1f8b3d0168eaf31fc7"
+          },
+          "droid_natural_6d74030dc0_a_00034.png": {
+            "target": "b102d225084710fe19aa238bc16801cf242ee06316932d3e3b9331b20c4af9b6",
+            "control": "d18b640dca75ce844da8256e785225fa4c85f601019d99c7827f5c70d5ed235e"
+          }
+        },
+        "b": {
+          "droid_natural_6d74030dc0_b_00000.png": {
+            "target": "f73489990e26315be8df750501faf86c880637a1d49665089dc4e460dee10301",
+            "control": "97d2c0edf78dabf370a1da86a5060dff850f94911abf827cb3476c0b6575faaf"
+          },
+          "droid_natural_6d74030dc0_b_00055.png": {
+            "target": "30513386ef1f289d33c97a3c1ae28e6160d08c2216ee755dfdd76a664556ad4c",
+            "control": "65cad1644037cc0cc60adb0426d6eb0ad939220f56ba876aa1711ba98a19fb16"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_87abc314ec",
+      "target": [
+        138,
+        130,
+        514,
+        260
+      ],
+      "control": [
+        150,
+        0,
+        526,
+        130
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_87abc314ec_a_00000.png": {
+            "target": "5c0c942a9e2e84a5f43c64163bbc9c62e7ba8738d9409929ef338cad5b01f5e8",
+            "control": "ebc0a5d695e7452aef159993a43dedc70efcb88ca164626f200e98c027049519"
+          },
+          "droid_natural_87abc314ec_a_00063.png": {
+            "target": "874f4b4d95e1f895cf8e237b8cb3c3310fca3f3bd5855163925bfd3f1d86f592",
+            "control": "2ed3c85e94247a23e251a2e8248647090d4a5e8263a80675bfefea31d561a902"
+          }
+        },
+        "b": {
+          "droid_natural_87abc314ec_b_00000.png": {
+            "target": "b9432461c2a0f96453b421c172fb0c45464e67737ad210183270ae4da05c1fe0",
+            "control": "2f4e66962cccc2275d2ca2ef66f90b8dc633c37e2efb3853cb923a178158548a"
+          },
+          "droid_natural_87abc314ec_b_00030.png": {
+            "target": "b18cc6865c025db566faa80ef9c624543d88d177b8e3f9c05d47f8ad9a394f4b",
+            "control": "b9643ba24c551bacdfc2c580cf9302e4bc2d8676b508283cf00cf86c1852f375"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_29137e19c7",
+      "target": [
+        220,
+        139,
+        360,
+        252
+      ],
+      "control": [
+        465,
+        139,
+        605,
+        252
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_29137e19c7_a_00000.png": {
+            "target": "62c007b9549fbace5ed9f608764424877d9be1d29defaae1602106e6684fafc8",
+            "control": "97b821571350e0003c02f810cc0cbbbadbb24ce975d51f05e488c822139c8049"
+          },
+          "droid_natural_29137e19c7_a_00027.png": {
+            "target": "6bace3af8770b676d1f4f6b5441817353246ecdaa736f1b45169ed8238c5d86a",
+            "control": "e5537ee76e8c6d4b50bb8000970bd225f48485721a883ed41b59c2db3d063515"
+          }
+        },
+        "b": {
+          "droid_natural_29137e19c7_b_00000.png": {
+            "target": "5c8625628b6f6174623acec3f812e4602b7bfc1badea1bae8dd5410a3d377ea7",
+            "control": "0019c6667ee2843474ac3059a668d51d93a6fa316152b4afc952a669f1179b13"
+          },
+          "droid_natural_29137e19c7_b_00041.png": {
+            "target": "2b62cef8504781492e275dac535118f1894e844d1cff30017c82eb1476b69242",
+            "control": "04c7e987fe309e2d70617b0e190626bb2f6c8ed5faa90b742ddefdfc7822f1ba"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_c00374385e",
+      "target": [
+        170,
+        181,
+        416,
+        343
+      ],
+      "control": [
+        70,
+        6,
+        316,
+        168
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_c00374385e_a_00000.png": {
+            "target": "71133ec423ab754cdd66bdc845dc992e90a93dde9fa5ed795070a4458fc79d98",
+            "control": "16396036b8704d480065dcf9b06b11aef68b29d594f4c2de6ce326e92e156935"
+          },
+          "droid_natural_c00374385e_a_00065.png": {
+            "target": "0ce24b6d326a698eca29d7de5a616644f520e0e379033c0edb24a3e035267046",
+            "control": "493c501105987ae9ae686499a32317e236af332604cf67a135e66de1ae7b04d5"
+          }
+        },
+        "b": {
+          "droid_natural_c00374385e_b_00000.png": {
+            "target": "9a3ec41f1eea6326cf1dced7941911d545e7c9f42fcc60f0d94c41000394a76a",
+            "control": "277a0d99ebcfdd2e7b11af4ae2abd0053a5b78bd20b46e38fccd7e029aaefbbd"
+          },
+          "droid_natural_c00374385e_b_00044.png": {
+            "target": "701e8aa8aa7c1f55d197d6e8bbde3463b83ebca4eeed52b2ca434f678e20ebe8",
+            "control": "aa26a5209549a77b9f9ebc3c4a2507b600d903075d4ab96f9c90f51053d25af7"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_19bf4a67ee",
+      "target": [
+        144,
+        59,
+        373,
+        258
+      ],
+      "control": [
+        402,
+        59,
+        631,
+        258
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_19bf4a67ee_a_00000.png": {
+            "target": "83427635c058712f29f071dd09451f66f4a3d073f32d42951a7dc52a3d6ceab0",
+            "control": "46fec5466d6217322268f60ad7b3134cebd27064ead76e46c6f5693fefcfc428"
+          },
+          "droid_natural_19bf4a67ee_a_00036.png": {
+            "target": "ec6dfea264259b3b19298da205d68420e1f8b7de85602d64c3b375b444bf9199",
+            "control": "5badb4302ad18b462618e0f00587f20f9d7768b1f2365d4ef172a1741c11de6d"
+          }
+        },
+        "b": {
+          "droid_natural_19bf4a67ee_b_00000.png": {
+            "target": "00f59d951b54da832da1d0bd07896ab2afd0b78dfa43b3f129f7eff34140ca86",
+            "control": "bf8856456cd9a61cf143eed1edaa987257b871ce1d0ae19c307d91a7e6e1221e"
+          },
+          "droid_natural_19bf4a67ee_b_00062.png": {
+            "target": "1ca84ab97f23f2079510a24718faa79dd8843c54826b1939809cc902368e3a72",
+            "control": "ae61422d228fcb60517c27a01909a955e76e1a4c011d9b6fb1efc62bc7875507"
+          }
+        }
+      }
+    },
+    {
+      "pair_id": "droid_natural_10bd743a70",
+      "target": [
+        122,
+        208,
+        441,
+        358
+      ],
+      "control": [
+        5,
+        7,
+        324,
+        157
+      ],
+      "edited_slots": [
+        0,
+        1
+      ],
+      "edited_rgb_sha256": {
+        "a": {
+          "droid_natural_10bd743a70_a_00000.png": {
+            "target": "045af6e1325f8b2fa9ae2e6addf9883caaac4e467f3f6ba82cf0367aaf1d841e",
+            "control": "61f25c0c3582309cc2d5689db73678f05a9070dfb737fd7d45bffba4a4b30690"
+          },
+          "droid_natural_10bd743a70_a_00077.png": {
+            "target": "66aa07ac7492fc2836b43532bc55c6fef8993d5f038bcf6e50598b27f00643fa",
+            "control": "2338c383727ff172aefba8d76d848e954dd2a62623bb1be675122d0ae6424ec0"
+          }
+        },
+        "b": {
+          "droid_natural_10bd743a70_b_00000.png": {
+            "target": "6f1bd33bbc41abbab1793604bf9fc35cb3a46d7c5fbf179158da551c74a2b6d8",
+            "control": "a974d4aac8f46ae92d5c72e07c48efda911602b8099cd0be09b12f6b607a7310"
+          },
+          "droid_natural_10bd743a70_b_00055.png": {
+            "target": "6d7c62e14b89c6fdba1047ca1248d6b6c5b40ab067758fd0f136b92326de33cd",
+            "control": "456f0e94eca61229f62b905e4b7fa78c3a233929e48fec6780ca5f629391e3b0"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Manuscript planning outline
 
-Status as of 23 November 2026. Neurocomputing is the working venue for a regular article. The 7B curated evidence diagnostic established headroom. The first automatic relevance selector tied uniform in robust pair count, and the tested history-control rule regressed against same-frame direct decoding. A validated original method remains open. [Automatic-selection audit](<../../docs/reports/2026-11-23 twinpast automatic selection analysis.md>)
+Status as of 27 November 2026. Neurocomputing is the working venue for a regular article. Annotation-guided DROID terminal attention raised robust accuracy from 1/7 to 4/7 with a fixed input sequence. The original-method candidate is question-conditioned span selection, with its comparison against recency on fresh sources pending. [Terminal-attention audit](<../../docs/reports/2026-11-27 droid terminal attention results.md>)
 
 ## Title, abstract and keywords
 
@@ -30,11 +30,11 @@ The later context screen reproduces all 26 comparable choices and preserves choi
 
 Supply the precise algorithm, state representation, update/invalidation rules, positional semantics, complexity and all memory costs. Explain why the mechanism addresses the observed failure and how it differs from the nearest work. Include pseudocode and a reproducible diagram. State any assumptions and failure conditions.
 
-No mechanism or originality claim is filled in at this stage. Contextual probe-state reuse and separate history-feedback diagnostics remain conditional branches in the roadmap.
+The current candidate chooses three visual frames based on the question and limits direct readout attention to those keys. Freeze the selection rule and availability assumptions before inference. A method claim requires gains against matched recency on fresh sources and a comparison with the nearest published mechanism.
 
 ## 5. Experimental design
 
-Record actual model/dataset revisions, hardware, dependencies, input frames, precision, decoding, prompts, budgets and seeds. Describe development/confirmation boundaries and dataset overlap. Plan controls around the claim: FIFO, current HERMES, fresh causal scoring, proposed method and a feasible nearest prior method. Add relevant ablations, repeats and budget comparisons with a measured compute plan.
+Record model and dataset revisions, hardware, dependencies, input frames, precision, decoding, prompts, budgets and seeds. Describe development and confirmation boundaries by source episode and scene. For the span-selection test, compare the frozen selector with fixed-budget recency, unrestricted decoding and the annotated reference. Add suitable published comparators for the final claim. Retain HERMES and FIFO as reproduction baselines. Use a measured compute plan for ablations and budget comparisons.
 
 The number of models/datasets must justify the scope of the final claim. It is not a fixed minimum imposed by the supplied guide. Avoid whole-pipeline speed claims from replay-only timing with shared vision features.
 

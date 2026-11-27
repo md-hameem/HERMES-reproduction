@@ -2,6 +2,19 @@
 
 All notable reproduction, evidence, control, and documentation changes for this project are recorded here. Dates use the evidence-update date; older sections are retained as historical milestones rather than rewritten.
 
+## 2026-11-27 — TwinPast matched refinement
+
+- Archived the executed notebook and recomputed 96 answer scores across eight matched development pairs. Both local refinements scored 0/8 robust pairs. Coarse uniform scored 1/8.
+- Reviewed the selected frames from 16 branches and audited the fixed-frame readout follow-up. All 64 direct scores replayed exactly. The observation readout recovered no robust pairs.
+- Ran the CPU boundary-coverage test. The combined ranking and sampling rule increased final-interval coverage from 0/12 to 8/12 at the same answer-frame budget.
+- Archived the boundary GPU comparison. All 64 baseline scores replayed exactly. The boundary method recovered zero robust pairs and lost the coarse uniform baseline's only robust pair.
+- Audited 96 scores for the controlled DROID pilot. The restored cue yielded 4/6 robust pairs. Identical-input controls replayed exactly.
+- Audited the seven-pair DROID natural-history run. It verified 114 input frames and 28 exact uniform repeats. The annotated arm recovered one robust pair.
+- Audited 84 DROID earlier-state masking scores. The target mask recovered no robust pairs and lost the pair both comparators solved.
+- Audited 84 DROID terminal-context scores and 28 exact baseline replays. Robust scores were 6/7, 5/7 and 1/7 at three, seven and ten frames.
+- Audited the 56-score DROID swap. It improved 23/28 gold margins and exchanged one robust pair for another after 28 exact baseline replays.
+- Archived and audited the 112-score DROID terminal-attention experiment. The annotation-guided mask recovered three robust pairs and preserved the causal control's only robust pair.
+
 ## 2026-11-23 — TwinPast capability studies and automatic-selection results
 
 - Archived and audited the fixed-recent 0.5B run, history-only follow-up, exact-frame 7B replay, and 7B fixed-recent and automatic-selection runs.

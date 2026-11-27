@@ -1,0 +1,105 @@
+{
+  "archive_sha256": "3628d9a01ff4df58739b4db351af8e174fb291174371d3a8492422153a590fc5",
+  "notebook_sha256": "3a14af664c6517094801755f9d4ef6c9df72fa6d6b852f3b5447a655525264b5",
+  "verified_payloads": 23,
+  "verified_input_frames": 114,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "replay_gate": {
+    "comparisons": 56,
+    "max_abs": {
+      "archived_replay": 0.0,
+      "explicit_control": 0.015625
+    },
+    "verified_attention_layers": {
+      "causal_control": 2,
+      "terminal_access": 2,
+      "earlier_access": 2
+    },
+    "failures": []
+  },
+  "branch_order_changes": {
+    "wrong_to_correct": 11,
+    "correct_to_wrong": 1
+  },
+  "per_pair_correct_branch_orders": {
+    "droid_natural_8b01107c59": {
+      "native": 2,
+      "causal_control": 2,
+      "terminal_access": 4,
+      "earlier_access": 0
+    },
+    "droid_natural_6d74030dc0": {
+      "native": 0,
+      "causal_control": 0,
+      "terminal_access": 2,
+      "earlier_access": 1
+    },
+    "droid_natural_87abc314ec": {
+      "native": 4,
+      "causal_control": 4,
+      "terminal_access": 4,
+      "earlier_access": 0
+    },
+    "droid_natural_29137e19c7": {
+      "native": 2,
+      "causal_control": 2,
+      "terminal_access": 3,
+      "earlier_access": 0
+    },
+    "droid_natural_c00374385e": {
+      "native": 2,
+      "causal_control": 2,
+      "terminal_access": 4,
+      "earlier_access": 0
+    },
+    "droid_natural_19bf4a67ee": {
+      "native": 3,
+      "causal_control": 3,
+      "terminal_access": 4,
+      "earlier_access": 1
+    },
+    "droid_natural_10bd743a70": {
+      "native": 1,
+      "causal_control": 1,
+      "terminal_access": 3,
+      "earlier_access": 0
+    }
+  },
+  "pairs": 7,
+  "scores": 112,
+  "methods": {
+    "native": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    },
+    "causal_control": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    },
+    "terminal_access": {
+      "robust_pairs": [
+        "droid_natural_8b01107c59",
+        "droid_natural_87abc314ec",
+        "droid_natural_c00374385e",
+        "droid_natural_19bf4a67ee"
+      ],
+      "correct_branch_orders": 24
+    },
+    "earlier_access": {
+      "robust_pairs": [],
+      "correct_branch_orders": 2
+    }
+  },
+  "terminal_only_recoveries": [
+    "droid_natural_19bf4a67ee",
+    "droid_natural_8b01107c59",
+    "droid_natural_c00374385e"
+  ],
+  "lost_vs_causal_control": [],
+  "median_terminal_gold_margin_delta": 0.1875,
+  "feasibility_criterion_met": true
+}

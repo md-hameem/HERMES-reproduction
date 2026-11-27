@@ -1,0 +1,52 @@
+{
+  "archive_sha256": "e9eefa06ec8d1dcfed28668dd42fc0139cd7d85dc97aad791a23dbafdd9b26f0",
+  "notebook_sha256": "14ffe551bc7940a69f61080ec5b8cac3b3c2e9a94c83cfa301d37c338e8457c5",
+  "verified_payloads": 25,
+  "verified_input_frames": 114,
+  "verified_masked_frames": 56,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "prior_gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "replay_gate": {
+    "scores": 28,
+    "max_abs": 0.03125,
+    "failures": []
+  },
+  "branch_order_changes_against_original": {
+    "target_mask": {
+      "wrong_to_correct": 3,
+      "correct_to_wrong": 3
+    },
+    "non_target_mask": {
+      "wrong_to_correct": 1,
+      "correct_to_wrong": 1
+    }
+  },
+  "pairs": 7,
+  "scores": 84,
+  "target_only_recoveries": [],
+  "lost_vs_original": [
+    "droid_natural_87abc314ec"
+  ],
+  "lost_vs_non_target": [
+    "droid_natural_87abc314ec"
+  ],
+  "exploratory_criterion_met": false,
+  "methods": {
+    "original": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    },
+    "target_mask": {
+      "robust_pairs": [],
+      "correct_branch_orders": 14
+    },
+    "non_target_mask": {
+      "robust_pairs": [
+        "droid_natural_87abc314ec"
+      ],
+      "correct_branch_orders": 14
+    }
+  }
+}
